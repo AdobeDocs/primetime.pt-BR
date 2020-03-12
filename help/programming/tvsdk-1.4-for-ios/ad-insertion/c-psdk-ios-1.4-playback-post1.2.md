@@ -1,0 +1,80 @@
+---
+description: O comportamento da reprodução de mídia é afetado pela busca, pausa e inclusão de publicidade.
+seo-description: O comportamento da reprodução de mídia é afetado pela busca, pausa e inclusão de publicidade.
+seo-title: Comportamento de reprodução padrão e personalizado com anúncios
+title: Comportamento de reprodução padrão e personalizado com anúncios
+uuid: cc996e5c-bee2-451b-96cb-088df1694188
+translation-type: tm+mt
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+
+---
+
+
+# Comportamento de reprodução padrão e personalizado com anúncios{#default-and-customized-playback-behavior-with-ads}
+
+O comportamento da reprodução de mídia é afetado pela busca, pausa e inclusão de publicidade.
+
+Para substituir o comportamento padrão, use `PTAdPolicySelector`.
+
+>[!IMPORTANT]
+>
+>Para transmissão VOD e transmissão ao vivo/linear, os ajustes de linha do tempo não podem ser revisados. Isso significa que um anúncio não pode ser removido da linha do tempo depois de ser reproduzido. Se o usuário retornar, o mesmo anúncio será reproduzido novamente mesmo se a política normal tiver sido removê-lo.
+
+>[!IMPORTANT]
+>
+>O TVSDK não fornece uma maneira de desativar a busca durante os anúncios. A Adobe recomenda que você configure seu aplicativo para desativar a busca durante os anúncios.
+
+A tabela a seguir descreve como o TVSDK lida com anúncios e quebras de anúncios durante a reprodução:
+
+<table id="table_466538B1C2A646B89EB4F9AA111203BE"> 
+ <thead> 
+  <tr> 
+   <th colname="col1" class="entry"> Atividade de vídeo </th> 
+   <th colname="col2" class="entry"> Política de comportamento TVSDK padrão </th> 
+   <th colname="col3" class="entry">Personalização disponível por meio do <span class="codeph"> PTAdPolicySeletor</span> </th> 
+  </tr>
+ </thead>
+ <tbody> 
+  <tr> 
+   <td colname="col1"> Durante a reprodução normal, uma pausa de anúncio é encontrada. </td> 
+   <td colname="col2"></td> 
+   <td colname="col3">Especifique uma política diferente para o intervalo do anúncio usando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> Seu aplicativo busca encaminhar o(s) intervalo(s) do anúncio para o conteúdo principal. </td> 
+   <td colname="col2"> Reproduz a última pausa de anúncio não assistida que foi ignorada e reinicia a reprodução na posição de busca desejada quando a(s) pausa(s) é(são) concluída(s). </td> 
+   <td colname="col3">Selecione qual quebra foi ignorada para reproduzir usando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> Seu aplicativo busca o conteúdo principal em vez de quebra(s) de anúncio. </td> 
+   <td colname="col2"> Vai para a posição de busca desejada sem reproduzir pausas de anúncio. </td> 
+   <td colname="col3">Selecione qual quebra foi ignorada para reproduzir usando <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> Seu aplicativo busca uma pausa de anúncio. </td> 
+   <td colname="col2"> Reproduz a partir do início do anúncio no qual a busca terminou. </td> 
+   <td colname="col3">Especifique uma política de publicidade diferente para o intervalo de publicidade e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> Seu aplicativo busca retroceder em uma pausa de anúncio. </td> 
+   <td colname="col2"> Reproduz a partir do início do anúncio no qual a busca terminou. </td> 
+   <td colname="col3">Especifique uma política de publicidade diferente para o intervalo de publicidade e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> Seu aplicativo busca encaminhar ou retroceder sobre quebra(s) de anúncios observados para o conteúdo principal. </td> 
+   <td colname="col2"> Se a última quebra de anúncio ignorada já tiver sido observada, ignora a posição de busca selecionada pelo usuário. </td> 
+   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas usando <span class="codeph"> AdBreaksToPlay</span> e determine quais quebras já foram observadas usando <span class="codeph"> PTAdBreak.isWatched</span>. <p> <p>Importante:  Por padrão, o TVSDK marca uma quebra de anúncio como observado imediatamente após a entrada do primeiro anúncio no intervalo do anúncio. </p> </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> Seu aplicativo busca avançar ou retroceder em um ou mais anúncios quebrados e cai em um intervalo de anúncios observado. </td> 
+   <td colname="col2"> Ignora o intervalo do anúncio e busca a posição imediatamente após o intervalo do anúncio. </td> 
+   <td colname="col3">Especifique uma política de publicidade diferente para o intervalo (com o status observado definido como true) e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> Seu aplicativo busca anúncios que foram inseridos usando marcadores de anúncio personalizados. </td> 
+   <td colname="col2"> Ignora a posição de busca selecionada pelo usuário. </td> 
+   <td colname="col3"></td> 
+  </tr> 
+ </tbody> 
+</table>
+
