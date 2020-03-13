@@ -1,0 +1,32 @@
+---
+seo-title: Atualização de metadados
+title: Atualização de metadados
+uuid: 769483e6-a2d1-46cb-afcf-557aa807037c
+translation-type: tm+mt
+source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+
+---
+
+
+# Atualização de metadados{#upgrading-metadata}
+
+Se um cliente Adobe Primetime DRM encontrar conteúdo empacotado com o Flash Media Rights Management Server 1.x, ele extrai os metadados de criptografia do conteúdo e os envia para o servidor. Em seguida, o servidor converte os metadados FMRMS 1.x no formato DRM do Primetime e os envia para o cliente. O cliente envia os metadados atualizados em uma solicitação de licença padrão do Primetime DRM.
+
+* A classe do manipulador de solicitação é `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1MetadataHandler`.
+* O URL da solicitação é &quot;URL *base de conteúdo* 1.x&quot; +&quot; [!DNL /flashaccess/headerconversion/v1]&quot;.
+
+A conversão de metadados pode ser feita dinamicamente quando o servidor recebe os metadados antigos do cliente. Como alternativa, o servidor poderia pré-processar o conteúdo antigo e armazenar os metadados convertidos; nesse caso, quando o cliente solicita novos metadados, o servidor precisa apenas buscar os novos metadados correspondentes ao identificador de licença dos metadados antigos.
+
+Para converter metadados, o servidor deve executar as seguintes etapas:
+
+* Vá `LiveCycleKeyMetaData`. Para pré-converter os metadados, `LiveCycleKeyMetaData` é possível obter de um arquivo empacotado 1.x usando `MediaEncrypter.examineEncryptedContent()`. Os metadados também são incluídos na solicitação de conversão de metadados ( `FMRMSv1MetadataHandler.getOriginalMetadata()`).
+
+* Obtenha o identificador de licença dos metadados antigos e localize a chave de criptografia e as políticas de DRM (essas informações estavam originalmente no banco de dados do Adobe LiveCycle ES. As políticas do LiveCycle ES DRM devem ser convertidas em políticas do Primetime DRM 2.0.) A Implementação de referência inclui scripts e códigos de amostra para converter as políticas de DRM e exportar informações de licença do LiveCycle ES.
+* Preencha o `V2KeyParameters` objeto (que você recupera chamando `MediaEncrypter.getKeyParameters()`).
+
+* Carregue o `SigningCredential`, que é a credencial do Packager emitida pela Adobe usada para assinar metadados de criptografia. Obtenha o `SignatureParameters` objeto chamando `MediaEncrypter.getSignatureParameters()` e preenchendo a credencial de assinatura.
+
+* Ligue `MetaDataConverter.convertMetadata()` para obter o `V2ContentMetaData`.
+
+* Chame `V2ContentMetaData.getBytes()` e armazene para uso futuro, ou chame `FMRMSv1MetadataHandler.setUpdatedMetadata()`.
+
