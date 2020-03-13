@@ -1,0 +1,29 @@
+---
+description: Um MediaResource representa o conteúdo que está prestes a ser carregado pela instância do MediaPlayer.
+seo-description: Um MediaResource representa o conteúdo que está prestes a ser carregado pela instância do MediaPlayer.
+seo-title: Classes MediaPlayer e MediaResource
+title: Classes MediaPlayer e MediaResource
+uuid: 36ef75f3-08f7-4fc5-88a7-9bab9198b917
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# Classes MediaPlayer e MediaResource{#mediaplayer-and-mediaresource-classes}
+
+Um MediaResource representa o conteúdo que está prestes a ser carregado pela instância do MediaPlayer.
+
+<!--<a id="section_B09A012C97454AF58CE2269B800D8027"></a>-->
+
+A biblioteca TVSDK fornece um meio simples de carregar e preparar o conteúdo para reprodução usando o `replaceCurrentResource` método na `MediaPlayer` interface. Este método recebe uma instância da `MediaResource` classe como o único argumento de entrada. A `MediaResource` classe é composta das seguintes informações:
+
+* Um URL, que representa o local do conteúdo que está prestes a ser carregado.
+* Um tipo, que é o tipo de conteúdo que está prestes a ser carregado.
+
+   Essa é uma string que define os tipos de conteúdo que podem ser carregados pelo `MediaPlayer`. Os valores possíveis são HLS e HDS. Cada valor é associado à string que representa as extensões de arquivo normalmente usadas, &quot;m3u8&quot; para HLS e &quot;f4m&quot; para HDS.
+* Alguns metadados, que é uma instância da `Metadata` classe.
+
+   Essa estrutura semelhante a um dicionário pode conter informações adicionais sobre o conteúdo que está prestes a ser carregado, como informações sobre o conteúdo alternativo/anúncio que deve ser colocado no conteúdo principal.
+
+Os metadados são o meio através do qual as informações relacionadas ao conteúdo alternativo são passadas para o TVSDK. A `Metadata` interface define a API para um armazenamento de valores chave genérico, onde a chave e o valor são strings simples.
