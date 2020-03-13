@@ -1,0 +1,71 @@
+---
+cloud: experience-cloud
+product: primetime
+audience: end-user
+user-guide-title: Primetime Reference Implementation Help
+translation-type: tm+mt
+source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
+
+---
+
+
+# Implementação do PSDK 1.4 para referência do Android {#reference-implementation}
+
++ [Visão geral da implementação de referência do Android](home.md)
++ Implementação de referência do Primetime {#reference}
+   + [Como usar a implementação de referência Primetime](ref-implementation/how-to-use-ref-player.md)
+   + [Estrutura de execução de referência](ref-implementation/ref-player-structure.md)
+   + Como usar os gerentes de recursos {#feature-managers}
+      + [Como usar os gerentes de recursos](ref-implementation/using-feature-managers/how-to-use-feature-managers.md)
+      + [Criando gerenciadores de recursos transmitindo informações de configuração para o MediaPlayer...](ref-implementation/using-feature-managers/creating-feature-managers.md)
+      + [Ativar ou desativar recursos usando o ManagerFactory](ref-implementation/using-feature-managers/turning-features-on-off.md)
+      + [Tratamento de eventos](ref-implementation/using-feature-managers/handling-events.md)
+   + Configurar seu ambiente de desenvolvimento {#setup-dev}
+      + [Configurar seu ambiente de desenvolvimento](set-up-dev-environment/set-up-dev-environment-overview.md)
+      + [Baixar e configurar software de pré-requisito](set-up-dev-environment/download-prereqs-android.md)
+      + [Criar a implementação de referência do Primetime](set-up-dev-environment/install-the-ref-player-project.md)
+   + Explore o código {#explore-code}
+      + [PlayerFragment](set-up-dev-environment/exploring-code/player-fragment.md)
+      + [Gerenciadores de recursos](set-up-dev-environment/exploring-code/about-psdk-feature-managers.md)
+      + [ConfigProvider](set-up-dev-environment/exploring-code/config-provider.md)
+      + [SettingsActivity](set-up-dev-environment/exploring-code/settings-activity.md)
+      + [Formato do catálogo](set-up-dev-environment/exploring-code/catalog-format.md)
+      + [Objeto JSON para anúncios do Primetime](set-up-dev-environment/exploring-code/json-pt-ads.md)
+      + [Objeto JSON para quebras de anúncio direto](set-up-dev-environment/exploring-code/json-direct-ad-breaks.md)
+      + [Objeto JSON para marcadores de anúncio personalizados](set-up-dev-environment/exploring-code/json-custom-ad-markers.md)
+      + [Objeto JSON para ID de recurso de direito](set-up-dev-environment/exploring-code/json-entitlement-resource-id.md)
+      + [Exemplo de formato de feed JSON](set-up-dev-environment/exploring-code/example-json-feed-format.md)
+   + Implementação da reprodução de vídeo {#implement-video}
+      + [Operações essenciais da reprodução de vídeo](implement-video-playback/video-playback.md)
+      + [Ativar reprodução de vídeo](implement-video-playback/enable-video-playback.md)
+      + [Proteção de conteúdo DRM](implement-video-playback/content-protection.md)
+   + [Taxas de vários bits](implement-video-playback/mbr.md)
+   + Configure um player para reprodução de DVR com anúncios {#dvr}
+      + [DVR sem inserção de anúncio](implement-video-playback/dvr/dvr-without-ad-insertion.md)
+      + [DVR com inserção de anúncio](implement-video-playback/dvr/dvr-with-ad-insertion.md)
+      + [Escolhendo um ponto de partida personalizado para DVR](implement-video-playback/dvr/dvr-custom-start-point.md)
+      + [Definir uma hora de início personalizada na implementação de referência](implement-video-playback/dvr/set-custom-start-time-dvr.md)
+   + [Exibir estatísticas de reprodução e dispositivo de QoS](implement-video-playback/qos-statistics.md)
+   + Inserir anúncios {#insert-ads}
+      + [Inserção de anúncio](insert-ads/ad-insertion.md)
+      + [Tipos de inserção de anúncio](insert-ads/ad-insertion-types.md)
+      + [Adicionar publicidade](insert-ads/add-advertising.md)
+      + [Documentação da API relacionada](insert-ads/aps-callbacks-ad-insertion.md)
+   + Áudio de ligação tardia {#late-binding-audio}
+      + [Visão geral](late-binding-audio/late-binding-audio-overview.md)
+      + [Integrar áudio de ligação tardia](late-binding-audio/aa-enable.md)
+      + [Selecionar as faixas de áudio](late-binding-audio/select-audio-tracks.md)
+      + [Documentação da API relacionada](late-binding-audio/aa-api-callbacks.md)
+   + Fluxos de direito de autenticação Primetime {#primetime-authentications}
+      + [Visão geral](paytvpass-entitlement/paytvpass-entitlement-overview.md)
+      + [Visão geral do Gerenciador de direitos](paytvpass-entitlement/entitlement-overvivew.md)
+      + [Integrar autenticação Primetime](paytvpass-entitlement/integrate-pass.md)
+      + [Configurar relatórios do Adobe Analytics](paytvpass-entitlement/pass-analytics-setup.md)
+      + [Documentação da API relacionada](paytvpass-entitlement/pass-apis-callbacks.md)
+   + Análise de vídeo {#video-analytics}
+      + [Análise de vídeo](video-analytics/video-analytics-overview.md)
+      + [Criar o Video Analytics Manager](video-analytics/create-video-analytics-manager.md)
+      + [Configurar análise de vídeo](video-analytics/configure-video-analytics-manager.md)
+      + [Documentação da API relacionada](video-analytics/va-apis-callbacks.md)
+   + [Criar uma interface de usuário personalizada](build-custom-ui.md)
+   + [Solução de problemas](troubleshooting.md)
