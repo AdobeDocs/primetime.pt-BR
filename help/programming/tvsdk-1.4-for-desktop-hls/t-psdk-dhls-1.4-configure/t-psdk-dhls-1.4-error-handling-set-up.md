@@ -1,0 +1,40 @@
+---
+description: Configure um único local para lidar com erros.
+seo-description: Configure um único local para lidar com erros.
+seo-title: Configurar a manipulação de erros
+title: Configurar a manipulação de erros
+uuid: ff56180d-aa74-4b7c-a24c-e536d874c2e6
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# Configurar a manipulação de erros{#set-up-error-handling}
+
+Configure um único local para lidar com erros.
+
+1. Implemente uma função de retorno de chamada de evento para `MediaPlayerStatusChangeEvent.STATUS_CHANGED`.
+
+   O TVSDK transmite informações do evento, como um `MediaPlayerStatusChangeEvent` objeto.
+1. Na chamada de retorno, quando o status do parâmetro event for `MediaPlayerStatus.ERROR`, forneça lógica para tratar todos os erros.
+1. Depois que o erro for tratado, redefina o `MediaPlayer` objeto ou carregue um novo recurso de mídia.
+
+   Quando o `MediaPlayer` objeto estiver no estado ERROR, ele não poderá sair desse estado até que você redefina o `MediaPlayer` objeto (por meio do `MediaPlayer.reset` método) ou carregue um novo recurso de mídia ( `MediaPlayer.replaceCurrentItem`).
+
+<!--<a id="example_49FF225E92EA494AA06B2E5F26101F4C"></a>-->
+
+Por exemplo:
+
+```
+mediaPlayer.addEventListener(MediaPlayerStatusChangeEvent.STATUS_CHANGED,  
+                             onStatusChanged); 
+ 
+private void onStatusChanged(event:MediaPlayerStatusChangeEvent):void { 
+    if (event.status == MediaPlayerStatus.ERROR) { 
+        var error:MediaError = event.error; 
+        // handle TVSDK error here 
+    } 
+} 
+```
+
