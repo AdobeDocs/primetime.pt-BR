@@ -1,0 +1,40 @@
+---
+seo-title: Gerar os metadados DRM locais
+title: Gerar os metadados DRM locais
+uuid: 89d53924-1a8d-42d4-a716-ce4f4566b6bf
+translation-type: tm+mt
+source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+
+---
+
+
+# Gerar os metadados DRM locais{#generate-the-on-premises-drm-metadata}
+
+Um [!DNL CreateMetadata.jar] utilitário está incluído na [!DNL create_metadata] pasta. O objetivo deste utilitário é criar um Metadados de DRM locais que iniciarão o cliente na execução do processo de individualização em relação ao servidor de individualização local especificado.
+
+1. Atualize a implementação de referência do Primetime DRM - Ferramentas de linha de comando com os seguintes arquivos:
+
+   * [!DNL CreateMetadata.jar]
+   * [!DNL commons-cli-1.2.jar]
+   * [!DNL createMetadata.properties]
+
+      Os dois arquivos JAR podem residir na [!DNL Command Line Tools/libs] pasta. O [!DNL createMetadata.properties] arquivo pode residir ao lado do [!DNL flashaccesstools.properties] arquivo.
+
+<!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
+
+Inclui um [!DNL examplecreate.sh] script que demonstra uma amostra da criação de metadados. Certifique-se de configurar o URL do servidor de licença e o URL do servidor de individualização nos arquivos de script e propriedades antes de tentar gerar metadados.
+
+As entradas do utilitário são as seguintes:
+
+* `createMetadata.properties` - Arquivo de propriedades que contém uma política padrão, locais de certificados e senhas, etc.
+* `indivCert` - Arquivo PKCS12 contendo o certificado de Transporte de individualização
+* `indivURL` - URL do servidor de diferenciação local
+
+O arquivo de saída é um arquivo de metadados DRM locais que será consumido pelo cliente DRM. Por exemplo:
+
+```
+java -jar libs/CreateMetadata.jar -c createMetadata.properties -indivCert i15n_transport.cer
+-indivURL https://[YOURINDIVSERVER:PORT] onpremdrm.metadata
+```
+
+.
