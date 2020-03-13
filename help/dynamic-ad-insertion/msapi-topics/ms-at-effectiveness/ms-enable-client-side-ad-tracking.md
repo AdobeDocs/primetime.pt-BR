@@ -1,0 +1,30 @@
+---
+description: Você pode ativar o rastreamento de anúncio do cliente adicionando os parâmetros de versão do modo de rastreamento e do modo de rastreamento à solicitação de URL do Bootstrap.
+seo-description: Você pode ativar o rastreamento de anúncio do cliente adicionando os parâmetros de versão do modo de rastreamento e do modo de rastreamento à solicitação de URL do Bootstrap.
+seo-title: Ativar o rastreamento de anúncios do cliente
+title: Ativar o rastreamento de anúncios do cliente
+uuid: 0a825756-1d9a-43c5-bc22-9b366f39fdbb
+translation-type: tm+mt
+source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+
+---
+
+
+# Ativar o rastreamento de anúncios do cliente {#enable-client-side-ad-tracking}
+
+Você pode ativar o rastreamento de anúncios do cliente adicionando os parâmetros `pttrackingmode` e `pttrackingversion` à solicitação de URL do Bootstrap.
+
+Com o rastreamento de anúncio do cliente ativado, você também pode recuperar metadados de rastreamento de anúncio usando o URL da API de rastreamento. Para obter mais detalhes, consulte Parâmetros [de](../../msapi-topics/ms-at-effectiveness/notvsdk-csat-ms-interface.md)consulta.
+
+Para executar o rastreamento de anúncio do cliente, use o URL da API de rastreamento.
+
+1. Adicione os seguintes parâmetros de consulta ao URL de solicitação do servidor manifest:
+
+   * `pttrackingmode=simple`
+   * `pttrackingversion={format version}`
+
+Por exemplo:
+
+```
+https://. . .?. . .&pttrackingmode=simple&pttrackingversion=v1
+```
