@@ -1,0 +1,53 @@
+---
+description: Você pode configurar um controle da interface do usuário para o volume de som.
+seo-description: Você pode configurar um controle da interface do usuário para o volume de som.
+seo-title: Fornecer controle de volume
+title: Fornecer controle de volume
+uuid: c51e99b6-efd1-414e-9ef7-77bd53e0d6c0
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# Fornecer controle de volume{#provide-volume-control}
+
+Você pode configurar um controle da interface do usuário para o volume de som.
+
+1. Aguarde a instância MediaPlayer estar em um status válido para esse comando.
+
+   Qualquer estado, com exceção de LIBERADO, é válido.
+1. Chame o método de conjunto de volumes na `MediaPlayer` instância para definir o volume de áudio.
+
+   ```
+   public function set volume(value:Number):void
+   ```
+
+   O valor do volume representa o volume solicitado expresso em proporção do volume máximo, em que 0 é silencioso e 1 é o volume máximo.
+
+   <table id="table_144A2B1260374FBE8D976194F602DDC7"> 
+   <thead> 
+   <tr> 
+      <th colname="col1" class="entry"> Se o volume especificado for </th> 
+      <th colname="col2" class="entry"> O volume resultante é </th> 
+   </tr> 
+   </thead>
+   <tbody> 
+   <tr> 
+      <td colname="col1"> Menos de 0 </td> 
+      <td colname="col2"> 0 </td> 
+   </tr> 
+   <tr> 
+      <td colname="col1"> Entre 0 e 1 </td> 
+      <td colname="col2"> O volume especificado </td> 
+   </tr> 
+   <tr> 
+      <td colname="col1"> Maior que 1 </td> 
+      <td colname="col2"> O valor dividido por 100 e definido para um dos seguintes valores: 
+      <ul id="ul_8C2282F0EDC44A408820F5768709214F"> 
+      <li id="li_B00BC6F4812D4000891358F762C8E492">O resultado se estiver entre 0 e 1 </li> 
+      <li id="li_03B7F30662554F299320040CAC2DEB7A">1 se o resultado for maior que 1 </li> 
+      </ul> <p>Dica:  Essa lógica trata valores fornecidos pelos clientes com base em versões anteriores das <span class="codeph">frases/primetime-sdk-name</span>, onde os valores de volume variavam de 0 a 100. </p> </td> 
+   </tr> 
+   </tbody> 
+   </table>
