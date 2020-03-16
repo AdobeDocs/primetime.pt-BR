@@ -1,29 +1,33 @@
 ---
-title: Notas de versão do TVSDK 3.10 para iOS
-description: As Notas de versão do TVSDK 3.10 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.10.
+title: Notas de versão do TVSDK 3.11 para iOS
+description: As Notas de versão do TVSDK 3.11 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.11.
 translation-type: tm+mt
-source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
+source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
 
 ---
 
 
-# Notas de versão do TVSDK 3.10 para iOS {#tvsdk-for-ios-release-notes}
+# Notas de versão do TVSDK 3.11 para iOS {#tvsdk-for-ios-release-notes}
 
-As Notas de versão do TVSDK 3.10 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.10.
+As Notas de versão do TVSDK 3.11 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.11.
 
 ## Requisitos de sistema e software {#system-software-requirements}
 
-Antes de baixar o iOS 3.10, verifique se as versões de hardware, sistema operacional e aplicativo atendem aos seguintes requisitos:
+Antes de baixar o iOS 3.11, verifique se as versões de hardware, sistema operacional e aplicativo atendem aos seguintes requisitos:
 
 Sistema operacional: iOS 8.0 ou posterior.
 
-## iOS TVSDK 3.10
+## iOS TVSDK 3.11
 
-Correção de um problema em que o player TVSDK não acionava a notificação PTMediaPlayerStatusError quando a rede não estava disponível.
+Correções fornecidas para problemas do cliente em que `isFallbackOnInvalidCreativeEnabled` e método `customParams` fazem com que o aplicativo falhe.
 
 Para obter as correções na versão atual, consulte os problemas corrigidos [do](#resolved-issues) cliente e, para saber mais sobre as limitações, consulte a seção Problemas [conhecidos e limitações](#known-issues-and-limitations) .
 
 ### Novos recursos e correções nas versões anteriores {#whats-new-previous}
+
+**iOS TVSDK 3.10**
+
+* Corrigido um problema no qual o TVSDK player não aciona `PTMediaPlayerStatusError` notificação quando a rede não está disponível.
 
 **iOS TVSDK 3.9**
 
@@ -290,11 +294,17 @@ Comment Type: draft
 </note>
  -->
 
+**iOS TVSDK 3.11**
+
+* (ZD#40998) - O `isFallbackOnInvalidCreativeEnabled` faz com que o aplicativo falhe.
+
+* (ZD#41289) - `NSInvalidArgumentException` é observado com o método que `customParams` leva à falha do aplicativo.
+
+### Resolvidos problemas nas versões anteriores {#resolved-issues-previous}
+
 **iOS TVSDK 3.10**
 
 (ZD#40943) - O reprodutor TVSDK não aciona a notificação PTMediaPlayerStatusError quando a rede não está disponível.
-
-### Resolvidos problemas nas versões anteriores {#resolved-issues-previous}
 
 **iOS TVSDK 3.9**
 
@@ -310,94 +320,81 @@ Comment Type: draft
 
 **iOS TVSDK 3.7**
 
-* (ZD#38961) - O conteúdo não é reproduzido na janela Picture-in-Picture (PiP) depois que um conteúdo é concluído, quando vários conteúdos são configurados para serem reproduzidos no PiP.
+(ZD#38961) - O conteúdo não é reproduzido na janela Picture-in-Picture (PiP) depois que um conteúdo é concluído, quando vários conteúdos são configurados para serem reproduzidos no PiP.
 
 **iOS TVSDK 3.6**
 
-* Nenhum problema novo nesta versão.
+Nenhum problema novo nesta versão.
 
 **iOS TVSDK 3.5**
 
-* Nenhum problema novo nesta versão.
+Nenhum problema novo nesta versão.
 
 **Versão 3.3**
 
-* (ZD#37820) - Lista de permissões adicionada para cabeçalho personalizado HS-Id, HS-SSAI-TAG.
+(ZD#37820) - Lista de permissões adicionada para cabeçalho personalizado HS-Id, HS-SSAI-TAG.
 
 **Versão 3.2**
 
-**Ticket#36588** - A falha do player ocorre quando o método MediaPlayer STOP é chamado.
-
+* **Ticket#36588** - A falha do player ocorre quando o método MediaPlayer STOP é chamado.
 Corrigida uma falha intermitente observada quando o método STOP é chamado para alguns fluxos com legendas.
 
-**Ticket#37080** - Solicitações duplicadas exibidas para chamadas de Manifesto.
-
+* **Ticket#37080** - Solicitações duplicadas exibidas para chamadas de Manifesto.
 Correção de solicitações duplicadas feitas para URLs de manifesto durante a reprodução. O TVSDK agora faz uma chamada por manifesto.
 
-**Ticket#37** - A regra de normalização do CRS falha com tipo de correspondência eq
-
-Correção de um caso em que o player travava quando encontrado com o último conjunto de regras de normalização para nomes de host com um tipo de correspondência &quot;eq&quot;.
+* **Ticket#37** - A regra de normalização do CRS falha com tipo de correspondência eqCorrigido um caso em que o player travava quando encontrado com o último conjunto de regras de normalização para nomes de host com um tipo de correspondência &quot;eq&quot;.
 
 **Versão 3.1**
 
-**Ticket #36313** - Resultados imprevisíveis intermitentes durante quebras de anúncios lineares
-
-Reprodução intermitente corrigida durante quebras de anúncio lineares no fluxo ao vivo.
+**Ticket #36313** - Resultados imprevisíveis intermitentes durante quebras de anúncios linearesReprodução intermitente corrigida durante quebras de anúncios lineares no fluxo ao vivo.
 
 **Versão 3.0.1**
 
-**Ticket36948** - CRS - Ordem de seleção de ativos inconsistente no iOS 12
-
-O ativo selecionado para CRS nem sempre é a variante de qualidade mais alta retornada em uma resposta VAST ou VMAP.
+**Ticket36948** - CRS - Ordem de seleção de ativos inconsistente no iOS 12O ativo selecionado para CRS nem sempre é a variante de qualidade mais alta retornada em uma resposta VAST ou VMAP.
 
 **Versão 3.0**
 
-**Ticket35311** - O status do player não é PAUSADO durante a interrupção da chamada telefônica
+* **Ticket35311** - O status do player não é PAUSADO durante a interrupção da chamada telefônicaAdicionado o manipulador de interrupções para impedir a interrupção do player. Na interrupção, o status do player se torna PAUSED e, em seguida, reinicie a reprodução ao clicar no botão Play.
 
-Adicionado o manipulador de interrupções para impedir a interrupção do player. Na interrupção, o status do player se torna PAUSED e, em seguida, reinicie a reprodução ao clicar no botão Play.
+* **Ticket36685** - Ativos em tempo real - Incompatibilidade de tempo com o progresso do tempo do player e tempo do marcador SCTE A hora correta é calculada para os marcadores SCTE que estão à frente do ponto em tempo real.
 
-**Ticket36685** - Ativos em tempo real - Incompatibilidade de tempo com o progresso de tempo do player e tempo do marcador SCTE
-
-A hora correta é calculada para os marcadores SCTE que estão à frente do ponto ativo.
-
-**Ticket36492** - `currentTime` e `localTime` não são atualizados ao buscar uma nova posição durante o status pausado
-
-A hora atual do player pode ser definida como zero, caso o player esteja em estado de pausa; anteriormente, o tempo atual era definido como zero somente no estado de reprodução.
+* **Ticket36492** - `currentTime` e `localTime` não são atualizados ao buscar uma nova posição durante a pausa do statusA hora atual do Player pode ser definida como zero caso o player esteja em estado de pausa; anteriormente, o tempo atual era definido como zero somente no estado de reprodução.
 
 **Versão 1.4.45**
 
-**Ticket36294** - TVSDK do iOS inoperante com Xcode 10
+* **Ticket36294** - TVSDK do iOS inoperante com o Xcode 10Corrigidos os problemas de compilação com o TVSDK no XCode 10. Devido aos requisitos do XCode 10, os aplicativos criados no TVSDK para iOS 1.4.45 e versões posteriores exigem uma implantação mínima como iOS 7.0
 
-Correção de problemas de compilação com o TVSDK no XCode 10. Devido aos requisitos do XCode 10, os aplicativos criados no TVSDK para iOS 1.4.45 e versões posteriores exigem uma implantação mínima como iOS 7.0
+* **Ticket36321** - Discrepância observada no intervalo pesquisável entre `PTMediaPlayer` e a `AVPlayer` instância no estado &quot;Reproduzindo&quot;.
 
-**Ticket36321** - Discrepância observada no intervalo pesquisável entre `PTMediaPlayer` e a `AVPlayer` instância no estado &quot;Reproduzindo&quot;.
-**Ticket36493** `libstdc++` - suporte para iOS 12
-
-Correção de problemas de compilação com o TVSDK no iOS 12. Os aplicativos criados no TVSDK para iOS 1.4.45 e versões posteriores exigem uma implantação mínima como iOS 7.0
+* **Ticket36493** `libstdc++` - suporte ao iOS 12Corrigidos os problemas de compilação com o TVSDK no iOS 12. Os aplicativos criados no TVSDK para iOS 1.4.45 e versões posteriores exigem uma implantação mínima como iOS 7.0
 
 **Versão 1.4.44**
 
-**Ticket34683** - O Tempo De Andamento Da Reprodução Do Anúncio Está Indo Negativo
+* **Ticket34683** - O Tempo De Andamento Da Reprodução Do Anúncio Está Indo Negativo
 
 Verificações adicionais feitas para lidar com o caso quando há uma incompatibilidade entre a duração reportada pelo servidor de anúncios e o conteúdo real do anúncio.
 
-**Ticket34801** - currentTime e localTime não estavam sendo atualizados ao buscar uma nova posição durante o status pausado
+* **Ticket34801** - currentTime e localTime não estavam sendo atualizados ao buscar uma nova posição durante a pausa do statusA hora atual do Player pode ser definida como zero caso o player esteja em pausa; anteriormente, o tempo atual era definido como zero somente no estado de reprodução.
 
-A hora atual do player pode ser definida como zero, caso o player esteja em estado de pausa; anteriormente, o tempo atual era definido como zero somente no estado de reprodução.
-
-**Ticket35037** - Reprodução paralisa com URL inválido ao retornar da inserção de anúncios com base em sinal.
-
+* **Ticket35037** - Reprodução paralisa com URL inválido ao retornar da inserção de anúncios com base em sinal.
 Correção aprimorada fornecida para o problema fechado nº 34385 na versão 1.4.42. Adicionado isCancelado o código de controle de verificação e exceção para tornar a fila de operações mais robusta.
 
 **Versão 1.4.43**
 
 * (ZD#32990) - iOS: Reprodução de conteúdo em vez de publicidades em alguns pontos de sinalização. `selectedMediaOptionInMediaSelectionGroup` A API que fazia parte da interface AVPlayerItem agora foi movida sob AVMediaSelection no iOS 11. O problema foi resolvido usando essa nova API.
+
 * (ZD#33683) TVSDK removido == sufixo das strings de metadados. O problema é corrigido na lógica de análise.
+
 * (ZD#33905) - TVSDK do iOS fazendo chamadas para os arquivos manifest com dois agentes do usuário. O problema do agente do usuário foi corrigido na primeira chamada m3u8 (caso de instalação de limpeza). M3u8 tem os mesmos agentes de usuário para todas as chamadas agora.
+
 * (ZD#34293) - Os pré-rolls inseridos em fluxos LINEAR não são reproduzidos corretamente no iOS11. O problema foi corrigido para anúncios de pré-rolagem.
+
 * (ZD#34684) - Quando a política de ignorado do anúncio é aplicada, os quadros do anúncio precedente são exibidos por alguns segundos. Uma nova API, enableVodPreroll foi introduzida para desativar a reprodução de pré-rolagem na reprodução do vod. O valor padrão para esta API é &#39;Yes&#39;. A API garante a omissão da identificação do conteúdo do anúncio no conteúdo principal.
+
 * (ZD#34765) - Após chamar stop(), poucos segmentos de Transmissão ainda são baixados. Aprimoramento da API Stop() para evitar o download dos segmentos extras.
+
 * (ZD#34865) - Os anúncios anteriores ao livestream são truncados no iOS. Relacionado ao iOS11 e adicionar uma verificação adicional para confirmar se o fluxo é pré-roll ou conteúdo principal, trata desse problema.
+
 * (ZD#35093) - Corrigido um cenário de failover em que, se a variante primária do fluxo falhar na inicialização (retorna 404), a reprodução não alterava para o fluxo de backup.
 
 **1.4.42 (1.4.42.118)**
@@ -405,10 +402,13 @@ Correção aprimorada fornecida para o problema fechado nº 34385 na versão 1.4
 * (ZD#34385) - A reprodução é parada com um URL inválido ao retornar da inserção de anúncios com base em sinal.
 
    Aumente as contagens simultâneas máximas para `CustomAVAssetLoaderOperations`, para que as leituras do manifesto possam continuar a ser executadas.
+
 * (ZD#34373) - Os usuários finais não podem transmitir fluxo para dispositivos conectados por HDMI, quando a gravação de fluxo é proibida.
+
 * (ZD#32678) - O TVSDK não coleta as IDs de anúncio corretas no iOS.
 
    A ID do anúncio final do anúncio final agora é coletada em pings VHL no caso de redirecionamentos VAST/VMAP.
+
 * (ZD#33904) - O TVSDK não está registrado para notificações do AVFFoundation `AVAudioSessionMediaServicesWereLostNotification` e `AVAudioSessionMediaServicesWereResetNotification`.
 
    `PTMediaServicesWereLostNotification` e agora `PTMediaServicesWereResetNotification` pode ser registrado no aplicativo do player para obter as notificações quando os serviços de mídia forem redefinidos ou perdidos.
