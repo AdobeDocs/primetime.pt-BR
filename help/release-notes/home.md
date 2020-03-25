@@ -4,7 +4,7 @@ seo-title: Notas de versão do Adobe Primetime
 description: nulo
 seo-description: nulo
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -25,9 +25,9 @@ O lançamento focou na solução dos principais problemas dos clientes.
 
 Consulte para obter mais informações sobre a versão atual lançada para [Android](../release-notes/tvsdk-3x-android.md).
 
-## Aprimoramentos e correções no PTAI 19.11.1
+## Aprimoramentos e correções no PTAI 20.3.3
 
-Foco nas atualizações de manutenção.
+Foco nas correções de problemas do cliente.
 
 Para obter mais informações sobre a versão atual lançada da Inserção de anúncio dinâmico, consulte Notas [de versão do](ptai-19x-release-notes.md)PTAI.
 
@@ -40,7 +40,7 @@ Para obter mais informações sobre a versão atual lançada da Inserção de an
 | [Implementação de referência](/help/android-reference-implementation/home.md) | Ajuda a entender o TVSDK e modificar os gerentes de recursos para personalizar seu player pessoal. |
 | [Referências da API Primetime](/help/reference/api-references.md) | Fornece informações detalhadas sobre funções TVSDK, estruturas de dados e outras construções de programação. |
 | [Gerenciamento de direitos digitais](/help/digital-rights-management/home.md) | Ajuda você a saber mais sobre vários cenários de usuário no Digital Rights Management (DRM) |
-| [Ajuda para inserção de publicidade dinâmica](/help/dynamic-ad-insertion/home.md) | Explica como monetizar o conteúdo inserindo anúncios dinâmicos direcionados ao usuário no servidor e engajando o público-alvo com anúncios personalizados. |
+| [Ajuda para inserção de publicidade dinâmica](/help/dynamic-ad-insertion/home.md) | Explica como monetizar o conteúdo inserindo anúncios dinâmicos direcionados ao usuário no servidor e engajando a audiência com anúncios personalizados. |
 | [Arquivos](https://helpx.adobe.com/primetime/archives.html) | Baixe PDFs da documentação arquivada. |
 
 ## Recursos úteis
