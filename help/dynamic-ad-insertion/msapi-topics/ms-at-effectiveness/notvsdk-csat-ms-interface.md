@@ -16,11 +16,14 @@ Use os parâmetros opcionais `pttrackingmode`, `pttrackingversion`e `pttrackingp
 
 ## Parâmetros de consulta {#query-parameters}
 
-|**pttrackingmode**|Exemplo: pttrackingmode=simpleA especificação simples informa ao servidor manifest que você deseja rastrear as informações.
+|**pttrackingmode**|
+Exemplo: pttrackingmode=simpleA especificação simples informa ao servidor manifest que você deseja rastrear as informações.
 Especifique-o em uma solicitação para buscar o M3U8 antes de solicitar informações de rastreamento.Quando você não as especifica, o servidor manifest retorna informações de rastreamento nas tags #EXT-X-MARKER.
 Ou, se você especificar um valor válido diferente de simples, o rastreamento do lado do servidor será chamado.
 
-|**pttrackingversion**|Exemplo: pttrackingversion=v2Esse parâmetro informa ao servidor manifest qual formato usar para retornar informações de rastreamento (consulte Formatos [de](../../msapi-topics/ms-list-file-formats/ms-api-file-formats.md)arquivo).
+|**pttrackingversion**|
+Exemplo: pttrackingversion=v2Esse parâmetro informa ao servidor manifest qual formato usar para retornar informações de rastreamento (consulte Formatos [de](../../msapi-topics/ms-list-file-formats/ms-api-file-formats.md)arquivo).
 Especifique-o em uma solicitação para buscar o M3U8 antes de solicitar informações de rastreamento.Quando você não as especifica ou especifica um valor inválido, o servidor manifest usa v1.
 
-|**pttrackingposition**|Exemplo: pttrackingpositionEste parâmetro diz ao servidor manifest para retornar informações de rastreamento do vídeo como um objeto JSON ou VMAP no arquivo M3U8.O servidor manifest ignora o valor especificado e envia todas as informações de rastreamento que ele tem para essa sessão. Se nenhum valor for transmitido, o servidor manifest retornará o arquivo M3U8 solicitado.
+|**pttrackingposition**|
+Exemplo: pttrackingpositionEste parâmetro diz ao servidor manifest para retornar informações de rastreamento do vídeo como um objeto JSON ou VMAP no arquivo M3U8.O servidor manifest ignora o valor especificado e envia todas as informações de rastreamento que ele tem para essa sessão. Se nenhum valor for transmitido, o servidor manifest retornará o arquivo M3U8 solicitado.
