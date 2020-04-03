@@ -43,26 +43,20 @@ Para adicionar suporte a VPAID 2.0:
    >Além disso, você só deve criar sua exibição de anúncio personalizada quando o player estiver no estado PREPARADO,
    >
    >
-   >Descarte somente a exibição de anúncio personalizada quando redefinir for chamado. Por exemplo:    >
+   >Descarte somente a exibição de anúncio personalizada quando redefinir for chamado. Por exemplo:
    >
-   >
-   ```>
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
    >       ... 
    >} 
    >
+   >```
    >
-   ```   >
+   >Finalmente, antes de descartar sua exibição de anúncio personalizada, você deve removê-la do `FrameLayout`. Por exemplo:
    >
-
-
-
-   >Finalmente, antes de descartar sua exibição de anúncio personalizada, você deve removê-la do `FrameLayout`. Por exemplo:    >
-   >
-   >
-   ```>
-   if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
-   ```
+   >```
+   >if (_playerFrame != null) 
+   >   _playerFrame.removeAllViews(); 
+   >```
