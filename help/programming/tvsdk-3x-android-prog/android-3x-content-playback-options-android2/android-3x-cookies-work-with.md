@@ -5,7 +5,7 @@ seo-title: Trabalhar com cookies
 title: Trabalhar com cookies
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 ---
 
@@ -16,7 +16,7 @@ Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies
 
 Esta é uma amostra de solicitação ao servidor de chaves com alguma autenticação:
 
-1. Seu cliente entra em seu site em um navegador e seu login mostra que este cliente tem permissão para exibir o conteúdo.
+1. Seu cliente entra em seu site em um navegador e seu login mostra que este cliente tem permissão para visualização no conteúdo.
 1. Com base no que é esperado pelo servidor de licenças, seu aplicativo gera um token de autenticação.
 
    Esse valor é passado para o TVSDK.
@@ -45,7 +45,7 @@ Para trabalhar com cookies:
    >
    >Quando o redirecionamento 302 estiver ativado, a solicitação de anúncio poderá ser redirecionada para um domínio diferente do domínio ao qual o cookie pertence.
 
-   O TVSDK consulta isso `cookieManager` no tempo de execução, verifica se há cookies associados ao URL e usa esses cookies automaticamente.
+   O TVSDK query isso `cookieManager` no tempo de execução, verifica se há cookies associados ao URL e usa esses cookies automaticamente.
 
    Se os cookies precisarem ser atualizados no aplicativo durante a reprodução, não use a `networkConfiguration.setCookieHeaders` API, pois a atualização ocorrerá no armazenamento de cookies JAVA.
 
@@ -64,8 +64,9 @@ Para trabalhar com cookies:
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
-   Depois de definir &#39;setReadSetCookieHeader&#39; como falso, defina os cookies para as solicitações principais usando o gerenciador de cookies JAVA.
    >
+   >Depois de definir &#39;setReadSetCookieHeader&#39; como falso, defina os cookies para as solicitações principais usando o gerenciador de cookies JAVA.
+
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
 Essa API de retorno de chamada será acionada sempre que houver uma atualização em cookies C++ (cookies que vêm da resposta http). O aplicativo precisa ouvir esse retorno de chamada e pode atualizar seu JAVA CookieStore de acordo para que suas chamadas de rede em JAVA possam utilizar os cookies como abaixo:
 
