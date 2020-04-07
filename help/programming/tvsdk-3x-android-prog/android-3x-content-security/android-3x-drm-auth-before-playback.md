@@ -5,7 +5,7 @@ seo-title: Autenticação DRM antes da reprodução
 title: Autenticação DRM antes da reprodução
 uuid: be319b04-a506-4278-8275-db32cd3f18aa
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: e300238be5a2bddc7c6b9bd26682dcb4401959b1
 
 ---
 
@@ -48,13 +48,13 @@ Neste exemplo, você pode usar `DRMHelper` métodos para baixar o conteúdo do a
 
 1. Implemente os retornos de chamada no `DRMLoadMetadataListener`.
 
-   O `loadDRMMetadata` chama esses manipuladores de eventos.
+   As `loadDRMMetadata` chamadas desses manipuladores de evento.
 
    ```java
    public interface DRMLoadMetadataListener { 
-    
+   
        public void onLoadMetadataUrlStart(); 
-    
+   
        /** 
        * @param authNeeded 
        * whether DRM authentication is needed. 
@@ -63,10 +63,9 @@ Neste exemplo, você pode usar `DRMHelper` métodos para baixar o conteúdo do a
        public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
        public void onLoadMetadataUrlError(); 
    } 
-   
    ```
 
-   Aqui estão detalhes adicionais sobre os manipuladores:
+   Estes são detalhes adicionais sobre os manipuladores:
 
    * `onLoadMetadataUrlStart` detecta quando o carregamento do URL de metadados começou.
    * `onLoadMetadataUrlComplete` detecta quando o URL de metadados terminou de ser carregado.
@@ -153,7 +152,7 @@ Neste exemplo, você pode usar `DRMHelper` métodos para baixar o conteúdo do a
       }); 
       ```
 
-1. Use um ouvinte de evento para verificar o status de autenticação.
+1. Use um ouvinte de evento para verificar o status da autenticação.
 
    Esse processo implica a comunicação em rede, então essa é também uma operação assíncrona.
 
@@ -191,7 +190,7 @@ Neste exemplo, você pode usar `DRMHelper` métodos para baixar o conteúdo do a
    } 
    ```
 
-1. Se a autenticação for bem-sucedida, inicie a reprodução.
-1. Se a autenticação não for bem-sucedida, notifique o usuário e não inicie a reprodução.
+1. Se a autenticação for bem-sucedida, start a reprodução.
+1. Se a autenticação não for bem-sucedida, notifique o usuário e não start a reprodução.
 
    Seu aplicativo deve lidar com quaisquer erros de autenticação. Falha ao autenticar antes da reprodução coloca o TVSDK em um estado de erro e a reprodução para. Seu aplicativo deve resolver o problema, redefinir o player e recarregar o recurso.
