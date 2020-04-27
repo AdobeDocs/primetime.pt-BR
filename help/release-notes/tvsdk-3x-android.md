@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e41213acf027e4dc4d016ef31c2d3d1665f54dfc
+source-git-commit: 3e5078c25a1426c3991669809426eefab0386ac9
 
 ---
 
@@ -64,7 +64,7 @@ Esta versão focou na correção de problemas principais do cliente, conforme me
 
 * **Suporte pré-rolo com recurso** Paral Ad-Break - Com esse aprimoramento, o TVSDK 3.8 suporta anúncios precedentes com o recurso Parcial Ad-Break (PABI).
 
-   O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ativo, emulando a experiência da televisão ao vivo.
+   O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ao vivo, emulando a experiência da televisão ao vivo.
 
 **Android TVSDK 3.7**
 
@@ -117,7 +117,7 @@ Esta versão focou na correção de problemas principais do cliente, conforme me
 
    * void alwaysUseAC3OnSupportedDevices(boolean val)na classe MediaPlayer
 * **O TVSDK oferece suporte à reprodução de CMAF e streams simples para CTR de Widevine criptografado.**
-* **A reprodução de fluxos HEVC 4K agora é suportada.**
+* **A reprodução de fluxos HEVC 4K agora é compatível.**
 * **Solicitações** de chamada de anúncio paralela - o TVSDK agora pré-busca 20 solicitações de chamada de anúncio em paralelo.
 
 **Versão 3.0**
@@ -290,20 +290,16 @@ Quando o TVSDK abre uma conexão, ele solicita ao servidor uma conexão *de manu
 
 * **SizeDisponableEventListener**
 
-   * os métodos getHeight() e getWidth() de SizeAvailableEvent agora retornarão a saída em altura e largura respectivamente. A taxa de aspecto de exibição pode ser calculada da seguinte forma:
+   * `getHeight()` e `getWidth()` os métodos de `SizeAvailableEvent` retornarão a saída em altura e largura, respectivamente. A taxa de aspecto de exibição pode ser calculada da seguinte forma:
 
-   ```java
-   SizeAvailableEvent e;
-   DAR = e.getWidth()/ e.getHeight();
-   ```
+      SizeAvailableEvent e;
+DAR = e.getWidth()/ e.getHeight();
 
-   A proporção da imagem do Armazenamento em termos de largura da barra e altura da barra pode também ser usada para calcular a largura e a altura da imagem da imagem:
+      A proporção da imagem do Armazenamento em termos de largura da barra e altura da barra pode também ser usada para calcular a largura e a altura da imagem da imagem:
 
-   ```java
-   SAR = e.getSarWidth()/e.getSarHeight();
-   frameHeight = e.getHeight();
-   frameWidth = e.getWidth()/SAR;
-   ```
+      SAR = e.getSarWidth()/e.getSarHeight();
+frameHeight = e.getHeight();
+frameWidth = e.getWidth()/SAR;
 
 * **Cookies**
 
