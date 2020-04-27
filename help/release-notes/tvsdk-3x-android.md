@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: e41213acf027e4dc4d016ef31c2d3d1665f54dfc
 
 ---
 
@@ -64,7 +64,7 @@ Esta versão focou na correção de problemas principais do cliente, conforme me
 
 * **Suporte pré-rolo com recurso** Paral Ad-Break - Com esse aprimoramento, o TVSDK 3.8 suporta anúncios precedentes com o recurso Parcial Ad-Break (PABI).
 
-   O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ao vivo, emulando a experiência da televisão ao vivo.
+   O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ativo, emulando a experiência da televisão ao vivo.
 
 **Android TVSDK 3.7**
 
