@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 34ec714ec190e77a70bf4e966d6df02ec0c99cb3
+source-git-commit: 1f03dd8975fed27836a34159a403ba4aeec199c1
 
 ---
 
@@ -46,7 +46,7 @@ TVSDK now allows fetching of Protection System Specific Header Box associated wi
 For more information, see [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
 Top customer issues fixed in the current release are mentioned in [resolved issues](#resolved-issues) section. -->
 
-### Novos recursos e melhorias nas versões anteriores
+## Novos recursos e melhorias nas versões anteriores
 
 **Android TVSDK 3.9**
 
@@ -62,7 +62,7 @@ Top customer issues fixed in the current release are mentioned in [resolved issu
 
 * **Suporte pré-rolo com recurso** Paral Ad-Break - Com esse aprimoramento, o TVSDK 3.8 suporta anúncios precedentes com o recurso Parcial Ad-Break (PABI).
 
-   O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ativo, emulando a experiência da televisão ao vivo.
+   O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ao vivo, emulando a experiência da televisão ao vivo.
 
 **Android TVSDK 3.7**
 
@@ -115,7 +115,7 @@ Top customer issues fixed in the current release are mentioned in [resolved issu
 
    * void alwaysUseAC3OnSupportedDevices(boolean val)na classe MediaPlayer
 * **O TVSDK oferece suporte à reprodução de CMAF e streams simples para CTR de Widevine criptografado.**
-* **A reprodução de fluxos HEVC 4K agora é compatível.**
+* **A reprodução de fluxos HEVC 4K agora é suportada.**
 * **Solicitações** de chamada de anúncio paralela - o TVSDK agora pré-busca 20 solicitações de chamada de anúncio em paralelo.
 
 **Versão 3.0**
@@ -681,7 +681,7 @@ WebViewDebbuging está definido como Falso por padrão. Para habilitar a depura�
    * Suporte a tags ID3 não verificado
 
 * Para eventos de andamento do anúncio, a barra da linha do tempo pode não refletir o tempo de reprodução do anúncio 100% preciso. Como solução, é possível usar `adcompleteevent` para saber a conclusão da reprodução do anúncio e atualizar a interface do usuário para vários fins, como atualizar a barra da linha do tempo, remover a interface do usuário relacionada ao anúncio etc.
-* Vastas chamadas de anúncio retornadas pelo VMAP não cumprem a posição de pesquisa just-in-time futura.
+* Vastas chamadas de anúncio retornadas pelo VMAP não respeitam a posição de pesquisa just-in-time futura.
 
 **Android TVSDK 2.5.6**
 
