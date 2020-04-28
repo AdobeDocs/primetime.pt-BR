@@ -5,7 +5,7 @@ description: As APIs ajudam você a criar um aplicativo ou integração funciona
 seo-description: As APIs ajudam você a criar um aplicativo ou integração funcional rápida e facilmente.
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: b063235ed1eb27f537d4b311f2f07d7f5750206b
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 # Referências da Adobe Primetime API {#api-references}
 
 + TVSDK 3.11 {#tvsdk-311}
-   + [TVSDK 3.11 para Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_311/index.html)
+   + [TVSDK 3.11 para Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)
 
 + TVSDK 3.5 {#tvsdk-35}
    + [TVSDK 3.5 para iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v35/index.html)
