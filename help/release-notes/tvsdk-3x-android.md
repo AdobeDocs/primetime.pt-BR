@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5cf340119147799cd7b2c40a2a312595eebaa737
+source-git-commit: e84c50037557e157a044b1cec1fdea84cb156ea0
 
 ---
 
@@ -117,7 +117,7 @@ Esta versão focou na correção de problemas principais do cliente, conforme me
 
    * void alwaysUseAC3OnSupportedDevices(boolean val)na classe MediaPlayer
 * **O TVSDK oferece suporte à reprodução de CMAF e streams simples para CTR de Widevine criptografado.**
-* **A reprodução de fluxos HEVC 4K agora é suportada.**
+* **A reprodução de fluxos HEVC 4K agora é compatível.**
 * **Solicitações** de chamada de anúncio paralela - o TVSDK agora pré-busca 20 solicitações de chamada de anúncio em paralelo.
 
 **Versão 3.0**
@@ -396,7 +396,7 @@ Quando a resolução estiver associada a um problema reportado, uma referência 
 
 Esta seção fornece um resumo do problema resolvido na versão TVSDK 3.11 do Android.
 
-* Caracteres coreanos são exibidos como símbolos de glifo ausentes para manifestos HLS com WebVTT no aplicativo de referência Android TVSDK.
+* ZD#41252 - Os caracteres coreanos são exibidos como símbolos de glifo ausentes para manifestos HLS com WebVTT no aplicativo de referência Android TVSDK.
 
 ### Resolvidos problemas nas versões anteriores
 
@@ -684,7 +684,7 @@ WebViewDebbuging está definido como Falso por padrão. Para habilitar a depura�
    * Suporte a tags ID3 não verificado
 
 * Para eventos de andamento do anúncio, a barra da linha do tempo pode não refletir o tempo de reprodução do anúncio 100% preciso. Como solução, é possível usar `adcompleteevent` para saber a conclusão da reprodução do anúncio e atualizar a interface do usuário para vários fins, como atualizar a barra da linha do tempo, remover a interface do usuário relacionada ao anúncio etc.
-* Vastas chamadas de anúncio retornadas pelo VMAP não respeitam a posição de pesquisa just-in-time futura.
+* Vastas chamadas de anúncio retornadas pelo VMAP não cumprem a posição de pesquisa just-in-time futura.
 
 **Android TVSDK 2.5.6**
 
