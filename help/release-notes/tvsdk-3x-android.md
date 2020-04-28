@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e84c50037557e157a044b1cec1fdea84cb156ea0
+source-git-commit: b71ac860652f53b171926b570c004db2351d3d3a
 
 ---
 
@@ -136,8 +136,9 @@ Esta versão focou na correção de problemas principais do cliente, conforme me
 
    Para obter mais informações, consulte o Guia do programador do TVSDK 3.0 para Android sobre alterações de API e evento.
 
-* **Atualizar `targetSdkVersion` para a versão mais recente\
-   **Atualize `targetSdkVersion` de 19 para 27 para um funcionamento regular.
+* **Atualizar`targetSdkVersion`para a versão mais recente**
+
+   Atualize `targetSdkVersion` de 19 para 27 para um funcionamento regular.
 
 * **Placement.Type getPlacementType() agora é um método na interface TimelineMarker**
 
