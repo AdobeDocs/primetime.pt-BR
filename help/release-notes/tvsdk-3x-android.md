@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
+source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
 
 ---
 
@@ -333,7 +333,7 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 |---|---|---|
 | Reprodução geral (Reproduzir, Pausar, Buscar) | VOD + Live | Y |
 | FER - Reprodução geral (Reproduzir, Pausar, Procurar) | FER VOD | Y |
-| Procurar quando um anúncio está sendo reproduzido | Live | Não suportado |
+| Procurar quando um anúncio está sendo reproduzido | VOD + Live | Não suportado |
 | AC3 | VOD + Live | Não suportado |
 | MP3 | VOD | Não suportado |
 | Reprodução de conteúdo MP4 | VOD | Y |
@@ -399,7 +399,7 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 | DRM | VOD + Live | Somente DRM Primetime (Futuro: Widevine) |
 | Reprodução externa (RBOP) | VOD + Live | Somente DRM Primetime |
 | Rotação de licença | VOD + Live | Somente DRM Primetime |
-| Rotação da tecla | VOD + Live | DRM Primetime e DRM widevine |
+| Rotação da tecla | VOD + Live | Somente DRM Primetime |
 
 | Recurso | Tipo de conteúdo | HLS |
 |---|---|---|
@@ -414,7 +414,7 @@ Quando a resolução estiver associada a um problema reportado, uma referência 
 
 Esta seção fornece um resumo do problema resolvido na versão TVSDK 3.11 do Android.
 
-* ZD#41252 - Os caracteres coreanos são exibidos como símbolos de glifo ausentes para manifestos HLS com WebVTT no aplicativo de referência Android TVSDK.
+* ZD#41252 - Caracteres coreanos no WebVTT quebrados após o Android 7.1.
 
 ### Resolvidos problemas nas versões anteriores
 
@@ -702,7 +702,7 @@ WebViewDebbuging está definido como Falso por padrão. Para habilitar a depura�
    * Suporte a tags ID3 não verificado
 
 * Para eventos de andamento do anúncio, a barra da linha do tempo pode não refletir o tempo de reprodução do anúncio 100% preciso. Como solução, é possível usar `adcompleteevent` para saber a conclusão da reprodução do anúncio e atualizar a interface do usuário para vários fins, como atualizar a barra da linha do tempo, remover a interface do usuário relacionada ao anúncio etc.
-* Vastas chamadas de anúncio retornadas pelo VMAP não cumprem a posição de pesquisa just-in-time futura.
+* Vastas chamadas de anúncio retornadas pelo VMAP não respeitam a posição de pesquisa just-in-time futura.
 
 **Android TVSDK 2.5.6**
 
