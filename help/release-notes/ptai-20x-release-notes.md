@@ -1,10 +1,10 @@
 ---
-title: Notas de versão do PTAI 20.3.3
+title: Notas de versão do PTAI 20.5.1
 description: As notas de versão PTAI 20.5.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos na inserção do anúncio dinâmico Primetime no ano 2020.
 translation-type: tm+mt
-source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ As notas de versão do Dynamic Ad Insertion 20.5.1 descrevem o que é novo ou al
 
 **Quando:** terça-feira, 5 de maio de 2020, das 04:00 às 05:00
 
-* Correção de um problema para garantir que os cabeçalhos CORS corretos fossem fornecidos quando os cabeçalhos If-Modifique-Since fossem enviados.
+* Correção de um problema para garantir que cabeçalhos CORS corretos sejam fornecidos quando cabeçalhos If-Modifiados-Since são enviados.
 
 * Correções de erros no painel CRS.
 
@@ -30,7 +30,7 @@ As notas de versão do Dynamic Ad Insertion 20.5.1 descrevem o que é novo ou al
 
 **Quando:** quarta-feira, 1 de abril de 2020, das 03:00 às 04:00
 
-* Corrigido um problema que fazia com que as legendas ficassem fora de sincronização após a inserção do anúncio no VOD/WebVTT.
+* Corrigido um problema que fazia com que as legendas ficassem fora de sincronização após a inserção do anúncio no VOD/ WebVTT.
 
 * Atualizações de segurança.
 
@@ -48,17 +48,19 @@ As notas de versão do Dynamic Ad Insertion 20.5.1 descrevem o que é novo ou al
 
 **Quando:** terça-feira, 28 de janeiro de 2020, das 2h00 às 03h00 no leste
 
-* **VMAP com suporte a FER para CueFormat** Converter dicas do fluxo de FER em parâmetros de substituição de linha do tempo de FW, quando ptcueformat=nbc é usado e o fluxo é um fluxo VOD com dicas no manifesto e anúncios integrados.
+* **VMAP com suporte FER para nbc CueFormat**
 
-* Limpe o campo user-agent no cabeçalho HTTP antes de encaminhar para provedores de anúncios de terceiros/CDN.
+   Converta dicas do fluxo FER em parâmetros de substituição de linha do tempo FW quando `ptcueformat=nbc` são usadas e o fluxo é um fluxo VOD com dicas no manifesto e anúncios integrados.
 
-* Filtre os caracteres de controle/não imprimíveis (código ascii &lt; 32) dos cabeçalhos HTTP &quot;agente-usuário&quot; antes de enviar para o Auditude e outros provedores de anúncios, CDNs. Auditude Ad-Call usado para falhar em cabeçalhos inválidos.
+* Limpe o campo user-agent no cabeçalho HTTP antes de encaminhar para provedores de anúncios de terceiros/ CDN.
+
+* Filtre os caracteres de controle/não imprimíveis (código ASCII &lt; 32) dos cabeçalhos HTTP agente-usuário antes de enviar para o Auditude e outros provedores de anúncios, CDNs. Auditude Ad-Call usado para falhar em cabeçalhos inválidos.
 
 * Expurgue objetos V1 antigos de grupos NetStorage para manter a contagem de objetos dentro dos limites seguros do Akamai.
 
 ## Problemas resolvidos
 
-Quando a resolução estiver associada a um problema reportado, uma referência do Zendesk será exibida. Por exemplo, ZD#xxxxx.
+Quando a resolução estiver associada a um problema reportado, uma referência do Zendesk será exibida. Por exemplo, ZD#xxxx.
 
 **PTAI 20.3.3**
 
