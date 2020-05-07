@@ -2,9 +2,9 @@
 title: Notas de versão do PTAI 20.5.1
 description: As notas de versão PTAI 20.5.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos na inserção do anúncio dinâmico Primetime no ano 2020.
 translation-type: tm+mt
-source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
+source-git-commit: 9c117678a049e34bfcf960e992a4ce7361968f3e
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,16 @@ As notas de versão do Dynamic Ad Insertion 20.5.1 descrevem o que é novo ou al
 ## Problemas resolvidos
 
 Quando a resolução estiver associada a um problema reportado, uma referência do Zendesk será exibida. Por exemplo, ZD#xxxx.
+
+**PTAI 20.5.1**
+
+* Problemas com cabeçalhos CORS quando os cabeçalhos If-Modifique-Since são enviados.
+
+* Problemas no painel CRS.
+
+**PTAI 20.3.4**
+
+* Problema que fazia com que as legendas ficassem fora de sincronização após a inserção do anúncio no VOD/ WebVTT.
 
 **PTAI 20.3.3**
 
