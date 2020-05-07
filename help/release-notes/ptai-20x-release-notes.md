@@ -2,7 +2,7 @@
 title: Notas de versão do PTAI 20.5.1
 description: As notas de versão PTAI 20.5.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos na inserção do anúncio dinâmico Primetime no ano 2020.
 translation-type: tm+mt
-source-git-commit: 9c117678a049e34bfcf960e992a4ce7361968f3e
+source-git-commit: 7c6acf4b310a7df4ea79a5974f66f7f4b615b21c
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
