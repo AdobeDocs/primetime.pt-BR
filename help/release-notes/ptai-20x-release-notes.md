@@ -2,9 +2,9 @@
 title: Notas de versão do PTAI 20.5.1
 description: As notas de versão PTAI 20.5.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos na inserção do anúncio dinâmico Primetime no ano 2020.
 translation-type: tm+mt
-source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
+source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ As notas de versão do Dynamic Ad Insertion 20.5.1 descrevem o que é novo ou al
 
 **Quando:** quinta-feira, 26 de março de 2020, das 03h00 às 04h00, horário do leste
 
-* As respostas SSAI 4XX e 5XX agora fornecem corretamente cabeçalhos relacionados ao CORS, permitindo que clientes javascript/webview entre domínios leiam com êxito respostas de erro.
+* As respostas SSAI 4XX e 5XX agora fornecem corretamente cabeçalhos relacionados ao CORS, permitindo que clientes de exibição da Web javascript entre domínios leiam com êxito respostas de erro.
 
 * Correção de um problema com cabeçalhos X-Forwarded-For, em que os endereços IPv6 não eram corretamente codificados por URL quando passados para os servidores de publicidade.
 
@@ -85,7 +85,7 @@ As notas de versão do Dynamic Ad Insertion 20.5.1 descrevem o que é novo ou al
 
 * Expurgue objetos V1 antigos de grupos NetStorage para manter a contagem de objetos dentro dos limites seguros do Akamai.
 
-### Versão 20.1.2 [Hotfix]
+### Versão 20.1.2 (Hotfix)
 
 **Quando:** segunda-feira, 20 de janeiro de 2020, das 02h00 às 03h00, horário do leste
 
@@ -103,7 +103,7 @@ As notas de versão do Dynamic Ad Insertion 20.5.1 descrevem o que é novo ou al
 
 ## Problemas resolvidos
 
-Quando a resolução estiver associada a um problema reportado, uma referência do Zendesk será exibida. Por exemplo, ZD#xxxx.
+Quando a resolução estiver associada a um problema reportado, uma referência do Zendesk será exibida. Por exemplo, `ZD#xxxxx`
 
 **PTAI 20.5.1**
 
