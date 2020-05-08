@@ -4,7 +4,7 @@ seo-title: Notas de versão do Adobe Primetime
 description: nulo
 seo-description: nulo
 translation-type: tm+mt
-source-git-commit: 8e19c638caf2f9ea37dbf2ec7373ae9f470b93fe
+source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
@@ -14,24 +14,25 @@ ht-degree: 0%
 
 # Notas de versão do Primetime
 
-Bem-vindo às Notas de versão do Adobe Primetime. Os documentos listados na navegação esquerda fornecem informações específicas da versão, requisitos do sistema, limitações, problemas fixos e problemas conhecidos.
+Bem-vindo às Notas de versão do Adobe Primetime. Os documentos listados na navegação esquerda fornecem informações específicas da versão, requisitos do sistema, limitações, problemas fixos e problemas conhecidos
 
-## Aprimoramentos e correções no PTAI 20.5.1
-
-Foco na correção dos principais problemas dos clientes.
-
-## Correções no Android TVSDK 3.11
-
-O suporte aprimorado da versão para o DRM do Widevine e resolveu os principais problemas do cliente.
-Consulte para obter mais informações sobre a versão atual lançada para [Android](../release-notes/tvsdk-3x-android.md).
-
-## Aprimoramentos e correções nas notas de versão do TVSDK 3.11 iOS
+## Aprimoramentos e correções nas notas de versão do TVSDK 3.12 iOS
 
 O lançamento focou na solução dos principais problemas dos clientes.
 
 Consulte para obter mais informações sobre a versão atual lançada para [iOS](../release-notes/tvsdk-3x-ios.md).
 
-Para obter mais informações sobre a versão atual lançada da Inserção de anúncio dinâmico, consulte Notas [de versão do](ptai-19x-release-notes.md)PTAI.
+## Aprimoramentos e correções no PTAI 20.5.1
+
+Foco na correção dos principais problemas dos clientes.
+
+Para obter mais informações sobre a versão atual lançada da Inserção de anúncio dinâmico, consulte Notas [de versão do](ptai-20x-release-notes.md)PTAI.
+
+## Correções no Android TVSDK 3.11
+
+O suporte aprimorado da versão para o DRM do Widevine e resolveu os principais problemas do cliente.
+
+Consulte para obter mais informações sobre a versão atual lançada para [Android](../release-notes/tvsdk-3x-android.md).
 
 ## Consulte também
 
