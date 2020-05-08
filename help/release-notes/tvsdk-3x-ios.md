@@ -1,29 +1,36 @@
 ---
-title: Notas de versão do TVSDK 3.11 para iOS
-description: As Notas de versão do TVSDK 3.11 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.11.
+title: Notas de versão do TVSDK 3.12 para iOS
+description: As Notas de versão do TVSDK 3.12 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
+source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+workflow-type: tm+mt
+source-wordcount: '7665'
+ht-degree: 0%
 
 ---
 
 
-# Notas de versão do TVSDK 3.11 para iOS {#tvsdk-for-ios-release-notes}
+# Notas de versão do TVSDK 3.12 para iOS {#tvsdk-for-ios-release-notes}
 
-As Notas de versão do TVSDK 3.11 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.11.
+As Notas de versão do TVSDK 3.12 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.12.
 
 ## Requisitos de sistema e software {#system-software-requirements}
 
-Antes de baixar o iOS 3.11, verifique se as versões de hardware, sistema operacional e aplicativo atendem aos seguintes requisitos:
+Antes de baixar o iOS 3.12, verifique se as versões de hardware, sistema operacional e aplicativo atendem aos seguintes requisitos:
 
 Sistema operacional: iOS 8.0 ou posterior.
 
-## iOS TVSDK 3.11
+## iOS TVSDK 3.12
 
-Correções fornecidas para problemas do cliente em que `isFallbackOnInvalidCreativeEnabled` e método `customParams` fazem com que o aplicativo falhe.
+Corrigido um problema no qual o fluxo ao vivo falha após 15 minutos de reprodução.
 
 Para obter as correções na versão atual, consulte os problemas corrigidos [do](#resolved-issues) cliente e, para saber mais sobre as limitações, consulte a seção Problemas [conhecidos e limitações](#known-issues-and-limitations) .
 
 ### Novos recursos e correções nas versões anteriores {#whats-new-previous}
+
+**iOS TVSDK 3.11**
+
+Correções fornecidas para problemas do cliente em que `isFallbackOnInvalidCreativeEnabled` e método `customParams` fazem com que o aplicativo falhe.
 
 **iOS TVSDK 3.10**
 
@@ -77,7 +84,7 @@ Esta versão tem uma correção para as falhas do aplicativo que ocorrem em um c
 
 **Otimização da receita**
 
-Habilitado o TVSDK para identificar áreas com problemas relacionadas a workflows de inserção de anúncios para relatar a um ponto de extremidade de análise de escolha.
+Habilitado o TVSDK para identificar áreas com problemas relacionadas a workflows de inserção de anúncios para relatar a um ponto final de escolha do Analytics.
 
 **Versão 3.3**
 
@@ -291,14 +298,17 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 </note>
  -->
+**iOS TVSDK 3.12**
+
+* O fluxo ao vivo falha após 15 minutos de reprodução ao usar TVSDK para iOS 3.10.
+
+### Resolvidos problemas nas versões anteriores {#resolved-issues-previous}
 
 **iOS TVSDK 3.11**
 
 * (ZD#40998) - O `isFallbackOnInvalidCreativeEnabled` faz com que o aplicativo falhe.
 
 * (ZD#41289) - `NSInvalidArgumentException` é observado com o método que `customParams` leva à falha do aplicativo.
-
-### Resolvidos problemas nas versões anteriores {#resolved-issues-previous}
 
 **iOS TVSDK 3.10**
 
@@ -499,7 +509,7 @@ Correção aprimorada fornecida para o problema fechado nº 34385 na versão 1.4
 
 Utilização de ID criativo e AdSystem na solicitação de CRS com base nas regras de normalização de CRS
 
-* (ZD #29176) - Falha `PTAdPolicyDeligate``satAdBreakAsWatched:position`
+* (ZD #29176) - Travamento `PTAdPolicyDeligate` `satAdBreakAsWatched:position`
 
 Falha devido a AdBreak vazio é tratada agora.
 
