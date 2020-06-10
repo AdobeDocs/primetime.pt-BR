@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+workflow-type: tm+mt
+source-wordcount: '5490'
+ht-degree: 0%
 
 ---
 
@@ -62,7 +65,7 @@ Esta versão focou na correção de problemas principais do cliente, conforme me
 
 * **Suporte pré-rolo com recurso** Paral Ad-Break - Com esse aprimoramento, o TVSDK 3.8 suporta anúncios precedentes com o recurso Parcial Ad-Break (PABI).
 
-   O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ativo, emulando a experiência da televisão ao vivo.
+   O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ao vivo, emulando a experiência da televisão ao vivo.
 
 **Android TVSDK 3.7**
 
@@ -126,7 +129,7 @@ Esta versão focou na correção de problemas principais do cliente, conforme me
 
 * **O TVSDK oferece suporte à reprodução de CMAF e streams simples para CTR de Widevine criptografado.**
 
-* **A reprodução de fluxos HEVC 4K agora é suportada.**
+* **A reprodução de fluxos HEVC 4K agora é compatível.**
 
 * **Solicitações** de chamada de anúncio paralela - o TVSDK agora pré-busca 20 solicitações de chamada de anúncio em paralelo.
 
@@ -334,7 +337,8 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 | Reprodução geral (Reproduzir, Pausar, Buscar) | VOD + Live | Y |
 | FER - Reprodução geral (Reproduzir, Pausar, Procurar) | FER VOD | Y |
 | Procurar quando um anúncio está sendo reproduzido | VOD + Live | Não suportado |
-| AC3 | VOD + Live | Não suportado |
+| Reprodução HEVC | VOD + Live | Somente container fMP4 |
+| AC3 e EAC3 | VOD + Live | Não suportado |
 | MP3 | VOD | Não suportado |
 | Reprodução de conteúdo MP4 | VOD | Y |
 | Lógica de troca da taxa de bits adaptável | VOD + Live | Y |
@@ -354,7 +358,6 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 | Vínculo de áudio tardio | VOD + Live | Y |
 | Redirecionamento 302 | VOD + Live | Y |
 | Reprodução com deslocamento | VOD + Live | Y |
-| Reprodução somente áudio | VOD + Live | Y |
 | Trick Play | VOD + Live | Y |
 | Movimento lento na peça | VOD + Live | Não suportado |
 | Reprodução suave de truques (com ABR) | VOD + Live | Y |
@@ -384,19 +387,43 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 | Resolução de anúncios ociosa | VOD | Y |
 | Suporte a marcadores de descontinuidade - SSAI | VOD + Live | Y |
 | Anúncios complementares, anúncios em banner e anúncios clicáveis | VOD + Live | Y |
+| 302 Fixidade de redirecionamento | VOD + Live | Y |
+
+| Recurso | Tipo de conteúdo | HLS |
+|---|---|---|
+| Reprodução geral, anúncios ativados | VOD + Live | Y |
+| FERE conteúdo com anúncios ativados | VOD | Y |
+| Comportamentos de anúncio padrão | VOD + Live | Y |
+| VAST 2.0/3.0 | VOD + Live | Y |
+| VMAP 1.0 | VOD + Live | Y |
+| Anúncios MP4 | VOD + Live | Y (do CRS) |
+| Reprodução de truques com anúncios ativada | VOD + Live | Y |
+| Somente publicidade | VOD | Y |
+| Parâmetros de definição de metas | VOD + Live | Y |
+| Parâmetros personalizados | VOD + Live | Y |
+| Comportamentos de anúncio personalizados | VOD + Live | Y |
+| Tags de anúncio personalizadas | Live | Y |
+| Resolvedores de anúncios personalizados | VOD + Live | Y |
+| Resolvedor de anúncios personalizado do FreeWheel | VOD | Y |
+| C3 | VOD + Live | Não suportado |
+| Resolução de anúncios ociosa | VOD | Y |
+| Suporte a marcadores de descontinuidade - SSAI | VOD + Live | Y |
+| Anúncios complementares, anúncios em banner e anúncios clicáveis | VOD + Live | Y |
 | VPAID 2.0 | VOD + Live | Y (JS) |
 | Saída antecipada do anúncio | Live | Y |
 | Priorização criativa baseada em regras | VOD + Live | Y |
 | Regras CRS | VOD + Live | Y |
 | JSON Ad Resolver | VOD + Live | Não suportado |
 | Integração de moat | VOD + Live | Y |
+| Inserção parcial de quebra de anúncio | Live | Y |
 
 | Recurso | Tipo de conteúdo | HLS |
 |---|---|---|
 | Criptografia AES | VOD + Live | Y |
 | Criptografia AES de amostra | VOD + Live | Y |
 | Fluxos Tokenized | VOD + Live | Y |
-| DRM | VOD + Live | Somente DRM Primetime (Futuro: Widevine) |
+| DRM widevine | VOD + Live | Somente container fMP4 |
+| DRM Primetime | VOD + Live | Y |
 | Reprodução externa (RBOP) | VOD + Live | Somente DRM Primetime |
 | Rotação de licença | VOD + Live | Somente DRM Primetime |
 | Rotação da tecla | VOD + Live | Somente DRM Primetime |
@@ -702,7 +729,7 @@ WebViewDebbuging está definido como Falso por padrão. Para habilitar a depura�
    * Suporte a tags ID3 não verificado
 
 * Para eventos de andamento do anúncio, a barra da linha do tempo pode não refletir o tempo de reprodução do anúncio 100% preciso. Como solução, é possível usar `adcompleteevent` para saber a conclusão da reprodução do anúncio e atualizar a interface do usuário para vários fins, como atualizar a barra da linha do tempo, remover a interface do usuário relacionada ao anúncio etc.
-* Vastas chamadas de anúncio retornadas pelo VMAP não respeitam a posição de pesquisa just-in-time futura.
+* Vastas chamadas de anúncio retornadas pelo VMAP não cumprem a posição de pesquisa just-in-time futura.
 
 **Android TVSDK 2.5.6**
 
