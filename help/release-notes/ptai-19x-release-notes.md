@@ -2,7 +2,10 @@
 title: Notas de versão do PTAI 19.11.1
 description: As notas de versão do PTAI 19.11.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion em 2019.
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+workflow-type: tm+mt
+source-wordcount: '1968'
+ht-degree: 0%
 
 ---
 
@@ -48,6 +51,7 @@ Correção de um bug no qual os players do Chromecast saíam inesperadamente da 
 **Quando:** quarta-feira, 21 de agosto de 2019 2:00 às 3:00 Hora do Leste
 
 * Painel SSAI: Seção Estatísticas da sessão. É possível exportar os eventos de sessão por meio da opção Baixar CSV.
+
 * Atualizações de manutenção
 
 ### Versão 19.8.1
