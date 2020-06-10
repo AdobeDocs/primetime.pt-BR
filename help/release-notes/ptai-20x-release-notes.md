@@ -2,9 +2,9 @@
 title: Notas de versão do PTAI 20.6.1
 description: As notas de versão PTAI 20.6.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos na inserção do anúncio dinâmico Primetime no ano 2020.
 translation-type: tm+mt
-source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,6 @@ Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos 
 * Correção de um problema em que fragmentos WebVTT eram sempre solicitados sob protocolo http, independentemente do protocolo original solicitado.
 
 * Correção de um problema em que as tags EXT-X-DISCONTINUITY eram removidas da parte superior da lista de reprodução ao alternar dos anúncios para o conteúdo. Entre em contato com o suporte da Adobe para ativar essa correção.
-
-## O que mudou em versões anteriores
 
 ### Versão 20.5.1
 
