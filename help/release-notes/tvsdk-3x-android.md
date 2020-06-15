@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
+source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
 workflow-type: tm+mt
-source-wordcount: '5531'
+source-wordcount: '5415'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ O lançamento focou na correção de problemas principais do cliente, conforme m
 
 * **Suporte pré-rolo com recurso** Paral Ad-Break - Com esse aprimoramento, o TVSDK 3.8 suporta anúncios precedentes com o recurso Parcial Ad-Break (PABI).
 
-O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ativo, emulando a experiência da televisão ao vivo.
+O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ao vivo, emulando a experiência da televisão ao vivo.
 
 **Android TVSDK 3.7**
 
@@ -135,7 +135,7 @@ O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzi
 
 * **O TVSDK oferece suporte à reprodução de CMAF e streams simples para CTR de Widevine criptografado.**
 
-* **A reprodução de fluxos HEVC 4K agora é compatível.**
+* **A reprodução de fluxos HEVC 4K agora é suportada.**
 
 * **Solicitações** de chamada de anúncio paralela - o TVSDK agora pré-busca 20 solicitações de chamada de anúncio em paralelo.
 
@@ -143,7 +143,7 @@ O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzi
 
 * **O TVSDK 3.0 suporta fluxos de codificação de vídeo de alta eficiência (HEVC).**
 
-* **Exatamente no tempo - solucionar os anúncios mais próximos dos marcadores de anúncioAnúncio** ocioso Resolver agora resolve cada quebra de anúncio independentemente. Anteriormente, a resolução do anúncio era uma abordagem em duas fases: os pré-rolls foram resolvidos antes do start de reprodução e todos os slots de mid/post roll combinados após o início da reprodução. Com esse recurso aprimorado, cada quebra de anúncio é resolvida em um momento específico antes do ponto de sinalização do anúncio.
+* **Exatamente no tempo - a solução de anúncios mais próximos dos marcadores de anúnciosAnúncio** ocioso Resolver agora resolve cada quebra de anúncio independentemente. Anteriormente, a resolução do anúncio era uma abordagem em duas fases: os pré-rolls foram resolvidos antes do start de reprodução e todos os slots de mid/post roll combinados após o início da reprodução. Com esse recurso aprimorado, cada quebra de anúncio é resolvida em um momento específico antes do ponto de sinalização do anúncio.
 
 > [!NOTE]
 >
@@ -371,28 +371,6 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 | Blecaute de anúncios | VOD + Live | Não suportado |
 | Instantâneo ativado | VOD + Live | Não suportado |
 | Suporte ao marcador de descontinuidade | VOD + Live | Y |
-| 302 Fixidade de redirecionamento | VOD + Live | Y |
-
-| Recurso | Tipo de conteúdo | HLS |
-|---|---|---|
-| Reprodução geral, anúncios ativados | VOD + Live | Y |
-| FERE conteúdo com anúncios ativados | VOD | Y |
-| Comportamentos de anúncio padrão | VOD + Live | Y |
-| VAST 2.0/3.0 | VOD + Live | Y |
-| VMAP 1.0 | VOD + Live | Y |
-| Anúncios MP4 | VOD + Live | Y (do CRS) |
-| Reprodução de truques com anúncios ativada | VOD + Live | Y |
-| Somente publicidade | VOD | Y |
-| Parâmetros de definição de metas | VOD + Live | Y |
-| Parâmetros personalizados | VOD + Live | Y |
-| Comportamentos de anúncio personalizados | VOD + Live | Y |
-| Tags de anúncio personalizadas | Live | Y |
-| Resolvedores de anúncios personalizados | VOD + Live | Y |
-| Resolvedor de anúncios personalizado do FreeWheel | VOD | Y |
-| C3 | VOD + Live | Não suportado |
-| Resolução de anúncios ociosa | VOD | Y |
-| Suporte a marcadores de descontinuidade - SSAI | VOD + Live | Y |
-| Anúncios complementares, anúncios em banner e anúncios clicáveis | VOD + Live | Y |
 | 302 Fixidade de redirecionamento | VOD + Live | Y |
 
 | Recurso | Tipo de conteúdo | HLS |
