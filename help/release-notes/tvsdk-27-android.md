@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 36a1619b43d22ccc7286d4a4b74f2c6297d0fd47
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '4123'
+ht-degree: 0%
 
 ---
 
@@ -79,7 +82,7 @@ O TVSDK agora cancela o download do segmento em andamento, se necessário, e alt
 
 **Versão 2.5.4**
 
-O Android TVSDK v2.5.4 oferece as seguintes atualizações e alterações de API:
+O Android TVSDK v2.5.4 oferta as seguintes atualizações e alterações de API:
 
 * As alterações no valor padrão para o valor WebViewDebbugingWebViewDebbuging está definido como Falso por padrão. Para ativá-lo, chame setWebContentsDebuggingEnabled(true) no aplicativo.
 * Atualização das versões OpenSSL e CurlAtualização do libcurl para v7.57.0 e OpenSSL para v1.0.2k.
@@ -87,7 +90,7 @@ O Android TVSDK v2.5.4 oferece as seguintes atualizações e alterações de API
 
 **Versão 2.5.3**
 
-O Android TVSDK v2.5.3 oferece as seguintes atualizações e alterações de API.
+O Android TVSDK v2.5.3 oferta as seguintes atualizações e alterações de API.
 
 * Todos os clientes TVSDK que usam CRS são incentivados a atualizar seus aplicativos com TVSDK 2.5.3.85 ou mais recente no Android. Isso será uma substituição instantânea da implementação do aplicativo existente. Após a atualização do TVSDK, verifique se há solicitações de URL criativo do CRS em uma ferramenta proxy (por exemplo: Charles) e confirme se o nome do host e a versão no caminho refletem como na estrutura de URL de amostra abaixo.
 
@@ -101,7 +104,7 @@ O Android TVSDK v2.5.3 oferece as seguintes atualizações e alterações de API
 * Compartilhe cookies entre o aplicativo Android e o TVSDK: O Android TVSDK agora oferece suporte ao acesso de cookies entre a camada JAVA (armazenada no CookieStore do aplicativo Android) e a camada C++ TVSDK. Agora, é possível definir e/ou modificar os cookies na camada C++ nativa, pois eles serão expostos à Loja de Cookies Java.
 * Alterações de API:
 
-   * Um novo CookiesUpdatesEvent de eventos é adicionado. Ele é despachado pelo player de mídia quando seu cookie é atualizado.
+   * Um novo CookiesUpdatesEvent do Evento é adicionado. Ele é despachado pelo player de mídia quando seu cookie é atualizado.
    * Uma nova API é adicionada a NetworkConfiguration::set/ getCustomUserAgent() para usar o agente de usuário personalizado.
    * Uma nova API é adicionada a NetworkConfiguration::set/ getEncodedUrlForTracking para forçar a Codificação de caracteres não seguros.
    * Uma nova API é adicionada à NetworkConfiguration::getNetworkDownVerificationUrl() para definir um URL de verificação de rede no caso de um failover.
@@ -112,7 +115,7 @@ O Android TVSDK v2.5.3 oferece as seguintes atualizações e alterações de API
 
 **Versão 2.5.2**
 
-O Android TVSDK v2.5.2 oferece correções importantes de erros e algumas alterações na API.
+O Android TVSDK v2.5.2 oferta correções importantes de erros e algumas alterações na API.
 
 **Versão 2.5.1**
 
@@ -120,10 +123,10 @@ Os novos recursos importantes lançados no Android 2.5.1.
 
 * **Melhorias** no desempenhoA nova arquitetura TVSDK 2.5.1 traz várias melhorias no desempenho. Com base em estatísticas de um estudo de benchmarking de terceiros, a nova arquitetura oferece uma redução de 5 vezes no tempo de inicialização e de 3,8 vezes menos quadros em queda em relação à média do setor:
 
-   * **Instant on for VOD and live -** Quando você ativa instantaneamente, o TVSDK inicializa e armazena a mídia antes do início da reprodução. Como você pode iniciar várias instâncias MediaPlayerItemLoader simultaneamente em segundo plano, é possível armazenar vários fluxos em buffer. Quando um usuário altera o canal e o fluxo é armazenado em buffer corretamente, a reprodução no novo canal é iniciada imediatamente. O TVSDK 2.5.1 também é compatível com o Instant On para fluxos **ao vivo** . Os fluxos ao vivo são armazenados novamente quando a janela ao vivo se move.
+   * **Instant on for VOD and live -** Quando você ativa instantaneamente, o TVSDK inicializa e armazena a mídia antes dos start de reprodução. Como você pode iniciar várias instâncias MediaPlayerItemLoader simultaneamente em segundo plano, é possível armazenar vários fluxos em buffer. Quando um usuário altera o canal e o fluxo é armazenado em buffer corretamente, a reprodução é feita imediatamente nos novos start do canal. O TVSDK 2.5.1 também é compatível com o Instant On para fluxos **ao vivo** . Os fluxos ao vivo são armazenados novamente quando a janela ao vivo se move.
 
       * **Lógica ABR aprimorada -** a nova lógica ABR é baseada no comprimento do buffer, na taxa de alteração do comprimento do buffer e na largura de banda medida. Isso garante que o ABR escolha a taxa de bits correta quando a largura de banda flutuar e também otimiza o número de vezes que a alternância de taxa de bits realmente acontece monitorando a taxa na qual o comprimento do buffer muda.
-      * **Download/sub-segmentação de segmento parcial -** o TVSDK reduz ainda mais o tamanho de cada fragmento, para iniciar a reprodução o mais rápido possível. O fragmento ts deve ter um quadro-chave a cada dois segundos.
+      * **Download/sub-segmentação de segmento parcial -** o TVSDK reduz ainda mais o tamanho de cada fragmento, a fim de reproduzir o start o mais rápido possível. O fragmento ts deve ter um quadro-chave a cada dois segundos.
       * **Resolução de anúncio lenta -** o TVSDK não espera pela resolução de anúncios não pré-implantados antes de iniciar a reprodução, diminuindo assim o tempo de inicialização. As APIs como busca e reprodução de truques ainda não são permitidas até que todos os anúncios sejam resolvidos. Isso se aplica aos fluxos VOD usados com CSAI. Operações como busca e avanço rápido não são permitidas até que a resolução do anúncio seja concluída. Para fluxos ao vivo, esse recurso não pode ser habilitado para a resolução de anúncios durante um evento ao vivo.
       * **Conexões de rede persistentes -** este recurso permite que o TVSDK crie e armazene uma lista interna de conexões de rede persistentes. Essas conexões são reutilizadas para várias solicitações, em vez de abrir uma nova conexão para cada solicitação de rede e depois destruí-la. Isso aumenta a eficiência e diminui a latência no código de rede, resultando em desempenho de reprodução mais rápido.
 Quando o TVSDK abre uma conexão, ele solicita ao servidor uma conexão *de manutenção* . Alguns servidores podem não suportar esse tipo de conexão, caso em que o TVSDK voltará a fazer uma conexão para cada solicitação novamente. Além disso, embora as conexões persistentes estejam ativadas por padrão, o TVSDK agora tem uma opção de configuração para que os aplicativos possam desativar as conexões persistentes, se desejado.
@@ -134,11 +137,11 @@ Quando o TVSDK abre uma conexão, ele solicita ao servidor uma conexão *de manu
 
    * **Reprodução de conteúdo MP4 -** Os clipes curtos de MP4 não precisam ser transcodificados novamente para reproduzir no TVSDK.
 Observação: A comutação ABR, a reprodução de truques, a inserção de anúncios, o vínculo de áudio tardio e a subsegmentação não são compatíveis com a reprodução MP4.
-   * **Reprodução de truques com a taxa de bits adaptável (ABR) -** Esse recurso permite que o TVSDK alterne entre fluxos de iFrame enquanto está no modo de reprodução de truques. Você pode usar perfis que não sejam iFrame para executar truques em velocidades menores.
+   * **Reprodução de truques com a taxa de bits adaptável (ABR) -** Esse recurso permite que o TVSDK alterne entre fluxos de iFrame enquanto está no modo de reprodução de truques. Você pode usar perfis que não sejam iFrame para reproduzir truques em velocidades menores.
    * **Reprodução de truques mais suave - Esses aprimoramentos aprimoram a experiência do usuário:**
 
           * Seleção adaptável da taxa de bits e da taxa de quadros durante a reprodução do truque, com base na largura de banda e no perfil
-          de buffer* Use o fluxo principal em vez do fluxo IDR para obter uma reprodução rápida de até 30 fps.
+          de buffer* Use o stream principal em vez do fluxo IDR para obter uma reprodução rápida de até 30 fps.
       
 * **Proteção de conteúdo**
 
@@ -146,18 +149,18 @@ Observação: A comutação ABR, a reprodução de truques, a inserção de anú
 
 * **Suporte ao fluxo de trabalho**
 
-   * **Integração de faturamento direto -** envia métricas de faturamento para o backend do Adobe Analytics, certificado pelo Adobe Primetime para fluxos usados pelo cliente.
-O TVSDK coleta automaticamente métricas, respeitando o contrato de vendas do cliente para gerar relatórios de uso periódicos necessários para fins de faturamento. Em cada evento de início de fluxo, o TVSDK usa a API de inserção de dados do Adobe Analytics para enviar métricas de faturamento, como tipo de conteúdo, sinalizadores ativados para inserção de anúncio e sinalizadores habilitados para drm - com base na duração do fluxo faturável - para o conjunto de relatórios pertencente ao Adobe Analytics Primetime. Isso não interfere nem é incluído nos conjuntos de relatórios ou nas chamadas do servidor do Adobe Analytics. Mediante solicitação, este relatório de uso de faturamento é enviado periodicamente aos clientes. Esta é a primeira fase do recurso de faturamento que suporta somente faturamento de uso. Ele pode ser configurado com base no contrato de vendas usando as APIs descritas na documentação. Esse recurso é ativado por padrão. Para desativar esse recurso, consulte a amostra do player de referência.
+   * **Integração de faturamento direto -** envia métricas de faturamento para o backend da Adobe Analytics, certificado pelo Adobe Primetime para fluxos usados pelo cliente.
+O TVSDK coleta automaticamente métricas, respeitando o contrato de vendas do cliente para gerar relatórios de uso periódicos necessários para fins de faturamento. Em cada evento de start de fluxo, o TVSDK usa a API de inserção de dados da Adobe Analytics para enviar métricas de faturamento, como tipo de conteúdo, sinalizadores habilitados para inserção de anúncio e sinalizadores habilitados para drm - com base na duração do fluxo faturável - para o conjunto de relatórios pertencente ao Adobe Analytics Primetime. Isso não interfere nem é incluído nos próprios conjuntos de relatórios ou chamadas de servidor da Adobe Analytics do cliente. Mediante solicitação, este relatório de uso de faturamento é enviado periodicamente aos clientes. Esta é a primeira fase do recurso de faturamento que suporta somente faturamento de uso. Ele pode ser configurado com base no contrato de vendas usando as APIs descritas na documentação. Esse recurso é ativado por padrão. Para desativar esse recurso, consulte a amostra do player de referência.
    * **Suporte aprimorado a failover - estratégias adicionais implementadas para continuar a reprodução ininterrupta, apesar de falhas de servidores host, arquivos de lista de reprodução e segmentos.**
 
 * **Publicidade**
 
    * **Integração perfeita - suporte para a avaliação da capacidade de visualização do anúncio pelo Moat** .
-   * **Banners de companheiro - os banners de companheiro são exibidos ao lado de um anúncio linear e, muitas vezes, continuam a ser exibidos na exibição após o término do anúncio.** Esses banners podem ser do tipo html (um trecho HTML) ou do tipo iframe (um URL para uma página iframe).
+   * **Banners de companheiro - os banners de companheiro são exibidos ao lado de um anúncio linear e geralmente continuam a ser exibidos na visualização após o término do anúncio.** Esses banners podem ser do tipo html (um trecho HTML) ou do tipo iframe (um URL para uma página iframe).
 
 * **Analytics**
 
-   * **VHL 2.0 -** Esta é a mais recente integração otimizada da Biblioteca de pulsações de vídeo (VHL) para coleta automática de dados de uso do Adobe Analytics. A complexidade das APIs foi diminuída para facilitar a implementação. Baixe a biblioteca VHL [v2.0.0 para Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) e extraia o arquivo JAR na pasta libs.
+   * **VHL 2.0 -** Esta é a mais recente integração otimizada da Biblioteca de pulsações de vídeo (VHL) para coleta automática de dados de uso para o Adobe Analytics. A complexidade das APIs foi diminuída para facilitar a implementação. Baixe a biblioteca VHL [v2.0.0 para Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) e extraia o arquivo JAR na pasta libs.
 
 * **SizeDisponableEventListener**
    * os métodos getHeight() e getWidth() de SizeAvailableEvent agora retornarão a saída em altura e largura respectivamente. A taxa de aspecto de exibição pode ser calculada da seguinte forma:
@@ -178,7 +181,7 @@ O TVSDK coleta automaticamente métricas, respeitando o contrato de vendas do cl
 
 * **Cookies**
 
-   * O Android TVSDK agora oferece suporte ao acesso a cookies JAVA armazenados no CookieStore do aplicativo Android. Uma API de retorno de chamada (onCookiesUpdates) é fornecida para gravar sempre que um novo cookie é fornecido como parte do cabeçalho de resposta &quot;Set-Cookie&quot;. Esses cookies estão disponíveis como uma Lista de HttpCookies usados para um URI/domínio diferente ao configurar esses valores de cookie nesse URI/domínio específico usando CookieStore. Da mesma forma, os valores de cookie no TVSDK são atualizados usando a API de adição do CookieStore.
+   * O Android TVSDK agora oferece suporte ao acesso a cookies JAVA armazenados no CookieStore do aplicativo Android. Uma API de retorno de chamada (onCookiesUpdates) é fornecida para gravar sempre que um novo cookie é fornecido como parte do cabeçalho de resposta &quot;Set-Cookie&quot;. Esses cookies estão disponíveis como uma Lista de HttpCookie(s) usados para um URI/domínio diferente ao configurar esses valores de cookie nesse URI/domínio específico usando CookieStore. Da mesma forma, os valores de cookie no TVSDK são atualizados usando a API de adição do CookieStore.
 
 ## Matriz de recursos {#feature-matrix}
 
@@ -204,7 +207,7 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 | Failover avançado | VOD + Live | Y |
 | Notificações de QoS e player | VOD + Live | Y |
 | Suporte para cabeçalhos de cookies | VOD + Live | Y |
-| Suporte para cabeçalhos HTTP personalizados | VOD + Live | Y (Lista de permissões necessária) |
+| Suporte para cabeçalhos HTTP personalizados | VOD + Live | Y (permitir listagem obrigatória) |
 | Definir parâmetros de controle de buffer | VOD + Live | Y |
 | Definir controles adaptáveis de taxa de bits | VOD + Live | Y |
 | Tags de manifesto personalizadas | VOD + Live | Y |
@@ -260,7 +263,7 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 
 | Recurso | Tipo de conteúdo | HLS |
 |---|---|---|
-| Integração VHL do Adobe Analytics | VOD + Live | Y |
+| Integração do Adobe Analytics VHL | VOD + Live | Y |
 | Cobrança | VOD + Live | Y |
 
 ## Problemas resolvidos {#resolved-issues}
@@ -314,7 +317,7 @@ Esta seção fornece um resumo do problema resolvido na versão do TVSDK 2.7.
 * ZD #32584 - Não é possível acessar informações completas presentes no nó &lt;Extensões> de uma resposta VAST.
    * Correção do problema na análise de XML e agora NetworkAdInfo fornece as informações completas presentes no nó &lt;Extensions>.
 * ZD #35086 - Não obtendo dados de extensão completos do player no caso de respostas VMAP específicas.
-   * O problema era específico do xml de extensão, pois a análise XML não funcionava se o xml de extensão tivesse aspas duplas no valor do atributo. Correção do problema.
+   * O problema era específico do xml de extensão, pois a análise XML não funcionava se o xml de extensão tivesse aspas de duplo dentro do valor do atributo. Correção do problema.
 
 **Android TVSDK 2.5.4**
 
@@ -325,11 +328,11 @@ Esta seção fornece um resumo do problema resolvido na versão do TVSDK 2.7.
 * ZenDesk#34528 - A resolução de vídeo não atualiza além de 640x360 no dongle de terceira geração do FireTV.
    * A resolução do vídeo é alternada como interruptores de taxa de bits.
 * ZenDesk#33192 - AudioTrack tem um nome nulo quando a faixa é recuperada via AudioUpdatesEventListener::onAudioUpdates.
-   * Em alguns cenários no FireTV Stick, o evento onAudioUpdate estava sendo acionado quando não havia atualização de áudio real. Isto está consertado agora.
+   * Em alguns cenários no FireTV Stick, o evento onAudioUpdate estava sendo acionado quando não havia atualização de áudio. Isto está consertado agora.
 
 **Android TVSDK 2.5.3**
 
-* Zendesk#32216 - A assinatura de tag personalizada TimedMetadata não está funcionando.
+* Zendesk#32216 - A subscrição de tag personalizada TimedMetadata não está funcionando.
    * Estamos retornando dados ID3 como uma matriz de bytes (para suportar dados APIC ou genéricos) para o cliente, enquanto a sequência de caracteres 1.4 retorna. A matriz de bytes não lida com o caractere finalizado nulo, portanto, estava mostrando um caractere especial para o cliente. Esse problema foi corrigido agora.
 * Zendesk#32670 - Player Not Fail Over to Redundant Playlist (O reprodutor não está passando para uma lista de reprodução redundante)
    * Isso está funcionando bem agora e setNetworkDownVerificationUrl está funcionando como esperado.
@@ -373,7 +376,7 @@ A string de versão do Adobe Primetime é adicionada ao agente do usuário do si
 
 * Falha específica do dispositivo (Samsung Galaxy Tab 4); VOD DRM LBA com Auditude e clique nos anúncios.
 * VHL - Chamadas de pulsação incorretas são enviadas ao iniciar o conteúdo de um deslocamento.
-* Quando os anúncios VPAID são reproduzidos, as chamadas de pulsação VHL para event:type:play ad estão ausentes.
+* Quando os anúncios VPAID são reproduzidos, as chamadas de pulsação VHL para evento:type:play estão ausentes.
 * Depois de entrar no status COMPLETE, o player volta ao status PLAYING com SKIP adBreakPolicy para anúncios posteriores.
 * Os cookies não estão sendo anexados aos retornos de anúncio de saída.
 * Os pontos de sinalização dos anúncios não estão visíveis.
@@ -427,7 +430,7 @@ Esta versão do TVSDK apresenta os seguintes problemas:
 * [Requisitos do sistema](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2_7-requirements.html)
 * [TVSDK 2.7 para Guia do programador do Android](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2_7-overview-prod-audience-guide.html)
 * [TVSDK Android Javadoc para referência de API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html)
-* [Documento](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html) da API do Android C++ TVSDK - Cada classe Java tem uma classe C++ correspondente e a documentação do C++ contém mais material explicativo do que o Javadocs, portanto, consulte a documentação do C++ para obter uma compreensão mais profunda da API do Java.
+* [Documento](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html) da API TVSDK Android C++ - Cada classe Java tem uma classe C++ correspondente e a documentação C++ contém mais material explicativo do que os Javadocs, portanto, consulte a documentação C++ para obter uma compreensão mais profunda da API Java.
 * [Guia de migração do TVSDK 1.4 a 2.5 para Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
 * Para lidar com cenários de ativação/desativação da tela, consulte o `Application_Changes_for_Screen_On_Off.pdf` arquivo incluído na compilação.
 * Consulte a documentação de ajuda completa na página Aprendizagem e suporte [do](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
