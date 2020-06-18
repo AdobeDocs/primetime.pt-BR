@@ -3,16 +3,19 @@ seo-title: Lista de permissões de aplicativos não SWF
 title: Lista de permissões de aplicativos não SWF
 uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
 # Lista de permissões de aplicativos não SWF {#non-swf-application-whitelisting}
 
-O AIR foi a primeira plataforma que apresentou a lista de permissões do aplicativo e o nome da propriedade que você usa para adicionar aplicativos não SWF à lista de permissões (Adobe AIR, iOS, Android etc.) mantém seu nome original: `policy.allowedAIRApplication.n`. Isso permite que o conteúdo seja reproduzido por todos os aplicativos não Flash assinados com um Certificado de assinatura antes da publicação. Isso é conhecido como a ID *do* aplicativo. Você pode extrair a ID do aplicativo usando a [!DNL AdobePublisherIDUtility.jar] ferramenta. Esta lista de permissões será aplicada a qualquer cliente que suporte o Primetime DRM.
+O AIR foi a primeira plataforma que apresentou a lista de permissões do aplicativo e o nome da propriedade que você usa para adicionar aplicativos não SWF à lista de permissões (Adobe AIR, iOS, Android etc.) mantém seu nome original: `policy.allowedAIRApplication.n`. Isso permite que o conteúdo seja reproduzido por todos os aplicativos não Flash assinados com um Certificado de assinatura antes da publicação. Isso é conhecido como o *ID da aplicação*. Você pode extrair a ID da aplicação usando a [!DNL AdobePublisherIDUtility.jar] ferramenta. Esta lista de permissões será aplicada a qualquer cliente que suporte o Primetime DRM.
 
-A ID do aplicativo é derivada da chave pública do certificado de assinatura usado para assinar um determinado aplicativo. Se a chave pública no certificado expirar, todo o conteúdo anterior exibido na lista de permissões será reproduzido somente em aplicativos assinados com o certificado antigo não será reproduzido no novo aplicativo (assinado com o novo certificado).
+O ID da aplicação é derivado da chave pública do certificado de assinatura usado para assinar um determinado aplicativo. Se a chave pública no certificado expirar, todo o conteúdo anterior exibido na lista de permissões será reproduzido somente em aplicativos assinados com o certificado antigo não será reproduzido no novo aplicativo (assinado com o novo certificado).
 
 Se você estiver em uma situação em que uma biblioteca de conteúdo é listada em whitelist para aplicativos que foram assinados com um certificado de assinatura específico e esse certificado expirar e você receber um novo certificado (com um par de chaves público/privado diferente), seu conteúdo antigo não será reproduzido no seu novo aplicativo, a *menos* que você execute um dos procedimentos a seguir:
 
@@ -27,4 +30,4 @@ Consulte `policy.allowedAIRApplication.n` nas propriedades ** de configuração 
 
 >[!NOTE]
 >
->A lista de permissões de um aplicativo iOS requer uma abordagem especial. Consulte [Lista de permissões do aplicativo](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-whitelist-your-ios-application.md) iOS no Guia *do programador do* TVSDK for iOS.
+>Permitir a listagem de um aplicativo iOS requer uma abordagem especial. Consulte [Permitir listar seu aplicativo](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) iOS no Guia *do Programador do* TVSDK para iOS.
