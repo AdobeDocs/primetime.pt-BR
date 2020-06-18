@@ -2,7 +2,7 @@
 title: Notas de versão do TVSDK 3.12 para iOS
 description: As Notas de versão do TVSDK 3.12 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -84,7 +84,7 @@ Esta versão tem uma correção para as falhas do aplicativo que ocorrem em um c
 
 **Otimização da receita**
 
-Habilitado o TVSDK para identificar áreas com problemas relacionadas a workflows de inserção de anúncios para relatar a um ponto final de escolha do Analytics.
+Habilitado o TVSDK para identificar áreas com problemas relacionadas a workflows de inserção de anúncios para relatar a um ponto de extremidade de análise de escolha.
 
 **Versão 3.3**
 
@@ -173,7 +173,7 @@ Integrar e certificar o VHL 2.0 no iOS TVSDK: Reduza a barreira na `VideoHeartbe
 
 **Informações sobre anúncios de rede**
 
-As APIs TVSDK agora fornecem informações adicionais sobre respostas VAST de terceiros. A ID do anúncio, o sistema de anúncios e as extensões de anúncio VAST são fornecidos na `PTNetworkAdInfo` classe acessível por meio de uma `networkAdInfo` propriedade em um Ativo de anúncio. Essas informações podem ser usadas para integração com outras plataformas do Ad Analytics, como o **Moat Analytics**.
+As APIs TVSDK agora fornecem informações adicionais sobre respostas VAST de terceiros. A ID do anúncio, o sistema de anúncios e as extensões de anúncio VAST são fornecidos na `PTNetworkAdInfo` classe acessível por meio de uma `networkAdInfo` propriedade em um Ativo de anúncio. Essas informações podem ser usadas para integração com outras plataformas de Analytics de anúncios, como a **Moat Analytics**.
 
 **Versão 1.4.31**
 
@@ -340,11 +340,12 @@ Nenhum problema novo nesta versão.
 
 **Versão 3.3**
 
-(ZD#37820) - Lista de permissões adicionada para cabeçalho personalizado HS-Id, HS-SSAI-TAG.
+(ZD#37820) - Adicionada a listagem de permissões para cabeçalho personalizado HS-Id, HS-SSAI-TAG.
 
 **Versão 3.2**
 
 * **Ticket#36588** - A falha do player ocorre quando o método MediaPlayer STOP é chamado.
+
 Corrigida uma falha intermitente observada quando o método STOP é chamado para alguns fluxos com legendas.
 
 * **Ticket#37080** - Solicitações de Duplicado vistas para chamadas de Manifesto.
@@ -438,24 +439,29 @@ Correção aprimorada fornecida para o problema fechado nº 34385 na versão 1.4
    Corrigido o erro ao tentar reproduzir conteúdo na Apple TV, que impede a reprodução completamente
 * (ZD #32146)- Não `PTMediaPlayerStatusError` é recebido para conteúdo do HLS Live ao bloquear o iOS 11 dev beta
 
-   Não `PTMediaPlayerStatusError` é recebido nenhum conteúdo HLS Live e VOD no bloqueio usando Charles (conexão Drop e 403)
-* (ZD #29242) - Falha na reprodução de vídeo do Airplay com anúncios ativados
+   Não `PTMediaPlayerStatusError` é recebido nenhum conteúdo HLS Live e VOD no bloqueio usando Charles (conexão Drop e 403).
 
-   Quando os anúncios são ativados e o AirPlay é ativado, iniciando a reprodução de um vídeo, a reprodução de vídeo nunca ocorre em start e nenhum erro é exibido
-* (ZD#33341) - `DRMInterface.h` acionadores criam avisos no Xcode 9
+* (ZD #29242) - Falha na reprodução de vídeo do Airplay com anúncios ativados.
 
-   Correção de dois protótipos de bloco nos `DRMInterface.h` quais faltava a palavra &quot;void&quot; nas listas de parâmetro
-* (ZD#31979) - Não compila/executa quando for iOS 10 ou posterior para iPhone 7/iPhone7+
+   Quando os anúncios são ativados e o AirPlay é ativado iniciando a reprodução de um vídeo, a reprodução de vídeo nunca é start e nenhum erro é exibido.
 
-   Correção: a compilação de documentos IB para anteriores ao iOS 7 não é mais suportada
-* (ZD#32920) - tela branca em branco em uma pausa de anúncio e sem conclusão de quebra de anúncio
+* (ZD#33341) - `DRMInterface.h` acionadores criam avisos no Xcode 9.
 
-   Quando uma pausa de anúncio apresenta instâncias de anúncio e uma instância de anúncio é concluída, uma tela branca é exibida
-* (ZD#32509) - Desativar gravação de tela do iOS 11 Desativar gravação de tela no iOS 11
+   Correção de dois protótipos de bloco nos `DRMInterface.h` quais faltavam a palavra &quot;void&quot; nas listas de parâmetro.
 
-* (ZD#33179) - Falha intermitente do evento no iOS11
+* (ZD#31979) - Não compila/executa quando o iOS 10 ou posterior for iPhone 7/iPhone7+.
 
-   Corrigida a falha do evento no iOS 11
+   Correção: a compilação de documentos IB para anteriores ao iOS 7 não é mais suportada.
+
+* (ZD#32920) - Tela em branco em uma pausa de anúncio e sem a conclusão da pausa do anúncio.
+
+   Quando uma pausa de anúncio apresenta instâncias de anúncio e uma instância de anúncio é concluída, uma tela em branco é exibida.
+
+* (ZD#32509) - Desativar a gravação de tela do iOS 11 Desativar a gravação de tela no iOS 11.
+
+* (ZD#33179) - Falha intermitente do evento no iOS11.
+
+   Corrigida a falha do evento no iOS 11.
 
 **Versão 1.4.40** (1.4.40.72)
 
@@ -466,7 +472,7 @@ Correção aprimorada fornecida para o problema fechado nº 34385 na versão 1.4
 * (ZD #31951) - Erro de TVSDK durante Rotação de licença.
 
    Correção do problema de rotação de licença.
-* (ZD #31951) - Tela branca em branco em uma pausa de anúncio e nenhuma conclusão de quebra de anúncio.
+* (ZD #31951) - Tela em branco em uma pausa de anúncio e sem a conclusão da pausa de anúncio.
 
    Solucionado o problema que fazia com que os anúncios VPAID do Facebook retornassem com frequência vários blocos CDATA em um único nó `<AdParameters>` VAST.
 * (ZD #33336) - TVSDK do iOS - Os pods de anúncios não estão sendo preenchidos, apesar de um número suficiente de anúncios serem retornados pelo FreeWheel.
@@ -625,9 +631,9 @@ Esse problema foi resolvido fornecendo uma solução alternativa para fluxos que
 
 Os seguintes problemas foram resolvidos para o TVSDK nesta versão:
 
-* (ZD# 24180) Adicionar um cabeçalho personalizado à lista branca
+* (ZD# 24180) Adicione um cabeçalho personalizado para permitir a lista.
 
-Um novo cabeçalho personalizado foi adicionado à lista branca do TVSDK.
+Um novo cabeçalho personalizado foi adicionado à lista de permissões do TVSDK.
 
 * (ZD# 25016) O fluxo de failover é selecionado aleatoriamente quando os parâmetros de controle ABR são definidos
 
@@ -745,7 +751,7 @@ Esse problema foi resolvido adicionando verificações de objeto nulo adicionais
 
 Esse problema é o mesmo que (ZD #21590).
 
-* (ZD #22280) - Duração do vídeo do Analytics definida como 0
+* (ZD #22280) - Comprimento do vídeo Analytics definido como 0
 
 Esse problema é o mesmo que (ZD #21590).
 
@@ -769,7 +775,7 @@ Esse problema foi resolvido atualizando a lógica para mostrar a visualização 
 
 * (ZD #20101) - A implementação do Capítulo personalizado aciona o evento do capítulo do start durante a reprodução do anúncio
 
-Esse problema foi solucionado ao atualizar o VideoAnalyticsTracker para detectar corretamente o start/conclusão do capítulo ao fazer a transição entre os limites do capítulo e não capítulos.
+Esse problema foi solucionado ao atualizar o VideoAnalyticsTracker para detectar corretamente o start/conclusão do capítulo durante a transição entre os limites do capítulo e os limites não capítulos.
 
 * (ZD #20784) - Analytics: Acionar conclusões de conteúdo para transições de vídeo ao vivo
 
@@ -880,7 +886,7 @@ Esse problema foi resolvido fornecendo um evento de tempo limite (requestTimeout
 
 * (ZD #19446) - Notificação ausente em fluxos ao vivo
 
-Esse problema foi resolvido ao permitir que o aplicativo assinasse o EXT-X-PROGRAMA-DATE-TIME em fluxos ao vivo.
+Esse problema foi resolvido permitindo que o aplicativo assinasse o EXT-X-PROGRAMA-DATE-TIME em fluxos ao vivo.
 
 * (ZD #19459) - Falha ao preparar áudio alternativo com PTMediaPlayerItem prepareAudioOptionsWithAVMediaSelectionOptions
 * (ZD #19460) - Falha - `[PTMediaPlayerItem prepareSubtitlesOptionsWithAVMediaSelectionOptions:nonForcedOptions:]`
