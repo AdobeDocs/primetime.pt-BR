@@ -5,7 +5,10 @@ seo-title: Legendas
 title: Legendas
 uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 É possível exibir legendas ao reproduzir conteúdo de vídeo.
 
-Para manipular legendas, você deve adicionar o ouvinte de `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` eventos:
+Para manipular legendas, você deve adicionar o ouvinte do `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` evento:
 
 ```js
 ... 
@@ -56,4 +59,3 @@ player:{
  
 }); 
 ```
-
