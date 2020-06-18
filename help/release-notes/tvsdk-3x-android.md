@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
-source-wordcount: '5415'
+source-wordcount: '5417'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ O lançamento focou na correção de problemas principais do cliente, conforme m
 
 * **Suporte pré-rolo com recurso** Paral Ad-Break - Com esse aprimoramento, o TVSDK 3.8 suporta anúncios precedentes com o recurso Parcial Ad-Break (PABI).
 
-O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ao vivo, emulando a experiência da televisão ao vivo.
+O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ativo, emulando a experiência da televisão ao vivo.
 
 **Android TVSDK 3.7**
 
@@ -295,8 +295,8 @@ Quando o TVSDK abre uma conexão, ele solicita ao servidor uma conexão *de manu
 
 * **Suporte ao fluxo de trabalho**
 
-   * **Integração de faturamento direto -** envia métricas de faturamento para o backend do Adobe Analytics, certificado pelo Adobe Primetime para fluxos usados pelo cliente.
-   O TVSDK coleta automaticamente métricas, respeitando o contrato de vendas do cliente para gerar relatórios de uso periódicos necessários para fins de faturamento. Em cada evento de start de fluxo, o TVSDK usa a API de inserção de dados do Adobe Analytics para enviar métricas de faturamento, como tipo de conteúdo, sinalizadores habilitados para inserção de anúncio e sinalizadores habilitados para drm - com base na duração do fluxo faturável - para o conjunto de relatórios pertencente ao Adobe Analytics Primetime. Isso não interfere nem é incluído nos conjuntos de relatórios ou nas chamadas do servidor do Adobe Analytics. Mediante solicitação, este relatório de uso de faturamento é enviado periodicamente aos clientes. Esta é a primeira fase do recurso de faturamento que suporta somente faturamento de uso. Ele pode ser configurado com base no contrato de vendas usando as APIs descritas na documentação. Esse recurso é ativado por padrão. Para desativar esse recurso, consulte a amostra do player de referência.
+   * **Integração de faturamento direto -** envia métricas de faturamento para o backend da Adobe Analytics, certificado pelo Adobe Primetime para fluxos usados pelo cliente.
+   O TVSDK coleta automaticamente métricas, respeitando o contrato de vendas do cliente para gerar relatórios de uso periódicos necessários para fins de faturamento. Em cada evento de start de fluxo, o TVSDK usa a API de inserção de dados da Adobe Analytics para enviar métricas de faturamento, como tipo de conteúdo, sinalizadores habilitados para inserção de anúncio e sinalizadores habilitados para drm - com base na duração do fluxo faturável - para o conjunto de relatórios pertencente ao Adobe Analytics Primetime. Isso não interfere nem é incluído nos próprios conjuntos de relatórios ou chamadas de servidor da Adobe Analytics do cliente. Mediante solicitação, este relatório de uso de faturamento é enviado periodicamente aos clientes. Esta é a primeira fase do recurso de faturamento que suporta somente faturamento de uso. Ele pode ser configurado com base no contrato de vendas usando as APIs descritas na documentação. Esse recurso é ativado por padrão. Para desativar esse recurso, consulte a amostra do player de referência.
 
    * **Suporte aprimorado a failover - estratégias adicionais implementadas para continuar a reprodução ininterrupta, apesar de falhas de servidores host, arquivos de lista de reprodução e segmentos.**
 
@@ -309,7 +309,7 @@ Quando o TVSDK abre uma conexão, ele solicita ao servidor uma conexão *de manu
 
 * **Analytics**
 
-   * **VHL 2.0 -** Esta é a mais recente integração otimizada da Biblioteca de pulsações de vídeo (VHL) para coleta automática de dados de uso do Adobe Analytics. A complexidade das APIs foi diminuída para facilitar a implementação. Baixe a biblioteca VHL [v2.0.0 para Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) e extraia o arquivo JAR na pasta libs.
+   * **VHL 2.0 -** Esta é a mais recente integração otimizada da Biblioteca de pulsações de vídeo (VHL) para coleta automática de dados de uso para o Adobe Analytics. A complexidade das APIs foi diminuída para facilitar a implementação. Baixe a biblioteca VHL [v2.0.0 para Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) e extraia o arquivo JAR na pasta libs.
 
 * **SizeDisponableEventListener**
 
@@ -357,7 +357,7 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 | Failover avançado | VOD + Live | Y |
 | Notificações de QoS e player | VOD + Live | Y |
 | Suporte para cabeçalhos de cookies | VOD + Live | Y |
-| Suporte para cabeçalhos HTTP personalizados | VOD + Live | Y (Lista de permissões necessária) |
+| Suporte para cabeçalhos HTTP personalizados | VOD + Live | Y (permitir listagem obrigatória) |
 | Definir parâmetros de controle de buffer | VOD + Live | Y |
 | Definir controles adaptáveis de taxa de bits | VOD + Live | Y |
 | Tags de manifesto personalizadas | VOD + Live | Y |
@@ -414,7 +414,7 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é suporta
 
 | Recurso | Tipo de conteúdo | HLS |
 |---|---|---|
-| Integração VHL do Adobe Analytics | VOD + Live | Y |
+| Integração do Adobe Analytics VHL | VOD + Live | Y |
 | Cobrança | VOD + Live | Y |
 
 ## Problemas resolvidos {#resolved-issues}
@@ -468,7 +468,7 @@ Esta seção fornece um resumo do problema resolvido na versão TVSDK 3.12 do An
    * Corrigido um caso específico em torno de eventos de rastreamento de anúncios.
 * ZD#37491 - O código de status HTTP com meta de erro não está presente.
    * Funcionava na propagação de erros de rede mais alto na pilha.
-* ZD#37808 - Lista de permissões Novo cabeçalho personalizado.
+* ZD#37808 - Permitir lista de novos cabeçalhos personalizados.
    * Suporte SSAI_TAG adicionado como parte dessa correção.
 * ZD#37622 - URISerros de sintaxe de pods de anúncios específicos.
    * Correção de um problema sobre travamento da reprodução de fluxo quando o aplicativo Android do cliente recebe anúncios que contêm uma % não codificada
