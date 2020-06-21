@@ -5,7 +5,10 @@ seo-title: Conteúdo de empacotamento
 title: Conteúdo de empacotamento
 uuid: 2e47a9a2-bbc6-4995-8ce5-6ca6b116349b
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -28,4 +31,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 Se cada locatário usar um License Server e uma credencial de transporte diferentes, certifique-se de especificar o certificado correto do locatário no empacotador.
 
-Se você deseja verificar se o servidor emite licenças somente para conteúdo de empacotadores conhecidos, é necessário incluir o certificado do empacotador na lista de permissões do empacotador do arquivo de configuração do locatário.
+Se você deseja certificar-se de que o servidor emite licenças somente para conteúdo de empacotadores conhecidos, é necessário incluir o certificado do empacotador na lista de permissões do empacotador do arquivo de configuração do locatário.
