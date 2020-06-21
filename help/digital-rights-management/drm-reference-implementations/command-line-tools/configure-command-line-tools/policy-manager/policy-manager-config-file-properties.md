@@ -6,18 +6,21 @@ seo-title: Propriedades de configuração
 title: Propriedades de configuração
 uuid: 216921d1-a9c1-4650-9dce-c025836986e5
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1216'
+ht-degree: 0%
 
 ---
 
 
-# Propriedades de configuração{#configuration-properties}
+# Propriedades de configuração {#configuration-properties}
 
 <!--<a id="section_20A96CDCC5C340DEAF455C6E300E5712"></a>-->
 
 >[!NOTE]
 >
->Para nomes de propriedades que incluem `.n`, o `n` representa um número inteiro que começa com 1 e aumenta para cada instância da propriedade. Por exemplo: `policy.license.customProp.n`.
+>Para nomes de propriedades que incluem `.n`, o `n` representa um número inteiro que start com 1 e aumenta para cada instância da propriedade. Por exemplo: `policy.license.customProp.n`.
 
 <table class="+ topic/table " id="table_p3x_54y_n4"> 
  <thead class="- topic/thead "> 
@@ -35,7 +38,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.requirementsKeyServer</span> <p class="- topic/p "><span class="codeph"> -keyServer</span> <i class="+ topic/ph hi-d/i ">booleano</i> </p> </td> 
    <td colname="2" class="- topic/entry ">São aplicáveis as seguintes condições: 
     <ul id="ul_AF4EBD6C19DC4DFAAB4756EF24BAC57D"> 
-     <li id="li_6CC48ABF78EC426E9FC51458BD946BC9">Se verdadeiro, um Servidor de chaves HTTPS é necessário para a entrega de chaves ao iOS. </li> 
+     <li id="li_6CC48ABF78EC426E9FC51458BD946BC9">Se verdadeiro, um servidor de chaves HTTPS é necessário para o delivery de chaves do iOS. </li> 
      <li id="li_63046A4ED7354C1E9E823B475E4AEFF7">Se não for especificado, o padrão será false. </li> 
     </ul> </td> 
   </tr> 
@@ -69,7 +72,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -domainAuthNS</span> <i class="+ topic/ph hi-d/i ">namespace</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>O namespace de autenticação para registro de domínio. Se especificado, o cliente precisa ser autenticado com um nome de usuário e senha emitidos pela autoridade especificada. </p> <p>Para atualizações, a opção de linha de comando não está disponível e a propriedade é ignorada. </p> <p>Observação: Esta opção não pode ser usada com <span class="codeph"> -domainAnon</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>A namespace de autenticação para registro de domínio. Se especificado, o cliente precisa ser autenticado com um nome de usuário e senha emitidos pela autoridade especificada. </p> <p>Para atualizações, a opção de linha de comando não está disponível e a propriedade é ignorada. </p> <p>Observação: Esta opção não pode ser usada com <span class="codeph"> -domainAnon</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.alog</span> <p class="- topic/p "><span class="codeph"> -opAnalog</span> <i class="+ topic/ph hi-d/i ">AnalogOption</i> </p> </td> 
@@ -87,11 +90,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pares</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Clientes DRM que não têm acesso a conteúdo protegido. Esta opção especifica uma lista de versões de módulos DRM que podem não ser usadas (lista negra). </p> <p>O valor consiste em pares de <span class="codeph"> nome=valor</span> separados por vírgula no seguinte formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Os pares de nome/valor adicionais devem ser separados por vírgulas. Por exemplo, <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Clientes DRM que não têm acesso a conteúdo protegido. Esta opção especifica uma lista de versões de módulos DRM que podem não ser usadas (lista de bloqueios). </p> <p>O valor consiste em pares de <span class="codeph"> nome=valor</span> separados por vírgula no seguinte formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Os pares de nome/valor adicionais devem ser separados por vírgulas. Por exemplo, <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Os tempos de execução do aplicativo não têm acesso a conteúdo protegido. Esta opção especifica uma lista de versões de módulos de tempo de execução que podem não ser usadas (lista negra). </p> <p>O valor consiste em pares de <span class="codeph"> nome=valor</span> separados por vírgulas no seguinte formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Os pares de nome/valor adicionais devem ser separados por vírgulas. Por exemplo, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Os tempos de execução do aplicativo não têm acesso a conteúdo protegido. Essa opção especifica uma lista de versões de módulos de tempo de execução que podem não ser usadas (lista de bloqueios). </p> <p>O valor consiste em pares de <span class="codeph"> nome=valor</span> separados por vírgulas no seguinte formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Os pares de nome/valor adicionais devem ser separados por vírgulas. Por exemplo, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">nome/pares de valores</i> </p> </td> 
@@ -101,7 +104,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -sync</span> <i class="+ topic/ph hi-d/i ">name/value-pares</i> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica com que frequência os clientes são necessários para enviar mensagens de sincronização para o servidor. </p> <p>Se a propriedade não estiver definida, os clientes não enviarão mensagens de sincronização quando reproduzirem conteúdo protegido por uma política de DRM. O valor consiste em pares de <span class="codeph"> nome=valor</span> separados por vírgulas no seguinte formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> start|force=numberValue</span> </p> <p class="- topic/p ">A lista a seguir fornece informações adicionais sobre as opções: 
      <ul id="ul_a5j_q4t_44"> 
-      <li id="li_FD2C0C6DA19E455AA1917A56E09A7F84">(obrigatório) <span class="codeph"> start</span> especifica que o cliente precisa iniciar a sincronização com o servidor nos minutos especificados desde a última sincronização. </li> 
+      <li id="li_FD2C0C6DA19E455AA1917A56E09A7F84">(obrigatório) <span class="codeph"> O start</span> especifica que o cliente precisa sincronizar o start com o servidor nos minutos especificados desde a última sincronização. </li> 
       <li id="li_9DEBC57385A442C3929AE3D0E3FA8992">(opcional) <span class="codeph"> force</span> é a probabilidade (0-100) com a qual o cliente precisa forçar uma mensagem de sincronização durante a reprodução. </li> 
      </ul>Durante a atualização, use <span class="codeph"> -sync</span> sem os argumentos restantes para remover os requisitos de sincronização. </p> </td> 
   </tr> 
@@ -123,7 +126,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.expiration.duration</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">A hora em minutos em que o conteúdo se torna inválido. A hora começa quando o conteúdo é empacotado. </p> <p>Observação: Não é possível especificar <span class="codeph"> policy.expiration.endDate</span> e <span class="codeph"> policy.expiration.duration</span> simultaneamente. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">A hora em minutos em que o conteúdo se torna inválido. A hora é start ao empacotar o conteúdo. </p> <p>Observação: Não é possível especificar <span class="codeph"> policy.expiration.endDate</span> e <span class="codeph"> policy.expiration.duration</span> simultaneamente. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.licenseCaching.duration</span> </td> 
@@ -161,7 +164,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.ota</span> </td> 
-   <td colname="2" class="- topic/entry ">Especifica os tipos de conexão OTA (Over the air) que devem ser listados na lista de permissões. Os tipos de conexão válidos incluem: 
+   <td colname="2" class="- topic/entry ">Especifica os tipos de conexão OTA (Over the air) que devem ser permitidos listados. Os tipos de conexão válidos incluem: 
     <ul id="ul_iz5_4fp_fs"> 
      <li id="li_FB07519EFEFE4B95B3B1F5BFD4DE6591"><span class="codeph"> MIRACAST</span> </li> 
      <li id="li_51E7DE83679F4630B01264407DAD0E84"><span class="codeph"> JOGO AÉREO</span> </li> 
