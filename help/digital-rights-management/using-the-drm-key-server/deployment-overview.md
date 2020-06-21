@@ -3,7 +3,10 @@ seo-title: Implantação da visão geral do servidor de chaves DRM Primetime
 title: Implantação da visão geral do servidor de chaves DRM Primetime
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1077'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Antes de implantar o Primetime DRM Key Server, verifique se você instalou as ve
 
 O download do Primetime DRM Key Server inclui [!DNL faxsks.war]. Para implantar esse arquivo WAR, copie o arquivo para o [!DNL webapps] diretório do Tomcat. Se você já implantou o arquivo WAR anteriormente, talvez seja necessário excluir manualmente o diretório WAR desempacotado, [!DNL faxsks] [!DNL webapps] no diretório do Tomcat). Para impedir que o Tomcat descompacte arquivos WAR, edite o [!DNL server.xml] arquivo no diretório [!DNL conf] do Tomcat e defina o `unpackWARs` atributo como `false`.
 
-Como opção, o Primetime DRM Key Server usa uma biblioteca específica da plataforma (`jsafe.dll` no Windows ou `libjsafe.so` no Linux) para melhorar o desempenho. Copie a biblioteca apropriada para sua plataforma de `thirdparty/cryptoj/platform` para um local especificado pela variável de `PATH` ambiente (ou `LD_LIBRARY_PATH` no Linux).
+Como opção, o Primetime DRM Key Server usa uma biblioteca específica da plataforma (`jsafe.dll` no Windows ou `libjsafe.so` no Linux) para melhorar o desempenho. Copie a biblioteca apropriada para sua plataforma de `thirdparty/cryptoj/platform` para um local especificado pela variável `PATH` ambiente (ou `LD_LIBRARY_PATH` no Linux).
 
 >[!NOTE]
 >
@@ -22,7 +25,7 @@ Como opção, o Primetime DRM Key Server usa uma biblioteca específica da plata
 
 ## Configuração SSL {#ssl-configuration}
 
-O SSL é necessário para a entrega da chave HTTPS remota. As conexões SSL podem ser manipuladas pelo servidor de aplicativos (ou seja, pela configuração do SSL no Tomcat) ou em outro servidor (ou seja, um balanceador de carga, acelerador SSL ou Apache). A entrega remota de chaves HTTPS requer uma conexão SSL. O servidor precisa de um certificado SSL emitido por uma CA confiável.
+O SSL é necessário para o delivery de chave HTTPS Remoto. As conexões SSL podem ser manipuladas pelo servidor de aplicativos (ou seja, pela configuração do SSL no Tomcat) ou em outro servidor (ou seja, um balanceador de carga, acelerador SSL ou Apache). O delivery de chave HTTPS remoto requer uma conexão SSL. O servidor precisa de um certificado SSL emitido por uma CA confiável.
 
 Há várias opções para configurar o SSL. Veja a seguir exemplos para configurar o SSL com autenticação de cliente no Apache e no Tomcat.
 
@@ -74,7 +77,7 @@ Você tem a opção de definir as duas propriedades do sistema Java a seguir par
 
 * `XboxKeyServer.LogRoot` - Este é um diretório de log que contém os logs do aplicativo Xbox Key Server. Se não estiver definido, o padrão será o mesmo que `KeyServer.ConfigRoot`.
 
-Se você estiver usando [!DNL catalina.bat] ou [!DNL catalina.sh] para iniciar o Tomcat, essas propriedades do sistema podem ser facilmente definidas usando a variável de `JAVA_OPTS` ambiente. Qualquer opção Java definida aqui será usada quando o Tomcat for iniciado. Por exemplo, defina:
+Se você estiver usando [!DNL catalina.bat] ou [!DNL catalina.sh] para o start Tomcat, essas propriedades do sistema podem ser facilmente definidas usando a variável `JAVA_OPTS` ambiente. Qualquer opção Java definida aqui será usada quando o Tomcat for iniciado. Por exemplo, defina:
 
 ```
 JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder” 
@@ -98,7 +101,7 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
   -providerArg pkcs11.cfg -list
 ```
 
-Se você vir suas credenciais na lista, o HSM será configurado corretamente e o Servidor de chaves poderá acessar as credenciais.
+Se as credenciais forem exibidas na lista, o HSM será configurado corretamente e o servidor de chaves poderá acessá-las.
 
 ## Arquivos de configuração do servidor de chaves {#key-server-configuration-files}
 
@@ -147,13 +150,13 @@ Todos os arquivos de configuração do locatário incluem:
 
 O arquivo de configuração do locatário do **iOS** inclui:
 
-* Janela principal de entrega - (Opcional) Especifica a janela de validade do carimbo de data e hora da solicitação de entrega principal (em segundos). O valor padrão é de 500 segundos.
+* Janela Delivery-chave - (Opcional) Especifica a janela de validade do carimbo de data e hora da solicitação do delivery-chave (em segundos). O valor padrão é de 500 segundos.
 
 O arquivo de configuração do locatário do **Xbox 360** inclui:
 
 * Credencial XSTS - Especifica a credencial do desenvolvedor de aplicativos usada para descriptografar tokens XSTS
 * Certificado de assinatura XSTS - Especifica o certificado usado para verificar a assinatura nos tokens XSTS.
-* Packager Whitelist - Certificados da Packager que são confiáveis pelo servidor de chaves. Se não houver certificados do empacotador na lista, todos os certificados do empacotador serão confiáveis.
+* Lista de permissões do Packager - Certificados do Packager que são confiáveis pelo Servidor de chaves. Se não houver certificados do empacotador contidos na lista, todos os certificados do empacotador serão confiáveis.
 
 ## Arquivos de registro {#log-files}
 
@@ -166,4 +169,4 @@ Os arquivos de log são diferenciados por tipo de cliente. Há dois logs por tip
 
 ## Iniciando o Servidor de Chave {#starting-the-key-server}
 
-Para iniciar o Servidor de chaves, inicie o Tomcat.
+Para start do servidor de chaves, start Tomcat.
