@@ -5,7 +5,10 @@ seo-title: Visão geral
 title: Visão geral
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '482'
+ht-degree: 0%
 
 ---
 
@@ -27,11 +30,11 @@ O Adobe® Access™ é uma solução avançada de gerenciamento de direitos digi
 
 O conteúdo criptografado está pronto para implantação e o cliente pode solicitar a licença do servidor.
 
-O SDK fornece uma API Java para realizar essas tarefas e inclui implementações de referência do servidor de licença e ferramentas de linha de comando baseadas nas APIs do Java. Para obter informações, consulte *Uso das implementações* de referência do Adobe Access.
+O SDK fornece uma API Java para realizar essas tarefas, e inclui implementações de referência do servidor de licença e ferramentas de linha de comando baseadas nas APIs do Java. Para obter informações, consulte *Uso das implementações* de referência do Adobe Access.
 
 ## Novidades do Adobe Access 5.2 {#section_06220EDE36B54DCB9CA7963B76DA8167}
 
-* **CEK** externo: A capacidade de integrar um Content Key Management System (CKMS) aos fluxos de trabalho de serviço de licença do DRM e do Content Packaging, em vez de criptografar o CEK e agrupá-lo nos metadados do conteúdo. Consulte Visão geral [do CEK externo do DRM do](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)Adobe Access.
+* **CEK** externo: A capacidade de integrar um Content Key Management System (CKMS) ao serviço de licença do DRM e aos workflows de empacotamento de conteúdo, em vez de criptografar o CEK e agrupá-lo nos metadados do conteúdo. Consulte Visão geral [do CEK externo do DRM do](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)Adobe Access.
 
 * **Devolução** de licença (comprovante): A capacidade de um cliente retornar (ou excluir) uma licença emitida para o cliente.
 * **Servidor** de Chave Xbox: A capacidade de proteger o conteúdo enviado para o Xbox e o Xbox 360. (Um cliente Adobe Primetime é necessário.)
@@ -40,4 +43,4 @@ O SDK fornece uma API Java para realizar essas tarefas e inclui implementações
 
 Especifica regras de uso personalizadas. Os dados personalizados podem ser incluídos nas licenças emitidas pelo License Server. A interpretação/tratamento desses dados depende totalmente da implementação do aplicativo cliente e do servidor de licenças.
 
-Exemplo de caso de uso: Permite a extensibilidade das regras de uso, permitindo que outras regras comerciais sejam transmitidas com segurança como parte da política e/ou da licença de conteúdo. Por motivos de segurança, como essas regras de uso são aplicadas no código personalizado do aplicativo cliente, essa opção deve ser usada juntamente com as opções de lista branca do aplicativo AIR ou Flash Player SWF. Para obter mais informações, consulte &quot;Restrições[de tempo de](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-air.md)execução e aplicativos&quot;.
+Exemplo de caso de uso: Permite a extensibilidade das regras de uso, permitindo que outras regras comerciais sejam transmitidas com segurança como parte da política e/ou da licença de conteúdo. Por motivos de segurança, como essas regras de uso são aplicadas no código personalizado do aplicativo cliente, essa opção deve ser usada juntamente com o aplicativo AIR ou as opções de lista de permissão do Flash Player SWF. Para obter mais informações, consulte &quot;Restrições[de tempo de](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)execução e aplicativos&quot;.
