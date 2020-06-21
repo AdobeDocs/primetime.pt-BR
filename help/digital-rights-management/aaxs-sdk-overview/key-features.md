@@ -3,7 +3,10 @@ seo-title: Principais recursos
 title: Principais recursos
 uuid: b1bded0f-4e45-4ff8-a7ce-dac3d3ec0ab0
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1146'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ O Adobe Access fornece os seguintes recursos principais:
 * **Suporte nativo a aplicativos iOS (requer o Adobe Primetime):** Use o DRM do Adobe Access para proteger vídeos em seus aplicativos iOS.
 * **Suporte nativo a aplicativos Android (requer o Adobe Primetime):** Use o DRM do Adobe Access para proteger vídeos em seus aplicativos Android.
 * **Streaming protegido no Xbox (requer o Adobe Primetime)**.
-* **Entrega remota de chaves iOS (requer o Adobe Primetime):** Suporte para fornecer chaves iOS remotas por meio de um servidor de chaves de vários locatários, chamado Adobe Access Key Server.
+* **delivery de chave remota iOS (requer o Adobe Primetime):** Suporte para fornecer chaves iOS remotas por meio de um servidor de chaves de vários locatários, chamado Adobe Access Key Server.
 * **Proteção de conteúdo persistente:** O conteúdo permanece protegido por toda a cadeia de distribuição. Depois que o conteúdo é empacotado, ele permanece protegido o tempo todo, e partes dele são descriptografadas somente no momento da reprodução e de acordo com as regras de uso.
 * Como o conteúdo é fornecido com regras de uso e informações de licenciamento, a proteção sempre viaja com o conteúdo. Se consumidores não licenciados tentarem reproduzir o conteúdo, a política incorporada no conteúdo os redirecionará para que possam adquirir uma licença válida para o conteúdo.
 * **Reprodução segura de conteúdo protegido: **Os esquemas de criptografia comprovados são usados para proteger o conteúdo contra reprodução não autorizada.
-* **Regras de uso flexíveis:** As regras de uso determinam como os consumidores podem usar conteúdo protegido. As regras de uso suportadas pelo Adobe Access permitem vários modelos de negócios diferentes, incluindo pagamento por exibição, aluguel de filmes, assinaturas ou serviços financiados por anúncios. As regras de uso são especificadas pela política incorporada ao conteúdo durante o empacotamento ou podem ser especificadas pelo License Server durante a aquisição da licença.
+* **Regras de uso flexíveis:** As regras de uso determinam como os consumidores podem usar conteúdo protegido. As regras de uso suportadas pelo Adobe Access permitem vários modelos de negócios diferentes, incluindo pagamento por visualização, aluguel de filmes, subscrições ou serviços financiados por anúncios. As regras de uso são especificadas pela política incorporada ao conteúdo durante o empacotamento ou podem ser especificadas pelo License Server durante a aquisição da licença.
 * **Proteção de saída:** Os controlos de proteção de saída podem ser utilizados para acionar sistemas de proteção como HDCP, CGMS-A ou Rovi (anteriormente Macrovision) ACP. Isso pode ajudar a proteger a saída de conteúdo sobre as saídas digitais (por exemplo, HDMI, DVI e UDI) e analógicas (por exemplo, S-Video e Componente Video).
 
    É possível especificar opções de proteção de saída na política que você cria para seu conteúdo, permitindo ou impedindo o acesso ao conteúdo com base nos recursos de proteção de saída de um dispositivo. Por exemplo, você pode especificar que a proteção de saída não é necessária para determinado conteúdo, mas requer proteção de saída para conteúdo de vídeo premium, impedindo a saída de conteúdo em sistemas operacionais que não tenham esse recurso.
@@ -30,9 +33,9 @@ O Adobe Access fornece os seguintes recursos principais:
 * **Suporte para streaming dinâmico: **Use o recurso de streaming dinâmico do Flash Media Server ou do Adobe HTTP Dynamic Streaming para proteger o conteúdo codificado em várias taxas de bits. O streaming dinâmico usa um fluxo de vídeo que ajusta dinamicamente a taxa de bits e a qualidade da reprodução com base na largura de banda disponível, proporcionando uma melhor experiência do usuário. O Adobe Access permite usar a mesma chave de criptografia de conteúdo e a mesma licença nas diferentes codificações do mesmo ativo.
 * **Exibição offline:** O cliente de tempo de execução do Adobe AIR permite que os clientes baixem e armazenem conteúdo para visualização posterior, independentemente de o computador permanecer conectado à Internet.
 * **Licenciamento baseado em identidade:** Vincula permissões a identidades de usuário, exigindo que os consumidores se autentiquem (fornecendo uma ID de usuário e senha) para obter acesso ao conteúdo. O licenciamento baseado em identidade exige que a parte que desenvolve o aplicativo cliente implemente a autenticação do usuário como parte do fluxo de trabalho de aquisição de licença.
-* **Cadeamento de licença:** Permite que os consumidores estendam a vida útil de todo o seu conteúdo renovando uma única licença raiz. Um dos principais usos do encadeamento de licenças é para modelos de negócios baseados em assinaturas, nos quais, ao final de um período de assinatura, as licenças para um grande número de arquivos de conteúdo podem ser renovadas com a simples renovação da licença raiz.
+* **Cadeamento de licença:** Permite que os consumidores estendam a vida útil de todo o seu conteúdo renovando uma única licença raiz. Um dos principais usos do encadeamento de licenças é para modelos de negócios baseados em subscrições, nos quais, ao final de um período de subscrição, as licenças para um grande número de arquivos de conteúdo podem ser renovadas com a simples renovação da licença raiz.
 
-   As licenças de raiz e de folha estão ligadas ao computador do consumidor. A licença de folha contém o CEK e uma referência à licença raiz. A licença raiz pode estender os direitos concedidos na licença de folha. Por exemplo, um consumidor pode ter licenças em folha para 50 partes de conteúdo que expirarão no final de um determinado período de assinatura. Se o consumidor baixar uma nova licença raiz com uma nova data de expiração, todas as 50 partes do conteúdo poderão ser reproduzidas até que a licença atualizada expire.
+   As licenças de raiz e de folha estão ligadas ao computador do consumidor. A licença de folha contém o CEK e uma referência à licença raiz. A licença raiz pode estender os direitos concedidos na licença de folha. Por exemplo, um consumidor pode ter licenças de folha para 50 partes de conteúdo que expirarão no final de um determinado período de subscrição. Se o consumidor baixar uma nova licença raiz com uma nova data de expiração, todas as 50 partes do conteúdo poderão ser reproduzidas até que a licença atualizada expire.
 
    O Adobe Access 2.0 introduziu o encadeamento de licença no qual as licenças de folha e raiz estão vinculadas a uma máquina específica. O Adobe Access 3.0 apresenta uma forma aprimorada de encadeamento de licença, na qual uma folha é vinculada a uma licença raiz, e somente a licença raiz é vinculada a uma máquina ou domínio específico. Leia *Enhanced License Encadeamento* em *Uso do SDK do Adobe Access para Proteção de Conteúdo*.
 
