@@ -3,7 +3,10 @@ seo-title: Propriedades do arquivo de configuração
 title: Propriedades do arquivo de configuração
 uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
 translation-type: tm+mt
-source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ O arquivo de configuração especifica as seguintes propriedades. Para nomes de 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.requirementsKeyServer</span> <p class="- topic/p "><span class="codeph"> -keyServer</span> <i class="+ topic/ph hi-d/i ">booleano</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> Se verdadeiro, um Servidor de chaves HTTPS é necessário para a entrega de chaves ao iOS. O padrão é false, se não for especificado. </td> 
+   <td colname="2" class="- topic/entry "> Se verdadeiro, um servidor de chaves HTTPS é necessário para o delivery de chaves do iOS. O padrão é false, se não for especificado. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.applyJailbreak</span> <p class="- topic/p "><span class="codeph"> -applyJailbreak</span> <i class="+ topic/ph hi-d/i ">booleano</i> </p> </td> 
@@ -54,7 +57,7 @@ O arquivo de configuração especifica as seguintes propriedades. Para nomes de 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -domainAuthNS</span> <i class="+ topic/ph hi-d/i ">namespace</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> O namespace de autenticação para registro de domínio. Se especificado, o cliente deve ser autenticado com um nome de usuário e senha emitidos pela autoridade especificada. Para atualizações, a opção de linha de comando não é permitida e a propriedade é ignorada. Esta opção não pode ser usada com -domainAnon. </td> 
+   <td colname="2" class="- topic/entry "> A namespace de autenticação para registro de domínio. Se especificado, o cliente deve ser autenticado com um nome de usuário e senha emitidos pela autoridade especificada. Para atualizações, a opção de linha de comando não é permitida e a propriedade é ignorada. Esta opção não pode ser usada com -domainAnon. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.alog</span> <p class="- topic/p "><span class="codeph"> -opAnalog</span> <i class="+ topic/ph hi-d/i ">AnalogOption</i> </p> </td> 
@@ -72,11 +75,11 @@ O arquivo de configuração especifica as seguintes propriedades. Para nomes de 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pares</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Clientes DRM impedidos de acessar conteúdo protegido. Esta opção especifica uma lista de versões de módulos DRM que podem não ser usadas (lista negra). O valor consiste em pares de nome=valor separados por vírgula com o seguinte formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Os pares de nome/valor adicionais devem ser separados por vírgulas. Por exemplo: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">Clientes DRM impedidos de acessar conteúdo protegido. Esta opção especifica uma lista de versões de módulos DRM que podem não ser usadas (lista de blocos). O valor consiste em pares de nome=valor separados por vírgula com o seguinte formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Os pares de nome/valor adicionais devem ser separados por vírgulas. Por exemplo: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Os tempos de execução do aplicativo impediram o acesso a conteúdo protegido. Essa opção especifica uma lista de versões de módulos de tempo de execução que podem não ser usadas (lista negra). O valor consiste em pares de nome=valor separados por vírgula com o seguinte formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Os pares de nome/valor adicionais devem ser separados por vírgulas. Por exemplo, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">Os tempos de execução do aplicativo impediram o acesso a conteúdo protegido. Essa opção especifica uma lista de versões de módulos de tempo de execução que podem não ser usadas (lista de blocos). O valor consiste em pares de nome=valor separados por vírgula com o seguinte formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Os pares de nome/valor adicionais devem ser separados por vírgulas. Por exemplo, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">nome/pares de valores</i> </p> </td> 
@@ -86,9 +89,9 @@ O arquivo de configuração especifica as seguintes propriedades. Para nomes de 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -sync</span> <i class="+ topic/ph hi-d/i ">name/value-pares</i> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifique a frequência com que os clientes devem enviar mensagens de sincronização para o servidor. Se não estiver definido, os clientes não enviarão mensagens de sincronização ao reproduzir conteúdo protegido por esta política. O valor consiste em pares <span class="codeph"> name=value</span> separados por vírgula com o seguinte formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> start|force|hardStop=numberValue</span> </p> <p class="- topic/p "> 
      <ul id="ul_a5j_q4t_44"> 
-      <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> start</span> (obrigatório) - O intervalo de início especifica que o cliente deve iniciar a sincronização com o servidor durante tantos minutos desde a última sincronização. </li> 
+      <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> start</span> (obrigatório) - o intervalo do Start especifica que o cliente deve sincronizar o start com o servidor durante tantos minutos desde a última sincronização. </li> 
       <li id="li_CC9068CFE75645029C947C9E1B53351F"><span class="codeph"> force</span> (opcional) - Forçar a probabilidade de sincronização é a probabilidade (0-100) com a qual o cliente deve forçar uma mensagem de sincronização durante a reprodução. </li> 
-      <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span> (opcional) - Intervalo de parada de disco rígido é o tempo em minutos após o qual o cliente falhará na reprodução se não conseguir sincronizar. Se definido, deve ser maior que o intervalo inicial. </li> 
+      <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span> (opcional) - Intervalo de parada de disco rígido é o tempo em minutos após o qual o cliente falhará na reprodução se não conseguir sincronizar. Se definido, deve ser maior que o intervalo do start. </li> 
      </ul>Durante a atualização, use <span class="codeph"> -sync</span> sem os argumentos restantes para remover os requisitos de sincronização. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -145,11 +148,11 @@ O arquivo de configuração especifica as seguintes propriedades. Para nomes de 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Uma lista branca de aplicativos Adobe AIR ou iOS que podem reproduzir conteúdo protegido. A propriedade deve usar o seguinte formato: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Uma lista de permissão de aplicativos Adobe AIR ou iOS que podem reproduzir conteúdo protegido. A propriedade deve usar o seguinte formato: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Uma lista branca de aplicativos SWF autorizados a reproduzir conteúdo protegido. Use o seguinte formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> ou arquivo=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> é o arquivo SWF para o qual calcular o hash e <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> é o tempo máximo para permitir que o download e a verificação do SWF sejam concluídos (em segundos). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Uma lista de permissões de aplicativos SWF autorizados a reproduzir conteúdo protegido. Use o seguinte formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> ou arquivo=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> é o arquivo SWF para o qual calcular o hash e <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> é o tempo máximo para permitir que o download e a verificação do SWF sejam concluídos (em segundos). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.license.customProp.n</span> </td> 
