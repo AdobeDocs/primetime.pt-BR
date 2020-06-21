@@ -3,18 +3,21 @@ seo-title: Execução do servidor DRM para streaming protegido
 title: Execução do servidor DRM para streaming protegido
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
 
 # Execução do servidor DRM para streaming protegido {#running-the-drm-server-for-protected-streaming}
 
-Antes de poder iniciar o Adobe Primetime DRM Server for Protected Streaming, é recomendável verificar a validade das configurações nos arquivos de configuração.
+Antes de poder start do Adobe Primetime DRM Server para transmissão protegida, é recomendável verificar a validade das configurações nos arquivos de configuração.
 
 Você pode verificar a validade das configurações usando os utilitários fornecidos com o servidor de licenças. (Consulte Validador *de configuração* neste guia.
 
-Se você quiser iniciar o Tomcat e o servidor de licenças, será necessário executar [!DNL catalina.bat start] ou [!DNL catalina.sh start] a partir do [!DNL bin] diretório do Tomcat.
+Se você quiser start o Tomcat e o servidor de licenças, é necessário executar [!DNL catalina.bat start] ou executar [!DNL catalina.sh start] a partir do [!DNL bin] diretório do Tomcat.
 
 Depois que o servidor for iniciado, verifique se ele foi configurado corretamente abrindo [!DNL https://<lic<span></span>ense-server-host:port>/flashaccess server/<tenant-name>/flashaccess/license/v1] em uma janela do navegador. Se a configuração do locatário tiver sido carregada com êxito, uma mensagem de confirmação será exibida.
 
@@ -81,4 +84,4 @@ Você pode modificar a senha HSM a qualquer [!DNL flashaccess-global.xml] moment
 
 ### Atualização do arquivo de configuração do locatário {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Você pode modificar todos os valores especificados no [!DNL flashaccess-tenant.xml] arquivo a qualquer momento. As alterações entrarão em vigor na próxima vez que o servidor recarregar o arquivo de configuração. Além disso, o servidor verifica se há modificações em todos os arquivos de credencial ( [!DNL .pfx]) e arquivos de certificado de lista de permissões do empacotador referenciados no arquivo de configuração do locatário.
+Você pode modificar todos os valores especificados no [!DNL flashaccess-tenant.xml] arquivo a qualquer momento. As alterações entrarão em vigor na próxima vez que o servidor recarregar o arquivo de configuração. Além disso, o servidor verifica se há modificações em todos os arquivos de credencial ( [!DNL .pfx]) e o empacotador permite arquivos de certificado de lista referenciados no arquivo de configuração do locatário.
