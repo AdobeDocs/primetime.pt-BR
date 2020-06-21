@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1929'
+ht-degree: 0%
 
 ---
 
@@ -23,15 +26,15 @@ Novidades das versões 1.3 e 1.4 do Primetime Streaming Server.
 
 * Os fluxos HLS de saída agora contêm metadados ID3 presentes no MPEG-2 TS
 * Os fluxos somente de áudio HLS agora podem ter uma imagem estática associada
-* Suporte para fornecer IV como entrada de usuário para fluxos de trabalho de criptografia AES HLS
+* Suporte para fornecer IV como entrada de usuário para workflows de criptografia AES HLS
 * Suporte para saída IV para um arquivo quando IV é gerado pelo empacotador offline
 * O Playlist Creator agora é compatível com a associação de grupos de áudio de vários idiomas e grupos de legendas WebVTT de vários idiomas aos fluxos de mídia
 
-**Servidor de origem**
+**Servidor Origem**
 
-* A criptografia AES HLS está disponível para fluxos de trabalho ao vivo e VOD. A Origem Primetime pode, no Tempo, aplicar a criptografia AES HLS aos fluxos HLS ou arquivos MP4 de entrada.
+* A encriptação HLS AES está disponível para workflows Live e VOD. A Origem Primetime pode aplicar a criptografia AES HLS a fluxos HLS de entrada ou arquivos MP4.
 * Também pode aplicar criptografia JIT HLS AES quando usada para converter fluxos HDS recebidos em fluxos HLS.
-* A Origem Primetime agora suporta a listagem de permissões SWF para fluxos PHLS. Anteriormente, era compatível somente com fluxos PHDS
+* A Origem Primetime agora suporta a listagem de permissão de SWF para fluxos PHLS. Anteriormente, era compatível somente com fluxos PHDS
 
 **Primetime Live Packager**
 
@@ -39,7 +42,7 @@ Novidades das versões 1.3 e 1.4 do Primetime Streaming Server.
 
 Os certificados PHDS/PHLS foram atualizados. A nova data de expiração para o mesmo período será 01/10/2016.
 
-### **Correções de erros incluídas na versão 1.4**{#bug-fixes-included-in-release}
+### **Correções de erros incluídas na versão 1.4** {#bug-fixes-included-in-release}
 
 * PTPUB-282- O manifesto de nível de conjunto HLS criado pelo OfflinePackager 1.3.1 não tem informações de codec e resolução.
 * PTPUB-353 - PlayListCreator não suporta a adição de informações de WebVTT no manifesto de nível de conjunto
@@ -56,8 +59,8 @@ Os certificados PHDS/PHLS foram atualizados. A nova data de expiração para o m
 
 A versão 1.3.1 se refere ao hotfix. Os seguintes aprimoramentos fazem dele uma atualização recomendada para os clientes, pois consiste em melhorias de desempenho importantes para casos de uso de JIT MP4:
 
-1. Correção de desempenho para geração MP4 JIT m3u8 na Origem com DRM incluindo Rotação de Chave
-1. Adicionada uma configuração &quot;CopyQueryParamToJITFragmentURIs&quot; para copiar parâmetros de consulta da solicitação de manifesto JIT para URIs de fragmento gerados para conversão MP4 JIT. Consulte a documentação do Servidor de Origem HTTP para obter exemplos de uso
+1. Correção de desempenho para geração MP4 JIT m3u8 em Origem com DRM incluindo rotação de chaves
+1. Adicionada uma configuração &quot;CopyQueryParamToJITFragmentURIs&quot; para copiar parâmetros de query da solicitação de manifesto JIT para URIs de fragmento gerados para conversão MP4 JIT. Consulte a documentação do Servidor de Origem HTTP para obter exemplos de uso
 1. Permitir arquivos MP4 sem extensão para conversão JIT, pela configuração Config/MP4Only adicionada ao vod.xml
 
 ### Correções de erros incluídas na versão 1.3.1 {#bug-fixes-included-in-release-1}
@@ -66,29 +69,29 @@ A versão 1.3.1 se refere ao hotfix. Os seguintes aprimoramentos fazem dele uma 
 
 ### Problemas conhecidos na versão 1.3.1 {#known-issues-in-release}
 
-* 3717039 - Quando o empacotador está configurado para produzir dicas de modo simples de DPI, ele realmente deve procurar tipos de sinal específicos, como inserção de splice ou oportunidade de posicionamento, e converter somente esses tipos em dicas de modo simples. Deve ignorar outros tipos de sinais, como o início do programa, o início da rede, etc.
+* 3717039 - Quando o empacotador está configurado para produzir dicas de modo simples de DPI, ele realmente deve procurar tipos de sinal específicos, como inserção de splice ou oportunidade de posicionamento, e converter somente esses tipos em dicas de modo simples. Ele deve ignorar outros tipos de sinais, como start de programa, start de rede etc.
 
-* 3718598 - Quando o Servidor de origem está configurado para fornecer conteúdo protegido com acesso HSM ativado, o cliente LunaSA de backend faz uma comunicação frequente com o módulo HSM
+* 3718598 - Quando o Servidor de Origem está configurado para fornecer conteúdo protegido com acesso HSM ativado, o cliente LunaSA de backend faz uma comunicação frequente com o módulo HSM
 
 ## Novidades do Primetime Streaming Server 1.3 (versão de ABRIL) {#what-s-new-in-primetime-streaming-server-april-release}
 
 A versão Primetime 1.3 traz vários novos recursos para o conteúdo Streaming, melhor utilização e segurança.
 
-**Primetime Streaming Server como uma forma unificada do Live Packager e do Servidor de Origem**
+**Primetime Streaming Server como uma forma unificada do Live Packager e do Origem Server**
 
-O Primetime Live Packager e o Primetime Origin são reunidos para funcionar como um único componente. Esse componente pode ser usado como um Packager ou como uma Origem ou usar os recursos combinados para disponibilizar e hospedar um Live Stream.
+O Primetime Live Packager e a Origem Primetime são reunidos para funcionar como um único componente. Esse componente pode ser usado como um Packager ou como uma Origem ou usar os recursos combinados para disponibilizar e hospedar um Live Stream.
 
-Isso fornece uma interface de arquivo unificada para esses servidores, facilitando a execução em uma única máquina. Ele continua a oferecer a flexibilidade para ser configurado como um Packager ou Origem separado.
+Isso fornece uma interface de arquivo unificada para esses servidores, facilitando a execução em uma única máquina. Ele continua a oferecer a flexibilidade de ser configurado como um Packager ou Origem separado.
 
 **Beta MPEG - Suporte DASH**
 
-O Primetime Streaming Server oferece suporte ao empacotamento MPEG-DASH para fluxos de trabalho ao vivo e VOD. O componente do Live Packager converte assimilar fluxos RTMP ou MPEG-2-TS para o formato DASH. O componente Origem aceita um fluxo DASH.
+O Primetime Streaming Server oferece suporte ao empacotamento MPEG-DASH para workflows ao vivo e VOD. O componente do Live Packager converte assimilar fluxos RTMP ou MPEG-2-TS para o formato DASH. O componente de Origem aceita um fluxo DASH.
 
-Para fluxos de trabalho VOD, o componente Offline Packager converte ativos MP4 e TS para o formato MPEG-DASH ISOBFF.
+Para workflows VOD, o componente Offline Packager converte ativos MP4 e TS para o formato MPEG-DASH ISOBFF.
 
 **Conversão ao vivo para VOD**
 
-Um novo servidor de gravação de componente está disponível e oferece suporte à captura de um fluxo ao vivo e ao arquivamento para reprodução VOD. Ele suporta a criação de Reproduções completas de eventos, bem como clipes/realces para parte do evento. Ele pode ser configurado para gravar fluxos somente de áudio, remover anúncios ou slates em conteúdo ao vivo. O Servidor de Gravação funciona com o Servidor de Streaming Primetime, bem como com Origens de terceiros.
+Um novo servidor de gravação de componente está disponível e oferece suporte à captura de um fluxo ao vivo e ao arquivamento para reprodução VOD. Ele suporta a criação de Reproduções completas de Evento, bem como clipes/realces para parte do evento. Ele pode ser configurado para gravar fluxos somente de áudio, remover anúncios ou slates em conteúdo ao vivo. O Servidor de Gravação funciona com o Primetime Streaming Server, bem como com Origens de terceiros.
 
 **Conversão RTMP para HLS no Primetime Live Packager**
 
@@ -116,7 +119,7 @@ Vários aprimoramentos de desempenho foram incorporados para melhorar o tempo de
 
 **Desempenho aprimorado para empacotamento JIT MP4**
 
-Vários aprimoramentos de desempenho foram incorporados aos recursos de empacotamento JIT do Primetime Origin para lidar com solicitações de usuários de uma grande biblioteca de ativos VOD.
+Vários aprimoramentos de desempenho foram incorporados aos recursos de empacotamento JIT da Origem Primetime para lidar com solicitações de usuários de uma grande biblioteca de ativos VOD.
 
 ## Adobe Primetime Streaming Server 1.4 {#adobe-primetime-streaming-server}
 
@@ -152,14 +155,14 @@ Vários aprimoramentos de desempenho foram incorporados aos recursos de empacota
 1. Baixe o software Java SE e JDK do site [da](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e siga as instruções de instalação.
 2. Extraia o arquivo de arquivamento do Adobe Primetime-Streaming Server 1.4 para `Primetime- StreamingServer-1-4-0-b206-12042014.zip` o disco.
 
-**Inicie o servidor de streaming Primetime**
+**Start do Primetime Streaming Server**
 
-Para iniciar o Servidor de Streaming, execute o seguinte comando da linha de comando no diretório raiz do Servidor de Streaming:\
+Para start do Servidor de Streaming, execute o seguinte comando da linha de comando no diretório raiz do Servidor de Streaming:\
 `$./pss_start.sh`
 
-**Configurar o servidor de streaming Primetime como Live Packager ou Servidor de origem HTTP**
+**Configure o Primetime Streaming Server como Live Packager ou HTTP Origem Server**
 
-Para configurar o Servidor de Streaming como Live Packager ou Servidor de Origem, atualize o arquivo de configuração pss.xml colocado no diretório conf no diretório raiz do Servidor de Streaming:
+Para configurar o Servidor de Streaming como Live Packager ou Origem Server, atualize o arquivo de configuração pss.xml colocado no diretório conf no diretório raiz do Servidor de Streaming:
 
 ```
 <Config> 
@@ -177,7 +180,7 @@ Para parar o Servidor de Streaming, execute o seguinte comando no diretório rai
 
 **Reinicie o servidor de streaming Primetime**
 
-Para reiniciar o Servidor de Streaming, pare e inicie o Servidor de Streaming.
+Para reiniciar o Servidor de transmissão, pare e start o Servidor de transmissão.
 
 <!-- 
 
@@ -193,9 +196,9 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 
 Para desinstalar o Servidor de Streaming, pare o Servidor de Streaming e remova o diretório pss do Servidor de Streaming no diretório Primetime
 
-## Trabalho com o Live Packager e o Servidor de origem 1.4 {#working-with-live-packager-and-origin-server}
+## Trabalhar com o Live Packager e o Origem Server 1.4 {#working-with-live-packager-and-origin-server}
 
-Esta seção se aplica quando o Primetime Streaming Server não é usado e, em vez disso, o Primetime Live Packager AND/OR Primetime Origin Server está sendo implantado
+Esta seção se aplica quando o Primetime Streaming Server não é usado e, em vez disso, o Primetime Live Packager AND/OR Primetime Origem Server está sendo implantado
 
 ### Requisitos mínimos do sistema {#minimum-system-requirements-1}
 
@@ -222,7 +225,7 @@ Esta seção se aplica quando o Primetime Streaming Server não é usado e, em v
 
 * Oracle Java JRE 1.7 (Recomendado: Sun/Oracle Hotspot JVM). O JDK é necessário para acesso do JConsole às APIs JMX
 
-Os requisitos mínimos de sistema acima são válidos para o Servidor de Origem e para o Live Packager.
+Os requisitos mínimos de sistema acima são válidos para o Origem Server e para o Live Packager.
 
 ### Instalar e configurar o Live Packager {#install-and-configure-the-live-packager}
 
@@ -234,14 +237,14 @@ Os requisitos mínimos de sistema acima são válidos para o Servidor de Origem 
 **Instalação do Servidor de Origem HTTP**
 
 1. Baixe o Java JRE e o software JDK do site [da](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e siga as instruções de instalação.
-1. Extraia o arquivo de arquivamento Adobe Primetime - HTTP Origin Server 1.4 para o seu disco `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`.
+1. Extraia o arquivo de arquivamento Adobe Primetime - HTTP Origem Server 1.4 para o seu disco `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`.
 
-**Para iniciar o Live Packager** Para iniciar o Packager, execute o seguinte comando do diretório raiz do Packager:\
+**Para start do Live Packager** para start do Packager, execute o seguinte comando do diretório raiz do Packager:\
 `$packager_start.sh`
 
-**Para iniciar o Servidor de Origem HTTP**
+**Para start do Servidor de Origem HTTP**
 
-Para iniciar o Servidor de Origem HTTP, execute o seguinte comando da linha de comando no diretório raiz do Servidor de Origem:\
+Para start do Servidor de Origem HTTP, execute o seguinte comando da linha de comando no diretório raiz do Origem Server:\
 `$./origin_start.sh`
 
 **Parar o Live Packager**
@@ -251,18 +254,18 @@ Para interromper o empacotador, execute o seguinte comando do diretório raiz do
 
 **Parar o Servidor de Origem HTTP**
 
-Para parar o Servidor de Origem HTTP, execute o seguinte comando no diretório raiz do Servidor de Origem:\
+Para interromper o Servidor de Origem HTTP, execute o seguinte comando no diretório raiz do Servidor de Origem:\
 `$./origin_stop.sh`
 
 **Reinicie o Live Packager**
 
-Para reiniciar o empacotador, pare e inicie o empacotador.
+Para reiniciar o empacotador, pare e start o empacotador.
 
-**Observação**: Quando o empacotador é iniciado, ele tenta inicializar as informações de inicialização do destino do fragmento no diretório temporário. Se as informações do bootstrap forem encontradas no destino do fragmento, isso implica que o empacotador foi reiniciado. Em caso de reinicialização, o empacotador aguarda até o próximo limite do fragmento e inicia o empacotamento. O empacotador insere uma entrada de espaço no bootstrap para indicar que há fragmentos ausentes.
+**Observação**: Quando o empacotador é start, ele tenta inicializar as informações de inicialização do público alvo do fragmento no diretório temporário. Se as informações do bootstrap forem encontradas no público alvo do fragmento, isso significa que o empacotador foi reiniciado. Em caso de reinicialização, o empacotador aguarda até o próximo limite do fragmento e, em seguida, start o empacotamento. O empacotador insere uma entrada de espaço no bootstrap para indicar que há fragmentos ausentes.
 
-**Reinicie o Servidor de Origem HTTP**
+**Reinicie o servidor de Origem HTTP**
 
-Para reiniciar o Servidor de Origem HTTP, pare e inicie o Servidor de Origem HTTP.
+Para reiniciar o Servidor de Origem HTTP, pare e start o Servidor de Origem HTTP.
 
 **Configuração do Live Packager**
 
@@ -280,7 +283,7 @@ For more details about the configuration refer [the Primetime Live Packager docu
 
 **Configuração do Servidor de Origem HTTP**
 
-Consulte o documento Introdução do Primetime HTTP Origin Server para obter os detalhes de configuração disponíveis aqui.
+Consulte o documento Introdução do Primetime HTTP Origem Server para obter os detalhes de configuração disponíveis aqui.
 
 **Desinstalação do Live Packager**
 
@@ -320,7 +323,7 @@ Para instalar o Offline Packager, siga estas etapas:
 1. Baixe o software Java SE do site [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e siga as instruções de instalação.
 1. Extraia o arquivo de arquivo Adobe Primetime - Offline Packager 1.4 para o disco `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`.
 
-Consulte o documento Introdução do Primetime Offline Packager para obter os detalhes de configuração disponíveis [aqui](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
+Consulte o documento de Introdução do Primetime Offline Packager para obter os detalhes de configuração disponíveis [aqui](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 ## Recursos úteis {#helpful-resources}
 
