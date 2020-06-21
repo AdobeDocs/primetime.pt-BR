@@ -5,7 +5,10 @@ seo-title: Protegendo o License Server
 title: Protegendo o License Server
 uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1199'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Você deve garantir que está emitindo licenças com segurança. Considere estas
 
 ## Consumir CRLs geradas localmente {#consuming-locally-generated-crls}
 
-Para consumir listas de revogação de certificados (CRLs) e listas de atualização de políticas geradas localmente, use as APIs DRM do Adobe Primetime para verificar a assinatura.
+Para consumir listas de revogação de certificado (CRLs) geradas localmente e listas de atualização de política, use as APIs DRM do Adobe Primetime para verificar a assinatura.
 
 As APIs a seguir verificam se as listas não foram adulteradas e se as listas foram assinadas pelo License Server correto:
 
@@ -44,7 +47,7 @@ Para gerar CRLs, consulte [RevocationListFactory](https://help.adobe.com/en_US/p
 
 ## Detecção de retorno {#rollback-detection}
 
-Se sua implementação do Adobe Primetime DRM usar regras de negócios que exigem que o cliente mantenha o estado (por exemplo, o intervalo da janela de reprodução), a Adobe recomenda que o servidor rastreie o contador de reversão e use a lista de permissões AIR ou SWF.
+Se sua implementação do Adobe Primetime DRM usar regras de negócios que exigem que o cliente mantenha o estado (por exemplo, o intervalo da janela de reprodução), a Adobe recomenda que o servidor rastreie o contador de reversão e use a lista de permissão AIR ou SWF.
 
 O contador de reversão é enviado para o servidor na maioria das solicitações do cliente. Se a implementação do Primetime DRM não exigir o contador de reversão, ele poderá ser ignorado. Caso contrário, a Adobe recomenda que o servidor armazene a ID aleatória da máquina, que é obtida usando [MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()), e o valor atual do contador em um banco de dados.
 
@@ -72,11 +75,11 @@ Um ataque do DoS é uma tentativa dos atacantes de impedir que usuários legíti
 
 Para saber mais sobre a proteção de repetição, consulte [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
-## Manter uma lista de permissões de pacotes de conteúdo confiáveis{#maintain-a-whitelist-of-trusted-content-packagers}
+## Manter uma lista de permissões de pacotes de conteúdo confiáveis{#maintain-a-allowlist-of-trusted-content-packagers}
 
 Uma lista de permissões é uma lista de entidades confiáveis.
 
-Para os empacotadores de conteúdo, as entidades são organizações confiáveis pelo proprietário do conteúdo para disponibilizar (ou criptografar) os arquivos de vídeo e criar conteúdo protegido por DRM. Ao implantar o Adobe Primetime DRM, você deve manter uma lista de permissões de pacotes de conteúdo confiáveis. Você também deve verificar a identidade do empacotador de conteúdo nos metadados DRM de um arquivo protegido por DRM antes de emitir uma licença.
+Para os empacotadores de conteúdo, as entidades são organizações confiáveis pelo proprietário do conteúdo para disponibilizar (ou criptografar) os arquivos de vídeo e criar conteúdo protegido por DRM. Ao implantar o Adobe Primetime DRM, você deve manter uma lista permitida de pacotes de conteúdo confiáveis. Você também deve verificar a identidade do empacotador de conteúdo nos metadados DRM de um arquivo protegido por DRM antes de emitir uma licença.
 
 Para saber como obter informações sobre a entidade que empacotou o conteúdo, consulte [V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo()).
 
@@ -92,4 +95,4 @@ Para saber mais sobre solicitações de autenticação, consulte [Authentication
 
 Quando você emite uma licença, o servidor de licenças pode substituir as regras de uso especificadas na política.
 
-Se a política especificar uma data de início, uma licença não será gerada antes dessa data de início. No entanto, você pode definir uma data inicial futura na licença depois que ela for gerada. Essa opção deve ser usada com cautela, pois o cliente não pode impedir que o usuário faça avançar o tempo do sistema para contornar a data de início.
+Se a política especificar uma data de start, uma licença não será gerada antes dessa data de start. No entanto, você pode definir uma data futura de start na licença depois que a licença for gerada. Essa opção deve ser usada com cautela, pois o cliente não pode impedir que o usuário faça avançar o tempo do sistema para contornar a data de start.
