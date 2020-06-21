@@ -2,7 +2,7 @@
 title: Notas de versão do PTAI 19.11.1
 description: As notas de versão do PTAI 19.11.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion em 2019.
 translation-type: tm+mt
-source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 0%
@@ -16,7 +16,7 @@ As notas de versão do Dynamic Ad Insertion 19.11.1 descrevem o que é novo ou a
 
 ## Novidades do PTAI 19.11.1
 
-**Quando:** segunda-feira, 4 de novembro de 2019 às 12:01 da manhã às 01:00 da manhã do leste
+**Quando:** segunda-feira, 4 de novembro de 2019, às 12:01 da manhã às 01:00 da manhã no leste
 
 Atualizações de manutenção.
 
@@ -174,13 +174,13 @@ Correção de um bug no qual os players do Chromecast saíam inesperadamente da 
    * Estrutura antiga da chave de pesquisa: Zona, Sistema de publicidade, ID de anúncio, ID criativa, URL criativo e parâmetros de formato (duração do público alvo, formato de saída, CDN de destino)
    * As chaves de pesquisa dos ativos CRS existentes serão atualizadas para corresponder à nova estrutura antes da versão de produção, mas observe que novos ativos transcodificados entre a atualização das chaves de pesquisa e a versão de produção podem ser perdidos. Em caso afirmativo, iniciarão uma nova solicitação de SIR na próxima vez que forem encontrados após a versão
 
-* SIR: Adicionada a capacidade de fazer a lista negra/as solicitações CRS de uma lista de permissões de sistemas de anúncios específicos, IDs de anúncios, IDs criativas, URLs criativos e/ou formato criativo
+* SIR: Adicionada a capacidade de bloquear/permitir solicitações CRS de sistemas de anúncios específicos, IDs de anúncios, IDs criativas, URLs criativos e/ou formato criativo
 
    >Nota
    >
-   >A Adobe adicionará regras de lista negra quando os provedores de anúncios com valores dinâmicos (por exemplo, parâmetro dinâmico em URL) para o mesmo anúncio forem encontrados. Essas regras da lista negra serão desativadas depois que o componente dinâmico for resolvido, pelo provedor ou por meio de uma regra de normalização.
+   >A Adobe adicionará regras de lista de bloqueio quando os provedores de publicidade com valores dinâmicos (por exemplo, parâmetro dinâmico em URL) para o mesmo anúncio forem encontrados. Essas regras de lista de bloqueio serão desativadas depois que o componente dinâmico for resolvido, pelo provedor ou por meio de uma regra de normalização.
 
-   * Se você quiser adicionar uma lista negra ou uma regra de lista de permissões para sua região, fale com seu Gerente de conta técnico para obter assistência.
+   * Se você quiser adicionar uma lista de bloqueios ou uma regra de lista de permissões para sua região, fale com seu Gerente de conta técnico para obter assistência.
 
 ### Versão 19.1.1
 
