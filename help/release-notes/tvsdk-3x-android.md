@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '5417'
+source-wordcount: '5418'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ O lançamento focou na correção de problemas principais do cliente, conforme m
 
 * **Suporte pré-rolo com recurso** Paral Ad-Break - Com esse aprimoramento, o TVSDK 3.8 suporta anúncios precedentes com o recurso Parcial Ad-Break (PABI).
 
-O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ativo, emulando a experiência da televisão ao vivo.
+O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ao vivo, emulando a experiência da televisão ao vivo.
 
 **Android TVSDK 3.7**
 
@@ -435,7 +435,7 @@ Esta seção fornece um resumo do problema resolvido na versão TVSDK 3.12 do An
 
 **Android TVSDK 3.10**
 
-* ZD#40340 - O aplicativo trava com o erro &quot;App Not Responding&quot; (Aplicativo não respondendo) ao tentar reproduzir depois de adicionar à lista negra todos os arquivos TS (TypeScript).
+* ZD#40340 - O aplicativo trava com o erro &quot;App Not Responding&quot; (Aplicativo não respondendo) ao tentar reproduzir após bloquear a listagem de todos os arquivos TS (TypeScript).
 
 **Android TVSDK 3.8**
 
@@ -717,7 +717,7 @@ WebViewDebbuging está definido como Falso por padrão. Para habilitar a depura�
    * Suporte a tags ID3 não verificado
 
 * Para eventos de andamento do anúncio, a barra da linha do tempo pode não refletir o tempo de reprodução do anúncio 100% preciso. Como solução, é possível usar `adcompleteevent` para saber a conclusão da reprodução do anúncio e atualizar a interface do usuário para vários fins, como atualizar a barra da linha do tempo, remover a interface do usuário relacionada ao anúncio etc.
-* Vastas chamadas de anúncio retornadas pelo VMAP não cumprem a posição de pesquisa just-in-time futura.
+* Vastas chamadas de anúncio retornadas pelo VMAP não respeitam a posição de pesquisa just-in-time futura.
 
 **Android TVSDK 2.5.6**
 
