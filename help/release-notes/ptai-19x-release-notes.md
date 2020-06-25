@@ -2,9 +2,9 @@
 title: Notas de versão do PTAI 19.11.1
 description: As notas de versão do PTAI 19.11.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion em 2019.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -174,13 +174,13 @@ Correção de um bug no qual os players do Chromecast saíam inesperadamente da 
    * Estrutura antiga da chave de pesquisa: Zona, Sistema de publicidade, ID de anúncio, ID criativa, URL criativo e parâmetros de formato (duração do público alvo, formato de saída, CDN de destino)
    * As chaves de pesquisa dos ativos CRS existentes serão atualizadas para corresponder à nova estrutura antes da versão de produção, mas observe que novos ativos transcodificados entre a atualização das chaves de pesquisa e a versão de produção podem ser perdidos. Em caso afirmativo, iniciarão uma nova solicitação de SIR na próxima vez que forem encontrados após a versão
 
-* SIR: Adicionada a capacidade de bloquear/permitir solicitações CRS de sistemas de anúncios específicos, IDs de anúncios, IDs criativas, URLs criativos e/ou formato criativo
+* SIR: Adicionada a capacidade de bloquear solicitações de CRS de lista/permissão de sistemas de anúncios específicos, IDs de anúncios, IDs criativas, URLs criativos e/ou formato criativo
 
    >Nota
    >
-   >A Adobe adicionará regras de lista de bloqueio quando os provedores de publicidade com valores dinâmicos (por exemplo, parâmetro dinâmico em URL) para o mesmo anúncio forem encontrados. Essas regras de lista de bloqueio serão desativadas depois que o componente dinâmico for resolvido, pelo provedor ou por meio de uma regra de normalização.
+   >A Adobe adicionará regras de lista de blocos quando os provedores de publicidade com valores dinâmicos (por exemplo, parâmetro dinâmico em URL) para o mesmo anúncio forem encontrados. Essas regras de lista de blocos serão desativadas depois que o componente dinâmico for resolvido, pelo provedor ou por meio de uma regra de normalização.
 
-   * Se você quiser adicionar uma lista de bloqueios ou uma regra de lista de permissões para sua região, fale com seu Gerente de conta técnico para obter assistência.
+   * Se você quiser adicionar uma lista de blocos ou permitir a regra de lista para sua região, fale com seu Gerente de conta técnico para obter assistência.
 
 ### Versão 19.1.1
 
