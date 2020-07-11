@@ -3,9 +3,9 @@ seo-title: Visão geral do utilitário da ID do editor do AIR
 title: Visão geral do utilitário da ID do editor do AIR
 uuid: 31aecc0e-ad9b-43ad-ba58-77d2c999f4a4
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
@@ -17,5 +17,4 @@ Como parte do processo de criação de um arquivo AIR, a AIR Developer Tool (ADT
 
 >[!NOTE] {class=&quot;- tópico/observação &quot;}
 >
->A Publisher ID, usada para a imposição de lista permitida do AIR, não é igual à Publisher ID especificada pelo editor do aplicativo no [!DNL application.xml] arquivo do aplicativo.
-
+>A ID do editor, usada para a imposição de lista de permissões do AIR, não é a mesma ID do editor especificada pelo editor do aplicativo no [!DNL application.xml] arquivo do aplicativo.
