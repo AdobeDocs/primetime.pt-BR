@@ -3,9 +3,9 @@ seo-title: Criar políticas DRM personalizadas (Opcional)
 title: Criar políticas DRM personalizadas (Opcional)
 uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Criar políticas DRM personalizadas (Opcional){#create-custom-drm-policies-optional}
 
-O kit de proteção DRM da Primetime Cloud vem com algumas políticas pré-configuradas que podem ser usadas durante o empacotamento. Se outras configurações de política forem desejadas, por exemplo, um direito de habilitação de SWF específico, o Gerenciador de políticas de DRM do Primetime pode ser usado para gerar políticas personalizadas.
+O kit de proteção DRM da Primetime Cloud vem com algumas políticas pré-configuradas que podem ser usadas durante o empacotamento. Se outras configurações de política forem desejadas, por exemplo, um direito de listagem de permissão SWF específico, o Gerenciador de políticas DRM do Primetime pode ser usado para gerar políticas personalizadas.
 
 >[!NOTE]
 >
