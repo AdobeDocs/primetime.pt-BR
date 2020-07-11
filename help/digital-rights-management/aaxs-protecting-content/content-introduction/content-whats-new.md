@@ -5,7 +5,7 @@ seo-title: Visão geral
 title: Visão geral
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -43,4 +43,4 @@ O SDK fornece uma API Java para realizar essas tarefas, e inclui implementaçõe
 
 Especifica regras de uso personalizadas. Os dados personalizados podem ser incluídos nas licenças emitidas pelo License Server. A interpretação/tratamento desses dados depende totalmente da implementação do aplicativo cliente e do servidor de licenças.
 
-Exemplo de caso de uso: Permite a extensibilidade das regras de uso, permitindo que outras regras comerciais sejam transmitidas com segurança como parte da política e/ou da licença de conteúdo. Por motivos de segurança, como essas regras de uso são aplicadas no código personalizado do aplicativo cliente, essa opção deve ser usada juntamente com o aplicativo AIR ou as opções de lista de permissão do Flash Player SWF. Para obter mais informações, consulte &quot;Restrições[de tempo de](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)execução e aplicativos&quot;.
+Exemplo de caso de uso: Permite a extensibilidade das regras de uso, permitindo que outras regras comerciais sejam transmitidas com segurança como parte da política e/ou da licença de conteúdo. Por motivos de segurança, como essas regras de uso são aplicadas no código personalizado do aplicativo cliente, essa opção deve ser usada juntamente com as opções de lista de permissões do aplicativo AIR ou Flash Player SWF. Para obter mais informações, consulte Restrições [de tempo de](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)execução e aplicativo.
