@@ -4,9 +4,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Ajuda do Primetime Digital Rights Management
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2202'
 ht-degree: 0%
 
 ---
@@ -189,10 +189,10 @@ ht-degree: 0%
       + [Regras baseadas em tempo](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [Requisitos para sincronização](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + Restrições de tempo de execução e aplicação {#runtime-application-restrictions}
-      + [Lista permitida para aplicativos DRM Primetime que podem reproduzir conteúdo protegido...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
+      + [Lista de permissões para aplicativos DRM Primetime com permissão para reproduzir conteúdo protegido...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
       + [Lista de permissões para SWFs do Adobe® Flash® Player](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
-      + [Bloquear a lista de Clientes DRM impedidos de acessar conteúdo protegido](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
-      + [Bloquear lista de tempos de execução do aplicativo](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
+      + [Lista de bloqueios de clientes DRM impedidos de acessar conteúdo protegido](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
+      + [Lista de bloqueios dos tempos de execução do aplicativo](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
       + [Nível mínimo de segurança para DRM e tempos de execução](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
       + [Recursos do dispositivo necessários para reproduzir conteúdo protegido](protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
       + [Imposição de interrupção de serviço (requer o Adobe Primetime DRM)](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
@@ -281,7 +281,7 @@ ht-degree: 0%
       + [Gerenciador de políticas DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-overview.md)
       + [Uso da linha de comando do Gerenciador de políticas](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)
       + [Propriedades de configuração](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-config-file-properties.md)
-      + [Lista de Permissões de Aplicativos Não SWF](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-allowlisting.md)
+      + [Lista de permissões de aplicativos não SWF](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-allowlisting.md)
       + [Lista de permissões de aplicativos SWF](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-allowlisting.md)
    + [DRM Media Packager](drm-reference-implementations/command-line-tools/configure-command-line-tools/media-packager/media-packager-overview.md)
    + [Gerenciador de Lista de atualização de política DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
@@ -401,7 +401,7 @@ ht-degree: 0%
       + [Detecção de retorno](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
       + [Contagem de máquina ao emitir licenças](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [Proteção contra repetição](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
-      + [Manter uma lista permitida de pacotes de conteúdo confiável](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
+      + [Manter uma lista de permissões de pacotes de conteúdo confiável](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
       + [Tempo limite para tokens de autenticação](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-timeout-for-authn-tokens.md)
       + [Substituição de opções de política](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-override-policy-options.md)
       + [Licenças pré-geradoras](aaxs-secure-deployment-guidelines/issuing-licenses/pre-gen-licenses.md)
@@ -424,10 +424,10 @@ ht-degree: 0%
    + [Autenticação do usuário](aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)
    + [Regras baseadas em tempo](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
    + Restrições de tempo de execução e aplicação {#runtime-and-application-restrictions}
-      + [Permitir lista para aplicativos Adobe® Primetime com permissão para reproduzir conteúdo protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
-      + [Permitir lista para SWFs do Adobe® Flash® Player com permissão para reproduzir conteúdo protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
-      + [Bloquear a lista de Clientes DRM impedidos de acessar conteúdo protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
-      + [Bloquear lista de tempos de execução de aplicativos restritos de acesso a conteúdo protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
+      + [Lista de permissões para aplicativos Adobe® Primetime com permissão para reproduzir conteúdo protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
+      + [Lista de permissões para SWFs do Adobe® Flash® Player com permissão para reproduzir conteúdo protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
+      + [Lista de bloqueios de clientes DRM impedidos de acessar conteúdo protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
+      + [Lista de bloqueios de tempos de execução de aplicativos restritos de acesso a conteúdo protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
       + [Nível mínimo de segurança para DRM e tempos de execução](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
       + [Recursos do dispositivo necessários para reproduzir conteúdo protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
       + [Imposição de interrupção de serviço (requer o Adobe Primetime)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
