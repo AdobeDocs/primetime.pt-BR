@@ -1,20 +1,44 @@
 ---
-title: Notas de versão do PTAI 20.6.1
-description: As notas de versão PTAI 20.6.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos na inserção do anúncio dinâmico Primetime no ano 2020.
+title: Notas de versão do PTAI 20.7.1
+description: As notas de versão do PTAI 20.7.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
 
 
-# Notas de versão do Primetime Dynamic Ad Insertion 20.6.1
+# Notas de versão do Primetime Dynamic Ad Insertion 20.7.1
 
-As notas de versão do Dynamic Ad Insertion 20.6.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+As notas de versão do Dynamic Ad Insertion 20.7.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 
-## Novidades do PTAI 20.6.1
+## Novidades do PTAI 20.7.1
+
+**Quando:** quinta-feira, 9 de julho de 2020, das 03:00 às 05:00 Hora do Leste
+
+**Novos recursos e melhorias**
+
+* Aprimoramento do SCTE35 para usar mensagens de Start/término do anúncio do provedor ou de Start/término para identificar a dica.
+
+* Atualização do cabeçalho X-ADBE-AI-X1 com informações adicionais para ajudar a solucionar problemas.
+
+* Agregação de métricas aprimorada.
+
+* Painel do console SSAI aprimorado para o painel Estatísticas da sessão.
+
+### Aprimoramentos e correções nas versões anteriores
+
+#### Versão 20.6.2
+
+**Quando:** quinta-feira, 18 de junho de 2020, das 03h00 às 04h00, horário do leste
+
+**Aprimoramentos**
+
+Sincronização de fluxo aprimorada para clientes de vídeo que exigem precisão de milissegundos. Entre em contato com o suporte da Adobe para ativar a precisão de milissegundos para `#EXT-X-PROGRAM-DATE-TIME tags`.
+
+#### Versão 20.6.1
 
 **Quando:** terça-feira, 2 de junho de 2020, das 03:00 às 05:00 Hora do Leste
 
@@ -32,7 +56,7 @@ Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos 
 
 * Correção de um problema em que as tags EXT-X-DISCONTINUITY eram removidas da parte superior da lista de reprodução ao alternar dos anúncios para o conteúdo. Entre em contato com o suporte da Adobe para ativar essa correção.
 
-### Versão 20.5.1
+#### Versão 20.5.1
 
 **Quando:** terça-feira, 5 de maio de 2020 das 04:00 às 05:00 Hora do Leste
 
@@ -42,7 +66,7 @@ Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos 
 
 * Atualizações de manutenção.
 
-### Versão 20.3.4
+#### Versão 20.3.4
 
 **Quando:** quarta-feira, 1 de abril de 2020, das 03:00 às 04:00, horário do leste
 
@@ -50,7 +74,7 @@ Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos 
 
 * Atualizações de segurança.
 
-### Versão 20.3.3
+#### Versão 20.3.3
 
 **Quando:** quinta-feira, 26 de março de 2020, das 03h00 às 04h00, horário do leste
 
@@ -60,7 +84,7 @@ Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos 
 
 * Correção de um problema com fluxos de áudio CMAF/descompilados, em que, em certos cenários, os números EXT-X-MEDIA-SEQUENCE aumentavam incorretamente.
 
-### Versão 20.3.2
+#### Versão 20.3.2
 
 **Quando:** quarta-feira, 11 de março de 2020, das 05:30 às 07:00 Hora do Leste
 
@@ -68,26 +92,26 @@ Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos 
 
 * Atualizações de manutenção.
 
-### Versão 20.3.1
+#### Versão 20.3.1
 
 **Quando:** quinta-feira, 5 de março de 2020, das 02h30 às 04h30, horário do leste
 
 * Melhorias no desempenho:
 
-   * Adição do suporte de cache para manifestos m3u8 mestres/de mídia. Esses manifestos agora respondem ao Cache-Control: cabeçalhos public e Max-Age, que geralmente podem melhorar o desempenho do start de vídeo.
+   * Adicionado suporte de cache para manifestos m3u8 principais/de mídia. Esses manifestos agora respondem ao Cache-Control: cabeçalhos public e Max-Age, que geralmente podem melhorar o desempenho do start de vídeo.
 
    * Adição de suporte para forçar a busca de criações https em http, o que também pode melhorar o desempenho do start de vídeo.
 
 * Correções de segurança e manutenção.
 
-### Versão 20.2.1
+#### Versão 20.2.1
 
 **Quando:** quinta-feira, 13 de fevereiro de 2020, das 04:30 às 05:30, horário do leste
 
 * Adicionado suporte para a sutura de ativos de anúncios que contêm vários fluxos somente de áudio com base no idioma/codec/taxa de bits.
 * Pequenas melhorias de desempenho e atualizações de manutenção.
 
-### Versão 20.1.3
+#### Versão 20.1.3
 
 **Quando:** terça-feira, 28 de janeiro de 2020, das 2h00 às 03h00, horário do leste
 
@@ -101,13 +125,13 @@ Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos 
 
 * Expurgue objetos V1 antigos de grupos NetStorage para manter a contagem de objetos dentro dos limites seguros do Akamai.
 
-### Versão 20.1.2 (Hotfix)
+#### Versão 20.1.2 (Hotfix)
 
 **Quando:** segunda-feira, 20 de janeiro de 2020, das 02h00 às 03h00, horário do leste
 
 * Atualizações de manutenção.
 
-### Versão 20.1.1
+#### Versão 20.1.1
 
 **Quando:** quarta-feira, 15 de janeiro de 2020, das 04:00 às 05:00, horário do leste
 
@@ -120,6 +144,12 @@ Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos 
 ## Problemas resolvidos
 
 Quando a resolução estiver associada a um problema reportado, uma referência do Zendesk será exibida. Por exemplo, `ZD#xxxxx`
+
+**PTAI 20.6.1**
+
+* `WebVTT` fragmentos sempre foram solicitados sob protocolo http, independentemente do protocolo original solicitado.
+
+* `EXT-X-DISCONTINUITY` as tags são removidas da parte superior da lista de reprodução ao alternar de anúncios para conteúdo. Entre em contato com o suporte da Adobe para ativar essa correção.
 
 **PTAI 20.5.1**
 
