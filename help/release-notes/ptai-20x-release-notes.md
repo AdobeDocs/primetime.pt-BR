@@ -1,20 +1,30 @@
 ---
-title: Notas de versão do PTAI 20.7.1
-description: As notas de versão do PTAI 20.7.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+title: Notas de versão do PTAI 20.8.1
+description: As notas de versão PTAI 20.8.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
 
 
-# Notas de versão do Primetime Dynamic Ad Insertion 20.7.1
+# Notas de versão do Primetime Dynamic Ad Insertion 20.8.1
 
-As notas de versão do Dynamic Ad Insertion 20.7.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+As notas de versão do Dynamic Ad Insertion 20.8.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 
-## Novidades do PTAI 20.7.1
+## Novidades do PTAI 20.8.1
+
+**Quando:** terça-feira, 4 de agosto de 2020, das 3:00 às 6:00 Hora do Leste
+
+**Aprimoramentos e correções**
+
+Atualizações de manutenção.
+
+### Aprimoramentos e correções nas versões anteriores
+
+#### Versão 20.7.1
 
 **Quando:** quinta-feira, 9 de julho de 2020, das 03:00 às 05:00 Hora do Leste
 
@@ -26,9 +36,7 @@ As notas de versão do Dynamic Ad Insertion 20.7.1 descrevem o que é novo ou al
 
 * Agregação de métricas aprimorada.
 
-* Painel do console SSAI aprimorado para o painel Estatísticas da sessão.
-
-### Aprimoramentos e correções nas versões anteriores
+* Painel do console SSAI aprimorado para o painel Estatísticas da sessão
 
 #### Versão 20.6.2
 
@@ -36,7 +44,7 @@ As notas de versão do Dynamic Ad Insertion 20.7.1 descrevem o que é novo ou al
 
 **Aprimoramentos**
 
-Sincronização de fluxo aprimorada para clientes de vídeo que exigem precisão de milissegundos. Entre em contato com o suporte da Adobe para ativar a precisão de milissegundos para `#EXT-X-PROGRAM-DATE-TIME tags`.
+Sincronização de fluxo aprimorada para clientes de vídeo que exigem precisão de milissegundos. Entre em contato com o suporte ao Adobe para ativar a precisão de milissegundos para `#EXT-X-PROGRAM-DATE-TIME tags`.
 
 #### Versão 20.6.1
 
@@ -44,7 +52,7 @@ Sincronização de fluxo aprimorada para clientes de vídeo que exigem precisão
 
 **Novos recursos**
 
-Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos por meio da configuração do servidor:
+Entre em contato com o Suporte ao Adobe para ativar os seguintes novos recursos por meio da configuração do servidor:
 
 * Manipulação manifesta: Os URLs de segmento e recurso HLS agora podem ser transformados entre HTTP e HTTPS para aumentar o desempenho, reduzindo os handshakes TLS em solicitações de back-end. Também pode ser usado para unificar fragmentos de anúncio/conteúdo nos mesmos CDNs.
 
@@ -54,7 +62,7 @@ Entre em contato com o suporte da Adobe para ativar os seguintes novos recursos 
 
 * Correção de um problema em que fragmentos WebVTT eram sempre solicitados sob protocolo http, independentemente do protocolo original solicitado.
 
-* Correção de um problema em que as tags EXT-X-DISCONTINUITY eram removidas da parte superior da lista de reprodução ao alternar dos anúncios para o conteúdo. Entre em contato com o suporte da Adobe para ativar essa correção.
+* Correção de um problema em que as tags EXT-X-DISCONTINUITY eram removidas da parte superior da lista de reprodução ao alternar dos anúncios para o conteúdo. Entre em contato com o suporte ao Adobe para ativar essa correção.
 
 #### Versão 20.5.1
 
@@ -149,7 +157,7 @@ Quando a resolução estiver associada a um problema reportado, uma referência 
 
 * `WebVTT` fragmentos sempre foram solicitados sob protocolo http, independentemente do protocolo original solicitado.
 
-* `EXT-X-DISCONTINUITY` as tags são removidas da parte superior da lista de reprodução ao alternar de anúncios para conteúdo. Entre em contato com o suporte da Adobe para ativar essa correção.
+* `EXT-X-DISCONTINUITY` as tags são removidas da parte superior da lista de reprodução ao alternar de anúncios para conteúdo. Entre em contato com o suporte ao Adobe para ativar essa correção.
 
 **PTAI 20.5.1**
 
