@@ -3,7 +3,10 @@ seo-title: Aumento do encadeamento de licenças
 title: Aumento do encadeamento de licenças
 uuid: 5e4e825a-de84-4ab2-a652-02cc03153957
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
@@ -16,8 +19,8 @@ O Primetime DRM 2.0 suporta encadeamento de licença no qual as licenças de fol
 
 Se você quiser ativar o encadeamento de licença aprimorado, é necessário atribuir uma chave de criptografia raiz a uma política de DRM Primetime. A chave de criptografia raiz é usada para vincular criptograficamente a licença de folha à licença raiz.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >Os clientes Primetime DRM versão 3.0 ou posterior oferecem suporte para o encadeamento aprimorado de licenças. Se um cliente mais antigo solicitar uma licença para conteúdo compatível com o encadeamento de licença aprimorado, o servidor de licença ainda poderá emitir uma licença para esse cliente usando o encadeamento de licença compatível com o Primetime DRM 2.0.
 
-Exemplo de caso de uso: Use esta opção para atualizar quaisquer licenças vinculadas baixando uma única licença raiz. Por exemplo, implemente modelos de assinatura nos quais o conteúdo pode ser reproduzido desde que o usuário renove a assinatura mensalmente. A vantagem dessa abordagem é que os usuários precisam apenas adquirir uma única licença para atualizar todas as licenças de assinatura.
+Exemplo de caso de uso: Use esta opção para atualizar quaisquer licenças vinculadas baixando uma única licença raiz. Por exemplo, implemente modelos de subscrição nos quais o conteúdo pode ser reproduzido desde que o usuário renove a subscrição mensalmente. A vantagem desta abordagem é que os usuários só precisam adquirir uma única licença para atualizar todas as suas licenças de subscrição.
