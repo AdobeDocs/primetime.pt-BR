@@ -5,7 +5,10 @@ seo-title: Recursos do dispositivo necessários para reproduzir conteúdo proteg
 title: Recursos do dispositivo necessários para reproduzir conteúdo protegido
 uuid: 1490711b-65d9-4716-8779-ae1da7d2c82c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
@@ -39,9 +42,9 @@ Os atributos a seguir podem identificar os recursos do dispositivo:
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
->Essa regra de uso é suportada pelos clientes DRM do Adobe Primetime versão 2.0.2 e posterior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças.
+>Esta regra de uso é suportada pelos clientes DRM da Adobe Primetime versão 2.0.2 e posterior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças.
 >
 >Consulte Versão [](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)mínima do cliente.
 
