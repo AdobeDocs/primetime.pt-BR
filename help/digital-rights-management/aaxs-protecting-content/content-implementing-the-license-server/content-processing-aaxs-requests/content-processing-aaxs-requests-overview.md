@@ -3,7 +3,10 @@ seo-title: Visão geral
 title: Visão geral
 uuid: 870c32f5-1119-4fec-abed-25e51dd1ebe3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -12,11 +15,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 A abordagem geral para lidar com solicitações é criar um manipulador, analisar a solicitação, definir os dados de resposta ou o código de erro e fechar o manipulador.
 
-A classe base usada para lidar com interação de solicitação única/resposta é `com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`. Uma instância da `HandlerConfiguration` classe é usada para inicializar o manipulador. `HandlerConfiguration` armazena informações de configuração do servidor, incluindo credenciais de transporte, tolerância a carimbo de data e hora, listas de atualização de política e listas de revogação. O manipulador lê os dados da solicitação e analisa-a em uma instância do `RequestMessageBase`. O chamador pode examinar as informações na solicitação e decidir se deve retornar um erro ou uma resposta bem-sucedida (as subclasses de `RequestMessageBase` um método para definir os dados de resposta).
+A classe base usada para lidar com interação de solicitação única/resposta é `com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`. Uma instância da `HandlerConfiguration` classe é usada para inicializar o manipulador. `HandlerConfiguration` armazena informações de configuração do servidor, incluindo credenciais de transporte, tolerância de carimbo de data e hora, listas de atualização de política e listas de revogação. O manipulador lê os dados da solicitação e analisa-a em uma instância do `RequestMessageBase`. O chamador pode examinar as informações na solicitação e decidir se deve retornar um erro ou uma resposta bem-sucedida (as subclasses de `RequestMessageBase` um método para definir os dados de resposta).
 
-Se a solicitação for bem-sucedida, defina os dados da resposta; caso contrário, invoque `RequestMessageBase.setErrorData()` na falha. Sempre encerre a implementação chamando o `close()` método (recomenda-se que `close()` seja chamado no `finally` bloco de uma `try` instrução). Consulte a documentação de referência da `MessageHandlerBase` API para obter um exemplo de como chamar o manipulador.
+Se a solicitação for bem-sucedida, defina os dados da resposta; caso contrário, invoque `RequestMessageBase.setErrorData()` em falha. Sempre encerre a implementação chamando o `close()` método (recomenda-se que `close()` seja chamado no `finally` bloco de uma `try` instrução). Consulte a documentação de referência da `MessageHandlerBase` API para obter um exemplo de como chamar o manipulador.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >O código de status HTTP 200 (OK) deve ser enviado em resposta a todas as solicitações processadas pelo manipulador. Se o manipulador não puder ser criado devido a um erro de servidor, o servidor poderá responder com outro código de status, como 500 (Internal Server Error).
 
