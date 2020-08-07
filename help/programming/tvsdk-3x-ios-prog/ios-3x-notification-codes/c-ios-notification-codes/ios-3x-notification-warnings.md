@@ -5,7 +5,10 @@ seo-title: Códigos de notificação de AVISO
 title: Códigos de notificação de AVISO
 uuid: da1a561d-3b9a-468a-a24a-7b6fa62aa2e8
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 3%
 
 ---
 
@@ -136,7 +139,7 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270006 </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_WARNING </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_AVISO </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> DESCRIÇÃO </span> </td> 
    <td colname="5"> <p>Aviso: Consulte a descrição do aviso do SiteCatalyst. </p> </td> 
