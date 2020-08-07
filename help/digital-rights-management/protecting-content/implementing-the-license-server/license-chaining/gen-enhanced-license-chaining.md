@@ -3,7 +3,10 @@ seo-title: Encadeamento de licença aprimorado
 title: Encadeamento de licença aprimorado
 uuid: f869b4e7-4b24-4832-94a7-b7143567ab58
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Se uma política de DRM for usada para gerar uma licença que suporte encadeamen
 
 Com o encadeamento aprimorado de licença no Adobe Primetime DRM 3.0, recomenda-se a emissão de uma Leaf e uma Root na primeira vez que o usuário solicita uma licença para uma máquina específica. Se o usuário já tiver a licença Raiz, o servidor poderá emitir apenas uma Folha (chame `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` para determinar se o cliente já tem uma Raiz 3.0 Avançada). Para solicitações de licença subsequentes, o cliente indica que já tem uma Leaf e uma Raiz, portanto, o servidor deve emitir uma nova licença de Raiz. Quando o encadeamento de licença aprimorado é usado, `setRootKeyRetrievalInfo()` deve ser chamado para fornecer as credenciais necessárias para descriptografar a chave de criptografia raiz na política de DRM.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >Se a política suportar o 3.0 Enhanced License Encadeamento, mas o cliente for Primetime DRM 2.0, o servidor emitirá uma licença encadeada original 2.0. Para determinar a versão do cliente, use `LicenseRequestMessage.getClientVersion()`.
 
