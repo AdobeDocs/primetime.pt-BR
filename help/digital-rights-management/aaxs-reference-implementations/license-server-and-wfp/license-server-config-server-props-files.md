@@ -3,14 +3,17 @@ seo-title: Arquivos de propriedades do servidor
 title: Arquivos de propriedades do servidor
 uuid: 3d3a0ee3-009f-4d62-9587-7e487ecdcafd
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
 # Arquivos de propriedades do servidor {#server-properties-files}
 
-O servidor requer dois arquivos de configuração, um para o servidor de licenças e outro para o empacotador. Ambos os arquivos devem ser colocados no classpath. Os arquivos de propriedades contêm o local das credenciais emitidas pela Adobe. Essas credenciais podem ser especificadas como um arquivo e senha .pfx ou fornecendo um alias e senha para uma credencial armazenada em um HSM.
+O servidor requer dois arquivos de configuração, um para o servidor de licenças e outro para o empacotador. Ambos os arquivos devem ser colocados no classpath. Os arquivos de propriedades contêm o local das credenciais emitidas pelo Adobe. Essas credenciais podem ser especificadas como um arquivo e senha .pfx ou fornecendo um alias e senha para uma credencial armazenada em um HSM.
 
 Consulte os arquivos de propriedade para obter detalhes sobre os valores específicos e o uso de cada parâmetro. Arquivos de propriedades de amostra podem ser encontrados no diretório &quot;resources&quot; da implementação de referência (Referência Implementation\Server\resources).
 
@@ -32,7 +35,7 @@ Para preparar corretamente a senha da sua credencial:
    </i class="+ topic>
    ```
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >O exemplo anterior usa um ponto-e-vírgula (;) como delimitador. Para plataformas diferentes do Microsoft Windows, use dois pontos (:) como delimitador.
 
