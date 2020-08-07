@@ -1,18 +1,21 @@
 ---
-description: O servidor de implementação de referência pode ajudá-lo a criar um servidor de licenças totalmente funcional que use todos os recursos do Adobe Primetime DRM Java SDK.
-seo-description: O servidor de implementação de referência pode ajudá-lo a criar um servidor de licenças totalmente funcional que use todos os recursos do Adobe Primetime DRM Java SDK.
+description: O servidor de implementação de referência pode ajudá-lo a criar um servidor de licenças totalmente funcional que use todos os recursos do SDK Java do Adobe Primetime DRM.
+seo-description: O servidor de implementação de referência pode ajudá-lo a criar um servidor de licenças totalmente funcional que use todos os recursos do SDK Java do Adobe Primetime DRM.
 seo-title: Servidor de licenças
 title: Servidor de licenças
 uuid: 39cb0d0f-f3dc-48e9-b6fd-6960a9ade291
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
 
 # Servidor de licenças {#license-server}
 
-O servidor de implementação de referência pode ajudá-lo a criar um servidor de licenças totalmente funcional que use todos os recursos do Adobe Primetime DRM Java SDK.
+O servidor de implementação de referência pode ajudá-lo a criar um servidor de licenças totalmente funcional que use todos os recursos do SDK Java do Adobe Primetime DRM.
 
 Nesta implementação, os usuários são autenticados com base em entradas de usuários em um banco de dados. O servidor inclui lógica comercial de demonstração para a emissão de licenças e oferece suporte de compatibilidade para o Flash Media Rights Management Server 1.0 e 1.5.
 
@@ -25,11 +28,11 @@ Requisitos do servidor de licenças:
 * Verifique se o Java 1.6 ou posterior está instalado
 * Para executar scripts de criação de amostra, verifique se você tem Ant 1.8 ou posterior
 
-Depois de instalar o Tomcat e o MySQL, entre em contato com a Adobe para obter o conjunto de credenciais de DRM necessárias.
+Depois de instalar o Tomcat e o MySQL, entre em contato com o Adobe para obter o conjunto de credenciais de DRM necessárias.
 
 ## Criar o servidor de licenças {#build-the-license-server}
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >A criação do servidor de licenças só é necessária se você pretende modificar o código fonte. Para fins de avaliação, basta usar os arquivos WAR conforme enviados.
 
