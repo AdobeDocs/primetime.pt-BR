@@ -3,7 +3,10 @@ seo-title: Ajuste de desempenho
 title: Ajuste de desempenho
 uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '404'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Use as seguintes dicas para ajudar a aumentar o desempenho:
 * O uso de um HSM de rede pode ser significativamente mais lento do que o uso de um HSM conectado diretamente.
 * Para melhorar o desempenho, você pode, opcionalmente, habilitar o suporte nativo para operações criptográficas ao implantar as bibliotecas específicas da plataforma localizadas na [!DNL thirdparty/cryptoj] pasta do SDK. Para ativar o suporte nativo, adicione a biblioteca para a sua plataforma (jsafe.dll para Windows ou libjsafe.so para Linux) ao caminho.
 
-   >[!NOTE] {class=&quot;- tópico/observação &quot;}
+   >[!NOTE]
    >
    >Se você executar vários aplicativos da Web na mesma instância do Tomcat e tiver `jsafe.dll` no caminho, somente o primeiro aplicativo da Web que carrega é capaz de carregar a `jsafe.dll` biblioteca. Portanto, somente o primeiro aplicativo da Web obtém o benefício do suporte nativo. Nesses casos, para melhorar o desempenho de todos os aplicativos da Web, coloque-o `cryptoj.jar`fora do arquivo WAR. Por exemplo, no `<tomcat_installation_folder>/lib` diretório.
 
@@ -27,7 +30,7 @@ Em determinadas condições, os ambientes Linux podem pausar ao realizar operaç
 
 * Inicialização do Adobe Primetime DRM License Server
 * Geração de políticas usando o [!DNL AdobePolicyManager] utilitário
-* Acondicionamento de conteúdo protegido por DRM com o Adobe Media Server ou o Primetime OfflinePackager
+* Empacotamento de conteúdo protegido por DRM com o Adobe Media Server ou o Primetime OfflinePackager
 
 Os atrasos durante essas operações são geralmente o resultado de um pool de baixa entropia no servidor Linux.
 
