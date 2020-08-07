@@ -3,21 +3,24 @@ seo-title: Definição de regras baseadas em tempo
 title: Definição de regras baseadas em tempo
 uuid: 17c69869-ac81-4561-9fb6-b1c5c9c4006d
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '577'
+ht-degree: 0%
 
 ---
 
 
 # Definição de regras baseadas em tempo {#defining-time-based-rules}
 
-O Adobe Access usa a &quot;aplicação flexível&quot; das restrições de licença baseadas em tempo. Se um direito de tempo expirar durante a reprodução de um vídeo, o comportamento padrão do Adobe Access é não restringir a reprodução até a próxima vez que o fluxo de vídeo for recriado (chamando `Netstream.stop()` e `Netstream.play()`).
+O Adobe Access usa a &quot;aplicação flexível&quot; das restrições de licença baseadas em tempo. Se um direito de tempo expirar durante a reprodução de um vídeo, o comportamento padrão do Acesso a Adobe é não restringir a reprodução até a próxima vez que o fluxo de vídeo for recriado (chamando `Netstream.stop()` e `Netstream.play()`).
 
 Embora a aplicação flexível seja o comportamento padrão, também é possível ativar a aplicação forçada executando uma das seguintes tarefas:
 
 * Solicite ao seu reprodutor de vídeo que pesquise periodicamente a licença para verificar se nenhuma das restrições de tempo expirou. Isso pode ser feito chamando `DRMManager.loadVoucher(LOCAL_ONLY).`Um código de erro indica que a licença armazenada localmente não é mais válida.
 * Sempre que o usuário clicar no botão Pausar, você poderá gravar o carimbo de data e hora do vídeo atual e, em seguida, chamar `Netstream.stop().`Quando o usuário clicar no botão Reproduzir, você poderá procurar o local gravado e, em seguida, chamar `Netstream.play()`.
 
-## Data de início {#start-date}
+## data do start {#start-date}
 
 Especifica a data após a qual uma licença é válida.
 
@@ -55,10 +58,10 @@ Especifica a frequência na qual o cliente sincronizará seu estado com o servid
 
 O comportamento de sincronização é definido usando os seguintes parâmetros:
 
-* Intervalo inicial — Especifica por quanto tempo esperar após a última sincronização bem-sucedida para iniciar outra solicitação de sincronização.
+* Intervalo de start — Especifica por quanto tempo esperar após a última sincronização bem-sucedida para start de outra solicitação de sincronização.
 * Intervalo de Parada Rígida — (Opcional). Desative a reprodução se uma sincronização bem-sucedida não tiver ocorrido no período especificado.
-* Forçar Sincronização Probabilidade — (Opcional). Probabilidade com a qual o cliente deve enviar uma mensagem de sincronização antes do próximo intervalo de início.
+* Forçar Sincronização Probabilidade — (Opcional). Probabilidade com a qual o cliente deve enviar uma mensagem de sincronização antes do próximo intervalo de start.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
->Essa regra de uso é compatível com os clientes do Adobe Access versão 3.0 e superior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças. Consulte, Versão [](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)mínima do cliente.
+>Esta regra de uso é suportada pelos clientes do Adobe Access versão 3.0 e superior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças. Consulte, Versão [](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)mínima do cliente.
