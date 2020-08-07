@@ -5,7 +5,10 @@ seo-title: Tags personalizadas
 title: Tags personalizadas
 uuid: a86753ac-23d0-4c5e-9b5c-a6cdb7fcc5f7
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 0%
 
 ---
 
@@ -20,15 +23,15 @@ Os fluxos de mídia podem conter metadados adicionais na forma de tags na lista 
 >
 >Este recurso não está disponível para o Safari em computadores Apple, pois o TVSDK usa a tag de vídeo, em vez de Flash ou MSE, para reproduzir conteúdo HLS.
 
-O TVSDK oferece suporte imediato para tags de `#EXT` publicidade específicas. Seu aplicativo pode usar tags personalizadas para aprimorar o fluxo de trabalho de publicidade ou para oferecer suporte a cenários de blecaute. Para suportar fluxos de trabalho avançados, o TVSDK permite que você especifique e assine tags adicionais no manifesto. Você pode ser notificado quando essas tags forem exibidas no arquivo manifest.
+O TVSDK oferece suporte imediato para tags de `#EXT` publicidade específicas. Seu aplicativo pode usar tags personalizadas para aprimorar o fluxo de trabalho de publicidade ou para oferecer suporte a cenários de blecaute. Para suportar workflows avançados, o TVSDK permite que você especifique e assine tags adicionais no manifesto. Você pode ser notificado quando essas tags forem exibidas no arquivo manifest.
 
 >[!TIP]
 >
 >Você pode assinar tags personalizadas para fluxos VOD e live/linear.
 
->[!NOTE] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
 >
->Quando o HLS é reproduzido usando a tag Vídeo no Safari, e não usando o Flash Fallback, esse recurso não estará disponível no Safari.
+>Quando o HLS é reproduzido usando a tag Vídeo no Safari, e não usando o recurso Flash Fallback, esse recurso não estará disponível no Safari.
 
 ## Uso de tags HLS personalizadas {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
