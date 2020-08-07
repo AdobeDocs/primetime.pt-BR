@@ -5,7 +5,10 @@ seo-title: Solicitação / resposta do token de licença do FairPlay
 title: Solicitação / resposta do token de licença do FairPlay
 uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '829'
+ht-degree: 5%
 
 ---
 
@@ -43,18 +46,18 @@ A interface do token de licença do FairPlay fornece serviços de produção e t
    https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
    ```
 
-**Solicitar parâmetros de consulta**
+**Parâmetros de Query de solicitação**
 
-**Quadro 3: Parâmetros de consulta de token**
+**Quadro 3: Parâmetros do Query de token**
 
-| Parâmetro de consulta | Descrição | Obrigatório? |
+| Parâmetro do query | Descrição | Obrigatório? |
 |--- |--- |--- |
-| customerAuthenticator Customer authenticator como parâmetro de consulta customerAuthenticator FairPlay | Esta é a chave da API do cliente, uma para cada ambiente de produção e teste. Isso pode ser encontrado na guia ExpressPlay Admin Dashboard. | Sim |
-| errorFormat | Ou html ou json. Se html (o padrão) uma representação HTML de quaisquer erros é fornecida no corpo da entidade da resposta. Se json for especificado, uma resposta estruturada no formato JSON será retornada. Consulte Erros [](https://www.expressplay.com/developer/restapi/#json-errors) JSON para obter detalhes. O tipo mime da resposta é text/uri-list em success, text/html para o formato de erro HTML ou application/json para o formato de erro JSON. | Não |
+| customerAuthenticator Autenticador Cliente como parâmetro de query customerAuthenticator FairPlay | Esta é a chave da API do cliente, uma para cada ambiente de produção e teste. Isso pode ser encontrado na guia ExpressPlay Admin Painel. | Sim |
+| errorFormat | Ou html ou json. Se html (o padrão) uma representação HTML de quaisquer erros é fornecida no corpo da entidade da resposta. Se json for especificado, uma resposta estruturada no formato JSON será retornada. Consulte Erros [](https://www.expressplay.com/developer/restapi/#json-errors) JSON para obter detalhes. O tipo mime da resposta é text/uri-lista em caso de sucesso, text/html para formato de erro HTML ou application/json para formato de erro JSON. | Não |
 
-**Quadro 3: Parâmetros de consulta de licença**
+**Tabela 4: Parâmetros de Query de licença**
 
-| **Parâmetro de consulta** | **Descrição** | **Obrigatório?** |
+| **Parâmetro do query** | **Descrição** | **Obrigatório?** |
 |---|---|---|
 | `generalFlags` | Uma string hexadecimal de 4 bytes que representa os sinalizadores de licença. &quot;0000&quot; é o único valor permitido. | Não |
 | `kek` | Chave de criptografia de chave (KEK). As chaves são armazenadas criptografadas com um KEK usando um algoritmo de quebra automática de chave (AES Key Wrap, RFC3394). Se `kek` for fornecido, é necessário fornecer um dos parâmetros `kid` ou os `ek` , *mas não ambos*. | Não |
@@ -65,12 +68,12 @@ A interface do token de licença do FairPlay fornece serviços de produção e t
 | `rentalDuration` | Duração do aluguer em segundos (padrão - 0) | Não |
 | `fpExtension` | Um empacotamento de formulário curto `extensionType` e `extensionPayload`, como uma string separada por vírgulas. Por exemplo: […] `&fpExtension=wudo,AAAAAA==&`[…] | Não, qualquer número pode ser usado |
 
-**Quadro 5: Parâmetros de Consulta de Restrição de Token**
+**Quadro 5: Parâmetros de Query de restrição de token**
 
 <table id="table_ar3_lsx_pv">  
  <thead> 
   <tr> 
-   <th class="entry"> <b>Parâmetro de consulta</b> </th> 
+   <th class="entry"> <b>Parâmetro do query</b> </th> 
    <th class="entry"> <b>Descrição</b> </th> 
    <th class="entry"> <b>Obrigatório?</b> </th> 
   </tr> 
@@ -84,11 +87,11 @@ A interface do token de licença do FairPlay fornece serviços de produção e t
  </tbody> 
 </table>
 
-**Quadro 6: Parâmetros de consulta de correlação**
+**Quadro 6: Parâmetros de Query de correlação**
 
-| **Parâmetro de consulta** | **Descrição** | **Obrigatório?** |
+| **Parâmetro do query** | **Descrição** | **Obrigatório?** |
 |---|---|---|
-| `cookie` | Uma string arbitrária com até 32 caracteres, mantida no token e registrada pelo servidor de resgate de token. Isso pode ser usado para correlacionar entradas de log no servidor de resgate e as entradas nos servidores do provedor de serviços. | Não |
+| `cookie` | Uma string arbitrária com até 32 caracteres, mantida no token e registrada pelo servidor de resgate de token. Isso pode ser usado para correlacionar entradas de log no servidor de resgate e as entradas nos servidores do provedor de serviço. | Não |
 
 **Resposta**
 
@@ -170,7 +173,7 @@ A interface do token de licença do FairPlay fornece serviços de produção e t
   </tr> 
   <tr> 
    <td> -2031 </td> 
-   <td> Conta de Serviço Desativada </td> 
+   <td> Conta desabilitada de serviço </td> 
   </tr> 
   <tr> 
    <td> -2033 </td> 
