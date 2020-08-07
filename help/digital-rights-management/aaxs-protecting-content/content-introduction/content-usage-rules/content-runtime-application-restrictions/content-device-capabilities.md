@@ -3,7 +3,10 @@ seo-title: Recursos do dispositivo necessários para reproduzir conteúdo proteg
 title: Recursos do dispositivo necessários para reproduzir conteúdo protegido
 uuid: 16ed73d9-e02f-4c86-bf15-2d3e7122bf5a
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Os recursos do dispositivo podem ser identificados pelos atributos especificados
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
->Essa regra de uso é compatível com os clientes do Adobe Access versão 2.0.2 e superior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças. Consulte, Versão [](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)mínima do cliente.
+>Esta regra de uso é suportada pelos clientes do Adobe Access versão 2.0.2 e superior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças. Consulte, Versão [](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)mínima do cliente.
 
