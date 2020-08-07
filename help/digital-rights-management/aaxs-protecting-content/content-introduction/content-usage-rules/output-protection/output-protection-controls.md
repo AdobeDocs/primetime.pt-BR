@@ -3,7 +3,10 @@ seo-title: Controles de proteção de saída
 title: Controles de proteção de saída
 uuid: 1f4cc617-7f14-4952-8e61-6acbdf01d10e
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '635'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ As seguintes opções/níveis de aplicação estão disponíveis:
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obrigatório</b> — Proteção de cópia analógica (ACP) ou Sistema de gerenciamento de geração de cópias - a proteção de saída analógica (CGMS-A) deve ser ativada para reproduzir conteúdo em um dispositivo externo. Os clientes do Adobe Access devem ativar a proteção de saída usando ACP ou CGMS-A. Em dispositivos compatíveis com ambos, os clientes do Adobe Access 3.0 tentarão habilitar ambos. No entanto, somente um deve estar habilitado para reproduzir o conteúdo. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obrigatório</b> — Proteção de cópia analógica (ACP) ou Sistema de gerenciamento de geração de cópias - a proteção de saída analógica (CGMS-A) deve ser ativada para reproduzir conteúdo em um dispositivo externo. Os clientes de Acesso a Adobe devem ativar a proteção de saída usando ACP ou CGMS-A. Em dispositivos compatíveis com ambos, os clientes do Adobe Access 3.0 tentarão habilitar ambos. No entanto, somente um deve estar habilitado para reproduzir o conteúdo. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
   </tr> 
@@ -41,7 +44,7 @@ As seguintes opções/níveis de aplicação estão disponíveis:
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utilizar se disponível</b> — Tente ativar a proteção de saída ACP e CGMS-A, se disponível, e permita a reprodução, se não disponível. Os clientes do Adobe Access 3.0 tentarão habilitar ACP e CGMS-A, se possível. Os clientes do Adobe Access 2.0 tentarão ativar apenas ACP ou CGMS-A. Por exemplo, o cliente Adobe Access tentará habilitar ACP ou CGMS-A. Se a tentativa for bem-sucedida, a outra opção não será ativada. Se a tentativa falhar, será feita uma segunda tentativa para habilitar a outra opção. Mesmo se ambas as tentativas falharem, o conteúdo será reproduzido assim mesmo. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utilizar se disponível</b> — Tente ativar a proteção de saída ACP e CGMS-A, se disponível, e permita a reprodução, se não disponível. Os clientes do Adobe Access 3.0 tentarão habilitar ACP e CGMS-A, se possível. Os clientes do Adobe Access 2.0 só tentarão ativar o ACP ou o CGMS-A. Por exemplo, o cliente Adobe Access tentará habilitar o ACP ou o CGMS-A. Se a tentativa for bem-sucedida, a outra opção não será ativada. Se a tentativa falhar, será feita uma segunda tentativa para habilitar a outra opção. Mesmo se ambas as tentativas falharem, o conteúdo será reproduzido assim mesmo. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
   </tr> 
@@ -68,7 +71,7 @@ As seguintes opções/níveis de aplicação estão disponíveis:
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >Embora essas regras sejam aplicadas de forma consistente em todas as plataformas, atualmente, só é possível ativar a proteção de saída com segurança nas plataformas Windows. Em outras plataformas (como Macintosh e Linux) não há funções de sistema operacional de suporte disponíveis para aplicativos de terceiros.
 
