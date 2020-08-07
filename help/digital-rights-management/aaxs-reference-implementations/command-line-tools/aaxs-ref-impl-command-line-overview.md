@@ -3,7 +3,10 @@ seo-title: 'Ferramentas de linha de comando para empacotar conteúdo e criar lis
 title: 'Ferramentas de linha de comando para empacotar conteúdo e criar listas de revogações '
 uuid: 2c740521-2004-4320-88e1-118b84e80e31
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '458'
+ht-degree: 0%
 
 ---
 
@@ -13,8 +16,8 @@ source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
 A implementação de referência inclui as seguintes ferramentas de linha de comando:
 
 * Gerenciador de políticas: Uma ferramenta para criar e gerenciar políticas
-* Gerenciador de lista de atualização de política: Uma ferramenta para criar e exibir listas de atualização de política
-* Gerenciador de lista de revogação: Uma ferramenta para criar e exibir listas de revogação
+* Gerenciador de Listas de Atualização de Política: Uma ferramenta para criar e exibir listas de atualização de política
+* Gerenciador de Lista de revogação: Uma ferramenta para criar e exibir listas de revogação
 * Media Packager: Uma ferramenta para criar arquivos FLV e F4V criptografados
 * ID do editor do AIR
 * UtilityLicense Generator
@@ -25,9 +28,9 @@ A implementação de referência inclui as seguintes ferramentas de linha de com
 Os requisitos para usar as ferramentas de linha de comando disponíveis nas implementações de referência são os seguintes:
 
 * Todas as ferramentas de linha de comando exigem Java 1.5 ou superior.
-* Credenciais do Packager e do License Server (certificado e senha) emitidas pela Adobe. Você precisa de credenciais para criptografar e assinar arquivos de vídeo, assinar as listas Atualização de políticas e Revogação e pré-gerar licenças.
+* Credenciais do Packager e do License Server (certificado e senha) emitidas pelo Adobe. Você precisa de credenciais para criptografar e assinar arquivos de vídeo, assinar listas de Atualização de política e revogação e pré-gerar licenças.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >Devido a um bug Java, os argumentos usados na linha de comando (como nomes de arquivos, nomes de políticas ou descrições) devem usar somente caracteres do conjunto de caracteres padrão do sistema operacional.
 
@@ -44,8 +47,8 @@ O arquivo de configuração usa o formato de arquivo de propriedade Java. Se os 
 
 Defina os valores das propriedades no arquivo de configuração antes de executar as ferramentas. Para algumas das ferramentas de linha de comando, você pode definir os valores de algumas opções através da linha de comando ou do arquivo de configuração. Nesses casos, os valores que são definidos pela linha de comando têm prioridade sobre quaisquer valores no arquivo de configuração.
 
-## Instalação das ferramentas de linha de comando {#installing-the-command-line-tools}
+## Instalação das ferramentas de linha de comando  {#installing-the-command-line-tools}
 
 Você pode copiar os arquivos necessários do [!DNL \Reference Implementation\Command Line Tools] diretório no DVD, que contém o arquivo de [!DNL flashaccesstools.properties] configuração padrão, e um [!DNL libs] diretório, que contém os arquivos JAR para as ferramentas.
 
-O [!DNL samples] diretório contém vários arquivos de origem Java de amostra que demonstram o uso das APIs SDK do Adobe Access. Para criar e executar as amostras, use o script [!DNL build-samples.xml] Ant.
+O [!DNL samples] diretório contém vários arquivos de origem Java de amostra que demonstram o uso das APIs SDK de acesso ao Adobe. Para criar e executar as amostras, use o script [!DNL build-samples.xml] Ant.
