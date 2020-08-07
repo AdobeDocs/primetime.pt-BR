@@ -1,11 +1,14 @@
 ---
-description: Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão do anúncio do Adobe Primetime.
-seo-description: Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão do anúncio do Adobe Primetime.
+description: Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão de publicidade da Adobe Primetime.
+seo-description: Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão de publicidade da Adobe Primetime.
 seo-title: Requisitos de publicidade
 title: Requisitos de publicidade
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '144'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-A seguir à seção: Metadados [](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)do servidor de anúncios do Primetime.
+A seguir à seção: [Metadados](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)do Primetime e do servidor.
 
 **APIs relevantes ao tempo limite do AdManifest**
 
@@ -59,4 +62,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-A seguir à seção: Metadados [](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)do servidor de anúncios do Primetime.
+A seguir à seção: [Metadados](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)do Primetime e do servidor.
