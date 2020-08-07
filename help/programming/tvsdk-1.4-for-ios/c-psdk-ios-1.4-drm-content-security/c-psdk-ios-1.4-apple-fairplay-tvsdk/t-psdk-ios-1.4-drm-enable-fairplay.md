@@ -5,7 +5,10 @@ seo-title: Habilitar o Apple FairPlay em aplicativos TVSDK
 title: Habilitar o Apple FairPlay em aplicativos TVSDK
 uuid: fafffdb9-09f9-45fb-9957-3c6e95ed55f9
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '193'
+ht-degree: 0%
 
 ---
 
@@ -20,11 +23,11 @@ Você pode implementar o streaming do Apple FairPlay, que é a solução DRM da 
 
    >[!NOTE]
    >
-   >Certifique-se de seguir as instruções no *FairPlay Streaming Program Guide* ( *FairPlayStreaming_PG.pdf*), que está incluído no [FairPlay Server SDK para Desenvolvimento de um aplicativo](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)compatível com FPS).
+   >Certifique-se de seguir as instruções no *FairPlay Streaming Programa Guide* ( *FairPlayStreaming_PG.pdf*), que está incluído no [FairPlay Server SDK para Desenvolvimento de um aplicativo](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)compatível com FPS).
 
    O `resourceLoader:shouldWaitForLoadingOfRequestedResource` método equivale ao que está em `AVAssetResourceLoaderDelegate`.
 
-   >[!IMPORTANT] {important=&quot;high&quot;}
+   >[!IMPORTANT]
    >
    >No cenário do servidor de licenças do ExpressPlay, para reproduzir o conteúdo, altere o esquema de URL no URL de solicitação de licença do servidor do ExpressPlay FairPlay de `skd://` para `https://` (ou `https://`).
 
