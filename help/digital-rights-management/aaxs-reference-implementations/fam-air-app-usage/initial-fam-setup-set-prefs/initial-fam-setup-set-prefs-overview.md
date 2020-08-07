@@ -3,7 +3,10 @@ seo-title: Visão geral das preferências de configuração
 title: Visão geral das preferências de configuração
 uuid: d1c067b1-6c2b-460e-8d00-5a5bfee0789c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Com exceção do URL do servidor Packager, todas as preferências especificadas abaixo são armazenadas no [!DNL flashaccess-refimpl-packager.properties] arquivo no servidor. Todas as configurações podem ser modificadas diretamente no arquivo de propriedades ou pelo aplicativo AIR. As senhas são criptografadas quando são armazenadas no arquivo de propriedades no servidor. Digite a senha não criptografada na interface do usuário e ela será criptografada antes de ser armazenada no arquivo.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >Todos os diretórios e caminhos se referem aos diretórios no servidor Packager, não ao cliente que está executando o aplicativo AIR.
 
