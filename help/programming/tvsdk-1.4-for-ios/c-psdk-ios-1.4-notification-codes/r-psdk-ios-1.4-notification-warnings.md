@@ -5,7 +5,10 @@ seo-title: Códigos de notificação de AVISO
 title: Códigos de notificação de AVISO
 uuid: 136b5a65-b842-40fd-8ddd-efe01d73c388
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 3%
 
 ---
 
@@ -136,7 +139,7 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270006 </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_WARNING </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_AVISO </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> DESCRIÇÃO </span> </td> 
    <td colname="5"> <p>Aviso: Consulte a descrição do aviso do SiteCatalyst. </p> </td> 
@@ -166,4 +169,6 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
  </tbody> 
 </table>
 
->[!NOTE] adID e fonte (URL) podem ser recuperados pelo PTAdAsset nos metadados de notificação com a `AD_ASSET` chave.
+>[!NOTE]
+>
+>adID e fonte (URL) podem ser recuperados pelo PTAdAsset nos metadados de notificação com a `AD_ASSET` chave.
