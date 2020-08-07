@@ -1,18 +1,21 @@
 ---
-description: Os fluxos de trabalho do DRM envolvem empacotar seu conteúdo, fornecer licenciamento para o conteúdo e reproduzir o conteúdo protegido de seu próprio aplicativo de vídeo. O fluxo de trabalho é geralmente semelhante para cada solução DRM, mas com algumas diferenças estão nos detalhes.
-seo-description: Os fluxos de trabalho do DRM envolvem empacotar seu conteúdo, fornecer licenciamento para o conteúdo e reproduzir o conteúdo protegido de seu próprio aplicativo de vídeo. O fluxo de trabalho é geralmente semelhante para cada solução DRM, mas com algumas diferenças estão nos detalhes.
+description: Os workflows DRM envolvem empacotar seu conteúdo, fornecer licenciamento para o conteúdo e reproduzir o conteúdo protegido de seu próprio aplicativo de vídeo. O fluxo de trabalho é geralmente semelhante para cada solução DRM, mas com algumas diferenças estão nos detalhes.
+seo-description: Os workflows DRM envolvem empacotar seu conteúdo, fornecer licenciamento para o conteúdo e reproduzir o conteúdo protegido de seu próprio aplicativo de vídeo. O fluxo de trabalho é geralmente semelhante para cada solução DRM, mas com algumas diferenças estão nos detalhes.
 seo-title: Fluxo de trabalho multi-DRM para FairPlay
 title: Fluxo de trabalho multi-DRM para FairPlay
 uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1514'
+ht-degree: 0%
 
 ---
 
 
 # Fluxo de trabalho multi-DRM para FairPlay {#multi-drm-workflow-for-fairplay}
 
-Os fluxos de trabalho do DRM envolvem empacotar seu conteúdo, fornecer licenciamento para o conteúdo e reproduzir o conteúdo protegido de seu próprio aplicativo de vídeo. O fluxo de trabalho é geralmente semelhante para cada solução DRM, mas com algumas diferenças estão nos detalhes.
+Os workflows DRM envolvem empacotar seu conteúdo, fornecer licenciamento para o conteúdo e reproduzir o conteúdo protegido de seu próprio aplicativo de vídeo. O fluxo de trabalho é geralmente semelhante para cada solução DRM, mas com algumas diferenças estão nos detalhes.
 
 Esse fluxo de trabalho de vários DRM o orienta pela configuração, empacotamento, licenciamento e reprodução de conteúdo HLS protegido com o Apple FairPlay. Este fluxo de trabalho também inclui instruções opcionais para implementar a reprodução offline e a rotação de licenças.
 
@@ -24,7 +27,7 @@ Siga estas etapas para habilitar o serviço ExpressPlay para proteção de conte
 
 1. Obtenha credenciais da Apple.
 
-   Essas credenciais são provisionadas exclusivamente para cada provedor de serviços. Você deve solicitar preenchendo o seguinte formulário: [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
+   Essas credenciais são provisionadas exclusivamente para cada provedor de serviço. Você deve solicitar preenchendo o seguinte formulário: [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
 
    >[!NOTE]
    >
@@ -60,12 +63,12 @@ Siga estas etapas para habilitar o serviço ExpressPlay para proteção de conte
       A caixa de diálogo *Adicionar certificado* do iOS é aberta.
    1. Em *Adicionar certificado* iOS, carregue o arquivo CSR gerado na Etapa 2.b. e clique em **[!UICONTROL Generate]**.
 
-      Sua Chave Secreta do Aplicativo (ASK) é exibida na mesma caixa de diálogo.
+      Sua Chave de Senha da aplicação (ASK) é exibida na mesma caixa de diálogo.
    1. Anote seu ASK e armazene-o em um local seguro.
    1. Chave em seu ASK para concluir a geração do certificado e clique em **[!UICONTROL Continue]**.
    1. Depois de verificar se salvou o ASK, clique **[!UICONTROL Generate]** para continuar.
 
-      >[!NOTE] {important=&quot;high&quot;}
+      >[!NOTE]
       >
       >É importante que você salve uma cópia do seu ASK e armazene-a com segurança. *Se o seu ASK estiver comprometido, você não poderá mais proteger seu conteúdo com o FairPlay Streaming.* Somente um (1) ASK é alocado para sua equipe. O valor não será fornecido novamente e você não poderá recuperá-lo posteriormente.
 
@@ -76,9 +79,9 @@ Siga estas etapas para habilitar o serviço ExpressPlay para proteção de conte
    1. Digamos o nome do certificado que você baixou na Etapa 3.h. é [!DNL fairplay.cer].
    1. Abra o [!DNL fairplay.cer] arquivo com o utilitário Apple Keychain Access.
    1. Filtre seus muitos certificados digitando &quot; `fairplay`&quot; no campo de pesquisa localizado no canto superior direito.
-   1. Identifique o certificado do FairPlay de sua empresa.
+   1. Identifique seu certificado do FairPlay do empresa.
 
-      O nome da sua empresa deve estar associado ao certificado emitido pela Apple.
+      Seu nome de empresa deve estar associado ao certificado emitido pela Apple.
    1. Expanda o certificado selecionando a seta de expansão e clique com o botão direito do mouse na sua chave privada.
    1. Selecione **[!UICONTROL Export "Your Company Name"]** e salve o [!DNL .p12] arquivo.
 
@@ -136,11 +139,12 @@ Os Packagers preparam o vídeo para reprodução (por exemplo, fragmentando o ar
    * `out_path` - O local na máquina local para onde deseja que a saída seja enviada.
    * `drm_sys` - A solução DRM para a qual você está empacotando. Isto é `FAIRPLAY` neste caso.
    * `frag_dur` - Duração do fragmento em segundos.
-   * `target_dur` - A duração alvo para a saída HLS.
+   * `target_dur` - A duração do público alvo para a saída HLS.
    * `key_file_path` - Este é o local do arquivo de licença no seu computador de empacotamento que serve como sua Chave de criptografia de conteúdo (CEK). É uma string hexadecimal de 16 bytes codificada em Base 64.
    * `iv_file_path` - Esta é a localização do arquivo IV na sua máquina de embalagem.
    * `key_url` - O parâmetro URI da `EXT-X-KEY` tag do [!DNL .m3u8] arquivo.
    * `content_id` - Valor padrão.
+
    Conforme declarado na documentação [do](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)Packager, &quot;Como prática recomendada, crie um arquivo de configuração que contenha as opções comuns que você deseja usar para gerar as saídas. Em seguida, crie a saída fornecendo opções específicas como um argumento de linha de comando.&quot;
 
    ```
@@ -158,9 +162,9 @@ Os Packagers preparam o vídeo para reprodução (por exemplo, fragmentando o ar
 
 ### Definindo políticas para o FairPlay {#setting-policies-for-fairplay}
 
-Você pode definir políticas para conteúdo protegido pelo FairPlay usando um servidor de direito. Você pode configurar seu próprio servidor ou usar um servidor de direito de amostra fornecido pela Adobe.
+Você pode definir políticas para conteúdo protegido pelo FairPlay usando um servidor de direito. Você pode configurar seu próprio servidor ou usar um servidor de direito de amostra fornecido pelo Adobe.
 
-A Adobe fornece um exemplo do ExpressPlay Entitlement Server (SEES) que mostra como fazer um direito baseado *em* tempo e de vinculação *de* dispositivo. Este exemplo de servidor de direito foi criado sobre os serviços do ExpressPlay.
+O Adobe fornece um exemplo do ExpressPlay Entitlement Server (SEES) que mostra como fazer um direito baseado *em* tempo e de vinculação *de* dispositivo. Este exemplo de servidor de direito foi criado sobre os serviços do ExpressPlay.
 
 [Servidor de referência: Servidor de direito ExpressPlay de amostra (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
@@ -177,7 +181,7 @@ As instruções para implementar o licenciamento e a reprodução de um cliente 
 
 Você pode desejar que os usuários possam reproduzir conteúdo protegido pelo FairPlay quando seu licenciamento não for recuperável porque o player está isolado da Web (como em um avião).
 
-Antes de começar esta tarefa, baixe e leia o documento da Apple **&quot;Reprodução offline com o FairPlay Streaming e HTTP Live Streaming&quot;**. Leia o guia para saber como baixar segmentos de TS (Transport Stream) e salvá-los no computador local.
+Antes de começar esta tarefa, baixe e leia o documento da Apple **&quot;Offline Playback with FairPlay Streaming e HTTP Live Streaming&quot;**. Leia o guia para saber como baixar segmentos de TS (Transport Stream) e salvá-los no computador local.
 
 Implemente o play offline para o FairPlay com este fluxo de trabalho:
 
@@ -188,7 +192,7 @@ Implemente o play offline para o FairPlay com este fluxo de trabalho:
 
 >[!NOTE]
 >
->O FairPlay Streaming no cliente não inicia a descriptografia se a chave de conteúdo persistente tiver expirado. No entanto, ela continuará a experiência do usuário se a chave de conteúdo expirar durante a reprodução.
+>O FairPlay Streaming no cliente não start a descriptografia se a chave de conteúdo persistida tiver expirado. No entanto, ela continuará a experiência do usuário se a chave de conteúdo expirar durante a reprodução.
 >
 >Consulte [Trabalhar com o documento HTTP Live Streaming](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) para obter mais detalhes.
 
@@ -204,7 +208,7 @@ Para adicionar a rotação da licença, faça o seguinte:
 
    Qualquer número de tags-chave pode ser adicionado.
 
-   Para conteúdo linear, mantenha a tag-chave mais recente na janela M3U8. O iOS solicitará o próximo M3U8 quando houver cerca de dois segmentos TS restantes para serem reproduzidos (cerca de 20 segundos). Se o novo M3U8 contiver novas tags-chave, todas as solicitações-chave ocorrerão imediatamente. As chaves existentes anteriores não serão solicitadas novamente. O iOS aguardará a conclusão de todas as solicitações principais para que a reprodução seja iniciada.
+   Para conteúdo linear, mantenha a tag-chave mais recente na janela M3U8. O iOS solicitará o próximo M3U8 quando houver cerca de dois segmentos TS restantes para serem reproduzidos (cerca de 20 segundos). Se o novo M3U8 contiver novas tags-chave, todas as solicitações-chave ocorrerão imediatamente. As chaves existentes anteriores não serão solicitadas novamente. O iOS aguardará que todas as solicitações principais sejam concluídas antes que a reprodução seja start.
 
    Para conteúdo VOD com rotação de licença, todas as solicitações principais ocorrerão no início da reprodução.
 
