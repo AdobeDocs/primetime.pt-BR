@@ -5,7 +5,10 @@ seo-title: Metadados do Primetime e do servidor
 title: Metadados do Primetime e do servidor
 uuid: 314f14c0-4da4-4da6-96f9-5a5ffea22a99
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '443'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD e live/linear.
 
->[!NOTE] {othertype=&quot;Prequisite&quot;}
+>[!NOTE]
 >
 >Antes de incluir publicidade no conteúdo de vídeo, forneça as seguintes informações de metadados:
 >
@@ -22,6 +25,7 @@ O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD
 >* Seu `zoneID`, que identifica sua empresa ou site.
 >* O domínio do servidor de publicidade, que especifica o domínio do servidor de publicidade atribuído.
 >* Outros parâmetros de definição de metas.
+
 >
 
 
@@ -70,15 +74,15 @@ Para configurar os metadados do servidor de publicidade:
    }
    ```
 
-## Habilitar anúncios em repetição de evento completo {#section_6016E1DAF03645C8A8388D03C6AB7571}
+## Ativar anúncios em reprodução de evento completo {#section_6016E1DAF03645C8A8388D03C6AB7571}
 
-A repetição completa de eventos (FER) é um ativo VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
+A reprodução de evento completo (FER) é um ativo VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
 
 Para conteúdo ao vivo, o TVSDK usa os metadados/dicas no manifesto para determinar onde os anúncios devem ser colocados. No entanto, às vezes o conteúdo ao vivo/linear pode se assemelhar ao conteúdo VOD. Por exemplo, quando o conteúdo em tempo real é concluído, uma `EXT-X-ENDLIST` tag é anexada ao manifesto em tempo real. Para HLS, a `EXT-X-ENDLIST` tag significa que o fluxo é um fluxo VOD. O TVSDK não pode diferenciar automaticamente esse fluxo de um fluxo VOD normal para inserir corretamente os anúncios.
 
 Seu aplicativo deve informar ao TVSDK se o conteúdo é ao vivo ou VOD ao especificar o `PTAdSignalingMode`.
 
-Para um fluxo FER, o servidor de decisão de anúncio do Adobe Primetime não deve fornecer a lista de quebras de anúncio que precisam ser inseridas na linha do tempo antes de iniciar a reprodução. Esse é o processo típico para conteúdo VOD. Em vez disso, ao especificar um modo de sinalização diferente, o TVSDK lê todos os pontos de sinalização do manifesto FER e vai para o servidor de anúncios para cada ponto de sinalização para solicitar uma pausa de anúncio. Esse processo é semelhante ao conteúdo ao vivo/DVR.
+Para um fluxo FER, o servidor de decisão de anúncio da Adobe Primetime não deve fornecer a lista de quebras de anúncios que precisam ser inseridas na linha do tempo antes de iniciar a reprodução. Esse é o processo típico para conteúdo VOD. Em vez disso, ao especificar um modo de sinalização diferente, o TVSDK lê todos os pontos de sinalização do manifesto FER e vai para o servidor de anúncios para cada ponto de sinalização para solicitar uma pausa de anúncio. Esse processo é semelhante ao conteúdo ao vivo/DVR.
 
 Além de cada solicitação associada a um ponto de sinalização, o TVSDK faz uma solicitação de anúncio adicional para anúncios precedentes.
 
@@ -88,7 +92,7 @@ Além de cada solicitação associada a um ponto de sinalização, o TVSDK faz u
 
    Os valores válidos são `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`e `PTAdSignalingModeServerMap`.
 
-   Você deve definir o modo de sinalização de anúncio antes de chamar `prepareToPlay`. Depois que o TVSDK começar a resolver e colocar anúncios na linha do tempo, as alterações no modo de sinalização do anúncio serão ignoradas. Defina o modo ao criar os metadados de publicidade para o recurso.
+   Você deve definir o modo de sinalização de anúncio antes de chamar `prepareToPlay`. Depois que os start TVSDK resolverem e colocarem anúncios na linha do tempo, as alterações no modo de sinalização do anúncio serão ignoradas. Defina o modo ao criar os metadados de publicidade para o recurso.
 
 1. Continue com a reprodução.
 
