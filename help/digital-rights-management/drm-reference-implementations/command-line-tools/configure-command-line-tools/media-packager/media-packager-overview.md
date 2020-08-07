@@ -5,7 +5,10 @@ seo-title: Visão geral
 title: Visão geral
 uuid: f4474837-9460-479d-89c2-dd697e0fb997
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1317'
+ht-degree: 0%
 
 ---
 
@@ -60,7 +63,7 @@ java -jar AdobePackager.jar
 * `sourcefiles` - Uma série de entradas de origem delimitadas por espaços em branco para os arquivos que você deseja criptografar.
 * `dest-directory` - O diretório de destino no qual você deseja gravar o conteúdo criptografado. Os arquivos criptografados são salvos automaticamente nesse diretório usando os mesmos nomes de arquivo que os arquivos de origem. No entanto, o diretório de destino não pode incluir nenhum arquivo de origem.
 
-**Exibir informações sobre um arquivo criptografado:**
+**Informações de visualização sobre um arquivo criptografado:**
 
 ```
 java -jar AdobePackager.jar -d  
@@ -69,7 +72,7 @@ java -jar AdobePackager.jar -d
 </i class="+ topic>
 ```
 
-**Exibir informações sobre um arquivo de metadados:**
+**Informações de visualização sobre um arquivo de metadados:**
 
 ```
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
@@ -77,11 +80,11 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` é um [!DNL .metadata] arquivo que inclui metadados DRM.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >Durante o empacotamento, o Media Packager não pode mais gerar um [!DNL .header] arquivo por padrão. Para gerar um [!DNL .header] arquivo, use a `-h` opção durante o empacotamento.
 
-**Tabela 4: Opções**
+**Quadro 3: Opções**
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_wgz_spy_n4">  
  <thead class="- topic/thead "> 
@@ -97,11 +100,11 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d arquivo <span class="+ topic/ph pr-d/codeph codeph"> encryptedfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite que você visualize informações sobre um arquivo que já foi empacotado. </p> <p class="- topic/p ">Os arquivos de origem e de destino não são obrigatórios. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite que você visualização informações sobre um arquivo que já foi empacotado. </p> <p class="- topic/p ">Os arquivos de origem e de destino não são obrigatórios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadatafile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite que você visualize informações sobre metadados existentes. </p> <p class="- topic/p ">Os arquivos de origem e de destino não são obrigatórios. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite que você visualização informações sobre metadados existentes. </p> <p class="- topic/p ">Os arquivos de origem e de destino não são obrigatórios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-e </p> </td> 
@@ -144,7 +147,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 >[!NOTE]
 >
->Para nomes de propriedades que incluem* n*, *n* representa um número inteiro que começa com 1 e aumenta para cada instância da propriedade.
+>Para nomes de propriedades que incluem* n*, *n* representa um número inteiro que start com 1 e aumenta para cada instância da propriedade.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_dx4_mpy_n4"> 
  <thead class="- topic/thead "> 
@@ -168,7 +171,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.content.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica o nível de criptografia do vídeo. </p> <p class="- topic/p ">Um valor <span class="codeph"> alto</span> é usado para criptografar todo o conteúdo de vídeo, enquanto valores de <span class="codeph"> médio</span> e <span class="codeph"> baixo</span> são usados para criptografar partes do conteúdo de vídeo para arquivos mp4 que incluem conteúdo H.264. </p> <p class="- topic/p ">valor = <span class="codeph"> alto| meio| baixo</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica o nível de criptografia do vídeo. </p> <p class="- topic/p ">Um valor <span class="codeph"> alto</span> é usado para criptografar todo o conteúdo de vídeo, enquanto valores de <span class="codeph"> médio</span> e <span class="codeph"> baixo</span> são usados para criptografar partes do conteúdo de vídeo para arquivos mp4 que incluem conteúdo H.264. </p> <p class="- topic/p ">valor = <span class="codeph"> alto | meio | baixo</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.content.secondUnencrypted</span> </td> 
@@ -200,7 +203,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Define a versão mínima do servidor necessária para emitir licenças para o conteúdo que está sendo empacotado. </p> <p class="- topic/p ">Especifique x (para Primetime DRM x.0), onde x representa um número de versão principal. Quaisquer versões de servidores que antecedem o Adobe Primetime versão 3.0 não suportam essa configuração. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Define a versão mínima do servidor necessária para emitir licenças para o conteúdo que está sendo empacotado. </p> <p class="- topic/p ">Especifique x (para Primetime DRM x.0), onde x representa um número de versão principal. Quaisquer versões de servidores que antecedem a versão 3.0 do Adobe Primetime não suportam essa configuração. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.transportcert </span> </td> 
@@ -212,7 +215,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotativamente.enable</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica se a rotação de chaves está ativada. </p> <p class="- topic/p ">Se definido como false, que é a configuração padrão, a rotação de chaves será desativada e o CEK mestre será usado para criptografar todas as amostras no conteúdo. </p> <p class="- topic/p ">Se definido como true, a rotação de chaves será ativada e chaves diferentes poderão ser usadas para criptografar segmentos de qualquer conteúdo. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica se a rotação de chaves está ativada. </p> <p class="- topic/p ">Se definido como false, que é a configuração padrão, a rotação de chaves será desativada e o CEK principal será usado para criptografar todas as amostras no conteúdo. </p> <p class="- topic/p ">Se definido como true, a rotação de chaves será ativada e chaves diferentes poderão ser usadas para criptografar segmentos de qualquer conteúdo. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rots.key.n</span> </td> 
