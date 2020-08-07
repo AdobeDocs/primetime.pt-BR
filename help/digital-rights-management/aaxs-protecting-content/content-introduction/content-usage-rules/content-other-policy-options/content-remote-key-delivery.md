@@ -1,24 +1,27 @@
 ---
-seo-title: Entrega de chaves iOS remotas e locais
-title: Entrega de chaves iOS remotas e locais
+seo-title: Delivery de chave iOS remota e local
+title: Delivery de chave iOS remota e local
 uuid: 3c20b1d1-f842-438a-ae3a-4ec31da306ad
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '229'
+ht-degree: 0%
 
 ---
 
 
-# Entrega de chaves iOS remotas e locais{#remote-and-local-ios-key-delivery}
+# Delivery de chave iOS remota e local{#remote-and-local-ios-key-delivery}
 
-O Adobe Primetime oferece suporte a duas opções para a entrega de chaves a clientes iOS:
+A Adobe Primetime oferece suporte a duas opções para o delivery principal para clientes iOS:
 
 * Remoto - Exatamente como especificado na especificação HLS, o manifesto M3U8 especifica um caminho HTTPS que contém uma chave AES que deve ser usada para descriptografar os seguintes segmentos criptografados no fluxo. Quando &quot;Remoto&quot; for especificado, o dispositivo cliente chegará a um servidor HTTPS remoto para buscar a chave AES.
 * Local - quando &quot;Local&quot; é especificado, em vez de alcançar pela Internet/rede para a chave AES, um servidor HTTPS local é incorporado ao aplicativo iOS que lidará com todas as solicitações de chave AES. O servidor HTTPS incorporado é automaticamente configurado e configurado no aplicativo Primetime. Não é necessária nenhuma intervenção do desenvolvedor de aplicativos.
 
-A entrega da chave remota é ativada por meio da política usada para disponibilizar conteúdo (a alteração dessa configuração requer o reempacotamento do conteúdo). Quando a entrega da chave remota é ativada, um Servidor de Chave do Adobe Access deve ser implantado para lidar com as principais solicitações dos clientes do iOS, mas não há alteração no fluxo de trabalho para clientes em outras plataformas.
+O delivery de chave remota é habilitado por meio da política usada para disponibilizar conteúdo (a alteração dessa configuração requer o reempacotamento do conteúdo). Quando o delivery de chave remota é ativado, um Servidor de chave de acesso Adobe para lidar com as principais solicitações dos clientes iOS, mas não há alteração no fluxo de trabalho para clientes em outras plataformas.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
->A seleção de entrega de chave afeta apenas os clientes iOS. Todos os outros dispositivos que consomem conteúdo HLS sempre usarão a entrega de chave &quot;Local&quot;, mesmo se &quot;Remoto&quot; tiver sido especificado.
+>A seleção do delivery principal afeta apenas os clientes iOS. Todos os outros dispositivos que consomem conteúdo HLS sempre usarão o delivery de chave &quot;Local&quot;, mesmo se &quot;Remoto&quot; tiver sido especificado.
 
-Para obter informações, consulte *Uso do Adobe Access Key Server*.
+Para obter informações, consulte *Uso do servidor* de chave de acesso ao Adobe.
