@@ -5,14 +5,17 @@ seo-title: Configurar o banco de dados do servidor de licenças
 title: Configurar o banco de dados do servidor de licenças
 uuid: 6d34e849-1616-46bd-ad18-4f98e6c45af7
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
 
 # Configurar o banco de dados do servidor de licenças{#configure-the-license-server-database}
 
-Para configurar o banco de dados de amostra, configure o esquema do banco de dados e preencha o banco de dados com dados de amostra:
+Para configurar o banco de dados de amostra configurando o schema do banco de dados e preenchendo o banco de dados com dados de amostra:
 
 1. Abra a linha de comando MySQL.
 
@@ -24,7 +27,7 @@ Para configurar o banco de dados de amostra, configure o esquema do banco de dad
 
    mysql> source &quot; `"[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\createsampledb.sql" dbscript\createsampledb.sql`&quot;
 
-   Esse script adiciona a conta de usuário `dbuser`, estabelece uma conexão por meio de um aplicativo da Web e cria um esquema de banco de dados.
+   Esse script adiciona a conta de usuário `dbuser`, estabelece uma conexão por meio de um aplicativo da Web e cria um schema de banco de dados.
 
    >[!NOTE]
    >
@@ -35,7 +38,7 @@ Para configurar o banco de dados de amostra, configure o esquema do banco de dad
    Esse script está localizado na `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\ dbscript\` pasta.
 1. Execute o [!DNL PopulateSampleDB] script para preencher os dados como fez na etapa 2.
 
-   >[!NOTE] {class=&quot;- tópico/observação &quot;}
+   >[!NOTE]
    >
    >Na primeira vez que você executar o [!DNL CreateSampleDB.sql] script, ocorrerá o seguinte erro:
 
