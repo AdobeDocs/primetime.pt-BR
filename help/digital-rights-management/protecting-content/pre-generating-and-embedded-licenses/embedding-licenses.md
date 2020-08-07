@@ -3,7 +3,10 @@ seo-title: Como incorporar licenças
 title: Como incorporar licenças
 uuid: e3d55376-07de-479c-9a53-04bc8071ced4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Se quiser incorporar uma licença, é necessário obter uma instância do `com.a
 
 Consulte `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` no diretório Ferramentas de linha de comando de implementação de referência [!DNL Samples] para obter exemplos de código que demonstram licenças incorporadas.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
->Um cliente Adobe Primetime DRM 2.0 ignora todas as licenças incorporadas ao conteúdo e tenta obter uma licença do servidor de licença especificado nos metadados. No entanto, se os metadados indicarem que nenhum servidor de licença está disponível, um cliente Primetime DRM 2.0 precisa ser atualizado antes que você possa visualizar o conteúdo.
+>Um cliente Adobe Primetime DRM 2.0 ignora todas as licenças incorporadas ao conteúdo e tenta obter uma licença do servidor de licença especificado nos metadados. No entanto, se os metadados indicarem que nenhum servidor de licença está disponível, um cliente Primetime DRM 2.0 precisa ser atualizado antes que você possa visualização do conteúdo.
 
