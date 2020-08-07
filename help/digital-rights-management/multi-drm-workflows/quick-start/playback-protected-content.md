@@ -1,18 +1,21 @@
 ---
-description: Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa processar a solução DRM específica com a qual você está trabalhando. Este player pode ser um player de amostra disponibilizado pela Adobe ou seu próprio aplicativo de vídeo baseado em TVSDK.
-seo-description: Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa processar a solução DRM específica com a qual você está trabalhando. Este player pode ser um player de amostra disponibilizado pela Adobe ou seu próprio aplicativo de vídeo baseado em TVSDK.
+description: Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa processar a solução DRM específica com a qual você está trabalhando. Este player pode ser um player de amostra disponibilizado pelo Adobe ou seu próprio aplicativo de vídeo baseado em TVSDK.
+seo-description: Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa processar a solução DRM específica com a qual você está trabalhando. Este player pode ser um player de amostra disponibilizado pelo Adobe ou seu próprio aplicativo de vídeo baseado em TVSDK.
 seo-title: Reproduzir o conteúdo protegido
 title: Reproduzir o conteúdo protegido
 uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '592'
+ht-degree: 0%
 
 ---
 
 
 # Reproduzir o conteúdo protegido {#playback-your-protected-content}
 
-Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa processar a solução DRM específica com a qual você está trabalhando. Este player pode ser um player de amostra disponibilizado pela Adobe ou seu próprio aplicativo de vídeo baseado em TVSDK.
+Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa processar a solução DRM específica com a qual você está trabalhando. Este player pode ser um player de amostra disponibilizado pelo Adobe ou seu próprio aplicativo de vídeo baseado em TVSDK.
 
 1. Use o URL do License Server na resposta do token que você obteve do servidor ExpressPlay para testar se você pode reproduzir seu conteúdo protegido.
 
@@ -20,11 +23,11 @@ Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa 
    * **PlayReady** - Obtenha o URL e o token do servidor de licença do objeto JSON retornado da solicitação de token de licença.
    * **FairPlay** - Use a resposta do FairPlay diretamente como recebido de sua solicitação de token de licença do ExpressPlay.
 
-1. Teste a reprodução de seu conteúdo protegido utilizando seu próprio player ou um player de amostra da Adobe existente.
+1. Teste a reprodução de seu conteúdo protegido utilizando seu próprio player ou um player de amostra de Adobe existente.
 
    Forneça o URL para seu conteúdo protegido (o local do seu manifesto M3U8 ou MPD, dependendo da solução DRM que você estiver testando).
 
-   Dependendo da interface fornecida pelo player com o qual você está testando, pode ser solicitado que você forneça o URL da licença e o token separadamente como strings nos campos de entrada, ou como um objeto JSON colado em uma caixa de texto, ou talvez como um parâmetro de consulta no URL.
+   Dependendo da interface fornecida pelo player com o qual você está testando, pode ser solicitado que você forneça o URL da licença e o token separadamente como strings nos campos de entrada, ou como um objeto JSON colado em uma caixa de texto, ou talvez como um parâmetro de query no URL.
 
    Algumas possibilidades para os players de teste estão listadas aqui:
 
@@ -82,7 +85,7 @@ Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa 
    KEYFORMAT="com.apple.streamingkeydelivery",KEYFORMATVERSIONS="1"
    ```
 
-   >[!NOTE] {important=&quot;high&quot;}
+   >[!NOTE]
    >
    >As informações anteriores se aplicam somente ao teste da configuração do FairPlay. Pode não se aplicar à configuração de produção, dependendo de como você configura o seu manipulador do FairPlay. Consulte [Ativar o Apple FairPlay em aplicativos](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) iOS para obter detalhes.
 
