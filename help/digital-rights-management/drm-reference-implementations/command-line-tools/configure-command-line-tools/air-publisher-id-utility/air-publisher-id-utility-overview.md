@@ -3,9 +3,9 @@ seo-title: Visão geral
 title: Visão geral
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ Quando você cria um arquivo AIR, a AIR Developer Tool (ADT) gera automaticament
 
 A Publisher ID é exclusiva do certificado usado para criar um arquivo AIR. Se você reutilizar o mesmo certificado para vários aplicativos AIR, todos os aplicativos AIR terão a mesma Publisher ID. Uma versão do AIR com êxito na versão 1.5.2 não adiciona a ID do editor gerada a um arquivo. Portanto, se você planeja usar uma lista de permissões de aplicativo AIR, use essa ferramenta para determinar a ID do editor.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
->A ID do editor usada para a imposição de lista de permissão do AIR não é a mesma ID do editor que o editor do aplicativo especifica no [!DNL application.xml] arquivo do aplicativo.
+>A ID do editor usada para a imposição de lista de permissões do AIR não é a mesma ID do editor que o editor do aplicativo especifica no [!DNL application.xml] arquivo do aplicativo.
 
 ## Uso da linha de comando do utilitário AIR Publisher ID {#air-publisher-id-utility-command-line-usage}
 
