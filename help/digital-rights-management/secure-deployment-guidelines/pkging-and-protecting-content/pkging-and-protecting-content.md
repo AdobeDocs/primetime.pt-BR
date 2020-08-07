@@ -5,7 +5,10 @@ seo-title: Compactação e proteção de conteúdo
 title: Compactação e proteção de conteúdo
 uuid: 9bf89f86-082e-40f9-8deb-c9774a9d8e02
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '822'
+ht-degree: 0%
 
 ---
 
@@ -24,13 +27,13 @@ Se sua implementação de empacotamento de conteúdo exigir conectividade de red
 
 ## Conteúdo de empacotamento seguro {#securely-packaging-content}
 
-O arquivo de configuração da ferramenta de linha de comando Adobe Primetime DRM Media Packager requer uma credencial PKCS12 usada durante o empacotamento.
+O arquivo de configuração da ferramenta de linha de comando do Adobe Primetime DRM Media Packager requer uma credencial PKCS12 usada durante o empacotamento.
 
 Nas ferramentas de script de comando de implementação de referência, a senha do arquivo de credenciais PKCS12 é armazenada no `flashaccess.properties` arquivo em texto limpo. Por esse motivo, tenha cuidado extra ao proteger o computador que hospeda esse arquivo e verifique se o computador está em um ambiente seguro. Para obter mais informações, consulte Segurança [física e acesso](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
 O empacotador também usa os certificados de Transporte do License Server e do License Server e a integridade e confidencialidade dessas informações devem ser protegidas. Só as entidades autorizadas devem ser autorizadas a utilizar o embalador. Se suas chaves privadas estiverem comprometidas, informe imediatamente a Adobe Systems Incorporated para que o certificado possa ser revogado.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >A API permite que você use a mesma chave para vários conteúdos. Para garantir o mais alto nível de segurança, você só deve usar esse recurso para conteúdo FMS de taxa de vários bits. Não use a mesma chave para vários arquivos que representem conteúdo diferente.
 
@@ -40,13 +43,13 @@ A Primetime DRM Packaging API emite avisos sob determinadas condições. Revise 
 * Os fragmentos de filme não podem ser criptografados e as referências nesses fragmentos podem ser inválidas.
 * Metadados não podem ser criptografados.
 
-Se o conteúdo for empacotado usando uma política com atributos incorretos, a política precisa ser atualizada. A política atualizada deve ser disponibilizada ao License Server por meio de uma lista de atualização de política ou outro mecanismo de entrega. Alguns atributos de política não podem ser alterados depois que a política é criada. Se esses atributos estiverem incorretos, extraia o conteúdo dos sites de distribuição, revogue a política para que nenhuma licença futura possa ser concedida e criptografe o conteúdo novamente.
+Se o conteúdo for empacotado usando uma política com atributos incorretos, a política precisa ser atualizada. A política atualizada deve ser disponibilizada ao License Server por meio de uma lista de atualização de política ou de outro mecanismo de delivery. Alguns atributos de política não podem ser alterados depois que a política é criada. Se esses atributos estiverem incorretos, extraia o conteúdo dos sites de distribuição, revogue a política para que nenhuma licença futura possa ser concedida e criptografe o conteúdo novamente.
 
 Quando o empacotamento é concluído, a chave de empacotamento é coletada pelo lixo e não é explicitamente destruída. Como resultado, a chave de empacotamento permanece presente na memória por algum tempo. Você deve proteger contra acesso não autorizado ao computador e garantir que não exponha arquivos, como os lixões principais, que possam revelar essas informações.
 
 ## Armazenar políticas com segurança {#securely-storing-policies}
 
-O SDK do Adobe Primetime DRM permite desenvolver aplicativos que podem ser usados no empacotamento de conteúdo e na criação de políticas.
+O Adobe Primetime DRM SDK permite desenvolver aplicativos que podem ser usados em pacotes de conteúdo e criação de políticas.
 
 Ao criar esses aplicativos, você pode permitir que alguns usuários criem e modifiquem políticas, além de limitar outros usuários a aplicar somente as políticas existentes ao conteúdo. Você deve implementar os controles de acesso necessários e criar contas de usuário com privilégios diferentes para a criação de políticas e aplicativos de políticas.
 
@@ -60,7 +63,7 @@ A criptografia de chave assimétrica, também chamada de criptografia de chave p
 
 A chave de desencriptação, ou a chave, *`private key`*&#x200B;é mantida em segredo; a chave de criptografia, ou a chave, *`public key`*&#x200B;é disponibilizada para qualquer pessoa autorizada a criptografar conteúdo. Qualquer pessoa com acesso à chave pública pode criptografar o conteúdo. No entanto, somente alguém com acesso à chave privada pode descriptografar o conteúdo. A chave privada não pode ser reconstruída a partir da chave pública.
 
-Ao disponibilizar conteúdo, a chave pública do License Server é usada para criptografar a chave de criptografia de conteúdo (CEK) nos metadados do DRM. Você deve garantir que somente o License Server tenha acesso à chave privada do License Server. Se outra pessoa tiver a chave, ela poderá descriptografar e exibir o conteúdo.
+Ao disponibilizar conteúdo, a chave pública do License Server é usada para criptografar a chave de criptografia de conteúdo (CEK) nos metadados do DRM. Você deve garantir que somente o License Server tenha acesso à chave privada do License Server. Se outra pessoa tiver a chave, ela poderá descriptografar e visualização o conteúdo.
 
 >[!CAUTION]
 >
