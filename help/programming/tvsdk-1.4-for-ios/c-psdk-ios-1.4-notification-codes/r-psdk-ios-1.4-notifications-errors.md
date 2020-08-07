@@ -5,7 +5,10 @@ seo-title: Códigos de notificação de ERRO
 title: Códigos de notificação de ERRO
 uuid: cea75277-7747-4f9b-ad59-98f9f1a5ac2f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 5%
 
 ---
 
@@ -40,7 +43,7 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
    <td colname="1"><span class="codeph"> 100000 </span> </td> 
    <td colname="2"><span class="codeph"> DRM_ERROR </span> </td> 
    <td colname="3"> </td> 
-   <td colname="4"><span class="codeph"> DESCRIÇÃO DE MAJOR_DRM_CODE </span><span class="codeph"> MINOR_DRM_CODE </span><span class="codeph"></span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIÇÃO DE MAJOR_DRM_CODE </span><span class="codeph"> MINOR_DRM_CODE </span><span class="codeph"> </span> </td> 
    <td colname="5"></td> 
   </tr> 
   <tr rowsep="1"> 
@@ -123,7 +126,7 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 104006 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_UNREACHABLE </span> </td> 
+   <td colname="2"><span class="codeph"> AD_INACESSÍVEL </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> Nenhum </td> 
    <td colname="5"> </td> 
@@ -249,12 +252,14 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170011 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_TARGET_DURATION_INCOMPATIBLE </span> </td> 
+   <td colname="2"><span class="codeph"> AD_PÚBLICO ALVO_DURATION_INCOMPATIBLE </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> <span class="codeph"> AD_ASSET</span> </td> 
-   <td colname="5"> <p>A DURAÇÃO DO TARGET do anúncio é superior à DURAÇÃO DO TARGET do conteúdo. </p> </td> 
+   <td colname="5"> <p>A DURAÇÃO do PÚBLICO ALVO do anúncio é superior à DURAÇÃO do PÚBLICO ALVO do conteúdo. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
->[!NOTE] A adID e a fonte (URL) podem ser recuperadas por meio do `PTAdAsset` nos metadados de notificação com a `AD_ASSET` chave.
+>[!NOTE]
+>
+>A adID e a fonte (URL) podem ser recuperadas por meio do `PTAdAsset` nos metadados de notificação com a `AD_ASSET` chave.
