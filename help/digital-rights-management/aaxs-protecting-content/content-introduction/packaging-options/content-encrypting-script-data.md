@@ -3,7 +3,10 @@ seo-title: Criptografar dados de script
 title: Criptografar dados de script
 uuid: 7cf67866-5668-4ed8-a051-c00b29b7df18
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Especifica se os dados de script incorporados no conteúdo são criptografados.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >Essa regra se aplica somente ao formato de arquivo FLV. Os dados de script são sempre deixados em branco para arquivos no formato F4V.
 
