@@ -3,7 +3,10 @@ seo-title: Contagem de máquina ao emitir licenças
 title: Contagem de máquina ao emitir licenças
 uuid: d57f8b0b-0363-4b26-bd71-76f4abe5b68f
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
@@ -14,8 +17,8 @@ Se as regras de negócios exigirem que o número de máquinas para um usuário s
 
 `MachineId.matches()` realiza uma comparação de IDs para determinar se representam a mesma máquina. Essa comparação só é prática se houver um pequeno número de IDs de máquina para comparação. Por exemplo, se um usuário tiver permissão para cinco computadores dentro de seu domínio, você poderá pesquisar no banco de dados as IDs de máquina associadas ao nome de usuário do usuário e obter um pequeno conjunto de dados para comparação.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
->Essa comparação não é prática para implantações que permitem acesso anônimo. Nesses casos, `MachineId.getUniqueID()` pode ser usada, no entanto, essa ID não será a mesma se o usuário acessar o conteúdo dos tempos de execução do Flash e do Adobe AIR® e não sobreviverá se o usuário reformatar seu disco rígido.
+>Essa comparação não é prática para implantações que permitem acesso anônimo. Nesses casos `MachineId.getUniqueID()` podem ser usados, no entanto, essa ID não será a mesma se o usuário acessar o conteúdo dos tempos de execução do Flash e do Adobe AIR® e não sobreviverá se o usuário reformatar seu disco rígido.
 
-Para saber mais sobre `MachineToken.getMachineId()`e `MachineId.matches()`, consulte a Referência *da API do* Adobe Access.
+Para saber mais sobre `MachineToken.getMachineId()`e `MachineId.matches()`, consulte a Referência *da API de acesso ao* Adobe.
