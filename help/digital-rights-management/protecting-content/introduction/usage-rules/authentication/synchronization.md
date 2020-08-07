@@ -3,7 +3,10 @@ seo-title: Requisitos para sincronização
 title: Requisitos para sincronização
 uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '161'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +17,10 @@ Os requisitos de sincronização especificam a frequência com que o cliente sin
 
 O comportamento de sincronização é definido usando os seguintes parâmetros:
 
-* **Intervalo** de início - especifica o tempo de espera após a última sincronização bem-sucedida para iniciar outra solicitação de sincronização.
+* **Intervalo** de start - especifica o tempo de espera após a última sincronização bem-sucedida para start de outra solicitação de sincronização.
 * **Intervalo** de parada rígida - (opcional). Desative a reprodução se uma sincronização bem-sucedida não tiver ocorrido no período especificado.
-* **Forçar probabilidade** de sincronização - (Opcional). Probabilidade com a qual o cliente deve enviar uma mensagem de sincronização antes do próximo intervalo de início.
+* **Forçar probabilidade** de sincronização - (Opcional). Probabilidade com a qual o cliente deve enviar uma mensagem de sincronização antes do próximo intervalo de start.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
->Essa regra de uso é suportada pelos clientes DRM Primetime versão 3.0 ou posterior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças.
+>Esta regra de uso é suportada pelos clientes DRM Primetime versão 3.0 ou posterior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças.
