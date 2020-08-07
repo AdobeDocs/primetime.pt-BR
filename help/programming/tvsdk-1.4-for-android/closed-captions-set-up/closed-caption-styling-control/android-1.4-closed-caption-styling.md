@@ -5,7 +5,10 @@ seo-title: Controlar estilo de legenda
 title: Controlar estilo de legenda
 uuid: 331b0833-3e8a-482e-a3df-5e92b69d0a94
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
@@ -144,8 +147,9 @@ public TextFormatBuilder(
  String bottomInset)
 ```
 
-[!TIP]
-Nas opções que definem valores padrão (por exemplo, DEFAULT), esse valor se refere ao que a configuração era quando a legenda foi originalmente especificada.
+>[!TIP]
+>
+>Nas opções que definem valores padrão (por exemplo, DEFAULT), esse valor se refere ao que a configuração era quando a legenda foi originalmente especificada.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -157,11 +161,11 @@ Nas opções que definem valores padrão (por exemplo, DEFAULT), esse valor se r
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fonte </td> 
-   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente para um valor definido pela enumeração <span class="codeph"> TextFormat.Font </span> e representa, por exemplo, um espaçamento único com ou sem serifs. </p> <p>Dica:  As fontes reais disponíveis em um dispositivo podem variar e as substituições são usadas quando necessário. O espaço único com serifs é normalmente utilizado como substituto, embora essa substituição possa ser específica do sistema. </p> </td> 
+   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente para um valor definido pela <span class="codeph"> lista discriminada TextFormat.Font e representa, por exemplo, um </span> espaçamento único com ou sem servidores. </p> <p>Dica:  As fontes reais disponíveis em um dispositivo podem variar e as substituições são usadas quando necessário. O espaço único com serifs é normalmente utilizado como substituto, embora essa substituição possa ser específica do sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamanho </td> 
-   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente para um valor definido pela enumeração <span class="codeph"> TextFormat.Size </span> : 
+   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente para um valor definido pela lista discriminada <span class="codeph"> TextFormat.Size </span> : 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MÉDIO </span> - O tamanho padrão </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Aproximadamente 30% maior que a média </li> 
@@ -171,11 +175,11 @@ Nas opções que definem valores padrão (por exemplo, DEFAULT), esse valor se r
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Borda da fonte </td> 
-   <td colname="2"> <p>O efeito usado para a borda da fonte, como elevado ou nenhum. </p> <p>Pode ser definido somente para um valor definido pela enumeração <span class="codeph"> TextFormat.FontEdge </span> . </p> </td> 
+   <td colname="2"> <p>O efeito usado para a borda da fonte, como elevado ou nenhum. </p> <p>Pode ser definido somente para um valor definido pela <span class="codeph"> lista discriminada TextFormat.FontEdge </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da fonte </td> 
-   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente para um valor definido pela enumeração <span class="codeph"> TextFormat.Color </span> . </p> </td> 
+   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente como um valor definido pela <span class="codeph"> lista discriminada TextFormat.Color </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da borda </td> 
