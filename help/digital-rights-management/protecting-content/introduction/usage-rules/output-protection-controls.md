@@ -3,9 +3,9 @@ seo-title: Controles de proteção de saída
 title: Controles de proteção de saída
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ As seguintes opções/níveis de aplicação estão disponíveis:
 | **Sem proteção** — Nenhuma ativação de proteção de saída é imposta para saídas analógicas e digitais. | SIM | SIM |
 | **Sem reprodução** — Não permita a reprodução em um dispositivo externo para saídas analógicas e digitais. | SIM | SIM |
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
 >Embora essas regras sejam aplicadas de forma consistente em todas as plataformas, você só pode ativar com segurança a proteção de saída nas plataformas Windows. Em outras plataformas, como Macintosh e Linux, não há suporte para funções de sistema operacional disponíveis para aplicativos de terceiros.
 
