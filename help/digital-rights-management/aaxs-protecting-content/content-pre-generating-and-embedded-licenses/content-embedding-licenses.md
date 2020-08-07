@@ -3,7 +3,10 @@ seo-title: Como incorporar licenças
 title: Como incorporar licenças
 uuid: b8d8ee9b-7430-4899-9caf-47d6b64021b8
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
 
@@ -16,8 +19,8 @@ Para incorporar uma licença, obtenha uma instância de `com.adobe.flashaccess.s
 
 Para obter exemplos de códigos que demonstram licenças incorporadas, consulte `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` o diretório &quot;Amostras&quot; das Ferramentas de Linha de Comando de Implementação de Referência.
 
->[!NOTE] {class=&quot;- tópico/observação &quot;}
+>[!NOTE]
 >
->Os clientes do Adobe Access 2.0 ignorarão quaisquer licenças incorporadas no conteúdo e tentarão obter uma licença do servidor de licença especificado nos metadados. No entanto, se os metadados indicarem que nenhum servidor de licença está disponível, um cliente do Adobe Access 2.0 precisará atualizar para exibir o conteúdo.
+>Os clientes do Adobe Access 2.0 ignorarão quaisquer licenças incorporadas no conteúdo e tentarão obter uma licença do servidor de licenças especificado nos metadados. No entanto, se os metadados indicarem que nenhum servidor de licença está disponível, um cliente do Adobe Access 2.0 precisará atualizar para visualização do conteúdo.
 
 Consulte Licenças [fora da banda](../../aaxs-protecting-content/content-introduction/packaging-options/content-out-of-band-licenses.md).
