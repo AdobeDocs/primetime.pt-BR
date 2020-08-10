@@ -5,7 +5,10 @@ seo-title: Selecionar uma faixa de legenda atual entre as faixas disponíveis
 title: Selecionar uma faixa de legenda atual entre as faixas disponíveis
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 53924aa8ba90555d58d15ee10fb14221c7dffaff
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ Você pode selecionar uma faixa de uma lista de faixas de legenda disponíveis n
 1. Aguarde até que o player de mídia esteja pelo menos no estado PREPARADO.
 1. Analise estes eventos:
 
-   * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: A lista inicial de faixas de legenda fechada está disponível
+   * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: A lista inicial das faixas de legenda fechada está disponível
 
 1. Obtenha uma lista de todas as faixas de legenda disponíveis no momento.
 
@@ -41,13 +44,12 @@ Você pode selecionar uma faixa de uma lista de faixas de legenda disponíveis n
    for (int i = 0; i < ccTracks.size(); i++) { 
        ClosedCaptionsTrack track = ccTracks.get(i); 
        if (track.getName().equals(INITIAL_CC_TRACK)) { 
-   
-<b>mediaPlayer.getCurrentItem().selectClosedCaptionsTrack(track);</b>
-seletedClosedCaptionsIndex = i;
-}}
+           mediaPlayer.getCurrentItem().selectClosedCaptionsTrack(track); 
+           selectedClosedCaptionsIndex = i; 
+       } 
+   }
+   ```
 
-```
-1. Implement a listener for the event that indicates that more tracks are available. When TVSDK dispatches the event, retrieve the current list of available tracks.
+1. Implemente um ouvinte para o evento que indica que há mais trilhas disponíveis. Quando o TVSDK despachar o evento, recupere a lista atual das faixas disponíveis.
 
-Retrieve the list each time that the event occurs to ensure that you always have the most current list.
-
+   Recupere a lista sempre que o evento ocorrer para garantir que você sempre tenha a lista mais atual.
