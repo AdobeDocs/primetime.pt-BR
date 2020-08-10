@@ -5,9 +5,9 @@ seo-title: Perguntas frequentes sobre RBOP
 title: Perguntas frequentes sobre RBOP
 uuid: 7dcd337c-369a-474c-8768-409c48b5cee5
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: fa9e89dd63c8b4c9d6eee78258957cfd30c29088
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Perguntas frequentes sobre o uso da proteção de saída com base em resolução.
 
-* **Q.** *Ao definir um requisito de saída digital para uma restrição de pixel, recebo erros de análise/formatação quando deixo a versão HDCP fora, mas não tenho nenhum requisito HDCP. Como devo configurar meu requisito de saída digital neste caso?* **A.** Como a verificação de versão HDCP não é suportada no cliente atualmente, a Adobe recomenda definir a versão HDCP como `1.0`. Isso garantirá que sua configuração esteja formatada corretamente e seja semântica consistente no futuro quando a verificação de versão HDCP for suportada. O trecho a seguir ilustra uma configuração com esse valor HDCP.
+* **Q.** *Ao definir um requisito de saída digital para uma restrição de pixel, recebo erros de análise/formatação quando deixo a versão HDCP fora, mas não tenho nenhum requisito HDCP. Como devo configurar meu requisito de saída digital neste caso?* **A.** Como a verificação de versão HDCP não é suportada atualmente no cliente, o Adobe recomenda definir a versão HDCP como `1.0`. Isso garantirá que sua configuração esteja formatada corretamente e seja semântica consistente no futuro quando a verificação de versão HDCP for suportada. O trecho a seguir ilustra uma configuração com esse valor HDCP.
 
    ```
    { "pixelConstraints":  
@@ -41,6 +41,7 @@ Perguntas frequentes sobre o uso da proteção de saída com base em resolução
 
    * 720P - HDCP necessário
    * 480P - No OP
+
    As regras a seguir serão aplicadas a cada variante.
 
    **Fluxos:**
@@ -56,18 +57,27 @@ Perguntas frequentes sobre o uso da proteção de saída com base em resolução
 
    ```
    { 
-       "maxPixel":  
-   
-<b>800</b>,&quot;pixelConstrings&quot;: [{ &quot;pixelCount&quot;:\
-<b>532</b>, &quot;digital&quot;: [{&quot;output&quot;: &quot;OBRIGATÓRIO&quot;, &quot;hdcp&quot;:{&quot;principal&quot;: 1, &quot;menor&quot;: 0}],&quot;analógico&quot;: {&quot;output&quot;: &quot;OBRIGATÓRIO&quot;},...
+       "maxPixel": 800, 
+       "pixelConstraints": [ 
+           { "pixelCount": 532, 
+             "digital": [{"output": "REQUIRED", "hdcp":{"major": 1,"minor": 0}}], 
+             "analog": {"output": "REQUIRED"} 
+           }, 
+   ... 
+   ```
 
-```
-to: 
-```
-{&quot;maxPixel&quot;:\
-<b>820</b>,&quot;pixelConstrings&quot;: [{ &quot;pixelCount&quot;:\
-<b>552</b>, &quot;digital&quot;: [{&quot;output&quot;: &quot;OBRIGATÓRIO&quot;, &quot;hdcp&quot;:{&quot;principal&quot;: 1, &quot;menor&quot;: 0}],&quot;analógico&quot;: {&quot;output&quot;: &quot;OBRIGATÓRIO&quot;},...
+   para:
 
-```
-throughout, for all instances of `maxPixel` and `pixelCount`.
+   ```
+   { 
+       "maxPixel": 820, 
+       "pixelConstraints": [ 
+           { "pixelCount": 552, 
+             "digital": [{"output": "REQUIRED", "hdcp":{"major": 1,"minor": 0}}], 
+             "analog": {"output": "REQUIRED"} 
+           }, 
+   ... 
+   ```
+
+   em geral, para todos os casos de `maxPixel` e `pixelCount`.
 
