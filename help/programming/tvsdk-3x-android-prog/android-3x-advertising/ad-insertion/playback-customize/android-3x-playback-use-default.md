@@ -5,7 +5,10 @@ seo-title: Usar o comportamento de reprodução padrão
 title: Usar o comportamento de reprodução padrão
 uuid: 36f76c42-4c6c-4620-9b47-ec97519a642a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -40,19 +43,20 @@ Para personalizar comportamentos de publicidade:
 1. Implemente a `AdPolicySelector` interface e todos os seus métodos.
 1. Atribua a instância de política a ser usada pelo TVSDK por meio da fábrica de publicidade.
 
->[!NOTE]
->class CustomContentFactory estende ContentFactory {
->...
->@Substituir
->public AdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem) {
->retornar novo CustomAdPolicySelector(mediaPlayerItem);
->}
->...
->}
->// registrar a fábrica de conteúdo personalizado no player de mídia
->MediaPlayerItemConfig config = new MediaPlayerItemConfig();
->config.setAdvertisingFactory(new CustomContentFactory());
->// esta configuração será transmitida posteriormente ao carregar > o recurso
->mediaPlayer.replaceCurrentResource(resource, config);
+   >[!NOTE]
+   >
+   >class CustomContentFactory estende ContentFactory &amp;lbrace;
+   >...
+   >@Substituir
+   >public AdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem) &amp;lbrace;
+   >retornar novo CustomAdPolicySelector(mediaPlayerItem);
+   >&amp;rbrace;
+   >...
+   >&amp;rbrace;
+   >// registrar a fábrica de conteúdo personalizado no player de mídia
+   >MediaPlayerItemConfig config = new MediaPlayerItemConfig();
+   >config.setAdvertisingFactory(new CustomContentFactory());
+   >// esta configuração será transmitida posteriormente ao carregar > o recurso
+   >mediaPlayer.replaceCurrentResource(resource, config);
 
 1. Implemente suas personalizações.
