@@ -2,7 +2,7 @@
 title: Notas de versão do TVSDK 3.12 para iOS
 description: As Notas de versão do TVSDK 3.12 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -84,7 +84,7 @@ Esta versão tem uma correção para as falhas do aplicativo que ocorrem em um c
 
 **Otimização da receita**
 
-Habilitado o TVSDK para identificar áreas com problemas relacionadas a workflows de inserção de anúncios para relatar a um ponto final de escolha do Analytics.
+Habilitado o TVSDK para identificar áreas com problemas relacionadas a workflows de inserção de anúncios para relatar a um ponto de extremidade de análise de escolha.
 
 **Versão 3.3**
 
@@ -541,7 +541,7 @@ Problema de reprodução quando a tag # EXT-X-PLAYLIST-TYPE no fluxo é definida
 
 Uso da ID criativa e AdSystem na solicitação de CRS com base nas regras de normalização do CRS.
 
-* [ ZD #29462] - Anúncio do TremorHub no VOD A&amp;E causando uma falha nos aplicativos iOS
+* (ZD #29462) - Anúncio do TremorHub no VOD A&amp;E que causa uma falha nos aplicativos iOS
 
 **Versão 1.4.36 (1.4.36.835)**
 
@@ -1098,7 +1098,7 @@ Suporte para fazer ping de URLs de rastreamento de anúncios vazios, o TVSDK ago
 
 * (ZD #2141) Implementação do Analytics para o aplicativo TreeHouse, biblioteca adicionada `AdobeAnalyticsPlugin.a` para criar o pacote.
 * Atualização da biblioteca do Video Heartbeats para 1.4.1.2
-* [PTPALY-4226] [relacionado ao ZD #2423] A execução da redefinição de DRM pode resultar na exclusão dos dados do Documento do aplicativo.
+* (PTPALY-4226) (relacionado ao ZD #2423) A execução da redefinição de DRM pode resultar na exclusão dos dados do Documento do aplicativo.
 
 **Versão 1.4.4** (1.4.4.242)
 
