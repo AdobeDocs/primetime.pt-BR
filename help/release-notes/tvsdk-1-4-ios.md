@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -70,21 +70,21 @@ Integrar e certificar o VHL 2.0 no iOS TVSDK: Reduza a barreira na implementaç�
 
 * Informações sobre anúncios de rede
 
-   As APIs TVSDK agora fornecem informações adicionais sobre respostas VAST de terceiros. A ID do anúncio, o sistema de anúncios e as extensões de anúncio VAST são fornecidos na `PTNetworkAdInfo` classe acessível por meio de uma `networkAdInfo` propriedade em um Ativo de anúncio. Essas informações podem ser usadas para integração com outras plataformas de Analytics de anúncios, como a **Moat Analytics**.
+   As APIs TVSDK agora fornecem informações adicionais sobre respostas VAST de terceiros. A ID do anúncio, o sistema de anúncios e as extensões de anúncio VAST são fornecidos na `PTNetworkAdInfo` classe acessível por meio de uma `networkAdInfo` propriedade em um Ativo de anúncio. Essas informações podem ser usadas para integração com outras plataformas do Ad Analytics, como o **Moat Analytics**.
 
 **Versão 1.4.31**
 
-* **Métricas** de faturamento Para acomodar clientes que desejam pagar apenas pelo que usam, em vez de uma taxa fixa independentemente do uso real, a Adobe coleta métricas de uso e usa essas métricas para determinar quanto faturar os clientes.
+* **Métricas** de faturamento Para acomodar clientes que desejam pagar apenas pelo que usam, em vez de uma taxa fixa independentemente do uso real, o Adobe coleta métricas de uso e usa essas métricas para determinar quanto faturar os clientes.
 
-Toda vez que o TVSDK gera um evento de start de fluxo, o player start para enviar mensagens HTTP periodicamente ao sistema de cobrança da Adobe. O período, conhecido como duração faturável, pode ser diferente para VOD padrão, VOD pro VOD (anúncios intermediários ativados) e conteúdo ao vivo. A duração padrão para cada tipo de conteúdo é de 30 minutos, mas seu contrato com a Adobe determina os valores reais.
+Toda vez que o TVSDK gera um evento de start de fluxo, o start do player envia mensagens HTTP periodicamente para o sistema de faturamento do Adobe. O período, conhecido como duração faturável, pode ser diferente para VOD padrão, VOD pro VOD (anúncios intermediários ativados) e conteúdo ao vivo. A duração padrão para cada tipo de conteúdo é de 30 minutos, mas seu contrato com a Adobe determina os valores reais.
 
-* **O suporte a vários CDN para** Ads CRStVSDK agora é compatível com vários CDN para anúncios CRS. Ao fornecer detalhes FTP para anúncios CRS, você pode especificar locais de CDN, diferentes do CDN padrão de propriedade da Adobe, como o Akamai.
+* **O suporte a vários CDN para** Ads CRStVSDK agora é compatível com vários CDN para anúncios CRS. Ao fornecer detalhes FTP para anúncios CRS, você pode especificar locais de CDN, diferentes do CDN padrão de propriedade do Adobe, como o Akamai.
 
 **Versão 1.4.29**
 
 Na classe PTSDKConfig, a API forceHTTPS foi adicionada.
 
-A classe PTSDKConfig fornece métodos para aplicar o SSL em solicitações feitas aos servidores de decisão de anúncio do Adobe Primetime, DRM e Video Analytics. Para obter mais informações, consulte os métodos `forceHTTPS` e `isForcingHTTPS` nesta classe. Se um manifesto for carregado sobre HTTPS, o TVSDK preservará o uso de conteúdo de HTTPS e respeita esse uso ao carregar quaisquer URLs relativos desse manifesto.
+A classe PTSDKConfig fornece métodos para aplicar o SSL em solicitações feitas aos servidores de decisão de anúncio da Adobe Primetime, DRM e Video Analytics. Para obter mais informações, consulte os métodos `forceHTTPS` e `isForcingHTTPS` nesta classe. Se um manifesto for carregado sobre HTTPS, o TVSDK preservará o uso de conteúdo de HTTPS e respeita esse uso ao carregar quaisquer URLs relativos desse manifesto.
 
 **Observação**: As solicitações para domínios de terceiros, como pixels de rastreamento de anúncios, URLs de conteúdo e anúncios, e solicitações semelhantes não são modificadas, e é responsabilidade dos provedores de conteúdo e servidores de anúncios fornecer URLs compatíveis com HTTPS.
 
@@ -116,7 +116,7 @@ Para obter mais informações sobre o VPAID 2.0, consulte Suporte [a anúncios](
 
 * No momento, os seguintes recursos não são suportados:
 
-   * Gerenciamento de direitos digitais (DRM)
+   * Digital Rights Management (DRM)
    * Banners de anúncios
    * Linguagem de marcação de TV (TVML)
 
@@ -147,7 +147,7 @@ Como parte da atualização 1.4 do TVSDK, agora também apoiamos a entrada e sa�
 
 * **Suporte para individualização no local**
 
-Suporte para instalações locais do Adobe Individualization Server para personalizar a solicitação de individualização do cliente para ir para um terminal diferente.
+Suporte para instalações no local do Adobe Individualization Server para personalizar a solicitação de individualização do cliente para acessar um terminal diferente.
 
 * **Proteção de saída baseada em resolução**
 
@@ -160,7 +160,7 @@ As Políticas de DRM agora podem especificar a resolução mais alta permitida, 
    * Adicionada a capacidade de agrupar diferentes casos de uso de análises, de outros SDKs ou players, com o Adobe Analytics Video Essentials.
    * O rastreamento de anúncios foi otimizado com a remoção dos métodos trackAdBreakStart e trackAdBreakComplete. A quebra de anúncio é inferida das chamadas de método trackAdStart e trackAdComplete.
    * A propriedade playhead não é mais necessária ao rastrear anúncios.
-   * Adição de suporte para a ID do Visitante da Marketing Cloud.
+   * Adicionado suporte para a ID do Visitante do Marketing Cloud.
 
 * **Integração Nielsen SDK**
 
@@ -198,7 +198,7 @@ As Políticas de DRM agora podem especificar a resolução mais alta permitida, 
 
 * O TVSDK 1.4.28 foi certificado para iOS 10 Beta 7.
 * Suporte a DRM para forçar HTTPS adicionando APIs forceHTTPS e isForcingHTTPS.
-* Atualizadas as bibliotecas VHL para 1.5.8, as bibliotecas do Adobe Mobile para 4.8.4 e a biblioteca do utilitário logger para a versão 7.0 do público alvo de implantação.
+* As bibliotecas VHL foram atualizadas para 1.5.8, as bibliotecas Adobe Mobile para 4.8.4 e a biblioteca do utilitário logger para o público alvo de implantação versão 7.0.
 
 **Versão 1.4.19**
 
@@ -212,7 +212,7 @@ Esta versão do TVSDK foi certificada com o Suporte FairPlay para iOS e tvOS.
 
    **Observação**: Lembre-se das seguintes diretrizes de compilação:
 
-   * O suporte a tvOs TVSDK está limitado a fluxos criptografados que não sejam do Adobe DRM. Você deve remover a referência a drmNativeInterface.framework nas configurações de compilação tvOS. Ainda há suporte para fluxos criptografados AES.
+   * O suporte a tvOs TVSDK está limitado a fluxos criptografados não-Adobe DRM. Você deve remover a referência a drmNativeInterface.framework nas configurações de compilação tvOS. Ainda há suporte para fluxos criptografados AES.
    * A Apple exige que todos os aplicativos Apple TV tenham código de bits ativado, portanto, você deve ativar esse sinalizador nas configurações do projeto.
 
 ## Problemas resolvidos no 1.4 {#resolved-issues-in}
@@ -447,9 +447,9 @@ Habilitado enviando o URL criativo original para a solicitação CRS 1401 em vez
 
 Esse problema foi resolvido atualizando o carregamento de recursos para procurar de todos os pacotes disponíveis.
 
-* (ZD# 27460) Primeira chamada de anúncio do Midroll - POST para cdn.auditude<span></span>.com, que retorna 403.
+* (ZD# 27460) Primeira chamada de anúncio do Midroll - POST para cdn.auditude<span></span>.com retornando 403.
 
-A nova conta CDN não consegue processar uma solicitação POST CDN. Esse problema foi resolvido com a atualização do código para fazer a solicitação de `cdn.auditude.com` anúncio ser GET em vez de POST.
+A nova conta CDN não consegue processar uma solicitação de CDN POST. Esse problema foi resolvido com a atualização do código para fazer com que a solicitação de `cdn.auditude.com` anúncio fosse GET em vez de POST.
 
 **Versão 1.4.32** (1.4.32.792 para iOS 6.0+)
 
@@ -480,6 +480,7 @@ Esse problema foi solucionado ao alinhar tags de descontinuidade em manifestos d
 Esse problema foi resolvido com o empacotamento do PSDKLibrary.framework, conforme solicitado.
 
 * (ZD# 26364) Suporte a vários CDN para anúncios de CRS
+
 <!-- 
 Comment Type: draft
 For more information, see [Multiple CDN support for CRS Ad Delivery](http://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-concept-Multiple_CDN_support_for_CRS_ad_delivery).
@@ -492,9 +493,9 @@ Esse problema foi resolvido fornecendo uma solução alternativa para fluxos que
 
 Os seguintes problemas foram resolvidos para o TVSDK nesta versão:
 
-* (ZD# 24180) Adicione um cabeçalho personalizado para permitir a lista
+* (ZD# 24180) Adicionar um cabeçalho personalizado à lista de permissões
 
-Um novo cabeçalho personalizado foi adicionado à lista de permissões do TVSDK.
+Um novo cabeçalho personalizado foi adicionado à lista de permissões TVSDK.
 
 * (ZD# 25016) O fluxo de failover é selecionado aleatoriamente quando os parâmetros de controle ABR são definidos
 
@@ -612,7 +613,7 @@ Esse problema foi resolvido adicionando verificações de objeto nulo adicionais
 
 Esse problema é o mesmo que (ZD #21590).
 
-* (ZD #22280) - Comprimento do vídeo Analytics definido como 0
+* (ZD #22280) - Duração do vídeo do Analytics definida como 0
 
 Esse problema é o mesmo que (ZD #21590).
 
@@ -636,7 +637,7 @@ Esse problema foi resolvido atualizando a lógica para mostrar a visualização 
 
 * (ZD #20101) - A implementação do Capítulo personalizado aciona o evento do capítulo do start durante a reprodução do anúncio
 
-Esse problema foi solucionado ao atualizar o VideoAnalyticsTracker para detectar corretamente o start/conclusão do capítulo durante a transição entre os limites do capítulo e os limites não capítulos.
+Esse problema foi solucionado ao atualizar o VideoAnalyticsTracker para detectar corretamente o start/conclusão do capítulo ao fazer a transição entre os limites do capítulo e não capítulos.
 
 * (ZD #20784) - Analytics: Acionar conclusões de conteúdo para transições de vídeo ao vivo
 
@@ -677,7 +678,7 @@ Esse problema foi resolvido fornecendo proteção adicional contra problemas de 
 
 * (ZD #21782) - Código de erro 10100 do iOS
 
-Foi corrigido o problema em que o TVSDK retornava um erro 101000 ao iniciar a reprodução em fluxos de DRM do Adobe Access.
+Foi corrigido o problema em que o TVSDK retornava um erro 101000 ao iniciar a reprodução em fluxos de DRM de acesso ao Adobe.
 
 * (ZD #21889) - Falha na reprodução de anúncios online e conteúdo offline
 
@@ -689,13 +690,13 @@ Esse problema foi resolvido melhorando o tratamento de tags de anúncios VAST de
 
 * (ZD #22257) - O TVSDK falha ao reproduzir o fluxo DRM
 
-Foi corrigido o problema em que o TVSDK que retornava um erro 101000 ao iniciar a reprodução em fluxos de DRM do Adobe Access.
+O problema no qual o TVSDK que retornava um erro 101000 ao iniciar a reprodução em fluxos de DRM de acesso ao Adobe foi corrigido.
 
 **Versão 1.4.22** (1.4.22.627) para iOS 6.0+
 
 * (ZD #18709) - Falha no TVSDK para iOS
 
-O problema de travamento que ocorre em alguns fluxos protegidos por DRM do Adobe Access foi corrigido.
+O problema de travamento que ocorre em alguns fluxos protegidos por DRM de acesso a Adobe foi corrigido.
 
 * (ZD #18850) - Atualizar lógica de seleção criativa com base nas regras do CRS
 
@@ -866,7 +867,7 @@ Esse problema foi resolvido fornecendo suporte para o mapa de fontes CTS do Andr
 
 Metadados adicionados para expor conteúdo quando ocorre a notificação M3U8_PARSER_ERROR.
 
-* (ZD #4437) - Falhas no SDK do Adobe Primetime
+* (ZD #4437) - Falhas no Adobe Primetime SDK
 
 Corrigida uma falha relatada ao preparar legendas/áudio alternativo.
 
@@ -955,7 +956,7 @@ Suporte para fazer ping de URLs de rastreamento de quebra de anúncio vazios, o 
 
 * (ZD #2141) Implementação do Analytics para o aplicativo TreeHouse, adicionou a biblioteca AdobeAnalyticsPlugin.a para criar o pacote.
 * Atualização da biblioteca do Video Heartbeats para 1.4.1.2
-* [PTPALY-4226] [relacionado ao ZD #2423] A execução da redefinição de DRM pode resultar na exclusão dos dados do Documento do aplicativo.
+* (PTPALY-4226) (relacionado ao ZD #2423) A execução da redefinição de DRM pode resultar na exclusão dos dados do Documento do aplicativo.
 
 **Versão 1.4.4** (1.4.4.242)
 
@@ -998,4 +999,4 @@ Suporte para fazer ping de URLs de rastreamento de quebra de anúncio vazios, o 
 
 ## Recursos úteis {#helpful-resources}
 
-* Consulte a documentação de ajuda completa na página Aprendizagem e suporte [do](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulte a documentação completa da ajuda na página Aprendizagem e suporte [da](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
