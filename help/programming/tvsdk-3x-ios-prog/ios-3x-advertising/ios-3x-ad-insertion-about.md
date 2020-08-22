@@ -5,7 +5,10 @@ seo-title: Inserir anúncios
 title: Inserir anúncios
 uuid: 6e31cae5-7363-454f-82dd-e03c1e34cd3f
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ O TVSDK suporta vários casos de uso para VOD e solução e inserção de anúnc
 * Inserção de anúncio intermediário, na qual pelo menos um anúncio é inserido no meio do conteúdo.
 * Inserção de anúncio posterior, na qual pelo menos um anúncio é anexado ao final do conteúdo.
 
-O TVSDK resolve os anúncios, insere os anúncios em locais definidos pelo servidor de anúncios e calcula a linha do tempo virtual antes do início da reprodução. Após o início da reprodução, nenhuma alteração, como anúncios sendo inseridos ou anúncios inseridos sendo removidos, pode ocorrer.
+O TVSDK resolve os anúncios, insere os anúncios em locais definidos pelo servidor de anúncios e calcula a linha do tempo virtual antes dos start de reprodução. Após os start de reprodução, nenhuma alteração, como anúncios sendo inseridos ou anúncios inseridos sendo removidos, pode ocorrer.
 
 ## Resolver e inserir anúncio ao vivo e linear {#section_A6A1BB262D084462A1D134083556B7CC}
 
@@ -64,7 +67,7 @@ Para a inserção de um anúncio ao vivo, talvez seja necessário sair de uma qu
 
 Estes são alguns exemplos de retorno antecipado de anúncios:
 
-* A duração do intervalo do anúncio em determinados eventos esportivos.
+* A duração da pausa do anúncio em determinados eventos esportivos.
 
    Embora seja fornecida uma duração padrão, se o jogo for retomado antes da interrupção, a pausa do anúncio deverá ser encerrada.
 * Um sinal de emergência durante uma pausa de anúncio em um fluxo ao vivo.
@@ -93,11 +96,11 @@ A capacidade de sair de uma quebra de anúncio é identificada por meio de uma t
 
 1. Se o aplicativo estiver compartilhando a mesma dica para indicar a saída/separação e a entrada/saída, estenda `PTDefaultAdOpportunityResolver` e implemente o `preparePlacementOpportunity` método.
 
-   [!TIP]
+   >[!TIP]
+   >
+   >O código a seguir supõe que o aplicativo tenha uma implementação para o `isCueInOpportunity` método.
 
-   O código a seguir supõe que o aplicativo tenha uma implementação para o `isCueInOpportunity` método.
-
-```
+   ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
    { 
          if ([self isCueInOpportunity:timedMetadata]) 
@@ -109,7 +112,7 @@ A capacidade de sair de uma quebra de anúncio é identificada por meio de uma t
                return [super preparePlacementOpportunity:timedMetadata]; 
          } 
    }
-```
+   ```
 
 1. Registre o resolvedor de oportunidades estendidas na `PTDefaultMediaPlayerClientFactory` instância.
 
