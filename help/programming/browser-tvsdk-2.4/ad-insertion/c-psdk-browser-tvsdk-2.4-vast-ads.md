@@ -5,7 +5,10 @@ seo-title: Anúncios VAST
 title: Anúncios VAST
 uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Quando o TVSDK do navegador solicita um anúncio que não está em seu servidor de publicidade primário, o player precisa solicitar o anúncio do servidor secundário. O VAST (Video Ad Serving Template) define o padrão de comunicação entre servidores de anúncios e players de vídeo e é a resposta enviada pelo servidor de anúncios secundário quando o anúncio é solicitado.
 
-Para obter mais informações sobre o VAST, consulte Modelo de serviço de anúncio de vídeo [digital (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
+Para obter mais informações sobre o VAST, consulte VAST (Modelo de serviço de anúncio de vídeo [digital) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
 O TVSDK do navegador suporta os seguintes elementos de anúncio VAST:
 
@@ -56,14 +59,18 @@ Estas são mais informações sobre os tipos de anúncios:
       * `MediaFiles`
 
       * `MediaFile`
-         [!TIP]
-Nesse elemento, os atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`e `type` são suportados.
+
+         >[!TIP]
+         >
+         >Nesse elemento, os atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`e `type` são suportados.
 
 * **Anúncios** não lineares Os seguintes elementos são suportados:
 
    * `Non-linear`
-      [!TIP]
-Nesse elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`e `minSuggestedDuration` são suportados.
+
+      >[!TIP]
+      >
+      >Nesse elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`e `minSuggestedDuration` são suportados.
 
       * `StaticResource`
       * `IFrameResource`
@@ -74,8 +81,10 @@ Nesse elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedW
 * **Anúncios** complementares Os seguintes elementos são suportados:
 
    * `Companion`
-      [!TIP]
-Neste elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`e `expandedHeight` são suportados.
+
+      >[!TIP]
+      >
+      >Neste elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`e `expandedHeight` são suportados.
 
       * `StaticResource`
       * `IFrameResource`
@@ -84,7 +93,8 @@ Neste elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedW
 
 ## Extensões {#section_17401C75F419453BAE83637EEB6E1E60}
 
-[!TIP]
-Somente as extensões específicas do Auditude são suportadas.
+>[!TIP]
+>
+>Somente as extensões específicas do Auditude são suportadas.
 
 * `Extension`
