@@ -1,26 +1,29 @@
 ---
-description: Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK inicia a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
-seo-description: Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK inicia a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
+description: Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK start a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
+seo-description: Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK start a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
 seo-title: Reprodução e failover de mídia
 title: Reprodução e failover de mídia
 uuid: e0072eeb-8ad1-436f-bf4a-fee6885a25bd
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 0%
 
 ---
 
 
 # Reprodução e failover de mídia {#media-playback-and-failover}
 
-Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK inicia a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
+Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK start a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
 
 ## Failover de lista de reprodução ausente {#section_4EA0AEFA7FB84FCEA699DFB10B135368}
 
 Quando uma lista de reprodução inteira estiver ausente, por exemplo, quando o arquivo M3U8 especificado em um arquivo manifest de nível superior não for baixado, o TVSDK tentará recuperar. Se não puder ser recuperado, seu aplicativo determinará a próxima etapa.
 
-Se a lista de reprodução associada à taxa de bits de resolução média estiver ausente, o TVSDK pesquisará uma lista de reprodução variante na mesma resolução. Se encontrar a mesma resolução, o TVSDK começará a baixar a lista de reprodução variante e os segmentos da posição correspondente. Se o player não encontrar a mesma lista de reprodução de resolução, ele tentará percorrer outras listas de reprodução de taxa de bits e suas variantes. Uma taxa de bits imediatamente menor é a primeira escolha, depois sua variante e assim por diante. Se todas as listas de reprodução de taxa de bits inferior e suas variantes estiverem esgotadas na tentativa de encontrar uma lista de reprodução válida, o TVSDK irá para a taxa de bits superior e contará a partir daí. Se não for possível encontrar uma lista de reprodução válida, o processo falhará e o player será movido para o estado ERROR.
+Se a lista de reprodução associada à taxa de bits de resolução média estiver ausente, o TVSDK pesquisará uma lista de reprodução variante na mesma resolução. Se encontrar a mesma resolução, o TVSDK start baixando a lista de reprodução variante e os segmentos da posição correspondente. Se o player não encontrar a mesma lista de reprodução de resolução, ele tentará percorrer outras listas de reprodução de taxa de bits e suas variantes. Uma taxa de bits imediatamente menor é a primeira escolha, depois sua variante e assim por diante. Se todas as listas de reprodução de taxa de bits inferior e suas variantes estiverem esgotadas na tentativa de encontrar uma lista de reprodução válida, o TVSDK irá para a taxa de bits superior e contará a partir daí. Se não for possível encontrar uma lista de reprodução válida, o processo falhará e o player será movido para o estado ERROR.
 
-Seu aplicativo pode determinar como lidar com essa situação. Por exemplo, você pode querer fechar a atividade do player e direcionar o usuário para a atividade do catálogo. O evento de interesse é o `STATUS_CHANGED` evento e o retorno de chamada correspondente é o `onStatusChanged` método. Este é o código que monitora se o player altera seu status interno para `ERROR`:
+Seu aplicativo pode determinar como lidar com essa situação. Por exemplo, talvez você queira fechar a atividade do player e direcionar o usuário para a atividade do catálogo. O evento de interesse é o `STATUS_CHANGED` evento, e o retorno de chamada correspondente é o `onStatusChanged` método. Este é o código que monitora se o player altera seu status interno para `ERROR`:
 
 ```java
 ... 
@@ -45,13 +48,16 @@ Quando o TVSDK não pode obter um segmento alternativo, ele aciona uma notifica�
 
 Se o mecanismo de vídeo não conseguir obter segmentos continuamente, ele limita o segmento contínuo para 5, após o qual a reprodução é interrompida e o TVSDK emite um erro `NATIVE_ERROR` com o código 5.
 
->[!Rrestrições]
+>[!NOTE]
+>
+>**Restrições**
 >
 >Estas são algumas restrições que você deve estar ciente:
+>
 >* Os parâmetros de controle da taxa de bits adaptável (ABR) não são considerados quando ocorre um failover.
 >
 >  
-Isso ocorre porque o mecanismo de failover foi projetado para usar qualquer uma das listas de reprodução disponíveis no momento, independentemente do perfil de taxa de bits, como fluxos de backup.
+Isso ocorre porque o mecanismo de failover foi projetado para usar qualquer uma das playlists disponíveis no momento, independentemente do perfil da taxa de bits, como fluxos de backup.
 >* Durante uma operação de failover, pode haver um switch de perfil.
 >
 >  
