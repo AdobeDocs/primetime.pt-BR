@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: primetime
 audience: end-user
-user-guide-title: Primetime Reference Implementation Help
+user-guide-title: Ajuda da implementação da referência do Primetime
+user-guide-description: Helps understand the TVSDK and modify the feature managers to customize your personal player.
 translation-type: tm+mt
-source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +23,7 @@ source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
       + [Como usar os gerentes de recursos](ref-implementation/using-feature-managers/how-to-use-feature-managers.md)
       + [Criando gerenciadores de recursos transmitindo informações de configuração para o MediaPlayer...](ref-implementation/using-feature-managers/creating-feature-managers.md)
       + [Ativar ou desativar recursos usando o ManagerFactory](ref-implementation/using-feature-managers/turning-features-on-off.md)
-      + [Tratamento de eventos](ref-implementation/using-feature-managers/handling-events.md)
+      + [Manuseio de eventos](ref-implementation/using-feature-managers/handling-events.md)
    + Configurar seu ambiente de desenvolvimento {#setup-dev}
       + [Configurar seu ambiente de desenvolvimento](set-up-dev-environment/set-up-dev-environment-overview.md)
       + [Baixar e configurar software de pré-requisito](set-up-dev-environment/download-prereqs-android.md)
@@ -44,7 +48,7 @@ source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
       + [DVR sem inserção de anúncio](implement-video-playback/dvr/dvr-without-ad-insertion.md)
       + [DVR com inserção de anúncio](implement-video-playback/dvr/dvr-with-ad-insertion.md)
       + [Escolhendo um ponto de partida personalizado para DVR](implement-video-playback/dvr/dvr-custom-start-point.md)
-      + [Definir uma hora de início personalizada na implementação de referência](implement-video-playback/dvr/set-custom-start-time-dvr.md)
+      + [Definir uma hora de start personalizada na implementação de referência](implement-video-playback/dvr/set-custom-start-time-dvr.md)
    + [Exibir estatísticas de reprodução e dispositivo de QoS](implement-video-playback/qos-statistics.md)
    + Inserir anúncios {#insert-ads}
       + [Inserção de anúncio](insert-ads/ad-insertion.md)
@@ -60,7 +64,7 @@ source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
       + [Visão geral](paytvpass-entitlement/paytvpass-entitlement-overview.md)
       + [Visão geral do Gerenciador de direitos](paytvpass-entitlement/entitlement-overvivew.md)
       + [Integrar autenticação Primetime](paytvpass-entitlement/integrate-pass.md)
-      + [Configurar relatórios do Adobe Analytics](paytvpass-entitlement/pass-analytics-setup.md)
+      + [Configurar o Relatórios Adobe Analytics](paytvpass-entitlement/pass-analytics-setup.md)
       + [Documentação da API relacionada](paytvpass-entitlement/pass-apis-callbacks.md)
    + Análise de vídeo {#video-analytics}
       + [Análise de vídeo](video-analytics/video-analytics-overview.md)
