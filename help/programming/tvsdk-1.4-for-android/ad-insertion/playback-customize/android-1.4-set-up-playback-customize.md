@@ -5,7 +5,10 @@ seo-title: Configurar reprodução personalizada
 title: Configurar reprodução personalizada
 uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ Para personalizar comportamentos de publicidade:
 
 1. Atribua a instância de política a ser usada pelo TVSDK por meio da fábrica de publicidade.
 
->[!ATTENTION]
+>[!IMPORTANT]
 >
 >As políticas de publicidade personalizadas registradas no início da >reprodução são apagadas quando a instância do MediaPlayer é >desalocada. Seu aplicativo deve registrar uma instância de política >seletor sempre que uma nova sessão de reprodução é criada.
 
