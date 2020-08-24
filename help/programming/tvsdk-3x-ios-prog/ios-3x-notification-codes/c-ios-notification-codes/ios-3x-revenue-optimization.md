@@ -4,9 +4,9 @@ seo-description: 'Esta tabela fornece informações detalhadas sobre notificaç�
 seo-title: Código de Otimização de RECEITA
 title: Código de Otimização de RECEITA
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Para ativar esse relatórios, use a api PTMediaPlayer: `[mediaPlayersetRevenueOp
 >
 >A maioria das notificações informativas contém metadados relevantes, por exemplo, o URL do recurso que falhou ao baixar. Algumas notificações contêm metadados para especificar se o problema ocorreu no conteúdo de vídeo principal, no conteúdo de áudio alternativo ou em um anúncio.
 
-|Código |Nome |Notificação interna |Teclas de metadados |Observações |
-|—|—|—|—
-|401001 | RECEITA_OTIMIZATION_RELATÓRIOS | Nenhum | Consulte a tabela abaixo para obter as chaves de metadados com base em eventos diferentes. | Nenhum |
+| Código | Nome | Notificação interna | Chaves de metadados | Comentários |
+|---|---|---|---|---|
+| 401001 | REVENUE_OTIMIZATION_RELATÓRIOS | Nenhum | Consulte a tabela abaixo para obter as chaves de metadados com base em eventos diferentes. | Nenhum |
 
 | Detalhes do evento | ContextMetadata |
 |---|---|
