@@ -5,7 +5,10 @@ seo-title: Inicializar e configurar a análise de vídeo
 title: Inicializar e configurar a análise de vídeo
 uuid: c49c77d9-66b9-4586-9d70-b139b4a97a7a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
 * TVSDK 3.0 para Android.
 * Informações de configuração / inicialização
 
-   Entre em contato com seu representante da Adobe para obter informações específicas sobre sua conta de rastreamento de vídeo:
+   Entre em contato com seu representante de Adobe para obter informações específicas sobre sua conta de rastreamento de vídeo:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
@@ -32,15 +35,15 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
   </tr> 
   <tr> 
    <td colname="col1"> Ponto de extremidade do servidor de rastreamento de análise de vídeo </td> 
-   <td colname="col2"> O URL do ponto final da coleção de back-end de análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  A URL do servidor de rastreamento de visitantes é a mesma do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o serviço de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementar o serviço de ID </a>. </p> </td> 
+   <td colname="col2"> O URL do ponto final da coleção de back-end de análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  A URL do servidor de rastreamento de visitantes é a mesma do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o serviço de ID de Visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementar o serviço de ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nome da conta </td> 
    <td colname="col2"> Também conhecido como ID do conjunto de relatórios (RSID). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> ID de empresa da Marketing Cloud </td> 
-   <td colname="col2"> Um valor de string necessário para instanciar o componente Visitante. </td> 
+   <td colname="col1"> ID da organização do Marketing Cloud </td> 
+   <td colname="col2"> Um valor de string necessário para instanciar o componente de Visitante. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -49,38 +52,39 @@ Para configurar o rastreamento de vídeo no player:
 
 1. Confirme se as opções de tempo de carregamento no arquivo de `ADBMobileConfig.json` recurso estão corretas.
 
-       &quot;
-     {
-     &quot;version&quot; : &quot;1.1&quot;,
-     &quot;analítica&quot;: {
-     &quot;rsids&quot; : &quot;adobedevelopment&quot;,
-     &quot;server&quot; : &quot;10.131.129.149:3000&quot;,
-     &quot;charset&quot; : &quot;UTF-8&quot;,
-     &quot;ssl&quot; : false,
-     &quot;offlineEnabled&quot; : false,
-     &quot;lifecycleTimeout&quot; : 5,
-     &quot;batchLimit&quot;: 50,
-     &quot;privacyDefault&quot; : &quot;optedin&quot;,
-     &quot;poi&quot; : []
-     },
-     &quot;marketingCloud&quot;: {
-     &quot;org&quot;: &quot;VALOR FORNECIDO PELA ADOBE&quot;
-     },
-     &quot;destino&quot;: {
-     &quot;clientCode&quot; : &quot;&quot;,
-     &quot;timeout&quot; : 5
-     },
-     &quot;audienceManager&quot;: {
-     &quot;server&quot; : &quot;&quot;
-     }
-     }
-     &quot;
-     
-     Este arquivo de configuração formatado por JSON é fornecido como um recurso com TVSDK. O player lê esses valores somente no tempo de carregamento e os valores permanecem constantes enquanto o aplicativo é executado.
-       
-     Para configurar as opções de tempo de carregamento:
-   
-   1. Confirme se o `ADBMobileConfig.json` arquivo contém os valores apropriados (fornecidos pela Adobe).
+   ```
+   { 
+       "version" : "1.1", 
+       "analytics" : { 
+           "rsids" : "adobedevelopment", 
+           "server" : "10.131.129.149:3000", 
+           "charset" : "UTF-8", 
+           "ssl" : false, 
+           "offlineEnabled" : false, 
+           "lifecycleTimeout" : 5, 
+           "batchLimit" : 50, 
+           "privacyDefault" : "optedin", 
+           "poi" : [] 
+       }, 
+       "marketingCloud": { 
+           "org": "ADOBE PROVIDED VALUE"  
+       }, 
+       "target" : { 
+           "clientCode" : "", 
+           "timeout" : 5 
+       }, 
+       "audienceManager" : { 
+           "server" : "" 
+       } 
+   }
+   ```
+
+   Este arquivo de configuração formatado JSON é fornecido como um recurso com TVSDK. O player lê esses valores somente no tempo de carregamento e os valores permanecem constantes enquanto o aplicativo é executado.
+
+   Para configurar as opções de tempo de carregamento:
+
+
+   1. Confirme se o `ADBMobileConfig.json` arquivo contém os valores apropriados (fornecidos por Adobe).
    1. Confirme se este arquivo está localizado na `assets/` pasta.
 
       Essa pasta deve estar localizada na raiz da árvore de origem do aplicativo.
@@ -156,7 +160,7 @@ Para configurar o rastreamento de vídeo no player:
 
    1. Marque manualmente o fluxo ao vivo/linear como concluído.
 
-      Se você tiver vários episódios em um fluxo ao vivo, é possível marcar manualmente um episódio como concluído usando a API completa. Isso encerra a sessão de rastreamento de vídeo para o episódio de vídeo atual e você pode iniciar uma nova sessão de rastreamento para o próximo episódio.
+      Se você tiver vários episódios em um fluxo ao vivo, é possível marcar manualmente um episódio como concluído usando a API completa. Isso encerra a sessão de rastreamento de vídeo para o episódio de vídeo atual e você pode start uma nova sessão de rastreamento para o próximo episódio.
 
       >[!TIP]
       >
