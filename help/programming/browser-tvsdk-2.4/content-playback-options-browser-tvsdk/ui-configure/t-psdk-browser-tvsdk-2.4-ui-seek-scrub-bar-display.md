@@ -5,7 +5,10 @@ seo-title: Manipular busca ao usar a barra de busca
 title: Manipular busca ao usar a barra de busca
 uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -38,15 +41,15 @@ No TVSDK do navegador, é possível buscar uma posição (hora) específica em u
 
 1. Aguarde o TVSDK do navegador disparar o `AdobePSDK.PSDKEventType.SEEK_END` evento, que retorna a posição ajustada no `actualPosition` atributo do evento:
 
-       &quot;js
-     player.addEventListener(AdobePSDK.PSDKEEventType.SEEK_END, onSeekComplete);
-       onSeekComplete = função (evento) {
- // event.atualPosition     
- }     
- &quot;     
-     
-     Isso é importante porque a posição inicial real após a busca pode ser diferente da posição solicitada. Algumas das seguintes regras podem ser aplicadas:
-   
+   ```js
+   player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
+   onSeekComplete = function (event) {
+       // event.actualPosition
+   }
+   ```
+
+   Isso é importante porque a posição real do start após a busca pode ser diferente da posição solicitada. Algumas das seguintes regras podem ser aplicadas:
+
    * O comportamento de reprodução é afetado se uma busca ou outro reposicionamento terminar no meio de uma pausa de anúncio ou ignorar quebras de anúncio.
    * Você pode procurar apenas na duração pesquisável do ativo. Para VOD, é de 0 até a duração do ativo.
 
