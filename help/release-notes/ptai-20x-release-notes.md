@@ -1,28 +1,44 @@
 ---
-title: Notas de versão do PTAI 20.8.1
-description: As notas de versão PTAI 20.8.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+title: Notas de versão do PTAI 20.9.1
+description: As notas de versão PTAI 20.9.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 translation-type: tm+mt
-source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
+source-git-commit: f17a9fdf2a7c22d1d7b0833c7eac8f1202cebe87
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
 
 
-# Notas de versão do Primetime Dynamic Ad Insertion 20.8.1
+# Notas de versão do Primetime Dynamic Ad Insertion 20.9.1
 
-As notas de versão do Dynamic Ad Insertion 20.8.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+As notas de versão do Dynamic Ad Insertion 20.9.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 
-## Novidades do PTAI 20.8.1
+## Novidades do PTAI 20.9.1
+
+**Quando:** terça-feira, 1 de setembro de 2020, das 3:30 às 7:30, horário do leste
+
+**Correções**
+
+・ Corrigido o problema para clientes que usavam HLS/CMAF, onde EXT-X-MAP às vezes não possuíam tokens CDN ou tags EXT-X-MAP às vezes eram implantadas incorretamente na janela do DVR.
+
+### Aprimoramentos e correções nas versões anteriores
+
+#### Versão 20.8.4
+
+**Quando:** quarta-feira, 19 de agosto de 2020, das 03h30 às 07h30, horário do leste
+
+**Aprimoramentos e correções**
+
+Atualizações de manutenção.
+
+#### Versão 20.8.1
 
 **Quando:** terça-feira, 4 de agosto de 2020, das 3:00 às 6:00 Hora do Leste
 
 **Aprimoramentos e correções**
 
 Atualizações de manutenção.
-
-### Aprimoramentos e correções nas versões anteriores
 
 #### Versão 20.7.1
 
