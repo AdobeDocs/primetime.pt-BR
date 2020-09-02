@@ -2,9 +2,9 @@
 title: Notas de versão do PTAI 20.9.1
 description: As notas de versão PTAI 20.9.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 translation-type: tm+mt
-source-git-commit: c23b052f14c6673d4ba2aae6a317a55a2e611e8a
+source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ As notas de versão do Dynamic Ad Insertion 20.9.1 descrevem o que é novo ou al
 
 **Quando:** terça-feira, 1 de setembro de 2020, das 3:30 às 7:30, horário do leste
 
-**Correções**
+**Alterações**
 
 * Correção do problema para clientes que usavam HLS/CMAF, onde EXT-X-MAP às vezes não possuíam tokens CDN ou tags EXT-X-MAP às vezes eram implantadas incorretamente na janela do DVR.
 
@@ -165,9 +165,13 @@ Entre em contato com o Suporte ao Adobe para ativar os seguintes novos recursos 
 
 * Atualizações de manutenção.
 
-## Problemas resolvidos
+## Problemas resolvidos {#Resolved-issues}
 
-Quando a resolução estiver associada a um problema reportado, uma referência do Zendesk será exibida. Por exemplo, `ZD#xxxxx`
+Quando a resolução estiver associada a um problema reportado, uma referência do Zendesk será exibida. Por exemplo, `ZD#xxxxx`.
+
+**PTAI 20.9.1**
+
+* Correção do problema para clientes que usavam HLS/CMAF, onde EXT-X-MAP às vezes não possuíam tokens CDN ou tags EXT-X-MAP às vezes eram implantadas incorretamente na janela do DVR.
 
 **PTAI 20.6.1**
 
