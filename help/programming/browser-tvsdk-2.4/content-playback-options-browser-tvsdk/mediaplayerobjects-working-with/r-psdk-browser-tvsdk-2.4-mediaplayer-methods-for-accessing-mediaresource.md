@@ -5,7 +5,10 @@ seo-title: Atributos do MediaPlayer para acessar informações do MediaResource
 title: Atributos do MediaPlayer para acessar informações do MediaResource
 uuid: d26f39d6-0a6b-4072-b99a-8767a511a846
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
-   <td colname="3"> Fornece uma lista de faixas de legenda fechada disponíveis. </td> 
+   <td colname="3"> Fornece uma lista de faixas de legenda disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> seletedClosedCaptionsTrack </span> </td> 
@@ -48,14 +51,14 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
-   <td colname="3"> Fornece uma lista de faixas de áudio alternativas disponíveis. </td> 
+   <td colname="3"> Fornece uma lista de trilhas de áudio alternativas disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> seletedAudioTrack </span> </td> 
    <td colname="3"> 
-    <ph>
+    <pre>
       Recupera a faixa de áudio atualmente selecionada que foi selecionada com <span class="codeph"> selectAudioTrack </span>. 
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Metadados cronometrados </td> 
@@ -72,7 +75,7 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="3"> Fornece uma lista dos perfis de taxa de bits associados a este fluxo. <p>Observação:  Você pode recuperar a taxa de bits para cada perfil e a altura e largura do perfil. </p> </td> 
+   <td colname="3"> Fornece uma lista dos perfis de taxa de bits associados a esse fluxo. <p>Observação:  Você pode recuperar a taxa de bits para cada perfil e a altura e largura do perfil. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Recurso de mídia </td> 
