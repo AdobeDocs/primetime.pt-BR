@@ -2,7 +2,7 @@
 title: Notas de versão do TVSDK 3.12 para iOS
 description: As Notas de versão do TVSDK 3.12 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -84,7 +84,7 @@ Esta versão tem uma correção para as falhas do aplicativo que ocorrem em um c
 
 **Otimização da receita**
 
-Habilitado o TVSDK para identificar áreas com problemas relacionadas a workflows de inserção de anúncios para relatar a um ponto de extremidade de análise de escolha.
+Habilitado o TVSDK para identificar áreas com problemas relacionadas a workflows de inserção de anúncios para relatar a um ponto final de escolha do Analytics.
 
 **Versão 3.3**
 
@@ -288,19 +288,19 @@ Quando a resolução estiver associada a um problema reportado, uma referência 
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
 <!--
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
  -->
 **iOS TVSDK 3.12**
 
@@ -779,7 +779,7 @@ Esse problema foi resolvido atualizando a lógica para mostrar a visualização 
 
 * (ZD #20101) - A implementação do Capítulo personalizado aciona o evento do capítulo do start durante a reprodução do anúncio
 
-Esse problema foi solucionado ao atualizar o VideoAnalyticsTracker para detectar corretamente o start/conclusão do capítulo ao fazer a transição entre os limites do capítulo e não capítulos.
+Esse problema foi solucionado ao atualizar o VideoAnalyticsTracker para detectar corretamente o start/conclusão do capítulo durante a transição entre os limites do capítulo e os limites não capítulos.
 
 * (ZD #20784) - Analytics: Acionar conclusões de conteúdo para transições de vídeo ao vivo
 
@@ -890,7 +890,7 @@ Esse problema foi resolvido fornecendo um evento de tempo limite (requestTimeout
 
 * (ZD #19446) - Notificação ausente em fluxos ao vivo
 
-Esse problema foi resolvido ao permitir que o aplicativo assinasse o EXT-X-PROGRAMA-DATE-TIME em fluxos ao vivo.
+Esse problema foi resolvido ao permitir que o aplicativo assinasse EXT-X-PROGRAMA-DATE-TIME em fluxos ao vivo.
 
 * (ZD #19459) - Falha ao preparar áudio alternativo com PTMediaPlayerItem prepareAudioOptionsWithAVMediaSelectionOptions
 * (ZD #19460) - Falha - `[PTMediaPlayerItem prepareSubtitlesOptionsWithAVMediaSelectionOptions:nonForcedOptions:]`
