@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -221,10 +221,10 @@ Esta versão do TVSDK foi certificada com o Suporte FairPlay para iOS e tvOS.
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note">` 
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
@@ -232,9 +232,9 @@ Comment Type: draft
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
 
  -->
 
@@ -314,7 +314,7 @@ Comment Type: draft
 * (ZD#31979) - Não compila/executa quando for iOS 10 ou posterior para iPhone 7/iPhone7+
 
    Correção: a compilação de documentos IB para anteriores ao iOS 7 não é mais suportada
-* (ZD#32920) - Tela em branco em uma pausa de anúncio e sem conclusão de pausa de anúncio
+* (ZD#32920) - Tela em branco em uma pausa de anúncio e sem conclusão de quebra de anúncio
 
    Quando uma pausa de anúncio apresenta instâncias de anúncio e uma instância de anúncio é concluída, uma tela em branco é exibida
 * (ZD#32509) - Desativar gravação de tela do iOS 11 Desativar gravação de tela no iOS 11
@@ -637,7 +637,7 @@ Esse problema foi resolvido atualizando a lógica para mostrar a visualização 
 
 * (ZD #20101) - A implementação do Capítulo personalizado aciona o evento do capítulo do start durante a reprodução do anúncio
 
-Esse problema foi solucionado ao atualizar o VideoAnalyticsTracker para detectar corretamente o start/conclusão do capítulo ao fazer a transição entre os limites do capítulo e não capítulos.
+Esse problema foi solucionado ao atualizar o VideoAnalyticsTracker para detectar corretamente o start/conclusão do capítulo durante a transição entre os limites do capítulo e os limites não capítulos.
 
 * (ZD #20784) - Analytics: Acionar conclusões de conteúdo para transições de vídeo ao vivo
 
@@ -748,7 +748,7 @@ Esse problema foi resolvido fornecendo um evento de tempo limite (requestTimeout
 
 * (ZD #19446) - Notificação ausente em fluxos ao vivo
 
-Esse problema foi resolvido ao permitir que o aplicativo assinasse o EXT-X-PROGRAMA-DATE-TIME em fluxos ao vivo.
+Esse problema foi resolvido ao permitir que o aplicativo assinasse EXT-X-PROGRAMA-DATE-TIME em fluxos ao vivo.
 
 * (ZD #19459) - Falha ao preparar áudio alternativo com PTMediaPlayerItem prepareAudioOptionsWithAVMediaSelectionOptions
 * (ZD #19460) - Travamento - [PTMediaPlayerItem prepareLegendasOpçõesComAVMediaSelectionOptions:nonForcedOptions:]
@@ -992,7 +992,7 @@ Suporte para fazer ping de URLs de rastreamento de quebra de anúncio vazios, o 
    Solução: Especifique o `libstdc++6`.  biblioteca dylib, como se segue: Vá para Público alvo->Criar fases->Vincular binário com bibliotecas e adicione `libstdc++.6.dylib`.
 
 * Anúncio pós-rolagem não é inserido para substituir a API.
-* A busca por uma pausa de anúncio (sem sair dela) emite uma notificação de start de anúncio de duplicado e quebra de anúncio
+* Buscar uma pausa de anúncio (sem sair dela) emite uma notificação de start de anúncio de duplicado e quebra de anúncio
 * A definição de currentTimeUpdateInterval não tem nenhum efeito.\
    Observação: Em determinadas versões do iOS, o SO não carrega os recursos dentro do PSDKLibrary.framework automaticamente. É importante copiar manualmente o PSDKResources.bundle para os recursos de pacote do aplicativo: Vá para &quot;Criar fases&quot; e copie os recursos do pacote.
 * Não é possível criar o aplicativo de referência usando o Xcode 8 ou versões anteriores. A partir do iOS TVSDK versão 1.4.41, use o Xcode 9 para compilar.
