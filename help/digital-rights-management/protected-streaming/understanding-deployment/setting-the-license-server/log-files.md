@@ -5,9 +5,9 @@ seo-title: Arquivos de registro
 title: Arquivos de registro
 uuid: 4498fe60-65af-4f99-8f9b-e85013d0c9e9
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -42,12 +42,12 @@ Os diretórios de log são estruturados para facilitar o uso. O diretório de lo
 
 ## Arquivo de log global {#section_1CFA90748142439C9F3BE380969539DA}
 
-O arquivo de log global, [!DNL flashaccess-global.log], está localizado em *LicenseServer.LogRoot*. O log pode incluir mensagens de log que o Adobe Primetime DRM Java SDK ou as mensagens de log podem ter gerado durante o tempo em que o servidor foi inicializado.
+O arquivo de log global, `flashaccess-global.log`, está localizado em *LicenseServer.LogRoot*. O log pode incluir mensagens de log que o Adobe Primetime DRM Java SDK ou as mensagens de log podem ter gerado durante o tempo em que o servidor foi inicializado.
 
 ## Arquivo de log de partição {#section_5660137CD6AA40519E72A4315534846B}
 
-O arquivo de log de partição, [!DNL flashaccess-partition.log], está localizado no [!DNL <LicenseServer.LogRoot>/flashaccesserver] diretório. Inclui mensagens de log que foram geradas durante o processamento de uma solicitação de licença.
+O arquivo de log de partição, `flashaccess-partition.log`, está localizado no `<LicenseServer.LogRoot>/flashaccesserver` diretório. Inclui mensagens de log que foram geradas durante o processamento de uma solicitação de licença.
 
 ## Arquivo de log do locatário {#section_F0257CC0831647F18A746B4F02E3E910}
 
-O arquivo de log de locatário de cada locatário, [!DNL flashaccess-tenant.log], está localizado em [!DNL &lt;LicenseServer.LogRoot>/flashaccessServer/tenants/<tenantname>]. O log de locatário inclui informações de auditoria que descrevem cada licença gerada para este locatário.
+O arquivo de log do locatário de cada locatário, `flashaccess-tenant.log`, está localizado em `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. O log de locatário inclui informações de auditoria que descrevem cada licença gerada para este locatário.
