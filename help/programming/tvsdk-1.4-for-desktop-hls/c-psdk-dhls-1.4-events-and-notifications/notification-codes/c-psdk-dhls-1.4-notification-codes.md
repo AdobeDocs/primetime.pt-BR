@@ -5,7 +5,10 @@ seo-title: Códigos de notificação
 title: Códigos de notificação
 uuid: a7b77a5c-9873-45cf-8499-aa00270a7ad6
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 O sistema de notificação TVSDK produz vários avisos de erro, aviso e informações que fornecem metadados de diagnóstico.
 
-Os objetos de notificação fornecem informações relacionadas ao status do player. O TVSDK fornece uma lista ordenada cronologicamente de objetos de notificação e cada notificação contém os seguintes metadados:
+Os objetos de notificação fornecem informações relacionadas ao status do player. O TVSDK fornece uma lista ordenada cronologicamente de objetos de notificação, e cada notificação contém os seguintes metadados:
 
 <table frame="all" colsep="1" rowsep="1" id="table_DBA8CACF02DB4AF2B053E560850B49CE"> 
  <thead> 
@@ -33,12 +36,12 @@ Os objetos de notificação fornecem informações relacionadas ao status do pla
    <td colname="2">A representação numérica atribuída à notificação: 
     <ul id="ul_31AB497C6FFA452496DD09B0D78687B9"> 
      <li id="li_53E75022C50246E0982E315D04EFD8B3">Eventos de notificação de erros, de 100000 a 19999 </li> 
-     <li id="li_11AE91D1325E4F718228E662C9C55F9A">Eventos de notificação de aviso, de 20000 a 299999 </li> 
+     <li id="li_11AE91D1325E4F718228E662C9C55F9A">Eventos de notificação de aviso, de 200000 a 29999 </li> 
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Eventos de notificação de informações, de 300000 a 399999 </li> 
     </ul> <p>Cada intervalo de nível superior, como erros, é dividido em subintervalos, como 101000 a 101999 representando erros de reprodução. </p>
-    <ph>
-     A enumeração <span class="codeph"> mediacore.PSDKErrorCode</span> lista os valores possíveis.
-    </ph> </td> 
+    <pre>
+     A lista discriminada <span class="codeph"> mediacore.PSDKErrorCode</span> lista os valores possíveis.
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> name </td> 
