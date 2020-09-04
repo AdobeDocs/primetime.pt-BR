@@ -5,7 +5,7 @@ seo-title: Legendas
 title: Legendas
 uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 3%
@@ -26,7 +26,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.CAPTIONS_UPDATED,
 ... 
 function onCaptionsUpdateEvent (event) { 
   // code to show the captions icon and any settings button. 
-<ph>
+<pre>
    For example: 
   var btnCC = document.getElementById("btn_captions"); 
    btnCC.classList.remove("invisible"); 
@@ -34,7 +34,7 @@ function onCaptionsUpdateEvent (event) {
   var btnSettings = document.getElementById("btn_settings"); 
    btnSettings.classList.remove("invisible"); 
  } 
-</ph>
+</pre>
 ```
 
 A Estrutura da interface fornece uma implementação de comportamentos de legendas padrão, que pode ser modificada. Comportamentos de legendas ocultas também podem ser modificados estendendo os comportamentos de legendas fechadas padrão. Por exemplo:
