@@ -3,9 +3,9 @@ seo-title: Implantação da visão geral do servidor de chaves DRM Primetime
 title: Implantação da visão geral do servidor de chaves DRM Primetime
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ O SSL é necessário para o delivery de chave HTTPS Remoto. As conexões SSL pod
 
 Há várias opções para configurar o SSL. Veja a seguir exemplos para configurar o SSL com autenticação de cliente no Apache e no Tomcat.
 
-O exemplo a seguir mostra a configuração SSL do Apache:
+O exemplo a seguir mostra a configuração do Apache SSL:
 
 ```
 SSLEngineon 
@@ -73,7 +73,7 @@ Você tem a opção de definir as duas propriedades do sistema Java a seguir par
 
 * `KeyServer.ConfigRoot` - Este diretório contém todos os arquivos de configuração do Primetime DRM Key Server. Para obter detalhes sobre o conteúdo desses arquivos, consulte Arquivos [de configuração do Servidor](#key-server-configuration-files)Chave. Se não estiver definido, o padrão será [!DNL CATALINA_BASE/keyserver].
 
-* `KeyServer.LogRoot` - Este é um diretório de log que contém os logs do aplicativo do Servidor de chaves do iOS. Se não estiver definido, o padrão será igual a `KeyServer.ConfigRoot`
+* `KeyServer.LogRoot` - Este é um diretório de log que contém os logs de aplicativo do Servidor de chaves do iOS. Se não estiver definido, o padrão será igual a `KeyServer.ConfigRoot`
 
 * `XboxKeyServer.LogRoot` - Este é um diretório de log que contém os logs do aplicativo Xbox Key Server. Se não estiver definido, o padrão será o mesmo que `KeyServer.ConfigRoot`.
 
@@ -86,13 +86,13 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ## Credenciais de DRM do Primetime {#primetime-drm-credentials}
 
-Para processar solicitações de chave de clientes Primetime DRM iOS e Xbox 360, o Primetime DRM Key Server deve ser configurado com um conjunto de credenciais emitidas pela Adobe. Essas credenciais podem ser armazenadas em arquivos PKCS#12 ( [!DNL .pfx]) ou em um HSM.
+Para processar solicitações de chave de clientes Primetime DRM iOS e Xbox 360, o Primetime DRM Key Server deve ser configurado com um conjunto de credenciais emitidas pelo Adobe. Essas credenciais podem ser armazenadas em arquivos PKCS#12 ( [!DNL .pfx]) ou em um HSM.
 
-Os [!DNL .pfx] arquivos podem ser localizados em qualquer lugar, mas para facilitar a configuração, a Adobe recomenda colocar os [!DNL .pfx] arquivos no diretório de configuração do locatário. Para obter mais informações, consulte Arquivos [de configuração do Servidor](#key-server-configuration-files)Chave.
+Os [!DNL .pfx] arquivos podem ser localizados em qualquer lugar, mas para facilitar a configuração, o Adobe recomenda colocar os [!DNL .pfx] arquivos no diretório de configuração do locatário. Para obter mais informações, consulte Arquivos [de configuração do Servidor](#key-server-configuration-files)Chave.
 
 ### Configuração do HSM {#section_13A19E3E32934C5FA00AEF621F369877}
 
-Se você optar por usar um HSM para armazenar suas credenciais de servidor, deverá carregar as chaves privadas e os certificados no HSM e criar um arquivo de configuração *pkcs11.cfg* . Esse arquivo deve estar localizado no diretório *KeyServer.ConfigRoot* . Consulte a [!DNL <Primetime DRM Key Server>diretório /configs] para um arquivo de configuração PKCS 11 exemplo. Para obter informações sobre o formato de [!DNL pkcs11.cfg], consulte a documentação do provedor Sun PKCS11.
+Se você optar por usar um HSM para armazenar suas credenciais de servidor, deverá carregar as chaves privadas e os certificados no HSM e criar um arquivo de configuração *pkcs11.cfg* . Esse arquivo deve estar localizado no diretório *KeyServer.ConfigRoot* . Consulte o `<Primetime DRM Key Server>/configs` diretório para ver um exemplo de arquivo de configuração PKCS 11. Para obter informações sobre o formato de [!DNL pkcs11.cfg], consulte a documentação do provedor Sun PKCS11.
 
 Para verificar se seus arquivos de configuração HSM e Sun PKCS11 estão configurados corretamente, você pode usar o seguinte comando do diretório onde o [!DNL pkcs11.cfg] arquivo está localizado ( [!DNL keytool] está instalado com o Java JRE e o JDK):
 
@@ -112,7 +112,7 @@ O Primetime DRM Key Server requer dois tipos de arquivos de configuração:
 
 Se forem feitas alterações nos arquivos de configuração, o servidor deverá ser reiniciado para que as alterações entrem em vigor.
 
-Para evitar disponibilizar senhas em texto nítido nos arquivos de configuração, todas as senhas especificadas nos arquivos de configuração global e locatário devem ser criptografadas. Para obter mais informações sobre como criptografar senhas, consulte [*Scrambler *em* Usar o servidor DRM Primetime para transmissão *](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)protegida.
+Para evitar disponibilizar senhas em texto nítido nos arquivos de configuração, todas as senhas especificadas nos arquivos de configuração global e locatário devem ser criptografadas. Para obter mais informações sobre como criptografar senhas, consulte [*Scrambler* em *Usar o servidor DRM Primetime para transmissão*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md) protegida.
 
 ## Estrutura do diretório de configuração {#configuration-directory-structure}
 
@@ -136,7 +136,7 @@ O arquivo de [!DNL flashaccess-keyserver-global.xml] configuração contém conf
 * Registro - Especifica o nível de registro e a frequência com que os arquivos de registro são rolados.
 * Senha HSM - Obrigatório somente se um HSM for usado para armazenar credenciais de servidor.
 
-Consulte os comentários no arquivo de configuração global de exemplo localizado em [!DNL <Primetime DRM Key Server>/configs] para obter mais detalhes.
+Consulte os comentários no arquivo de configuração global de exemplo, localizado em `<Primetime DRM Key Server>/configs` para obter mais detalhes.
 
 ## Arquivos de configuração do locatário {#tenant-configuration-files}
 
@@ -146,7 +146,7 @@ Você pode especificar todos os caminhos de arquivo no arquivo de configuração
 
 Todos os arquivos de configuração do locatário incluem:
 
-* Credenciais do Servidor de Chaves - Especifica uma ou mais credenciais do Servidor de Chaves (certificado e chave privada) emitidas pela Adobe. Pode ser especificado como um caminho para um [!DNL .pfx] arquivo e uma senha, ou um alias para uma credencial armazenada em um HSM. Várias dessas credenciais podem ser especificadas aqui, como caminhos de arquivo, aliases de chave ou ambos.
+* Credenciais do Servidor de Chaves - Especifica uma ou mais credenciais do Servidor de Chaves (certificado e chave privada) emitidas pelo Adobe. Pode ser especificado como um caminho para um [!DNL .pfx] arquivo e uma senha, ou um alias para uma credencial armazenada em um HSM. Várias dessas credenciais podem ser especificadas aqui, como caminhos de arquivo, aliases de chave ou ambos.
 
 O arquivo de configuração do locatário do **iOS** inclui:
 
