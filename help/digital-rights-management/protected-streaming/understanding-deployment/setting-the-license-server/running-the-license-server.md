@@ -3,9 +3,9 @@ seo-title: Execução do servidor DRM para streaming protegido
 title: Execução do servidor DRM para streaming protegido
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Você pode verificar a validade das configurações usando os utilitários forne
 
 Se você quiser start o Tomcat e o servidor de licenças, é necessário executar [!DNL catalina.bat start] ou executar [!DNL catalina.sh start] a partir do [!DNL bin] diretório do Tomcat.
 
-Depois que o servidor for iniciado, verifique se ele foi configurado corretamente abrindo [!DNL https://<lic<span></span>ense-server-host:port>/flashaccess server/<tenant-name>/flashaccess/license/v1] em uma janela do navegador. Se a configuração do locatário tiver sido carregada com êxito, uma mensagem de confirmação será exibida.
+Depois que o servidor for iniciado, verifique se ele foi configurado corretamente abrindo `https://<lic<span></span>ense-server-host:port>/flashaccessserver/<tenant-name>/flashaccess/license/v1` em uma janela do navegador. Se a configuração do locatário tiver sido carregada com êxito, uma mensagem de confirmação será exibida.
 
 ## Arquivos de registro {#log-files}
 
@@ -54,11 +54,11 @@ O arquivo de log global, [!DNL flashaccess-global.log], está localizado em *Lic
 
 ### Arquivo de log de partição {#section_5660137CD6AA40519E72A4315534846B}
 
-O arquivo de log de partição, [!DNL flashaccess-partition.log], está localizado no [!DNL <LicenseServer.LogRoot>/flashaccesserver] diretório. Inclui mensagens de log que foram geradas durante o processamento de uma solicitação de licença.
+O arquivo de log de partição, [!DNL flashaccess-partition.log], está localizado no `<LicenseServer.LogRoot>/flashaccesserver` diretório. Inclui mensagens de log que foram geradas durante o processamento de uma solicitação de licença.
 
 ### Arquivo de log do locatário {#section_F0257CC0831647F18A746B4F02E3E910}
 
-O arquivo de log de locatário de cada locatário, [!DNL flashaccess-tenant.log], está localizado em [!DNL &lt;LicenseServer.LogRoot>/flashaccessServer/tenants/<tenantname>]. O log de locatário inclui informações de auditoria que descrevem cada licença gerada para este locatário.
+O arquivo de log do locatário de cada locatário, [!DNL flashaccess-tenant.log], está localizado em `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. O log de locatário inclui informações de auditoria que descrevem cada licença gerada para este locatário.
 
 ## Atualização de arquivos de configuração {#updating-configuration-files}
 
