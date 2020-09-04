@@ -5,7 +5,10 @@ seo-title: Downloads paralelos
 title: Downloads paralelos
 uuid: 11d37a39-391d-4127-9aa7-c94eb8a6a6a8
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 0%
 
 ---
 
@@ -32,9 +35,9 @@ Sem downloads paralelos, o TVSDK emite uma solicitação para o segmento de víd
 <!-- 
 
 See comment above (DASH use case removed).
-<note type="restriction">
+`<note type="restriction">`
   This feature applies only to content where the audio and video are encoded into different files (unmuxed content) and does not apply to MP4 content, which is always muxed. Most DASH content is unmuxed, and HLS content is often unmuxed, especially with alternate audio. 
-</note>
+`</note>`
 
  -->
 
@@ -45,4 +48,4 @@ A conexão HTTP pode sofrer atrasos nos seguintes estágios:
    Embora o cliente e o servidor tenham concordado em se comunicar, ainda não ocorreu nenhuma comunicação HTTP. Esse tipo de atraso depende da infraestrutura entre o cliente e o servidor. Esse processo requer encontrar um caminho pela Internet entre o cliente e o servidor e garantir que todos os dispositivos, como roteadores e firewalls, na rota concordem com a transferência de dados.
 * Ao enviar uma solicitação HTTP para um segmento ou um manifesto pela conexão TCP/IP.
 
-   O servidor recebe a solicitação, processa-a e começa a enviar os dados de volta ao cliente. O grau de atraso depende da carga e da complexidade do software no servidor e, de alguma forma, da velocidade de carregamento da conexão quando o cliente envia a solicitação.
+   O servidor recebe a solicitação, processa-a e start enviam os dados de volta para o cliente. O grau de atraso depende da carga e da complexidade do software no servidor e, de alguma forma, da velocidade de carregamento da conexão quando o cliente envia a solicitação.
