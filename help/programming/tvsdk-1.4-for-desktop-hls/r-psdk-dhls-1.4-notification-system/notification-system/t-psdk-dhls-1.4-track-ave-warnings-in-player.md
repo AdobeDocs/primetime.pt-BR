@@ -1,20 +1,23 @@
 ---
-description: Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Adobe Video Engine (AVE).
-seo-description: Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Adobe Video Engine (AVE).
+description: Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Mecanismo de vídeo Adobe (AVE).
+seo-description: Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Mecanismo de vídeo Adobe (AVE).
 seo-title: Rastrear avisos AVE em seu player
 title: Rastrear avisos AVE em seu player
 uuid: 236aee5e-6b1a-4298-9d3b-f33b40416c19
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '187'
+ht-degree: 1%
 
 ---
 
 
 # Rastrear avisos AVE em seu player{#track-ave-warnings-in-your-player}
 
-Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Adobe Video Engine (AVE).
+Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Mecanismo de vídeo Adobe (AVE).
 
-O aplicativo do player pode rastrear avisos e erros de reprodução gerados pelo AVE, como failover ou eventos de rede que não interrompem a reprodução e não exigem necessariamente nenhuma ação do aplicativo. Embora alguns erros de AVE sejam tratados pelo TVSDK, `NotificationEvent` serve como um mecanismo de passagem geral para a camada do aplicativo para avisos de AVE. Depois de receber avisos AVE, você pode optar por realizar alguma ação, como interromper a reprodução de forma proativa, ativar um plano de contingência, registrar mensagens e assim por diante.
+O aplicativo do player pode rastrear avisos e erros de reprodução gerados pelo AVE, como eventos de failover ou de rede desativados que não interrompem a reprodução e não exigem necessariamente nenhuma ação do aplicativo. Embora alguns erros de AVE sejam tratados pelo TVSDK, `NotificationEvent` serve como um mecanismo de passagem geral para a camada do aplicativo para avisos de AVE. Depois de receber avisos AVE, você pode optar por realizar alguma ação, como interromper a reprodução de forma proativa, ativar um plano de contingência, registrar mensagens e assim por diante.
 
 Use os seguintes elementos de API para rastrear avisos AVE no player:
 
@@ -76,7 +79,7 @@ public class NotificationEvent extends Event {
 }
 ```
 
-Adicione um ouvinte de evento ao player para capturar avisos AVE.
+Adicione um ouvinte de evento ao player para receber avisos AVE.
 
 Por exemplo:
 
@@ -108,10 +111,10 @@ Este é um exemplo de avisos AVE que foram rastreados usando `NotificationEvent`
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [runtimeCodeMessage:SEGMENT_SKIPPED_ON_FAILURE] 
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [eventType:Warning] 
  
-<ph>
+<pre>
   [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [description:url::= 
    https://xyz.corp.adobe.com/pmp/assets/abc/failover/tc.1.04/content/backup-01/ 
    low-res/main-stream4-4x3-info6.ts,periodIndex::=0, 
    sizeBytes::=0,downloadTime(ms)::=0,mediaDuration(ms)::=0] 
-</ph>
+</pre>
 ```
