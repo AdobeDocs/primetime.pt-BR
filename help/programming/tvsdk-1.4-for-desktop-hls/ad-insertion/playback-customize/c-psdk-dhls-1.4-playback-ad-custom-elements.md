@@ -5,7 +5,10 @@ seo-title: Elementos de API para reprodução de anúncio
 title: Elementos de API para reprodução de anúncio
 uuid: 61ebbfd7-696c-4a5b-8dbb-682770cd5840
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ Os seguintes elementos de API são úteis para personalizar a reprodução:
   <tr> 
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">Controle se uma quebra de anúncio deve ser marcada como assistida por um visualizador e, em caso afirmativo, quando marcá-la. Defina e obtenha a política assistida usando 
-    <ph>
+    <pre>
      a propriedade <span class="codeph"> adBreakAsWatched</span> .
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreakPolicy</span> </td> 
