@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
+source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Os principais problemas do cliente corrigidos na versão atual são mencionados 
 
 **Android TVSDK 3.11**
 
-* **Captura de caixa de cabeçalho específico do sistema de proteção (PSSH) permitida** - o TVSDK permite a busca da Caixa de cabeçalho específico do sistema de proteção associada ao recurso de mídia carregado atual. Nova API `getPSSH()` adicionada à `com.adobe.mediacore.drm.DRMManager`.
+* **A busca de caixas de cabeçalho específico do sistema de proteção (PSSH) é permitida** - o TVSDK permite a busca da Caixa de cabeçalho específico do sistema de proteção associada ao recurso de mídia carregado atual. Nova API `getPSSH()` adicionada à `com.adobe.mediacore.drm.DRMManager`.
 
 Para obter mais informações, consulte [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
 
@@ -68,7 +68,7 @@ O lançamento focou na correção de problemas principais do cliente, conforme m
 
 * **Suporte pré-rolo com recurso** Paral Ad-Break - Com esse aprimoramento, o TVSDK 3.8 suporta anúncios precedentes com o recurso Parcial Ad-Break (PABI).
 
-O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ao vivo, emulando a experiência da televisão ao vivo.
+O anúncio precedente, se disponível, é reproduzido e o conteúdo é reproduzido a partir do ponto ativo, emulando a experiência da televisão ao vivo.
 
 **Android TVSDK 3.7**
 
@@ -182,7 +182,7 @@ O TVSDK agora cancela o download do segmento em andamento, se necessário, e alt
 
 * **Inserção parcial de quebra de anúncio**
 
-   Experiência semelhante à da TV de participar do meio de um anúncio sem acionar o rastreamento do anúncio assistido parcialmente.\
+   Experiência semelhante à da TV de participar do meio de um anúncio sem acionar o rastreamento do anúncio parcialmente assistido.\
    Exemplo: O usuário ingressa no meio (em 40 segundos) de um intervalo de anúncios de 90 segundos que consiste em três anúncios de 30 segundos. Dez segundos depois do segundo anúncio no intervalo.
 
    * O segundo anúncio é reproduzido pela duração restante (20 segundos) seguido pelo terceiro anúncio.
@@ -242,7 +242,7 @@ O Android TVSDK v2.5.3 oferta as seguintes atualizações e alterações de API.
 
    * Uma nova propriedade é adicionada e define se o espaço deve ser tratado como alfanumérico ao exibir legendas. `TextFormat::treatSpaceAsAlphaNum`
 
-* Alterações em `SizeAvailableEvent`. Anteriormente, `getHeight()` e os `getWidth()` métodos `SizeAvailableEvent` no ponto 2.5.2 eram usados para retornar a altura e a largura do quadro, que eram retornados pelo formato de mídia. Agora retorna a altura de saída e a largura de saída respectivamente retornadas pelo decodificador.
+* Alterações em `SizeAvailableEvent`. Anteriormente, `getHeight()` e os `getWidth()` métodos do `SizeAvailableEvent` no ponto 2.5.2 eram usados para retornar a altura e a largura do quadro, retornados pelo formato de mídia. Agora retorna a altura de saída e a largura de saída respectivamente retornadas pelo decodificador.
 
 * Alterações no comportamento do Buffering: O comportamento de buffer é alterado. É deixada para o desenvolvedor do aplicativo no que ele quer fazer no caso de buffer vazio. 2.5.3 usa o tamanho do buffer de reprodução em uma situação vazia do buffer.
 
