@@ -5,7 +5,10 @@ seo-title: Recursos DASH suportados
 title: Recursos DASH suportados
 uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ O TVSDK do navegador suporta vários recursos do DASH que você pode implementar
 
 >[!TIP]
 >
->Nas tabelas de matriz de recursos abaixo, ![](assets/supported15.png)>
+>Nas tabelas de matriz de recursos abaixo,  ![](assets/supported15.png)
 >significa que o recurso é suportado na versão atual.
 
 Os seguintes recursos são suportados:
@@ -83,7 +86,7 @@ Os seguintes recursos são suportados:
 
 | Categoria | Tipo de conteúdo | Recurso | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Integrações | VOD + Live | Integração VHL do Adobe Analytics | ![](assets/supported15.png) |
+| Integrações | VOD + Live | Integração Adobe Analytics VHL | ![](assets/supported15.png) |
 | Integrações | VOD + Live | Cobrança | ![](assets/supported15.png) |
 | Integrações | VOD + Live | Procurar | ![](assets/supported15.png) |
 
@@ -91,26 +94,26 @@ Os seguintes recursos são suportados:
 
 | Categoria | Tipo de conteúdo | Recurso | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Inserção do anúncio | VOD | Somente publicidade | Não suportado |
-| Inserção do anúncio | VOD | Parâmetros de definição de metas | Somente VOD |
-| Inserção do anúncio | VOD | Parâmetros personalizados | Somente VOD |
-| Inserção do anúncio | VOD + Live | Política de anúncio personalizada | Não suportado |
-| Inserção do anúncio | VOD + Live | Carregamento de anúncio ocioso | Não suportado |
-| Inserção do anúncio | VOD | Anúncios complementares, anúncios em banner e anúncios clicáveis | Não suportado |
-| Inserção do anúncio | VOD | VPAID 2.0 | Não suportado |
+| Ad Insertion | VOD | Somente publicidade | Não suportado |
+| Ad Insertion | VOD | Parâmetros de definição de metas | Somente VOD |
+| Ad Insertion | VOD | Parâmetros personalizados | Somente VOD |
+| Ad Insertion | VOD + Live | Política de anúncio personalizada | Não suportado |
+| Ad Insertion | VOD + Live | Carregamento de anúncio ocioso | Não suportado |
+| Ad Insertion | VOD | Anúncios complementares, anúncios em banner e anúncios clicáveis | Não suportado |
+| Ad Insertion | VOD | VPAID 2.0 | Não suportado |
 
 ## Principais recursos de inserção de anúncio do DASH (CSAI) {#dash-core-ad-insertion}
 
 | Categoria | Tipo de conteúdo | Recurso | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Inserção do anúncio | VOD + Live | Pré-lançamento | Somente VOD |
-| Inserção do anúncio | VOD + Live | Meia rolagem | Somente VOD |
-| Inserção do anúncio | VOD + Live | Pós-rolagem | Somente VOD |
-| Inserção do anúncio | FER VOD | Resolução e comportamento do anúncio | Não suportado |
-| Inserção do anúncio | VOD + Live | Política de publicidade padrão | Somente VOD |
-| Inserção do anúncio | VOD + Live | VAST 2.0/3.0 | Somente VOD |
-| Inserção do anúncio | VOD + Live | VMAP 1.0 | Somente VOD |
-| Inserção do anúncio | VOD + Live | CRS v3.1 | Somente VOD |
+| Ad Insertion | VOD + Live | Pré-lançamento | Somente VOD |
+| Ad Insertion | VOD + Live | Meia rolagem | Somente VOD |
+| Ad Insertion | VOD + Live | Pós-rolagem | Somente VOD |
+| Ad Insertion | FER VOD | Resolução e comportamento do anúncio | Não suportado |
+| Ad Insertion | VOD + Live | Política de publicidade padrão | Somente VOD |
+| Ad Insertion | VOD + Live | VAST 2.0/3.0 | Somente VOD |
+| Ad Insertion | VOD + Live | VMAP 1.0 | Somente VOD |
+| Ad Insertion | VOD + Live | CRS v3.1 | Somente VOD |
 
 ## Recursos de proteção de conteúdo DASH {#dash-content-protection}
 
@@ -149,7 +152,7 @@ Os seguintes recursos são suportados:
        <li id="li_BC06B0A6EAAC4FC991C713775A8BB4DA">Cromecast </li> 
       </ul> </li> 
      <li id="li_D48B51C2208F423CB85D08886C2E1C66">PlayReady no Internet Explorer no Windows 8.1 e Edge </li> 
-     <li id="li_2786AC19387241A296E015EE6FD07F2D">Adobe Access para Windows Firefox (somente vídeo) </li> 
+     <li id="li_2786AC19387241A296E015EE6FD07F2D">Adobe Access for Windows Firefox (somente vídeo) </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
