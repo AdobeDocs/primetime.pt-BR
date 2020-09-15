@@ -5,7 +5,10 @@ seo-title: Controlar a visibilidade da legenda
 title: Controlar a visibilidade da legenda
 uuid: b9d48d70-2554-4948-8654-fa45093c3782
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,15 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 >
 >Se o texto da legenda fechada for exibido quando o player entrar no modo de busca, o texto não será mais exibido depois que a busca for concluída. Em vez disso, após alguns segundos, o TVSDK exibe o próximo texto de legenda fechada no vídeo após a posição de busca final.
 >
->Os valores de visibilidade para legendas fechadas são definidos em `MediaPlayer.Visibility`. >
+>Os valores de visibilidade para legendas fechadas são definidos em `MediaPlayer.Visibility`.
 >
-```java>
+>
+```java
 >enum Visibility {  
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. Aguarde até `MediaPlayer` o estado PREPARADO.
 
