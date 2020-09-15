@@ -5,7 +5,10 @@ seo-title: Controlar estilo de legenda
 title: Controlar estilo de legenda
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -128,21 +131,23 @@ Essa classe encapsula informações de estilo de legenda fechada, como tipo de f
 
       >[!IMPORTANT]
       >
-      >**Configurações de cores:** No Android TVSDK 2.X, foi feito um aprimoramento no estilo de cores de legendas fechadas. O aprimoramento permite definir cores de legenda fechada usando uma sequência hexadecimal que representa valores de cor RGB. A representação de cores hexadecimais RGB é a sequência familiar de 6 bytes usada em aplicativos como o Photoshop:       >
+      >**Configurações de cores:** No Android TVSDK 2.X, foi feito um aprimoramento no estilo de cores de legendas fechadas. O aprimoramento permite definir cores de legenda fechada usando uma sequência hexadecimal que representa valores de cor RGB. A representação de cores hexadecimais RGB é a sequência familiar de 6 bytes usada em aplicativos como o Photoshop:
       >
       >    * FFFFFF = Preto
       >    * 000000 = Branco
       >    * FF0000 = Vermelho
       >    * 00FF00 = Verde
       >    * 0000FF = Azul
+
       >
       >e assim por diante.
       >
-      >No aplicativo, sempre que você envia informações de estilização de cor para `TextFormatBuilder`, ainda usa a `Color` enumeração como antes, mas agora você deve adicionar `getValue()` à cor para obter o valor como uma string. Por exemplo:
-      >
+      >No aplicativo, sempre que você envia informações de estilização de cor para `TextFormatBuilder`, ainda usa a `Color` lista discriminada como antes, mas agora você deve adicionar `getValue()` à cor para obter o valor como uma string. Por exemplo:
+
       ```
-      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      >```
+      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      ```
+
 
 
 
@@ -169,8 +174,7 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
->
->Nas opções que definem valores padrão (por exemplo, `DEFAULT`), esse valor se refere ao que era a configuração quando a legenda foi originalmente especificada.
+Nas opções que definem valores padrão (por exemplo, `DEFAULT`), esse valor se refere ao que era a configuração quando a legenda foi originalmente especificada.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -182,11 +186,11 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fonte </td> 
-   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente para um valor definido pela enumeração <span class="codeph"> TextFormat.Font </span> e representa, por exemplo, um espaçamento único com ou sem serifs. </p> <p>Dica:  As fontes reais disponíveis em um dispositivo podem variar e as substituições são usadas quando necessário. O espaço único com serifs é normalmente utilizado como substituto, embora essa substituição possa ser específica do sistema. </p> </td> 
+   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente para um valor definido pela <span class="codeph"> lista discriminada TextFormat.Font e representa, por exemplo, um </span> espaçamento único com ou sem serifs. </p> <p>Dica:  As fontes reais disponíveis em um dispositivo podem variar e as substituições são usadas quando necessário. O espaço único com serifs é normalmente utilizado como substituto, embora essa substituição possa ser específica do sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamanho </td> 
-   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente para um valor definido pela enumeração <span class="codeph"> TextFormat.Size </span> : 
+   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente para um valor definido pela lista discriminada <span class="codeph"> TextFormat.Size </span> : 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MÉDIO </span> - O tamanho padrão </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Aproximadamente 30% maior que a média </li> 
@@ -196,11 +200,11 @@ public TextFormatBuilder(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Borda da fonte </td> 
-   <td colname="2"> <p>O efeito usado para a borda da fonte, como elevado ou nenhum. </p> <p>Pode ser definido somente para um valor definido pela enumeração <span class="codeph"> TextFormat.FontEdge </span> . </p> </td> 
+   <td colname="2"> <p>O efeito usado para a borda da fonte, como elevado ou nenhum. </p> <p>Pode ser definido somente para um valor definido pela <span class="codeph"> lista discriminada TextFormat.FontEdge </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da fonte </td> 
-   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente para um valor definido pela enumeração <span class="codeph"> TextFormat.Color </span> . </p> </td> 
+   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente como um valor definido pela <span class="codeph"> lista discriminada TextFormat.Color </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da borda </td> 
