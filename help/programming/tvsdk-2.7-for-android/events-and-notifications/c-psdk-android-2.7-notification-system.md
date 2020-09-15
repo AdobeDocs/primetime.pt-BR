@@ -1,11 +1,14 @@
 ---
-description: Os objetos MediaPlayerStatus fornecem informações sobre alterações no status do player. Objetos de notificação fornecem informações sobre avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player. Você implementa ouvintes de eventos para capturar e responder a eventos (objetos MediaPlayerEvent).
-seo-description: Os objetos MediaPlayerStatus fornecem informações sobre alterações no status do player. Objetos de notificação fornecem informações sobre avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player. Você implementa ouvintes de eventos para capturar e responder a eventos (objetos MediaPlayerEvent).
+description: Os objetos MediaPlayerStatus fornecem informações sobre alterações no status do player. Objetos de notificação fornecem informações sobre avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player. Você implementa ouvintes de evento para capturar e responder a eventos (objetos MediaPlayerEvent).
+seo-description: Os objetos MediaPlayerStatus fornecem informações sobre alterações no status do player. Objetos de notificação fornecem informações sobre avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player. Você implementa ouvintes de evento para capturar e responder a eventos (objetos MediaPlayerEvent).
 seo-title: Notificações e eventos para status, atividade, erros e registro do player
 title: Notificações e eventos para status, atividade, erros e registro do player
 uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Eventos e notificações ajudam a gerenciar os aspectos assíncronos do aplicativo de vídeo.
 
-Os objetos MediaPlayerStatus fornecem informações sobre alterações no status do player. Objetos de notificação fornecem informações sobre avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player. Você implementa ouvintes de eventos para capturar e responder a eventos (objetos MediaPlayerEvent).
+Os objetos MediaPlayerStatus fornecem informações sobre alterações no status do player. Objetos de notificação fornecem informações sobre avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player. Você implementa ouvintes de evento para capturar e responder a eventos (objetos MediaPlayerEvent).
 
 Seu aplicativo pode recuperar informações de notificação e status. Usando essas informações, você também pode criar um sistema de registro para diagnóstico e validação.
 
@@ -67,23 +70,22 @@ O sistema de notificação permite coletar informações de registro e depuraç�
 
 Este é um exemplo de como recuperar notificações:
 
-1. Crie um thread de execução com base em temporizador para seu aplicativo de vídeo que consulta periodicamente os dados coletados pelo sistema de notificação TVSDK.
-1. Se o intervalo do temporizador for muito grande e o tamanho da lista de eventos for muito pequeno, a lista de eventos de notificação será estendida.
+1. Crie um thread de execução com base em temporizador para seu aplicativo de vídeo que query periodicamente os dados coletados pelo sistema de notificação TVSDK.
+1. Se o intervalo do temporizador for muito grande e o tamanho da lista do evento for muito pequeno, a lista do evento de notificação estourará.
 
    >[!NOTE]
    >
-   >Para evitar esse sobrefluxo, execute um dos procedimentos a seguir:    >
-   >    
-   >    
-   >    1. Diminua o intervalo de tempo que direciona o thread que pesquisa novos eventos.
-   >    1. Aumente o tamanho da lista de notificações.
+   >Para evitar esse sobrefluxo, execute um dos procedimentos a seguir:
+   >
+   >1. Diminua o intervalo de tempo que direciona o thread que pesquisa novos eventos.
+   >1. Aumente o tamanho da lista de notificação.
 
 
-1. Serialize as entradas de evento de notificação mais recentes no formato JSON e envie as entradas para um servidor remoto para pós-processamento.
+1. Serialize as entradas mais recentes do evento de notificação no formato JSON e envie as entradas para um servidor remoto para pós-processamento.
 
    >[!NOTE]
    >
    >O servidor remoto pode exibir graficamente os dados fornecidos em tempo real.
 
-1. Para detectar a perda de eventos de notificação, procure por lacunas na sequência de valores de índice de eventos.
+1. Para detectar a perda de eventos de notificação, procure por lacunas na sequência de valores de índice de evento.
 
