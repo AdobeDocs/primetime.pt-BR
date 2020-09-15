@@ -5,7 +5,10 @@ seo-title: Controlar a visibilidade da legenda
 title: Controlar a visibilidade da legenda
 uuid: f142e60d-5581-4d1c-9d4d-a4a58ac1b67b
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,15 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
 >
 >Se o texto da legenda fechada for exibido quando o player entrar no modo de busca, o texto não será mais exibido depois que a busca for concluída. Em vez disso, após alguns segundos, o TVSDK exibe o próximo texto de legenda fechada no vídeo após a posição de busca final.
 >
->Os valores de visibilidade para legendas fechadas são definidos em `MediaPlayer.Visibility`. >
+>Os valores de visibilidade para legendas fechadas são definidos em `MediaPlayer.Visibility`.
 >
-```java>
+>
+```java
 >enum Visibility {  
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. Aguarde até `MediaPlayer` o estado PREPARADO. Para obter mais informações, consulte [Aguardar um status](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)válido.
 
