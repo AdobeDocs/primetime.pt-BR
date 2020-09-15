@@ -5,7 +5,10 @@ seo-title: Controlar a visibilidade da legenda
 title: Controlar a visibilidade da legenda
 uuid: 42913347-8158-474e-aa3c-ba4d38baba12
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,16 +23,15 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 >[!NOTE]
 >
->Os valores de visibilidade para legendas fechadas são definidos em `MediaPlayer.Visibility`. >
+>Os valores de visibilidade para legendas fechadas são definidos em `MediaPlayer.Visibility`.
 >
-```java>
+>
+```java
 >enum Visibility { 
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. Aguarde o MediaPlayer ter pelo menos o estado PREPARED (consulte [Aguardar um estado](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)válido).
 1. Para obter a configuração de visibilidade atual de legendas fechadas, use o método getter no MediaPlayer, que retorna um valor de visibilidade.
