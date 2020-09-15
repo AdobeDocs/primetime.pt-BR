@@ -5,9 +5,9 @@ seo-title: Controlar estilo de legenda
 title: Controlar estilo de legenda
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
@@ -143,10 +143,11 @@ Essa classe encapsula informações de estilo de legenda fechada, como tipo de f
       >e assim por diante.
       >
       >No aplicativo, sempre que você envia informações de estilização de cor para `TextFormatBuilder`, ainda usa a `Color` lista discriminada como antes, mas agora você deve adicionar `getValue()` à cor para obter o valor como uma string. Por exemplo:
-
+      >
+      >
       ```
-      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      ```
+      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      >```
 
 
 
@@ -174,7 +175,8 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
-Nas opções que definem valores padrão (por exemplo, `DEFAULT`), esse valor se refere ao que era a configuração quando a legenda foi originalmente especificada.
+>
+>Nas opções que definem valores padrão (por exemplo, `DEFAULT`), esse valor se refere ao que era a configuração quando a legenda foi originalmente especificada.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
