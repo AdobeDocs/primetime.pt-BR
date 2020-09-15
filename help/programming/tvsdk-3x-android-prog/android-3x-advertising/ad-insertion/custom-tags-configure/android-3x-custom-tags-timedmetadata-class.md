@@ -5,7 +5,10 @@ seo-title: Classe de metadados cronometrados
 title: Classe de metadados cronometrados
 uuid: c7b1c1d7-48b3-43c7-aa21-f800d894976d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ A classe fornece os seguintes elementos:
 <table id="table_FFC56AC5B1E04DA99C9309C0223ABA90"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"><b> Propriedade </b></th> 
+   <th colname="col1" class="entry"><b> Arte </b></th> 
    <th colname="col02" class="entry"> <b> Tipo </b></th> 
    <th colname="col2" class="entry"> <b> Descrição </b> </th> 
   </tr> 
@@ -43,7 +46,7 @@ A classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"> <span class="codeph"> time </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>A posição de tempo, em milissegundos, em relação ao início do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. Use <span class="codeph"> getTime </span>. </p> </td> 
+   <td colname="col2"> <p>A posição de tempo, em milissegundos, em relação ao start do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. Use <span class="codeph"> getTime </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> type </span> </td> 
@@ -65,18 +68,15 @@ Lembre-se do seguinte:
 
    >[!TIP]
    >
-   >Dados complexos em tags personalizadas no manifesto, como strings com caracteres especiais, devem estar entre aspas. Por exemplo:   >
+   >Dados complexos em tags personalizadas no manifesto, como strings com caracteres especiais, devem estar entre aspas. Por exemplo:
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url= 
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
+   >```
 
-
-
-* Se a extração falhar devido a um formato de tag personalizado, a propriedade de metadados ficará vazia e seu aplicativo deverá extrair as informações reais. Nesse caso, nenhum erro é emitido.
+* Se a extração falhar devido a um formato de tag personalizado, a propriedade metadata ficará vazia e seu aplicativo deverá extrair as informações reais. Nesse caso, nenhum erro é emitido.
 
 <table id="table_1BAE98BF23F641A3A5709EBE37B327F6"> 
  <thead> 
@@ -96,7 +96,7 @@ Lembre-se do seguinte:
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public long getTime(); </span> </td> 
-   <td colname="col2"> <p>A posição de tempo, em relação ao início do conteúdo principal, em que esses metadados foram inseridos no fluxo. </p> </td> 
+   <td colname="col2"> <p>A posição de tempo, relativa ao start do conteúdo principal, em que esses metadados foram inseridos no fluxo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public Metadata getMetadata(); </span> </td> 
