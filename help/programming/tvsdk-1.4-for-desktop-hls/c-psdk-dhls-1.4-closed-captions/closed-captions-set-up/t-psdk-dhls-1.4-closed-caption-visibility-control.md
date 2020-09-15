@@ -5,7 +5,10 @@ seo-title: Controlar a visibilidade da legenda
 title: Controlar a visibilidade da legenda
 uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +23,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 >[!NOTE]
 >
->Os valores de visibilidade para legendas fechadas são definidos em `ClosedCaptionsVisibility`. >
+>Os valores de visibilidade para legendas fechadas são definidos em `ClosedCaptionsVisibility`.
 >
-```>
+>
+```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
->```>
-
-
+>```
 
 1. Aguarde até `MediaPlayer` que o status PREPARADO seja pelo menos igual (consulte [Aguardar um estado](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)válido).
 1. Para obter a configuração de visibilidade atual de legendas fechadas, use o método getter em `MediaPlayer`, que retorna um valor de visibilidade.
