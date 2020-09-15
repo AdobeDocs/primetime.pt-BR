@@ -5,7 +5,10 @@ seo-title: Classe de metadados cronometrados
 title: Classe de metadados cronometrados
 uuid: 827a3bcf-a584-4032-aa19-4fc7730778cc
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ A classe fornece os seguintes elementos:
 <table id="table_FFC56AC5B1E04DA99C9309C0223ABA90"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> Propriedade </th> 
+   <th colname="col1" class="entry"> Arte </th> 
    <th colname="col02" class="entry"> Tipo </th> 
    <th colname="col2" class="entry"> Descrição </th> 
   </tr>
@@ -28,7 +31,7 @@ A classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"><span class="codeph"> conteúdo</span> </td> 
    <td colname="col02"> String </td> 
-   <td colname="col2"> O conteúdo bruto dos metadados cronometrados. Se o tipo for TAG, o valor representará a lista inteira de atributos da indicação/tag. Se o tipo id ID3 for nulo. </td> 
+   <td colname="col2"> O conteúdo bruto dos metadados cronometrados. Se o tipo for TAG, o valor representará a lista do atributo inteiro da dica/tag. Se o tipo id ID3 for nulo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> id</span> </td> 
@@ -48,7 +51,7 @@ A classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"><span class="codeph"> time</span> </td> 
    <td colname="col02"> Número </td> 
-   <td colname="col2"> A posição de tempo, em milissegundos, em relação ao início do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. </td> 
+   <td colname="col2"> A posição de tempo, em milissegundos, em relação ao start do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> type</span> </td> 
@@ -70,25 +73,22 @@ Lembre-se do seguinte:
 
    >[!TIP]
    >
-   >Dados complexos em tags personalizadas no manifesto, como strings com caracteres especiais, devem estar entre aspas. Por exemplo:   >
+   >Dados complexos em tags personalizadas no manifesto, como strings com caracteres especiais, devem estar entre aspas. Por exemplo:
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
+   >```
 
-
-
-* Se a extração falhar devido a um formato de tag personalizado, a propriedade de metadados ficará vazia e seu aplicativo deverá extrair as informações reais. Nenhum erro é emitido nesse caso.
+* Se a extração falhar devido a um formato de tag personalizado, a propriedade metadata ficará vazia e seu aplicativo deverá extrair as informações reais. Nenhum erro é emitido nesse caso.
 
 | Elemento | Descrição |
 |---|---|
 | `TAG, ID3 ID3, TAG` | Tipos possíveis para os metadados cronometrados. |
 | `public function TimedMetadata(type:String, time:Number, id:String, name:String, content:String, metadata:Metadata)` | Construtor padrão (tempo é o tempo de fluxo local). |
 | `content:String` | O conteúdo bruto da tag de origem desses metadados cronometrados. |
-| `time:Number` | A posição de tempo, em relação ao início do conteúdo principal, em que esses metadados foram inseridos no fluxo. |
+| `time:Number` | A posição de tempo, relativa ao start do conteúdo principal, em que esses metadados foram inseridos no fluxo. |
 | `metadata:Metadata` | Os metadados inseridos no fluxo. |
 | `type:String` | Retorna o tipo de metadados cronometrados. |
 | `id:String` | Retorna a ID extraída dos atributos de sinalização/tag. Caso contrário, um valor aleatório exclusivo será fornecido. |
