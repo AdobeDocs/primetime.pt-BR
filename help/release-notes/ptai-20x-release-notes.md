@@ -1,28 +1,43 @@
 ---
-title: Notas de versão do PTAI 20.9.1
-description: As notas de versão PTAI 20.9.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+title: Notas de versão do PTAI 20.9.2
+description: As notas de versão PTAI 20.9.2 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 translation-type: tm+mt
-source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
 
 
-# Notas de versão do Primetime Dynamic Ad Insertion 20.9.1
+# Notas de versão do Primetime Dynamic Ad Insertion 20.9.2
 
-As notas de versão do Dynamic Ad Insertion 20.9.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+As notas de versão do Dynamic Ad Insertion 20.9.2 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 
-## Novidades do PTAI 20.9.1
+## Novidades do PTAI 20.9.2
+
+**Quando:** terça-feira, 15 de setembro de 2020, das 3:30 às 6:30 Hora do Leste
+
+**Aprimoramentos**
+
+* Suporte fornecido para a inclusão de tipos de anúncios não lineares usando `EXT-X-MARKER` tags.
+Para obter mais informações ou ativar esse recurso, entre em contato com o representante do suporte técnico.
+
+* Fornecido suporte para limitar o tempo geral de resolução do anúncio, se os provedores demorarem muito para responder. Para ativar a limitação, defina o parâmetro da API de inicialização como `ptadtimeout` um valor em milissegundos.
+
+   >[!NOTE]
+   >
+   >Esse tempo limite se aplica somente às solicitações de anúncio, não às solicitações de anúncio.
+
+### Aprimoramentos e correções nas versões anteriores
+
+#### Versão 20.9.1
 
 **Quando:** terça-feira, 1 de setembro de 2020, das 3:30 às 7:30, horário do leste
 
 **Alterações**
 
 * Correção do problema para clientes que usavam HLS/CMAF, onde EXT-X-MAP às vezes não possuíam tokens CDN ou tags EXT-X-MAP às vezes eram implantadas incorretamente na janela do DVR.
-
-### Aprimoramentos e correções nas versões anteriores
 
 #### Versão 20.8.4
 
