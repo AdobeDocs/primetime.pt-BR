@@ -5,7 +5,7 @@ seo-title: Controlar estilo de legenda
 title: Controlar estilo de legenda
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
+source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -133,11 +133,11 @@ Essa classe encapsula informações de estilo de legenda fechada, como tipo de f
       >
       >**Configurações de cores:** No Android TVSDK 2.X, foi feito um aprimoramento no estilo de cores de legendas fechadas. O aprimoramento permite definir cores de legenda fechada usando uma sequência hexadecimal que representa valores de cor RGB. A representação de cores hexadecimais RGB é a sequência familiar de 6 bytes usada em aplicativos como o Photoshop:
       >
-      >    * FFFFFF = Preto
-      >    * 000000 = Branco
-      >    * FF0000 = Vermelho
-      >    * 00FF00 = Verde
-      >    * 0000FF = Azul
+      >* FFFFFF = Preto
+      >* 000000 = Branco
+      >* FF0000 = Vermelho
+      >* 00FF00 = Verde
+      >* 0000FF = Azul
 
       >
       >e assim por diante.
