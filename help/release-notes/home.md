@@ -4,9 +4,9 @@ seo-title: Notas de versão do Adobe Primetime
 description: nulo
 seo-description: nulo
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,9 @@ ht-degree: 0%
 
 Bem-vindo às Notas de versão da Adobe Primetime. Os documentos listados na navegação esquerda fornecem informações específicas da versão, requisitos do sistema, limitações, problemas fixos e problemas conhecidos.
 
-## Aprimoramentos e correções no PTAI 20.9.2
+## Aprimoramentos e correções no PTAI 20.9.3
 
-O lançamento se concentrou em fornecer suporte para a inclusão de tipos de anúncios não-lineares usando `EXT-X-MARKER` tags e para limitar o tempo geral de resolução de anúncios quando os provedores demoram muito para responder.
-
-Para obter mais informações sobre a versão atual lançada do Dynamic Ad Insertion, consulte as notas [de versão do](ptai-20x-release-notes.md)PTAI.
+O objetivo da versão é fornecer o parâmetro de API de inicialização `ptparallelstream`, para permitir que os clientes com players que solicitam streams de áudio ou vídeo descompilados CMAF em paralelo, a fim de garantir que os anúncios nas faixas de áudio e vídeo sejam consistentes.
 
 ## Correções no Android TVSDK 3.12
 
