@@ -1,20 +1,30 @@
 ---
-title: Notas de versão do PTAI 20.9.2
-description: As notas de versão PTAI 20.9.2 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+title: Notas de versão do PTAI 20.9.3
+description: As notas de versão PTAI 20.9.3 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 
-# Notas de versão do Primetime Dynamic Ad Insertion 20.9.2
+# Notas de versão do Primetime Dynamic Ad Insertion 20.9.3
 
-As notas de versão do Dynamic Ad Insertion 20.9.2 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+As notas de versão do Dynamic Ad Insertion 20.9.3 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
 
-## Novidades do PTAI 20.9.2
+## Novidades do PTAI 20.9.3
+
+**Quando:** quarta-feira, 30 de setembro de 2020 às 15:30 às 6:30 Hora do Leste
+
+**Alterações**
+
+* Foi adicionado um parâmetro da API de Bootstrap `ptparallelstream`. Isso permite que os clientes com players que solicitam streams de áudio ou vídeo descompilados CMAF em paralelo, a fim de garantir que os anúncios nas faixas de áudio e vídeo sejam consistentes. Defina o valor do parâmetro como true para ativar esse recurso ou omitir para desativar.
+
+### Aprimoramentos e correções nas versões anteriores
+
+#### Versão 20.9.2
 
 **Quando:** terça-feira, 15 de setembro de 2020, das 3:30 às 6:30 Hora do Leste
 
@@ -28,8 +38,6 @@ Para obter mais informações ou ativar esse recurso, entre em contato com o rep
    >[!NOTE]
    >
    >Esse tempo limite se aplica somente às solicitações de anúncio, não às solicitações de anúncio.
-
-### Aprimoramentos e correções nas versões anteriores
 
 #### Versão 20.9.1
 
