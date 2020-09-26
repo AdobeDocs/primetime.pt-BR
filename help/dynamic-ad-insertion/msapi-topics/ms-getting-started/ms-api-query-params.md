@@ -5,9 +5,9 @@ seo-title: Parâmetros do query do servidor manifest
 title: Parâmetros do query do servidor manifest
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Os parâmetros do query informam ao servidor manifest que tipo de cliente enviou a solicitação e o que esse cliente deseja que o servidor manifest faça. Alguns são obrigatórios e alguns têm formatos ou valores aceitáveis específicos.
 
-O URL completo consiste no URL básico seguido de um ponto de interrogação e, em seguida, de `parameterName=value` argumentos, separados por E: `Base URL?name1=value1&name2=value2& . . .&name n=value n`
+O URL completo consiste no URL básico seguido de um ponto de interrogação e, em seguida, de `parameterName=value` argumentos, separados por E: `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-## Parâmetros reconhecidos {#section_072845B7FA94468C8068E9092983C9E6}
+## Parâmetros reconhecidos {#recognized-parameters}
 
 O servidor manifest reconhece os seguintes parâmetros. Processa-os ou os transmite, juntamente com todos os parâmetros não reconhecidos, para o servidor de anúncios.
 
@@ -46,7 +46,9 @@ O servidor manifest reconhece os seguintes parâmetros. Processa-os ou os transm
 | token | Ativar tokens de autorização de segmento TS Observação:  Somente tokens CDN do Akamai são suportados | Para tokens de autorização de segmento TS | Booleano |
 | modo de rastreamento | Ativar o rastreamento de anúncios; personalizado do lado do cliente (simples), do lado do servidor (sstm) ou híbrido (simplesstm). | Não | simples, sstm ou simplesstm Observação:  Se esse parâmetro não estiver incluído, #EX-X-MARKER será inserido no manifesto. Ver Diretiva [](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md)EXT-X-MARKER. |
 | posição | Instrui o servidor manifest a retornar somente informações de rastreamento de anúncios. Não especifique esse parâmetro na solicitação de bootstrap. | Rastreamento do cliente | Nota alfanumérica:  O servidor manifest ignora todos os valores transmitidos. No entanto, se você passar uma string nula ou vazia, o servidor manifest retornará o M3U8 em vez de informações de rastreamento. |
-| pttrackingversion | A versão de formato das informações de rastreamento do lado do cliente. | Rastreamento do cliente | v1 , v2 , v3 ou vmap |
+| pttrackingversion | A versão de formato das informações de rastreamento do cliente. | Rastreamento do cliente | v1 , v2 , v3 ou vmap |
 | scteTracking | Procure M3U8 , antes que as informações de rastreamento SCTE possam ser obtidas no sidecar JSON V2.  <br/>Este parâmetro indica ao servidor manifest que o player que está buscando o M3U8 precisa que as informações da tag SCTE sejam recuperadas. | Não (padrão:  false ) | true ou false Observação:  Os dados SCTE-35 são retornados no auxiliar JSON com a seguinte combinação de valores de parâmetro de query: <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
 | vetargetmultiplicador | O número de segmentos a partir do ponto ativo O deslocamento de precedente é configurado usando:   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**Observação**:  Somente ao vivo/linear | Não (padrão:  3.0 ) | Flutuar |
 | vebufferLength | O número de segundos a partir do ponto ativo Nota:  Somente ao vivo/linear | Não (padrão:  3.0 ) | Flutuar |
+| ptadtimeout | Para limitar o tempo geral de resolução do anúncio, se os provedores demorarem muito para responder. | Sim, para ativar | valor em milissegundos |
+| ptparallelstream | Permite que os clientes com players que solicitam streams de áudio ou vídeo descompilados CMAF em paralelo, a fim de garantir que os anúncios nas faixas de áudio e vídeo sejam consistentes. | Sim, para ativar o recurso ou omitir para desativar. | true |
