@@ -5,7 +5,10 @@ seo-title: Apple FairPlay em aplicativos TVSDK
 title: Apple FairPlay em aplicativos TVSDK
 uuid: 5796d5af-0018-4c69-a755-65e4819ee838
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ O código do carregador de recursos é responsável pelas seguintes tarefas:
 1. Formate a solicitação.
 1. Forneça as informações necessárias ao servidor para que este possa decidir se a solicitação deve ser permitida.
 
-Por exemplo, se você estiver usando o DRM da Adobe Primetime Cloud com a tecnologia ExpressPlay, seu carregador de recursos enviará a solicitação para:
+Por exemplo, se você estiver usando o Adobe Primetime Cloud DRM fornecido pelo ExpressPlay, seu carregador de recursos enviará a solicitação para:
 
 ```
 https://fp-gen.service.expressplay.com
@@ -30,7 +33,7 @@ O carregador de recursos formata a solicitação e anexa um token ExpressPlay qu
 
 Quando você empacota seu conteúdo, o empacotador insere `skd:` URLs no manifesto M3U8. Após a `skd:` entrada, é possível colocar quaisquer dados no manifesto. Você pode usar esses dados no código do aplicativo para concluir as tarefas listadas acima. Por exemplo, você pode usar o `skd:{content_id}` para que seu aplicativo possa determinar a ID do conteúdo que está sendo reproduzido e solicitar um token para esse conteúdo específico. Você também pode, por exemplo, usar `skd:{entitlement_server_url}?cid={content_id}`, para que seu aplicativo não precise ter o URL do servidor de direito codificado.
 
-Talvez você não precise de informações no seu `skd:` URL se, ao iniciar a reprodução, você já souber a ID de conteúdo por meio de outros canais. O segundo exemplo é uma solução ideal para testar sua configuração, mas você também pode usá-la em um ambiente de produção.
+Talvez você não precise de informações no seu `skd:` URL se, ao reproduzir start, você já souber a ID de conteúdo por meio de outros canais. O segundo exemplo é uma solução ideal para testar sua configuração, mas você também pode usá-la em um ambiente de produção.
 
 >[!TIP]
 >
@@ -156,7 +159,7 @@ Você pode implementar o streaming do Apple FairPlay, que é a solução DRM da 
 
    >[!NOTE]
    >
-   >Certifique-se de seguir as instruções no *FairPlay Streaming Program Guide* ( *FairPlayStreaming_PG.pdf*), que está incluído no [FairPlay Server SDK para Desenvolvimento de um aplicativo](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)compatível com FPS).
+   >Certifique-se de seguir as instruções no *FairPlay Streaming Programa Guide* ( *FairPlayStreaming_PG.pdf*), que está incluído no [FairPlay Server SDK para Desenvolvimento de um aplicativo](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)compatível com FPS).
 
    O método `resourceLoader:shouldWaitForLoadingOfRequestedResource` equivale ao que está em `AVAssetResourceLoaderDelegate`.
 
