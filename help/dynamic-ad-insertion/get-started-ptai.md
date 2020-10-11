@@ -2,9 +2,9 @@
 title: Introdução ao Adobe Primetime Ad Insertion
 description: Introdução ao Adobe Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: 2a9bb089cda2b315f91b30d5cab0db9b3e372799
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Após a configuração correta do sistema, um fluxo de trabalho típico pode ser
 
 1. O Primetime Ad Insertion busca os fluxos solicitados do CDN de conteúdo, analisa/lê quaisquer informações de dicas, efetua chamadas para o servidor de anúncios e substitui as quebras de anúncios, conforme necessário.
 
-1. O Primetime Ad Insertion normaliza o manifesto, regravando os URLs de recursos e detectando se os anúncios exigem transcodificação, consulte [just-in-time ad transcoding](just-in-time-transcoding.md) and [package](just-in-time-repackaging.md).
+1. O Primetime Ad Insertion normaliza o manifesto, regravando os URLs de recursos e detectando se os anúncios precisam de transcodificação. <!-- see [Just-in-time ad transcoding](just-in-time-transcoding.md) and [packaging](just-in-time-repackaging.md).-->
 
 1. O Primetime Ad Insertion busca os anúncios necessários e insere os fragmentos apropriados nos manifestos.
 
