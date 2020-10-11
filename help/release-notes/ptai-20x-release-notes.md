@@ -1,28 +1,36 @@
 ---
-title: Notas de versão do PTAI 20.9.3
-description: As notas de versão PTAI 20.9.3 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+title: Notas de versão do PTAI 20.10.1
+description: As notas de versão PTAI 20.10.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Ad Insertion no ano 2020.
 translation-type: tm+mt
-source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
 
 
-# Notas de versão do Primetime Dynamic Ad Insertion 20.9.3
+# Notas de versão do Primetime Ad Insertion 20.10.1
 
-As notas de versão do Dynamic Ad Insertion 20.9.3 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano 2020.
+As notas de versão do Primetime Ad Insertion 20.10.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Ad Insertion no ano 2020.
 
-## Novidades do PTAI 20.9.3
+## Novidades do PTAI 20.10.1
+
+**Quando:** terça-feira, 13 de outubro de 2020, das 03h00 às 07h00, horário do leste
+
+**Alterações**
+
+* Atualizações de manutenção.
+
+### Aprimoramentos e correções nas versões anteriores
+
+#### Versão 20.9.3
 
 **Quando:** quarta-feira, 30 de setembro de 2020 às 15:30 às 6:30 Hora do Leste
 
 **Alterações**
 
 * Foi adicionado um parâmetro da API de Bootstrap `ptparallelstream`. Isso permite que os clientes com players que solicitam streams de áudio ou vídeo descompilados CMAF em paralelo, a fim de garantir que os anúncios nas faixas de áudio e vídeo sejam consistentes. Defina o valor do parâmetro como true para ativar esse recurso ou omitir para desativar.
-
-### Aprimoramentos e correções nas versões anteriores
 
 #### Versão 20.9.2
 
@@ -220,6 +228,6 @@ Quando a resolução estiver associada a um problema reportado, uma referência 
 
 ## Problemas conhecidos e limitações
 
-**PTAI 20.3.3**
+**PTAI 20.10.1**
 
 Nenhuma nova limitação foi adicionada.
