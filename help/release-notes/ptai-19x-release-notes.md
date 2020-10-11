@@ -1,18 +1,18 @@
 ---
 title: Notas de versão do PTAI 19.11.1
-description: As notas de versão do PTAI 19.11.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Dynamic Ad Insertion em 2019.
+description: As notas de versão PTAI 19.11.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Ad Insertion em 2019.
 translation-type: tm+mt
-source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# Notas de versão do Primetime Dynamic Ad Insertion 19.11.1
+# Notas de versão do Primetime Ad Insertion 19.11.1
 
-As notas de versão do Dynamic Ad Insertion 19.11.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Dynamic Ad Insertion no ano de 2019.
+As notas de versão do Primetime Ad Insertion 19.11.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Ad Insertion no ano de 2019.
 
 ## Novidades do PTAI 19.11.1
 
@@ -71,7 +71,7 @@ Correção de um bug no qual os players do Chromecast saíam inesperadamente da 
 
 **Quando:** quarta-feira, 10 de julho
 
-* SSAI: Para valores de formato de canal que suportam a sinalização EXT-X-CUE-OUT e break em fluxos ao vivo, adicionou uma macro genérica para transmitir dados de atributos na tag EXT-X-ASSET Exemplo: Tag que acompanha a tag #EXT-X-CUE-OUT: #EXT-X-ASSET:CAID=75BCD15,GENRE=Notícias,Programa=NotíciasAt10 Macros: # pode ser usado para passar Notícias (do atributo GENRE) para um URL de chamada de anúncio # pode ser usado para passar NewsAt10 (do atributo do Programa) para uma Exceção de URL de chamada de anúncio: Para compatibilidade com versões anteriores, # e # têm a mesma funcionalidade. Ambas as macros podem ser usadas para passar o valor do atributo CAID, após converter o valor de hex para long O valor long é 123456789 para o valor hex, 75BCD15, no exemplo acima. Ambas as macros seriam usadas para passar 123456789 para um URL de chamada de anúncio A macro sempre start com #. A macro faz distinção entre maiúsculas e minúsculas, mas o atributo na tag EXT-X-ASSET não. Ou seja, PROGRAMA e Programa são permitidos na tag EXT-X-ASSET
+* SSAI: Para valores de formato de canal que suportam a sinalização EXT-X-CUE-OUT e break em fluxos ao vivo, adicionou uma macro genérica para transmitir dados de atributos na tag EXT-X-ASSET Exemplo: Tag que acompanha a tag #EXT-X-CUE-OUT: #EXT-X-ASSET:CAID=75BCD15,GENRE=Notícias,Programa=NotíciasAt10 Macros: # pode ser usado para passar Notícias (do atributo GENRE) para um URL de chamada de anúncio # pode ser usado para passar NewsAt10 (do atributo do Programa) para uma Exceção de URL de chamada de anúncio: Para compatibilidade com versões anteriores, # e # têm a mesma funcionalidade. Ambas as macros podem ser usadas para passar o valor do atributo CAID, após converter o valor de hex para long. O valor long é 123456789 para o valor hex, 75BCD15, no exemplo acima. Ambas as macros seriam usadas para passar 123456789 para um URL de chamada de anúncio A macro sempre start com #. A macro faz distinção entre maiúsculas e minúsculas, mas o atributo na tag EXT-X-ASSET não. Ou seja, PROGRAMA e Programa são permitidos na tag EXT-X-ASSET
 * SSAI: Alterações de configuração para um cliente específico para o seguinte:
    * Duração da janela deslizante (lista de reprodução dinâmica) de quatro minutos
    * Se uma exceção de tempo limite de soquete for emitida quando o Manifest Server buscar o conteúdo de origem, o Manifest Server retornará o código de resposta HTTP (404) em vez de 500
@@ -88,6 +88,7 @@ Correção de um bug no qual os players do Chromecast saíam inesperadamente da 
    * Adicionada a regra de normalização de URL criativo para Innovid, usada pelo SSAI
    * A regra de normalização utilizada pelo SIR foi adicionada numa versão anterior
    * TVSDK: A regra de normalização a ser adicionada nas Regras CRS JSON foi fornecida após uma versão anterior, mas para ser segura, fale com seu Gerente de conta técnico para revisar todas as regras de normalização que você possui.
+
       >[!NOTE]
       >
       >A maioria dos URLs criativos incólidos serão transcodificados e costurados com êxito sem a regra de normalização. Ocasionalmente, porém, URLs criativos com parâmetros dinâmicos são encontrados. A regra de normalização é necessária para lidar com essas instâncias.
@@ -102,7 +103,7 @@ Correção de um bug no qual os players do Chromecast saíam inesperadamente da 
    * SIR: Fluxo de trabalho adicionado para reempacotar anúncios no formato CMAF (HLS/fMP4)
 * SSAI: Correção de um problema que impedia a inserção de publicidades sem toque no conteúdo sem muxo, quando o conteúdo e o anúncio não tinham fluxos somente de áudio (EXT-X-STREAM-INF)
 * SSAI: Adicionado suporte para tokens de autenticação CDN do Limelight (LLNW) para segmentos de conteúdo
-   * Quando `pttoken=limelight` ou `pttoken=llnw` for adicionado ao URL de inicialização, adicionaremos um cabeçalho secreto ao recuperar a lista de reprodução mestre de origem, então anexaremos os parâmetros do query do cabeçalho X-Adobe-Sig da LLNW aos segmentos de conteúdo
+   * Quando `pttoken=limelight` ou `pttoken=llnw` for adicionado ao URL de bootstrap, adicionaremos um cabeçalho secreto ao recuperar a lista de reprodução principal de origem, então anexaremos os parâmetros do query do cabeçalho X-Adobe-Sig da LLNW aos segmentos de conteúdo
 * SSAI: Adicionado outro valor de token (`pttoken=centurylink`) para suporte a token de autenticação CenturyLink CDN, lançado em 30 de julho de 2018
    * `pttoken=centurylink` tem o mesmo comportamento `pttoken=level3`e ambos os valores são válidos
 
@@ -117,11 +118,11 @@ Correção de um bug no qual os players do Chromecast saíam inesperadamente da 
 
 ### Versão 19.4.1
 
-**Quando:** quarta-feira, 10 de abril, 2:30, horário do leste até quarta-feira, 10 de abril, 4:30, horário do leste
+**Quando:** quarta-feira, 10 de abril da manhã 2:30 da manhã do leste até a quarta-feira, 10 de abril das 4:30 da manhã do leste
 
-* SIR: A API de reempacotamento do CRS não oferecerá mais suporte aos comandos HTTP POST. A API de reempacotamento do CRS redirecionará automaticamente os comandos HTTP POST (301) para HTTPS
-   * A partir de 20 de maio, o redirecionamento HTTP->HTTPS para comandos HTTP POST será desativado
-   * Se você usar a CRS Reempacotando API para reempacotar anúncios antecipadamente, mude seus comandos POST para HTTPS até 20 de maio
+* SIR: A API de reempacotamento do CRS não oferecerá mais suporte aos comandos POST HTTP. A API de reempacotamento do CRS redirecionará automaticamente os comandos do POST HTTP (301) para HTTPS
+   * A partir de 20 de maio, o redirecionamento HTTP->HTTPS para comandos do POST HTTP será desativado
+   * Se você usar a API de reempacotamento do CRS para reempacotar anúncios antecipadamente, mude os comandos do POST para HTTPS até 20 de maio
 * SIR: Reprojetou a arquitetura e o fluxo de trabalho para fazer upload dos ativos CRS para as origens CDN dos clientes
    * Os processos de trabalho por origem CDN são separados, portanto, os gargalos de upload de uma origem CDN não afetarão os uploads para outras origens CDN
    * Outras prestações: O tempo de processamento de tarefas do CRS e as taxas de carregamento para as origens CDN dos clientes foram aprimorados
@@ -174,13 +175,13 @@ Correção de um bug no qual os players do Chromecast saíam inesperadamente da 
    * Estrutura antiga da chave de pesquisa: Zona, Sistema de publicidade, ID de anúncio, ID criativa, URL criativo e parâmetros de formato (duração do público alvo, formato de saída, CDN de destino)
    * As chaves de pesquisa dos ativos CRS existentes serão atualizadas para corresponder à nova estrutura antes da versão de produção, mas observe que novos ativos transcodificados entre a atualização das chaves de pesquisa e a versão de produção podem ser perdidos. Em caso afirmativo, iniciarão uma nova solicitação de SIR na próxima vez que forem encontrados após a versão
 
-* SIR: Adicionada a capacidade de bloquear solicitações de CRS de lista/permissão de sistemas de anúncios específicos, IDs de anúncios, IDs criativas, URLs criativos e/ou formato criativo
+* SIR: Adicionada a capacidade de lista de bloqueios/lista de permissões de solicitações CRS de sistemas de anúncios específicos, IDs de anúncios, IDs criativas, URLs criativos e/ou formato criativo
 
    >Nota
    >
-   >A Adobe adicionará regras de lista de blocos quando os provedores de publicidade com valores dinâmicos (por exemplo, parâmetro dinâmico em URL) para o mesmo anúncio forem encontrados. Essas regras de lista de blocos serão desativadas depois que o componente dinâmico for resolvido, pelo provedor ou por meio de uma regra de normalização.
+   >O Adobe adicionará regras de lista de bloqueios quando os provedores de publicidade com valores dinâmicos (por exemplo, parâmetro dinâmico em URL) para o mesmo anúncio forem encontrados. Essas regras de lista de bloqueios serão desativadas depois que o componente dinâmico for resolvido, pelo provedor ou por meio de uma regra de normalização.
 
-   * Se você quiser adicionar uma lista de blocos ou permitir a regra de lista para sua região, fale com seu Gerente de conta técnico para obter assistência.
+   * Se você quiser adicionar uma regra de lista de bloqueios ou lista de permissões para a sua região, fale com seu Gerente de conta técnico para obter assistência.
 
 ### Versão 19.1.1
 
