@@ -4,10 +4,10 @@ seo-title: Notas de versão do Adobe Primetime
 description: nulo
 seo-description: nulo
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 0%
+ht-degree: 38%
 
 ---
 
@@ -36,12 +36,12 @@ Consulte para obter mais informações sobre a versão atual lançada para [iOS]
 
 | Guia do usuário | Descrição |
 |--- |--- |
-| [Ajuda da programação Primetime](/help/programming/home.md) | Permite que você aprenda a desenvolver aplicativos e players de vídeo usando Java em dispositivos Android e Objetive-C em dispositivos iOS. |
-| [Ajuda para migração e conversão do Primetime](/help/migration-guides/home.md) | Explica o processo de conversão e migração para mover do seu pacote Primetime TVSDK existente para o conjunto da próxima geração. |
-| [Implementação de referência](/help/android-reference-implementation/home.md) | Ajuda a entender o TVSDK e modificar os gerentes de recursos para personalizar seu player pessoal. |
-| [Referências da API Primetime](/help/reference/api-references.md) | Fornece informações detalhadas sobre funções TVSDK, estruturas de dados e outras construções de programação. |
+| [Ajuda da programação do Primetime](/help/programming/home.md) | Com ele, você aprende a desenvolver aplicativos e reprodutores de vídeo usando Java em dispositivos Android e em dispositivos Objective-C em iOS. |
+| [Ajuda para migração e conversão do Primetime](/help/migration-guides/home.md) | Explica o processo de conversão e migração para migrar do Primetime TVSDK Suite existente para uma da próxima geração. |
+| [Implementação de referência](/help/android-reference-implementation/home.md) | Ajuda a entender o TVSDK e modificar os gerentes de recursos para personalizar o seu reprodutor pessoal. |
+| [Referências da API Primetime](/help/reference/api-references.md) | Fornece informações detalhadas sobre as funções do TVSDK, estruturas de dados e outras construções de programação. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Ajuda você a saber mais sobre vários cenários de usuário no Digital Rights Management (DRM) |
-| [Ajuda do Ad Insertion dinâmico](/help/dynamic-ad-insertion/home.md) | Explica como monetizar o conteúdo inserindo anúncios dinâmicos direcionados ao usuário no servidor e engajando a audiência com anúncios personalizados. |
+| [Ajuda do Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Explica como monetizar o conteúdo inserindo anúncios dinâmicos direcionados ao usuário no servidor e engajar o público-alvo com anúncios personalizados. |
 | [Arquivos](https://helpx.adobe.com/primetime/archives.html) | Baixe PDFs da documentação arquivada. |
 
 ## Recursos úteis
