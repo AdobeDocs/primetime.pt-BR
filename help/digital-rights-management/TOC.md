@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Ajuda da Digital Rights Management Primetime
-user-guide-description: Helps you learn more about various user scenarios in Digital Rights Management (DRM).
+user-guide-title: Ajuda do Primetime Digital Rights Management
+user-guide-description: Ajuda você a saber mais sobre vários cenários de usuário no Digital Rights Management (DRM).
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
 
 
-# Ajuda da Digital Rights Management {#drm}
+# Digital Rights Management Help {#drm}
 
 + [Visão geral do DRM](home.md)
 + Guia de inscrição de certificados {#certificate-enrollment-guide}
@@ -349,7 +349,7 @@ ht-degree: 0%
 + Usar o Adobe Access Server para transmissão protegida {#adobe-access-server}
    + [Sobre o Adobe Access Server para transmissão protegida](aaxs-protected-streaming/about-aaxs-protect-stream.md)
    + [Regras de uso](aaxs-protected-streaming/usage-rules.md)
-   + [Introdução](aaxs-protected-streaming/requirements.md)
+   + [Requisitos](aaxs-protected-streaming/requirements.md)
    + Implantação do Adobe Access Server para streaming protegido {#deploying-aaxs-protect-stream}
       + [Visão geral da implantação do Adobe Access Server para transmissão protegida](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
       + [Propriedades do sistema Java](aaxs-protected-streaming/deplying-aaxs-protect-stream/java-system-properties.md)
@@ -472,11 +472,11 @@ ht-degree: 0%
       + [Opções de implantação do License Server](aaxs-protecting-content/content-implementing-the-license-server/content-license-server-deployment-options.md)
    + Processando solicitações de acesso a Adobe {#processing-adobe-access-requests}
       + [Processando solicitações de acesso a Adobe](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-processing-aaxs-requests-overview.md)
-      + [Proteção de identificadores de máquina](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-using-machine-ids.md)
-      + [criptografia do usuário](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-licenses-user-authentication.md)
-      + [Aumentar proteção](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-replay-protection.md)
+      + [Uso de identificadores de máquina](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-using-machine-ids.md)
+      + [Autenticação do usuário](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-licenses-user-authentication.md)
+      + [Proteção contra repetição](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-replay-protection.md)
       + [Detecção de retorno](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md)
-      + [Usando dados de configuração do servidor global](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-global-server-config-data.md)
+      + [Dados de configuração do servidor global](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-global-server-config-data.md)
       + [Arquivo de política entre domínios](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-crossdomain-policy-file.md)
       + [Tratamento de solicitações de Obter versão do servidor](aaxs-protecting-content/content-implementing-the-license-server/content-handling-get-server-version-reqs.md)
       + [Tratamento de solicitações de registro de domínio](aaxs-protecting-content/content-implementing-the-license-server/content-handling-domain-registration-reqs.md)
@@ -552,7 +552,7 @@ ht-degree: 0%
       + [Arquivo de política entre domínios](aaxs-reference-implementations/license-server-and-wfp/license-server-hsm-config-crossdomain-policy-file.md)
    + Implantação do servidor de licenças e do empacotador de pastas assistido {#license-server-and-wfp}
       + [Implantação do servidor de licenças e visão geral do empacotador de pastas observado](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-overview.md)
-      + [DPS](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-troubleshooting.md)
+      + [Solução de problemas](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-troubleshooting.md)
    + [Determinando se o Servidor de Licença de Implementação de Referência está sendo executado corretamente](aaxs-reference-implementations/deploying-license-server-determining-ref-running.md)
    + Implementação dos modelos de uso {#usage-models}
       + [Implementação da visão geral dos modelos de uso](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-usage-overview.md)
