@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Ajuda da programação Primetime
-user-guide-description: Allows you to learn to develop applications and video players using Java on Android devices and Objective-C on iOS devices.
+user-guide-title: Ajuda da programação do Primetime
+user-guide-description: Com ele, você aprende a desenvolver aplicativos e reprodutores de vídeo usando Java em dispositivos Android e em dispositivos Objective-C em iOS.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '4307'
+source-wordcount: '4327'
 ht-degree: 0%
 
 ---
 
 
-# Ajuda da programação Primetime {#programming}
+# Ajuda da programação do Primetime {#programming}
 
 + [Visão geral da programação](home.md)
 + TVSDK 3x para Android {#tvsdk-3x-android-prog}
@@ -21,7 +21,7 @@ ht-degree: 0%
       + [Visão geral do produto, audiência e este guia](tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-prod-audience-guide.md)
       + [Recursos do Primetime TVSDK](tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md)
       + [Considerações e práticas recomendadas](tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-considerations.md)
-      + [Introdução](tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md)
+      + [Requisitos](tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md)
    + Opções de reprodução de conteúdo {#content-playback-options}
       + [Configurar o Media Player](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-mediaplayer-set-up-android.md)
       + Trabalhar com objetos MediaPlayer {#work-with-media-player-objects}
@@ -191,7 +191,7 @@ ht-degree: 0%
       + [Visão geral](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)
       + [Recursos do Primetime TVSDK](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md)
       + [Considerações e práticas recomendadas](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-considerations.md)
-      + [Introdução](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-requirements.md)
+      + [Requisitos](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-requirements.md)
    + Opções de reprodução de conteúdo {#content-playback-options}
       + [Configurar o PTMediaPlayer](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-mediaplayer-set-up-ios.md)
       + [Configurar notificações](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-notification.md)
@@ -745,11 +745,11 @@ ht-degree: 0%
       + [Códigos de notificação de AVISO](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/r-psdk-ios-1.4-notification-warnings.md)
       + [Códigos de notificação INFO](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/r-psdk-ios-1.4-notification-info.md)
 + TVSDK 1.4 para DesktopHLS {#tvsdk-1-4-for-desktop-hls}
-   + Vias {#introduction}
+   + Introdução {#introduction}
       + [Visão geral](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/c-psdk-dhls-1.4-overview-prod-audience-guide.md)
       + [Recursos do Primetime TVSDK](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/c-psdk-dhls-1.4-overview-of-the-player.md)
       + [Considerações e práticas recomendadas](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/c-psdk-dhls-1.4-considerations.md)
-      + Introdução {#requirements}
+      + Requisitos {#requirements}
          + [Requisitos de sistema e software](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/r-psdk-dhls-1.4-requirements-system.md)
          + [Requisitos de conteúdo e manifesto](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/r-psdk-dhls-1.4-requirements-content.md)
          + [#EXT-X-VERSION requirements](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/r-psdk-dhls-1.4-requirements-ext-x-version.md)
@@ -945,16 +945,16 @@ ht-degree: 0%
       + [NATIVE_ERROR: Valores da reprodução de vídeo](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-video-playback-errors.md)
       + [NATIVE_ERROR: Valores de criptografia](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-crypto-errors.md)
 + Browser-TVSDK-2.4 {#browser-tvsdk-2-4}
-   + Vias {#introduction}
+   + Introdução {#introduction}
       + [Visão geral e audiência do produto](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/c-psdk-browser-tvsdk-2.4-overview-prod-audience-guide.md)
       + Recursos suportados {#supported-features}
          + [Recursos MP3 e MP4 suportados](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/new-features/c-psdk-browser-tvsdk-2.4-new-features-a-mp3-mp4.md)
          + [Recursos HLS suportados](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/new-features/c-psdk-browser-tvsdk-2.4-new-features-b-hls.md)
          + [Recursos DASH suportados](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/new-features/c-psdk-browser-tvsdk-2.4-new-features-c-dash.md)
-      + Introdução {#requirements}
+      + Requisitos {#requirements}
          + [Visão geral](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/c-psdk-browser-tvsdk-2.4-requirements.md)
          + [Requisitos do Flash Player](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/r-psdk-browser-tvsdk-2.4-flash-fallback-req.md)
-         + [Obstáculos de segurança](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/c-psdk-browser-tvsdk-2.4-sec-req.md)
+         + [Considerações de segurança](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/c-psdk-browser-tvsdk-2.4-sec-req.md)
          + [Requisitos de conteúdo e manifesto](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/r-psdk-browser-tvsdk-2.4-requirements-content.md)
          + [#EXT-X-VERSION requirements](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/r-psdk-browser-tvsdk-2.4-requirements-ext-x-version.md)
    + Introdução {#getting-started}
