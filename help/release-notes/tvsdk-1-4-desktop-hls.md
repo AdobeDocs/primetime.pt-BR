@@ -9,7 +9,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
 workflow-type: tm+mt
 source-wordcount: '5222'
 ht-degree: 0%
@@ -704,8 +704,8 @@ os tipos mime para o formato HLS faziam distinção entre maiúsculas e minúscu
 
 **Versão 1.4.5**
 
-* Zendesk #2256 - Acesso à Playlist Principal, PSDK atualizado para despachar eventos timedMetadata para marcas assinadas na lista de reprodução principal. (requer o Flash Player versão 17.0.0.134)
-* Zendesk #2417 - Player trying to download legendas before playback start, WebVTT estava usando a variável de número de segmento errada para a correspondência de número de segmento. Erros só apareciam para mídias que tinham índices de segmentos começando em zero. (requer o Flash Player versão 17.0.0.134)
+* Zendesk #2256 - Acesso à Playlist Principal, PSDK atualizado para despachar eventos timedMetadata para marcas assinadas na lista de reprodução principal. (requer a versão 17.0.0.134 do Flash Player)
+* Zendesk #2417 - Player trying to download legendas before playback start, WebVTT estava usando a variável de número de segmento errada para a correspondência de número de segmento. Erros só apareciam para mídias que tinham índices de segmentos começando em zero. (requer a versão 17.0.0.134 do Flash Player)
 * Zendesk #2537 - O player do Flash trava ao usar o plug-in de pimenta com o Chrome (requer a versão 17.0.0.134 do Flash Player)
 * Zendesk #2547 - Legendas árabes: O texto deve ser alinhado justificado à direita (requer a versão 17.0.0.134 do Flash Player)
 
@@ -721,7 +721,7 @@ os tipos mime para o formato HLS faziam distinção entre maiúsculas e minúscu
 
 * Zendesk #1303 - Deslocamento vertical para legenda fechada (requer o Flash Player versão 16.0.0.235 ou superior, data de lançamento esperada: dezembro de 2014)
 * Zendesk #1870 - Closed Caption On &amp; Off (Legenda fechada ativada e desativada) (requer o Flash Player versão 16.0.0.235 ou superior, data de lançamento esperada: dezembro de 2014)
-* Zendesk #2110 - A reprodução trava depois de tentar entrar na tela inteira durante um anúncio VPAID (requer a versão 16.0.0.235 do Flash Player ou superior, data de lançamento esperada: dezembro de 2014)
+* Zendesk #2110 - A reprodução trava depois de tentar entrar na tela cheia durante um anúncio VPAID (requer a versão 16.0.0.235 do Flash Player ou superior, data de lançamento esperada: dezembro de 2014)
 * Zendesk #2199 - `[VPAID]` Player not responding when search previous ad break
 * Zendesk #2358 - Re: `[Analytics]` Dados de capítulo incorretos
 
@@ -734,9 +734,6 @@ os tipos mime para o formato HLS faziam distinção entre maiúsculas e minúscu
 * Zendesk #1024 - Recurso para remover anúncio do fluxo via manifesto
 * Zendesk #1423 - A falha de reprodução HLS está travando o Flash Player (sem relatório de erro)
 * Zendesk #1674 - ClosedCaption Not appear up, correct 708 caption display when 0x03 ETX codes is missing. (Zendesk #1674 - ClosedLegtion Não exibido, exibição correta da legenda 708 quando os códigos ETX 0x03 estiverem faltando.
-
-</p>
-</details>
 
 ## Problemas conhecidos {#known-issues}
 
