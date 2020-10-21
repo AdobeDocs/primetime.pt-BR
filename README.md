@@ -1,45 +1,52 @@
 ---
-source-git-commit: c771311a6b49573eb376ab03c3de8e57f40f576b
+source-git-commit: cb347453d4a08b869842aaaaca61538095978c91
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '460'
+ht-degree: 6%
 
 ---
 # Artigo do Contribute
 
-Saudamos as contribuições de nossa comunidade, bem como de funcionários da Adobe de fora das equipes de documentação.
+| EXL-PR | EXL | Pré-visualização | Ativar | Publicado | Ajuda |
+|--- |--- |--- |--- |--- |--- |
+| [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/lastBuild/) | [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/lastBuild) | [URL de pré-visualização](https://experienceleague.corp.adobe.com/docs/primetime/programming/home.html?lang=en) | [ativate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [Live URL](https://experienceleague.adobe.com/docs/primetime/programming/home.html?lang=en) | [Guia de criação](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
-## Código de conduta Adobe Open Source
+Saudamos as contribuições de nossa comunidade, bem como de funcionários do Adobe de fora das equipes de documentação.
+
+## Código de Conduta de Origem Aberta do Adobe
 
 Este projeto adotou o [Código de conduta de código aberto da Adobe](code-of-conduct.md) ou o [Código de conduta do .NET Foundation](https://dotnetfoundation.org/code-of-conduct). Para obter mais informações, consulte o artigo [Contribuição](contributing.md).
 
-## Sobre suas contribuições para o conteúdo da Adobe
+## Sobre suas contribuições para o conteúdo de Adobe
 
-Consulte o Guia [do colaborador do](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)Adobe Docs.
+Consulte o Guia [do colaborador de](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)Adobe Docs.
 
 A forma como você contribui depende de quem você é e do tipo de mudanças que você gostaria de contribuir:
 
 ### Alterações menores
 
-Se você estiver contribuindo com atualizações secundárias devido à bondade de seu coração, visite o artigo e clique no link **Editar** no artigo que vai para a fonte GitHub do artigo. Em seguida, use a interface do usuário do GitHub para fazer suas atualizações. Consulte o guia [geral do colaborador do](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) Adobe Docs para obter mais informações.
+Se você estiver contribuindo com atualizações secundárias devido à bondade de seu coração, visite o artigo e clique no link **Editar** no artigo que vai para a fonte GitHub do artigo. Em seguida, use a interface do usuário do GitHub para fazer suas atualizações. Consulte o guia [geral do colaborador de](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) Adobe Docs para obter mais informações.
 
-Pequenas correções ou esclarecimentos que você envia para documentação e exemplos de código neste acordo de recompra são cobertos pelos termos de uso da Adobe.
+Pequenas correções ou esclarecimentos que você submete para documentação e exemplos de código neste acordo de recompra são cobertos pelos termos de uso do Adobe.
 
 ### Alterações importantes ou novos artigos de membros da comunidade
 
-Se você fizer parte da comunidade Adobe e quiser criar um novo artigo ou enviar alterações importantes, use a guia Problemas no repositório Git para enviar um problema para iniciar uma conversa com a equipe de documentação. Depois de concordar com um plano, você precisará trabalhar com um funcionário para ajudá-lo a inserir o novo conteúdo por meio de uma combinação de trabalho nos repositórios públicos e privados.
+Se você fizer parte da comunidade do Adobe e quiser criar um novo artigo ou enviar alterações importantes, use a guia Problemas no repositório do Git para enviar um problema ao start de uma conversa com a equipe de documentação. Depois de concordar com um plano, você precisará trabalhar com um funcionário para ajudá-lo a inserir o novo conteúdo por meio de uma combinação de trabalho nos repositórios públicos e privados.
 
 <!--
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). We need you to complete the online form before we can review your pull request.
 -->
 
-### Principais alterações dos funcionários da Adobe
+### Grandes mudanças dos funcionários do Adobe
 
-Se você for um gravador técnico, gerente de programas ou desenvolvedor da equipe de produtos para uma solução da Adobe Experience Cloud e sua tarefa for contribuir com ou criar artigos técnicos, deverá usar o repositório privado [https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
+Se você for um gravador técnico, gerente de programas ou desenvolvedor da equipe de produtos para uma solução Adobe Experience Cloud e seu trabalho for contribuir com ou criar artigos técnicos, deverá usar o repositório privado [https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Ferramentas e configuração
 
 Os contribuidores comunitários podem usar a interface do usuário do GitHub para a edição básica ou garfo do acordo de recompra para dar contribuições importantes.
 
-Consulte o Guia [do colaborador do](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) Adobe Docs para obter detalhes.
+Consulte o Guia [do colaborador de](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) Adobe Docs para obter detalhes.
 
 ## Como usar a marcação para formatar seu tópico
 
