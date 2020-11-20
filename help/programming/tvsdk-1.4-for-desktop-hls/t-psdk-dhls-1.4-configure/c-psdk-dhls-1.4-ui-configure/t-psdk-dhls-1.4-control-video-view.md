@@ -37,8 +37,7 @@ Você pode substituir o comportamento padrão de proporção especificando uma p
    >
    >Por exemplo:
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
