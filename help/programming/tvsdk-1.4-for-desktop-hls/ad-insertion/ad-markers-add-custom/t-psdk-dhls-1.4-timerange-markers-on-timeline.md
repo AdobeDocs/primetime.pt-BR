@@ -5,7 +5,10 @@ seo-title: Colocar marcadores de intervalo de tempo na linha do tempo
 title: Colocar marcadores de intervalo de tempo na linha do tempo
 uuid: cbcc4c84-0d56-4331-b555-b8e59f7d52d4
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: fd21a29bb186238142d43e0277bbf92f8406f6f7
+workflow-type: tm+mt
+source-wordcount: '430'
+ht-degree: 0%
 
 ---
 
@@ -18,18 +21,17 @@ Este exemplo mostra a maneira recomendada de incluir especificações de TimeRan
 1. Use o conjunto de `TimeRange` especificações para preencher uma instância da `TimeRangeCollection` classe.
 1. Passe a instância Metadados, que pode ser obtida da `TimeRangeCollection` instância, para o `replaceCurrentItem` método (parte da `MediaPlayer` interface).
 1. Aguarde a transição do TVSDK para o estado PREPARADO aguardando o `PlaybackEventListener#onPrepared` retorno de chamada ser acionado.
-1. Inicie a reprodução do vídeo chamando o `play()` método (parte da `MediaPlayer` interface).
+1. Reprodução de vídeo do start chamando o `play()` método (parte da `MediaPlayer` interface).
 
-* Tratamento de conflitos de linha do tempo: Pode haver casos em que algumas `TimeRange` especificações se sobrepõem na linha do tempo de reprodução. Por exemplo, o valor da posição inicial correspondente a uma `TimeRange` especificação pode ser inferior ao valor da posição final que já foi colocada. Nesse caso, o TVSDK ajusta silenciosamente a posição inicial da especificação `TimeRange` ofensiva para evitar conflitos de linha do tempo. Com este ajuste, o novo `TimeRange` torna-se mais curto do que o originalmente especificado. Se o ajuste for tão extremo que resultaria em um `TimeRange` com duração de zero ms, o TVSDK ignora silenciosamente a `TimeRange` especificação ofensiva.
+* Tratamento de conflitos de linha do tempo: Pode haver casos em que algumas `TimeRange` especificações se sobrepõem na linha do tempo de reprodução. Por exemplo, o valor da posição do start correspondente a uma `TimeRange` especificação pode ser inferior ao valor da posição final que já foi colocada. Nesse caso, o TVSDK ajusta silenciosamente a posição do start da especificação ofensiva para evitar conflitos na linha do tempo. `TimeRange` Com este ajuste, o novo `TimeRange` torna-se mais curto do que o originalmente especificado. Se o ajuste for tão extremo que resultaria em um `TimeRange` com duração de zero ms, o TVSDK ignora silenciosamente a `TimeRange` especificação ofensiva.
 
 * Quando são fornecidas `TimeRange` especificações para quebras de anúncio personalizadas, o TVSDK tenta traduzi-las em anúncios que são agrupados dentro de quebras de anúncio. O TVSDK procura `TimeRange` especificações adjacentes e as agrupa em quebras de anúncios separadas. Se houver intervalos de tempo que não sejam adjacentes a qualquer outro intervalo de tempo, eles serão traduzidos em intervalos de anúncios que contêm um único anúncio.
 
 * Pressupõe-se que o item do player de mídia que está sendo carregado aponte para um ativo VOD. O TVSDK verifica isso sempre que seu aplicativo tenta carregar um recurso de mídia cujos metadados contêm `TimeRange` especificações que podem ser usadas somente no contexto do recurso personalizado de marcadores de anúncios. Se o ativo subjacente não for do tipo VOD, a biblioteca TVSDK lançará uma exceção.
 
-* Ao lidar com marcadores de anúncios personalizados, o TVSDK desativa outros mecanismos de resolução de anúncios (por meio da decisão do anúncio do Adobe Primetime (anteriormente conhecido como Auditude) ou de outro sistema de provisionamento de anúncios). Você pode usar um dos vários módulos de resolução de anúncios fornecidos pelo TVSDK ou o mecanismo personalizado de marcadores de anúncios. Ao usar a API personalizada de marcadores de anúncios, o conteúdo do anúncio é considerado já resolvido e colocado na linha do tempo.
->
-><!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
+* Ao lidar com marcadores de anúncios personalizados, o TVSDK desativa outros mecanismos de resolução de anúncios (via decisão de anúncios do Adobe Primetime (anteriormente conhecido como Auditude) ou outro sistema de provisionamento de anúncios). Você pode usar um dos vários módulos de resolução de anúncios fornecidos pelo TVSDK ou o mecanismo personalizado de marcadores de anúncios. Ao usar a API personalizada de marcadores de anúncios, o conteúdo do anúncio é considerado já resolvido e colocado na linha do tempo.
 
+<!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
 
 O trecho de código a seguir fornece um exemplo simples onde um conjunto de três `TimeRange` especificações é colocado na linha do tempo como marcadores de anúncios personalizados.
 
