@@ -6,6 +6,9 @@ title: Acessar faixas de áudio alternativas
 uuid: c7060022-29ec-43c1-811b-41cca5f5356c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -15,13 +18,13 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 O áudio de ligação tardia utiliza o MediaPlayer para reproduzir um vídeo especificado numa lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
 
 1. Aguarde o MediaPlayer estar no estado PREPARADO.
-1. Analise este evento:
+1. Ouça este evento:
 
-   `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: A lista inicial de faixas de áudio está disponível.
+   `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: A lista inicial das faixas de áudio está disponível.
 
-1. Obtenha as faixas de áudio disponíveis da `MediaPlayerItem` instância.
+1. Obtenha as faixas de áudio disponíveis da instância `MediaPlayerItem`.
 
    `mediaPlayerItem.getAudioTracks()` 1. (Opcional) Apresente as faixas disponíveis para o usuário.
-1. Defina a faixa de áudio selecionada na `MediaPlayerItem` instância.
+1. Defina a faixa de áudio selecionada na instância `MediaPlayerItem`.
 
    `mediaPlayerItem.selectAudioTrack(audioTrack)`
