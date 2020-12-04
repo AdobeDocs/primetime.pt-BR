@@ -6,6 +6,9 @@ title: Permitir que os usuários alterem o rastreamento de legenda
 uuid: 5a6d33f2-cece-48f6-8a68-fe76d9d2a950
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Este procedimento é um exemplo de como criar um botão que permite ao usuário 
      android:text="CC" /> 
    ```
 
-1. Converta a lista de faixas de legenda fechadas disponíveis em uma matriz de sequências de caracteres.
+1. Converta a lista de faixas de legenda fechadas disponíveis em uma matriz de string.
 
    As faixas de legenda fechada que têm atividade, ou seja, canais para os quais o TVSDK descobriu dados, são marcadas de acordo.
 
