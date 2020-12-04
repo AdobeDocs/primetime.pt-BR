@@ -6,6 +6,9 @@ title: Exibir a duração, o tempo atual e o tempo restante do vídeo
 uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia que pode ser exibida na barra de busca.
 
 1. Aguarde o player estar no estado PREPARADO.
-1. Recupere a hora atual do indicador de reprodução usando o `MediaPlayer.currentTime` atributo.
+1. Recupere a hora atual do indicador de reprodução usando o atributo `MediaPlayer.currentTime`.
 
    Este atributo retorna a posição atual do indicador de reprodução na linha do tempo virtual em milissegundos. O tempo é calculado em relação ao fluxo resolvido, que pode conter várias instâncias de conteúdo alternativo, como várias publicidades ou quebras de anúncio divididas no fluxo principal. Para fluxos ao vivo/lineares, o tempo retornado está sempre no intervalo da janela de reprodução.
 
@@ -24,9 +27,9 @@ Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia
    ```
 
 1. Recupere o intervalo de reprodução do fluxo e determine a duração.
-   1. Use a `mediaPlayer.playbackRange` propriedade para obter o intervalo de tempo da linha do tempo virtual.
+   1. Use a propriedade `mediaPlayer.playbackRange` para obter o intervalo de tempo da linha do tempo virtual.
 
-   1. Para determinar a duração, subtraia o início do final do intervalo.
+   1. Para determinar a duração, subtraia o start do final do intervalo.
 
       Isso inclui a duração do conteúdo adicional inserido no fluxo (anúncios).
 
@@ -148,7 +151,7 @@ Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia
    } 
    ```
 
-1. Analise `AdobePSDK.TimeChangeEvent` e atualize a barra de pesquisa de acordo.
+1. Escute `AdobePSDK.TimeChangeEvent` e atualize a barra de pesquisa de acordo.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIME_CHANGED, onTimeChange); 
