@@ -6,6 +6,9 @@ title: Considerações de segurança
 uuid: 78edf2b0-363c-4ab6-b588-ab4748ee6096
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -14,17 +17,17 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Há algumas considerações de segurança que devem ser observadas para o TVSDK do navegador.
 
-* **Adobe Flash Player**
+* **Flash Player Adobe**
 
-   * O Flash Player não permite acesso a dados que residem fora do domínio do qual o SWF se originou.
+   * O Flash Player não permite acesso a dados que residem fora do domínio de onde o SWF se originou.
 
-      Para permitir acesso, hospede um arquivo de política entre domínios com permissões apropriadas na raiz do servidor que está hospedando os dados. No modo Flash Fallback no Browser TVSDK (Flash Player versão 23 e superior), você precisa do token de autorização para o seu domínio. Para gerar o token, entre em contato com seu representante da Adobe.
+      Para permitir acesso, hospede um arquivo de política entre domínios com permissões apropriadas na raiz do servidor que está hospedando os dados. No modo Fallback de Flash no TVSDK do navegador (Flash Player versão 23 e superior), você precisa do token de autorização para seu domínio. Para gerar o token, entre em contato com seu representante de Adobe.
 
 * **JavaScript**
 
-   * O JavaScript segue a mesma política de origem e impede o acesso aos recursos entre os limites do domínio.
+   * O JavaScript segue a mesma política de origem e impede o acesso aos recursos pelos limites do domínio.
 
-      Para permitir o acesso a esses recursos, o cabeçalho Access-Control-Allow-Origin (CORS) deve ser definido nos recursos hospedados em origens diferentes do player. Opcionalmente, se o conteúdo for especificado usando intervalos de bytes, a solicitação de opções de pré-voo do CORS deverá indicar que essas solicitações são permitidas pela origem.
+      Para permitir o acesso a esses recursos, o cabeçalho Access-Control-Allow-Origem (CORS) deve ser definido nos recursos hospedados em origens diferentes do player. Como opção, se o conteúdo for especificado usando intervalos de bytes, a solicitação de opções de pré-voo do CORS deverá indicar que essas solicitações são permitidas pela origem.
 
 * **Navegadores e conteúdo misto**
 
