@@ -1,22 +1,25 @@
 ---
-description: O TVSDK do navegador envia métricas de faturamento para a Adobe em um formato XML.
-seo-description: O TVSDK do navegador envia métricas de faturamento para a Adobe em um formato XML.
+description: O TVSDK do navegador envia métricas de faturamento para o Adobe em um formato XML.
+seo-description: O TVSDK do navegador envia métricas de faturamento para o Adobe em um formato XML.
 seo-title: Transmitir métricas de faturamento
 title: Transmitir métricas de faturamento
 uuid: ed2638d2-7894-4840-b31a-51e48e0a3f49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
 
 # Transmitir métricas de faturamento{#transmit-billing-metrics}
 
-O TVSDK do navegador envia métricas de faturamento para a Adobe em um formato XML.
+O TVSDK do navegador envia métricas de faturamento para o Adobe em um formato XML.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Se você usar uma ferramenta de captura de rede para monitorar as estatísticas Transmissões TVSDK do navegador para a Adobe, você verá unidades como as seguintes:
+Se você usar uma ferramenta de captura de rede para monitorar as estatísticas Transmissões TVSDK do navegador para o Adobe, você verá unidades como as seguintes:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,4 +43,4 @@ Se você usar uma ferramenta de captura de rede para monitorar as estatísticas 
 </request>
 ```
 
-As propriedades booleanas `drmProtected`, `adsEnabled`e `midrollEnabled` aparecem somente se forem verdadeiras.
+As propriedades booleanas `drmProtected`, `adsEnabled` e `midrollEnabled` são exibidas somente se forem verdadeiras.
