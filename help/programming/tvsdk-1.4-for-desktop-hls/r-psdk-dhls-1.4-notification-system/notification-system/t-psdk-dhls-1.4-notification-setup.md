@@ -6,6 +6,9 @@ title: Configurar seu sistema de notificação
 uuid: 2d1876c7-4ce6-491c-880b-dd94697d4feb
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
@@ -24,9 +27,9 @@ Para receber notificações:
 * Adicionar notificações ao histórico de notificações
 
 1. Analise as mudanças de estado.
-1. Implemente o ouvinte de `MediaPlayer.StatusChangeEvent.STATUS_CHANGED` eventos.
-1. O TVSDK transmite uma `MediaPlayer.StatusChangeEvent` instância para o ouvinte de eventos, que contém dois parâmetros:
+1. Implemente o ouvinte do evento `MediaPlayer.StatusChangeEvent.STATUS_CHANGED`.
+1. O TVSDK transmite uma instância `MediaPlayer.StatusChangeEvent` para o ouvinte do evento, que contém dois parâmetros:
 
    * O novo estado ( `MediaPlayer.Status`)
-   * Um `MediaPlayerNotification` objeto
+   * Um objeto `MediaPlayerNotification`
 
