@@ -13,9 +13,9 @@ ht-degree: 0%
 ---
 
 
-# Imposição de interrupção de serviço (requer Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
+# Aplicação de parada (requer Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-Em plataformas compatíveis com a detecção de quebra de postagem, como dispositivos móveis Android e iOS, é possível ativar a imposição de quebra de postagem para proibir a reprodução do conteúdo, caso [!DNL jailbreak/root] tenha sido detectado no dispositivo.
+Em plataformas compatíveis com a detecção de quebra de postagem, como dispositivos móveis Android e iOS, é possível ativar a imposição de quebra de postagem para proibir a reprodução do conteúdo se [!DNL jailbreak/root] tiver sido detectado no dispositivo.
 
 >[!NOTE]
 >
