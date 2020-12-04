@@ -29,16 +29,16 @@ A aquisição de licença anônima não exige que um banco de dados esteja em ex
 Para executar o servidor de licenças, será necessário instalar e configurar o MySQL 5.1.34:
 
 1. Execute o instalador MySQL (localizado na terceira pasta Party\MySQL\Installer\5.1 no DVD).
-1. No final do procedimento de instalação, verifique **[!UICONTROL Configure MySQL Server Now]** o start do assistente de configuração. Use as configurações padrão ou selecione configurações específicas para seus fins de teste, com a exceção de que na 5ª tela você deve selecionar **[!UICONTROL Online Transaction Processing (OLTP)]** ou **[!UICONTROL Manual Setting]** inserir o número máximo de conexões permitidas.
+1. No final do procedimento de instalação, marque **[!UICONTROL Configure MySQL Server Now]** para start do assistente de configuração. Use as configurações padrão ou selecione configurações específicas para seus fins de teste, com a exceção de que na 5ª tela você deve selecionar **[!UICONTROL Online Transaction Processing (OLTP)]** ou **[!UICONTROL Manual Setting]** e inserir o número máximo de conexões permitidas.
 
 1. Anote a senha raiz.
 1. Se precisar reinstalar o MySQL, siga estas etapas para evitar problemas ao iniciar o servidor depois:
 
-   * Exclua a unidade de pasta *do sistema:* [!DNL \Documents and Settings\All Users\Application Data\MySQL].
+   * Exclua a pasta *unidade do sistema:* [!DNL \Documents and Settings\All Users\Application Data\MySQL].
 
-   * Exclua a pasta de instalação antiga do MySQL: por exemplo, unidade *do sistema:* [!DNL \Program Files\MySQL\MySQL Server 5.1].
+   * Exclua a pasta de instalação antiga do MySQL: por exemplo, *unidade do sistema:* [!DNL \Program Files\MySQL\MySQL Server 5.1].
 
-Em seguida, você precisará instalar o Driver MySQL JDBC 5.1.7. Para fazer isso, copie [!DNL mysql-connector-java-5.1.7-bin.jar] (localizado na [!DNL Third Party\MySQL\Installer\5.1] pasta do DVD) para o diretório lib do Tomcat Server: [!DNL ...\Tomcat6.0\lib].
+Em seguida, você precisará instalar o Driver MySQL JDBC 5.1.7. Para fazer isso, copie [!DNL mysql-connector-java-5.1.7-bin.jar] (localizado na pasta [!DNL Third Party\MySQL\Installer\5.1] no DVD) para o diretório lib do Tomcat Server: [!DNL ...\Tomcat6.0\lib].
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ Em seguida, você precisará instalar o Driver MySQL JDBC 5.1.7. Para fazer isso
 
 Configure o banco de dados de amostra configurando o schema do banco de dados e preenchendo o banco de dados com dados de amostra. Para fazer isso, execute as seguintes etapas:
 
-1. Vá até **[!UICONTROL Window's Start Menu]** > **[!UICONTROL MySQL]** > **[!UICONTROL MySQL Server 5.1]** > **[!UICONTROL MySQL Command Line Client]** .
+1. Vá para **[!UICONTROL Window's Start Menu]** > **[!UICONTROL MySQL]** > **[!UICONTROL MySQL Server 5.1]** > **[!UICONTROL MySQL Command Line Client]**.
 1. Depois de digitar a senha, execute o script SQL a seguir para adicionar a conta de usuário `dbuser` para estabelecer uma conexão por meio de um aplicativo da Web e criar um schema de banco de dados (verifique se não há nenhum &quot;;&quot; no final). Basta pressionar enter.):
 
    ```
@@ -58,12 +58,12 @@ Configure o banco de dados de amostra configurando o schema do banco de dados e 
 
 >[!NOTE]
 >
->Na primeira vez que você executar o [!DNL CreateSampleDB.sql] script receberá o seguinte erro:
+>Na primeira vez que você executar o script [!DNL CreateSampleDB.sql] receberá o seguinte erro:
 
 *ERRO 1396 (HY000): A operação DROP USER falhou para o Query &#39;dbuser&#39;@&#39;localhost&#39; OK, 0 linhas foram afetadas (0,00 s).*
 
 Esse erro pode ser ignorado com segurança. Isso só acontece na primeira vez que você executa esse script.
 
-Nesse ponto, será necessário configurar o Pooling de Conexões de Banco de Dados (DBCP). O DBCP usa o Pool de Conexões de Banco de Dados Jakarta-Commons. Um JNDI Datasource TestDB está configurado para aproveitar esse pooling de conexão do servidor de aplicativos. Para alterar a conexão do banco de dados para apontar para um servidor MySQL que não esteja em um host local, modifique o [!DNL META-INF\context.xml] arquivo (que especifica o local, o nome de usuário e a senha do banco de dados do servidor de licenças) localizado em, ou modifique [!DNL flashaccess.war][!DNL \Reference Implementation\Server\refimpl\WebContent\META-INF\context.xml] e recrie o arquivo WAR usando os arquivos atualizados. Para alterar qualquer um desses parâmetros, edite o [!DNL context.xml] localizado no diretório WebContent e use o script Ant para recriar o arquivo WAR. Para ajustar o banco de dados, altere as configurações da fonte de dados JNDI neste arquivo.
+Nesse ponto, será necessário configurar o Pooling de Conexões de Banco de Dados (DBCP). O DBCP usa o Pool de Conexões de Banco de Dados Jakarta-Commons. Um JNDI Datasource TestDB está configurado para aproveitar esse pooling de conexão do servidor de aplicativos. Para alterar a conexão do banco de dados para apontar para um servidor MySQL que não esteja no localhost, modifique o arquivo [!DNL META-INF\context.xml] (que especifica o local, o nome de usuário e a senha do banco de dados do servidor de licenças) localizado em [!DNL flashaccess.war] ou modifique [!DNL \Reference Implementation\Server\refimpl\WebContent\META-INF\context.xml] e recrie o arquivo WAR usando os arquivos atualizados. Para alterar qualquer um desses parâmetros, edite [!DNL context.xml] localizado no diretório WebContent e use o script Ant para recriar o arquivo WAR. Para ajustar o banco de dados, altere as configurações da fonte de dados JNDI neste arquivo.
 
-Se você depurar o projeto de Implementação de referência no Eclipse, precisará adicionar `$CATALINA_HOME\lib\tomcat-dbcp.jar` à sua configuração de execução/depuração. Esta etapa não é necessária se você executar o [!DNL flashaccess.war] arquivo em um servidor Tomcat 6.0 independente.
+Se você depurar o projeto de Implementação de referência no Eclipse, precisará adicionar `$CATALINA_HOME\lib\tomcat-dbcp.jar` à sua configuração de execução/depuração. Esta etapa não é necessária se você executar o arquivo [!DNL flashaccess.war] em um servidor Tomcat 6.0 independente.
