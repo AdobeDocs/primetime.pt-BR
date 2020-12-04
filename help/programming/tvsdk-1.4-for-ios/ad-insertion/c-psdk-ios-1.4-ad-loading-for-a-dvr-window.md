@@ -6,6 +6,9 @@ title: Carregar anúncio para uma janela DVR
 uuid: 67bc3924-3d17-4d1a-b9a7-be8d0488a970
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -14,17 +17,17 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Você pode decidir se deseja resolver somente os anúncios que ocorrem após o ponto ativo atual do usuário ou também resolver os anúncios que ocorrem antes do ponto ativo atual.
 
-Quando um usuário começa a exibir o conteúdo no início de um fluxo DVR, o TVSDK resolve todos os anúncios do fluxo naquele momento. No entanto, quando o usuário começa a exibir o conteúdo em um ponto após o início do fluxo, você pode decidir se deseja resolver apenas os anúncios que ocorrem após o ponto ativo atual do usuário ou também resolver os anúncios que ocorreram antes do ponto ativo atual.
+Quando um usuário start para o conteúdo da visualização no início de um fluxo DVR, o TVSDK resolve todos os anúncios para o fluxo naquele momento. No entanto, quando o usuário start para visualização de conteúdo em um ponto após o início do fluxo, você pode decidir se deseja resolver apenas os anúncios que ocorrem após o ponto ativo atual do usuário ou também resolver os anúncios que ocorreram antes do ponto ativo atual.
 
 >[!TIP]
 >
 >A resolução de anúncios após o ponto ativo atual é mais rápida, mas se o usuário buscar para trás, essa opção impede que o player reproduza anúncios que apareceram antes.
 
-## Controlar o carregamento de um anúncio para uma janela DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
+## Controlar e carregar para uma janela DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
 Para controlar o carregamento de um anúncio para uma janela DVR:
 
-Para carregar todos os anúncios para o fluxo inteiro, defina a `PTAdMetadata.enableDVRAds` propriedade como `YES`.
+Para carregar todos os anúncios para todo o fluxo, defina a propriedade `PTAdMetadata.enableDVRAds` como `YES`.
 
 >[!NOTE]
 >
