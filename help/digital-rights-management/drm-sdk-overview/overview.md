@@ -4,11 +4,14 @@ title: Adobe Primetime DRM SDK - Visão geral
 uuid: d6bdd66e-02b3-48b8-9355-60238b9115a4
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime DRM SDK - Visão geral {#adobe-primetime-drm-sdk-an-overview}
+# Adobe Primetime DRM SDK - Uma visão geral {#adobe-primetime-drm-sdk-an-overview}
 
 >[!NOTE]
 >
@@ -20,7 +23,7 @@ O Primetime DRM é uma plataforma flexível que permite aos proprietários de co
 
 O Primetime DRM suporta uma grande variedade de modelos de negócios, incluindo vídeo sob demanda, aluguel e venda eletrônica. Você pode distribuir conteúdo protegido com o Primetime DRM de várias maneiras, incluindo:
 
-* Streaming por meio do software Adobe Flash Media Server
-* Oferecendo download progressivo via HTTP usando a tecnologia HTTP Dynamic Streaming da Adobe
+* Transmissão contínua através de software de Flash Media Server Adobe
+* Oferecendo download progressivo via HTTP usando a tecnologia Adobe HTTP Dynamic Streaming
 * Permitindo downloads em uma biblioteca de conteúdo para reprodução local na conveniência do consumidor
 
