@@ -4,13 +4,16 @@ title: Informações de segurança específicas do fornecedor
 uuid: 23186770-c73a-4802-bc30-fa9e4b47d9ba
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
 
 # Informações de segurança específicas do fornecedor{#vendor-specific-security-information}
 
-Esta seção contém informações relacionadas à segurança sobre sistemas operacionais e servidores de aplicativos que estão incorporados à sua solução Adobe Access.
+Esta seção contém informações relacionadas à segurança sobre os sistemas operacionais e servidores de aplicativos que estão incorporados à sua solução de acesso ao Adobe.
 
 Use os links fornecidos nesta seção para encontrar informações de segurança específicas do fornecedor para seu sistema operacional e servidor de aplicativos.
 
@@ -64,7 +67,7 @@ A tabela a seguir descreve algumas abordagens possíveis para minimizar vulnerab
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">NTP (Network Time Protocol, protocolo de tempo de rede) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para operações corretas e análises forenses, mantenha o tempo preciso nos servidores do Adobe Access e nos empacotadores do Adobe Access. Use uma versão segura do NTP para sincronizar o horário em todos os sistemas conectados à Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para a operação correta e a análise forense, mantenha o tempo preciso em servidores de acesso a Adobe e pacotes de acesso a Adobe. Use uma versão segura do NTP para sincronizar o horário em todos os sistemas conectados à Internet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
