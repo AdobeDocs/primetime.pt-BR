@@ -1,11 +1,14 @@
 ---
-description: Os principais componentes do Primetime DRM consistem em um Java SDK e nos ambientes de tempo de execução do cliente Flash Player e do Adobe AIR.
-seo-description: Os principais componentes do Primetime DRM consistem em um Java SDK e nos ambientes de tempo de execução do cliente Flash Player e do Adobe AIR.
+description: Os principais componentes do Primetime DRM consistem em um Java SDK e ambientes de tempo de execução de clientes Flash Player e Adobe AIR.
+seo-description: Os principais componentes do Primetime DRM consistem em um Java SDK e ambientes de tempo de execução de clientes Flash Player e Adobe AIR.
 seo-title: Java SDK, Flash Player e cliente Adobe AIR
 title: Java SDK, Flash Player e cliente Adobe AIR
 uuid: e6daed27-3803-4ef7-ba25-4a180af7502f
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Essas APIs são usadas para definir direitos e preparar conteúdo para distribui
 
 * Gerenciamento de políticas
 
-   A API de gerenciamento de políticas é usada para criar e modificar políticas a serem aplicadas ao conteúdo. As políticas podem ser criadas ou atualizadas, incluindo obter/definir todas as regras de uso e permitir parâmetros adicionais em um namespace personalizado.
+   A API de gerenciamento de políticas é usada para criar e modificar políticas a serem aplicadas ao conteúdo. As políticas podem ser criadas ou atualizadas, incluindo obter/definir todas as regras de uso e permitir parâmetros adicionais em uma namespace personalizada.
 
 * Embalagem do conteúdo
 
@@ -46,10 +49,10 @@ Essas APIs são usadas quando um cliente solicita uma licença do servidor. O SD
 
    A API de geração e aquisição de licença é usada para gerar uma licença para o usuário.
 
-* Suporte para clientes e conteúdo do Adobe AIR versão 1.5
+* Suporte para clientes e conteúdo da versão 1.5 do Adobe AIR
 
    Para fins de compatibilidade com versões anteriores, o SDK tem APIs para lidar com solicitações de aplicativos AIR criados para uso com clientes AIR versão 1.5 e anteriores e conteúdo protegido.
 
-## Execução de referência {#reference-implementation}
+## Implementação de referência {#reference-implementation}
 
-O SDK inclui uma implementação de referência, uma implementação DRM simples do Adobe Primetime que demonstra como usar as APIs Java. A implementação de referência fornece um License Server, Watched Folder Packager, um aplicativo do Primetime DRM Manager AIR e ferramentas de linha de comando para empacotamento de conteúdo e gerenciamento de políticas com base nas APIs do Java. Para saber mais sobre a implementação de referência do DRM Primetime, consulte Proteger conteúdo.
+O SDK inclui uma implementação de referência, uma implantação simples do Adobe Primetime DRM que demonstra como usar as APIs do Java. A implementação de referência fornece um License Server, Watched Folder Packager, um aplicativo do Primetime DRM Manager AIR e ferramentas de linha de comando para empacotamento de conteúdo e gerenciamento de políticas com base nas APIs Java. Para saber mais sobre a implementação de referência do DRM Primetime, consulte Proteger conteúdo.
