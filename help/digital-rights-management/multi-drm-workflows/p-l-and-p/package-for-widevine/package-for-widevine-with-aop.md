@@ -6,6 +6,9 @@ title: Compacte seu conteúdo com o Adobe Offline Packager
 uuid: d0676147-c20f-49ea-93a6-9c8dbbbba992
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
 
 O Adobe Offline Packager utiliza como entrada conteúdo mp4 não criptografado.
 
-**Chamada do Adobe Offline Packager**
+**Chamando o Adobe Offline Packager**
 
 Uma chamada típica do adobe offline packager seria semelhante à chamada abaixo:
 
@@ -38,4 +41,4 @@ O argumento conf_path aponta para o arquivo de configuração que conteria o seg
     &lt;encrypt_audio>falso&lt;/encrypt_audio>
     &lt;/config>
 
-Porque certos dispositivos Android... principalmente a Amazon Fire TV. não suporta a descriptografia de áudio, a criptografia de áudio é opcional.
+Porque certos dispositivos Android... principalmente a Amazon Fire TV — não suporta a descriptografia de áudio, a criptografia de áudio é opcional.
