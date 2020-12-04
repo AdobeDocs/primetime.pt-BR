@@ -3,6 +3,9 @@ title: Códigos de erro PSDK
 description: Informações sobre vários códigos de erro, avisos e códigos de erro nativos.
 translation-type: tm+mt
 source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+workflow-type: tm+mt
+source-wordcount: '1897'
+ht-degree: 6%
 
 ---
 
@@ -38,7 +41,7 @@ A tabela a seguir fornece informações detalhadas sobre notificações de tipo 
   </tr>
   <tr>
     <td>ILLEGAL_STATE</td>
-    <td>3</td>
+    <td>1</td>
     <td>A operação não é suportada no estado atual do player.</td>
   </tr>
   <tr>
@@ -185,9 +188,9 @@ A maioria dos avisos contém metadados relevantes; por exemplo, o URL do recurso
     <th><b>Descrição</b></th>
   </tr>
   <tr>
-    <td>REVENUE_OTIMIZATION_REPORTING</td>
+    <td>REVENUE_OTIMIZATION_RELATÓRIOS</td>
     <td>300</td>
-    <td>Notificações detalhadas do TVSDK para relatórios e análises adicionais.</td>
+    <td>Notificações detalhadas do TVSDK para relatórios e análise adicionais.</td>
   </tr>
  </table>
 
@@ -213,7 +216,7 @@ A interface do Video Encoder do AVE retorna essas notificações de reprodução
   </tr>
   <tr>
     <td>ASYNC_OPERATION_IN_PROGRESS</td>
-    <td>1</td>
+    <td>3</td>
     <td>Operação assíncrona. A solicitação de operação foi feita. As informações de sucesso/falha estarão disponíveis posteriormente.</td>
   </tr>
   <tr>
@@ -223,7 +226,7 @@ A interface do Video Encoder do AVE retorna essas notificações de reprodução
   </tr>
   <tr>
     <td>DECODER_FAILED</td>
-    <td>3</td>
+    <td>1</td>
     <td>O decodificador falhou no tempo de execução.</td>
   </tr>
   <tr>
@@ -354,7 +357,7 @@ A interface do Video Encoder do AVE retorna essas notificações de reprodução
   <tr>
     <td>CONTAINER_NOT_SUPPORTED</td>
     <td>29</td>
-    <td>O tipo de contêiner não é suportado.</td>
+    <td>O tipo de container não é suportado.</td>
   </tr>
   <tr>
     <td>SEEK_FAILED</td>
@@ -382,9 +385,9 @@ A interface do Video Encoder do AVE retorna essas notificações de reprodução
     <td>Estouro.</td>
   </tr>
   <tr>  
-    <td>VIDEO_PROFILE_NOT_SUPPORTED</td>
+    <td>VIDEO_PERFIL_NOT_SUPPORTED</td>
     <td>35</td>
-    <td>Perfil de vídeo não suportado.</td>
+    <td>Perfil de vídeo sem suporte.</td>
   </tr>
   <tr>
     <td>PERIOD_NOT_LOADED</td>
@@ -432,7 +435,7 @@ A interface do Video Encoder do AVE retorna essas notificações de reprodução
     <td>A conexão de rede do usuário está inativa. A reprodução pode parar a qualquer momento e será retomada quando a conexão estiver disponível.</td>
   </tr>
   <tr>
-    <td>NO_USABLE_BITRATE_PROFILE</td>
+    <td>NO_USABLE_BITRATE_PERFIL</td>
     <td>45</td>
     <td>Nenhum perfil de taxa de bits utilizável encontrado no fluxo.</td>
   </tr>
@@ -452,7 +455,7 @@ A interface do Video Encoder do AVE retorna essas notificações de reprodução
     <td>A substituição especificada em uma API de inserção não foi bem-sucedida. Isso significa que a inserção teve êxito, mas a substituição não. A substituição pode falhar se o manifesto a ser substituído tiver sido removido da linha do tempo.</td>
   </tr>
   <tr>
-    <td>SWITCH_TO_ASYMMETRIC_PROFILE</td>
+    <td>SWITCH_TO_ASYMMETRIC_PERFIL</td>
     <td>49</td>
     <td>O DRM está alternando para um perfil assimétrico. Espera-se que todos os perfis sejam alinhados com a duração. Caso contrário, esse aviso será emitido e poderá haver saltos na reprodução.</td>
   </tr>
@@ -589,7 +592,7 @@ A interface do Video Encoder do AVE retorna essas notificações de reprodução
   <tr>
     <td>AUDIO_START_ERROR</td>
     <td>76</td>
-    <td>Não é possível iniciar o áudio.</td>
+    <td>Não é possível start de áudio.</td>
   </tr>
   <tr>
     <td>NO_AUDIO_SINK</td>
@@ -613,7 +616,7 @@ A interface do Video Encoder do AVE retorna essas notificações de reprodução
   </tr>
   <tr>
     <td>ID3PARSE_ERROR</td>
-    <td>81</td>
+    <td>61</td>
     <td>Ocorreu um erro ao analisar os dados da ID3.</td>
   </tr>
   <tr>
