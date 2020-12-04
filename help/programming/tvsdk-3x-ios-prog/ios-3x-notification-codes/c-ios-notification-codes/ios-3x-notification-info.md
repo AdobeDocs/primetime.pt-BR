@@ -6,6 +6,9 @@ title: Códigos de notificação INFO
 uuid: 21297863-dac1-45a4-ac9d-309d1f746f8b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '192'
+ht-degree: 4%
 
 ---
 
@@ -35,36 +38,36 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_START </span> </td> 
+   <td colname="1"><span class="codeph"> 300000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_START  </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> Nenhum </td> 
    <td colname="5"> A reprodução foi iniciada. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300001 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 300001  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE  </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> Nenhum </td> 
    <td colname="5"> A reprodução foi concluída. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300002 </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_START </span> </td> 
+   <td colname="1"><span class="codeph"> 300002  </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_START  </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> <p> Nenhum </p> </td> 
    <td colname="5"> Uma operação de busca foi iniciada. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300003 </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 300003  </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_COMPLETE  </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
    <td colname="5"> Uma operação de busca foi concluída. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300005 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 300005  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
    <td colname="5"> O estado do player mudou. Quando o estado for ERROR (ERRO), a notificação interna será o objeto de notificação de erro que disparou o switch para o estado ERROR (ERRO). </td> 
@@ -77,10 +80,10 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 302000 </span> </td> 
-   <td colname="2"><span class="codeph"> BITRATE_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 302000  </span> </td> 
+   <td colname="2"><span class="codeph"> BITRATE_CHANGE  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
-   <td colname="4"><span class="codeph"> BITRATO </span> </td> 
+   <td colname="4"><span class="codeph"> BITRATO  </span> </td> 
    <td colname="5"> A taxa de bits do vídeo mudou. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -91,8 +94,8 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 304000 </span> </td> 
-   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 304000  </span> </td> 
+   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
    <td colname="5"> <p>A faixa de áudio foi alterada. </p> </td> 
@@ -105,8 +108,8 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 307000 </span> </td> 
-   <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 307000  </span> </td> 
+   <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
    <td colname="5"> <p>O rastreamento de legendas mudou. </p> </td> 
