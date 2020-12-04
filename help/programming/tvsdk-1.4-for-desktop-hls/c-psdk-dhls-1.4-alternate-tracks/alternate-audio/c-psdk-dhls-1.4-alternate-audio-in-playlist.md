@@ -6,6 +6,9 @@ title: Faixas de áudio alternativas na lista de reprodução
 uuid: ec98cb6d-aa82-4473-83b6-f12c875f17cb
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 A lista de reprodução de um vídeo pode especificar um número ilimitado de trilhas de áudio alternativas para o conteúdo de vídeo principal. Por exemplo, você pode querer adicionar idiomas diferentes ao seu conteúdo de vídeo ou permitir que o usuário alterne entre trilhas diferentes em seu dispositivo enquanto o conteúdo estiver sendo reproduzido.
 
-As faixas de áudio alternativas, ou o áudio de ligação tardia, permitem que os usuários alternem entre várias faixas de idioma para fluxos de vídeo HTTP (ao vivo/linear e VOD) e você não precisa modificar, duplicar ou reempacotar o vídeo para cada faixa de áudio. É possível fornecer várias faixas de idioma para um ativo de vídeo antes ou depois da embalagem inicial do ativo.
+As faixas de áudio alternativas, ou o áudio de ligação tardia, permitem que os usuários alternem entre várias faixas de idioma para fluxos de vídeo HTTP (ao vivo/linear e VOD) e você não precisa modificar, duplicado ou reempacotar o vídeo para cada faixa de áudio. É possível fornecer várias faixas de idioma para um ativo de vídeo antes ou depois da embalagem inicial do ativo.
 
 >[!TIP]
 >
 >Para que o áudio alternativo seja misturado com a faixa de vídeo da mídia principal, os carimbos de data e hora da faixa alternativa devem corresponder aos carimbos de data e hora do áudio na faixa principal.
 
-A faixa de áudio principal é incluída na coleção de faixas de áudio com o `default` rótulo. Os metadados para os fluxos de áudio alternativos estão incluídos na lista de reprodução nas `#EXT-X-MEDIA` tags com `TYPE=AUDIO`.
+A faixa de áudio principal está incluída na coleção de faixas de áudio com o rótulo `default`. Os metadados para os fluxos de áudio alternativos estão incluídos na lista de reprodução das tags `#EXT-X-MEDIA` com `TYPE=AUDIO`.
 
 Por exemplo, um manifesto M3U8 que especifica vários fluxos de áudio alternativos pode ser semelhante a:
 
