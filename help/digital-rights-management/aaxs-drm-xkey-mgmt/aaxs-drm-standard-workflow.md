@@ -6,11 +6,14 @@ seo-description: Fluxo de trabalho DRM AXS padrão
 uuid: b996eb2c-8e37-4a29-a972-e09c69d2461d
 translation-type: tm+mt
 source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
-# Fluxo de trabalho DRM AXS padrão{#standard-aaxs-drm-workflow}
+# Fluxo de trabalho padrão do DRM AXS{#standard-aaxs-drm-workflow}
 
 1. (Pacote) O AAXS Java SDK gera um CEK aleatório.
 1. (Pacote) O CEK é usado para criptografar conteúdo.
