@@ -6,6 +6,9 @@ title: Implementar para frente e retroceder rapidamente
 uuid: d54c8c61-887f-4362-9085-e443859854b9
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Quando os usuários avançam rapidamente para a frente ou retrocedem rapidamente
 
 Para mudar a velocidade, é necessário definir um valor.
 
-1. Mova do modo de reprodução normal (1x) para o modo de reprodução de truque, definindo a taxa no `MediaPlayer` para um valor permitido.
+1. Mova do modo de reprodução normal (1x) para o modo de reprodução de truque definindo a taxa em `MediaPlayer` para um valor permitido.
 
        Lembre-se das seguintes informações:
    
-   * A `MediaPlayerItem` classe define as taxas de reprodução permitidas.
+   * A classe `MediaPlayerItem` define as taxas de reprodução permitidas.
    * O TVSDK seleciona a taxa mais próxima permitida se a taxa especificada não for permitida.
 
       O exemplo a seguir define a taxa de reprodução interna do player para a taxa solicitada:
@@ -53,7 +56,7 @@ Para mudar a velocidade, é necessário definir um valor.
 
 O TVSDK despacha os seguintes eventos relacionados à reprodução de truques:
 
-* `MediaPlayerEvent.RATE_SELECTED`, quando o `rate` valor muda para um valor diferente.
+* `MediaPlayerEvent.RATE_SELECTED`, quando o  `rate` valor muda para um valor diferente.
 
 * `MediaPlayerEvent.RATE_PLAYING`, quando a reprodução é retomada na taxa selecionada.
 
