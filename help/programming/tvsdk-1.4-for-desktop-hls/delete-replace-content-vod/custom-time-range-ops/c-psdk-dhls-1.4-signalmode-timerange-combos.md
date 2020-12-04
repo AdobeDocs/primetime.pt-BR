@@ -6,6 +6,9 @@ title: Modo de sinalização e intervalo de tempo
 uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARCA </th> 
-   <th class="entry"> EXCLUIR </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> SUBSTITUIR </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> CustomRange OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> CustomRange OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -42,7 +45,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de Sinalização </span> do ServerMap </td> 
+   <td> <span class="codeph"> Modo de  </span> sinalização do ServerMap </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -65,7 +68,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> N/A (modo de sinalização CustomRange automático) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de sinalização </span> do ManifestCue </td> 
+   <td> <span class="codeph"> Modo  </span> de sinalização ManifestCue </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -89,7 +92,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> N/A (modo de sinalização CustomRange automático) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de Sinalização CustomRange </span> </td> 
+   <td> <span class="codeph"> Modo de  </span> sinalização CustomRange </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -136,13 +139,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARCA </th> 
-   <th class="entry"> EXCLUIR </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> SUBSTITUIR </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -161,7 +164,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de sinalização </span> do SeverMap </td> 
+   <td> <span class="codeph"> Modo de  </span> sinalização do SeverMap </td> 
    <td> Não presente (o anúncio está desativado). </td> 
    <td> 
     <code>
@@ -172,10 +175,10 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/A (modo de sinalização <span class="codeph"> PersonalizadoRange </span> ) </td> 
+   <td> N/A (modo de sinalização <span class="codeph"> CustomRange </span> automático) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de sinalização </span> do ManifestCue </td> 
+   <td> <span class="codeph"> Modo  </span> de sinalização ManifestCue </td> 
    <td> Não presente (o anúncio está desativado). </td> 
    <td> 
     <code>
@@ -186,13 +189,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/A (modo de sinalização <span class="codeph"> PersonalizadoRange </span> ) </td> 
+   <td> N/A (modo de sinalização <span class="codeph"> CustomRange </span> automático) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de Sinalização CustomRange </span> </td> 
+   <td> <span class="codeph"> Modo de  </span> sinalização CustomRange </td> 
    <td> Não presente (o anúncio está desativado). </td> 
    <td> Nenhum </td> 
-   <td> Nenhum (cuidadoso em <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
+   <td> Nenhum (cuidadoso de <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>
