@@ -78,7 +78,8 @@ Essas classes fornecem informações sobre anúncios que ocorrem em uma linha do
   <tr rowsep="1"> 
    <td colname="1"> 
     <pre>
-     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> classe PTContentResolver</a> , protocolo <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a>
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverclass,  
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverprotocol
     </pre> </td> 
    <td colname="2"> Classe que lida com a peça que resolve o anúncio no processo de decisão do anúncio do Adobe Primetime. </td> 
   </tr> 
