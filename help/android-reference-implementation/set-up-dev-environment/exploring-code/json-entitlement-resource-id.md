@@ -6,6 +6,9 @@ description: O bloco de código a seguir fornece um exemplo de um objeto JSON qu
 seo-description: O bloco de código a seguir fornece um exemplo de um objeto JSON quando a ID do recurso de direito é uma sequência de texto simples.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
