@@ -6,6 +6,9 @@ title: Recursos do Primetime TVSDK
 uuid: 838d407c-84e1-4818-bec2-4abd7cbf5308
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -17,11 +20,11 @@ O TVSDK para iOS inclui uma variedade de recursos e fornece os seguintes recurso
 * Reprodução VOD e ao vivo/linear
 
    * Gerenciamento da janela de reprodução, incluindo métodos que reproduzem, param, pausam, buscam e recuperam a posição do indicador de reprodução
-   * Suporte para reprodução completa de eventos
+   * Suporte para reprodução de evento completo
    * Legendas ocultas (608, WebVTT) e formas alternativas de áudio para maior acessibilidade
    * Recurso DVR
    * Lógica da taxa de bits adaptável (ABR) e configuração inicial dos controles ABR
-   * Assinatura de tags não HLS e HLS
+   * Subscrição para tags não HLS e HLS
    * Suporte a failover de manifesto ao vivo
 
 * Publicidade
@@ -43,7 +46,7 @@ O TVSDK para iOS inclui uma variedade de recursos e fornece os seguintes recurso
 * Rastreamento de vídeo e anúncio
 
    * Rastreamento de eventos QoS
-   * Notificações que ajudam o TVSDK e seu aplicativo a se comunicar de forma assíncrona sobre o status de vídeos, anúncios e outros elementos, e também sobre a atividade de registro
+   * Notificações que ajudam o TVSDK e seu aplicativo a se comunicar de forma assíncrona sobre o status de vídeos, anúncios e outros elementos, além da atividade de log
    * Integração com o Adobe Analytics e suporte a pulsação
 
 * Registro
