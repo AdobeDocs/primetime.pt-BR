@@ -6,11 +6,14 @@ title: Excluir intervalos com anúncio de decisão do anúncio Primetime
 uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
 
-# Excluir intervalos com anúncio de decisão do anúncio Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
+# Excluir intervalos com o anúncio de decisão do anúncio Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
 
 Remova os Intervalos de tempo entre o início e o fim em localTime da linha do tempo.
 
