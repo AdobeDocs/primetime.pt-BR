@@ -6,11 +6,14 @@ title: classe TimeRangeCollection
 uuid: da781df4-6b19-47e1-8dc5-ea83c139f061
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 0%
 
 ---
 
 
-# classe TimeRangeCollection{#timerangecollection-class}
+# Classe TimeRangeCollection{#timerangecollection-class}
 
 A classe do utilitário TimeRangeCollection abstrai a noção de uma coleção ordenada de especificações TimeRange e fornece serviços para se traduzir em uma instância Metadata.
 
@@ -26,4 +29,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-O valor definido para o tipo de coleção é `MARK_RANGES`, `DELETE_RANGES`e `REPLACE_RANGES`. Você pode criar `TimeRangeCollection`s usando esses três tipos.
+O valor definido para o tipo de coleção é `MARK_RANGES`, `DELETE_RANGES` e `REPLACE_RANGES`. Você pode criar `TimeRangeCollection`s usando esses três tipos.
