@@ -7,6 +7,9 @@ title: Atualizar regras de seleção de anúncio
 uuid: c33fe1f0-78cb-4dc2-89d2-e9fb1bf0e73f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
@@ -15,17 +18,18 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Você pode usar o arquivo de configuração TVSDK (AdobeTVSDKConfig.json) para atualizar as prioridades para a seleção de anúncio nas respostas VAST/VMAP. Você também pode usar esse arquivo de configuração para definir as regras de transformação do URL de origem para anúncios.
 
-Quando o player de vídeo faz uma solicitação para um servidor de publicidade, a resposta VAST/VMAP geralmente inclui vários anúncios ( `MediaFile` elementos), cada um deles fornecendo um URL para uma versão diferente do codec do contêiner. Em alguns casos, os anúncios criados na resposta VAST/VMAP fornecem uma taxa de bits diferente para o anúncio. Se você quiser especificar sua própria prioridade e regras de transformação para essas criações de anúncios, poderá fazer isso no arquivo de [!DNL AdobeTVSDKConfig.json] configuração.
+Quando o player de vídeo faz uma solicitação para um servidor de publicidade, a resposta VAST/VMAP geralmente inclui vários anúncios (elementos `MediaFile`), cada um dos quais fornece um URL para uma versão diferente de codec de container. Em alguns casos, os anúncios criados na resposta VAST/VMAP fornecem uma taxa de bits diferente para o anúncio. Se você quiser especificar sua própria prioridade e regras de transformação para essas criações de anúncios, poderá fazê-lo no arquivo de configuração [!DNL AdobeTVSDKConfig.json].
 
 >[!IMPORTANT]
 >
 >* Não altere o nome do arquivo de configuração do TVSDK. O nome deve permanecer [!DNL AdobeTVSDKConfig.json].
 >* Você pode colocar esse arquivo em qualquer lugar acessível ao seu pacote.
+
 >
 
 
 
-Você pode especificar dois tipos de regras em [!DNL AdobeTVSDKConfig.json]: Regras de *prioridade* e regras de *normalização* .
+Você pode especificar dois tipos de regras em [!DNL AdobeTVSDKConfig.json]: Regras *Priority* e *Normalizar* regras.
 
 **[!UICONTROL Disabling Pre-Roll]**
 
