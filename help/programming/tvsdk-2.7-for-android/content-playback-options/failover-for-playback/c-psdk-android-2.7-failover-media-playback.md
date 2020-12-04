@@ -7,7 +7,7 @@ uuid: 5189cef4-ee09-43b3-ae3d-1052fc535480
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Quando uma lista de reprodução inteira estiver ausente, por exemplo, quando o 
 
 Se a lista de reprodução associada à taxa de bits de resolução média estiver ausente, o TVSDK pesquisará uma lista de reprodução variante na mesma resolução. Se encontrar a mesma resolução, o TVSDK start baixando a lista de reprodução variante e os segmentos da posição correspondente. Se o player não encontrar a mesma lista de reprodução de resolução, ele tentará percorrer outras listas de reprodução de taxa de bits e suas variantes. Uma taxa de bits imediatamente menor é a primeira escolha, depois sua variante e assim por diante. Se todas as listas de reprodução de taxa de bits inferior e suas variantes estiverem esgotadas na tentativa de encontrar uma lista de reprodução válida, o TVSDK irá para a taxa de bits superior e contará a partir daí. Se não for possível encontrar uma lista de reprodução válida, o processo falhará e o player será movido para o estado ERROR.
 
-Seu aplicativo pode determinar como lidar com essa situação. Por exemplo, talvez você queira fechar a atividade do player e direcionar o usuário para a atividade do catálogo. O evento de interesse é o `STATUS_CHANGED` evento, e o retorno de chamada correspondente é o `onStatusChanged` método. Este é o código que monitora se o player altera seu status interno para `ERROR`:
+Seu aplicativo pode determinar como lidar com essa situação. Por exemplo, talvez você queira fechar a atividade do player e direcionar o usuário para a atividade do catálogo. O evento de interesse é o evento `STATUS_CHANGED` e o retorno de chamada correspondente é o método `onStatusChanged`. Este é o código que monitora se o player altera seu status interno para `ERROR`:
 
 ```java
 ... 
@@ -44,9 +44,9 @@ Se um segmento estiver ausente no servidor porque, por exemplo, o arquivo manife
 1. Faça o ciclo de cada taxa de bits disponível em cada variante disponível.
 1. Ignore o segmento e emita um aviso.
 
-Quando o TVSDK não pode obter um segmento alternativo, ele aciona uma notificação de `CONTENT_ERROR` erro. Esta notificação contém uma notificação interna com o `DOWNLOAD_ERROR` código. Se o fluxo com o problema for uma faixa de áudio alternativa, o TVSDK gera a notificação de `AUDIO_TRACK_ERROR` erro.
+Quando o TVSDK não pode obter um segmento alternativo, ele aciona uma notificação de erro `CONTENT_ERROR`. Esta notificação contém uma notificação interna com o código `DOWNLOAD_ERROR`. Se o fluxo com o problema for uma faixa de áudio alternativa, o TVSDK gera a notificação de erro `AUDIO_TRACK_ERROR`.
 
-Se o mecanismo de vídeo não conseguir obter segmentos continuamente, ele limita o segmento contínuo para 5, após o qual a reprodução é interrompida e o TVSDK emite um erro `NATIVE_ERROR` com o código 5.
+Se o mecanismo de vídeo não conseguir obter segmentos continuamente, ele limitará os segmentos contínuos a saltar para 5, após o que a reprodução será interrompida e o TVSDK emitirá um `NATIVE_ERROR` com o código 5.
 
 >[!NOTE]
 >
