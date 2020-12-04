@@ -31,7 +31,8 @@ Os seguintes elementos de API são úteis para personalizar a reprodução:
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">Controle se uma quebra de anúncio deve ser marcada como assistida por um visualizador e, em caso afirmativo, quando marcá-la. Defina e obtenha a política assistida usando 
     <pre>
-     a propriedade <span class="codeph"> adBreakAsWatched</span> .
+     the 
+     propriedade <span class="codeph"> adBreakAsWatched</span>.
     </pre> </td> 
   </tr> 
   <tr> 
