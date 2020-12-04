@@ -46,8 +46,8 @@ O arquivo de log global, `flashaccess-global.log`, está localizado em *LicenseS
 
 ## Arquivo de log de partição {#section_5660137CD6AA40519E72A4315534846B}
 
-O arquivo de log de partição, `flashaccess-partition.log`, está localizado no `<LicenseServer.LogRoot>/flashaccesserver` diretório. Inclui mensagens de log que foram geradas durante o processamento de uma solicitação de licença.
+O arquivo de log de partição, `flashaccess-partition.log`, está localizado no diretório `<LicenseServer.LogRoot>/flashaccesserver`. Inclui mensagens de log que foram geradas durante o processamento de uma solicitação de licença.
 
-## Arquivo de log do locatário {#section_F0257CC0831647F18A746B4F02E3E910}
+## Arquivo de log de locatário {#section_F0257CC0831647F18A746B4F02E3E910}
 
 O arquivo de log do locatário de cada locatário, `flashaccess-tenant.log`, está localizado em `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. O log de locatário inclui informações de auditoria que descrevem cada licença gerada para este locatário.
