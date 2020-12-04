@@ -6,6 +6,9 @@ title: Marcar intervalos
 uuid: fa6047dc-9a12-42fa-9e58-8ee3a55fa866
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Você pode designar intervalos de tempo no conteúdo VOD como intervalos de anúncio.
 
-O `TimeRanges` intervalo entre o `begin` e o `end` início `localTime` será marcado como um `AdBreak` na linha do tempo. Outras configurações de publicidade são ignoradas.
+O `TimeRanges` entre `begin` e `end` em `localTime` será marcado como um `AdBreak` na linha do tempo. Outras configurações de publicidade são ignoradas.
 
 >[!TIP]
 >
->Se você quiser marcar apenas determinados intervalos no conteúdo como anúncios, sem inserir anúncios dinâmicos, crie uma `CustomRangeMetadata` instância e especifique o tipo como uma `MARK` operação com os intervalos personalizados definidos.
+>Se você quiser marcar apenas determinados intervalos no conteúdo como anúncios, sem inserir anúncios dinâmicos, crie uma instância `CustomRangeMetadata` e especifique o tipo como uma operação `MARK` com os intervalos personalizados definidos.
 
 1. Marque os intervalos com a marca Tp:
 
