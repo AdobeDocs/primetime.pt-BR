@@ -6,17 +6,20 @@ title: Inserção de publicidade e failover para VOD
 uuid: 1f813065-9310-4495-9fbb-d90eda8ac8bd
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '736'
+ht-degree: 0%
 
 ---
 
 
-# Inserção de publicidade e failover para VOD {#advertising-insertion-and-failover-for-vod}
+# Inserção de anúncios e failover para VOD {#advertising-insertion-and-failover-for-vod}
 
 O processo de inserção de anúncio por demanda (VOD) consiste nas fases de resolução, inserção e reprodução do anúncio. Para o rastreamento de anúncios, o TVSDK deve informar um servidor de rastreamento remoto sobre o andamento da reprodução de cada anúncio. Quando surgirem situações inesperadas, o TVSDK toma as medidas apropriadas.
 
 ## Fase de resolução de anúncios {#section_5DD3A7DA79E946298BFF829A60202E1C}
 
-O TVSDK entra em contato com um serviço de entrega de anúncios, como a decisão do anúncio do Adobe Primetime, e tenta obter o arquivo principal da lista de reprodução que corresponde ao fluxo de vídeo do anúncio. Durante a fase de resolução de anúncios, o TVSDK efetua uma chamada HTTP para o servidor de entrega de anúncios remoto e analisa a resposta do servidor.
+O TVSDK entra em contato com um serviço de delivery de anúncios, como a tomada de decisões de anúncios do Adobe Primetime, e tenta obter o arquivo principal da lista de reprodução que corresponde ao fluxo de vídeo do anúncio. Durante a fase de resolução de anúncios, o TVSDK faz uma chamada HTTP para o servidor de anúncio remoto e analisa a resposta do servidor.
 
 O TVSDK oferece suporte aos seguintes tipos de provedores de anúncios:
 
@@ -39,17 +42,17 @@ Uma das seguintes situações de failover pode ocorrer durante essa fase:
 
 O TVSDK emite uma notificação de aviso sobre o erro e continua o processamento.
 
-## Fase de inserção de anúncios {#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
+## Fase de inserção de anúncio {#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
 
 O TVSDK insere o conteúdo alternativo (anúncios) na linha do tempo que corresponde ao conteúdo principal.
 
-Quando a fase de resolução de anúncios estiver concluída, o TVSDK terá uma lista ordenada de recursos de anúncios que são agrupados em quebras de anúncios. Cada quebra de anúncio é posicionada na linha do tempo do conteúdo principal usando um valor de hora de início expresso em milissegundos (ms). Cada anúncio em uma quebra de anúncio tem uma propriedade de duração que também é expressa em ms. Os anúncios em uma quebra de anúncio são encadeados e, como resultado, a duração de uma quebra de anúncio é igual à soma das durações dos anúncios individuais de composição.
+Quando a fase de resolução de anúncios estiver concluída, o TVSDK terá uma lista ordenada de recursos de anúncios que são agrupados em quebras de anúncios. Cada quebra de anúncio é posicionada na linha do tempo do conteúdo principal usando um valor de start-tempo que é expresso em milissegundos (ms). Cada anúncio em uma quebra de anúncio tem uma propriedade de duração que também é expressa em ms. Os anúncios em uma quebra de anúncio são encadeados e, como resultado, a duração de uma quebra de anúncio é igual à soma das durações dos anúncios individuais de composição.
 
-O failover pode ocorrer nesta fase com conflitos que podem ocorrer na linha do tempo durante a inserção do anúncio. Para combinações específicas de valores de tempo de início/duração de quebra de anúncio, os segmentos de anúncio podem se sobrepor. Essa sobreposição ocorre quando a última parte de um intervalo de anúncios faz interseção com o início do primeiro anúncio no próximo intervalo de anúncios. Nessas situações, o TVSDK descarta o intervalo posterior do anúncio e continua o processo de inserção do anúncio com o próximo item na lista até que todas as quebras do anúncio sejam inseridas ou descartadas.
+O failover pode ocorrer nesta fase com conflitos que podem ocorrer na linha do tempo durante a inserção do anúncio. Para combinações específicas de valores de tempo/duração de start de quebra de anúncio, os segmentos de anúncio podem se sobrepor. Essa sobreposição ocorre quando a última parte de um intervalo de anúncios faz interseção com o início do primeiro anúncio no próximo intervalo de anúncios. Nessas situações, o TVSDK descarta o intervalo posterior do anúncio e continua o processo de inserção do anúncio com o próximo item na lista até que todas as quebras do anúncio sejam inseridas ou descartadas.
 
 O TVSDK emite uma notificação de aviso sobre o erro e continua o processamento.
 
-## Fase de reprodução do anúncio {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
+## Fase de reprodução de anúncios {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
 
 O TVSDK baixa os segmentos do anúncio e os renderiza na tela do dispositivo.
 
@@ -67,6 +70,6 @@ O TVSDK encaminha os eventos acionados para seu aplicativo, incluindo eventos de
 * O perfil é alterado devido ao algoritmo de failover.
 * Todas as opções de failover foram consideradas e nenhuma ação adicional pode ser executada automaticamente.
 
-   Seu aplicativo precisa tomar as medidas apropriadas.
+   Seu aplicativo precisa tomar a ação apropriada.
 
-Independentemente de ocorrerem erros, o TVSDK chama `onAdBreakComplete` cada um `onAdBreakStart` e `onAdComplete` para cada `onAdStart`. No entanto, se os segmentos não puderem ser baixados, pode haver lacunas na linha do tempo. Quando as lacunas forem grandes o suficiente, os valores na posição do indicador de reprodução e o progresso do anúncio relatado podem exibir descontinuidades.
+Independentemente de ocorrerem erros, o TVSDK chama `onAdBreakComplete` para cada `onAdBreakStart` e `onAdComplete` para cada `onAdStart`. No entanto, se os segmentos não puderem ser baixados, pode haver lacunas na linha do tempo. Quando as lacunas forem grandes o suficiente, os valores na posição do indicador de reprodução e o progresso do anúncio relatado podem exibir descontinuidades.
