@@ -1,16 +1,19 @@
 ---
-seo-title: Entrega de código/Conteúdo do pacote
-title: Entrega de código/Conteúdo do pacote
+seo-title: Delivery de código/conteúdo do pacote
+title: Delivery de código/conteúdo do pacote
 uuid: 13de2fd4-9079-496c-a087-25176c118864
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
 
-# Entrega de código/Conteúdo do pacote{#code-delivery-package-contents}
+# Delivery de código / Conteúdo do pacote{#code-delivery-package-contents}
 
-O pacote do Adobe Primetime DRM On Premise Individualization Server contém o seguinte:
+O pacote Adobe Primetime DRM On Premise Individualization Server contém o seguinte:
 
 * [!DNL flashaccess.war] - O servidor de individualização
 * [!DNL flashaccess-kgs.war] - Servidor opcional de geração de chave
@@ -25,7 +28,7 @@ O pacote do Adobe Primetime DRM On Premise Individualization Server contém o se
    * [!DNL jsafe.dll] (Windows)
 
 * [!DNL adobe-flashaccess-i15n-setup.jar] - Um utilitário para criptografar senhas de credenciais do servidor
-* [!DNL ROOT] - contém um [!DNL crossdomain.xml] arquivo
+* [!DNL ROOT] - contém um  [!DNL crossdomain.xml] arquivo
 
 * Arquivos de cache ECI - Pré-baixados
 * [!DNL addIndivCert.py] - Um script para atualizar a raiz de confiança do License Server para suportar individualizações locais
