@@ -14,6 +14,6 @@ ht-degree: 78%
 ---
 
 
-# Referência do Primetime {#reference}
+# Referência Primetime {#reference}
 
 + [Referências da API](api-references.md)
