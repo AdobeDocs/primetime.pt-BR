@@ -17,16 +17,16 @@ Antes de implantar o Adobe Primetime DRM Server for Protected Streaming, você d
 
 O pacote Primetime DRM Server for Protected Streaming inclui [!DNL flashaccesserver.war]. Se você:
 
-* Deseja implantar este arquivo WAR, é necessário copiá-lo para o [!DNL webapps] diretório do Tomcat.
-* Se o arquivo WAR tiver sido implantado anteriormente, talvez seja necessário excluir o diretório WAR descompactado ( [!DNL flashaccessserver] no diretório [!DNL webapps] do Tomcat).
+* Deseja implantar esse arquivo WAR, é necessário copiá-lo para o diretório [!DNL webapps] do Tomcat.
+* Já implantou o arquivo WAR anteriormente, talvez seja necessário excluir o diretório WAR descompactado ( [!DNL flashaccessserver] no diretório [!DNL webapps] do Tomcat).
 
-* Deseja impedir que o Tomcat descompacte arquivos WAR, edite o arquivo no [!DNL server.xml] diretório do Tomcat [!DNL conf] e configure o `unpackWARs` atributo definindo-o como `false`.
+* Deseja impedir que o Tomcat descompacte arquivos WAR, edite o arquivo [!DNL server.xml] no diretório [!DNL conf] do Tomcat e configure o atributo `unpackWARs` definindo-o como `false`.
 
 >[!NOTE]
 >
->Se você configurou o Tomcat para incluir [!DNL commons-logging.jar] no classpath do sistema (não é necessário para o servidor DRM Primetime para streaming protegido), é necessário configurar o logon comum para usar o Log4J.
+>Se você configurou o Tomcat para incluir [!DNL commons-logging.jar] no classpath do sistema (não é necessário para o servidor DRM Primetime para streaming protegido), configure o logon comum para usar o Log4J.
 
-Como opção, o servidor usa uma biblioteca específica da plataforma ( [!DNL jsafe.dll] no Microsoft Windows ou [!DNL libjsafe.so] no Linux) para obter o desempenho ideal. Você pode copiar a biblioteca apropriada para sua plataforma, da [!DNL thirdparty/cryptoj/]*plataforma *para um local especificado pela variável do`PATH`ambiente ou`LD_LIBRARY_PATH`no Linux.
+Como opção, o servidor usa uma biblioteca específica da plataforma ( [!DNL jsafe.dll] no Microsoft Windows ou [!DNL libjsafe.so] no Linux para obter o desempenho ideal. Você pode copiar a biblioteca apropriada para sua plataforma de [!DNL thirdparty/cryptoj/]*platform* para um local especificado pela variável de ambiente `PATH` ou `LD_LIBRARY_PATH` no Linux.
 
 >[!NOTE]
 >
