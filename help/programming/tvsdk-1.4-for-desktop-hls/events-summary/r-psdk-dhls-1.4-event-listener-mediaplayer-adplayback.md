@@ -1,20 +1,23 @@
 ---
-description: O TVSDK despacha eventos de reprodução de anúncios em resposta a operações relacionadas a anúncios, como quando um anúncio começa a ser reproduzido.
-seo-description: O TVSDK despacha eventos de reprodução de anúncios em resposta a operações relacionadas a anúncios, como quando um anúncio começa a ser reproduzido.
+description: O TVSDK despacha eventos de reprodução de anúncios em resposta a operações relacionadas a anúncios, como quando um start de anúncio é reproduzido.
+seo-description: O TVSDK despacha eventos de reprodução de anúncios em resposta a operações relacionadas a anúncios, como quando um start de anúncio é reproduzido.
 seo-title: Eventos de reprodução de anúncio
 title: Eventos de reprodução de anúncio
 uuid: 63138237-2315-45ff-914d-369da18fdff7
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Eventos de reprodução de anúncio {#ad-playback-events}
 
-O TVSDK despacha eventos de reprodução de anúncios em resposta a operações relacionadas a anúncios, como quando um anúncio começa a ser reproduzido.
+O TVSDK despacha eventos de reprodução de anúncios em resposta a operações relacionadas a anúncios, como quando um start de anúncio é reproduzido.
 
-Para ser notificado sobre todos os eventos relacionados à reprodução de anúncios, registre os ouvintes no `MediaPlayer` objeto para os seguintes eventos.
+Para ser notificado sobre todos os eventos relacionados à reprodução de anúncios, registre os ouvintes com o objeto `MediaPlayer` para os seguintes eventos.
 
 >[!TIP]
 >
