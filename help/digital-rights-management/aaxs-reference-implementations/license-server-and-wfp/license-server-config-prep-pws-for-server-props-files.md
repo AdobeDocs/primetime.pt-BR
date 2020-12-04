@@ -4,19 +4,22 @@ title: Preparando senhas para os arquivos de propriedades do Servidor
 uuid: 2d876eb0-b1a5-4c30-ae96-0a22f6a03910
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
 # Preparando senhas para os arquivos de propriedades do Servidor {#preparing-passwords-for-the-server-properties-files}
 
-Para garantir a segurança da senha de sua credencial, uma ferramenta é fornecida para criptografar a senha antes de ela ser inserida no arquivo [!DNL flashaccess-refimpl.properties] ou [!DNL flashaccess-refimpl-packager.properties] .
+Para garantir a segurança da senha de sua credencial, uma ferramenta é fornecida para criptografar a senha antes de ser inserida no arquivo [!DNL flashaccess-refimpl.properties] ou [!DNL flashaccess-refimpl-packager.properties].
 
 Para executar a ferramenta usando o script ANT fornecido:
 
-* Ir para *`<Reference Implementation Server Path>`*[!DNL \refimpl]
+* Ir para *`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* Verifique se a `sdkdir` propriedade em [!DNL build-refimpl.xml] pontos do diretório que contém o SDK do Adobe Access
+* Verifique se a propriedade `sdkdir` em [!DNL build-refimpl.xml] aponta para o diretório que contém o SDK de Acesso ao Adobe
 * Execute o seguinte comando usando ANT:
 
    ```
