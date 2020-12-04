@@ -13,7 +13,7 @@ ht-degree: 1%
 ---
 
 
-# Rastrear avisos AVE em seu player{#track-ave-warnings-in-your-player}
+# Rastrear avisos AVE no player{#track-ave-warnings-in-your-player}
 
 Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Mecanismo de vídeo Adobe (AVE).
 
