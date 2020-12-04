@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '222'
-ht-degree: 41%
+ht-degree: 43%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 41%
 
 Bem-vindo à ajuda da Programação do Android e iOS para Adobe Primetime. Os documentos listados na navegação à esquerda permitem que você aprenda a desenvolver aplicativos e players de vídeo usando Java em dispositivos Android e Objetive-C em dispositivos iOS.
 
-Consulte para obter mais informações sobre a versão [lançada](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)atual.
+Consulte para obter mais informações sobre a [versão lançada atual](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md).
 
 ## Consulte também
 
