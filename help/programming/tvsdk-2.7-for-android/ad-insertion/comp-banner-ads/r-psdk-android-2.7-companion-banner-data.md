@@ -6,17 +6,20 @@ title: Dados de banner associado
 uuid: 4a5d78e1-5abe-45a8-b50f-14f73fdcc879
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
 
-# Dados de banner associado {#companion-banner-data}
+# Dados do banner companheiro {#companion-banner-data}
 
 O conteúdo de um AdAsset descreve um banner complementar.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Cada um `AdAsset` fornece informações sobre como exibir o ativo.
+Cada `AdAsset` fornece informações sobre como exibir o ativo.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -44,7 +47,7 @@ Cada um `AdAsset` fornece informações sobre como exibir o ativo.
   </tr> 
   <tr> 
    <td colname="col1"> URL estático </td> 
-   <td colname="col2"> <p>Às vezes, o banner complementar também tem um URL <span class="codeph"></span> estático que é um URL direto para a imagem ou para um <span class="codeph"> .swf</span> (banner flash). </p> <p>Se você não quiser usar html ou iframe, poderá usar um URL direto para uma imagem ou swf para exibir o banner no estágio Flash. Nesse caso, você pode usar o <span class="codeph"> URL</span> estático para exibir o banner. </p> <p>Importante:  Você deve verificar se o URL estático é uma string válida, pois essa propriedade pode não estar sempre disponível. </p> </td> 
+   <td colname="col2"> <p>Às vezes, o banner complementar também tem um <span class="codeph"> staticURL</span> que é um URL direto para a imagem ou para um <span class="codeph"> .swf</span> (banner flash). </p> <p>Se você não quiser usar html ou iframe, poderá usar um URL direto para uma imagem ou swf para exibir o banner no estágio do Flash. Nesse caso, você pode usar o <span class="codeph"> staticURL</span> para exibir o banner. </p> <p>Importante:  Você deve verificar se o URL estático é uma string válida, pois essa propriedade pode não estar sempre disponível. </p> </td> 
   </tr> 
  </tbody> 
 </table>
