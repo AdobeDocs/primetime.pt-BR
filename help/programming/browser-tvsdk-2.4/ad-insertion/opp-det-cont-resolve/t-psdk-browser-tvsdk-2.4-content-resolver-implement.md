@@ -6,6 +6,9 @@ title: Implementar um resolvedor de conteúdo personalizado
 uuid: cf85dd90-242e-4f9e-9785-158ca0fc9465
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
 
-Quando o TVSDK do navegador detecta uma nova oportunidade, ele é repetido pelos resolvedores de conteúdo registrados procurando por um que seja capaz de resolver essa oportunidade usando o `canResolve` método. O primeiro que retornar verdadeiro é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar o TVSDK do navegador quando o processo é concluído.
+Quando o TVSDK do navegador detecta uma nova oportunidade, ele é repetido pelos resolvedores de conteúdo registrados procurando por um que seja capaz de resolver essa oportunidade usando o método `canResolve`. O primeiro que retornar verdadeiro é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar o TVSDK do navegador quando o processo é concluído.
 
 Lembre-se das seguintes informações:
 
