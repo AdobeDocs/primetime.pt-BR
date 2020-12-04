@@ -1,20 +1,23 @@
 ---
-description: Você pode concluir fluxos de trabalho específicos do Digital Rights Management (DRM).
-seo-description: Você pode concluir fluxos de trabalho específicos do Digital Rights Management (DRM).
-seo-title: Gerenciamento de direitos digitais
-title: Gerenciamento de direitos digitais
+description: Você pode concluir workflows específicos de Digital Rights Management (DRM).
+seo-description: Você pode concluir workflows específicos de Digital Rights Management (DRM).
+seo-title: Digital Rights Management
+title: Digital Rights Management
 uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
 source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
-# Gerenciamento de direitos digitais {#digital-rights-management}
+# Digital Rights Management {#digital-rights-management}
 
-Você pode concluir fluxos de trabalho específicos do Digital Rights Management (DRM).
+Você pode concluir workflows específicos de Digital Rights Management (DRM).
 
-Você pode ouvir o `AdobePSDK.DRMMetadataInfoEvent` evento para lidar com fluxos de trabalho de DRM:
+Você pode ouvir o evento `AdobePSDK.DRMMetadataInfoEvent` para lidar com workflows DRM:
 
 ```js
 ... 
@@ -22,15 +25,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## Adicionar gerenciamento de direitos digitais {#add-digital-rights-management}
+## Adicionar Digital Rights Management {#add-digital-rights-management}
 
-1. Adicione o `DRMMetadataInfoAvailableEvent` para obter o `DRMMetadata`.
+1. Adicione `DRMMetadataInfoAvailableEvent` para obter o `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. Implemente a seção acima da `onDRMMetadataInfoAvailable` linha na etapa 1.
+1. Implemente a seção `onDRMMetadataInfoAvailable` acima da linha na etapa 1.
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
