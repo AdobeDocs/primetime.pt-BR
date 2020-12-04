@@ -6,15 +6,18 @@ title: Classes de QoS
 uuid: c1f0218d-4a79-4141-9a74-e70ac4f70aa5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Classes de QoS {#qos-classes}
+# Classes QoS {#qos-classes}
 
 Essas classes fornecem informações que ajudam a determinar o desempenho do player.
 
-Pacote: Pacote [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/package-summary.html) : [com.adobe.mediacore.qos.metrics](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/package-summary.html)
+Pacote: [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/package-summary.html) Pacote: [com.adobe.mediacore.qos.metrics](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/package-summary.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_2893EFF9755149159A4F94E781C76B6E"> 
  <thead> 
@@ -30,7 +33,8 @@ Pacote: Pacote [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/DeviceInformation.html" format="html" scope="external"> DeviceInformation</a> </span></td> 
-   <td colname="2">Fornece informações sobre a plataforma e o sistema operacional em que a Frase é executada: 
+   <td colname="2">Fornece informações sobre a plataforma e o sistema operacional em que a Frase
+    executa: 
     <ul id="ul_0DE69F3B38E84964AB98DCCD11E5E123"> 
      <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">Versão do SO da plataforma </li> 
      <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">Número da versão da biblioteca de frases </li> 
