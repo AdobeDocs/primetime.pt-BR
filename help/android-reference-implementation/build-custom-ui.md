@@ -6,6 +6,9 @@ title: Criar uma interface de usuário personalizada
 uuid: b785f6a4-3ef8-4f7a-a087-0d6551da9750
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 0%
 
 ---
 
@@ -22,9 +25,9 @@ Os componentes da interface do usuário dos seguintes recursos já estão integr
 * Legendas ocultas
 * Ouvintes para todos os componentes acima
 
-1. Edite o [!DNL PlayerFragment.java] arquivo para inicializar os componentes da interface que você deseja usar no player.
+1. Edite o arquivo [!DNL PlayerFragment.java] para inicializar os componentes da interface que você deseja usar no player.
 
-1. Edite o [!DNL res/player/player_fragment.xml] arquivo para personalizar a interface do usuário.
+1. Edite o arquivo [!DNL res/player/player_fragment.xml] para personalizar a interface do usuário.
 1. Construa o projeto.
 
 >[!NOTE]
