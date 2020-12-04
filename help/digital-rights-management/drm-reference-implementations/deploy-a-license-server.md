@@ -7,7 +7,7 @@ uuid: bee7ead1-ed13-4894-80f9-5196bf2f818f
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # Implantar o servidor de licenças{#deploy-the-license-server}
 
-1. Copie seus arquivos de referência de implementação de guerra para o `webapps` diretório no servidor Tomcat.
+1. Copie seus arquivos de referência de implementação de guerra para o diretório `webapps` no servidor Tomcat.
 
-   Para usar o servidor de licença de implementação de referência como está, basta copiar o arquivo WAR do servidor de licenças ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\\flashaccess.war`) para o diretório no `webapps` servidor Tomcat.
+   Para usar o servidor de licença de implementação de referência como está, basta copiar o arquivo WAR do servidor de licenças ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\\flashaccess.war`) para o diretório `webapps` no servidor Tomcat.
 
-   Se você estiver personalizando o servidor de licença de implementação de referência, copie os arquivos de guerra do servidor que você criou `DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl-build\wars` para o `webapps` diretório.
+   Se você estiver personalizando o servidor de licenças de implementação de referência, copie os arquivos de guerra do servidor criados de `DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl-build\wars` para o diretório `webapps`.
 
    >[!NOTE]
    >
-   >Se você implantou anteriormente arquivos WAR do servidor de licenças, talvez seja necessário excluir os diretórios WAR descompactados no [!DNL webapps] diretório do servidor Tomcat:
+   >Se você implantou anteriormente arquivos WAR do servidor de licenças, talvez seja necessário excluir os diretórios WAR descompactados no diretório [!DNL webapps] no servidor Tomcat:
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
@@ -33,11 +33,11 @@ ht-degree: 0%
    >
    >Não implante [!DNL edsws.war] a menos que você exija compatibilidade com versões anteriores do conteúdo do Rights Management de mídia de Flash (FMRMS) v1.5. (Este é um requisito muito raro.)
    >
-   >Se você preferir impedir que o Tomcat desempacote arquivos WAR, edite `server.xml` no `conf` diretório e defina `unpackWARs` como `false`.
+   >Se você preferir impedir que o Tomcat desempacote arquivos WAR, edite `server.xml` no diretório `conf` e defina `unpackWARs` como `false`.
 
-1. Copie todo o conteúdo do `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources\` diretório para dentro do seu [!DNL tomcat] diretório.
+1. Copie todo o conteúdo do diretório `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources\` para o diretório [!DNL tomcat].
 
-   O [!DNL resources] diretório inclui:
+   O diretório [!DNL resources] inclui:
 
    * [!DNL flashaccesstools.properties] - O arquivo de propriedades do servidor de licenças.
    * [!DNL log4j.xml] - Configuração de registro do servidor de licenças
@@ -60,25 +60,25 @@ ht-degree: 0%
    * `V2KeyParameters.KeyOptions.AsymmetricKeyOptions.Certificate`
    * V2KeyParameters.LicenseServerTransportCertificate
 
-1. Edite o `catalina.properties` arquivo em seu `conf` diretório Tomcat; adicione o local do seu [!DNL resources] diretório (ou o local alternativo onde você armazenou seu arquivo de propriedades e outros arquivos de recursos) à `shared.loader` propriedade.
+1. Edite o arquivo `catalina.properties` no diretório Tomcat `conf`; adicione o local do diretório [!DNL resources] (ou o local alternativo onde você armazenou o arquivo de propriedades e outros arquivos de recursos) à propriedade `shared.loader`.
 
-   Por exemplo, se você tiver `flashaccess-refimpl.properties` localizado em [!DNL [Tomcat home]\resources\]:
+   Por exemplo, se você tem `flashaccess-refimpl.properties` localizado em [!DNL [home do Tomcat]\resources\]:
 
    ```
    shared.loader=..\resources
    ```
 
    Isso coloca `flashaccess-refimpl.properties` no classpath.
-1. Certifique-se de que seus outros arquivos de recurso ( [!DNL log4j.xml], arquivos de política, certificações) estejam no [!DNL resources] diretório ou no classpath e na localização especificada em [!DNL flashaccess-refimpl.properties].
+1. Certifique-se de que seus outros arquivos de recurso ( [!DNL log4j.xml], arquivos de política, certificações) estejam no diretório [!DNL resources] ou no classpath e em seu local especificado em [!DNL flashaccess-refimpl.properties].
 
-   Provavelmente, você desejará executar inicialmente `log4j` no modo de depuração. Em [!DNL log4j.xml], defina `debug` como true:
+   Provavelmente, você desejará executar `log4j` inicialmente no modo de depuração. Em [!DNL log4j.xml], defina `debug` como verdadeiro:
 
    ```
    <log4j:configuration xmlns:log4j="https://jakarta.apache.org/log4j/"<b>debug="true"</b>>
    ...
    ```
 
-1. No diretório [!DNL bin] Tomcat, start seu servidor.
+1. No diretório Tomcat [!DNL bin], start seu servidor.
 
    No Linux:
 
