@@ -6,11 +6,14 @@ title: Controlar a visibilidade da legenda
 uuid: b161a729-73f3-4019-a95e-013b42779842
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
-# Controlar a visibilidade da legenda{#control-closed-caption-visibility}
+# Controlar visibilidade de legenda fechada{#control-closed-caption-visibility}
 
 É possível controlar a visibilidade das legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida.
 
@@ -22,7 +25,7 @@ Se o texto da legenda fechada for exibido quando o player entrar no modo de busc
 
 >[!TIP]
 >
->Os valores de visibilidade de legendas fechadas são controlados com `MediaPlayer.VISIBLE` e `MediaPlayer.INVISIBLE`.
+>Os valores de visibilidade para legendas fechadas são controlados com `MediaPlayer.VISIBLE` e `MediaPlayer.INVISIBLE`.
 
-1. Use a `MediaPlayer.ccVisibility` propriedade para acessar a configuração de visibilidade atual das legendas fechadas.
+1. Use a propriedade `MediaPlayer.ccVisibility` para acessar a configuração de visibilidade atual das legendas fechadas.
 
