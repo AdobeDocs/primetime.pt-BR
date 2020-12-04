@@ -13,7 +13,7 @@ ht-degree: 3%
 ---
 
 
-# Códigos de notificação de AVISO {#warning-notification-codes}
+# Códigos de notificação AVISO {#warning-notification-codes}
 
 Esta tabela mostra informações detalhadas sobre notificações de tipo WARN.
 
@@ -61,14 +61,14 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000 </span> </td> 
+   <td colname="1"><span class="codeph"> 204000  </span> </td> 
    <td colname="2"><span class="codeph"> ANTECEDENTE_MANIFEST_AVISO</span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING_ERROR</span> BACKGROUND_MANIFEST_ WARNING_NAME <span class="codeph"></span> <span class="codeph"> DESCRIÇÃO</span> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_ WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
    <td colname="5"> <p> Erro no download do manifesto em segundo plano. Qualquer problema ao atualizar o manifesto em segundo plano é despachado como um aviso TVSDK e não faz com que a reprodução pare. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001 </span> </td> 
+   <td colname="1"><span class="codeph"> 204001  </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_WARNING</span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> DESCRIÇÃO</span> </td> 
@@ -82,17 +82,17 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210000 </span> </td> 
-   <td colname="2"><span class="codeph"> UNDEFINED_ TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210000  </span> </td> 
+   <td colname="2"><span class="codeph"> UNDEFINED_ TIME_RANGES  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> Nenhum </td> 
    <td colname="5"> O modo de sinalização de anúncio é definido como intervalos personalizados, mas não há intervalos definidos. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210001 </span> </td> 
-   <td colname="2"><span class="codeph"> INVALID_TIME_ RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210001  </span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_TIME_ RANGES  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
-   <td colname="4"><span class="codeph"> DESCRIÇÃO </span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIÇÃO  </span> </td> 
    <td colname="5"> <p> Um ou mais intervalos de tempo são inválidos e serão ignorados ou modificados. </p> <p> DESCRIÇÃO é uma string que contém a descrição dos intervalos inválidos. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -103,52 +103,52 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
+   <td colname="1"><span class="codeph"> 270000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_NOT_READY  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
-   <td colname="4"><span class="codeph"> DESCRIÇÃO </span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIÇÃO  </span> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270001 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 270001  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
    <td colname="5"> <p>O AD não foi inserido no fluxo. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270002 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 270002  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
    <td colname="5"> <p>O anúncio não contém fluxo somente de áudio </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270003 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 270003  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
    <td colname="5"> <p>Nenhum fluxo de anúncio correspondente encontrado para a taxa de bits atual do conteúdo. </p> <p>  </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270005 </span> </td> 
-   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE </span> </td> 
-   <td colname="3"><span class="codeph"> PLAYBACK_ERROR </span> </td> 
+   <td colname="1"><span class="codeph"> 270005  </span> </td> 
+   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE  </span> </td> 
+   <td colname="3"><span class="codeph"> PLAYBACK_ERROR  </span> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
    <td colname="5"> <p>Erro ao criar o AVAsset. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270006 </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_AVISO </span> </td> 
+   <td colname="1"><span class="codeph"> 270006  </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_AVISO  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
-   <td colname="4"><span class="codeph"> DESCRIÇÃO </span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIÇÃO  </span> </td> 
    <td colname="5"> <p>Aviso: Consulte a descrição do aviso do SiteCatalyst. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270007 </span> </td> 
-   <td colname="2"><span class="codeph"> NETWORK_ERROR </span> </td> 
+   <td colname="1"><span class="codeph"> 270007  </span> </td> 
+   <td colname="2"><span class="codeph"> NETWORK_ERROR  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
-   <td colname="4"><span class="codeph"> URL </span> </td> 
+   <td colname="4"><span class="codeph"> URL  </span> </td> 
    <td colname="5"> <p>Erro ao obter dados da rede. </p> </td> 
   </tr> 
  </tbody> 
@@ -156,6 +156,6 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
 
 >[!NOTE]
 >
->adID e fonte (URL) podem ser recuperados pelo PTAdAsset nos metadados de notificação com a `AD_ASSET` chave.
+>adID e fonte (URL) podem ser recuperados pelo PTAdAsset nos metadados de notificação com a chave `AD_ASSET`.
 >
->O [] atributo especifica uma chave opcional para notificação.
+>O atributo [] especifica uma chave opcional para notificação.
