@@ -6,6 +6,9 @@ title: Salve a posição do vídeo e retome mais tarde
 uuid: cff1715e-c7a9-4eda-ad71-31892c3c1e78
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '419'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ As publicidades inseridas dinamicamente diferem entre as sessões do usuário, p
 
    >[!IMPORTANT]
    >
-   >A hora local e a hora atual são as mesmas para fluxos ao vivo/lineares. Neste caso, não `convertToLocalTime` tem efeito. Para VOD, o tempo local permanece inalterado enquanto os anúncios são reproduzidos.
+   >A hora local e a hora atual são as mesmas para fluxos ao vivo/lineares. Nesse caso, `convertToLocalTime` não tem efeito. Para VOD, o tempo local permanece inalterado enquanto os anúncios são reproduzidos.
 
    ```java
    // Save the user session when player activity stops 
@@ -80,7 +83,7 @@ As publicidades inseridas dinamicamente diferem entre as sessões do usuário, p
 
    * Para buscar o horário atual, use `seek`.
 
-1. Quando o aplicativo receber o evento de alteração de `onStatusChanged` status, procure a hora local salva.
+1. Quando o aplicativo receber o evento de alteração de status `onStatusChanged`, procure o horário local salvo.
 
    ```java
    private final MediaPlayer.PlaybackEventListener _playbackEventListener =  
@@ -101,6 +104,6 @@ As publicidades inseridas dinamicamente diferem entre as sessões do usuário, p
 
 1. Forneça os intervalos de anúncio conforme especificado na interface da política de anúncios.
 1. Implemente um seletor de política de publicidade personalizado estendendo o seletor de política de publicidade padrão.
-1. Forneça as pausas de anúncio que devem ser apresentadas ao usuário por meio da implementação `selectAdBreaksToPlay`.
+1. Forneça as pausas de anúncio que devem ser apresentadas ao usuário implementando `selectAdBreaksToPlay`.
 
    Esse método inclui uma pausa de anúncio precedente e uma pausa de anúncio intermediário antes da posição de hora local. Seu aplicativo pode decidir reproduzir um intervalo de anúncios precedente e retomar para o horário local especificado, reproduzir um intervalo de anúncios intermediário e retomar para o horário local especificado, ou não reproduzir nenhum intervalo de anúncios.
