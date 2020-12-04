@@ -6,6 +6,9 @@ title: Trabalhar com cookies
 uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
@@ -16,14 +19,14 @@ Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies
 
 Este é um exemplo com algum tipo de autenticação ao fazer solicitações ao servidor de chaves:
 
-1. Seu cliente entra em seu site em um navegador e seu login mostra que ele tem permissão para exibir o conteúdo.
+1. Seu cliente entra em seu site em um navegador e seu login mostra que ele tem permissão para visualização de conteúdo.
 1. Seu aplicativo gera um token de autenticação, com base no que é esperado pelo servidor de licenças. Passe esse valor para TVSDK.
 1. O TVSDK define esse valor no cabeçalho do cookie.
 1. Quando o TVSDK faz uma solicitação ao servidor de chaves para obter uma chave para descriptografar o conteúdo, essa solicitação contém o valor de autenticação no cabeçalho do cookie, de modo que o servidor de chaves saiba que a solicitação é válida.
 
 Para trabalhar com cookies:
 
-1. Use a `cookieHeaders` propriedade em `NetworkConfiguration` para definir um cookie. A `cookieHeaders` propriedade é um objeto de Metadados, e você pode adicionar pares de valores chave a esse objeto para serem incluídos no cabeçalho do cookie.
+1. Use a propriedade `cookieHeaders` em `NetworkConfiguration` para definir um cookie. A propriedade `cookieHeaders` é um objeto de Metadados, e você pode adicionar pares de valores chave a esse objeto para serem incluídos no cabeçalho do cookie.
 
    Por exemplo:
 
@@ -35,7 +38,7 @@ Para trabalhar com cookies:
    networkConfiguration.cookieHeaders = metadata;
    ```
 
-   Por padrão, os cabeçalhos de cookies são enviados somente com solicitações principais. Para enviar cabeçalhos de cookies com todas as solicitações, defina a `NetworkConfiguration` propriedade como true `useCookieHeadersForAllRequests` .
+   Por padrão, os cabeçalhos de cookies são enviados somente com solicitações principais. Para enviar cabeçalhos de cookies com todas as solicitações, defina a propriedade `NetworkConfiguration` `useCookieHeadersForAllRequests` como true.
 
 1. Para garantir que `NetworkConfiguration` funcione, defina-o como metadados:
 
@@ -49,7 +52,7 @@ Para trabalhar com cookies:
 
 1. Forneça os metadados da etapa anterior ao criar um `MediaResource`.
 
-   Por exemplo, se você usar o `createFromURL` método, insira as seguintes informações:
+   Por exemplo, se você usar o método `createFromURL`, insira as seguintes informações:
 
    ```
    var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
