@@ -6,6 +6,9 @@ title: Inicializar e configurar a análise de vídeo
 uuid: 99c65d0b-ec3b-4a93-8dae-ef612112e510
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
@@ -17,40 +20,40 @@ Você pode configurar o player para rastrear e analisar o uso do vídeo.
 Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se você tem o seguinte:
 
 * TVSDK para iOS
-* Informações de configuração/inicialização - Entre em contato com seu representante da Adobe para obter informações específicas sobre sua conta de rastreamento de vídeo:
+* Informações de configuração/inicialização - Entre em contato com seu representante de Adobe para obter informações específicas sobre sua conta de rastreamento de vídeo:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Importante:  Este nome de arquivo de configuração JSON deve permanecer <span class="codeph"> ADBMobileConfig.json </span>. Não é possível alterar o nome e o caminho deste ficheiro de configuração. O caminho para esse arquivo deve ser <span class="codeph"> &lt;raiz de origem&gt;/AdobeMobile </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>Importante:  Este nome de arquivo de configuração JSON deve permanecer <span class="codeph"> ADBMobileConfig.json </span>. Não é possível alterar o nome e o caminho deste ficheiro de configuração. O caminho para esse arquivo deve ser <span class="codeph"> &lt;source root&gt;/AdobeMobile </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> Ponto de extremidade do servidor de rastreamento do AppMeasurement </span> </td> 
+   <td colname="col1"> <span class="codeph"> Ponto de extremidade do servidor  </span> de rastreamento do AppMeasurement </td> 
    <td colname="col2"> O URL do ponto final da coleção back-end do Adobe Analytics (antigo SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Ponto de extremidade do servidor de rastreamento de análise de vídeo </td> 
-   <td colname="col2"> O URL do ponto final da coleção de back-end de análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  A URL do servidor de rastreamento de visitantes é a mesma do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o serviço de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementar o serviço de ID </a>. </p> </td> 
+   <td colname="col2"> O URL do ponto final da coleção de back-end de análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  A URL do servidor de rastreamento de visitantes é a mesma do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o serviço de ID de Visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementar o serviço de ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nome da conta </td> 
    <td colname="col2"> Também conhecido como ID do conjunto de relatórios (RSID). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> ID de empresa da Marketing Cloud </td> 
-   <td colname="col2"> Um valor de string necessário para instanciar o componente Visitante. </td> 
+   <td colname="col1"> ID da organização do Marketing Cloud </td> 
+   <td colname="col2"> Um valor de string necessário para instanciar o componente de Visitante. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Editor </td> 
-   <td colname="col2"> Esta é a Publisher ID, que é fornecida aos clientes pelo representante da Adobe. <p>Dica:  Essa ID não é apenas uma string com o nome da marca/televisão. </p> </td> 
+   <td colname="col2"> Esta é a Publisher ID, que é fornecida aos clientes pelo representante do Adobe. <p>Dica:  Essa ID não é apenas uma string com o nome da marca/televisão. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Para configurar o rastreamento de vídeo no player:
 
-1. Confirme se as opções de tempo de carregamento no arquivo de `ADBMobileConfig.json` recurso estão corretas.
+1. Confirme se as opções de tempo de carregamento no arquivo de recurso `ADBMobileConfig.json` estão corretas.
 
    ```
    { 
@@ -83,8 +86,8 @@ Para configurar o rastreamento de vídeo no player:
 
    Para configurar as opções de tempo de carregamento:
 
-   1. Confirme se o `ADBMobileConfig.json` arquivo contém os valores apropriados fornecidos pela Adobe.
-   1. Confirme se este arquivo está localizado na `AdobeMobile` pasta.
+   1. Confirme se o arquivo `ADBMobileConfig.json` contém os valores apropriados fornecidos pelo Adobe.
+   1. Confirme se este arquivo está localizado na pasta `AdobeMobile`.
 
       Essa pasta deve estar localizada na raiz da árvore de origem do aplicativo.
    1. Compile e crie seu aplicativo.
@@ -171,7 +174,7 @@ Para configurar o rastreamento de vídeo no player:
 
    1. Marque manualmente o fluxo ao vivo/linear como concluído.
 
-      Se você tiver vários episódios em um fluxo ao vivo, é possível marcar manualmente um episódio como concluído usando a API completa. Isso encerra a sessão de rastreamento de vídeo para o episódio de vídeo atual e você pode iniciar uma nova sessão de rastreamento para o próximo episódio.
+      Se você tiver vários episódios em um fluxo ao vivo, é possível marcar manualmente um episódio como concluído usando a API completa. Isso encerra a sessão de rastreamento de vídeo para o episódio de vídeo atual e você pode start uma nova sessão de rastreamento para o próximo episódio.
 
       >[!TIP]
       >
