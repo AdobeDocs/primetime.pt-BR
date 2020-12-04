@@ -1,20 +1,23 @@
 ---
-description: Você pode usar sobreposições HTML com StageVideo para exibir elementos de interface no plano de vídeo da lista de exibição Flash. Esse plano está acima do plano StageVideo, portanto, o StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição Flash.
-seo-description: Você pode usar sobreposições HTML com StageVideo para exibir elementos de interface no plano de vídeo da lista de exibição Flash. Esse plano está acima do plano StageVideo, portanto, o StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição Flash.
+description: Você pode usar sobreposições HTML com StageVideo para exibir elementos de interface no plano de vídeo de lista de exibição do Flash. Esse plano está acima do plano StageVideo, portanto, o StageVideo sempre é exibido atrás de qualquer elemento de lista de exibição do Flash.
+seo-description: Você pode usar sobreposições HTML com StageVideo para exibir elementos de interface no plano de vídeo de lista de exibição do Flash. Esse plano está acima do plano StageVideo, portanto, o StageVideo sempre é exibido atrás de qualquer elemento de lista de exibição do Flash.
 seo-title: Sobreposições de StageVideo e HTML
 title: Sobreposições de StageVideo e HTML
 uuid: 84e862ab-4c35-47a2-9c4e-f792d3ef5363
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 0%
 
 ---
 
 
 # Sobreposições de StageVideo e HTML{#stagevideo-and-html-overlays}
 
-Você pode usar sobreposições HTML com StageVideo para exibir elementos de interface no plano de vídeo da lista de exibição Flash. Esse plano está acima do plano StageVideo, portanto, o StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição Flash.
+Você pode usar sobreposições HTML com StageVideo para exibir elementos de interface no plano de vídeo de lista de exibição do Flash. Esse plano está acima do plano StageVideo, portanto, o StageVideo sempre é exibido atrás de qualquer elemento de lista de exibição do Flash.
 
-As sobreposições HTML são elementos da interface que você pode exibir no plano de exibição Flash no vídeo que é renderizado `StageVideo` em seu próprio plano. Antes do Flash 15, não era possível usar sobreposições HTML quando a aceleração de hardware não estava disponível. A partir do Flash 15, as sobreposições HTML são exibidas quando `StageVideo` retorna à renderização do software.
+As sobreposições HTML são elementos da interface que você pode exibir no plano de exibição do Flash no vídeo que é renderizado por `StageVideo` em seu próprio plano. Antes do Flash 15, não era possível usar sobreposições HTML quando a aceleração de hardware não estava disponível. A partir do Flash 15, as sobreposições HTML são exibidas quando `StageVideo` retorna à renderização do software.
 
 >[!IMPORTANT]
 >
@@ -29,7 +32,7 @@ Considere as seguintes informações:
 
 * No Flash Player 14:
 
-   * Quando a aceleração de hardware estiver disponível, `StageVideo` estará abaixo da lista de exibição Flash, para que você possa usar sobreposições HTML.
+   * Quando a aceleração de hardware estiver disponível, `StageVideo` estará abaixo da lista de exibição do Flash, para que você possa usar sobreposições HTML.
    * Quando a aceleração de hardware não está disponível, o vídeo é renderizado sobre todos os outros elementos no navegador, o que impede o uso de sobreposições HTML.
 
 Estes são os requisitos mínimos do navegador para usar sobreposições HTML com `StageVideo`:
