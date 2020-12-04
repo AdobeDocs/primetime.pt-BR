@@ -19,9 +19,9 @@ Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa 
 
 1. Use o URL do License Server na resposta do token que você obteve do servidor ExpressPlay para testar se você pode reproduzir seu conteúdo protegido.
 
-   * **Widevine** - Use a resposta do Widevine diretamente conforme recebido de sua solicitação de token de licença do ExpressPlay.
-   * **PlayReady** - Obtenha o URL e o token do servidor de licença do objeto JSON retornado da solicitação de token de licença.
-   * **FairPlay** - Use a resposta do FairPlay diretamente como recebido de sua solicitação de token de licença do ExpressPlay.
+   * **Widevine**  - Use a resposta do Widevine diretamente conforme recebido de sua solicitação de token de licença do ExpressPlay.
+   * **PlayReady**  - Obtenha o URL e o token do servidor de licença do objeto JSON retornado da solicitação de token de licença.
+   * **FairPlay**  - Use a resposta do FairPlay diretamente como recebido de sua solicitação de token de licença do ExpressPlay.
 
 1. Teste a reprodução de seu conteúdo protegido utilizando seu próprio player ou um player de amostra de Adobe existente.
 
@@ -49,14 +49,14 @@ Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa 
    https://drmtest2.adobe.com/TVSDK_HTML5/samples/reference/reference_player.html
    ```
 
-   **Verificar a reprodução ao testar a configuração do FairPlay:** O FairPlay requer algumas etapas adicionais para reproduzir o conteúdo quando você estiver usando os servidores de licença do ExpressPlay. Se você estiver usando [!DNL curl] para testar suas conexões (conforme descrito em [Licenciamento](../../multi-drm-workflows/quick-start/handle-the-licensing.md)), é necessário *editar seu manifesto* M3U8 (seu conteúdo empacotado) da seguinte maneira:
+   **Verificar a reprodução ao testar a configuração do FairPlay: o** FairPlay requer algumas etapas adicionais para reproduzir o conteúdo quando você estiver usando os servidores de licença do ExpressPlay. Se você estiver usando [!DNL curl] para testar suas conexões (conforme descrito em [Licenciamento](../../multi-drm-workflows/quick-start/handle-the-licensing.md)), será necessário *editar seu manifesto M3U8* (seu conteúdo empacotado) da seguinte maneira:
 
-1. Adicione a resposta que você obteve de volta da solicitação de token de licença à `#EXT-X-KEY:` tag do manifesto; e
+1. Adicione a resposta que você obteve de volta da solicitação do token de licença à tag `#EXT-X-KEY:` no manifesto; e
 1. Altere o protocolo desse URL da resposta (agora no manifesto), de `https://` para `skd://`.
 
    Este é um exemplo completo para testar a reprodução com o FairPlay, incluindo a etapa de licenciamento:
 
-1. Use a solicitação de token de licença do FairPlay para obter o URL do token de licença. (Use seu próprio Autenticador de cliente de produção e certifique-se de usar o mesmo CEK e `iv` que foi usado para disponibilizar seu conteúdo do FairPlay.) Execute o seguinte comando para obter o URL do token de licença para o conteúdo de exemplo:
+1. Use a solicitação de token de licença do FairPlay para obter o URL do token de licença. (Use seu próprio Autenticador de cliente de produção e certifique-se de usar o mesmo CEK e `iv` que foram usados para disponibilizar seu conteúdo do FairPlay.) Execute o seguinte comando para obter o URL do token de licença para o conteúdo de exemplo:
 
    ```
    curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
@@ -87,7 +87,7 @@ Para testar sua solução DRM, é necessário um aplicativo de vídeo que possa 
 
    >[!NOTE]
    >
-   >As informações anteriores se aplicam somente ao teste da configuração do FairPlay. Pode não se aplicar à configuração de produção, dependendo de como você configura o seu manipulador do FairPlay. Consulte [Ativar o Apple FairPlay em aplicativos](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) iOS para obter detalhes.
+   >As informações anteriores se aplicam somente ao teste da configuração do FairPlay. Pode não se aplicar à configuração de produção, dependendo de como você configura o seu manipulador do FairPlay. Consulte [Habilitar o Apple FairPlay em aplicativos iOS](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) para obter detalhes.
 
 Se o vídeo for reproduzido, você empacotou e licenciou com êxito o conteúdo. Se o vídeo não for reproduzido, verifique na página de solução de problemas se há possíveis soluções para os problemas.
 
