@@ -6,6 +6,9 @@ title: Responder a cliques em anúncios
 uuid: 31852f01-c900-48e3-ae23-7fb131c22594
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Quando um usuário clica em um anúncio ou botão relacionado, seu aplicativo deve responder. O TVSDK fornece informações sobre o URL de destino do clique.
 
-1. Para configurar um ouvinte de evento para TVSDK e fornecer as informações de click-through, registre e e `AdClickedEventListener.onAdClicked`.
+1. Para configurar um ouvinte de evento para TVSDK e fornecer as informações de click-through, registre um `AdClickedEventListener.onAdClicked`.
 
    Quando um usuário clica em um anúncio ou botão relacionado, o TVSDK envia essa notificação, incluindo informações sobre o destino do clique.
 1. Monitore as interações do usuário em anúncios clicáveis.
-1. Quando o usuário toca ou clica no anúncio ou botão, para notificar o TVSDK, chama `notifyClick` o `MediaPlayerView`.
-1. Analise o `onAdClick(AdClickEvent event)` evento do TVSDK.
-1. Para recuperar o URL de click-through e as informações relacionadas, use os métodos getter para a `AdClickEvent` instância.
+1. Quando o usuário toca ou clica no anúncio ou botão, para notificar o TVSDK, chame `notifyClick` no `MediaPlayerView`.
+1. Analise o evento `onAdClick(AdClickEvent event)` do TVSDK.
+1. Para recuperar o URL de click-through e as informações relacionadas, use os métodos getter para a instância `AdClickEvent`.
 1. Pause o vídeo.
 
    Para obter mais informações sobre como pausar o vídeo, consulte [Pausar e retomar a reprodução.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
@@ -33,7 +36,7 @@ Quando um usuário clica em um anúncio ou botão relacionado, seu aplicativo de
       Em plataformas de desktop, a área de reprodução de vídeo e anúncio é usada para invocar URLs de click-through nos cliques do usuário.
    * Redirecione os usuários para seu navegador móvel externo.
 
-      Em dispositivos móveis, a área de reprodução do anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela cheia e assim por diante. Nesses dispositivos, uma exibição separada, como um botão patrocinador, é usada para iniciar o URL de click-through.
+      Em dispositivos móveis, a área de reprodução do anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela cheia e assim por diante. Nesses dispositivos, uma visualização separada, como um botão patrocinador, é usada para iniciar o URL de click-through.
 
 1. Feche a janela do navegador na qual as informações de click-through são exibidas e retome a reprodução do vídeo.
 
