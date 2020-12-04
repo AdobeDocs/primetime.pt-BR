@@ -7,7 +7,7 @@ uuid: 42913347-8158-474e-aa3c-ba4d38baba12
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 >}
 >```
 
-1. Aguarde o MediaPlayer ter pelo menos o estado PREPARED (consulte [Aguardar um estado](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)válido).
+1. Aguarde até que o MediaPlayer tenha pelo menos o estado PREPARED (consulte [Aguardar um estado válido](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
 1. Para obter a configuração de visibilidade atual de legendas fechadas, use o método getter no MediaPlayer, que retorna um valor de visibilidade.
 
    ```java
