@@ -13,7 +13,7 @@ ht-degree: 15%
 ---
 
 
-# Notas de versão do Primetime {#release-notes}
+# Notas de versão do Primetime  {#release-notes}
 
 + [Visão geral das notas de versão](home.md)
 + Primetime Ad Insertion {#ptai}
@@ -33,7 +33,7 @@ ht-degree: 15%
    + [Notas de versão do TVSDK 1.4 para Desktop HLS](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
    + [Versões do Primetime Offline Packager versão 2](offline-packager-2x-release-note.md)
-+ Servidor de streaming Primetime {#streaming-server}
++ Servidor de Streaming Primetime {#streaming-server}
    + [Versões do Primetime Streaming Server versão 1](primetime-streaming-server-1x.md)
 + TVSDK para Playstation 4 {#tvsdk-playstation}
    + [Notas de versão do TVSDK 2.1 PlayStation 4](tvsdk-21-ps4.md)
