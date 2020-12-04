@@ -1,20 +1,23 @@
 ---
-description: Seu aplicativo pode monitorar a atividade no player e o estado em mudança do player, acompanhando os eventos despachados pelo TVSDK.
-seo-description: Seu aplicativo pode monitorar a atividade no player e o estado em mudança do player, acompanhando os eventos despachados pelo TVSDK.
+description: Seu aplicativo pode monitorar a atividade no player e a alteração do estado do player, acompanhando eventos enviados pelo TVSDK.
+seo-description: Seu aplicativo pode monitorar a atividade no player e a alteração do estado do player, acompanhando eventos enviados pelo TVSDK.
 seo-title: Eventos de reprodução
 title: Eventos de reprodução
 uuid: 6d6491d7-cf25-4130-8388-68b8c028bb71
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 0%
 
 ---
 
 
 # Eventos de reprodução {#playback-events}
 
-Seu aplicativo pode monitorar a atividade no player e o estado em mudança do player, acompanhando os eventos despachados pelo TVSDK.
+Seu aplicativo pode monitorar a atividade no player e a alteração do estado do player, acompanhando eventos enviados pelo TVSDK.
 
-O TVSDK despacha eventos de reprodução quando ocorrem operações de reprodução de mídia, como um vídeo que começa a ser reproduzido. Para ser notificado sobre todos os eventos relacionados à reprodução, registre os ouvintes com o `MediaPlayer` objeto para os seguintes eventos.
+O TVSDK despacha eventos de reprodução quando ocorrem operações de reprodução de mídia, como um vídeo que começa a ser reproduzido. Para ser notificado sobre todos os eventos relacionados à reprodução, registre os ouvintes com o objeto `MediaPlayer` para os seguintes eventos.
 
 <table frame="all" colsep="1" rowsep="1" id="table_922EEA3DE0BD47BA982E11F890CA0A6B"> 
  <thead> 
@@ -46,11 +49,11 @@ O TVSDK despacha eventos de reprodução quando ocorrem operações de reproduç
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">MediaPlayerStatus ChangeEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerStatusChangeEvent.html#STATUS_CHANGED" format="html" scope="external"> STATUS_CHANGED</a> </td> 
-   <td colname="2"> O status do player de mídia foi alterado. Seu aplicativo deve lidar com erros no retorno de chamada deste evento. </td> 
+   <td colname="2"> O status do player de mídia foi alterado. Seu aplicativo deve lidar com erros neste retorno de chamada do evento. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1">ProfileEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html#PROFILE_CHANGED" format="html" scope="external"> PROFILE_CHANGED</a> </td> 
-   <td colname="2">O perfil atual do player de mídia foi alterado. Use a propriedade <span class="codeph"> ProfileEvent.profile</span> para obter o novo perfil que está sendo reproduzido. Use a propriedade <span class="codeph"> time</span> para obter a hora em que esse evento ocorreu. </td> 
+   <td colname="1">ProfileEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html#PROFILE_CHANGED" format="html" scope="external"> PERFIL_CHANGED</a> </td> 
+   <td colname="2">O perfil atual do media player mudou. Use a propriedade <span class="codeph"> ProfileEvent.perfil</span> para obter o novo perfil que está sendo reproduzido. Use a propriedade <span class="codeph"> time</span> para obter a hora em que o evento ocorreu. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>MediaplayerItem</b> </td> 
@@ -65,7 +68,7 @@ O TVSDK despacha eventos de reprodução quando ocorrem operações de reproduç
    <td colname="2">O media player foi atualizado com êxito em qualquer um destes casos: 
     <ul id="ul_E4D1A1D468544C3B9F8046E9B68A956D"> 
      <li id="li_35A2A417BF924E039D9CB36CFBCDFEB6">Quando ocorre uma atualização do manifesto para um ativo em tempo real. </li> 
-     <li id="li_E7AB380C212B4011B07C3B313282681C">Quando um VOD ou ativo ativo tiver legendagem fechada e a atividade for descoberta pela primeira vez para uma faixa de legendagem fechada. </li> 
+     <li id="li_E7AB380C212B4011B07C3B313282681C">Quando um VOD ou ativo ativo tiver legendagem e atividade fechadas é descoberta pela primeira vez para uma faixa de legendagem fechada. </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
