@@ -6,23 +6,26 @@ title: Anúncio de fallback para anúncios VAST e VMAP
 uuid: 7b44abf9-50cf-4e39-b594-ceb52208a865
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '602'
+ht-degree: 0%
 
 ---
 
 
-# Anúncio de fallback para anúncios VAST e VMAP {#ad-fallback-for-vast-and-vmap-ads}
+# Ad fallback para anúncios VAST e VMAP {#ad-fallback-for-vast-and-vmap-ads}
 
 Para anúncios (ou anúncios) do Modelo de disponibilização de vídeo digital (VAST) com a regra de fallback ativada, o TVSDK trata um anúncio com um tipo de mídia inválido como um anúncio vazio e tenta usar anúncios de fallback em seu lugar. Você pode configurar alguns aspectos do comportamento de fallback.
 
-A especificação VAST/Digital Video Multiple Ad Playlist (VMAP) declara que para anúncios nos quais o fallback VAST está ativado, anúncios vazios acionam automaticamente o uso de anúncios de fallback. Quando um anúncio VAST está vazio, o TVSDK procura uma substituição válida do tipo de mídia HLS entre os anúncios de fallback. Quando um anúncio VAST em um invólucro tem um tipo de mídia inválido, o TVSDK trata esse anúncio como vazio. Você pode configurar se o TVSDK deve fazer o mesmo para anúncios em linha em um VMAP. Para obter mais informações sobre o `fallbackOnNoAd` recurso VAST, consulte Modelo de disponibilização de vídeo [digital (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
+A especificação VAST/Digital Video Multiple Ad Playlist (VMAP) declara que para anúncios nos quais o fallback VAST está ativado, anúncios vazios acionam automaticamente o uso de anúncios de fallback. Quando um anúncio VAST está vazio, o TVSDK procura uma substituição válida do tipo de mídia HLS entre os anúncios de fallback. Quando um anúncio VAST em um invólucro tem um tipo de mídia inválido, o TVSDK trata esse anúncio como vazio. Você pode configurar se o TVSDK deve fazer o mesmo para anúncios em linha em um VMAP. Para obter mais informações sobre o recurso VAST `fallbackOnNoAd`, consulte [Modelo de disponibilização de anúncio de vídeo digital (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
 
-O back-end de inserção de anúncio Primetime mantém um conjunto de prioridades para permitir que ele escolha entre diferentes tipos de mídia na mesma resposta VAST/VMAP. Você pode saber mais sobre essa lista de prioridades e como alterá-la na [Visão geral do CRS](../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
+O back-end de inserção de anúncio Primetime mantém um conjunto de prioridades para permitir que ele escolha entre diferentes tipos de mídia na mesma resposta VAST/VMAP. Você pode saber mais sobre essa lista de prioridade e como alterá-la em [Visão geral do CRS](../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Definir comportamento de anúncio de fallback para anúncios em linha VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
 
 Você pode ativar o fallback quando um anúncio em linha VMAP contiver um tipo de mídia inválido.
 
-1. Defina como true `fallbackOnInvalidCreative` para que o VMAP volte quando o tipo de mídia para um anúncio linear/inline for inválido para HLS.
+1. Defina `fallbackOnInvalidCreative` como true para que o VMAP volte quando o tipo de mídia para um anúncio linear/inline for inválido para HLS.
 
    O valor padrão é false. Se um anúncio linear falhar porque tem um tipo de mídia inválido, ou porque o anúncio não pode ser reempacotado, esse sinalizador permite que a decisão do anúncio Primetime siga o mesmo comportamento de fallback que se o anúncio fosse um invólucro VAST vazio.
 
