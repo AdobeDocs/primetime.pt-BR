@@ -6,6 +6,9 @@ title: Personalizar geradores de oportunidade e resolvedores de conteúdo
 uuid: 97738b80-5cf8-494f-8811-449bceded220
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Um gerador de oportunidades identifica oportunidades de colocação por tags per
 
 O TVSDK inclui os seguintes geradores de oportunidade padrão:
 
-* `ManifestCuesOpportunityGenerator` gera oportunidades a partir das dicas de anúncio padrão ( `#EXT-X-CUE`).
+* `ManifestCuesOpportunityGenerator` gera oportunidades a partir das dicas de anúncio padrão (  `#EXT-X-CUE`).
 
 * `AdSignalingModeOpportunityGenerator` gera uma oportunidade inicial para o modo de sinalização de anúncio especificado. Isso ignora quaisquer dicas ou informações de metadados cronometrados.
 * `CustomMarkerOpportunityGenerator` gera oportunidades para substituir anúncios integrados em C3.
