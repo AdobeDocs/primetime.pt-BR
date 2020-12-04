@@ -6,6 +6,9 @@ title: Faixas de áudio alternativas na lista de reprodução
 uuid: 68f01375-9d57-4839-a1c0-7e022b374012
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 A lista de reprodução de um vídeo pode especificar um número ilimitado de trilhas de áudio alternativas para o conteúdo de vídeo principal. Por exemplo, você pode querer adicionar idiomas diferentes ao seu conteúdo de vídeo ou permitir que o usuário alterne entre trilhas diferentes em seu dispositivo enquanto o conteúdo estiver sendo reproduzido.
 
-As faixas de áudio alternativas, ou o áudio de ligação tardia, permitem que os usuários alternem entre várias faixas de idioma para fluxos de vídeo HTTP (ao vivo/linear e VOD) e você não precisa modificar, duplicar ou reempacotar o vídeo para cada faixa de áudio. É possível fornecer várias faixas de idioma para um ativo de vídeo antes ou depois da embalagem inicial do ativo.
+As faixas de áudio alternativas, ou o áudio de ligação tardia, permitem que os usuários alternem entre várias faixas de idioma para fluxos de vídeo HTTP (ao vivo/linear e VOD) e você não precisa modificar, duplicado ou reempacotar o vídeo para cada faixa de áudio. É possível fornecer várias faixas de idioma para um ativo de vídeo antes ou depois da embalagem inicial do ativo.
 
 >[!TIP]
 >
@@ -25,7 +28,7 @@ Os seguintes requisitos se aplicam se você usar faixas de áudio alternativas e
 * Se o conteúdo principal tiver trilhas de áudio alternativas, as publicidades deverão ter pelo menos um fluxo somente de áudio.
 * A duração de cada segmento do fluxo somente de áudio de um anúncio deve ser igual à duração do segmento do fluxo de vídeo de um anúncio.
 
-A faixa de áudio principal é incluída na coleção de faixas de áudio com o `default` rótulo. Os metadados para os fluxos de áudio alternativos estão incluídos na lista de reprodução nas `#EXT-X-MEDIA` tags com `TYPE=AUDIO`.
+A faixa de áudio principal está incluída na coleção de faixas de áudio com o rótulo `default`. Os metadados para os fluxos de áudio alternativos estão incluídos na lista de reprodução das tags `#EXT-X-MEDIA` com `TYPE=AUDIO`.
 
 Por exemplo, um manifesto M3U8 que especifica vários fluxos de áudio alternativos pode ser semelhante a:
 
