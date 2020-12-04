@@ -4,13 +4,16 @@ title: Amostra de solicitações do cliente
 uuid: 330d5e3c-1711-4375-bd11-e7702f0cde31
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 1%
 
 ---
 
 
 # Amostra de solicitações do cliente{#sample-client-requests}
 
-Você pode coletar uma biblioteca de solicitações de clientes de amostra usando ferramentas como Charles Proxy ou Wireshark. Você deve capturar as solicitações do cliente depois que o servidor de individualização for configurado, usando a credencial de Transporte de individualização. Em seguida, você pode enviar essas solicitações do cliente (via *curl* ou outra ferramenta) para o ponto final do servidor de personalização para verificar se o servidor está funcionando corretamente. Por exemplo:
+Você pode coletar uma biblioteca de solicitações de clientes de amostra usando ferramentas como Charles Proxy ou Wireshark. Você deve capturar as solicitações do cliente depois que o servidor de individualização for configurado, usando a credencial de Transporte de individualização. Em seguida, você pode enviar essas solicitações do cliente (por meio de *curl* ou outra ferramenta) para o ponto final do servidor de individualização para verificar se o servidor está funcionando corretamente. Por exemplo:
 
 ```
 curl https://<<yourindivserver:port>>/flashaccess/i15n/v5 -­data-binary  
