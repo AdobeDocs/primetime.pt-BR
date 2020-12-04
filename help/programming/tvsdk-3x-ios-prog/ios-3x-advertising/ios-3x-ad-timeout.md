@@ -21,7 +21,7 @@ No caso de conteúdo VOD, a identificação da lista de reprodução, que envolv
 
 No caso de conteúdo ao vivo, cada vez que a lista de reprodução é atualizada, a identificação da lista de reprodução deve ser concluída em 20 segundos
 
-**APIs relevantes ao tempo limite de AdResolution**
+**APIs relevantes ao Tempo limite de AdResolution**
 
 ```
 /** @name Properties */
@@ -40,7 +40,7 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-A seguir à seção: [Metadados](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)do Primetime e do servidor.
+A seguir à seção: [Metadados do servidor de anúncio Primetime](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
 
 **APIs relevantes ao tempo limite do AdManifest**
 
@@ -62,4 +62,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-A seguir à seção: [Metadados](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)do Primetime e do servidor.
+A seguir à seção: [Metadados do servidor de anúncio Primetime](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
