@@ -6,6 +6,9 @@ title: Armazenar objetos de metadados cronometrados à medida que são despachad
 uuid: 0e6d2a42-37a8-477e-b925-66bbc23445c1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '138'
+ht-degree: 0%
 
 ---
 
@@ -14,14 +17,14 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Seu aplicativo deve usar os objetos TimedMetadata apropriados nos momentos apropriados.
 
-Durante a análise de conteúdo, que ocorre antes da reprodução, o TVSDK identifica as tags assinadas e notifica seu aplicativo sobre essas tags. A hora associada a cada um `TimedMetadata` é a hora local na linha do tempo de reprodução.
+Durante a análise de conteúdo, que ocorre antes da reprodução, o TVSDK identifica as tags assinadas e notifica seu aplicativo sobre essas tags. A hora associada a cada `TimedMetadata` é a hora local na linha do tempo de reprodução.
 
 Seu aplicativo deve concluir as seguintes tarefas:
 
 1. Acompanhe o tempo de reprodução atual.
-1. Corresponder o tempo de reprodução atual aos `TimedMetadata` objetos despachados.
+1. Corresponder o tempo de reprodução atual aos objetos `TimedMetadata` despachados.
 
-1. Use o `TimedMetadata` local onde a hora de início é igual à hora de reprodução local atual.
+1. Use `TimedMetadata` onde a hora do start for igual à hora atual de reprodução local.
 
    O exemplo a seguir mostra como salvar `TimedMetadata` objetos em um `ArrayList`.
 
