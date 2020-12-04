@@ -4,6 +4,9 @@ title: Segurança da camada de rede
 uuid: bd53bccf-1130-4189-97ec-4259bd25762f
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
 
 ---
 
@@ -24,11 +27,11 @@ Esta tabela descreve técnicas comuns que reduzem as vulnerabilidades de seguran
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Zonas desmilitarizadas (DMZs) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">A segmentação deve existir em pelo menos dois níveis com o servidor de aplicativos usado para executar o Adobe Access colocado atrás do firewall interno. Separe a rede externa da DMZ que contém os servidores da Web, que, por sua vez, devem ser separados da rede interna. Use firewalls para implementar as camadas de separação. Categorize e controle o tráfego que passa por cada camada de rede para garantir que somente o mínimo absoluto de dados necessários seja permitido. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">A segmentação deve existir em pelo menos dois níveis com o servidor de aplicativos usado para executar o Acesso ao Adobe colocado atrás do firewall interno. Separe a rede externa da DMZ que contém os servidores da Web, que, por sua vez, devem ser separados da rede interna. Use firewalls para implementar as camadas de separação. Categorize e controle o tráfego que passa por cada camada de rede para garantir que somente o mínimo absoluto de dados necessários seja permitido. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Endereços IP privados </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Use a tradução de endereço de rede (NAT) com endereços IP privados RFC 1918 nos servidores de aplicativos do Adobe Access. Atribua endereços IP privados (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) para tornar mais difícil para um invasor rotear tráfego de e para um host interno NAT pela Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Use a tradução de endereço de rede (NAT) com endereços IP privados RFC 1918 nos servidores de aplicativos de acesso a Adobe. Atribua endereços IP privados (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) para tornar mais difícil para um invasor rotear tráfego de e para um host interno NAT pela Internet. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Firewalls </p> </td> 
