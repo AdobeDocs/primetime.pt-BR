@@ -6,6 +6,9 @@ title: Ciclo de vida e status do objeto MediaPlayer
 uuid: a0eb27c8-180b-4c56-926f-59fa3bcef032
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ O status do player de mídia determina quais ações são legais.
 
 Para trabalhar com status de player de mídia:
 
-* É possível recuperar o status atual do `MediaPlayer` objeto com `MediaPlayer.getStatus()`.
+* Você pode recuperar o status atual do objeto `MediaPlayer` com `MediaPlayer.getStatus()`.
 
-* A lista de status é definida na enumeração [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html) .
+* A lista de status é definida na enumeração [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html).
 
-Diagrama de transição de status para o ciclo de vida de uma `MediaPlayer` instância:
+Diagrama de transição de status para o ciclo de vida de uma instância `MediaPlayer`:
 <!--<a id="fig_A6425F24C7734DC681D992859D2A6743"></a>-->
 
 ![](assets/media_player_statuses.png)
@@ -63,9 +66,9 @@ A tabela a seguir fornece detalhes sobre o ciclo de vida e os status do player d
    <td colname="col1"> SUSPENSA </td> 
    <td colname="col2"> <p>Se o aplicativo sair da reprodução, desligar o dispositivo ou alternar aplicativos enquanto o player estiver sendo reproduzido ou pausado, o player de mídia será suspenso e os recursos serão liberados. </p> <p>Chamar <span class="codeph"> MediaPlayer.restore() </span> retorna o player ao status em que ele estava antes de SUSPENDER. A exceção é se o player estiver PROCURANDO quando suspenso, ele será PAUSADO e SUSPENDIDO. </p> <p>Importante:  <p>Lembre-se das seguintes informações: 
       <ul id="ul_1B21668994D1474AAA0BE839E0D69B00"> 
-       <li id="li_08459A3AB03C45588D73FA162C27A56C">O <span class="codeph"> MediaPlayer </span> chama <span class="codeph"> a suspensão automaticamente </span> somente quando o objeto de superfície usado pelo <span class="codeph"> MediaPlayerView </span> é destruído. </li> 
-       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">O <span class="codeph"> MediaPlayer </span> chama <span class="codeph"> restore() automaticamente </span> somente quando um novo objeto de superfície usado pelo <span class="codeph"> MediaPlayerView </span> é criado. </li> 
-      </ul> </p> </p> <p>Se você quiser que a reprodução sempre seja pausada quando o MediaPlayer for restaurado, faça com que seu aplicativo chame <span class="codeph"> MediaPlayer.pause() </span> no método <span class="codeph"> onPause() do Android Activity </span> . </p> </td> 
+       <li id="li_08459A3AB03C45588D73FA162C27A56C">O <span class="codeph"> MediaPlayer </span> chama automaticamente <span class="codeph"> suspender </span> apenas quando o objeto de superfície utilizado pelo <span class="codeph"> MediaPlayerView </span> for destruído. </li> 
+       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">O <span class="codeph"> MediaPlayer </span> chama automaticamente <span class="codeph"> restore() </span> apenas quando um novo objeto de superfície usado pelo <span class="codeph"> MediaPlayerView </span> é criado. </li> 
+      </ul> </p> </p> <p>Se quiser que a reprodução sempre seja pausada quando o MediaPlayer for restaurado, faça com que sua chamada de aplicativo <span class="codeph"> MediaPlayer.pause() </span> no método Android Atividade <span class="codeph"> onPause() </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> CONCLUÍDO </td> 
