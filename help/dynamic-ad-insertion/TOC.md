@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
 
-# Primetime Ad Insertion Help {#ad-insertion}
+# Ajuda do Primetime Ad Insertion  {#ad-insertion}
 
 + [Visão geral do Primetime Ad Insertion](home.md)
 + Introdução ao Primetime Ad Insertion{#get-started}
@@ -52,13 +52,13 @@ ht-degree: 9%
       + [Diretiva &quot;EXT-X-MARKER&quot;](msapi-topics/ms-at-effectiveness/ms-api-playlists.md)
    + [Cookies](msapi-topics/ms-cookies.md)
    + [Suporte para legendas WebVTT](msapi-topics/ms-webvtt-captions.md)
-   + Lista dos formatos de arquivo {#list}
+   + Lista de formatos de arquivo {#list}
       + [Formatos de arquivo](msapi-topics/ms-list-file-formats/ms-api-file-formats.md)
       + [Formato JSON para URL para solicitação de lista de reprodução de manifesto variante](msapi-topics/ms-list-file-formats/ms-json-m3u8.md)
       + [Formatos JSON para rastrear URLs](msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md)
       + [Formato VMAP para URLs de rastreamento](msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md)
    + [Requisitos do player de vídeo](msapi-topics/ms-player-req.md)
-+ Serviço de reempacotamento da Creative Cloud Primetime {#crs}
++ Primetime Creative Repacking Service {#crs}
    + [Visão geral do SIR](creative-repackaging-service/crs-overview.md)
    + [Principais utilizações do SIR](creative-repackaging-service/jit-async-hls-conv.md)
    + [Suporte a vários CDN](creative-repackaging-service/multi-cdn-supportt.md)
