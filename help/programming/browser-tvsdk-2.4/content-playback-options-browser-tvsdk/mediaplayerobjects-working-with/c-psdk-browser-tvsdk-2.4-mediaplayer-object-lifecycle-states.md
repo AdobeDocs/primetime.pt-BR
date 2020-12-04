@@ -1,54 +1,57 @@
 ---
-description: A partir do momento em que a instância do MediaPlayer é criada até o momento em que é encerrada, essa instância é transferida de um estado para o seguinte.
-seo-description: A partir do momento em que a instância do MediaPlayer é criada até o momento em que é encerrada, essa instância é transferida de um estado para o seguinte.
+description: A partir do momento em que a instância MediaPlayer é criada até o momento em que é encerrada, essa instância transição de um estado para o seguinte.
+seo-description: A partir do momento em que a instância MediaPlayer é criada até o momento em que é encerrada, essa instância transição de um estado para o seguinte.
 seo-title: Ciclo de vida e estados do objeto MediaPlayer
 title: Ciclo de vida e estados do objeto MediaPlayer
 uuid: fe76ea80-aaa8-43bc-9b81-85e0551f70dd
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '403'
+ht-degree: 0%
 
 ---
 
 
 # Ciclo de vida e estados do objeto MediaPlayer{#life-cycle-and-states-of-the-mediaplayer-object}
 
-A partir do momento em que a instância do MediaPlayer é criada até o momento em que é encerrada, essa instância é transferida de um estado para o seguinte.
+A partir do momento em que a instância MediaPlayer é criada até o momento em que é encerrada, essa instância transição de um estado para o seguinte.
 
 Estes são os estados possíveis:
 
-* **IDLE**: `MediaPlayerStatus.IDLE`
+* **IDLE**:  `MediaPlayerStatus.IDLE`
 
-* **INICIALIZAÇÃO**: `MediaPlayerStatus.INITIALIZING`
+* **INICIALIZAÇÃO**:  `MediaPlayerStatus.INITIALIZING`
 
-* **INICIALIZADO**: `MediaPlayerStatus.INITIALIZED`
+* **INICIALIZADO**:  `MediaPlayerStatus.INITIALIZED`
 
-* **PREPARANDO**: `MediaPlayerStatus.PREPARING`
+* **PREPARANDO**:  `MediaPlayerStatus.PREPARING`
 
-* **PREPARADO**: `MediaPlayerStatus.PREPARED`
+* **PREPARADO**:  `MediaPlayerStatus.PREPARED`
 
-* **REPRODUÇÃO**: `MediaPlayerStatus.PLAYING`
+* **REPRODUÇÃO**:  `MediaPlayerStatus.PLAYING`
 
-* **PAUSADO**: `MediaPlayerStatus.PAUSED`
+* **PAUSADO**:  `MediaPlayerStatus.PAUSED`
 
-* **PROCURANDO**: `MediaPlayerStatus.SEEKING`
+* **PROCURANDO**:  `MediaPlayerStatus.SEEKING`
 
-* **CONCLUÍDO**: `MediaPlayerStatus.COMPLETE`
+* **CONCLUÍDO**:  `MediaPlayerStatus.COMPLETE`
 
-* **ERRO**: `MediaPlayerStatus.ERROR`
+* **ERRO**:  `MediaPlayerStatus.ERROR`
 
-* **LANÇADO**: `MediaPlayerStatus.RELEASED`
+* **LANÇADO**:  `MediaPlayerStatus.RELEASED`
 
 A lista completa de estados é definida em `MediaPlayerStatus`.
 
 Saber o estado do player é útil porque algumas operações são permitidas apenas enquanto o player estiver em um estado específico. Por exemplo, `play` não pode ser chamado enquanto estiver no estado IDLE. Deve ser chamado depois de chegar ao estado PREPARADO. O estado ERROR também muda o que pode acontecer a seguir.
 
-Como um recurso de mídia é carregado e reproduzido, o player faz a transição da seguinte maneira:
+Como um recurso de mídia é carregado e reproduzido, o player transição da seguinte maneira:
 
 1. O estado inicial é IDLE.
-1. O aplicativo chama `MediaPlayer.replaceCurrentResource`, o que move o player para o estado INICIALIZANDO.
+1. Seu aplicativo chama `MediaPlayer.replaceCurrentResource`, que move o player para o estado INICIALIZANDO.
 1. Se o TVSDK do navegador carregar o recurso com êxito, o estado mudará para INICIALIZADO.
-1. O aplicativo chama `MediaPlayer.prepareToPlay`e o estado muda para PREPARING.
-1. O TVSDK do navegador prepara o fluxo de mídia e inicia a resolução do anúncio e a inserção do anúncio (se ativada).
+1. Seu aplicativo chama `MediaPlayer.prepareToPlay` e o estado muda para PREPARING.
+1. O TVSDK do navegador prepara o fluxo de mídia e start a resolução do anúncio e a inserção do anúncio (se ativada).
 
    Quando essa etapa for concluída, os anúncios serão inseridos na linha do tempo ou o procedimento do anúncio falhará e o estado do player mudará para PREPARADO.
 1. Conforme seu aplicativo é reproduzido e pausa a mídia, o estado se move entre REPRODUZIR e PAUSADO.
