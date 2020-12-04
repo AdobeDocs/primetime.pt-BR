@@ -6,6 +6,9 @@ title: Trabalhar com objetos MediaPlayer
 uuid: eba26ad7-8c9a-4703-af32-1dfb928f6b67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '469'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ O objeto PTMediaPlayer representa o player de mídia. Um PTMediaPlayerItem repre
 
 ## Sobre a classe MediaPlayerItem {#section_B6F36C0462644F5C932C8AA2F6827071}
 
-Depois que um recurso de mídia é carregado com êxito, o TVSDK cria uma instância da `PTMediaPlayerItem` classe para fornecer acesso a esse recurso.
+Depois que um recurso de mídia é carregado com êxito, o TVSDK cria uma instância da classe `PTMediaPlayerItem` para fornecer acesso a esse recurso.
 
-O `PTMediaPlayer` resolve o recurso de mídia, carrega o arquivo manifest associado e analisa o manifesto. Esta é a parte assíncrona do processo de carregamento de recursos. A `PTMediaPlayerItem` instância é produzida depois que o recurso é resolvido, e essa instância é uma versão resolvida de um recurso de mídia. O TVSDK fornece acesso à `PTMediaPlayerItem` instância recém-criada por meio `PTMediaPlayer.currentItem`.
+O `PTMediaPlayer` resolve o recurso de mídia, carrega o arquivo manifest associado e analisa o manifesto. Esta é a parte assíncrona do processo de carregamento de recursos. A instância `PTMediaPlayerItem` é produzida depois que o recurso é resolvido, e essa instância é uma versão resolvida de um recurso de mídia. O TVSDK fornece acesso à instância `PTMediaPlayerItem` recém-criada por meio de `PTMediaPlayer.currentItem`.
 
 >[!TIP]
 >
@@ -26,16 +29,16 @@ O `PTMediaPlayer` resolve o recurso de mídia, carrega o arquivo manifest associ
 
 ## Ciclo de vida do objeto MediaPlayer {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
 
-A partir do momento em que você cria a `PTMediaPlayer` instância até o momento em que a encerra (reutiliza ou remove), essa instância conclui uma série de transições de um status para outro.
+A partir do momento em que você cria a instância `PTMediaPlayer` até o momento em que a encerra (reutiliza ou remove), essa instância conclui uma série de transições de um status para outro.
 
-Algumas operações são permitidas apenas quando o player está em um estado específico. Por exemplo, chamar `play` não `PTMediaPlayerStatusCreated` é permitido. Você pode chamar esse status somente depois que o player atingir o `PTMediaPlayerStatusReady` status.
+Algumas operações são permitidas apenas quando o player está em um estado específico. Por exemplo, chamar `play` em `PTMediaPlayerStatusCreated` não é permitido. Você pode chamar esse status somente depois que o player atingir o status `PTMediaPlayerStatusReady`.
 
 Para trabalhar com status:
 
 * Você pode recuperar o status atual do objeto MediaPlayer com `PTMediaPlayer.status`.
 * A lista de status é definida em `PTMediaPlayerStatus`.
 
-Diagrama de transição de estado para o ciclo de vida de uma instância do MediaPlayer:
+Diagrama de transição de estado para o ciclo de vida de uma instância MediaPlayer:
 <!--<a id="fig_1C55DE3F186F4B36AFFDCDE90379534C"></a>-->
 
 ![](assets/player-state-transitions-diagram-ios2_web.png)
@@ -52,11 +55,11 @@ A tabela a seguir fornece detalhes adicionais:
  <tbody> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusCreated</span> </p> </td> 
-   <td colname="col2"> <p>Seu aplicativo solicitou um novo player de mídia chamando <span class="codeph"> playerWithMediaPlayerItem</span>. O player recém-criado está aguardando que você especifique um item de player de mídia. Este é o status inicial do player de mídia. </p> </td> 
+   <td colname="col2"> <p>Seu aplicativo solicitou um novo player de mídia ao chamar <span class="codeph"> playerWithMediaPlayerItem</span>. O player recém-criado está aguardando que você especifique um item de player de mídia. Este é o status inicial do player de mídia. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing</span> </p> </td> 
-   <td colname="col2"> <p>Seu aplicativo chama <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span>e o player de mídia está sendo carregado. </p> </td> 
+   <td colname="col2"> <p>Seu aplicativo chama <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span> e o player de mídia está sendo carregado. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusInitialized</span> </p> </td> 
