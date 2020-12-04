@@ -23,9 +23,9 @@ As CDNs geralmente têm diferentes esquemas de tokenização para autorização 
 * Centurylink / Level3
 * Entre em contato com seu representante de suporte Primetime para obter uma lista completa de CDNs suportados
 
-Para obter mais informações sobre o `pttoken` parâmetro, consulte a descrição [do parâmetro da API do](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)Bootstrap.
+Para obter mais informações sobre o parâmetro `pttoken`, consulte [descrição do parâmetro da API do Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
-## Configurar anúncios para entrega a partir do CDN de conteúdo {#configure-ad-deliver-from-cdn}
+## Configure os anúncios para entrega a partir do conteúdo CDN {#configure-ad-deliver-from-cdn}
 
 Você pode desejar fornecer anúncios e conteúdo do mesmo CDN para manter a afinidade de conteúdo, ajudar a ignorar bloqueadores de anúncios e/ou otimizar o número de conexões necessárias do aplicativo cliente. O Primetime Ad Insertion suporta regras de regravação de fragmentos para mapear fragmentos para o CDN de conteúdo.
 
