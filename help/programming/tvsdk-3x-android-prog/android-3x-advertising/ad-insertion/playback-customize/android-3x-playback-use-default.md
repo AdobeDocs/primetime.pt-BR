@@ -19,9 +19,9 @@ Você pode optar por usar comportamentos de publicidade padrão.
 
 1. Para usar comportamentos padrão, conclua uma das seguintes tarefas:
 
-   * Se você implementar sua própria `AdvertisingFactory` classe, retorne null para `createAdPolicySelector`.
+   * Se você implementar sua própria classe `AdvertisingFactory`, retorne null para `createAdPolicySelector`.
 
-   * Se você não tiver uma implementação personalizada para a `AdvertisingFactory` classe, o TVSDK usará um seletor de política de publicidade padrão.
+   * Se você não tiver uma implementação personalizada para a classe `AdvertisingFactory`, o TVSDK usará um seletor de política de publicidade padrão.
 
 ## Configurar reprodução personalizada {#set-up-customized-playback}
 
@@ -30,17 +30,17 @@ Você pode personalizar ou substituir comportamentos de publicidade.
 Antes de personalizar ou substituir comportamentos de publicidade, registre a instância da política de publicidade com .
 Para personalizar os comportamentos de publicidade, execute um dos procedimentos a seguir:
 
-* Implemente a `AdPolicySelector` interface e todos os seus métodos.
+* Implemente a interface `AdPolicySelector` e todos os seus métodos.
 
-   Essa opção é recomendada se você precisar substituir **todos** os comportamentos padrão de anúncio.
+   Essa opção é recomendada se você precisar substituir **all** os comportamentos padrão do anúncio.
 
-* Amplie a `DefaultAdPolicySelector` classe e forneça implementações somente para os comportamentos que exigem personalização.
+* Estenda a classe `DefaultAdPolicySelector` e forneça implementações somente para os comportamentos que exigem personalização.
 
-   Essa opção é recomendada se você precisar substituir apenas **alguns** dos comportamentos padrão.
+   Essa opção é recomendada se você precisar substituir apenas **some** dos comportamentos padrão.
 
 Para personalizar comportamentos de publicidade:
 
-1. Implemente a `AdPolicySelector` interface e todos os seus métodos.
+1. Implemente a interface `AdPolicySelector` e todos os seus métodos.
 1. Atribua a instância de política a ser usada pelo TVSDK por meio da fábrica de publicidade.
 
    >[!NOTE]
