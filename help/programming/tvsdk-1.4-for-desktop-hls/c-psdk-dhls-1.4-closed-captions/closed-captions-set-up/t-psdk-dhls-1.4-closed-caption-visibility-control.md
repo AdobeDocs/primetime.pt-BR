@@ -7,13 +7,13 @@ uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
 
 
-# Controlar a visibilidade da legenda{#control-closed-caption-visibility}
+# Controlar visibilidade de legenda fechada{#control-closed-caption-visibility}
 
 É possível controlar a visibilidade das legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida. Se você alterar qual faixa é atual, a configuração de visibilidade permanecerá a mesma.
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 >public static const VISIBLE:String = visible;
 >```
 
-1. Aguarde até `MediaPlayer` que o status PREPARADO seja pelo menos igual (consulte [Aguardar um estado](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)válido).
+1. Aguarde até que `MediaPlayer` tenha pelo menos o status PREPARADO (consulte [Aguarde um estado válido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Para obter a configuração de visibilidade atual de legendas fechadas, use o método getter em `MediaPlayer`, que retorna um valor de visibilidade.
 
    ```
