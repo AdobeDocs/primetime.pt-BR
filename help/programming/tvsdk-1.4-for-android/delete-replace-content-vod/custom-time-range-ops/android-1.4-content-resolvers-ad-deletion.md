@@ -6,11 +6,14 @@ title: Resolvedores de conteúdo para exclusão de anúncios/substituição
 uuid: 2954ce0f-aed2-4a85-8e53-d4e89d1497b6
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
 
-# Resolvedores de conteúdo para exclusão de anúncios/substituição {#content-resolvers-for-ad-deletion-replacement}
+# Resolvedores de conteúdo para exclusão de anúncio / substituição {#content-resolvers-for-ad-deletion-replacement}
 
 Você pode usar vários resolvedores de conteúdo para lidar com diferentes operações de linha do tempo.
 
