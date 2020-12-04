@@ -6,6 +6,9 @@ title: Visão geral
 uuid: 9c320389-e327-4e5f-888c-e2e5728365ca
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ O TVSDK inclui descrições de API e exemplos de código para ajudá-lo a integr
 
 Para obter os requisitos específicos de hardware e software para o uso do TVSDK, consulte [Requisitos.](../../android-1.4-introduction/overview-prod-audience-guide/android-1.4-requirements.md)
 
-## Público {#section_527860B373734D3BA89FCF5EC1F6DC37}
+## Audiência {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
 Este guia supõe que você saiba como desenvolver aplicativos e players de vídeo usando Java. Você implementa uma interface de usuário do player de vídeo usando esse idioma e incorpora recursos do TVSDK.
 
