@@ -1,18 +1,21 @@
 ---
-description: Os fluxos HLS e DASH fornecem codificações (perfis) de taxa de bits diferentes para a mesma sequência curta de vídeo. O TVSDK pode selecionar o nível de qualidade para cada rajada com base na largura de banda disponível.
-seo-description: Os fluxos HLS e DASH fornecem codificações (perfis) de taxa de bits diferentes para a mesma sequência curta de vídeo. O TVSDK pode selecionar o nível de qualidade para cada rajada com base na largura de banda disponível.
+description: Os fluxos HLS e DASH fornecem codificações de taxa de bits diferentes (perfis) para a mesma sequência curta de vídeo. O TVSDK pode selecionar o nível de qualidade para cada rajada com base na largura de banda disponível.
+seo-description: Os fluxos HLS e DASH fornecem codificações de taxa de bits diferentes (perfis) para a mesma sequência curta de vídeo. O TVSDK pode selecionar o nível de qualidade para cada rajada com base na largura de banda disponível.
 seo-title: Taxas de bits adaptáveis (ABR) para qualidade de vídeo
 title: Taxas de bits adaptáveis (ABR) para qualidade de vídeo
 uuid: a9b9a6a8-4098-4952-90e7-684e64800b3f
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
 
 # Taxas de bits adaptáveis (ABR) para qualidade de vídeo {#adaptive-bit-rates-abr-for-video-quality}
 
-Os fluxos HLS e DASH fornecem codificações (perfis) de taxa de bits diferentes para a mesma sequência curta de vídeo. O TVSDK pode selecionar o nível de qualidade para cada rajada com base na largura de banda disponível.
+Os fluxos HLS e DASH fornecem codificações de taxa de bits diferentes (perfis) para a mesma sequência curta de vídeo. O TVSDK pode selecionar o nível de qualidade para cada rajada com base na largura de banda disponível.
 
 O TVSDK monitora constantemente a taxa de bits para garantir que o conteúdo seja reproduzido na taxa de bits ideal para a conexão de rede atual.
 
@@ -22,7 +25,7 @@ Você pode definir a política de switching de taxa de bits adaptável (ABR) e a
  <tbody> 
   <tr> 
    <td colname="col01"> Taxa de bits inicial </td> 
-   <td colname="col2"> <p>A taxa de bits de reprodução desejada (em bits por segundo) para o primeiro segmento. Quando a reprodução é iniciada, o perfil mais próximo, que é igual ou maior à taxa de bits inicial, é usado para o primeiro segmento. </p> <p> Se uma taxa de bits mínima for definida e a taxa de bits inicial for inferior à taxa mínima, o TVSDK selecionará o perfil com a taxa de bits mais baixa acima da taxa de bits mínima. Se a taxa inicial estiver acima da taxa máxima, o TVSDK selecionará a taxa mais alta abaixo da taxa máxima. </p> <p>Se a taxa de bits inicial for zero ou indefinida, a taxa de bits inicial será determinada pela política ABR. </p> </td> 
+   <td colname="col2"> <p>A taxa de bits de reprodução desejada (em bits por segundo) para o primeiro segmento. Quando os start de reprodução, o perfil mais próximo, igual ou superior à taxa de bits inicial, é usado para o primeiro segmento. </p> <p> Se uma taxa de bits mínima for definida e a taxa de bits inicial for inferior à taxa mínima, o TVSDK selecionará o perfil com a taxa de bits mais baixa acima da taxa de bits mínima. Se a taxa inicial estiver acima da taxa máxima, o TVSDK selecionará a taxa mais alta abaixo da taxa máxima. </p> <p>Se a taxa de bits inicial for zero ou indefinida, a taxa de bits inicial será determinada pela política ABR. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Taxa mínima de bits </td> 
@@ -30,14 +33,14 @@ Você pode definir a política de switching de taxa de bits adaptável (ABR) e a
   </tr> 
   <tr> 
    <td colname="col01"> Taxa máxima de bits </td> 
-   <td colname="col2"> <p>A maior taxa de bits permitida para a qual o ABR pode alternar. A alternância ABR ignora perfis com uma taxa de bits superior a essa taxa de bits. </p> </td> 
+   <td colname="col2"> <p>A maior taxa de bits permitida para a qual o ABR pode alternar. A comutação ABR ignora perfis com uma taxa de bits superior a essa taxa de bits. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Lembre-se das seguintes informações:
 
-* O TVSDK não despacha eventos de alternância de taxa de bits.
+* O TVSDK não despacha eventos da alternância de taxa de bits.
 * Você pode alterar as configurações de ABR a qualquer momento, e o player muda para usar o perfil que mais corresponde às configurações mais recentes.
 
 Por exemplo, se um fluxo tiver os seguintes perfis:
@@ -54,7 +57,7 @@ Se você especificar um intervalo de 300000 a 2000000, o TVSDK considerará some
 
 Para configurar parâmetros adaptáveis de taxa de bits do TVSDK:
 
-1. Configure uma instância do para definir `PTABRControlParameters` as configurações iniciais, mínimas e máximas de taxa de bits.
+1. Configure uma instância de `PTABRControlParameters` para definir as configurações iniciais, mínimas e máximas de taxa de bits.
 
    Os valores padrão são exibidos no trecho de código a seguir, mas seu aplicativo pode definir qualquer valor inteiro para cada um desses parâmetros.
 
@@ -72,7 +75,7 @@ Para configurar parâmetros adaptáveis de taxa de bits do TVSDK:
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. Atualize sua `PTMediaPlayer` instância com a `PTABRControlParameters` instância configurada.
+1. Atualize sua instância `PTMediaPlayer` com a instância `PTABRControlParameters` configurada.
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,9 +84,9 @@ Para configurar parâmetros adaptáveis de taxa de bits do TVSDK:
 
 Lembre-se do seguinte:
 
-* O aplicativo deve definir a propriedade `abrControlParameters` em `PTMediaPlayer` antes de configurar uma `PTMediaPlayerItem` instância para que as configurações iniciais e mínimas de taxa de bits entrem em vigor.
+* O aplicativo deve definir a propriedade `abrControlParameters` em `PTMediaPlayer` antes de configurar uma instância `PTMediaPlayerItem` para que as configurações iniciais e mínimas de taxa de bits tenham efeito.
 
-   Após o início da reprodução do conteúdo, a configuração de uma nova instância afeta apenas a configuração máxima de taxa de bits.
+   Depois de start de reprodução de conteúdo, a configuração de uma nova instância afeta apenas a configuração máxima de taxa de bits.
 
-* Para atualizar a configuração de taxa de bits máxima durante a reprodução, crie uma nova `PTABRControlParameters` instância e defina-a na instância do player.
-* Você pode atualizar a configuração de taxa de bits máxima durante a reprodução somente no iOS 8.0 e posterior. Para versões anteriores, o `maxBitrate` valor definido antes da reprodução do conteúdo começar é usado.
+* Para atualizar a configuração de taxa de bits máxima durante a reprodução, crie uma nova instância `PTABRControlParameters` e defina-a na instância do player.
+* Você pode atualizar a configuração de taxa de bits máxima durante a reprodução somente no iOS 8.0 e posterior. Para versões anteriores, o valor `maxBitrate` definido antes do início da reprodução do conteúdo é usado.
