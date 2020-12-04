@@ -11,22 +11,22 @@ ht-degree: 0%
 ---
 
 
-# Definição de regras baseadas em tempo {#defining-time-based-rules}
+# Definindo regras baseadas em tempo {#defining-time-based-rules}
 
 O Adobe Access usa a &quot;aplicação flexível&quot; das restrições de licença baseadas em tempo. Se um direito de tempo expirar durante a reprodução de um vídeo, o comportamento padrão do Acesso a Adobe é não restringir a reprodução até a próxima vez que o fluxo de vídeo for recriado (chamando `Netstream.stop()` e `Netstream.play()`).
 
 Embora a aplicação flexível seja o comportamento padrão, também é possível ativar a aplicação forçada executando uma das seguintes tarefas:
 
 * Solicite ao seu reprodutor de vídeo que pesquise periodicamente a licença para verificar se nenhuma das restrições de tempo expirou. Isso pode ser feito chamando `DRMManager.loadVoucher(LOCAL_ONLY).`Um código de erro indica que a licença armazenada localmente não é mais válida.
-* Sempre que o usuário clicar no botão Pausar, você poderá gravar o carimbo de data e hora do vídeo atual e, em seguida, chamar `Netstream.stop().`Quando o usuário clicar no botão Reproduzir, você poderá procurar o local gravado e, em seguida, chamar `Netstream.play()`.
+* Sempre que o usuário clicar no botão Pausar, você poderá gravar o carimbo de data e hora do vídeo atual e depois chamar `Netstream.stop().`Quando o usuário clicar no botão Reproduzir, você poderá procurar o local gravado e depois chamar `Netstream.play()`.
 
-## data do start {#start-date}
+## Data do start {#start-date}
 
 Especifica a data após a qual uma licença é válida.
 
 Exemplo de caso de uso: Use uma data absoluta para emitir licenças de conteúdo antes da data de disponibilidade de um ativo ou para aplicar um período de &quot;embargo&quot;.
 
-## Data de término {#end-date}
+## Data final {#end-date}
 
 Especifica a data após a qual as licenças expiram.
 
@@ -64,4 +64,4 @@ O comportamento de sincronização é definido usando os seguintes parâmetros:
 
 >[!NOTE]
 >
->Esta regra de uso é suportada pelos clientes do Adobe Access versão 3.0 e superior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças. Consulte, Versão [](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)mínima do cliente.
+>Esta regra de uso é suportada pelos clientes do Adobe Access versão 3.0 e superior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças. Consulte, [Versão mínima do cliente](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
