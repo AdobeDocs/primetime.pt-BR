@@ -19,7 +19,7 @@ Você pode optar por usar comportamentos de publicidade padrão.
 
 Para usar comportamentos padrão:
 
-* Se você implementar sua própria `ContentFactory` classe, retorne uma nova instância do `DefaultAdPolicySelector` em sua implementação do `doRetrieveAdPolicySelector`.
+* Se você implementar sua própria classe `ContentFactory`, retorne uma nova instância de `DefaultAdPolicySelector` na implementação de `doRetrieveAdPolicySelector`.
 
    ```
    public class CustomContentFactory extends ContentFactory { 
@@ -38,4 +38,4 @@ Para usar comportamentos padrão:
    }
    ```
 
-* Se você não tiver uma implementação personalizada para a `ContentFactory` classe, o TVSDK usará `DefaultAdPolicySelector`.
+* Se você não tiver uma implementação personalizada para a classe `ContentFactory`, o TVSDK usará `DefaultAdPolicySelector`.
