@@ -23,7 +23,7 @@ Os fluxos de mídia podem conter metadados adicionais na forma de tags na lista 
 >
 >Este recurso não está disponível para o Safari em computadores Apple, pois o TVSDK usa a tag de vídeo, em vez de Flash ou MSE, para reproduzir conteúdo HLS.
 
-O TVSDK oferece suporte imediato para tags de `#EXT` publicidade específicas. Seu aplicativo pode usar tags personalizadas para aprimorar o fluxo de trabalho de publicidade ou para oferecer suporte a cenários de blecaute. Para suportar workflows avançados, o TVSDK permite que você especifique e assine tags adicionais no manifesto. Você pode ser notificado quando essas tags forem exibidas no arquivo manifest.
+O TVSDK oferece suporte imediato para tags de publicidade específicas `#EXT`. Seu aplicativo pode usar tags personalizadas para aprimorar o fluxo de trabalho de publicidade ou para oferecer suporte a cenários de blecaute. Para suportar workflows avançados, o TVSDK permite que você especifique e assine tags adicionais no manifesto. Você pode ser notificado quando essas tags forem exibidas no arquivo manifest.
 
 >[!TIP]
 >
@@ -67,8 +67,8 @@ seg5.ts
 
 Seu aplicativo pode configurar os seguintes cenários:
 
-* Uma notificação quando `#EXT-X-ASSET` as tags, ou qualquer outro conjunto de nomes de tags personalizadas aos quais você se inscreveu, existem no arquivo.
-* Insira publicidades quando uma `#EXT-X-AD` tag, ou qualquer outro nome de tag personalizado, for encontrada no stream.
+* Uma notificação quando as tags `#EXT-X-ASSET`, ou qualquer outro conjunto de nomes de tags personalizadas que você assinou, existem no arquivo.
+* Insira publicidades quando uma tag `#EXT-X-AD`, ou qualquer outro nome de tag personalizado, for encontrada no fluxo.
 
 Você pode assinar qualquer uma das seguintes tags como tags personalizadas:
 
@@ -78,6 +78,6 @@ Você pode assinar qualquer uma das seguintes tags como tags personalizadas:
 * `EXT-X-CUE`
 * `EXT-X-ENDLIST`
 
-Você será notificado com um `TimedMetadata` evento durante a análise de arquivos manifest.
+Você será notificado com um evento `TimedMetadata` durante a análise de arquivos manifest.
 
-Há algumas tags de publicidade, como `EXT-X-CUE`, nas quais você já está inscrito. Essas tags de publicidade também são usadas pelo gerador de oportunidades padrão. Você pode especificar quais tags de publicidade são usadas pelo gerador de oportunidades padrão, definindo a `adTags` propriedade.
+Há algumas tags de publicidade, como `EXT-X-CUE`, nas quais você já está inscrito. Essas tags de publicidade também são usadas pelo gerador de oportunidades padrão. Você pode especificar quais tags de publicidade são usadas pelo gerador de oportunidades padrão, definindo a propriedade `adTags`.
