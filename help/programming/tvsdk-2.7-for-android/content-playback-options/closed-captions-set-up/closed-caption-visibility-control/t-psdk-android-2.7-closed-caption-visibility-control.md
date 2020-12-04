@@ -7,7 +7,7 @@ uuid: b9d48d70-2554-4948-8654-fa45093c3782
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 >}
 >```
 
-1. Aguarde até `MediaPlayer` o estado PREPARADO.
+1. Aguarde até que `MediaPlayer` esteja no status PREPARADO.
 
    Para obter mais informações, consulte ui-state-ready-wait-for .
 1. Para obter a configuração de visibilidade atual de legendas fechadas, use o método getter em `MediaPlayer`, que retorna um valor de visibilidade.
