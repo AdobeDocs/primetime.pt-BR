@@ -6,6 +6,9 @@ title: Ordem dos eventos de reprodução
 uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,16 @@ O TVSDK do navegador despacha eventos/notificações em sequências geralmente e
 
 Os exemplos a seguir mostram a ordem de alguns eventos que incluem eventos de reprodução.
 
-* Ao carregar com êxito um recurso de mídia por meio `replaceCurrentResource`, a ordem dos eventos é:
+* Ao carregar com êxito um recurso de mídia por meio de `replaceCurrentResource`, a ordem dos eventos é:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Ao se preparar para a reprodução, `MediaPlayer.prepareToPlay`a ordem dos eventos é:
+* Ao preparar a reprodução por `MediaPlayer.prepareToPlay`, a ordem dos eventos é:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
