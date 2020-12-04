@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Novidades das versões 1.3 e 1.4 do Primetime Streaming Server.
 
-## Novidades do Primetime Streaming Server 1.4 (versão de dezembro) {#what-s-new-in-primetime-streaming-server-december-release}
+## Novo no Primetime Streaming Server 1.4 (versão de dezembro) {#what-s-new-in-primetime-streaming-server-december-release}
 
 **Offline Packager**
 
@@ -30,7 +30,7 @@ Novidades das versões 1.3 e 1.4 do Primetime Streaming Server.
 * Suporte para saída IV para um arquivo quando IV é gerado pelo empacotador offline
 * O Playlist Creator agora é compatível com a associação de grupos de áudio de vários idiomas e grupos de legendas WebVTT de vários idiomas aos fluxos de mídia
 
-**Servidor Origem**
+**Servidor origem**
 
 * A encriptação HLS AES está disponível para workflows Live e VOD. A Origem Primetime pode aplicar a criptografia AES HLS a fluxos HLS de entrada ou arquivos MP4.
 * Também pode aplicar criptografia JIT HLS AES quando usada para converter fluxos HDS recebidos em fluxos HLS.
@@ -55,7 +55,7 @@ Os certificados PHDS/PHLS foram atualizados. A nova data de expiração para o m
 
 * PTPUB- 645 DPISimple Mode é forçado mesmo quando o modo DPIScte35 é especificado quando as dicas de linha de comando e as dicas em fluxo são fornecidas na configuração offline do empacotador
 
-## Novidades do Primetime Streaming Server 1.3.1 (Versão MAIO) {#what-s-new-in-primetime-streaming-server-may-release}
+## Novidades do Primetime Streaming Server 1.3.1 (Versão do MAIO) {#what-s-new-in-primetime-streaming-server-may-release}
 
 A versão 1.3.1 se refere ao hotfix. Os seguintes aprimoramentos fazem dele uma atualização recomendada para os clientes, pois consiste em melhorias de desempenho importantes para casos de uso de JIT MP4:
 
@@ -152,8 +152,8 @@ Vários aprimoramentos de desempenho foram incorporados aos recursos de empacota
 
 **Instale o servidor de streaming**
 
-1. Baixe o software Java SE e JDK do site [da](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e siga as instruções de instalação.
-2. Extraia o arquivo de arquivamento do Adobe Primetime-Streaming Server 1.4 para `Primetime- StreamingServer-1-4-0-b206-12042014.zip` o disco.
+1. Baixe o software Java SE e JDK do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e siga as instruções de instalação.
+2. Extraia o arquivo de arquivamento do Adobe Primetime-Streaming Server 1.4, `Primetime- StreamingServer-1-4-0-b206-12042014.zip` para o disco.
 
 **Start do Primetime Streaming Server**
 
@@ -231,15 +231,15 @@ Os requisitos mínimos de sistema acima são válidos para o Origem Server e par
 
 **Instalação do Live Packager**
 
-1. Baixe o software Java SE e JDK do site [da](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e siga as instruções de instalação.
+1. Baixe o software Java SE e JDK do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e siga as instruções de instalação.
 1. Extraia o arquivo de arquivamento Adobe Primetime - Live Packager 1.4 `Primetime-LivePackager-1-4-0-b206-12042014.zip` para o disco.
 
 **Instalação do Servidor de Origem HTTP**
 
-1. Baixe o Java JRE e o software JDK do site [da](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e siga as instruções de instalação.
-1. Extraia o arquivo de arquivamento Adobe Primetime - HTTP Origem Server 1.4 para o seu disco `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`.
+1. Baixe o Java JRE e o software JDK do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e siga as instruções de instalação.
+1. Extraia o arquivo de arquivamento Adobe Primetime - HTTP Origem Server 1.4, `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`, para o disco.
 
-**Para start do Live Packager** para start do Packager, execute o seguinte comando do diretório raiz do Packager:\
+**Para start do Live** PackagerTo start o Packager, execute o seguinte comando do diretório raiz do Packager:\
 `$packager_start.sh`
 
 **Para start do Servidor de Origem HTTP**
@@ -271,7 +271,7 @@ Para reiniciar o Servidor de Origem HTTP, pare e start o Servidor de Origem HTTP
 
 O arquivo de distribuição contém uma configuração de amostra que pode ser usada para testar o empacotador.
 
-Depois de extrair o arquivo do Adobe Primetime - Live Packager 1.4, altere os diretórios para o diretório Packager e execute o script packager_start.sh. A configuração de amostra escuta o endereço multicast 239.235.0.3:14000 e executa o servidor de origem local na porta 8080. A saída está configurada para ser gravada no `packager/webroot/_default_/_default_/ directory`.
+Depois de extrair o arquivo Adobe Primetime - Live Packager 1.4, altere os diretórios para o diretório Packager e execute o script packager_start.sh. A configuração de amostra escuta o endereço multicast 239.235.0.3:14000 e executa o servidor de origem local na porta 8080. A saída está configurada para ser gravada em `packager/webroot/_default_/_default_/ directory`.
 
 <!-- 
 
@@ -320,11 +320,11 @@ Para desinstalar o Servidor de Origem HTTP, pare o Servidor de Origem HTTP e rem
 
 Para instalar o Offline Packager, siga estas etapas:
 
-1. Baixe o software Java SE do site [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle e siga as instruções de instalação.
-1. Extraia o arquivo de arquivo Adobe Primetime - Offline Packager 1.4 para o disco `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`.
+1. Baixe o software Java SE do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) e siga as instruções de instalação.
+1. Extraia o arquivo de arquivamento Adobe Primetime - Offline Packager 1.4, `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`, para o disco.
 
 Consulte o documento de Introdução do Primetime Offline Packager para obter os detalhes de configuração disponíveis [aqui](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 ## Recursos úteis {#helpful-resources}
 
-* Consulte a documentação de ajuda completa na página Aprendizagem e suporte [do](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte da Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
