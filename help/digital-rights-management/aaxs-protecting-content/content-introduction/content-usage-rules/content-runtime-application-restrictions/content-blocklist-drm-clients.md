@@ -25,7 +25,7 @@ Uma versão do cliente DRM pode ser identificada pelos atributos especificados n
 |---|---|---|---|
 | Ambiente | &quot;PC&quot;, &quot;PortingKit&quot; | Correspondência exata | Identifica se o cliente está sendo executado em uma área de trabalho ou em qualquer outro dispositivo. |
 | SO | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Correspondência exata | Plataforma |
-| Arquitetura | “32”, “64” | Correspondência exata | 32 bits ou 64 bits |
+| Arquitetura | &quot;32&quot;, &quot;64&quot; | Correspondência exata | 32 bits ou 64 bits |
 | Tipo de tela | &quot;PC&quot;, &quot;Mobile&quot;, &quot;TV&quot; | Correspondência exata |  |
 | Versão do tempo de execução | Um número de versão válido. Por exemplo, &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot;, etc. | Corresponde se a versão do cliente é menor ou igual à versão especificada. | O número da versão é especificado como uma combinação de números e pontos (&quot;.&quot;) de qualquer comprimento. |
 | Versão da biblioteca DRM | Um número de versão válido. Por exemplo, &quot;2.0.0&quot;. | Corresponde se a versão do cliente é menor ou igual à versão especificada. | O número da versão é especificado como uma combinação de números e pontos (&quot;.&quot;) de qualquer comprimento. |
