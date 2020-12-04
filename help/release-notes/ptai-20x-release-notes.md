@@ -16,7 +16,7 @@ As notas de versão do Primetime Ad Insertion 20.10.1 descrevem o que é novo ou
 
 ## Novidades do PTAI 20.10.1
 
-**Quando:** terça-feira, 13 de outubro de 2020, das 03h00 às 07h00, horário do leste
+**Quando:** terça-feira, 13 de outubro de 2020, das 03:00 às 07:00, horário do leste
 
 **Alterações**
 
@@ -26,22 +26,22 @@ As notas de versão do Primetime Ad Insertion 20.10.1 descrevem o que é novo ou
 
 #### Versão 20.9.3
 
-**Quando:** quarta-feira, 30 de setembro de 2020 às 15:30 às 6:30 Hora do Leste
+**Quando:** quarta-feira, 30 de setembro de 2020 às 15:30 da manhã às 6:30 da manhã, horário do leste
 
 **Alterações**
 
-* Foi adicionado um parâmetro da API de Bootstrap `ptparallelstream`. Isso permite que os clientes com players que solicitam streams de áudio ou vídeo descompilados CMAF em paralelo, a fim de garantir que os anúncios nas faixas de áudio e vídeo sejam consistentes. Defina o valor do parâmetro como true para ativar esse recurso ou omitir para desativar.
+* Foi adicionado o parâmetro da API do Bootstrap `ptparallelstream`. Isso permite que os clientes com players que solicitam streams de áudio ou vídeo descompilados CMAF em paralelo, a fim de garantir que os anúncios nas faixas de áudio e vídeo sejam consistentes. Defina o valor do parâmetro como true para ativar esse recurso ou omitir para desativar.
 
 #### Versão 20.9.2
 
-**Quando:** terça-feira, 15 de setembro de 2020, das 3:30 às 6:30 Hora do Leste
+**Quando:** terça-feira, 15 de setembro de 2020 das 3:30 às 6:30 Hora do Leste
 
 **Aprimoramentos**
 
-* Suporte fornecido para a inclusão de tipos de anúncios não lineares usando `EXT-X-MARKER` tags.
+* Suporte fornecido para a inclusão de tipos de anúncios não lineares usando tags `EXT-X-MARKER`.
 Para obter mais informações ou ativar esse recurso, entre em contato com o representante do suporte técnico.
 
-* Fornecido suporte para limitar o tempo geral de resolução do anúncio, se os provedores demorarem muito para responder. Para ativar a limitação, defina o parâmetro da API de inicialização como `ptadtimeout` um valor em milissegundos.
+* Fornecido suporte para limitar o tempo geral de resolução do anúncio, se os provedores demorarem muito para responder. Para ativar a limitação, defina o parâmetro da API de inicialização `ptadtimeout` como um valor em milissegundos.
 
    >[!NOTE]
    >
@@ -49,7 +49,7 @@ Para obter mais informações ou ativar esse recurso, entre em contato com o rep
 
 #### Versão 20.9.1
 
-**Quando:** terça-feira, 1 de setembro de 2020, das 3:30 às 7:30, horário do leste
+**Quando:** terça-feira, 1º de setembro de 2020, das 3:30 às 7:30, horário do leste
 
 **Alterações**
 
@@ -65,7 +65,7 @@ Atualizações de manutenção.
 
 #### Versão 20.8.1
 
-**Quando:** terça-feira, 4 de agosto de 2020, das 3:00 às 6:00 Hora do Leste
+**Quando:** terça-feira, 4 de agosto de 2020, das 3:00 às 6:00, horário do leste
 
 **Aprimoramentos e correções**
 
@@ -73,7 +73,7 @@ Atualizações de manutenção.
 
 #### Versão 20.7.1
 
-**Quando:** quinta-feira, 9 de julho de 2020, das 03:00 às 05:00 Hora do Leste
+**Quando:** quinta-feira, 9 de julho de 2020, das 03h00 às 05h00, horário do leste
 
 **Novos recursos e melhorias**
 
@@ -87,15 +87,15 @@ Atualizações de manutenção.
 
 #### Versão 20.6.2
 
-**Quando:** quinta-feira, 18 de junho de 2020, das 03h00 às 04h00, horário do leste
+**Quando:** quinta-feira, 18 de junho de 2020, das 03:00 às 04:00, horário do leste
 
 **Aprimoramentos**
 
-Sincronização de fluxo aprimorada para clientes de vídeo que exigem precisão de milissegundos. Entre em contato com o suporte ao Adobe para ativar a precisão de milissegundos para `#EXT-X-PROGRAM-DATE-TIME tags`.
+Sincronização de fluxo aprimorada para clientes de vídeo que exigem precisão de milissegundos. Entre em contato com o Suporte ao Adobe para ativar a precisão de milissegundos para `#EXT-X-PROGRAM-DATE-TIME tags`.
 
 #### Versão 20.6.1
 
-**Quando:** terça-feira, 2 de junho de 2020, das 03:00 às 05:00 Hora do Leste
+**Quando:** terça-feira, 2 de junho de 2020, das 03h00 às 05h00, horário do leste
 
 **Novos recursos**
 
@@ -123,7 +123,7 @@ Entre em contato com o Suporte ao Adobe para ativar os seguintes novos recursos 
 
 #### Versão 20.3.4
 
-**Quando:** quarta-feira, 1 de abril de 2020, das 03:00 às 04:00, horário do leste
+**Quando:** quarta-feira, 1º de abril de 2020, das 03h00 às 04h00, horário do leste
 
 * Corrigido um problema que fazia com que as legendas ficassem fora de sincronização após a inserção do anúncio no VOD/ WebVTT.
 
@@ -141,7 +141,7 @@ Entre em contato com o Suporte ao Adobe para ativar os seguintes novos recursos 
 
 #### Versão 20.3.2
 
-**Quando:** quarta-feira, 11 de março de 2020, das 05:30 às 07:00 Hora do Leste
+**Quando:** quarta-feira, 11 de março de 2020, das 05:30 às 07:00, horário do leste
 
 * Melhorias no tratamento do sinal SCTE35.
 
@@ -161,7 +161,7 @@ Entre em contato com o Suporte ao Adobe para ativar os seguintes novos recursos 
 
 #### Versão 20.2.1
 
-**Quando:** quinta-feira, 13 de fevereiro de 2020, das 04:30 às 05:30, horário do leste
+**Quando:** quinta-feira, 13 de fevereiro de 2020, das 04h30 às 05h30, horário do leste
 
 * Adicionado suporte para a sutura de ativos de anúncios que contêm vários fluxos somente de áudio com base no idioma/codec/taxa de bits.
 * Pequenas melhorias de desempenho e atualizações de manutenção.
@@ -172,7 +172,7 @@ Entre em contato com o Suporte ao Adobe para ativar os seguintes novos recursos 
 
 * **VMAP com suporte FER para nbc CueFormat**
 
-   Converta dicas do fluxo FER em parâmetros de substituição de linha do tempo FW quando `ptcueformat=nbc` são usadas e o fluxo é um fluxo VOD com dicas no manifesto e anúncios integrados.
+   Converta dicas do fluxo FER em parâmetros de substituição de linha do tempo FW quando `ptcueformat=nbc` for usado e o fluxo for um fluxo VOD com dicas no manifesto e anúncios integrados.
 
 * Limpe o campo user-agent no cabeçalho HTTP antes de encaminhar para provedores de anúncios de terceiros/ CDN.
 
