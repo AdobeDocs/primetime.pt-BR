@@ -6,15 +6,18 @@ title: Substituir intervalos de tempo por um anúncio
 uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
 
-# Substituir intervalos de tempo por um anúncio{#replace-time-ranges-with-an-ad}
+# Substitua os intervalos de tempo por um anúncio{#replace-time-ranges-with-an-ad}
 
 Você pode inserir publicidades no conteúdo VOD.
 
-Nesse caso, `TimeRanges` entre o `begin` e o `end` dentro `localTime` são removidos da linha do tempo. Eles são substituídos por um `AdBreak` de `begin` para `begin+replaceDuration`. Se a substituição-duração não existir como parâmetro, o servidor faz a determinação no Adbreak retornado.
+Nesse caso, `TimeRanges` entre `begin` e `end` em `localTime` são removidos da linha do tempo. Eles são substituídos por um `AdBreak` de `begin` para `begin+replaceDuration`. Se a substituição-duração não existir como parâmetro, o servidor faz a determinação no Adbreak retornado.
 
 >[!NOTE]
 >
