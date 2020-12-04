@@ -6,11 +6,14 @@ title: Ignorar quebras de anúncio por um período de tempo
 uuid: be39cb2b-c274-447a-8fb5-89b3e9598622
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
 
-# Ignorar quebras de anúncio por um período de tempo {#skip-ad-breaks-for-a-period-of-time}
+# Ignorar quebras de anúncio por um período {#skip-ad-breaks-for-a-period-of-time}
 
 Por padrão, o TVSDK força uma pausa de anúncio a ser reproduzida quando o usuário busca uma pausa de anúncio. Você pode personalizar o comportamento para ignorar uma quebra de anúncio se o tempo decorrido desde uma conclusão de quebra anterior estiver dentro de um determinado número de minutos.
 
@@ -32,7 +35,7 @@ Para substituir o comportamento padrão de quebra de anúncios do TVSDK, é poss
 
    >[!NOTE]
    >
-   >A política de quebra de `REMOVE` anúncio está programada para desaprovação. A Adobe recomenda que você use a política de quebra de `SKIP` anúncio no lugar de `REMOVE`.
+   >A política de `REMOVE` quebra de anúncio está bloqueada para desaprovação. O Adobe recomenda que você use a política de `SKIP` quebra de anúncio no lugar de `REMOVE`.
 
 O exemplo a seguir de um seletor de política de anúncios personalizado ignora os anúncios nos próximos cinco minutos (hora do relógio da parede) depois que um usuário assistir a uma pausa de anúncio.
 
@@ -49,7 +52,7 @@ O exemplo a seguir de um seletor de política de anúncios personalizado ignora 
    }
    ```
 
-1. Estender `AdPolicySelector`.
+1. Estende `AdPolicySelector`.
 
    ```java
    package com.adobe.mediacore.sample.advertising; 
