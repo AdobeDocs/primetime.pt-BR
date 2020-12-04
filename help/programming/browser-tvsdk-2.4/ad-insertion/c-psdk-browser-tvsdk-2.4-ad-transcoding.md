@@ -6,6 +6,9 @@ title: Reempacotar (transcodificar) anúncios incompatíveis
 uuid: f414d133-2d04-462c-ae2c-75158a577fc5
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 0%
 
 ---
 
