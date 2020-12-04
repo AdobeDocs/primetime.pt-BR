@@ -6,6 +6,9 @@ title: Trabalhar com legendas ocultas
 uuid: d7860de4-2881-4817-a4cc-5e7ab557a1db
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -25,8 +28,8 @@ O TVSDK suporta a renderização destes formatos:
 
 Você pode fazer o seguinte:
 
-* Selecione uma faixa de legenda disponível para ser a faixa atual e acompanhar eventos que indicam outras faixas disponíveis.
-* Ative ou desative as legendas ocultas (visível) usando a `MediaPlayer` interface.
+* Selecione uma faixa de legenda disponível para ser a faixa atual e escute eventos que indicam outras faixas disponíveis.
+* Ative ou desative as legendas fechadas (visível) usando a interface `MediaPlayer`.
 * Selecione opções de estilização que ditam como as legendas fechadas são renderizadas pelo mecanismo de vídeo subjacente.
 
-   Use a `MediaPlayerItem` interface para selecionar formatos, como a cor da fonte ou da fonte.
+   Use a interface `MediaPlayerItem` para selecionar formatos, como a cor da fonte ou da fonte.
