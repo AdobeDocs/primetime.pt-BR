@@ -6,6 +6,9 @@ title: Configure as taxas de bits adaptáveis usando ABRControlParameters
 uuid: 7084e954-196b-492e-846f-f8b36bed13a9
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Você pode definir valores de controle ABR somente com ABRControlParameters, mas pode criar um novo a qualquer momento.
 
-As seguintes condições aplicam-se a `ABRControlParameters`:
+As seguintes condições se aplicam a `ABRControlParameters`:
 
 * No momento da construção, você deve fornecer valores para todos os parâmetros.
 * Após a construção, não é possível alterar valores individuais.
@@ -27,7 +30,7 @@ As seguintes condições aplicam-se a `ABRControlParameters`:
    * `ABR_MODERATE`
    * `ABR_AGGRESSIVE`
 
-1. Defina os valores dos parâmetros ABR no `ABRControlParameters` construtor e atribua os valores ao Media Player.
+1. Defina os valores dos parâmetros ABR no construtor `ABRControlParameters` e atribua os valores ao Media Player.
 
    ```
    public ABRControlParameters(int initialBitRate, 
