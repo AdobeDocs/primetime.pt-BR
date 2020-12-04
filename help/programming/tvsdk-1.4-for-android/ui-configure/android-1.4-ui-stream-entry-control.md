@@ -1,18 +1,21 @@
 ---
-description: Por padrão, ao iniciar a reprodução, a mídia VOD é iniciada em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
-seo-description: Por padrão, ao iniciar a reprodução, a mídia VOD é iniciada em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
+description: Por padrão, ao iniciar a reprodução, start de mídia VOD em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
+seo-description: Por padrão, ao iniciar a reprodução, start de mídia VOD em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
 seo-title: Insira um fluxo em um horário específico
 title: Insira um fluxo em um horário específico
 uuid: ac3479e2-46a1-4ac8-a9e8-68a23f5dd74d
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 1%
 
 ---
 
 
 # Insira um fluxo em um horário específico {#enter-a-stream-at-a-specific-time}
 
-Por padrão, ao iniciar a reprodução, a mídia VOD é iniciada em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
+Por padrão, ao iniciar a reprodução, start de mídia VOD em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
 
 1. Passe uma posição para `MediaPlayer.prepareToPlay`.
 
