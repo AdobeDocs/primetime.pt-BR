@@ -1,24 +1,27 @@
 ---
-description: Ao registrar ouvintes de eventos no TVSDK do navegador, você especifica um tipo de evento para escutar e o nome do retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama seu retorno de chamada e passa para ele um objeto de evento do tipo apropriado.
-seo-description: Ao registrar ouvintes de eventos no TVSDK do navegador, você especifica um tipo de evento para escutar e o nome do retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama seu retorno de chamada e passa para ele um objeto de evento do tipo apropriado.
-seo-title: Tipos e classes de eventos para retornos de chamada
-title: Tipos e classes de eventos para retornos de chamada
+description: Ao registrar os ouvintes de evento com o TVSDK do navegador, especifique um tipo de evento para escutar e o nome do retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama seu retorno de chamada e transmite para ele um objeto de evento do tipo apropriado.
+seo-description: Ao registrar os ouvintes de evento com o TVSDK do navegador, especifique um tipo de evento para escutar e o nome do retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama seu retorno de chamada e transmite para ele um objeto de evento do tipo apropriado.
+seo-title: Tipos de evento e classes para retornos de chamada
+title: Tipos de evento e classes para retornos de chamada
 uuid: 13d7e939-ff45-4a52-bcbe-70abb56ac205
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
 
-# Tipos e classes de eventos para retornos de chamada{#event-types-and-classes-for-callbacks}
+# Tipos de evento e classes para retornos de chamada{#event-types-and-classes-for-callbacks}
 
-Ao registrar ouvintes de eventos no TVSDK do navegador, você especifica um tipo de evento para escutar e o nome do retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama seu retorno de chamada e passa para ele um objeto de evento do tipo apropriado.
+Ao registrar os ouvintes de evento com o TVSDK do navegador, especifique um tipo de evento para escutar e o nome do retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama seu retorno de chamada e transmite para ele um objeto de evento do tipo apropriado.
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="2" class="entry"> Quando você ouvir o nome desse evento (AdobePSDK.EventType) </th> 
-   <th class="entry">frases/browser-tvsdk-name transmite um evento para o retorno de chamada deste tipo de objeto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
+   <th colname="2" class="entry"> Quando você ouvir esse nome de evento (AdobePSDK.EventType) </th> 
+   <th class="entry">frases/browser-tvsdk-name transmite um evento para o retorno de chamada deste tipo de objeto (<span class="codeph"> Adobe PSDK.Evento</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -65,7 +68,7 @@ Ao registrar ouvintes de eventos no TVSDK do navegador, você especifica um tipo
     <ul id="ul_kwy_cd4_2y"> 
      <li id="li_D5455D287EA5472D95A45AD1A8835D61"><span class="codeph"> AUDIO_UPDATED</span> </li> 
      <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> CAPTIONS_UPDATED</span> </li> 
-     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> MASTER_UPDATED</span> </li> 
+     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> PRINCIPAL_ATUALIZADO</span> </li> 
      <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ITEM_CREATED</span> </li> 
      <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> ITEM_UPDATED</span> </li> 
     </ul> </td> 
@@ -92,7 +95,7 @@ Ao registrar ouvintes de eventos no TVSDK do navegador, você especifica um tipo
    <td><span class="codeph"> PlaybackRateEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PROFILE_CHANGED</span> </td> 
+   <td colname="2"><span class="codeph"> PERFIL_CHANGED</span> </td> 
    <td><span class="codeph"> ProfileEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
