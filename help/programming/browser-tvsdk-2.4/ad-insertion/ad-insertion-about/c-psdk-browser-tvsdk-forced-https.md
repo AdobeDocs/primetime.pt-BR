@@ -6,17 +6,20 @@ title: Carregamento seguro de anúncios em HTTPS
 uuid: 10657f59-cfbf-4c75-9249-fc154952bc51
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '73'
+ht-degree: 0%
 
 ---
 
 
-# Carregamento seguro de anúncios em HTTPS{#secure-ad-loading-over-https}
+# Carregamento seguro de publicidade em HTTPS{#secure-ad-loading-over-https}
 
-O Adobe Primetime pode solicitar servidores de anúncios de terceiros em https mesmo se o player estiver hospedado em http. Somente as chamadas de servidores de anúncios são atualizadas para https que o cliente procura durante a fase do resolvedor de anúncios do Auditude.
+A Adobe Primetime pode solicitar servidores de anúncios de terceiros em https mesmo se o player estiver hospedado em http. Somente as chamadas de servidores de anúncios são atualizadas para https que o cliente procura durante a fase do resolvedor de anúncios do Auditude.
 
 >[!NOTE]
 >
->Este recurso não é compatível com Flash.
+>Este recurso não é compatível com o Flash.
 
 Use o seguinte para ativar o carregamento seguro de anúncios. Não está ativado por padrão.
 
