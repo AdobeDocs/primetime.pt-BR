@@ -6,6 +6,9 @@ title: Implementar um resolvedor de conteúdo personalizado
 uuid: 1714fcd9-45e0-48be-97f3-f702265128a4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
 
-Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedores de conteúdo registrados procurando por um que seja capaz de resolver essa oportunidade usando o `canResolve` método . O primeiro que retornar verdadeiro é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar o TVSDK quando o processo é concluído.
+Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedores de conteúdo registrados procurando por um que seja capaz de resolver essa oportunidade usando o método `canResolve`. O primeiro que retornar verdadeiro é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar o TVSDK quando o processo é concluído.
 
-* O resolvedor de conteúdo chama `client.place` para especificar qual operação de linha do tempo o TVSDK precisa executar (normalmente uma disposição de pausa de anúncio).
-* O resolvedor de conteúdo chama `client.notifyCompleted` se o processo de resolução for bem-sucedido ou `client.notifyFailed` se o processo falhar.
+* O resolvedor de conteúdo chama `client.place` para especificar a operação de linha do tempo que o TVSDK precisa executar (geralmente uma disposição de quebra de anúncio).
+* O resolvedor de conteúdo chama `client.notifyCompleted` se o processo de resolução for bem-sucedido, ou `client.notifyFailed` se o processo falhar.
 
 1. Crie um resolvedor de oportunidades personalizado.
 
