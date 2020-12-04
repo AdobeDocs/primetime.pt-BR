@@ -4,11 +4,14 @@ title: Como usar os gerentes de recursos
 uuid: 29027635-e9ff-48c3-8d89-de1ed9889ec0
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
-# Como usar os gerentes de recursos {#how-to-use-feature-managers}
+# Como usar gerenciadores de recursos {#how-to-use-feature-managers}
 
 Há duas maneiras de usar os gerenciadores de recursos para ativar, desativar e configurar os recursos:
 
