@@ -6,11 +6,14 @@ title: Práticas recomendadas para anúncios em banners companheiros
 uuid: d844babb-20ab-4380-9487-eb1c24b58877
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
 
-# Anúncios em banner do Companion {#companion-banner-ads}
+# Anúncios de banner companheiro {#companion-banner-ads}
 
 O TVSDK oferece suporte a anúncios de banners companheiros, que são anúncios que acompanham um anúncio linear e geralmente permanecem na página após o término do anúncio linear. Seu aplicativo é responsável por exibir os banners associados que são fornecidos com um anúncio linear.
 
@@ -26,7 +29,7 @@ Ao exibir anúncios complementares, siga estas recomendações:
    >Não redimensione o anúncio.
 
 * Comece a apresentar os banners companheiros assim que possível após o início do anúncio.
-* Não sobreponha o contêiner principal de anúncio/vídeo com banners associados.
+* Não sobreponha o container principal de anúncio/vídeo com banners companheiros.
 * Você pode exibir banners complementares após o término do anúncio.
 
    A prática padrão é exibir cada banner complementar até que você tenha uma substituição para o anúncio.
