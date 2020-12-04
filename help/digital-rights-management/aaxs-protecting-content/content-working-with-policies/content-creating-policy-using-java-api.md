@@ -4,6 +4,9 @@ title: Criação de uma política usando a API Java
 uuid: c653548d-4abf-46b9-8669-d68b966da359
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
@@ -12,8 +15,8 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Para criar uma política usando a API Java, execute as seguintes etapas:
 
-1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Configurar o ambiente](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) de desenvolvimento dentro do projeto.
-1. Crie um `com.adobe.flashaccess.sdk.policy.Policy` objeto e especifique suas propriedades, como direitos, duração do armazenamento em cache de licenças e data de término da política.
+1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Configurar o ambiente de desenvolvimento](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) no seu projeto.
+1. Crie um objeto `com.adobe.flashaccess.sdk.policy.Policy` e especifique suas propriedades, como direitos, duração do armazenamento em cache de licenças e data de término da política.
 
    ```java
      // Create a new Policy object.  
@@ -49,7 +52,7 @@ Para criar uma política usando a API Java, execute as seguintes etapas:
      }
    ```
 
-1. Serialize o `Policy` objeto e armazene-o em um arquivo ou banco de dados.
+1. Serialize o objeto `Policy` e armazene-o em um arquivo ou banco de dados.
 
    ```java
      // Serialize the policy  
@@ -63,4 +66,4 @@ Para criar uma política usando a API Java, execute as seguintes etapas:
      out.close();
    ```
 
-Para obter a fonte completa desse código de amostra, consulte *com.adobe.flashaccess.samples.policy.CreatePolicy* no diretório &quot; [!DNL samples]&quot; das Ferramentas de Linha de Comando da Implementação de Referência.
+Para obter a fonte completa desse código de amostra, consulte *com.adobe.flashaccess.samples.policy.CreatePolicy* no diretório Ferramentas de Linha de Comando de Implementação de Referência &quot;[!DNL samples]&quot;.
