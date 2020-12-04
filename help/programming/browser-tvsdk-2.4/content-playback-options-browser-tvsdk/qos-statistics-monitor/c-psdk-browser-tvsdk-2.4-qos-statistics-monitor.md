@@ -1,27 +1,30 @@
 ---
-description: A QoS (Quality of Service, qualidade do serviço) oferece uma visão detalhada de como o mecanismo de vídeo está se saindo. O TVSDK do navegador fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
-seo-description: A QoS (Quality of Service, qualidade do serviço) oferece uma visão detalhada de como o mecanismo de vídeo está se saindo. O TVSDK do navegador fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+description: A Qualidade de serviço (QoS) oferta uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK do navegador fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+seo-description: A Qualidade de serviço (QoS) oferta uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK do navegador fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
 seo-title: Estatísticas da qualidade dos serviços
 title: Estatísticas da qualidade dos serviços
 uuid: e4bb2617-d8a7-4da7-b669-d6ffab2864bb
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
 
-# Estatísticas da qualidade dos serviços{#quality-of-service-statistics}
+# Estatísticas de qualidade do serviço{#quality-of-service-statistics}
 
-A QoS (Quality of Service, qualidade do serviço) oferece uma visão detalhada de como o mecanismo de vídeo está se saindo. O TVSDK do navegador fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+A Qualidade de serviço (QoS) oferta uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK do navegador fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
 
 ## Leia as estatísticas de reprodução, buffering e dispositivo do QOS {#read-qos-playback-buffering-and-device-statistics}
 
 Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe QOSProvider.
 
-A `QOSProvider` classe fornece várias estatísticas, incluindo informações sobre buffering, taxas de bits, taxas de quadros, dados de tempo e assim por diante.
+A classe `QOSProvider` fornece várias estatísticas, incluindo informações sobre buffering, taxas de bits, taxas de quadros, dados de tempo e assim por diante.
 
 1. Instanciar um player de mídia.
-1. Crie um `QOSProvider` objeto e anexe-o ao player de mídia.
+1. Crie um objeto `QOSProvider` e anexe-o ao player de mídia.
 
    ```js
    // Create Media Player.qosProvider =  
