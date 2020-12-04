@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Perguntas frequentes sobre o uso da proteção de saída com base em resolução.
 
-* **Q.** *Ao definir um requisito de saída digital para uma restrição de pixel, recebo erros de análise/formatação quando deixo a versão HDCP fora, mas não tenho nenhum requisito HDCP. Como devo configurar meu requisito de saída digital neste caso?* **A.** Como a verificação de versão HDCP não é suportada atualmente no cliente, o Adobe recomenda definir a versão HDCP como `1.0`. Isso garantirá que sua configuração esteja formatada corretamente e seja semântica consistente no futuro quando a verificação de versão HDCP for suportada. O trecho a seguir ilustra uma configuração com esse valor HDCP.
+* **P.** *Ao definir um requisito de saída digital para uma restrição de pixel, estou recebendo erros de análise/formatação ao deixar a versão HDCP fora, mas não tenho nenhum requisito HDCP. Como devo configurar meu requisito de saída digital neste caso?* **R.** Como a verificação de versão HDCP não é suportada no cliente atualmente, o Adobe recomenda definir a versão HDCP para  `1.0`. Isso garantirá que sua configuração esteja formatada corretamente e seja semântica consistente no futuro quando a verificação de versão HDCP for suportada. O trecho a seguir ilustra uma configuração com esse valor HDCP.
 
    ```
    { "pixelConstraints":  
@@ -33,7 +33,7 @@ Perguntas frequentes sobre o uso da proteção de saída com base em resolução
    }
    ```
 
-* **Q.** *As restrições de pixel de RBOP são discretas ou baseadas em intervalo?* **A.** As restrições de pixel de RBOP são diferenciadas com base em intervalos. Cada contagem de pixels define os requisitos para todas as contagens de pixels menores ou iguais à contagem especificada ou até a maior contagem menor que esse valor se houver mais de uma restrição de pixel. Simplificando, os valores se aplicam como limites máximos para cada contagem vertical de pixels.
+* **P.** *As restrições de pixel de RBOP são discretas ou baseadas em intervalo?* **As restrições de pixel** RBOP são variam com base. Cada contagem de pixels define os requisitos para todas as contagens de pixels menores ou iguais à contagem especificada ou até a maior contagem menor que esse valor se houver mais de uma restrição de pixel. Simplificando, os valores se aplicam como limites máximos para cada contagem vertical de pixels.
 
    Suponhamos que um fluxo MBR com resoluções verticais de 240, 480, 600, 720 e 1080 seja passado ao seu player com as seguintes configurações de RBOP.
 
@@ -51,9 +51,9 @@ Perguntas frequentes sobre o uso da proteção de saída com base em resolução
    * 1080: > 720; o fluxo é listado em bloco (erro retornado), pois não foi encontrado nas regras acima.
 
 
-* **Q.** Em alguns dos meus dispositivos Android, as restrições de contagem de pixels que defini não estão sendo aplicadas exatamente como definido. O que está acontecendo?
+* **P.** Em alguns dos meus dispositivos Android, as restrições de contagem de pixels que defini não estão sendo aplicadas exatamente como definido. O que está acontecendo?
 
-   **A.** Alguns dispositivos Android têm tamanhos de quadros de relatórios ligeiramente superiores ao tamanho normal. Para corrigir essa situação, ajuste os tamanhos de quadro ( `maxPixel` e `pixelCount` configurações) para cima em 20 pixels. Por exemplo, ajuste as configurações de tamanho do quadro para cima, de:
+   **R.** Alguns dispositivos Android têm tamanhos de quadros de relatórios ligeiramente superiores ao tamanho normal. Para corrigir essa situação, ajuste os tamanhos de quadro ( `maxPixel` e `pixelCount` configurações) para cima em 20 pixels. Por exemplo, ajuste as configurações de tamanho do quadro para cima, de:
 
    ```
    { 
@@ -79,5 +79,5 @@ Perguntas frequentes sobre o uso da proteção de saída com base em resolução
    ... 
    ```
 
-   em geral, para todos os casos de `maxPixel` e `pixelCount`.
+   em geral, para todas as instâncias de `maxPixel` e `pixelCount`.
 
