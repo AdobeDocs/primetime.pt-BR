@@ -17,7 +17,7 @@ ht-degree: 3%
 
 É possível exibir legendas ao reproduzir conteúdo de vídeo.
 
-Para manipular legendas, você deve adicionar o ouvinte do `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` evento:
+Para manipular legendas, você deve adicionar o ouvinte de evento `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`:
 
 ```js
 ... 
