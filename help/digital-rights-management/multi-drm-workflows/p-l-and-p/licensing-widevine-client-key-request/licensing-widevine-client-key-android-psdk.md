@@ -6,6 +6,9 @@ title: Fluxo de trabalho de solicitação de chave no Android PSDK
 uuid: 575163de-0f96-434d-a3ff-7e114caf72de
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ class DRMManager
     }
 ```
 
-Depois de chamar essa API com êxito, seu código pode iniciar a reprodução do conteúdo da maneira habitual. Se você estiver usando o Express, poderá passar o token como parte do URL do servidor de licenças ou como uma propriedade de solicitação e retirar o token do URL do servidor de licenças.
+Depois de chamar essa API com êxito, seu código pode reproduzir o conteúdo do start da maneira habitual. Se você estiver usando o Express, poderá passar o token como parte do URL do servidor de licenças ou como uma propriedade de solicitação e retirar o token do URL do servidor de licenças.
 
 Alguns dispositivos Android suportam Widevine e PlayReady. Nesses dispositivos, o cliente pode querer forçar o PSDK a descriptografar o conteúdo usando um DRM específico se o conteúdo tiver vários cabeçalhos DRM. Isso pode ser feito chamando a seguinte API antes da reprodução:
 
