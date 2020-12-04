@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Recursos MP3 e MP4 suportados {#supported-mp-and-mp-features}
+# Recursos de MP3 e MP4 compatíveis {#supported-mp-and-mp-features}
 
 O TVSDK do navegador suporta vários recursos MP3 e MP4 que você pode implementar para adicionar funcionalidade aos seus aplicativos.
 * [Recursos de áudio MP3 - Reprodução principal](#core-playback)
@@ -22,7 +22,7 @@ O TVSDK do navegador suporta vários recursos MP3 e MP4 que você pode implement
 
 >[!TIP]
 >
->Nas tabelas de matriz de recursos abaixo, o ícone ![](assets/supported15.png) suportado significa que o recurso é suportado na versão atual.
+>Nas tabelas de matriz de recursos abaixo, ![ícone suportado](assets/supported15.png) significa que o recurso é suportado na versão atual.
 
 ## Recursos de áudio MP3 {#section_C900C301291A40529D02EACC3CD4D55A}
 
