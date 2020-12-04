@@ -17,18 +17,18 @@ ht-degree: 1%
 
 Você pode usar TimedMetadata quando o tempo de reprodução atual corresponder ao tempo do start.
 
-Para usar esses `TimedMetadata` objetos salvos durante a reprodução, use os objetos salvos `ArrayList` de metadados cronometrados da [Loja conforme são despachados](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
+Para usar esses objetos salvos `TimedMetadata` durante a reprodução, use os `ArrayList` salvos de [Armazenar objetos de metadados cronometrados conforme são despachados](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
 
 1. Execute um temporizador e query repetidamente o tempo de reprodução atual.
-1. Localize todos os `TimedMetadata` objetos com horas de start que correspondem à hora de reprodução atual.
+1. Encontre todos os objetos `TimedMetadata` com horários de start que correspondam ao tempo de reprodução atual.
 
    É possível usar esses objetos para concluir várias ações.
 
    >[!IMPORTANT]
    >
-   >Ao verificar se o tempo de reprodução atual corresponde a qualquer `TimedMetadata` objeto, inclua `shouldTriggerSubscribedTagEvent` como uma condição.
+   >Ao verificar se o tempo de reprodução atual corresponde a qualquer objeto `TimedMetadata`, inclua `shouldTriggerSubscribedTagEvent` como uma condição.
 
-   A linha do tempo pode mudar como resultado de vários comportamentos de anúncio. Por exemplo, uma ou mais quebras de anúncio podem ser movidas de suas posições originais na linha do tempo, mas `shouldTriggerSubscribedTagEvent` garante que a hora de start do `TimeMetadata` objeto corresponda à hora de reprodução atual.
+   A linha do tempo pode mudar como resultado de vários comportamentos de anúncio. Por exemplo, uma ou mais quebras de anúncio podem ser movidas de suas posições originais na linha do tempo, mas `shouldTriggerSubscribedTagEvent` garante que a hora de start do objeto `TimeMetadata` corresponda à hora de reprodução atual.
 
    Por exemplo:
 
@@ -62,4 +62,4 @@ Para usar esses `TimedMetadata` objetos salvos durante a reprodução, use os ob
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. Limpe periodicamente `TimedMetadata` instâncias obsoletas da lista para evitar que a memória cresça continuamente.
+1. Limpe periodicamente instâncias obsoletas `TimedMetadata` da lista para evitar que a memória cresça continuamente.
