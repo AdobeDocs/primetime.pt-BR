@@ -6,6 +6,9 @@ title: Classes de metadados
 uuid: e3884825-132c-4c5c-bc58-00c2967d9fa8
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Pacote: [com.adobe.mediacore.metadata](https://help.adobe.com/en_US/primetime/ap
 
 | Nome | Descrição |
 |---|---|
-| [AdSignalingMode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AdSignalingMode.html) | Classe de enumeração expondo os modos de sinalização suportados na Frase. |
+| [AdSignalingMode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AdSignalingMode.html) | classe lista discriminada expondo os modos de sinalização suportados na Frase. |
 | [AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AuditudeSettings.html) | Classe que se estende `Metadata` especificamente para Frase. Fornece propriedades a serem configuradas para resolver anúncios de frases para um determinado item de mídia. Você deve definir todas as propriedades necessárias, incluindo a ID da zona, a ID da mídia e o URL do servidor de publicidade, para configurar o player para resolver anúncios com êxito. |
 | [ByteArrayMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/ByteArrayMetadata.html) | Obsoleto. Use `Metadata`. |
 | [DefaultMetadataKeys](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/DefaultMetadataKeys.html) | Classe. |
