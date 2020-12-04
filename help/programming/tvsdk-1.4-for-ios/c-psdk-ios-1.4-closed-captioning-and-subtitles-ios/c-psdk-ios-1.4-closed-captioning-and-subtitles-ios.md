@@ -6,6 +6,9 @@ title: Legendas e legendas ocultas
 uuid: 91daf0be-087a-4be5-86c2-f8b83da43a8f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Você deve estar ciente dos seguintes requisitos para legendas e legendas fechad
       O `PTMediaPlayer` reproduz o conteúdo e os anúncios principais, onde o conteúdo principal pode ser live/linear ou VOD, e os anúncios podem ser pre-roll, mid-roll ou post-roll.
    Estes são alguns requisitos adicionais para legendas no iOS:
 
-   * Para carimbos de data e hora, o `X-TIMESTAMP-MAP` valor, que é especificado na seção de cabeçalho do `WebVTT` arquivo, deve corresponder ao carimbo de data e hora do vídeo.
+   * Para carimbos de data e hora, o valor `X-TIMESTAMP-MAP`, que é especificado na seção de cabeçalho do arquivo `WebVTT`, deve corresponder ao carimbo de data e hora do vídeo.
 
    * Para o sistema, você deve usar o iOS 6.1 ou posterior.
 
