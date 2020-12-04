@@ -6,6 +6,9 @@ title: Comportamento de reprodução padrão e personalizado com anúncios
 uuid: 272cdfd0-799f-41e5-bf41-1620d48c992a
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Para substituir o comportamento padrão, use `AdBreakPolicySelector` .
 
 >[!IMPORTANT]
 >
->O TVSDK não fornece uma maneira de desativar a busca durante os anúncios. A Adobe recomenda que você configure seu aplicativo para desativar a busca durante os anúncios.
+>O TVSDK não fornece uma maneira de desativar a busca durante os anúncios. O Adobe recomenda que você configure seu aplicativo para desativar a busca durante os anúncios.
 
 Este é o comportamento de reprodução para conteúdo ao vivo/linear:
 
@@ -47,7 +50,7 @@ A tabela a seguir descreve como o TVSDK lida com anúncios e quebras de anúncio
      <li id="li_D5CC30F063934C738971E2E8AF00C137"> Para live/linear, reproduz o intervalo do anúncio, mesmo se o intervalo do anúncio já tiver sido observado. </li> 
      <li id="li_D962C0938DA74186AE99D117E5A74E38">Para VOD, reproduz o intervalo do anúncio e marca o intervalo do anúncio como observado. </li> 
     </ul> </td> 
-   <td colname="col3">Especifique uma política diferente para o intervalo do anúncio usando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Especifique uma política diferente para a quebra de anúncio usando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo busca encaminhar o(s) intervalo(s) do anúncio para o conteúdo principal. </td> 
@@ -72,17 +75,17 @@ A tabela a seguir descreve como o TVSDK lida com anúncios e quebras de anúncio
   <tr> 
    <td colname="col1"> Seu aplicativo busca encaminhar ou retroceder sobre quebra(s) de anúncios observados para o conteúdo principal. </td> 
    <td colname="col2"> Se a última quebra de anúncio ignorada já tiver sido observada, ignora a posição de busca selecionada pelo usuário. </td> 
-   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas usando <span class="codeph"> AdBreaksToPlay</span> e determine quais quebras já foram observadas usando <span class="codeph"> AdBreak.isWatched</span> . <p>Importante:  Por padrão, o TVSDK marca uma quebra de anúncio como observado imediatamente após a entrada do primeiro anúncio no intervalo do anúncio. </p> </td> 
+   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas usando <span class="codeph"> selectAdBreaksToPlay</span> e determine quais quebras já foram observadas usando <span class="codeph"> AdBreak.isWatched</span>. <p>Importante:  Por padrão, o TVSDK marca uma quebra de anúncio como observado imediatamente após a entrada do primeiro anúncio no intervalo do anúncio. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo busca avançar ou retroceder em um ou mais anúncios quebrados e cai em um intervalo de anúncios observado. </td> 
    <td colname="col2"> Ignora o intervalo do anúncio e busca a posição imediatamente após o intervalo do anúncio. </td> 
-   <td colname="col3">Especifique uma política de publicidade diferente para o intervalo (com o status observado definido como true) e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col3">Especifique uma política de publicidade diferente para o intervalo de anúncios (com o status observado definido como true) e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo entra no modo de peça (DVR). A taxa de reprodução pode ser negativa (rebobinar) ou maior que 1 (avançar rapidamente). </td> 
    <td colname="col2"> Ignora todos os anúncios durante um avanço rápido ou retrocesso, reproduz o último intervalo ignorado após o término da reprodução de truques e ignora a posição de reprodução de truques selecionada pelo usuário quando esse intervalo termina a reprodução. </td> 
-   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas após o término da reprodução do truque usando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas após o término da reprodução de truques usando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo busca anúncios que foram inseridos usando marcadores de anúncio personalizados. </td> 
