@@ -1,24 +1,27 @@
 ---
-description: O player Primetime oferece suporte à integração do Primetime DRM como fluxos de trabalho personalizados de DRM. Isso significa que seu aplicativo deve implementar os fluxos de trabalho de autenticação DRM antes de reproduzir o fluxo.
-seo-description: O player Primetime oferece suporte à integração do Primetime DRM como fluxos de trabalho personalizados de DRM. Isso significa que seu aplicativo deve implementar os fluxos de trabalho de autenticação DRM antes de reproduzir o fluxo.
+description: O player Primetime oferece suporte à integração do Primetime DRM como workflows DRM personalizados. Isso significa que seu aplicativo deve implementar os workflows de autenticação DRM antes de reproduzir o fluxo.
+seo-description: O player Primetime oferece suporte à integração do Primetime DRM como workflows DRM personalizados. Isso significa que seu aplicativo deve implementar os workflows de autenticação DRM antes de reproduzir o fluxo.
 seo-title: Proteção de conteúdo DRM
 title: Proteção de conteúdo DRM
 uuid: 95c446f6-8304-4d70-9bef-7368b9364025
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
 
 # Proteção de conteúdo DRM {#drm-content-protection}
 
-O player Primetime oferece suporte à integração do Primetime DRM como fluxos de trabalho personalizados de DRM. Isso significa que seu aplicativo deve implementar os fluxos de trabalho de autenticação DRM antes de reproduzir o fluxo.
+O player Primetime oferece suporte à integração do Primetime DRM como workflows DRM personalizados. Isso significa que seu aplicativo deve implementar os workflows de autenticação DRM antes de reproduzir o fluxo.
 
-Para habilitar isso, o TVSDK fornece o gerenciador de DRM para autenticação. A implementação de referência fornece um exemplo dos seguintes fluxos de trabalho:
+Para habilitar isso, o TVSDK fornece o gerenciador de DRM para autenticação. A implementação de referência fornece um exemplo dos seguintes workflows:
 
-* Como carregar e reproduzir fluxos HLS com proteção de conteúdo do Access, otimizado para taxas de erro baixas e inicialização rápida.
+* Como carregar e reproduzir fluxos HLS com proteção de conteúdo do Access, otimizado para taxas de erro baixas e start rápido.
 * Como carregar e reproduzir fluxos HLS com proteção de conteúdo AES128.
-* Como carregar e reproduzir fluxos HLS com proteção de conteúdo PHLS, otimizado para taxas de erro baixas e inicialização rápida.
+* Como carregar e reproduzir fluxos HLS com proteção de conteúdo PHLS, otimizado para taxas de erro baixas e start rápido.
 
 Todo o conteúdo protegido por DRM é manipulado automaticamente pelas bibliotecas DRM incorporadas ao TVSDK. Entretanto, é possível expor a manipulação de erros, a otimização da individualização de dispositivos e a aquisição de licenças usando retornos de chamada da API TVSDK.
 
@@ -30,7 +33,7 @@ Para criar um gerenciador de proteção de conteúdo:
 
 * Inicialize o sistema DRM.
 
-   O exemplo de código a seguir mostra a chamada `loadDRMServices` na `onCreate()` função do aplicativo, para garantir que qualquer inicialização necessária para o sistema DRM seja iniciada antes do início da reprodução.
+   O exemplo de código a seguir mostra a chamada de `loadDRMServices` na função `onCreate()` do aplicativo, para garantir que qualquer inicialização necessária para o sistema DRM seja iniciada antes do início da reprodução.
 
    ```java
    @Override 
@@ -42,7 +45,7 @@ Para criar um gerenciador de proteção de conteúdo:
 
 * Pré-carregar as licenças de DRM.
 
-   O exemplo de código a seguir mostra como carregar o `VideoItems` quando a lista de conteúdo terminar de carregar. Isso resultará na aquisição de licenças DRM do servidor de licenças e no cache local, de modo que, quando a reprodução for iniciada, o conteúdo será carregado com um atraso mínimo.
+   O exemplo de código a seguir mostra o carregamento de `VideoItems` quando a lista de conteúdo terminou de ser carregada. Isso resultará na aquisição de licenças DRM do servidor de licenças e no cache local, para que, ao reproduzir start, o conteúdo seja carregado com o atraso mínimo.
 
    ```java
    DrmManager.preLoadDrmLicenses(item.getUrl(),  
@@ -66,7 +69,7 @@ Para criar um gerenciador de proteção de conteúdo:
    >
    >![](assets/precache-drm-licenses.jpg)
 
-* Para usar `ManagerFactory` para implementar a manipulação de erros do DRM, verifique se a seguinte linha de código está no [!DNL PlayerFragment.java] arquivo:
+* Para usar `ManagerFactory` para implementar a manipulação de erros do DRM, verifique se a seguinte linha de código está no arquivo [!DNL PlayerFragment.java]:
 
    ```java
    drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);
