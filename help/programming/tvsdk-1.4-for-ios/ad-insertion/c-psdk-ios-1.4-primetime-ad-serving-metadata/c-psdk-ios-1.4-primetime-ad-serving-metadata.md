@@ -21,7 +21,7 @@ O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD
 >
 >Antes de incluir publicidade no conteúdo de vídeo, forneça as seguintes informações de metadados:
 >
->* A, que identifica o conteúdo específico a ser reproduzido. `mediaID`
+>* Um `mediaID`, que identifica o conteúdo específico a ser reproduzido.
 >* Seu `zoneID`, que identifica sua empresa ou site.
 >* O domínio do servidor de publicidade, que especifica o domínio do servidor de publicidade atribuído.
 >* Outros parâmetros de definição de metas.
@@ -30,9 +30,9 @@ O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD
 
 
 
-## Configurar metadados do servidor e do Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Configurar os metadados do Primetime e do servidor {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Seu aplicativo deve fornecer ao TVSDK as informações necessárias `PTAuditudeMetadata` para se conectar ao servidor de anúncios.
+Seu aplicativo deve fornecer ao TVSDK as informações `PTAuditudeMetadata` necessárias para se conectar ao servidor de publicidade.
 
 Para configurar os metadados do servidor de publicidade:
 
@@ -46,7 +46,7 @@ Para configurar os metadados do servidor de publicidade:
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Defina a `PTAuditudeMetadata` instância como metadados para os `PTMediaPlayerItem` metadados atuais usando `PTAdResolvingMetadataKey`.
+1. Defina a instância `PTAuditudeMetadata` como metadados para os metadados `PTMediaPlayerItem` atuais usando `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
@@ -74,13 +74,13 @@ Para configurar os metadados do servidor de publicidade:
    }
    ```
 
-## Ativar anúncios em reprodução de evento completo {#section_6016E1DAF03645C8A8388D03C6AB7571}
+## Habilitar anúncios em reprodução de evento completo {#section_6016E1DAF03645C8A8388D03C6AB7571}
 
 A reprodução de evento completo (FER) é um ativo VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
 
-Para conteúdo ao vivo, o TVSDK usa os metadados/dicas no manifesto para determinar onde os anúncios devem ser colocados. No entanto, às vezes o conteúdo ao vivo/linear pode se assemelhar ao conteúdo VOD. Por exemplo, quando o conteúdo em tempo real é concluído, uma `EXT-X-ENDLIST` tag é anexada ao manifesto em tempo real. Para HLS, a `EXT-X-ENDLIST` tag significa que o fluxo é um fluxo VOD. O TVSDK não pode diferenciar automaticamente esse fluxo de um fluxo VOD normal para inserir corretamente os anúncios.
+Para conteúdo ao vivo, o TVSDK usa os metadados/dicas no manifesto para determinar onde os anúncios devem ser colocados. No entanto, às vezes o conteúdo ao vivo/linear pode se assemelhar ao conteúdo VOD. Por exemplo, quando o conteúdo em tempo real é concluído, uma tag `EXT-X-ENDLIST` é anexada ao manifesto em tempo real. Para HLS, a tag `EXT-X-ENDLIST` significa que o fluxo é um fluxo VOD. O TVSDK não pode diferenciar automaticamente esse fluxo de um fluxo VOD normal para inserir corretamente os anúncios.
 
-Seu aplicativo deve informar ao TVSDK se o conteúdo é ao vivo ou VOD ao especificar o `PTAdSignalingMode`.
+Seu aplicativo deve informar ao TVSDK se o conteúdo é ao vivo ou VOD especificando `PTAdSignalingMode`.
 
 Para um fluxo FER, o servidor de decisão de anúncio da Adobe Primetime não deve fornecer a lista de quebras de anúncios que precisam ser inseridas na linha do tempo antes de iniciar a reprodução. Esse é o processo típico para conteúdo VOD. Em vez disso, ao especificar um modo de sinalização diferente, o TVSDK lê todos os pontos de sinalização do manifesto FER e vai para o servidor de anúncios para cada ponto de sinalização para solicitar uma pausa de anúncio. Esse processo é semelhante ao conteúdo ao vivo/DVR.
 
@@ -88,9 +88,9 @@ Além de cada solicitação associada a um ponto de sinalização, o TVSDK faz u
 
 1. A partir de uma fonte externa, como o vCMS, obtenha o modo de sinalização que deve ser usado.
 1. Crie os metadados relacionados ao anúncio.
-1. Se o comportamento padrão precisar ser substituído, especifique o comportamento `PTAdSignalingMode` usando `PTAdMetadata.signalingMode`.
+1. Se o comportamento padrão precisar ser substituído, especifique `PTAdSignalingMode` usando `PTAdMetadata.signalingMode`.
 
-   Os valores válidos são `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`e `PTAdSignalingModeServerMap`.
+   Os valores válidos são `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` e `PTAdSignalingModeServerMap`.
 
    Você deve definir o modo de sinalização de anúncio antes de chamar `prepareToPlay`. Depois que os start TVSDK resolverem e colocarem anúncios na linha do tempo, as alterações no modo de sinalização do anúncio serão ignoradas. Defina o modo ao criar os metadados de publicidade para o recurso.
 
