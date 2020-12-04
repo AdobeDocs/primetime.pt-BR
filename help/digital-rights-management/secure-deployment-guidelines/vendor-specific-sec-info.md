@@ -6,6 +6,9 @@ title: Informações de segurança específicas do fornecedor
 uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Os sistemas operacionais e os servidores de aplicativos estão incluídos na solução Adobe Primetime DRM.
 
-Para encontrar informações de segurança específicas do fornecedor para seu sistema operacional e servidor de aplicativos, consulte Uso do servidor de chaves DRM do Adobe Primetime.
+Para encontrar informações de segurança específicas do fornecedor para seu sistema operacional e servidor de aplicativos, consulte Usando o servidor de chaves DRM da Adobe Primetime.
 
 ## Informações de segurança do sistema operacional {#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
 
@@ -27,7 +30,7 @@ Estas são algumas das medidas:
 * Remoção de serviços e aplicativos desnecessários
 * Backup de arquivos
 
-Estas são algumas informações sobre os sistemas operacionais compatíveis com o Adobe Primetime DRM:
+Estas são algumas informações sobre os sistemas operacionais suportados pelo Adobe Primetime DRM:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_ugl_kjz_n4"> 
  <thead class="- topic/thead "> 
