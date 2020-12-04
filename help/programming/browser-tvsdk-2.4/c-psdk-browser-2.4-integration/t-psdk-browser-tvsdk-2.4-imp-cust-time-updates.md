@@ -6,15 +6,18 @@ title: Implementar atualizações de tempo personalizadas
 uuid: 26a0592c-a47b-4d65-b984-5e51533dcddc
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
 
-# Implementar atualizações de tempo personalizadas{#implement-custom-time-updates}
+# Implementar atualizações de hora personalizadas{#implement-custom-time-updates}
 
 Em algumas implementações do Analytics, o aplicativo cliente pode desejar fornecer uma posição diferente do indicador de reprodução da posição reportada pelo valor LocalTime do TVSDK do navegador.
 
-Por exemplo, durante uma reprodução de fluxo linear, o indicador de reprodução de cada programa pode ser fornecido em relação à hora de início.
+Por exemplo, durante uma reprodução de fluxo linear, cada indicador de reprodução do programa pode ser fornecido em relação ao tempo do start.
 
 >[!TIP]
 >
