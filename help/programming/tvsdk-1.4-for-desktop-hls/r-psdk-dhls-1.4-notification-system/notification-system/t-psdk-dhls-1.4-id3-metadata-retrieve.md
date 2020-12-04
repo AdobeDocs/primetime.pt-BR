@@ -6,6 +6,9 @@ title: Tags ID3
 uuid: 5c016260-5ced-480e-897a-11ffe7f34441
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
@@ -25,13 +28,13 @@ Quando o TVSDK detecta os metadados ID3, ele emite uma notificação com os segu
 * NAME = não presente
 * ID = 0
 
-1. Implemente um ouvinte de evento para `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED` e registre-o no `MediaPlayer` objeto.
+1. Implemente um ouvinte de evento para `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED` e registre-o com o objeto `MediaPlayer`.
 
    O TVSDK chama esse ouvinte quando detecta metadados ID3.
 
    >[!NOTE]
    >
-   >As dicas de anúncio personalizadas usam o mesmo `onTimedMetadata` evento para indicar a detecção de uma nova tag. Isso não deve causar confusão, pois as dicas de anúncio personalizadas são detectadas no nível do manifesto e as tags ID3 são incorporadas no fluxo. Para obter mais informações, consulte custom-tags-configure .
+   >As dicas de anúncio personalizadas usam o mesmo evento `onTimedMetadata` para indicar a detecção de uma nova tag. Isso não deve causar confusão, pois as dicas de anúncio personalizadas são detectadas no nível do manifesto e as tags ID3 são incorporadas no fluxo. Para obter mais informações, consulte custom-tags-configure .
 
 1. Recupere os metadados.
 
