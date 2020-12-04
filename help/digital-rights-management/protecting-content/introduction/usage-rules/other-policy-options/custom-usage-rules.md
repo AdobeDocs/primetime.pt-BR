@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Você pode incluir dados personalizados em qualquer licença emitida pelo License Server. A interpretação ou o tratamento desses dados é determinado pela implementação do aplicativo cliente e do servidor de licenças.
 
-Exemplo de caso de uso: Permite a extensibilidade das regras de uso, permitindo que outras regras comerciais sejam transmitidas com segurança como parte da política de DRM Primetime e/ou da licença de conteúdo. Por motivos de segurança, como essas regras de uso são aplicadas no código personalizado do aplicativo cliente, você deve aplicar essa opção juntamente com a opção de lista de permissão para aplicativos AIR ou Flash Player SWF.
+Exemplo de caso de uso: Permite a extensibilidade das regras de uso, permitindo que outras regras comerciais sejam transmitidas com segurança como parte da política de DRM Primetime e/ou da licença de conteúdo. Por motivos de segurança, como essas regras de uso são aplicadas no código personalizado do aplicativo cliente, você deve aplicar essa opção juntamente com a opção de lista de permissões para aplicativos AIR ou SWFs de Flash Player.
