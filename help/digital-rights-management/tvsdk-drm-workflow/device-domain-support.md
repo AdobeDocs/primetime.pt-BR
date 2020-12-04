@@ -6,6 +6,9 @@ title: Reproduzir conteúdo criptografado usando o suporte de domínio
 uuid: 8854cc0f-9bfc-4833-82d7-a3f46ac88e06
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '423'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Normalmente, todas as licenças de DRM Primetime, no momento da criação, estã
 
 Se os metadados de conteúdo especificarem que o registro de domínio do dispositivo é obrigatório, o aplicativo poderá chamar uma API para ingressar em um grupo de dispositivos. Esta ação aciona uma solicitação de registro de domínio a ser enviada para o servidor de domínio. Quando uma licença é emitida para um grupo de dispositivos, ela pode ser exportada e compartilhada com outros dispositivos que se uniram ao grupo de dispositivos.
 
-As informações do grupo de dispositivos são então usadas no `DRMContentData` `VoucherAccessInfo` objeto, que será usado para apresentar as informações necessárias para recuperar e consumir com êxito uma licença.
+As informações do grupo de dispositivos são usadas no objeto `DRMContentData` `VoucherAccessInfo`, que será então usado para apresentar as informações necessárias para recuperar e consumir com êxito uma licença.
 
 ## Reproduzir conteúdo criptografado usando o suporte de domínio {#play-encrypted-content-using-domain-support}
 
@@ -24,14 +27,14 @@ Para reproduzir conteúdo criptografado usando o Primetime DRM, execute as segui
 
 1. Usando `VoucherAccessInfo.deviceGroup`, verifique se o registro do grupo de dispositivos é obrigatório.
 1. Se a autenticação for necessária:
-   1. Use a `DeviceGroupInfo.authenticationMethod` propriedade para descobrir se a autenticação é necessária.
+   1. Use a propriedade `DeviceGroupInfo.authenticationMethod` para descobrir se a autenticação é necessária.
    1. Se a autenticação for necessária, autentique o usuário executando UMA das seguintes etapas:
 
       * Obtenha o nome de usuário e a senha do usuário e chame `DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`.
-      * Obtenha um token de autenticação em cache/pré-gerado e chame `DRMManager.setAuthenticationToken()`.
+      * Obtenha um token de autenticação armazenado em cache/pré-gerado e chame `DRMManager.setAuthenticationToken()`.
    1. Invocar `DRMManager.addToDeviceGroup()`
 1. Obtenha a licença do conteúdo executando uma das seguintes tarefas:
-   1. Use o `DRMManager.loadVoucher()` método.
-   1. Obtenha a licença de um dispositivo diferente registrado no mesmo grupo de dispositivos e forneça a licença ao ` DRMManager` por meio do `DRMManager.storeVoucher()` método.
-1. Reproduzir o conteúdo criptografado usando o `Primetime.play()` método.
-Para exportar a licença para o conteúdo, qualquer um dos dispositivos pode fornecer os bytes brutos da licença usando o `DRMVoucher.toByteArray()` método depois de obter a licença do servidor de licenças Primetime DRM. Os provedores de conteúdo normalmente limitam o número de dispositivos em um grupo de dispositivos. Se o limite for atingido, talvez seja necessário chamar o `DRMManager.removeFromDeviceGroup()` método em um dispositivo não utilizado antes de registrar o dispositivo atual.
+   1. Use o método `DRMManager.loadVoucher()`.
+   1. Obtenha a licença de um dispositivo diferente registrado no mesmo grupo de dispositivos e forneça a licença para ` DRMManager` por meio do método `DRMManager.storeVoucher()`.
+1. Reproduza o conteúdo criptografado usando o método `Primetime.play()`.
+Para exportar a licença para o conteúdo, qualquer um dos dispositivos pode fornecer os bytes brutos da licença usando o método `DRMVoucher.toByteArray()` depois de obter a licença do servidor de licenças Primetime DRM. Os provedores de conteúdo normalmente limitam o número de dispositivos em um grupo de dispositivos. Se o limite for atingido, talvez seja necessário chamar o método `DRMManager.removeFromDeviceGroup()` em um dispositivo não utilizado antes de registrar o dispositivo atual.
