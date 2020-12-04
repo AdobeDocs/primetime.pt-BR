@@ -6,6 +6,9 @@ title: Exibir uma barra de depuração de busca com a posição de reprodução 
 uuid: f940b305-4893-4531-9a79-53670f5fd23f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
@@ -30,8 +33,8 @@ O TVSDK oferece suporte à busca para uma posição específica (hora) em que o 
 
    Os estados válidos são PREPARADO, CONCLUÍDO, PAUSADO e REPRODUZIDO.
 
-1. Analise o evento apropriado para ver quando o usuário está depurando.
-1. Passe a posição de busca solicitada (milissegundos) para o `MediaPlayer.seek` método.
+1. Analise a evento apropriada para ver quando o usuário está depurando.
+1. Passe a posição de busca solicitada (milissegundos) para o método `MediaPlayer.seek`.
 
    ```
    function seek(position:Number):void;
@@ -43,10 +46,10 @@ O TVSDK oferece suporte à busca para uma posição específica (hora) em que o 
    >
    >Isso move o indicador de reprodução para uma nova posição no fluxo, mas a posição final calculada pode diferir da posição de busca especificada.
 
-1. Aguarde o TVSDK despachar o `SeekEvent.SEEK_END` evento.
-1. Recupere a posição final de reprodução ajustada usando event.atualPosition.
+1. Aguarde o TVSDK despachar o evento `SeekEvent.SEEK_END`.
+1. Recupere a posição final ajustada de reprodução usando evento.atualPosition.
 
-       Isso é importante porque a posição inicial real após a busca pode ser diferente da posição solicitada. Várias regras podem ser aplicadas, incluindo:
+       Isso é importante porque a posição real do start após a busca pode ser diferente da posição solicitada. Várias regras podem se aplicar, incluindo:
    
    * O comportamento de reprodução é afetado se uma busca ou outro reposicionamento terminar no meio de uma pausa de anúncio ou ignorar quebras de anúncio.
    * Se você buscar perto de um limite de segmento, a posição de busca é ajustada para o início do segmento.
