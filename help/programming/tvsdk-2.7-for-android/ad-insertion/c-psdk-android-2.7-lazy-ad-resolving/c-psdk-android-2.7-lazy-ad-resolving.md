@@ -8,7 +8,7 @@ uuid: cf9ba788-b83f-43aa-94c4-db391d92a77b
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -51,12 +51,12 @@ A resolução e o carregamento do anúncio podem causar um atraso inaceitável p
 
    >
    >    
-   * O player deve aguardar o `kEventAdResolutionComplete` evento antes de permitir a busca ou a reprodução de truques.
-   >    * Se o usuário tentar executar operações de busca ou de reprodução de artifício enquanto os anúncios ainda estiverem sendo resolvidos, o TVSDK emitirá o `kECLazyAdResolutionInProgress` erro.
-   >    * Se necessário, o player deve atualizar a barra de depuração, *depois* de receber o `kEventAdResolutionComplete` evento.
+   * O player deve aguardar pelo evento `kEventAdResolutionComplete` antes de permitir a busca ou a reprodução de truques.
+   >    * Se o usuário tentar executar operações de busca ou de reprodução de artifício enquanto os anúncios ainda estiverem sendo resolvidos, o TVSDK emitirá o erro `kECLazyAdResolutionInProgress`.
+   >    * Se necessário, o player deve atualizar a barra de depuração, *depois de* receber o evento `kEventAdResolutionComplete`.
 >
 >* A resolução de anúncios ociosos é apenas para VOD. Não funcionará com fluxos ao vivo.
->* A resolução de anúncios ociosos é incompatível com o recurso *Ativado* instantaneamente.
+>* A resolução de anúncios ociosos é incompatível com o recurso *Ativado instantaneamente*.
 
 >
 >  
