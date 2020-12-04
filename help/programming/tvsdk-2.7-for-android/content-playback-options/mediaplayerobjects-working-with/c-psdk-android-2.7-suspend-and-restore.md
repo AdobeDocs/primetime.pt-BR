@@ -7,6 +7,9 @@ title: Suspender e restaurar o MediaPlayer
 uuid: 7777af91-547c-4f7a-8818-3d46dccee7d6
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
@@ -15,11 +18,11 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 
 Suspender e restaurar o TVSDK MediaPlayer quando a tela de um dispositivo está desligada e ligada deve ser manipulada pelo aplicativo.
 
-Você pode lidar com operações de suspensão e restauração `MediaPlayer` dentro do receptor de transmissão do Android para ligar/desligar a tela.
+Você pode manipular operações de suspensão e restauração em `MediaPlayer` dentro do receptor de transmissão do Android para ligar/desligar a tela.
 
-O TVSDK não pode determinar quando um Fragmento (ou Atividade) está em segundo ou primeiro plano. Além disso, o Android não `SurfaceView` é destruído quando a tela do dispositivo é desligada (mas a Atividade está pausada). No entanto, `SurfaceView`*é* destruído quando o dispositivo coloca seu aplicativo em segundo plano. O TVSDK não pode detectar nenhuma dessas alterações, portanto, elas devem ser manipuladas pelo seu aplicativo.
+O TVSDK não pode determinar quando um Fragmento (ou Atividade) está em segundo ou primeiro plano. Além disso, o Android `SurfaceView` não é destruído quando a tela do dispositivo é desligada (mas a Atividade está pausada). No entanto, `SurfaceView` *não* é destruído quando o dispositivo coloca o aplicativo em segundo plano. O TVSDK não pode detectar nenhuma dessas alterações, portanto, elas devem ser manipuladas pelo seu aplicativo.
 
-A amostra de código a seguir mostra como seu aplicativo pode lidar com a suspensão e restauração da tela `MediaPlayer` quando a tela do dispositivo é ligada e desligada no nível do aplicativo:
+O exemplo de código a seguir mostra como seu aplicativo pode lidar com a suspensão e restauração de `MediaPlayer` quando a tela do dispositivo é ligada e desligada no nível do aplicativo:
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 
