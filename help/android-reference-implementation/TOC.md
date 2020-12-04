@@ -13,18 +13,18 @@ ht-degree: 7%
 ---
 
 
-# Implementação do PSDK 1.4 para referência do Android {#reference-implementation}
+# PSDK 1.4 para implementação de referência do Android {#reference-implementation}
 
 + [Visão geral da implementação de referência do Android](home.md)
-+ Implementação de referência do Primetime {#reference}
++ Implementação de referência Primetime {#reference}
    + [Como usar a implementação de referência Primetime](ref-implementation/how-to-use-ref-player.md)
    + [Estrutura de execução de referência](ref-implementation/ref-player-structure.md)
-   + Como usar os gerentes de recursos {#feature-managers}
+   + Como usar gerenciadores de recursos {#feature-managers}
       + [Como usar os gerentes de recursos](ref-implementation/using-feature-managers/how-to-use-feature-managers.md)
       + [Criando gerenciadores de recursos transmitindo informações de configuração para o MediaPlayer...](ref-implementation/using-feature-managers/creating-feature-managers.md)
       + [Ativar ou desativar recursos usando o ManagerFactory](ref-implementation/using-feature-managers/turning-features-on-off.md)
       + [Manuseio de eventos](ref-implementation/using-feature-managers/handling-events.md)
-   + Configurar seu ambiente de desenvolvimento {#setup-dev}
+   + Configure seu ambiente de desenvolvimento {#setup-dev}
       + [Configurar seu ambiente de desenvolvimento](set-up-dev-environment/set-up-dev-environment-overview.md)
       + [Baixar e configurar software de pré-requisito](set-up-dev-environment/download-prereqs-android.md)
       + [Criar a implementação de referência do Primetime](set-up-dev-environment/install-the-ref-player-project.md)
@@ -39,7 +39,7 @@ ht-degree: 7%
       + [Objeto JSON para marcadores de anúncio personalizados](set-up-dev-environment/exploring-code/json-custom-ad-markers.md)
       + [Objeto JSON para ID de recurso de direito](set-up-dev-environment/exploring-code/json-entitlement-resource-id.md)
       + [Exemplo de formato de feed JSON](set-up-dev-environment/exploring-code/example-json-feed-format.md)
-   + Implementação da reprodução de vídeo {#implement-video}
+   + Implemente a reprodução de vídeo {#implement-video}
       + [Operações essenciais da reprodução de vídeo](implement-video-playback/video-playback.md)
       + [Ativar reprodução de vídeo](implement-video-playback/enable-video-playback.md)
       + [Proteção de conteúdo DRM](implement-video-playback/content-protection.md)
@@ -50,7 +50,7 @@ ht-degree: 7%
       + [Escolhendo um ponto de partida personalizado para DVR](implement-video-playback/dvr/dvr-custom-start-point.md)
       + [Definir uma hora de start personalizada na implementação de referência](implement-video-playback/dvr/set-custom-start-time-dvr.md)
    + [Exibir estatísticas de reprodução e dispositivo de QoS](implement-video-playback/qos-statistics.md)
-   + Inserir anúncios {#insert-ads}
+   + Inserir publicidades {#insert-ads}
       + [Inserção de anúncio](insert-ads/ad-insertion.md)
       + [Tipos de inserção de anúncio](insert-ads/ad-insertion-types.md)
       + [Adicionar publicidade](insert-ads/add-advertising.md)
