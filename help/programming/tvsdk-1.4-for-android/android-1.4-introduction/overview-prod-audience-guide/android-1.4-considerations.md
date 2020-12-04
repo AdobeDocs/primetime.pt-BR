@@ -6,6 +6,9 @@ title: Considerações e práticas recomendadas
 uuid: e698ae09-280b-4406-a9b8-4f468b7a6b9c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '348'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Para usar o TVSDK de forma mais eficiente, considere alguns detalhes de sua oper
 
 Lembre-se das seguintes informações ao usar o TVSDK:
 
-* O Adobe Primetime não funciona atualmente em emuladores Android.
+* A Adobe Primetime não funciona atualmente em emuladores Android.
 
    Você deve usar dispositivos reais para teste.
 * A reprodução é compatível somente com conteúdo HTTP Live Streaming (HLS).
@@ -32,7 +35,7 @@ Lembre-se das seguintes informações ao usar o TVSDK:
    * As legendas ocultas são suportadas na medida fornecida pelo AVE.
    * Dependendo da precisão do codificador, a duração real da mídia codificada pode diferir das durações que são registradas no manifesto do recurso de fluxo.
 
-      Não há uma maneira confiável de sincronizar novamente entre a linha do tempo virtual ideal e a linha do tempo de reprodução real. O rastreamento de andamento da reprodução de fluxo para o gerenciamento de anúncios e o Video Analytics deve usar o tempo de reprodução real, de modo que o comportamento de relatório e interface do usuário pode não rastrear com precisão o conteúdo de mídia e anúncio.
+      Não há uma maneira confiável de sincronizar novamente entre a linha do tempo virtual ideal e a linha do tempo de reprodução real. O rastreamento de andamento da reprodução de fluxo para o gerenciamento de anúncios e o Video Analytics deve usar o tempo de reprodução real, de modo que o comportamento do relatórios e da interface do usuário pode não rastrear com precisão o conteúdo de mídia e anúncio.
    * O nome do agente de usuário recebido para todas as solicitações de mídia do TVSDK nesta plataforma recebe o seguinte padrão de string:
 
       ```
@@ -48,5 +51,5 @@ Lembre-se das seguintes informações ao usar o TVSDK:
 
 Estas são as práticas recomendadas para o TVSDK:
 
-* Use a versão 3.0 ou superior do HLS para conteúdo do programa.
+* Use a versão 3.0 ou superior do HLS para conteúdo de programas.
 * Execute a maioria das operações TVSDK no thread principal (UI), não nos threads em segundo plano.
