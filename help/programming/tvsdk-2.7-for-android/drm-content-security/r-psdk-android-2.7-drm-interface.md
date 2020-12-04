@@ -6,6 +6,9 @@ title: Visão geral da interface do Primetime DRM
 uuid: d77a98c8-c1f5-4fe3-8d0b-3d21e288f228
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 0%
 
 ---
 
@@ -30,10 +33,10 @@ Estes são os elementos de API mais importantes para trabalhar com DRM:
 
    >[!TIP]
    >
-   >Essa API retornará um `DRMManager` objeto válido somente depois que o objeto `MediaPlayerEvent.DRM_METADATA` for acionado. Se você ligar `getDRMManager()` antes que esse evento seja acionado, ele poderá retornar NULL.
+   >Essa API retornará um objeto `DRMManager` válido somente depois que `MediaPlayerEvent.DRM_METADATA` for acionado. Se você chamar `getDRMManager()` antes que esse evento seja acionado, ele poderá retornar NULL.
 
-* A classe `DRMHelper` helper, que é útil ao implementar fluxos de trabalho de DRM.
-* Um método `DRMHelper` de carregador de metadados, que carrega metadados DRM quando está localizado em um URL separado da mídia.
+* A classe auxiliar `DRMHelper`, que é útil ao implementar workflows DRM.
+* Um método `DRMHelper` de carregador de metadados, que carrega os metadados DRM quando estão localizados em um URL separado da mídia.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -41,7 +44,7 @@ Estes são os elementos de API mais importantes para trabalhar com DRM:
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* Um `DRMHelper` método para verificar os metadados do DRM e determinar se a autenticação é necessária.
+* Um método `DRMHelper` para verificar os metadados do DRM e determinar se a autenticação é necessária.
 
    ```java
    /** 
@@ -84,4 +87,4 @@ Estes são os elementos de API mais importantes para trabalhar com DRM:
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Para obter mais informações sobre o DRM, consulte a documentação [do](https://helpx.adobe.com/primetime/user-guide.html)DRM.
+Para obter mais informações sobre o DRM, consulte a documentação do [DRM](https://helpx.adobe.com/primetime/user-guide.html).
