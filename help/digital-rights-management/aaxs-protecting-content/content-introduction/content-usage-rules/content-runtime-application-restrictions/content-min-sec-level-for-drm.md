@@ -4,6 +4,9 @@ title: Nível mínimo de segurança para DRM e tempos de execução
 uuid: b5f52ea4-b417-4643-9b3e-0d20e631df9b
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
