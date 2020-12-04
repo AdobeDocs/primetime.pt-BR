@@ -13,14 +13,14 @@ ht-degree: 0%
 ---
 
 
-# Dados de banner associado{#companion-banner-data}
+# Dados do banner companheiro{#companion-banner-data}
 
 O conteúdo de um AdBannerAsset descreve um banner associado.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-O `AdobePSDK.PSDKEventType.AD_STARTED` evento retorna uma `Ad` instância que contém uma `companionAssets` propriedade ( `Array<AdBannerAsset>`).
-Cada um `AdBannerAsset` fornece informações sobre como exibir o ativo.
+O evento `AdobePSDK.PSDKEventType.AD_STARTED` retorna uma instância `Ad` que contém uma propriedade `companionAssets` ( `Array<AdBannerAsset>`).
+Cada `AdBannerAsset` fornece informações sobre como exibir o ativo.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
