@@ -6,6 +6,9 @@ title: Implementar um resolvedor personalizado de oportunidade/conteúdo
 uuid: 0023f516-12f3-4548-93de-b0934789053b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Você pode implementar seus resolvedores com base nos resolvedores padrão.
 
    >[!TIP]
    >
-   >`PTContentResolver` é exposta através da `PTDefaultMediaPlayerClientFactory` classe. Os clientes podem registrar um novo resolvedor de conteúdo estendendo a classe `PTContentResolver` abstrata. Por padrão, e a menos que especificamente removido, um `PTDefaultAdContentResolver` é registrado no `PTDefaultMediaPlayerClientFactory`.
+   >`PTContentResolver` é exposta por meio da  `PTDefaultMediaPlayerClientFactory` classe. Os clientes podem registrar um novo resolvedor de conteúdo estendendo a classe `PTContentResolver` abstrata. Por padrão, e a menos que especificamente removido, um `PTDefaultAdContentResolver` é registrado em `PTDefaultMediaPlayerClientFactory`.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,27 +55,28 @@ Você pode implementar seus resolvedores com base nos resolvedores padrão.
    @end
    ```
 
-1. Implemente `shouldResolveOpportunity` e retorne `YES` se ele deve lidar com os dados recebidos `PTPlacementOpportunity`.
-1. Implantação `resolvePlacementOpportunity`, que inicia o carregamento do conteúdo ou anúncios alternativos.
-1. Depois que os anúncios forem carregados, prepare uma página com `PTTimeline` as informações sobre o conteúdo a ser inserido.
+1. Implemente `shouldResolveOpportunity` e retorne `YES` se ele deve lidar com o `PTPlacementOpportunity` recebido.
+1. Implemente `resolvePlacementOpportunity`, que start o carregamento do conteúdo ou anúncios alternativos.
+1. Depois que os anúncios forem carregados, prepare um `PTTimeline` com as informações sobre o conteúdo a ser inserido.
 
        Estas são algumas informações úteis sobre linhas do tempo:
    
-   * Pode haver vários tipos de `PTAdBreak`pre-roll, mid-roll e post-roll.
+   * Pode haver vários `PTAdBreak`s dos tipos pre-roll, mid-roll e post-roll.
 
-      * A `PTAdBreak` tem o seguinte:
+      * Um `PTAdBreak` tem o seguinte:
 
-         * Um `CMTimeRange` com a hora de início e a duração da interrupção.
+         * Um `CMTimeRange` com o tempo e a duração do start da pausa.
 
             Isso é definido como a propriedade range de `PTAdBreak`.
 
-         * `NSArray` de `PTAd`s.
+         * `NSArray` de  `PTAd`s.
 
             Isso é definido como a propriedade ads de `PTAdBreak`.
-   * A `PTAd` representa o anúncio e cada um `PTAd` tem o seguinte:
+   * Um `PTAd` representa o anúncio e cada `PTAd` tem o seguinte:
 
-      * Um `PTAdHLSAsset` conjunto como a propriedade de ativo principal do anúncio.
-      * Possivelmente várias `PTAdAsset` instâncias como anúncios clicáveis ou anúncios em banner.
+      * Um `PTAdHLSAsset` definido como a propriedade de ativo principal do anúncio.
+      * Possivelmente várias instâncias `PTAdAsset` como anúncios clicáveis ou anúncios em banners.
+
    Por exemplo:
 
    ```
@@ -102,8 +106,8 @@ Você pode implementar seus resolvedores com base nos resolvedores padrão.
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. Chama `didFinishResolvingPlacementOpportunity`, que fornece o `PTTimeline`.
-1. Registre seu resolvedor de conteúdo/anúncio personalizado na fábrica padrão do player de mídia ligando para `registerContentResolver`.
+1. Chame `didFinishResolvingPlacementOpportunity`, que fornece o `PTTimeline`.
+1. Registre seu resolvedor de conteúdo/anúncio personalizado na fábrica padrão do player de mídia, ligando para `registerContentResolver`.
 
    ```
    //Remove default content/ad resolver 
