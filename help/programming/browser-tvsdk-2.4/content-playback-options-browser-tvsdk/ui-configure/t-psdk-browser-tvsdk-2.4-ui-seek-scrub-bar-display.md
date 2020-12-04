@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Manipular busca ao usar a barra de busca{#handle-seek-when-using-the-seek-bar}
+# Manuseie a busca ao usar a barra de busca{#handle-seek-when-using-the-seek-bar}
 
 No TVSDK do navegador, é possível buscar uma posição (hora) específica em um fluxo. Um fluxo pode ser uma lista de reprodução de janela deslizante ou um conteúdo VOD (Video-on-demand).
 
@@ -25,9 +25,9 @@ No TVSDK do navegador, é possível buscar uma posição (hora) específica em u
 
    Os estados válidos são PREPARADO, COMPLETO, PAUSADO e REPRODUZIDO. Estar em um estado válido garante que o recurso de mídia foi carregado com êxito. Se o player não estiver em um estado de pesquisa válido, tentar chamar os métodos a seguir emite um `IllegalStateException`.
 
-   Por exemplo, você pode aguardar o TVSDK do navegador disparar `AdobePSDK.MediaPlayerStatusChangeEvent` com um `event.status` de `AdobePSDK.MediaPlayerStatus.PREPARED`.
+   Por exemplo, você pode esperar o TVSDK do navegador disparar `AdobePSDK.MediaPlayerStatusChangeEvent` com um `event.status` de `AdobePSDK.MediaPlayerStatus.PREPARED`.
 
-1. Passe a posição de busca solicitada para o `MediaPlayer.seek` método como um parâmetro em milissegundos.
+1. Passe a posição de busca solicitada para o método `MediaPlayer.seek` como um parâmetro em milissegundos.
 
    Isso move o indicador de reprodução para uma posição diferente no stream.
 
@@ -39,7 +39,7 @@ No TVSDK do navegador, é possível buscar uma posição (hora) específica em u
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Aguarde o TVSDK do navegador disparar o `AdobePSDK.PSDKEventType.SEEK_END` evento, que retorna a posição ajustada no `actualPosition` atributo do evento:
+1. Aguarde o TVSDK do navegador disparar o evento `AdobePSDK.PSDKEventType.SEEK_END`, que retorna a posição ajustada no atributo `actualPosition` do evento:
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
@@ -53,7 +53,7 @@ No TVSDK do navegador, é possível buscar uma posição (hora) específica em u
    * O comportamento de reprodução é afetado se uma busca ou outro reposicionamento terminar no meio de uma pausa de anúncio ou ignorar quebras de anúncio.
    * Você pode procurar apenas na duração pesquisável do ativo. Para VOD, é de 0 até a duração do ativo.
 
-1. Para a barra de pesquisa criada no exemplo acima, ouça `setPositionChangeListener()` para ver quando o usuário está depurando:
+1. Para a barra de pesquisa criada no exemplo acima, observe `setPositionChangeListener()` para ver quando o usuário está depurando:
 
    ```js
    seekBar.setPositionChangeListener(function (pos) { 
