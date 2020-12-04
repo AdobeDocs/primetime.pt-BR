@@ -6,6 +6,9 @@ title: Inserção e posicionamento do anúncio
 uuid: 1d4d6364-1c49-402b-9b72-8c185b1c94e1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
@@ -40,5 +43,5 @@ O TVSDK pode obter locais para possíveis posicionamentos de anúncios das segui
 
 >[!NOTE]
 >
->Por padrão, o TVSDK usa dicas manifestas para fluxos ao vivo/lineares e mapas de servidor de publicidade para fluxos VOD. No entanto, para oferecer suporte a repetição completa de eventos para eventos ao vivo, seu aplicativo deve executar etapas extras.
+>Por padrão, o TVSDK usa dicas manifestas para fluxos ao vivo/lineares e mapas de servidor de publicidade para fluxos VOD. Entretanto, para oferecer suporte à reprodução de evento completo para eventos ao vivo, seu aplicativo deve executar etapas extras.
 
