@@ -7,6 +7,9 @@ title: Normalizar regras
 uuid: ae0364d2-23e2-48d6-b9b6-869cd163080d
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
@@ -31,13 +34,13 @@ A regra normalize define uma transformação de URL a ser aplicada a um URL cria
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> String</span></td> 
    <td><span class="codeph"> normalize</span></td> 
-   <td>O valor deve ser sempre <span class="codeph"> normalizado</span>.</td> 
+   <td>O valor deve ser sempre <span class="codeph"> normalize</span>.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> String</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Atualmente, apenas <span class="codeph"> o host</span> é suportado. Este atributo deve estar presente quando <span class="codeph"> corresponde</span> e <span class="codeph"> valores</span> os atributos são definidos.</td> 
+   <td>Atualmente, apenas <span class="codeph"> host</span> é suportado. Este atributo deve estar presente quando os atributos <span class="codeph"> correspondem</span> e <span class="codeph"> valores</span> estiverem definidos.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matches</span></td> 
@@ -49,15 +52,15 @@ A regra normalize define uma transformação de URL a ser aplicada a um URL cria
      <li><span class="codeph"> ne</span> - não é igual</li> 
      <li><span class="codeph"> co</span> - contém</li> 
      <li><span class="codeph"> nc</span> - não contém</li> 
-     <li><span class="codeph"> sw</span> - começa com</li> 
-     <li><span class="codeph"> ew</span> - termina com</li> 
+     <li><span class="codeph"> sw</span> - start com</li> 
+     <li><span class="codeph"> ew</span>  - termina com</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Matriz</span></td> 
    <td></td> 
-   <td>O TVSDK usará o atributo de <span class="codeph"> correspondência</span> no <span class="codeph"> item</span> do anúncio de origem e corresponderá aos valores definidos nesta matriz.</td> 
+   <td>O TVSDK usará o atributo <span class="codeph"> corresponde</span> no <span class="codeph"> item</span> do criativo de origem e corresponderá aos valores definidos nesta matriz.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> find</span></td> 
