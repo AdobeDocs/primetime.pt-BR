@@ -6,6 +6,9 @@ title: Áudio alternativo
 uuid: d7e61a2a-1985-4dba-9c6d-0e139ffde46a
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '280'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +19,13 @@ O áudio alternativo ou tardio permite alternar entre as faixas de áudio dispon
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Quando o TVSDK cria a `MediaPlayerItem` instância do vídeo atual, ele cria um `AudioTrack` item para cada faixa de áudio disponível. O item contém uma `name` propriedade, uma string que geralmente contém uma descrição reconhecível pelo usuário do idioma dessa faixa. O item também contém informações sobre como usar essa faixa por padrão.
+Quando o TVSDK cria a instância `MediaPlayerItem` para o vídeo atual, ele cria um item `AudioTrack` para cada faixa de áudio disponível. O item contém uma propriedade `name`, uma string que geralmente contém uma descrição reconhecível pelo usuário do idioma dessa faixa. O item também contém informações sobre como usar essa faixa por padrão.
 
-Quando for a hora de reproduzir o vídeo, você pode solicitar uma lista de faixas de áudio disponíveis, permitir que o usuário escolha uma e definir o vídeo para reproduzir com a faixa selecionada.
+Quando for a hora de reproduzir o vídeo, você pode solicitar uma lista das faixas de áudio disponíveis, permitir que o usuário escolha uma e definir o vídeo para reproduzir com a faixa selecionada.
 
-Embora raro, se uma faixa de áudio adicional se tornar disponível depois de criar o `MediaPlayerItem`, o TVSDK acionará um `MediaPlayerItem.AUDIO_UPDATED` evento.
+Embora raro, se uma faixa de áudio adicional se tornar disponível depois de criar o `MediaPlayerItem`, o TVSDK acionará um evento `MediaPlayerItem.AUDIO_UPDATED`.
 
-## APIs adicionadas {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
+## Adicionadas APIs {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
 As seguintes APIs foram adicionadas para suportar áudio alternativo:
 
@@ -38,7 +41,7 @@ bool MediaPlayerItemImpl::hasAlternateAudio() const {
 
 ** `getAudioTracks`**
 
-Esta função retorna a lista de todas as faixas de áudio disponíveis atuais em uma mídia especificada.
+Essa função retorna a lista de todas as faixas de áudio disponíveis atuais em uma mídia especificada.
 
 ```
 virtual PSDKErrorCode getAudioTracks(PSDKImmutableArray<AudioTrack>*& out) const { 
