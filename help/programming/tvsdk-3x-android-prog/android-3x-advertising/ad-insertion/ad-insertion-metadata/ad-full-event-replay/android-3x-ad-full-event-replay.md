@@ -1,24 +1,27 @@
 ---
-description: A repetição completa de eventos (FER) é um ativo VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
-seo-description: A repetição completa de eventos (FER) é um ativo VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
-seo-title: Habilitar anúncios em repetição de evento completo
-title: Habilitar anúncios em repetição de evento completo
+description: A reprodução de evento completo (FER) é um ativo VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
+seo-description: A reprodução de evento completo (FER) é um ativo VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
+seo-title: Ativar anúncios em reprodução de evento completo
+title: Ativar anúncios em reprodução de evento completo
 uuid: a8859db1-1408-4365-bf12-5bc2ab7df449
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '351'
+ht-degree: 0%
 
 ---
 
 
-# Habilitar anúncios em repetição de evento completo {#enable-ads-in-full-event-replay}
+# Habilitar anúncios em reprodução de evento completo {#enable-ads-in-full-event-replay}
 
-A repetição completa de eventos (FER) é um ativo VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
+A reprodução de evento completo (FER) é um ativo VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
 
-Para conteúdo ao vivo, o TVSDK usa os metadados/dicas no manifesto para determinar onde os anúncios devem ser colocados. No entanto, às vezes o conteúdo ao vivo/linear pode se assemelhar ao conteúdo VOD. Por exemplo, quando o conteúdo em tempo real é concluído, uma `EXT-X-ENDLIST` tag é anexada ao manifesto em tempo real. Para HLS, a `EXT-X-ENDLIST` tag significa que o fluxo é um fluxo VOD. Para inserir anúncios corretamente, o TVSDK não pode diferenciar automaticamente esse fluxo de um fluxo VOD típico.
+Para conteúdo ao vivo, o TVSDK usa os metadados/dicas no manifesto para determinar onde os anúncios devem ser colocados. No entanto, às vezes o conteúdo ao vivo/linear pode se assemelhar ao conteúdo VOD. Por exemplo, quando o conteúdo em tempo real é concluído, uma tag `EXT-X-ENDLIST` é anexada ao manifesto em tempo real. Para HLS, a tag `EXT-X-ENDLIST` significa que o fluxo é um fluxo VOD. Para inserir anúncios corretamente, o TVSDK não pode diferenciar automaticamente esse fluxo de um fluxo VOD típico.
 
-Seu aplicativo deve informar ao TVSDK se o conteúdo é ao vivo ou VOD ao especificar o `AdSignalingMode`.
+Seu aplicativo deve informar ao TVSDK se o conteúdo é ao vivo ou VOD especificando `AdSignalingMode`.
 
-Para um fluxo FER, o servidor de decisão de anúncio do Adobe Primetime não deve fornecer a lista de quebras de anúncio que precisam ser inseridas na linha do tempo antes de iniciar a reprodução. Esse é o processo típico para conteúdo VOD. Em vez disso, ao especificar um modo de sinalização diferente, o TVSDK lê todos os pontos de sinalização do manifesto FER e vai para o servidor de anúncios para cada ponto de sinalização para solicitar uma pausa de anúncio. Esse processo é semelhante ao conteúdo ao vivo/DVR.
+Para um fluxo FER, o servidor de decisão de anúncio da Adobe Primetime não deve fornecer a lista de quebras de anúncios que precisam ser inseridas na linha do tempo antes de iniciar a reprodução. Esse é o processo típico para conteúdo VOD. Em vez disso, ao especificar um modo de sinalização diferente, o TVSDK lê todos os pontos de sinalização do manifesto FER e vai para o servidor de anúncios para cada ponto de sinalização para solicitar uma pausa de anúncio. Esse processo é semelhante ao conteúdo ao vivo/DVR.
 
 >[!TIP]
 >
@@ -26,13 +29,13 @@ Para um fluxo FER, o servidor de decisão de anúncio do Adobe Primetime não de
 
 1. A partir de uma fonte externa, como o vCMS, obtenha o modo de sinalização que deve ser usado.
 1. Crie os metadados relacionados ao anúncio.
-1. Se o comportamento padrão precisar ser substituído, especifique o comportamento `AdSignalingMode` usando `AdvertisingMetadata.setSignalingMode`.
+1. Se o comportamento padrão precisar ser substituído, especifique `AdSignalingMode` usando `AdvertisingMetadata.setSignalingMode`.
 
-   Os valores válidos são `DEFAULT`, `SERVER_MAP`e `MANIFEST_CUES`.
+   Os valores válidos são `DEFAULT`, `SERVER_MAP` e `MANIFEST_CUES`.
 
    >[!IMPORTANT]
    >
-   >Você deve definir o modo de sinalização de anúncio antes de chamar `prepareToPlay`. Depois que o TVSDK começar a resolver e colocar anúncios na linha do tempo, as alterações no modo de sinalização do anúncio serão ignoradas. Defina o modo ao criar o `AuditudeSettings` objeto.
+   >Você deve definir o modo de sinalização de anúncio antes de chamar `prepareToPlay`. Depois que os start TVSDK resolverem e colocarem anúncios na linha do tempo, as alterações no modo de sinalização do anúncio serão ignoradas. Defina o modo ao criar o objeto `AuditudeSettings`.
 
 1. Continue com a reprodução.
 
