@@ -7,13 +7,13 @@ uuid: c3961628-39aa-444c-9c93-9f1e267d9cd4
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
 
 
-# Reempacotar anúncios incompatíveis usando o CRS (Adobe Creative Repacking Service) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+# Reempacotar anúncios incompatíveis usando o Adobe Creative Repacking Service (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
 Alguns anúncios de terceiros (ou anúncios criativos) não podem ser associados ao fluxo de conteúdo HTTP Live Streaming (HLS) porque seu formato de vídeo é incompatível com HLS. Como opção, a inserção do anúncio Primetime e o TVSDK podem tentar empacotar novamente anúncios incompatíveis em vídeos compatíveis do M3U8.
 
@@ -27,7 +27,7 @@ Para ativar este recurso CRS opcional, entre em contato com seu representante de
 >
 >Para clientes CRS versão 3.0 (e anteriores), a partir do CRS versão 3.1, as seguintes alterações melhoraram a segurança e o desempenho:
 >
->* O CRS 3.1 continua com `https:` se o conteúdo que está sendo reempacotado usa `https:`. Isso reduz a possibilidade de alguns players apresentarem conteúdo inseguro.
+>* O CRS 3.1 continua com `https:` se o conteúdo que está sendo reempacotado usar `https:`. Isso reduz a possibilidade de alguns players apresentarem conteúdo inseguro.
    >
    >
 * O CRS 3.1 minimiza muito as chamadas de rede, melhorando o tempo de inicialização do vídeo.
@@ -42,7 +42,7 @@ Para obter mais informações sobre o CRS, consulte [Creative Packaging Service 
 
 Para ativar o CRS nos aplicativos TVSDK, você deve definir as seguintes informações nas configurações do Auditude:
 
-1. Ative o CRS na `AuditudeSettings`.
+1. Ative o CRS em `AuditudeSettings`.
 
    ```
    ... 
