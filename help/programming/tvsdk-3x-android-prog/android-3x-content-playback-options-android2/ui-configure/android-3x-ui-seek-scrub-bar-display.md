@@ -6,6 +6,9 @@ title: Exibir uma barra de depuração de busca com a posição de reprodução 
 uuid: 30a9237c-bbd5-457e-a93c-662570711986
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -22,15 +25,15 @@ O TVSDK oferece suporte à busca para uma posição específica (hora) em que o 
 
    A busca é assíncrona, portanto, o TVSDK despacha os seguintes eventos relacionados à busca:
 
-   * `MediaPlayerEvent.SEEK_BEGIN`, onde a busca começa.
+   * `MediaPlayerEvent.SEEK_BEGIN`, onde a busca start.
    * `MediaPlayerEvent.SEEK_END`, quando a procura for bem sucedida.
    * `MediaPlayerEvent.OPERATION_FAILED`, onde a busca falhou.
 
 1. Aguarde o player ter um status válido para busca.
 
    Os status válidos são PREPARADO, COMPLETO, PAUSADO e REPRODUZIDO.
-1. Use nativo `SeekBar` para definir `OnSeekBarChangeListener`, que determina quando o usuário está depurando.
-1. Passe a posição de busca solicitada (milissegundos) para o `MediaPlayer.seek` método.
+1. Use o nativo `SeekBar` para definir `OnSeekBarChangeListener`, que determina quando o usuário está depurando.
+1. Passe a posição de busca solicitada (milissegundos) para o método `MediaPlayer.seek`.
 
    ```java
    void seek(long position) throws MediaPlayerException;
@@ -42,14 +45,14 @@ O TVSDK oferece suporte à busca para uma posição específica (hora) em que o 
    >
    >Essa etapa move o indicador de reprodução para uma nova posição no fluxo, mas a posição final calculada pode diferir da posição de busca especificada.
 
-1. Escute `MediaPlayerEvent.OPERATION_FAILED` e tome as medidas apropriadas.
+1. Escute `MediaPlayerEvent.OPERATION_FAILED` e tome as ações apropriadas.
 
-   Esse evento passa pelo aviso apropriado. Seu aplicativo determina como prosseguir e as opções incluem tentar a busca novamente ou continuar a reprodução a partir da posição anterior.
+   Este evento passa o aviso apropriado. Seu aplicativo determina como prosseguir e as opções incluem tentar a busca novamente ou continuar a reprodução a partir da posição anterior.
 
-1. Aguarde o TVSDK ligar para o `MediaPlayerEvent.SEEK_END` retorno de chamada.
+1. Aguarde o TVSDK chamar o retorno de chamada `MediaPlayerEvent.SEEK_END`.
 1. Recupere a posição final ajustada de reprodução usando o parâmetro de posição do retorno de chamada.
 
-   Isso é importante porque a posição inicial real após a busca pode ser diferente da posição solicitada. As regras, incluindo o comportamento de reprodução, serão afetadas se uma busca ou outro reposicionamento terminar no meio de uma pausa de anúncio ou se ignorar pausas de anúncio, poderão ser aplicadas.
+   Isso é importante porque a posição real do start após a busca pode ser diferente da posição solicitada. As regras, incluindo o comportamento de reprodução, serão afetadas se uma busca ou outro reposicionamento terminar no meio de uma pausa de anúncio ou se ignorar pausas de anúncio, poderão ser aplicadas.
 
 1. Use as informações de posição ao exibir uma barra de depuração de busca.
 
