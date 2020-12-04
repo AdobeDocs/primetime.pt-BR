@@ -6,6 +6,9 @@ title: Construa uma barra de controle aprimorada para DVR
 uuid: 08f943e8-90da-4860-92dd-dd289fd68cba
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Você pode implementar uma barra de controle com suporte a DVR para transmissão
 * Para VOD, o comprimento da janela pesquisável é a duração do ativo inteiro.
 * Para transmissão ao vivo, o comprimento da janela DVR (pesquisável) é definido como o intervalo de tempo que começa na janela de reprodução ao vivo e termina no ponto ativo do cliente.
 
-   O ponto ativo do cliente é calculado subtraindo o comprimento do buffer do final da janela ativa. A duração do destino é um valor maior ou igual à duração máxima de um fragmento no manifesto.
+   O ponto ativo do cliente é calculado subtraindo o comprimento do buffer do final da janela ativa. A duração do público alvo é um valor maior ou igual à duração máxima de um fragmento no manifesto.
 
    O valor padrão é 10000 ms.
 
@@ -34,7 +37,7 @@ Você pode implementar uma barra de controle com suporte a DVR para transmissão
 
       Para uma barra de controle:
    1. Adicione uma sobreposição à barra de controle que representa o intervalo de reprodução.
-   1. Quando o usuário começar a buscar, verifique se a posição de busca desejada está dentro do intervalo pesquisável usando a `MediaPlayer.seekableRange` propriedade.
+   1. Quando o usuário start buscar, verifique se a posição de busca desejada está dentro do intervalo pesquisável usando a propriedade `MediaPlayer.seekableRange`.
 
       Por exemplo:
 
@@ -49,7 +52,7 @@ Você pode implementar uma barra de controle com suporte a DVR para transmissão
       }
       ```
 
-      Você também pode optar por buscar o ponto ativo do cliente usando a `MediaPlayer.LIVE_POINT` constante.
+      Você também pode optar por buscar o ponto ativo do cliente usando a constante `MediaPlayer.LIVE_POINT`.
 
       ```
       private function onSeekToLiveClick(event:MouseEvent):void { 
