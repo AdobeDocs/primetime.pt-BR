@@ -34,7 +34,7 @@ As seguintes opções/níveis de aplicação estão disponíveis:
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">ACP Obrigatório</b> — A proteção de saída ACP é necessária. A reprodução não é permitida no CGMS-A. Os clientes do Adobe Access 2.0 não suportam essa opção. Se definido, um cliente do Adobe Access 2.0 se comportará como se a opção "Sem reprodução" tivesse sido especificada. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">ACP obrigatório</b> — A proteção de saída ACP é necessária. A reprodução não é permitida no CGMS-A. Os clientes do Adobe Access 2.0 não suportam essa opção. Se definido, um cliente do Adobe Access 2.0 se comportará como se a opção "Sem reprodução" tivesse sido especificada. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
@@ -44,7 +44,7 @@ As seguintes opções/níveis de aplicação estão disponíveis:
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utilizar se disponível</b> — Tente ativar a proteção de saída ACP e CGMS-A, se disponível, e permita a reprodução, se não disponível. Os clientes do Adobe Access 3.0 tentarão habilitar ACP e CGMS-A, se possível. Os clientes do Adobe Access 2.0 só tentarão ativar o ACP ou o CGMS-A. Por exemplo, o cliente Adobe Access tentará habilitar o ACP ou o CGMS-A. Se a tentativa for bem-sucedida, a outra opção não será ativada. Se a tentativa falhar, será feita uma segunda tentativa para habilitar a outra opção. Mesmo se ambas as tentativas falharem, o conteúdo será reproduzido assim mesmo. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Use se disponível</b> — Tente ativar a proteção de saída ACP e CGMS-A, se disponível, e permita a reprodução, se não disponível. Os clientes do Adobe Access 3.0 tentarão habilitar ACP e CGMS-A, se possível. Os clientes do Adobe Access 2.0 só tentarão ativar o ACP ou o CGMS-A. Por exemplo, o cliente Adobe Access tentará habilitar ACP ou CGMS-A. Se a tentativa for bem-sucedida, a outra opção não será ativada. Se a tentativa falhar, será feita uma segunda tentativa para habilitar a outra opção. Mesmo se ambas as tentativas falharem, o conteúdo será reproduzido assim mesmo. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
   </tr> 
@@ -54,7 +54,7 @@ As seguintes opções/níveis de aplicação estão disponíveis:
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Use CGMS-A se disponível </b>— Tente ativar a proteção de saída CGMS-A, se disponível, mas permita a reprodução, se não disponível. A proteção não está disponível no ACP. Os clientes do Adobe Access 2.0 não suportam essa opção. Se definido, um cliente do Adobe Access 2.0 se comportará como se a opção "Sem proteção" tivesse sido especificada. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Use CGMS-A se disponível  </b>— Tente ativar a proteção de saída CGMS-A, se disponível, mas permita a reprodução, se não disponível. A proteção não está disponível no ACP. Os clientes do Adobe Access 2.0 não suportam essa opção. Se definido, um cliente do Adobe Access 2.0 se comportará como se a opção "Sem proteção" tivesse sido especificada. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
@@ -64,7 +64,7 @@ As seguintes opções/níveis de aplicação estão disponíveis:
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Sem reprodução</b> — não permita a reprodução em um dispositivo externo para saídas analógicas e digitais. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Sem reprodução</b>  — Não permita a reprodução em um dispositivo externo para saídas analógicas e digitais. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">SIM </p> </td> 
   </tr> 
