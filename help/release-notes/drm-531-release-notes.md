@@ -9,6 +9,9 @@ topic-tags: release-notes
 products: SG_PRIMETIME
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '543'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ As notas de versão do DRM 5.3.1 descrevem os novos recursos e os problemas conh
 
 ## Novos recursos na versão 5.3 {#new-features}
 
-* **Parada segura -** Você pode especificar se a reprodução para ou continua no final de uma janela de reprodução.
-* **Proteção de Saída Baseada em Resolução (RBOP) -** Você pode especificar as restrições de saída com base nas resoluções de pixel.
-* **Gating do CDM - para oferecer suporte ao HTML5, a Adobe atualizou o servidor de licença de Implementação de referência incluído no SDK Java do Adobe Primetime DRM (antigo Adobe Access DRM) para poder consumir todas as mensagens de protocolo DRM em um único terminal de URL.** Essa consolidação dos métodos de URL HTTP é necessária para atender à especificação HTML5 EME (Encrypted Media Extension), que, por sua vez, é necessária para ser implementada pelos fornecedores de DRM (Content Decryption Module, módulo de decodificação de conteúdo) do CDM. Anteriormente, estes eram os únicos pontos finais de URL expostos pelo servidor de licença de Implementação de Referência:
+* **Parada segura -** você pode especificar se a reprodução para ou continua no final de uma janela de reprodução.
+* **Proteção de saída baseada em resolução (RBOP) -** Você pode especificar as restrições de saída com base nas resoluções de pixel.
+* **Gating do CDM -** Para suportar HTML5, o Adobe atualizou o servidor de licença de Implementação de referência incluído no Adobe Primetime DRM (antigo Adobe Access DRM) Java SDK para poder consumir todas as mensagens de protocolo DRM em um único terminal de URL. Essa consolidação dos métodos de URL HTTP é necessária para atender à especificação HTML5 EME (Encrypted Media Extension), que, por sua vez, é necessária para ser implementada pelos fornecedores de DRM (Content Decryption Module, módulo de decodificação de conteúdo) do CDM. Anteriormente, estes eram os únicos pontos finais de URL expostos pelo servidor de licença de Implementação de Referência:
 
    * /flashaccess/i15n/v3 (Individualização)
    * /flashaccess/license/v5 (Solicitação de licença)
@@ -32,13 +35,13 @@ Agora, todas as solicitações (originárias de um HTML5 CDM) podem ser direcion
 
 Essa alteração é compatível com versões anteriores de plataformas não-CDM, como Flash Player, Android e iOS.
 
-* **Redução de RBOP -** específica para o espaço HTML5, a RBOP contém o recurso automático de redução, no qual, se uma taxa de bits que excede a taxa de bits permitida especificada na política de DRM, o conteúdo será reduzido para a resolução máxima permitida. Por exemplo, se um fluxo de 1080p for transmitido para um cliente que esteja exibindo o conteúdo em um monitor não compatível com HDCP, a política de DRM pode indicar que a resolução máxima deve ser 720p. O Primetime DRM decodificará o fluxo de 1080p e o reduzirá para 720p antes de renderizá-lo na tela. Se o navegador reproduzindo o vídeo for arrastado para um monitor que não suporta HDCP, o Primetime DRM parará de baixar o conteúdo e permitirá que ele seja reproduzido no 1080.
+* **Redução de RBOP -** Específico ao espaço HTML5, a RBOP contém o recurso automático de redução, no qual, se uma taxa de bits que excede a taxa de bits permitida especificada na política de DRM, o conteúdo será reduzido para a resolução máxima permitida. Por exemplo, se um fluxo de 1080p for transmitido para um cliente que esteja exibindo o conteúdo em um monitor não compatível com HDCP, a política de DRM pode indicar que a resolução máxima deve ser 720p. O Primetime DRM decodificará o fluxo de 1080p e o reduzirá para 720p antes de renderizá-lo na tela. Se o navegador reproduzindo o vídeo for arrastado para um monitor que não suporta HDCP, o Primetime DRM parará de baixar o conteúdo e permitirá que ele seja reproduzido no 1080.
 
 ## Problemas conhecidos na versão 5.3 {#known-issues}
 
-* `Hasher.bat (flashaccess-hasher.jar)` gera mensagens de log para `flashaccess-global.log.`Você deve garantir que o `flashaccess-global.log` arquivo esteja no mesmo diretório com Hasher.bat.
+* `Hasher.bat (flashaccess-hasher.jar)` gera mensagens de log para  `flashaccess-global.log.`Você deve garantir que o  `flashaccess-global.log` arquivo esteja no mesmo diretório com Hasher.bat.
 
-* A saída de algumas das `toJSON()`chamadas retorna `Strings` que não estão totalmente em conformidade com o JSON ou estão totalmente em conformidade de forma independente (ou seja, sem a composição das estruturas JSON).
+* A saída de algumas das chamadas `toJSON()`retorna `Strings` que não são totalmente compatíveis com JSON ou totalmente compatíveis de forma independente (ou seja, sem a composição de estruturas JSON).
 
 * O servidor de chave Xbox aceita solicitações de chave que têm o valor da versão igual a 1.
 
@@ -55,4 +58,4 @@ Várias classes implementam um método toJSON() que deve retornar uma representa
 
 ## Recursos úteis {#helpful-resources}
 
-* Consulte a documentação de ajuda completa na página Aprendizagem e suporte [do](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte da Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
