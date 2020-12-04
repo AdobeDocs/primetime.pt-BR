@@ -1,41 +1,44 @@
 ---
-description: Para exibir anúncios em banners, é necessário criar instâncias de banner e permitir que o TVSDK do navegador acompanhe eventos relacionados a anúncios.
-seo-description: Para exibir anúncios em banners, é necessário criar instâncias de banner e permitir que o TVSDK do navegador acompanhe eventos relacionados a anúncios.
+description: Para exibir anúncios em banners, é necessário criar instâncias de banner e permitir que o TVSDK do navegador escute eventos relacionados a anúncios.
+seo-description: Para exibir anúncios em banners, é necessário criar instâncias de banner e permitir que o TVSDK do navegador escute eventos relacionados a anúncios.
 seo-title: Exibir anúncios em banners
 title: Exibir anúncios em banners
 uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
 
 # Exibir anúncios em banners {#display-banner-ads}
 
-Para exibir anúncios em banners, é necessário criar instâncias de banner e permitir que o TVSDK do navegador acompanhe eventos relacionados a anúncios.
+Para exibir anúncios em banners, é necessário criar instâncias de banner e permitir que o TVSDK do navegador escute eventos relacionados a anúncios.
 
-O TVSDK do navegador fornece uma lista de anúncios de banner associados a um anúncio linear pelo `AdobePSDK.PSDKEventType.AD_STARTED` evento.
+O TVSDK do navegador fornece uma lista de anúncios de banner associados a um anúncio linear por meio do evento `AdobePSDK.PSDKEventType.AD_STARTED`.
 
 Os manifestos podem especificar anúncios de banner companheiro:
 
 * Um trecho HTML
 * O URL de uma página do iFrame
-* O URL de uma imagem estática ou de um arquivo Adobe Flash SWF
+* O URL de uma imagem estática ou um arquivo SWF de Flash Adobe
 
 Para cada anúncio complementar, o TVSDK do navegador indica quais tipos estão disponíveis para seu aplicativo.
 
-Adicione um ouvinte para o evento `AdobePSDK.PSDKEventType.AD_STARTED` que faça o seguinte:
+Adicione um ouvinte para o evento `AdobePSDK.PSDKEventType.AD_STARTED` que faz o seguinte:
 1. Limpa os anúncios existentes na instância do banner.
 1. Obtém a lista de anúncios complementares de `Ad.getCompanionAssets`.
-1. Se a lista de anúncios complementares não estiver vazia, passe o mouse sobre a lista para ver as instâncias de banner.
+1. Se a lista de anúncios complementares não estiver vazia, repita a lista para ver as instâncias de banner.
 
-   Cada instância do banner (an `AdBannerAsset`) contém informações, como largura, altura, tipo de recurso (html, iframe ou estático) e dados necessários para exibir o banner complementar.
-1. Se um anúncio de vídeo não tiver anúncios complementares reservados, a lista de ativos complementares não conterá dados para esse anúncio de vídeo.
+   Cada instância do banner (um `AdBannerAsset`) contém informações, como largura, altura, tipo de recurso (html, iframe ou estático) e dados necessários para exibir o banner complementar.
+1. Se um anúncio de vídeo não tiver anúncios adicionais reservados, a lista de ativos complementares não conterá dados para esse anúncio de vídeo.
 1. Envia as informações do banner para uma função na sua página que exibe os banners em um local apropriado.
 
-   Geralmente, isso é uma `div`função e sua função usa o `div ID` para exibir o banner. Por exemplo:
+   Geralmente é um `div`, e sua função usa `div ID` para exibir o banner. Por exemplo:
 
-   Adicione o ouvinte de eventos:
+   Adicione o ouvinte do evento:
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
