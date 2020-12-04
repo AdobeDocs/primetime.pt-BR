@@ -33,7 +33,7 @@ O TVSDK oferece suporte imediato para tags de publicidade #EXT específicas. Seu
 >
 >**Limitação**
 >
->Quando o HLS é reproduzido usando a `Video` tag no Safari, e não usando o recurso Flash Fallback, esse recurso não estará disponível no Safari.
+>Quando o HLS é reproduzido usando a tag `Video` no Safari, e não usando o recurso Flash Fallback, esse recurso não estará disponível no Safari.
 
 ## Uso de tags HLS personalizadas {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
@@ -67,9 +67,9 @@ seg5.ts
 
 Seu aplicativo pode configurar os seguintes cenários:
 
-* Uma notificação quando `#EXT-X-ASSET` as tags, ou qualquer outro conjunto de nomes de tags personalizadas aos quais você se inscreveu, existem no arquivo.
-* Insira publicidades quando uma `#EXT-X-AD` tag, ou qualquer outro nome de tag personalizado, for encontrada no stream.
+* Uma notificação quando as tags `#EXT-X-ASSET`, ou qualquer outro conjunto de nomes de tags personalizadas que você assinou, existem no arquivo.
+* Insira publicidades quando uma tag `#EXT-X-AD`, ou qualquer outro nome de tag personalizado, for encontrada no fluxo.
 
-Você pode assinar qualquer uma das seguintes tags como tags personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Você é notificado com um `TimedMetadata` evento durante a análise de arquivos manifest.
+Você pode assinar qualquer uma das seguintes tags como tags personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Você é notificado com um evento `TimedMetadata` durante a análise de arquivos manifest.
 
-Há algumas tags de publicidade, como `EXT-X-CUE`, nas quais você já está inscrito. Essas tags de publicidade também são usadas pelo gerador de oportunidades padrão. Você pode especificar quais tags de publicidade são usadas pelo gerador de oportunidades padrão, definindo a `adTags` propriedade.
+Há algumas tags de publicidade, como `EXT-X-CUE`, nas quais você já está inscrito. Essas tags de publicidade também são usadas pelo gerador de oportunidades padrão. Você pode especificar quais tags de publicidade são usadas pelo gerador de oportunidades padrão, definindo a propriedade `adTags`.
