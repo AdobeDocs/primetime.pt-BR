@@ -6,24 +6,27 @@ title: Uso de DRMContentData para pré-carregar licenças
 uuid: 5cedd077-0613-4677-8fb0-81237d7ac61a
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
 
 # Uso de DRMContentData para pré-carregar licenças{#using-drmcontentdata-to-pre-load-licenses}
 
-As etapas a seguir descrevem o fluxo de trabalho para pré-carregar a licença de um arquivo de mídia protegido usando um `DRMContentData` objeto.
+As etapas a seguir descrevem o fluxo de trabalho para o pré-carregamento da licença de um arquivo de mídia protegido usando um objeto `DRMContentData`.
 
 1. Obtenha os metadados binários de DRM para o conteúdo empacotado.
 
-   Se estiver usando o Primetime DRM Java Reference Implementations Packager, esse arquivo de metadados será gerado automaticamente com uma [!DNL .metadata] extensão. Você pode, por exemplo, baixar esses metadados usando a `URLLoader` classe. Se estiver usando conteúdo HLS ou HDS, os metadados serão referenciados no arquivo de manifesto de conteúdo ( [!DNL .m3u8] ou [!DNL .f4m]) ou incluídos *dentro* do arquivo de manifesto como uma string codificada em Base64 (que deve ser decodificada em Base64 antes do consumo).
-1. Crie um `DRMContentData` objeto, transmitindo os metadados para a função do construtor:
+   Se estiver usando o Primetime DRM Java Reference Implementations Packager, esse arquivo de metadados será gerado automaticamente com uma extensão [!DNL .metadata]. Você pode, por exemplo, baixar esses metadados usando a classe `URLLoader`. Se estiver usando conteúdo HLS ou HDS, os metadados serão referenciados no arquivo de manifesto de conteúdo ( [!DNL .m3u8] ou [!DNL .f4m]) ou incluídos *no* arquivo de manifesto como uma string codificada em Base64 (que deve ser decodificada em Base64 antes do consumo).
+1. Crie um objeto `DRMContentData`, transmitindo os metadados para a função do construtor:
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );
    ```
 
-1. O restante das etapas são idênticas ao fluxo de trabalho descrito em Detalhes *do processo de proteção de* conteúdo.
+1. O restante das etapas são idênticas ao fluxo de trabalho descrito em *Detalhes do processo de proteção de conteúdo*.
 
 <!--<a id="example_EBEDA8E10F6344CABA4DE31DC342B8F8"></a>-->
 
