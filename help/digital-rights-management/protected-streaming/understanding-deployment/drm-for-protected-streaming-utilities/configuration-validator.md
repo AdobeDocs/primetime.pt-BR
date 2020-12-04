@@ -1,18 +1,21 @@
 ---
-description: A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Configuration Validator antes de iniciar o servidor. Este utilitário pode detectar a maioria dos erros de configuração precocemente, antes de causar falhas durante o processamento da solicitação.
-seo-description: A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Configuration Validator antes de iniciar o servidor. Este utilitário pode detectar a maioria dos erros de configuração precocemente, antes de causar falhas durante o processamento da solicitação.
+description: A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Configuration Validator antes de start do servidor. Este utilitário pode detectar a maioria dos erros de configuração precocemente, antes de causar falhas durante o processamento da solicitação.
+seo-description: A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Configuration Validator antes de start do servidor. Este utilitário pode detectar a maioria dos erros de configuração precocemente, antes de causar falhas durante o processamento da solicitação.
 seo-title: Validador de configuração
 title: Validador de configuração
 uuid: 7b44919a-0319-4675-95e2-ad1ad72ec0cb
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
 
 # Validador de configuração{#configuration-validator}
 
-A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Configuration Validator antes de iniciar o servidor. Este utilitário pode detectar a maioria dos erros de configuração precocemente, antes de causar falhas durante o processamento da solicitação.
+A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Configuration Validator antes de start do servidor. Este utilitário pode detectar a maioria dos erros de configuração precocemente, antes de causar falhas durante o processamento da solicitação.
 
 Para executar o validador, digite:
 
@@ -32,7 +35,7 @@ java -jar libs/flashaccess-validator.jar
 </i class="+ topic>
 ```
 
-Para cada um dos arquivos de configuração do servidor de licenças, o Validador pode executar a validação baseada em arquivo, o que garante que o arquivo XML esteja bem formado e esteja em conformidade com o esquema do arquivo de configuração.
+Para cada um dos arquivos de configuração do servidor de licenças, o Validador pode executar a validação baseada em arquivo, garantindo que o arquivo XML esteja bem formado e esteja em conformidade com o schema do arquivo de configuração.
 
 Para executar a validação baseada em arquivo no arquivo de configuração global, digite:
 
@@ -46,7 +49,7 @@ Para executar a validação baseada em arquivo no arquivo de configuração do l
 Validator --<file path>/flashaccess-tenant.xml --tenant
 ```
 
-O Validador também pode executar a validação baseada em implantação. Além de verificar a conformidade com o esquema, esse nível de validação também verifica se os valores especificados são válidos. Por exemplo, garante que os arquivos referenciados existam.
+O Validador também pode executar a validação baseada em implantação. Além de verificar a conformidade com o schema, esse nível de validação também verifica se os valores especificados são válidos. Por exemplo, garante que os arquivos referenciados existam.
 
 A validação baseada na implantação pode ser executada nos seguintes níveis:
 
