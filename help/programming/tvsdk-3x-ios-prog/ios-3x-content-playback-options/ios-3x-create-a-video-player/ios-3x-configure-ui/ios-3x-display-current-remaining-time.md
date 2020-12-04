@@ -6,6 +6,9 @@ title: Exibir o tempo atual e o tempo restante
 uuid: b96ade8b-1c81-4367-ba37-fc41a92d7cbc
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
