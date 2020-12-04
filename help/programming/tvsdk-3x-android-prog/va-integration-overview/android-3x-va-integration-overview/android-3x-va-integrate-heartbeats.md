@@ -26,8 +26,8 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Importante:  Este nome de arquivo de configuração JSON deve permanecer <span class="filepath"> ADBMobileConfig.json </span>. Não é possível alterar o nome e o caminho deste ficheiro de configuração. O caminho para este arquivo deve ser <span class="filepath"> &lt;raiz de origem&gt;/assets </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>Importante:  Este nome de arquivo de configuração JSON deve permanecer <span class="filepath"> ADBMobileConfig.json </span>. Não é possível alterar o nome e o caminho deste ficheiro de configuração. O caminho para este arquivo deve ser <span class="filepath"> &lt;source root&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Ponto de extremidade do servidor de rastreamento do AppMeasurement </td> 
@@ -50,7 +50,7 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
 
 Para configurar o rastreamento de vídeo no player:
 
-1. Confirme se as opções de tempo de carregamento no arquivo de `ADBMobileConfig.json` recurso estão corretas.
+1. Confirme se as opções de tempo de carregamento no arquivo de recurso `ADBMobileConfig.json` estão corretas.
 
    ```
    { 
@@ -84,8 +84,8 @@ Para configurar o rastreamento de vídeo no player:
    Para configurar as opções de tempo de carregamento:
 
 
-   1. Confirme se o `ADBMobileConfig.json` arquivo contém os valores apropriados (fornecidos por Adobe).
-   1. Confirme se este arquivo está localizado na `assets/` pasta.
+   1. Confirme se o arquivo `ADBMobileConfig.json` contém os valores apropriados (fornecidos por Adobe).
+   1. Confirme se este arquivo está localizado na pasta `assets/`.
 
       Essa pasta deve estar localizada na raiz da árvore de origem do aplicativo.
 
@@ -135,13 +135,13 @@ Para configurar o rastreamento de vídeo no player:
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. Defina os metadados do Video Analytics na `videoAnalyticsProvider` instância.
+   1. Defina os metadados do Video Analytics na instância `videoAnalyticsProvider`.
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. Anexe a instância do player de mídia à `videoAnalyticsProvider` instância:
+   1. Anexe a instância do player de mídia à instância `videoAnalyticsProvider`:
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
