@@ -6,6 +6,9 @@ title: Inserção parcial de quebra de anúncio
 uuid: 296a9b6a-9e9f-4ca7-ab8a-c8cbc98fb9af
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Você pode habilitar uma experiência de TV de poder participar no meio de um anúncio, em fluxos ao vivo.
 
-O recurso de Quebra parcial de anúncio permite que você imite uma experiência semelhante à TV em que, se o cliente iniciar um fluxo ao vivo dentro de um midroll, ele será iniciado dentro desse midroll. É como mudar para um canal de TV e os comerciais funcionam perfeitamente.
+O recurso de Quebra parcial de anúncio permite que você imite uma experiência semelhante à TV em que, se o cliente start um fluxo ao vivo dentro de um midroll, ele será start dentro desse midroll. É como mudar para um canal de TV e os comerciais funcionam perfeitamente.
 
 Por exemplo, se um usuário ingressar no meio de uma pausa de anúncio de 90 segundos (três anúncios de 30 segundos), 10 segundos após a segunda publicidade (ou seja, 40 segundos após a pausa), ocorrerá o seguinte:
 
