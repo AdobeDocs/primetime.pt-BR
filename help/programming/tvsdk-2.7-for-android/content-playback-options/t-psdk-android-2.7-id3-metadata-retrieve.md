@@ -6,6 +6,9 @@ title: Tags ID3
 uuid: 3fa199cd-668d-4d26-928f-074b6114b84c
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
@@ -23,13 +26,13 @@ Quando o TVSDK detecta os metadados ID3, ele emite uma notificação com os segu
 * TYPE = ID3
 * NAME = ID3
 
-1. Implemente um ouvinte de evento para `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` e registre-o no `MediaPlayer` objeto.
+1. Implemente um ouvinte de evento para `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` e registre-o com o objeto `MediaPlayer`.
 
    O TVSDK chama esse ouvinte quando detecta `ID3` metadados.
 
    >[!TIP]
    >
-   >As dicas de anúncio personalizadas usam o mesmo `onTimedMetadata` evento para indicar a detecção de uma nova tag. Isso não deve causar confusão, pois as dicas de anúncio personalizadas são detectadas no nível do manifesto e as tags ID3 são incorporadas no fluxo. Para obter mais informações, consulte Tags [personalizadas](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
+   >As dicas de anúncio personalizadas usam o mesmo evento `onTimedMetadata` para indicar a detecção de uma nova tag. Isso não deve causar confusão, pois as dicas de anúncio personalizadas são detectadas no nível do manifesto e as tags ID3 são incorporadas no fluxo. Para obter mais informações, consulte [Tags personalizadas](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
 
 
 1. Recupere os metadados.
