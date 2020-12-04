@@ -6,6 +6,9 @@ title: Exemplo Permite que os usuários alterem o rastreamento de legenda
 uuid: 4b69d569-0d6e-4388-9fe3-488e2a4d762d
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Este é um exemplo de como criar um botão que permite ao usuário selecionar um
      android:text="CC" /> 
    ```
 
-1. Converta a lista de faixas de legenda fechadas disponíveis em uma matriz de sequências de caracteres. As faixas de legenda fechada que têm atividade, ou seja, canais para os quais o TVSDK descobriu dados, são marcadas de acordo:
+1. Converta a lista de faixas de legenda fechadas disponíveis em uma matriz de string. As faixas de legenda fechada que têm atividade, ou seja, canais para os quais o TVSDK descobriu dados, são marcadas de acordo:
 
    ```java
    /** 
