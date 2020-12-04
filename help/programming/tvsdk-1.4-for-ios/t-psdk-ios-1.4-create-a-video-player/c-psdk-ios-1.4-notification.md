@@ -1,20 +1,23 @@
 ---
-description: O player pode acompanhar vários eventos que indicam o estado do player.
-seo-description: O player pode acompanhar vários eventos que indicam o estado do player.
+description: O player pode ouvir vários eventos que indicam o estado do player.
+seo-description: O player pode ouvir vários eventos que indicam o estado do player.
 seo-title: Configurar notificações
 title: Configurar notificações
 uuid: 77cc5b45-f91f-4b71-9a67-5d17cda81da3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '351'
+ht-degree: 0%
 
 ---
 
 
 # Configurar notificações{#set-up-notifications}
 
-O player pode acompanhar vários eventos que indicam o estado do player.
+O player pode ouvir vários eventos que indicam o estado do player.
 
-Supondo que `PTMediaPlayer` seja uma propriedade do player do cliente, `self.player` no exemplo a seguir representa a `PTMediaPlayer` instância. O exemplo a seguir implementa o `addObservers` método mostrado nas instruções de configuração de PTMediaPlayer e inclui a maioria das notificações:
+Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.player` no exemplo a seguir representa a instância `PTMediaPlayer`. O exemplo a seguir implementa o método `addObservers` mostrado nas instruções de configuração de PTMediaPlayer e inclui a maioria das notificações:
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMediaPlayerStatusChange:)  
@@ -54,115 +57,115 @@ Supondo que `PTMediaPlayer` seja uma propriedade do player do cliente, `self.pla
    <td colname="2"> <b>Significado</b> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakCompletedNotification  </span> </td> 
    <td colname="2"> Uma pausa de anúncio terminou. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakStartedNotification  </span> </td> 
    <td colname="2"> Uma pausa de anúncio começou. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdClickNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdClickNotification  </span> </td> 
    <td colname="2"> Um usuário clicou em um anúncio de banner. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdCompletedNotification  </span> </td> 
    <td colname="2"> Um anúncio individual terminou. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdProgressNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdProgressNotification  </span> </td> 
    <td colname="2"> Um anúncio progrediu; enviado constantemente enquanto um anúncio é reproduzido. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdStartedNotification  </span> </td> 
    <td colname="2"> Um anúncio individual foi iniciado. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTBackgroundManifestErrorNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTBackgroundManifestErrorNotification  </span> </td> 
    <td colname="2"> Falha ao baixar o manifesto em segundo plano. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingCompletedNotification  </span> </td> 
    <td colname="2"> Buffering concluído. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingStartedNotification  </span> </td> 
    <td colname="2"> O player de mídia entra em um estado de buffering. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTAudioTrackChangeCompleted </span> </td> 
+   <td colname="1"> <span class="codeph"> PTAudioTrackChangeCompleted  </span> </td> 
    <td colname="2"> Uma alteração na faixa de áudio da mídia que está sendo reproduzida foi concluída. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTAudioTrackChangeStarted </span> </td> 
+   <td colname="1"> <span class="codeph"> PTAudioTrackChangeStarted  </span> </td> 
    <td colname="2"> Uma alteração na faixa de áudio da mídia que está sendo reproduzida no momento é iniciada. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerItemChangedNotification </span> </td> 
-   <td colname="2"> Um <span class="codeph"> PTMediaPlayerItem diferente </span> do <span class="codeph"> PTMediaPlayer </span> foi definido. </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerItemChangedNotification  </span> </td> 
+   <td colname="2"> Um <span class="codeph"> PTMediaPlayerItem </span> diferente do <span class="codeph"> PTMediaPlayer </span> foi definido. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerItemDRMMetadataChanged </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerItemDRMMetadataChanged  </span> </td> 
    <td colname="2"> Metadados DRM alterados. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerMediaSelectionOptionsAvailableNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerMediaSelectionOptionsAvailableNotification  </span> </td> 
    <td colname="2"> Há novas legendas e faixas de áudio alternativas ( <span class="codeph"> PTMediaSelectionOption </span>). </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerNewNotificationEntryAddedNotification </span> </td> 
-   <td colname="2"> Uma nova <span class="codeph"> notificação PTNotificação </span> foi adicionada ao <span class="codeph"> PTNotifiedHistoryItem </span> do <span class="codeph"> PTMediaPlayerItem atual </span>, isto é, quando um evento de notificação é adicionado ao histórico de notificação. </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerNewNotificationEntryAddedNotification  </span> </td> 
+   <td colname="2"> Um novo <span class="codeph"> PTNotificação </span> foi adicionado ao <span class="codeph"> PTNotifiedHistoryItem </span> atual <span class="codeph"> PTMediaPlayerItem </span>, isto é, quando um evento de notificação é adicionado ao histórico de notificações. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayCompletedNotification  </span> </td> 
    <td colname="2"> A reprodução de mídia terminou. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekCompletedNotification  </span> </td> 
    <td colname="2"> A busca foi concluída. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekErrorNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekErrorNotification  </span> </td> 
    <td colname="2"> Falha na operação de busca atual. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekStartedNotification  </span> </td> 
    <td colname="2"> Buscar está começando. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayStartedNotification  </span> </td> 
    <td colname="2"> Reprodução iniciada. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerStatusNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerStatusNotification  </span> </td> 
    <td colname="2"> O status do player foi alterado. Os possíveis valores de status são: 
     <ul id="ul_DDBE8CAD5D5A46D2AAA6B98F0754A881"> 
-     <li id="li_48F9AD580BCB4BB8A5C2DFED0DF9970F"> <p> <span class="codeph"> PTMediaPlayerStatusCreated </span> </p> </li> 
-     <li id="li_EDFB0765CF14422A95C9119DA3394163"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing </span> </p> </li> 
-     <li id="li_06E1576D50C646C19E88F0F14912F2C0"> <p> <span class="codeph"> PTMediaPlayerStatusInitialized </span> </p> </li> 
-     <li id="li_E8B7157B5B234DFFABC2E5BEC241AB84"> <p> <span class="codeph"> PTMediaPlayerStatusReady </span> </p> </li> 
-     <li id="li_FF2E66B390154EAA8791B4D874CC62E1"> <p> <span class="codeph"> PTMediaPlayerStatusPlaying </span> </p> </li> 
-     <li id="li_6F3306832B7642E4BEE84068383AFAF3"> <p> <span class="codeph"> PTMediaPlayerStatusPaused </span> </p> </li> 
-     <li id="li_AE579AB888954F89A7F1115CAC0655E6"> <p> <span class="codeph"> PTMediaPlayerStatusStopped </span> </p> </li> 
-     <li id="li_A4CEB39374E84B4AA4F7202E67B9BE43"> <p> <span class="codeph"> PTMediaPlayerStatusCompleted </span> </p> </li> 
-     <li id="li_C50EB9C459264641A9FF70EF901D7474"> <p> <span class="codeph"> PTMediaPlayerStatusError </span> </p> </li> 
+     <li id="li_48F9AD580BCB4BB8A5C2DFED0DF9970F"> <p> <span class="codeph"> PTMediaPlayerStatusCreated  </span> </p> </li> 
+     <li id="li_EDFB0765CF14422A95C9119DA3394163"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing  </span> </p> </li> 
+     <li id="li_06E1576D50C646C19E88F0F14912F2C0"> <p> <span class="codeph"> PTMediaPlayerStatusInitialized  </span> </p> </li> 
+     <li id="li_E8B7157B5B234DFFABC2E5BEC241AB84"> <p> <span class="codeph"> PTMediaPlayerStatusReady  </span> </p> </li> 
+     <li id="li_FF2E66B390154EAA8791B4D874CC62E1"> <p> <span class="codeph"> PTMediaPlayerStatusPlaying  </span> </p> </li> 
+     <li id="li_6F3306832B7642E4BEE84068383AFAF3"> <p> <span class="codeph"> PTMediaPlayerStatusPaused  </span> </p> </li> 
+     <li id="li_AE579AB888954F89A7F1115CAC0655E6"> <p> <span class="codeph"> PTMediaPlayerStatusStopped  </span> </p> </li> 
+     <li id="li_A4CEB39374E84B4AA4F7202E67B9BE43"> <p> <span class="codeph"> PTMediaPlayerStatusCompleted  </span> </p> </li> 
+     <li id="li_C50EB9C459264641A9FF70EF901D7474"> <p> <span class="codeph"> PTMediaPlayerStatusError  </span> </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerTimeChangeNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerTimeChangeNotification  </span> </td> 
    <td colname="2"> A hora atual da reprodução mudou. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerTimelineChangedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerTimelineChangedNotification  </span> </td> 
    <td colname="2"> A linha do tempo atual do player mudou. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" colsep="1" rowsep="1"> <span class="codeph"> PTTimedMetadataChangedNotification </span> </td> 
+   <td colname="1" colsep="1" rowsep="1"> <span class="codeph"> PTTimedMetadataChangedNotification  </span> </td> 
    <td colname="2"> O TVSDK encontrou a primeira ocorrência de uma tag assinada. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification </span> </td> 
-   <td colname="2"> <p>Uma tag subscrita é identificada no manifesto de plano de fundo e uma nova instância <span class="codeph"> </span> PTTimedMetadata é preparada a partir dela. </p> </td> 
+   <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification  </span> </td> 
+   <td colname="2"> <p>Uma tag subscrita é identificada no manifesto em segundo plano e uma nova instância <span class="codeph"> PTTimedMetadata </span> é preparada a partir dela. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -171,7 +174,7 @@ Supondo que `PTMediaPlayer` seja uma propriedade do player do cliente, `self.pla
 
 Os trechos de código a seguir ilustram algumas das maneiras pelas quais você pode usar as notificações.
 
-Procure a `PTAdBreak` instância usando `PTMediaPlayerAdBreakKey`:
+Procure a instância `PTAdBreak` usando `PTMediaPlayerAdBreakKey`:
 
 ```
  - (void) onMediaPlayerAdBreakStarted:(NSNotification *) notification { 
@@ -182,7 +185,7 @@ Procure a `PTAdBreak` instância usando `PTMediaPlayerAdBreakKey`:
 } 
 ```
 
-Definir `subtitlesOptions` e `audioOptions`:
+Defina `subtitlesOptions` e `audioOptions`:
 
 ```
  - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification \*) notification { 
@@ -194,7 +197,7 @@ Definir `subtitlesOptions` e `audioOptions`:
 } 
 ```
 
-Procure a `PTAd` instância usando `PTMediaPlayerAdKey`:
+Procure a instância `PTAd` usando `PTMediaPlayerAdKey`:
 
 ```
  - (void) onMediaPlayerAdPlayStarted:(NSNotification \*)  notification { 
