@@ -6,6 +6,9 @@ title: Inserir anúncios
 uuid: 25c79822-a861-427b-b6a8-24714b21aae4
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Um *`ad break`* contém uma ou mais publicidades que são reproduzidas em sequê
 
 ## Desativar anúncios precedentes {#disable-preroll-ads}
 
-Para desativar a pre-roll, altere os geradores de oportunidade padrão para não fazer a chamada pré-roll. Os geradores de oportunidade padrão são:
+Para desativar o pre-roll, altere os geradores de oportunidade padrão para não fazer a chamada pré-roll. Os geradores de oportunidade padrão são:
 
 ```
 @inheritDoc 
