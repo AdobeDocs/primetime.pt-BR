@@ -6,6 +6,9 @@ title: Formato de linha do tempo VOD
 uuid: 6daaf605-e5ee-48dc-a222-a5973b3d915a
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,10 @@ B,duration,maximum_number_of_ads,position
 ```
 
 A duração é em segundos, com precisão de 0,001 (milissegundos); o número de anúncios é um número inteiro. A posição é uma das seguintes:
-* **n** Nenhum — no ad* **p** Pre-roll — antes do conteúdo* **m** intercalar — no conteúdo* **t** Pós-rolagem — após o conteúdo
+* **n** Nenhum — nenhum anúncio
+* **p** Pré-registro — antes do conteúdo
+* **m** Mid-roll — dentro do conteúdo
+* **t** Pós-rolagem — após o conteúdo
 
 Por exemplo, `B,60,2,p` representa uma quebra de um minuto para até duas publicidades antes do conteúdo.
 
