@@ -1,18 +1,21 @@
 ---
-description: O Video Player Ad-Serving Interface Definition (VPAID) 2.0 fornece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores direcionem melhor anúncios, rastreiem impressões de anúncios e monetizem conteúdo de vídeo.
-seo-description: O Video Player Ad-Serving Interface Definition (VPAID) 2.0 fornece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores direcionem melhor anúncios, rastreiem impressões de anúncios e monetizem conteúdo de vídeo.
+description: O Video Player Ad-Serving Interface Definition (VPAID) 2.0 fornece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores obtenham anúncios de melhor público alvo, acompanhem impressões de anúncios e monetizem conteúdo de vídeo.
+seo-description: O Video Player Ad-Serving Interface Definition (VPAID) 2.0 fornece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores obtenham anúncios de melhor público alvo, acompanhem impressões de anúncios e monetizem conteúdo de vídeo.
 seo-title: Suporte a anúncios VPAID 2.0
 title: Suporte a anúncios VPAID 2.0
 uuid: 7168a6e4-9c5e-4d3a-8710-867cf98e4445
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '423'
+ht-degree: 0%
 
 ---
 
 
 # Suporte a anúncios VPAID 2.0 {#vpaid-ad-support}
 
-O Video Player Ad-Serving Interface Definition (VPAID) 2.0 fornece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores direcionem melhor anúncios, rastreiem impressões de anúncios e monetizem conteúdo de vídeo.
+O Video Player Ad-Serving Interface Definition (VPAID) 2.0 fornece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores obtenham anúncios de melhor público alvo, acompanhem impressões de anúncios e monetizem conteúdo de vídeo.
 
 Os seguintes recursos são suportados:
 
@@ -22,7 +25,7 @@ Os seguintes recursos são suportados:
 * Anúncios VPAID lineares em conteúdo de vídeo sob demanda (VOD)
 * Anúncios VPAID do JavaScript
 
-   Os anúncios VPAID devem ter como base o JavaScript e a resposta do anúncio deve identificar o tipo de mídia do anúncio VPAID como `application/javascript`.
+   Os anúncios VPAID devem ter como base JavaScript e a resposta do anúncio deve identificar o tipo de mídia do anúncio VPAID como `application/javascript`.
 
 Os seguintes recursos não são suportados:
 
@@ -31,17 +34,17 @@ Os seguintes recursos não são suportados:
 * Anúncios não lineares, como anúncios sobrepostos, anúncios companheiros dinâmicos, anúncios minimizáveis, anúncios desdobráveis e anúncios expansíveis
 * Pré-carregamento de anúncios VPAID
 * Anúncios VPAID em conteúdo ativo
-* Anúncios VPAID Flash
+* Anúncios VPAID do Flash
 
 ## Alterações da API {#section_D62F3E059C6C493592D34534B0BFC150}
 
 As seguintes alterações foram feitas na API:
 
-* Uma `getCustomAdView` `MediaPlayer` função foi adicionada e retorna a exibição da Web que renderiza o anúncio VPAID.
+* Uma função `getCustomAdView` foi adicionada em `MediaPlayer` e retorna a visualização da Web que renderiza o anúncio VPAID.
 
-   Para obter mais informações sobre o `CustomAdView` objeto retornado por essa função, consulte Referências [de](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html)API.
+   Para obter mais informações sobre o objeto `CustomAdView` retornado por esta função, consulte [Referências de API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html).
 
-* Um `CUSTOM_AD` evento é despachado da instância do player de mídia.
+* Um evento `CUSTOM_AD` é despachado da instância do player de mídia.
 
    O aplicativo pode registrar um retorno de chamada de evento implementando `CustomAdEventListener`.
 
@@ -53,8 +56,8 @@ As seguintes alterações foram feitas na API:
 
 Enquanto o anúncio VPAID está sendo reproduzido:
 
-* O anúncio VPAID é exibido em um contêiner de exibição acima da exibição do player, de modo que o código que depende de toques dos usuários na exibição do player não funciona.
-* O player de conteúdo principal é pausado e as chamadas para `pause` e `play` na instância do player são usadas para pausar e retomar o anúncio VPAID.
+* O anúncio VPAID é exibido em uma container de visualização acima da visualização do player, de modo que o código que depende de toques dos usuários na visualização do player não funciona.
+* O player de conteúdo principal está pausado e as chamadas para `pause` e `play` na instância do player são usadas para pausar e retomar o anúncio VPAID.
 
 * Anúncios VPAID não têm uma duração predefinida, pois o anúncio pode ser interativo.
 
@@ -62,11 +65,11 @@ Enquanto o anúncio VPAID está sendo reproduzido:
 
 ## Implementação da integração com VPAID 2.0 {#implement-vpaid-integration}
 
-Para adicionar suporte a VPAID 2.0, adicione uma exibição de anúncio personalizada e ouvintes apropriados.
+Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
 
 Para adicionar suporte a VPAID 2.0:
 
-1. Adicione a exibição de anúncio personalizada à interface do player.
+1. Adicione a visualização de anúncio personalizada à interface do player.
 
    ```java
    _playerFrame.addView(mediaPlayer.createCustomAdView());
