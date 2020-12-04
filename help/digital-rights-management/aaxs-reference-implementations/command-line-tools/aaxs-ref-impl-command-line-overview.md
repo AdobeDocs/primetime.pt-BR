@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Ferramentas de linha de comando para empacotar conteúdo e criar listas de revogações {#command-line-tools-for-packaging-content-revocation-lists}
+# Ferramentas de linha de comando para empacotar conteúdo e criar listas de revogação {#command-line-tools-for-packaging-content-revocation-lists}
 
 A implementação de referência inclui as seguintes ferramentas de linha de comando:
 
@@ -42,13 +42,13 @@ O arquivo de configuração padrão é [!DNL flashaccesstools.properties]. Está
 
 O arquivo de configuração usa o formato de arquivo de propriedade Java. Se os valores de qualquer uma das propriedades contiverem caracteres especiais, lembre-se das seguintes restrições:
 
-* Evite barras invertidas com uma barra invertida adicional. Por exemplo, para especificar o [!DNL C:\credentials.pfx] arquivo, especifique-o como [!DNL C:\\credentials.pfx] ou `C:/credentials.pfx`. Para especificar um arquivo em um servidor de rede, especifique `\\\\server\\folder\\filename.pfx`.
-* O arquivo de configuração pode conter apenas caracteres latinos-1. Se você precisar usar caracteres não latinos-1, use a sequência de escape Unicode apropriada (usando, opcionalmente, a [!DNL native2ascii] ferramenta que acompanha o Java).
+* Evite barras invertidas com uma barra invertida adicional. Por exemplo, para especificar o arquivo [!DNL C:\credentials.pfx], especifique-o como [!DNL C:\\credentials.pfx] ou `C:/credentials.pfx`. Para especificar um arquivo em um servidor de rede, especifique `\\\\server\\folder\\filename.pfx`.
+* O arquivo de configuração pode conter apenas caracteres latinos-1. Se você precisar usar caracteres não latinos-1, use a sequência de escape Unicode apropriada (usando, opcionalmente, a ferramenta [!DNL native2ascii] que acompanha o Java).
 
 Defina os valores das propriedades no arquivo de configuração antes de executar as ferramentas. Para algumas das ferramentas de linha de comando, você pode definir os valores de algumas opções através da linha de comando ou do arquivo de configuração. Nesses casos, os valores que são definidos pela linha de comando têm prioridade sobre quaisquer valores no arquivo de configuração.
 
-## Instalação das ferramentas de linha de comando  {#installing-the-command-line-tools}
+## Instalação das ferramentas de linha de comando {#installing-the-command-line-tools}
 
-Você pode copiar os arquivos necessários do [!DNL \Reference Implementation\Command Line Tools] diretório no DVD, que contém o arquivo de [!DNL flashaccesstools.properties] configuração padrão, e um [!DNL libs] diretório, que contém os arquivos JAR para as ferramentas.
+Você pode copiar os arquivos necessários do diretório [!DNL \Reference Implementation\Command Line Tools] no DVD, que contém o arquivo de configuração padrão [!DNL flashaccesstools.properties], e um diretório [!DNL libs], que contém os arquivos JAR para as ferramentas.
 
-O [!DNL samples] diretório contém vários arquivos de origem Java de amostra que demonstram o uso das APIs SDK de acesso ao Adobe. Para criar e executar as amostras, use o script [!DNL build-samples.xml] Ant.
+O diretório [!DNL samples] contém vários arquivos de origem Java de amostra que demonstram o uso das APIs SDK de acesso ao Adobe. Para criar e executar as amostras, use o script Ant [!DNL build-samples.xml].
