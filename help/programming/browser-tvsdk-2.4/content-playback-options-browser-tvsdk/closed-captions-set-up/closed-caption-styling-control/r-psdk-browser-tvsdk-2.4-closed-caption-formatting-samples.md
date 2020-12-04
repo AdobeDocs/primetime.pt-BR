@@ -6,6 +6,9 @@ title: Exemplos de formatação de legenda
 uuid: d55a506a-6662-4252-95f6-4073b2997f3b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
 
