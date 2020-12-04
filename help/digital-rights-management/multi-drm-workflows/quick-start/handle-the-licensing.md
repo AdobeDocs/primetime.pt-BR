@@ -19,7 +19,7 @@ O licenciamento é o principal mecanismo pelo qual os usuários têm permissão 
 
 Antes que seu aplicativo ou página da Web em um dispositivo de usuário final possa reproduzir conteúdo protegido por DRM, ele deve adquirir um token de um servidor de direitos ou vitrines que você, o cliente, opere. O Adobe fornece um servidor de referência de amostra para esse fim: [Servidor de referência: Servidor de direito ExpressPlay de amostra (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
-Seu servidor de direito ou vitrine solicitará um token de licença do ExpressPlay Server relevante somente depois de verificar com seus próprios sistemas back-end para determinar se o usuário específico tem direito de assistir ao conteúdo solicitado. A resposta retornada da solicitação do token de licença é um URL pronto para uso para o servidor de licença ou a resposta contém o URL em uma estrutura JSON, dependendo da solução DRM com a qual você está trabalhando.
+Seu servidor de direito ou vitrine solicitará um token de licença do ExpressPlay Server relevante somente depois de verificar com seus próprios sistemas de back-end para determinar se o usuário específico está autorizado a assistir ao conteúdo solicitado. A resposta retornada da solicitação do token de licença é um URL pronto para uso para o servidor de licença ou a resposta contém o URL em uma estrutura JSON, dependendo da solução DRM com a qual você está trabalhando.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Seu servidor de direito ou vitrine solicitará um token de licença do ExpressPl
 
 1. Faça a solicitação do token de licença.
 
-   Para um cenário de start rápido, no qual você deseja apenas verificar se os vários componentes envolvidos estão funcionando juntos, é possível usar algo como [!DNL curl] para fazer sua solicitação de token de licença (em vez de inicialmente colocar um aplicativo em funcionamento e testar chamadas a partir daí). Por exemplo:
+   Para um cenário de start rápido, no qual você deseja apenas verificar se os vários componentes envolvidos estão funcionando em conjunto, é possível usar algo como [!DNL curl] para fazer sua solicitação de token de licença (em vez de inicialmente colocar um aplicativo em funcionamento e testar chamadas a partir daí). Por exemplo:
 
    * Widevine:
 
