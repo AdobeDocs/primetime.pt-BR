@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Usamos o empacotador Bento4 e o empacotador offline Adobe para criar conteúdo DASH criptografado. Bento4 assume como entrada conteúdo mp4 não criptografado.
 
-## Compacte seu conteúdo com o Bento4{#package-your-content-with-bento}
+## Empacote seu conteúdo com Bento4{#package-your-content-with-bento}
 
 O empacotador Bento4 espera que a entrada mp4 seja pré-fragmentada. A distribuição do empacotador Bento4 inclui uma ferramenta para isso.
 
@@ -66,9 +66,9 @@ O exemplo abaixo combina esquemas PlayReady e Widevine. Nesse caso específico, 
 
 where
 
-O valor do `--encryption-key` sinalizador está no formulário `<base16 encoded key id>:<base16 encoded encryption key>`.
+O valor do sinalizador `--encryption-key` está no formato `<base16 encoded key id>:<base16 encoded encryption key>`.
 
-O sinalizador `--widevine-header=provider:intertrust#content_id:2a` informa ao empacotador que inclua a caixa pssh no manifesto, que o TVSDK atualmente requer para reprodução.
+O sinalizador `--widevine-header=provider:intertrust#content_id:2a` diz ao empacotador para incluir a caixa pssh no manifesto, que o TVSDK atualmente requer para reprodução.
 
 O valor para `-playready-header` é para aquisição de licença PlayReady.
 
