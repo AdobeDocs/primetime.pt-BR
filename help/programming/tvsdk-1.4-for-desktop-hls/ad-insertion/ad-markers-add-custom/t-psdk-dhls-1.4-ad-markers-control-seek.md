@@ -6,6 +6,9 @@ title: Controle o comportamento de reprodução para busca em marcadores de anú
 uuid: 926299c6-9c23-457d-b836-08432e4e169e
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Por padrão, quando um usuário busca por seções de anúncios passadas ou para
 
 Você pode pedir ao TVSDK para reposicionar o indicador de reprodução no início do anúncio personalizado ignorado mais recentemente quando o usuário buscar mais de um ou mais anúncios personalizados.
 
-1. Configure uma instância de Metadados com a enumeração `DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` definida com o valor da string &quot;true&quot; (não como um Booliano `true`).
+1. Configure uma instância de Metadados com a lista discriminada `DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` definida com o valor da string &quot;true&quot; (não como um Booliano `true`).
 
-1. Crie e configure uma `MediaResource` instância, transmitindo as opções de configuração adicionais para `TimeRangeCollection.toMetadata`. Este método recebe opções de configuração adicionais por meio de outra estrutura de metadados genérica.
+1. Crie e configure uma instância `MediaResource`, transmitindo as opções de configuração adicionais para `TimeRangeCollection.toMetadata`. Este método recebe opções de configuração adicionais por meio de outra estrutura de metadados genérica.
 
