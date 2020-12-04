@@ -6,6 +6,9 @@ title: Formatos JSON para rastrear URLs
 uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
 source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
 
 Se o cliente solicitar informações de rastreamento no formato JSON, o servidor manifest enviará um arquivo de volta em um dos formatos JSON.
 
-## Formato JSON para rastreamento versão 1 {#json_v1}
+## Formato JSON para rastreamento da versão 1 {#json_v1}
 
 O arquivo JSON que o servidor manifest envia se `pttrackingversion=v1` tiver o seguinte formato geral:
 
@@ -32,9 +35,9 @@ O arquivo JSON que o servidor manifest envia se `pttrackingversion=v1` tiver o s
 }, ...]}
 ```
 
-## Formato JSON para rastreamento versão 2 {#json_v2}
+## Formato JSON para rastreamento da versão 2 {#json_v2}
 
-O arquivo JSON que o servidor manifest envia se `pttrackingversion=v2` tiver o formato do exemplo a seguir, que vem de um bloco JSON típico.
+O arquivo JSON que o servidor manifest envia se `pttrackingversion=v2` tiver o formato do seguinte exemplo, que vem de um bloco JSON típico.
 
 Foi encurtada para evitar repetições desnecessárias, de modo a que a estrutura seja mais clara. Uma reticulação (três pontos, separados por espaços) indica informações omitidas em alguns URLs e entre alguns blocos de código. URLs não encurtados são exibidos em várias linhas, embora sejam exibidos em uma única linha no arquivo JSON.
 
@@ -364,9 +367,9 @@ Foi encurtada para evitar repetições desnecessárias, de modo a que a estrutur
 
 >[!NOTE]
 >
->O `offset` valor do `scte35` atributo extraído `ad breaks` pode ser negativo. Isso ocorre porque o sidecar JSON V2 contém informações sobre as quebras de anúncios que estão parcialmente na janela de reprodução atual. Portanto, o `scte35` atributo também contém informações sobre essas quebras de anúncios.
+>O valor `offset` do atributo `scte35` extraído de `ad breaks` pode ser negativo. Isso ocorre porque o sidecar JSON V2 contém informações sobre as quebras de anúncios que estão parcialmente na janela de reprodução atual. Portanto, o atributo `scte35` também contém informações sobre essas quebras de anúncio.
 
-## Formato JSON para rastreamento versão 3 {#json_v3}
+## Formato JSON para rastreamento da versão 3 {#json_v3}
 
 O arquivo JSON que o servidor manifest envia se `pttrackingversion=v3` tiver o seguinte formato geral:
 
