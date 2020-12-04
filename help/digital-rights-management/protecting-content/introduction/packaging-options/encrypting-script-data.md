@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Criptografar dados de script {#encrypting-script-data}
+# Criptografando dados de script {#encrypting-script-data}
 
 Essa opção de empacotamento especifica se os dados de script incorporados no conteúdo são criptografados.
 
