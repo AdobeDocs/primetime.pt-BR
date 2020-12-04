@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Licenças baseadas em identidade {#identity-based-licenses}
 
-Se o licenciamento baseado em identidade for usado, o servidor verificará se há um token de autenticação válido antes de emitir uma licença. Consulte Autenticação [do](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) usuário para obter detalhes sobre como manipular tokens de autenticação.
+Se o licenciamento baseado em identidade for usado, o servidor verificará se há um token de autenticação válido antes de emitir uma licença. Consulte [Autenticação do usuário](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) para obter detalhes sobre como manipular tokens de autenticação.
 
 >[!NOTE]
 >
