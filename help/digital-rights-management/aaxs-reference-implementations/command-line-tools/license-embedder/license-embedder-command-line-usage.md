@@ -4,6 +4,9 @@ title: Uso da linha de comando
 uuid: 72117619-a723-49d3-9aa9-5eefcf5b0916
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 0%
 
 ---
 
@@ -33,19 +36,19 @@ A tabela a seguir descreve as opções de linha de comando que podem ser especif
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l nome do arquivo </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l nome do arquivo  </span> </td> 
    <td colname="2" class="- topic/entry "> Nome do arquivo que contém a licença a ser incorporada. Várias opções <span class="codeph"> -l </span> podem ser especificadas para incorporar várias licenças. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename  </span> </td> 
    <td colname="2" class="- topic/entry "> Especifique os metadados de conteúdo para os quais gerar uma licença. (Obrigatório para gerar licença) </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt  </span> </td> 
    <td colname="2" class="- topic/entry "> Não pergunte se o arquivo de destino deve ser substituído. Se o arquivo de destino já existir e <span class="codeph"> -o </span> não estiver definido, um erro será retornado. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
    <td colname="2" class="- topic/entry "> Se o arquivo de destino já existir, substitua-o sem solicitar. </td> 
   </tr> 
  </tbody> 
