@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Classes de QoS {#qos-classes}
+# Classes QoS {#qos-classes}
 
 Essas classes fornecem informações que ajudam a determinar o desempenho do player.
 
