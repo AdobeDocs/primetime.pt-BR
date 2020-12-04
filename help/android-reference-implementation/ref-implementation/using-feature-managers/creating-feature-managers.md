@@ -6,6 +6,9 @@ title: Criação de gerenciadores de recursos transmitindo informações de conf
 uuid: 106ececd-a670-4360-b000-a31fec65233c
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 Os recursos do TVSDK são orientados pela configuração e implementados pelo MediaPlayer.
 
-* A configuração é a lista de configurações específicas do recurso, como a taxa de bits inicial do controle ABR e a visibilidade padrão de legenda.
+* A configuração é a lista de configurações específicas para o recurso, como a taxa de bits inicial do controle ABR e a visibilidade padrão de legenda fechada.
 
    Os gerentes de recursos precisam obter as configurações para determinar o comportamento do recurso.
 
@@ -22,11 +25,11 @@ Os recursos do TVSDK são orientados pela configuração e implementados pelo Me
 
 * `MediaPlayer` é o objeto do player de mídia TVSDK que contém o recurso de vídeo.
 
-   Os gerentes de recursos registram ouvintes de eventos TVSDK para esse objeto do player, recuperam dados da sessão de reprodução e acionam recursos TVSDK para a sessão de reprodução.
+   Os gerentes de recursos registram ouvintes de evento TVSDK para esse objeto do player, recuperam dados da sessão de reprodução e acionam recursos TVSDK para a sessão de reprodução.
 
 Cada recurso tem uma interface de configuração correspondente. Por exemplo, `CCManager` usa `ICCConfig` para recuperar a configuração. `ICCConfig` contém métodos para obter as informações de configuração relacionadas somente a legendagem fechada.
 
-O exemplo a seguir mostra o [!DNL ICCConfig.java] arquivo, configurado para receber informações sobre visibilidade de legenda fechada, estilo de fonte e borda de fonte do `MediaPlayer`:
+O exemplo a seguir mostra o arquivo [!DNL ICCConfig.java], configurado para receber informações sobre visibilidade de legenda fechada, estilo de fonte e borda de fonte de `MediaPlayer`:
 
 ```java
 // Constructor of CCManager 
@@ -64,7 +67,7 @@ O exemplo a seguir mostra o [!DNL ICCConfig.java] arquivo, configurado para rece
 }
 ```
 
-Um aplicativo que usa um recurso TVSDK pode criar seu gerenciador de recursos com um provedor de configuração e um `MediaPlayer` objeto. Por exemplo:
+Um aplicativo que usa um recurso TVSDK pode criar seu gerenciador de recursos com um provedor de configuração e um objeto `MediaPlayer`. Por exemplo:
 
 ```java
 // This application needs to use the advertising workflow feature 
