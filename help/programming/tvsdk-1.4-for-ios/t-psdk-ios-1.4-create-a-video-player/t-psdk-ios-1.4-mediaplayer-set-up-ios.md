@@ -6,15 +6,18 @@ title: Configurar o PTMediaPlayer
 uuid: 78549406-7e33-4bca-a25e-1e433f6a75d7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
 
-# Configurar o PTMediaPlayer {#set-up-the-ptmediaplayer}
+# Configurar PTMediaPlayer {#set-up-the-ptmediaplayer}
 
 O TVSDK fornece ferramentas para a criação de um aplicativo de player de vídeo avançado (seu player do Primetime), que pode ser integrado a outros componentes do Primetime.
 
-Use as ferramentas da sua plataforma para criar um player e conectá-lo à exibição do player de mídia no TVSDK, que tem métodos para reproduzir e gerenciar vídeos. Por exemplo, o TVSDK fornece métodos de reprodução e pausa. Você pode criar botões da interface do usuário na plataforma e definir os botões para chamar esses métodos TVSDK.
+Use as ferramentas da sua plataforma para criar um player e conectá-lo à visualização do player de mídia no TVSDK, que tem métodos para reproduzir e gerenciar vídeos. Por exemplo, o TVSDK fornece métodos de reprodução e pausa. Você pode criar botões da interface do usuário na plataforma e definir os botões para chamar esses métodos TVSDK.
 
 A interface PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto de player de mídia.
 
@@ -26,7 +29,7 @@ Para configurar seu `PTMediaPlayer`:
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
    ```
 
-1. Criar `PTMetadata`.
+1. Crie `PTMetadata`.
 
    Suponha que seu método `createMetada` prepare metadados (consulte [Publicidade](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
 
@@ -34,7 +37,7 @@ Para configurar seu `PTMediaPlayer`:
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. Crie `PTMediaPlayerItem` usando sua `PTMetadata` instância.
+1. Crie `PTMediaPlayerItem` usando sua instância `PTMetadata`.
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
@@ -55,7 +58,7 @@ Para configurar seu `PTMediaPlayer`:
 
 1. Defina as propriedades no player.
 
-   Estas são algumas das `PTMediaPlayer` propriedades disponíveis:
+   Estas são algumas das propriedades `PTMediaPlayer` disponíveis:
 
    ```
    player.autoPlay                    = YES;  
@@ -64,7 +67,7 @@ Para configurar seu `PTMediaPlayer`:
    player.allowsAirPlayVideo          = YES;
    ```
 
-1. Defina a propriedade de exibição do player.
+1. Defina a propriedade de visualização do player.
 
    ```
    CGRect playerRect = self.adPlayerView.frame;  
@@ -77,14 +80,14 @@ Para configurar seu `PTMediaPlayer`:
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. Adicione a exibição do player na subvisualização da exibição atual.
+1. Adicione a visualização do player na subexibição atual da visualização.
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Chame `play` para iniciar a reprodução de mídia.
+1. Chame `play` para a reprodução de mídia de start.
 
    ```
    [player play];
