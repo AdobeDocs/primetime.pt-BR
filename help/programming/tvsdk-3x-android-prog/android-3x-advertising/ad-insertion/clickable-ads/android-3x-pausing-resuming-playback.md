@@ -6,6 +6,9 @@ title: Pausar e retomar a reprodução
 uuid: 87ba9f05-912d-4b85-8add-feb26a796a3a
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Quando um usuário clica em um anúncio, seu aplicativo deve pausar a reprodução do conteúdo principal do vídeo.
 
-1. Substitua as atividades `onPause` e `onResume` do Android.
+1. Substitua `onPause` e `onResume` da Atividade Android.
 
    ```java
    @Override 
