@@ -6,6 +6,9 @@ title: Gramática RBOP
 uuid: d9064e39-593a-4767-b835-287640b4c94a
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
@@ -26,13 +29,13 @@ AnotherRule ::=
     DifferentForm 
 ```
 
-## Aplicação das regras gramaticais {#section_A7216BD585FF4EB88737B643B36C2781}
+## Aplicar as regras gramaticais {#section_A7216BD585FF4EB88737B643B36C2781}
 
 >[!NOTE]
 >
 >Para ajudar a melhorar a legibilidade da gramática, as seguintes propriedades não são refletidas na gramática, mas ainda mantêm-se verdadeiras:
 
-1. A ordem dos pares definidos dentro dos objetos não é fixa; assim, qualquer permutação dos pares é válida.
+1. A ordem dos pares definidos nos objetos não é fixa; assim, qualquer permutação dos pares é válida.
 
    Por exemplo, se definirmos um objeto como este:
 
@@ -66,7 +69,7 @@ AnotherRule ::=
    }
    ```
 
-   a instância a seguir seria inválida, pois há dois `foo` pares dentro do mesmo objeto:
+   a instância a seguir seria inválida, pois há dois pares `foo` dentro do mesmo objeto:
 
    ```
    { 
@@ -98,13 +101,13 @@ AnotherRule ::=
 
    é válido, pois são instâncias independentes do mesmo objeto.
 
-1. Para as definições em que uma ou mais sequências de sequências de caracteres podem ser escolhidas, trate as strings como um conjunto, no qual entradas duplicadas são tratadas como uma única entrada. Por exemplo, `["foo", "bar", "foo", "baz"]` é equivalente a `["foo", "bar", "baz"]`
+1. Para as definições em que uma ou mais sequências de strings podem ser escolhidas, trate as strings como um conjunto, no qual as entradas de duplicado são tratadas como uma única entrada. Por exemplo, `["foo", "bar", "foo", "baz"]` é equivalente a `["foo", "bar", "baz"]`
 
 1. Para definir números, um espaço é usado entre as regras (por exemplo, `Digit Digits`), mas esse espaço não deve ser usado ao aplicar a regra.
 
-   Por exemplo, se expressarmos o número *cento e vinte e três* por regra NonZeroInteger, ele deverá ser expresso como `123` em vez de `1 2 3`, mesmo que a regra contenha um espaço entre NonZeroDigit e Digits.
+   Por exemplo, se expressarmos o número *cento e vinte e três* pela regra NonZeroInteger, ele deverá ser expresso como `123` em vez de `1 2 3`, mesmo que a regra contenha um espaço entre NonZeroDigit e Digits.
 
-1. Algumas das regras permitem vários formulários. Nesses casos, as diferentes formas são separadas pelo `'|'` caractere.
+1. Algumas das regras permitem vários formulários. Nesses casos, os diferentes formulários são separados pelo caractere `'|'`.
 
    Por exemplo, esta regra:
 
@@ -235,7 +238,7 @@ NonZeroDigit ::=
 
 ## Semântica: Configurações legais, mas inválidas {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-O tópico Configuração *da proteção de saída de* amostra apresentou uma configuração válida juntamente com seu significado semântico. A seção anterior *deste* tópico apresentava as regras gramaticais para configurações. Embora a gramática ajude a garantir o correto sintático, há configurações sintaticamente legais que não são semanticamente corretas (ou seja, não são lógicas). Esta seção apresenta configurações que são *sintaticamente* legais, mas *semanticamente* incorretas. Lembre-se de que os exemplos nesta seção foram reduzidos para a estrutura mínima necessária para ilustrar o cenário em discussão.
+O tópico *Sample Output Protection Configuration* apresentou uma configuração válida juntamente com seu significado semântico. A seção anterior no tópico *this* apresentava as regras gramaticais para configurações. Embora a gramática ajude a garantir o correto sintático, há configurações sintaticamente legais que não são semanticamente corretas (ou seja, não são lógicas). Esta seção apresenta configurações que são *sintaticamente* legais, mas *semânticas* incorretas. Lembre-se de que os exemplos nesta seção foram reduzidos para a estrutura mínima necessária para ilustrar o cenário em discussão.
 
 * É inválido definir várias restrições de pixel com a mesma contagem de pixels.
 
