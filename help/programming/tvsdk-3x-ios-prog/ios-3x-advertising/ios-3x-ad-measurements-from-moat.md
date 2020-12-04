@@ -1,18 +1,21 @@
 ---
-description: O TVSDK coleta informações do FreeWheel e de outros servidores que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor que as criações capturam ou negligenciam os interesses de um público-alvo.
-seo-description: O TVSDK coleta informações do FreeWheel e de outros servidores que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor que as criações capturam ou negligenciam os interesses de um público-alvo.
+description: O TVSDK coleta informações do FreeWheel e de outros servidores que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e impressões com uma precisão que mostra melhor que os criativos capturam ou negligenciam interesses de audiências.
+seo-description: O TVSDK coleta informações do FreeWheel e de outros servidores que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e impressões com uma precisão que mostra melhor que os criativos capturam ou negligenciam interesses de audiências.
 seo-title: Medições de anúncios do Moat
 title: Medições de anúncios do Moat
 uuid: 520d33b0-2218-4f74-9689-b9dc520f29cc
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
 
-# Medições de anúncios do Moat {#ad-measurements-from-moat}
+# Medições de anúncio do Moat {#ad-measurements-from-moat}
 
-O TVSDK coleta informações do FreeWheel e de outros servidores que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor que as criações capturam ou negligenciam os interesses de um público-alvo.
+O TVSDK coleta informações do FreeWheel e de outros servidores que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e impressões com uma precisão que mostra melhor que os criativos capturam ou negligenciam interesses de audiências.
 
 Moat é um serviço que mede e exibe diversos usos, de navegadores a aplicativos internos. O Moat gera dados de análise de marketing em tempo real em várias plataformas.
 
