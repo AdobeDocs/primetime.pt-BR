@@ -6,6 +6,9 @@ title: Fornecer controle de volume
 uuid: c87fe656-0329-4c9c-b65b-43be48c77062
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
@@ -28,4 +31,4 @@ Você pode configurar um controle da interface do usuário para ajustar o volume
    void setVolume(int volume) throws MediaPlayerException;
    ```
 
-   O valor do volume corresponde ao volume solicitado expresso em percentagem do volume máximo, em que `0` é silencioso e `1` é o volume máximo.
+   O valor do volume representa o volume solicitado expresso em proporção do volume máximo, em que `0` é silencioso e `1` é o volume máximo.
