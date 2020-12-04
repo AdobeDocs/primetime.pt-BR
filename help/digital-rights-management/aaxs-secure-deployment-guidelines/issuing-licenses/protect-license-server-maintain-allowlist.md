@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Uma **lista de permissões** é uma lista de entidades confiáveis. No caso de pacotes de conteúdo, essas organizações são confiáveis pelo proprietário do conteúdo para disponibilizar (ou criptografar) os arquivos de vídeo FLV/F4V, criando conteúdo protegido por DRM. Ao implantar o Adobe Access, é recomendável manter uma lista de permissões de pacotes de conteúdo confiáveis e verificar a identidade do pacote de conteúdo contido nos metadados DRM (cabeçalho DRM) de um arquivo protegido por DRM antes de emitir uma licença.
 
-Para saber mais sobre como obter informações sobre a entidade que empacotou o conteúdo, consulte `V2ContentMetaData.getPackagerInfo()` a Referência *da API do* Adobe Access.
+Para saber mais sobre como obter informações sobre a entidade que empacotou o conteúdo, consulte `V2ContentMetaData.getPackagerInfo()` na *Referência da API de Acesso ao Adobe*.
