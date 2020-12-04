@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
@@ -24,13 +24,13 @@ A versão focou-se nas atualizações de manutenção.
 
 A versão focou na atualização da versão gradle do aplicativo Primetime Reference para a versão 5.6.4.
 
-Consulte para obter mais informações sobre a versão atual lançada para [Android](../release-notes/tvsdk-3x-android.md).
+Consulte para obter mais informações sobre a versão lançada atual para [Android](../release-notes/tvsdk-3x-android.md).
 
 ## Aprimoramentos e correções nas notas de versão do TVSDK 3.12 iOS
 
 O lançamento focou na solução dos principais problemas dos clientes.
 
-Consulte para obter mais informações sobre a versão atual lançada para [iOS](../release-notes/tvsdk-3x-ios.md).
+Consulte para obter mais informações sobre a versão lançada atual para [iOS](../release-notes/tvsdk-3x-ios.md).
 
 ## Consulte também
 
