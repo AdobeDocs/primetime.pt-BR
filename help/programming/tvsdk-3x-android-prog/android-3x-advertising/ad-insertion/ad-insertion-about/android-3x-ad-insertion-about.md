@@ -6,6 +6,9 @@ title: Inserir anúncios
 uuid: f6636bfa-c96d-4d9d-987a-60292397525a
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 0%
 
 ---
 
