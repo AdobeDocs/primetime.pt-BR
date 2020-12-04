@@ -19,9 +19,9 @@ Os requisitos de sincronização especificam a frequência com que o cliente sin
 
 O comportamento de sincronização é definido usando os seguintes parâmetros:
 
-* **Intervalo** de start - especifica o tempo de espera após a última sincronização bem-sucedida para start de outra solicitação de sincronização.
-* **Intervalo** de parada rígida - (opcional). Desative a reprodução se uma sincronização bem-sucedida não tiver ocorrido no período especificado.
-* **Forçar probabilidade** de sincronização - (Opcional). Probabilidade com a qual o cliente deve enviar uma mensagem de sincronização antes do próximo intervalo de start.
+* **Intervalo**  de start - Especifica quanto tempo esperar após a última sincronização bem-sucedida para start de outra solicitação de sincronização.
+* **Intervalo**  de parada rígida - (opcional). Desative a reprodução se uma sincronização bem-sucedida não tiver ocorrido no período especificado.
+* **Forçar probabilidade**  de sincronização - (Opcional). Probabilidade com a qual o cliente deve enviar uma mensagem de sincronização antes do próximo intervalo de start.
 
 >[!NOTE]
 >
