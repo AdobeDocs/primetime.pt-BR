@@ -6,6 +6,9 @@ title: Controle o comportamento de reprodução para busca em marcadores de anú
 uuid: 248e914e-81b7-4aa5-a4d5-06ca2666e006
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Você pode substituir o comportamento padrão de como o TVSDK trata as buscas de
 
 Por padrão, quando um usuário busca por seções de anúncios passadas ou para dentro que resultam do posicionamento de marcadores de anúncios personalizados, o TVSDK ignora os anúncios. Isso pode ser diferente do comportamento atual de reprodução para quebras de anúncios padrão. Você pode definir o TVSDK para reposicionar o indicador de reprodução no início do anúncio personalizado ignorado mais recentemente quando o usuário busca mais de um ou mais anúncios personalizados.
 
-1. Ligue `CustomRangeMetadata.setAdjustSeekPosition` com `true`.
+1. Chame `CustomRangeMetadata.setAdjustSeekPosition` com `true`.
 
    ```java
    customRangeMetadata.setAdjustSeekPosition (true);
