@@ -1,18 +1,21 @@
 ---
-description: O TVSDK entra em contato com um serviço de entrega de anúncios, como a decisão do anúncio do Adobe Primetime, e tenta obter o arquivo principal da lista de reprodução que corresponde ao fluxo de vídeo do anúncio. Durante a fase de resolução de anúncios, o TVSDK efetua uma chamada HTTP para o servidor de entrega de anúncios remoto e analisa a resposta do servidor.
-seo-description: O TVSDK entra em contato com um serviço de entrega de anúncios, como a decisão do anúncio do Adobe Primetime, e tenta obter o arquivo principal da lista de reprodução que corresponde ao fluxo de vídeo do anúncio. Durante a fase de resolução de anúncios, o TVSDK efetua uma chamada HTTP para o servidor de entrega de anúncios remoto e analisa a resposta do servidor.
+description: O TVSDK entra em contato com um serviço de delivery de anúncios, como a tomada de decisões de anúncios do Adobe Primetime, e tenta obter o arquivo principal da lista de reprodução que corresponde ao fluxo de vídeo do anúncio. Durante a fase de resolução de anúncios, o TVSDK faz uma chamada HTTP para o servidor de anúncio remoto e analisa a resposta do servidor.
+seo-description: O TVSDK entra em contato com um serviço de delivery de anúncios, como a tomada de decisões de anúncios do Adobe Primetime, e tenta obter o arquivo principal da lista de reprodução que corresponde ao fluxo de vídeo do anúncio. Durante a fase de resolução de anúncios, o TVSDK faz uma chamada HTTP para o servidor de anúncio remoto e analisa a resposta do servidor.
 seo-title: Fase de resolução de anúncios
 title: Fase de resolução de anúncios
 uuid: b3e62a57-7e62-4e4e-8fa6-0d416785db67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '341'
+ht-degree: 0%
 
 ---
 
 
 # Fase de resolução de anúncios{#ad-resolving-phase}
 
-O TVSDK entra em contato com um serviço de entrega de anúncios, como a decisão do anúncio do Adobe Primetime, e tenta obter o arquivo principal da lista de reprodução que corresponde ao fluxo de vídeo do anúncio. Durante a fase de resolução de anúncios, o TVSDK efetua uma chamada HTTP para o servidor de entrega de anúncios remoto e analisa a resposta do servidor.
+O TVSDK entra em contato com um serviço de delivery de anúncios, como a tomada de decisões de anúncios do Adobe Primetime, e tenta obter o arquivo principal da lista de reprodução que corresponde ao fluxo de vídeo do anúncio. Durante a fase de resolução de anúncios, o TVSDK faz uma chamada HTTP para o servidor de anúncio remoto e analisa a resposta do servidor.
 
 O TVSDK oferece suporte aos seguintes tipos de provedores de anúncios:
 
