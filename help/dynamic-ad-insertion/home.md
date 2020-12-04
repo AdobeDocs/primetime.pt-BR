@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
@@ -18,7 +18,7 @@ Seus visualizadores estão assistindo TV não apenas na TV, mas em telefones, ta
 
 O Adobe Primetime Ad Insertion ajuda a criar experiências de anúncio direcionadas sem erros de buffering ou reprodução. Você pode inserir publicidades em conteúdo ao vivo, linear ou VOD. Você também pode minimizar a complexidade aproveitando as vantagens das integrações existentes do Primetime com os principais servidores de anúncios. Ofereça experiências de anúncios superiores com visualização contínua e suporte para Anúncios VAST com capacidade de navegação. Garanta maior envolvimento e mais receita para você, fornecendo melhores experiências de visualização para seus clientes em todos os dispositivos.
 
-## Primetime Ad Insertion Help {#ad-insertion-user-guide}
+## Ajuda do Primetime Ad Insertion {#ad-insertion-user-guide}
 
 Este guia de autoajuda explica como gerar receita com o conteúdo, inserindo anúncios dinâmicos direcionados ao usuário no servidor e engajando a audiência com anúncios personalizados. Use a navegação à esquerda para detalhar e saber como várias configurações interagem e como rastrear inserções de anúncios.
 
@@ -31,7 +31,7 @@ Este guia de autoajuda explica como gerar receita com o conteúdo, inserindo an�
 | [Ferramenta de depuração do servidor manifest](manifest-server-debugging-tool.md) | Fornece um insight sobre a ferramenta de depuração do Manifest Server e as informações de depuração que ela fornece para investigar problemas de inserção de anúncios. |
 | [Visão geral do serviço de reempacotamento da Creative](creative-repackaging-service/crs-overview.md) | Explica como o CRS garante que os anúncios não HLS sejam reproduzidos corretamente nos fluxos HLS. |
 
-## Guias do usuário principal {#other-primetime-helps}
+## Guias do usuário do Primetime principal {#other-primetime-helps}
 
 | Guia do usuário | Descrição |
 |---|---|
