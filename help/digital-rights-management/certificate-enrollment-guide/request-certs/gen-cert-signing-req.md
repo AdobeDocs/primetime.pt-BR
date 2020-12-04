@@ -4,6 +4,9 @@ title: Gerar uma solicitação de assinatura de certificado (Solicitante)
 uuid: 04abd5d2-77ac-4f89-8bea-31d389159aee
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 
    >[!NOTE]
    >
-   >A Adobe recomenda incluir o tipo de certificado (lic, pkgr, trans, versão de avaliação ou eval) no nome da chave. Essa convenção de nomenclatura facilita a implantação no servidor de licenças. Este exemplo usa &quot;mycompany-license.key&quot;. Para as versões de Avaliação e Avaliação, use &quot;mycompany-eval.key&quot; e &quot;mycompany-trial.key&quot;.
+   >A Adobe recomenda a inclusão do tipo de certificado (lic, pkgr, trans, versão de avaliação ou eval) no nome da chave. Essa convenção de nomenclatura facilita a implantação no servidor de licenças. Este exemplo usa &quot;mycompany-license.key&quot;. Para as versões de Avaliação e Avaliação, use &quot;mycompany-eval.key&quot; e &quot;mycompany-trial.key&quot;.
 
 1. Digite uma senha para proteger a chave privada.
 
@@ -39,9 +42,9 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 1. Você será solicitado a digitar a senha da chave privada.
 1. Crie uma cópia de backup da sua chave privada e senha.
 
-   Se você perder a chave privada ou se ela estiver comprometida, entre em contato com o Administrador de certificados da Adobe para revogar seu certificado e solicitar um novo.
+   Se você perder a chave privada ou se ela estiver comprometida, entre em contato com o Administrador de certificados do Adobe para revogar seu certificado e solicitar um novo.
 
    >[!NOTE]
    >
-   >A Adobe recomenda usar um HSM para proteger sua chave privada e senha.
+   >O Adobe recomenda usar um HSM para proteger sua chave privada e senha.
 
