@@ -17,11 +17,11 @@ ht-degree: 0%
 
 Quando o TVSDK do navegador solicita um anúncio que não está em seu servidor de publicidade primário, o player precisa solicitar o anúncio do servidor secundário. O VAST (Video Ad Serving Template) define o padrão de comunicação entre servidores de anúncios e players de vídeo e é a resposta enviada pelo servidor de anúncios secundário quando o anúncio é solicitado.
 
-Para obter mais informações sobre o VAST, consulte VAST (Modelo de serviço de anúncio de vídeo [digital) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
+Para obter mais informações sobre o VAST, consulte [Modelo de disponibilização de anúncio de vídeo digital (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
 O TVSDK do navegador suporta os seguintes elementos de anúncio VAST:
 
-## Anúncios embutidos e em linha {#section_11B8A1A8F52F4F77981C6AAC02185087}
+## Anúncios em linha e no invólucro {#section_11B8A1A8F52F4F77981C6AAC02185087}
 
 Os seguintes elementos são suportados:
 
@@ -41,13 +41,13 @@ Os seguintes elementos são suportados:
 
 ## Creative {#section_0121F948CB074E49A8132D202786CAA4}
 
-Este elemento é um arquivo que faz parte de um anúncio VAST e contém um `creative` elemento que pode suportar um anúncio linear, um anúncio não linear ou um anúncio complementar. No `creative` elemento, os elementos `id`, `sequence`e `adId` são suportados.
+Este elemento é um arquivo que faz parte de um anúncio VAST e contém um elemento `creative` que pode suportar um anúncio linear, um anúncio não linear ou um anúncio complementar. No elemento `creative`, os elementos `id`, `sequence` e `adId` são suportados.
 
 Estas são mais informações sobre os tipos de anúncios:
 
-* **Anúncios** lineares Os seguintes elementos são suportados:
+* **** Anúncios linearesOs seguintes elementos são suportados:
 
-   * `TrackingEvent`, que contém o `Tracking` elemento .
+   * `TrackingEvent`, que contém o  `Tracking` elemento.
       * `Duration`
       * `AdParameters`
       * `VideoClicks`, incluindo:
@@ -62,15 +62,15 @@ Estas são mais informações sobre os tipos de anúncios:
 
          >[!TIP]
          >
-         >Nesse elemento, os atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`e `type` são suportados.
+         >Neste elemento, os atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework` e `type` são suportados.
 
-* **Anúncios** não lineares Os seguintes elementos são suportados:
+* **Anúncios não lineares** Os seguintes elementos são suportados:
 
    * `Non-linear`
 
       >[!TIP]
       >
-      >Nesse elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`e `minSuggestedDuration` são suportados.
+      >Neste elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio` e `minSuggestedDuration` são suportados.
 
       * `StaticResource`
       * `IFrameResource`
@@ -78,13 +78,13 @@ Estas são mais informações sobre os tipos de anúncios:
       * `NonLinearClickThrough`
       * `AdParameters`
 
-* **Anúncios** complementares Os seguintes elementos são suportados:
+* **Anúncios** complementaresOs seguintes elementos são suportados:
 
    * `Companion`
 
       >[!TIP]
       >
-      >Neste elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`e `expandedHeight` são suportados.
+      >Neste elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth` e `expandedHeight` são suportados.
 
       * `StaticResource`
       * `IFrameResource`
