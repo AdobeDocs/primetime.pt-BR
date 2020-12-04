@@ -6,6 +6,9 @@ title: Alterações no VOD
 uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +24,4 @@ As situações nas quais você pode substituir uma linha do tempo VOD incluem:
 * Substitua dinamicamente anúncios C3 antigos por anúncios mais recentes de maior duração.
 * Inserir menos anúncios ou nenhum anúncio.
 
-Você pode substituir a linha do tempo do anúncio enviando uma nova solicitação de inserção de publicidade ao arquivo M3U8 original e a um valor diferente do parâmetro de `pttimeline` consulta.
+Você pode substituir a linha do tempo do anúncio enviando uma nova solicitação de inserção de publicidade ao arquivo M3U8 original e um valor diferente do parâmetro do query `pttimeline`.
