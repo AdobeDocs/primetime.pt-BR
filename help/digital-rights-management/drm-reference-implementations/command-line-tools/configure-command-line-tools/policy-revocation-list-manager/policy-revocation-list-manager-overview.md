@@ -1,24 +1,27 @@
 ---
-seo-title: Gerenciador de lista de revogação de DRM
-title: Gerenciador de lista de revogação de DRM
+seo-title: Gerenciador de Lista de revogação de DRM
+title: Gerenciador de Lista de revogação de DRM
 uuid: 30ab5f54-4aac-4535-b30c-b4e5dbfbc475
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 
-# Gerenciador de lista de revogação de DRM {#policy-revocation-list-manager}
+# Gerenciador de Lista de revogação de DRM {#policy-revocation-list-manager}
 
-Use a ferramenta de linha de comando do Gerenciador de lista de revogação do DRM Primetime ( [!DNL AdobeRevocationListManager.jar]) para criar e gerenciar listas de revogação e verificar se as políticas foram revogadas.
+Use a ferramenta de linha de comando do Primetime DRM Revocation Lista Manager ( [!DNL AdobeRevocationListManager.jar]) para criar e gerenciar listas de revogação e verificar se as políticas foram revogadas.
 
-Antes de executar [!DNL AdobeRevocationListManager.jar], você deve definir as propriedades na seção *Policy Update List Manager e Propriedades* do Revocation List Manager do arquivo de configuração.
+Antes de executar [!DNL AdobeRevocationListManager.jar], você deve definir as propriedades na seção *Gerenciador de Listas e Propriedades do Gerenciador de Listas de Revogação* do arquivo de configuração.
 
 >[!NOTE]
 >
->Também é possível especificar todas as propriedades do Gerenciador de lista de revogação na linha de comando.
+>Também é possível especificar todas as propriedades do Gerenciador de Listas de Revogação na linha de comando.
 
-## Uso da linha de comando do Gerenciador de lista de revogação {#revocation-list-manager-command-line-usage}
+## Uso da linha de comando do Gerenciador de Listas de Revogação {#revocation-list-manager-command-line-usage}
 
 ```
 java -jar AdobeRevocationListManager.jar 
@@ -52,7 +55,7 @@ java -jar AdobeRevocationListManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "><p class="- topic/p ">Especifica o nome e o local do arquivo de configuração. </p><p class="- topic/p ">Se você não especificar um nome ou um local, o Gerenciador de lista de revogação de DRM pesquisará por <span class="filepath"> flashaccess stools.properties</span> no diretório de trabalho atual. </p><p>Observação:  As opções especificadas na linha de comando têm prioridade sobre as opções especificadas no arquivo de configuração. </p>Especifica o local do arquivo de configuração. Se você não aplicar essa opção, o Gerenciador de lista de revogação pesquisará por <span class="filepath"> flashaccess.properties</span> no diretório de trabalho. </td> 
+   <td colname="2" class="- topic/entry "><p class="- topic/p ">Especifica o nome e o local do arquivo de configuração. </p><p class="- topic/p ">Se você não especificar um nome ou um local, o Gerenciador de Lista de Revogação de DRM pesquisará <span class="filepath"> flashaccess stools.properties</span> no diretório de trabalho atual. </p><p>Observação:  As opções especificadas na linha de comando têm prioridade sobre as opções especificadas no arquivo de configuração. </p>Especifica o local do arquivo de configuração. Se você não aplicar essa opção, o Gerenciador de Lista de Revogação pesquisará <span class="filepath"> flashaccess stools.properties</span> no diretório de trabalho. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d nome do arquivo</span> </td> 
@@ -80,7 +83,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r nome do emissor serialNúmeroRevogaçãoData</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoga o certificado que foi identificado pelo <span class="codeph"> emissorName</span> e pelo <span class="codeph"> número de série</span> na data especificada. O <span class="codeph"> nome</span> do emissor deve usar o formato de nome 509. Por exemplo, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>É necessário especificar os números de série em um formato hexadecimal. Também é necessário especificar a data de revogação em um dos seguintes formatos: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoga o certificado que foi identificado por <span class="codeph"> nome_emissor</span> e <span class="codeph"> número_série</span> na data especificada. O <span class="codeph"> emitenteName</span> tem de utilizar o formato de nome 509. Por exemplo, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>É necessário especificar os números de série em um formato hexadecimal. Também é necessário especificar a data de revogação em um dos seguintes formatos: 
      <ul id="ul_1524FBC6818248F3A2B271243E649400"> 
       <li id="li_BC618EA2332D42A59B1B5434CAFFD2AF"><span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd</span> </li> 
       <li id="li_97F77810D20C4CF2944EFCFF5DFAE467"><span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd-h24:min:seg</span> </li> 
@@ -91,7 +94,7 @@ java -jar AdobeRevocationListManager.jar
 
 ## Propriedades de configuração {#configuration-properties}
 
-É necessário aplicar credenciais para assinar listas de revogação. As seguintes propriedades do Gerenciador de lista de revogação especificam um arquivo PKCS12 que inclui credenciais para a assinatura de listas de revogação (Certificado do Servidor de Licença), juntamente com a senha do certificado:
+Você precisa aplicar credenciais para assinar listas de revogação. As seguintes propriedades do Gerenciador de Listas de Revogação especificam um arquivo PKCS12 que inclui credenciais para a assinatura de listas de revogação (Certificado do Servidor de Licença), juntamente com a senha do certificado:
 
 * `revocation.sign.certfile=license-server-credentials.pfx`
 * `revocation.sign.certpass=password`
