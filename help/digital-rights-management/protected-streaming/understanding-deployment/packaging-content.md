@@ -17,13 +17,13 @@ ht-degree: 0%
 
 Ao empacotar conteúdo, você deve especificar o URL do servidor de licenças.
 
-O URL do servidor DRM do Adobe Primetime usa o seguinte formato:
+O URL do servidor Adobe Primetime DRM usa o seguinte formato:
 
 ```
 http(s)://<license-server-host:port>/flashaccessserver/<tenant-name>
 ```
 
-Por exemplo, para o nome do host do servidor de licenças `mylicenseserver.com` que escuta na porta 8080 e um locatário chamado *`tenant1`*, você usaria a seguinte sintaxe para o URL do servidor de licenças especificado no momento em que o conteúdo é empacotado:
+Por exemplo, para o nome do host do servidor de licenças `mylicenseserver.com` que escuta na porta 8080 e um locatário chamado *`tenant1`*, você usaria a seguinte sintaxe para o URL do servidor de licenças que você especificou no momento em que empacotou o conteúdo:
 
 ```
 https://mylicenseserver.com:8080/flashaccessserver/tenant1
