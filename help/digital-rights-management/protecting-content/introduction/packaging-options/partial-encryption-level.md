@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Nível parcial de criptografia {#partial-encryption-level}
+# Nível de criptografia parcial {#partial-encryption-level}
 
 Essa opção de empacotamento especifica se todos os quadros, ou apenas um subconjunto de quadros, devem ser criptografados. Há três níveis de criptografia: baixa, média e alta.
 
