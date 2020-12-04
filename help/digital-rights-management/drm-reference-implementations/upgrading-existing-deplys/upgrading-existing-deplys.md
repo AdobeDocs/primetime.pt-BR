@@ -6,6 +6,9 @@ title: Atualizar implantações existentes
 uuid: 1a40aae9-f639-41fa-b42d-cf8cdfcde694
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 0%
 
 ---
 
@@ -26,14 +29,14 @@ Para preservar os registros do banco de dados e adicionar novas tabelas:
    * `UserDomainMembership`
    * `UserDomainRefCount`
 
-1. Adicione as seguintes propriedades para usar [!DNL flashaccess-refimpl.properties] o suporte de domínio:
+1. Adicione as seguintes propriedades a [!DNL flashaccess-refimpl.properties] para usar o suporte de domínio:
 
-   * `HandlerConfiguration.DomainCAs.n` ou `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
+   * `HandlerConfiguration.DomainCAs.n` ou  `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
 
-   * `Domain RegistrationHandler.ServerCredential` e `DomainRegistrationHandler.ServerCredential.password` ou `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
+   * `Domain RegistrationHandler.ServerCredential` e  `DomainRegistrationHandler.ServerCredential.password` ou  `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
 
    * `DomainRegistrationHandler.DomainServerUrl`
 
-1. Adicione as seguintes propriedades [!DNL flashaccess-refimpl.properties] para oferecer suporte à entrega de chave remota para clientes iOS:
+1. Adicione as seguintes propriedades a [!DNL flashaccess-refimpl.properties] para oferecer suporte ao delivery de chave remota para clientes iOS:
 
-   * `HandlerConfiguration.KeyServerCertificate` ou `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
+   * `HandlerConfiguration.KeyServerCertificate` ou  `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
