@@ -8,7 +8,7 @@ uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ A resolução e o carregamento do anúncio podem causar um atraso inaceitável p
 >* Com a Resolução de anúncios ociosos, se houver várias interrupções de anúncios ao mesmo tempo (VMAP), elas serão resolvidas ao mesmo tempo.
 >* Não é recomendável reduzir o valor de *setDelayAdLoadingTolerance() *abaixo do valor padrão (5 segundos). Isso pode fazer com que o player &quot;amorteca&quot; desnecessariamente.
 >* A resolução de anúncios ociosos não afeta os anúncios precedentes.
->* Atualmente, a Resolução de anúncios ociosos é compatível com o Auditude-Plugin. É recomendável não definir ** setDelayAdLoadingcomo verdadeiro se você estiver usando um resolvedor personalizado.
+>* Atualmente, a Resolução de anúncios ociosos é compatível com o Auditude-Plugin. É recomendável não definir *setDelayAdLoading* como true se você estiver usando um resolvedor personalizado.
 
 >
 
