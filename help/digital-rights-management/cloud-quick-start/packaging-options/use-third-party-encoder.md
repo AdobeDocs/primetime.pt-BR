@@ -4,6 +4,9 @@ title: Usar um codificador de terceiros
 uuid: 8649303c-b8e6-4c02-a8ad-5734af850bfe
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
