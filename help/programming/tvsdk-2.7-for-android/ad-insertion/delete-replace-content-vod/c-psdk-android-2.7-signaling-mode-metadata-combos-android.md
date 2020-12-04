@@ -6,6 +6,9 @@ title: Efeito na inserção e exclusão de anúncios no modo de sinalização de
 uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
    <th class="entry"> Modo de sinalização de anúncios </th> 
    <th class="entry"> Metadados de anúncio </th> 
    <th class="entry"> Resolvedores criados </th> 
-   <th class="entry"><span class="codeph"> InserçãoInformações</span> criadas </th> 
+   <th class="entry"><span class="codeph"> </span> PlacementInformationScreated </th> 
    <th class="entry"> Comportamento resultante </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
    <td> Excluir, Auditude </td> 
    <td> 
     <ul id="ul_E0A2F885E93B4D23A486C37B305E17D8"> 
-     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li id="li_439886CB38AA46239C2E40352443888A"><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Intervalos excluídos, Anúncios inseridos </td> 
