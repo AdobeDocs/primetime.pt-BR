@@ -1,18 +1,21 @@
 ---
-description: Na decisão do Adobe Primetime ad, você pode direcionar anúncios em pares de valor chave.
-seo-description: Na decisão do Adobe Primetime ad, você pode direcionar anúncios em pares de valor chave.
+description: Na tomada de decisão de publicidade do Adobe Primetime, você pode público alvo anúncios em pares de valor chave.
+seo-description: Na tomada de decisão de publicidade do Adobe Primetime, você pode público alvo anúncios em pares de valor chave.
 seo-title: Informações de direcionamento
 title: Informações de direcionamento
 uuid: 72114bef-36a1-4f2d-92e8-59f4885d70d2
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
 
-# Informações de direcionamento{#targeting-information}
+# Informações de definição de metas{#targeting-information}
 
-Na decisão do Adobe Primetime ad, você pode direcionar anúncios em pares de valor chave.
+Na tomada de decisão de publicidade do Adobe Primetime, você pode público alvo anúncios em pares de valor chave.
 
 Para passar estes pares de valores chave para o TVSDK do navegador:
 
