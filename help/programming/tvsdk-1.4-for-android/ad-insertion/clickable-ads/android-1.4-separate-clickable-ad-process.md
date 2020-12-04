@@ -6,6 +6,9 @@ title: Separe o processo de anúncio clicável
 uuid: 00537191-8997-418d-add2-8e86d818c76e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '175'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Você deve separar a lógica da interface do seu player do processo que gerencia
    } 
    ```
 
-1. Implemente um fragmento diferente para exibir um elemento de interface que indica que um anúncio pode ser clicado, monitorar esse elemento de interface e comunicar os cliques do usuário ao fragmento que contém o `MediaPlayer`.
+1. Implemente um fragmento diferente para exibir um elemento de interface que indica que um anúncio pode ser clicado, monitore esse elemento de interface e comunique os cliques do usuário ao fragmento que contém o `MediaPlayer`.
 
    Esse fragmento deve declarar uma interface para a comunicação do fragmento. O fragmento captura a implementação da interface durante seu método de ciclo de vida onAttach e pode chamar os métodos da interface para se comunicar com a Atividade.
 
