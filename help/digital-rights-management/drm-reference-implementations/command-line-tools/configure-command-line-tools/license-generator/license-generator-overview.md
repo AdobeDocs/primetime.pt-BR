@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Use [!DNL AdobeLicenseGenerator.jar] para gerar licenças sem exigir que o cliente envie uma solicitação de licença a um servidor. Em seguida, você pode incorporar uma licença pré-gerada no conteúdo ou fornecer a licença ao cliente por meio de outros mecanismos, como um servidor Web HTTP simples.
 
-## Uso da linha de comando do Gerador de licenças {#license-generator-command-line-usage}
+## Uso da linha de comando do License Generator {#license-generator-command-line-usage}
 
 **Gerar uma licença:**
 
@@ -31,7 +31,7 @@ java -jar AdobeLicenseGenerator.jar -m
 
 * `metadata` - Inclui os metadados do Adobe Primetime DRM.
 
-   Você pode recuperar esse arquivo do conteúdo protegido com as `-d -m` opções no Media Packager.
+   Você pode recuperar esse arquivo do conteúdo protegido com as opções `-d -m` no Media Packager.
 
 **Exibir uma licença gerada anteriormente:**
 
@@ -56,10 +56,10 @@ java -jar AdobeLicenseGenerator.jar -d
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica o nome e o local do arquivo de configuração. </p> <p class="- topic/p ">Se você não especificar um nome ou um local, o DRM License Generator procurará por <span class="filepath"> flashaccess stools.properties</span> no diretório de trabalho atual. </p> <p>Observação:  As opções especificadas na linha de comando têm prioridade sobre as opções especificadas no arquivo de configuração. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica o nome e o local do arquivo de configuração. </p> <p class="- topic/p ">Se você não especificar um nome ou um local, o DRM License Generator procurará <span class="filepath"> flashaccess stools.properties</span> no diretório de trabalho atual. </p> <p>Observação:  As opções especificadas na linha de comando têm prioridade sobre as opções especificadas no arquivo de configuração. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d arquivo <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> licenciado</span></i> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> arquivo licenciado</span></i> </p> </td> 
    <td colname="2" class="- topic/entry "> Exibe informações sobre uma licença que já foi gerada. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -84,7 +84,7 @@ java -jar AdobeLicenseGenerator.jar -d
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r certificado de recipient</span> </td> 
-   <td colname="2" class="- topic/entry ">Gera uma licença para um recipient especificado. Você pode usar um certificado de dispositivo ou domínio e especificar várias <span class="+ topic/ph pr-d/codeph codeph"> opções </span>-r para criar uma licença para vários recipient. </td> 
+   <td colname="2" class="- topic/entry ">Gera uma licença para um recipient especificado. Você pode usar um dispositivo ou certificado de domínio e pode especificar várias <span class="+ topic/ph pr-d/codeph codeph"> -r </span>opções para criar uma licença para vários recipient. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root root-filename</span> </td> 
@@ -123,23 +123,23 @@ Antes de executar o License Generator, é necessário especificar valores para a
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licencisegen.sign.certpass</span> </td> 
-   <td colname="2" class="- topic/entry ">A senha que protege o arquivo especificado com a opção <span class="+ topic/ph pr-d/codeph codeph"> licencisegen.sign.certfile</span> . </td> 
+   <td colname="2" class="- topic/entry ">A senha que protege o arquivo especificado com a opção <span class="+ topic/ph pr-d/codeph codeph"> license.sign.certfile</span>. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licencisegen.domainca.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Se você gerar licenças vinculadas a domínio, deverá especificar um ou mais certificados de CA de domínio para indicar as autoridades de domínio em que o emissor da licença pode confiar. </p> <p>Se o recipient de licença for um certificado de domínio, que não foi emitido por uma das CAs de domínio especificadas, não será possível gerar uma licença. Essa propriedade especifica um arquivo <span class="filepath"> .cer</span> que inclui o certificado no formato PEM ou DER. <span class="codeph">Não</span> deve aumentar monotonicamente, a partir de 1. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Se você gerar licenças vinculadas a domínio, deverá especificar um ou mais certificados de CA de domínio para indicar as autoridades de domínio em que o emissor da licença pode confiar. </p> <p>Se o recipient de licença for um certificado de domínio, que não foi emitido por uma das CAs de domínio especificadas, não será possível gerar uma licença. Esta propriedade especifica um arquivo <span class="filepath"> .cer</span> que inclui o certificado no formato PEM ou DER. <span class="codeph">Não </span> deve aumentar monotonicamente, a partir de 1. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
     <code>licensegen.keys.asymmetric. licenseServerCredential.n</code>
    </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Arquivo PKCS12 opcional que inclui credenciais adicionais do License Server para descriptografar o CEK na política de metadados e DRM. Você pode configurar credenciais adicionais se o conteúdo tiver sido previamente empacotado com um certificado do License Server diferente daquelas credenciais que foram especificadas com <span class="codeph"> licencisegen.sign.certfile</span>. Essa propriedade precisa se referir a um arquivo <span class="filepath"> .pfx</span> que inclui um certificado e uma chave privada. <span class="codeph">Não</span> deve aumentar monotonicamente, a partir de 1. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Arquivo PKCS12 opcional que inclui credenciais adicionais do License Server para descriptografar o CEK na política de metadados e DRM. Você pode configurar credenciais adicionais se o conteúdo tiver sido previamente empacotado com um certificado do License Server diferente daquelas credenciais que foram especificadas com <span class="codeph"> licencisegen.sign.certfile</span>. Essa propriedade precisa fazer referência a um arquivo <span class="filepath"> .pfx</span> que inclui um certificado e uma chave privada. <span class="codeph">Não </span> deve aumentar monotonicamente, a partir de 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
     <code>licensegen.keys.asymmetric. licenseServerCredential.n.password</code>
    </td> 
-   <td colname="2" class="- topic/entry "> <p>A senha é aplicada para proteger o arquivo especificado com a propriedade license<span class="+ topic/ph pr-d/codeph codeph"> .keys.asymmetric.licenseServerCredential.n</span> . </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>A senha é aplicada para proteger o arquivo especificado com a propriedade<span class="+ topic/ph pr-d/codeph codeph"> licenseSegen.keys.asymmetric.licenseServerCredential.n</span>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
