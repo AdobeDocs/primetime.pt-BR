@@ -32,21 +32,21 @@ Para habilitar a demonstração do modelo de uso, especifique a propriedade pers
 
 Na demonstração, a lógica comercial no servidor controla os atributos reais das licenças geradas. No momento da embalagem, apenas as informações mínimas de política devem ser incluídas no conteúdo. Especificamente, a política precisa apenas indicar se a autenticação é necessária para acessar o conteúdo. Para habilitar todos os quatro modelos de uso, inclua uma política que permita acesso anônimo (para o modelo financiado pelo anúncio) e uma política que exija autenticação de nome de usuário/senha (para os outros três modelos de uso). Ao solicitar uma licença, um aplicativo cliente pode determinar se deseja solicitar a autenticação do usuário com base nas informações de autenticação nas políticas.
 
-Para controlar o modelo de utilização ao abrigo do qual um determinado utilizador deve receber uma licença, podem ser acrescentadas entradas à base de dados de implementação de referência. A `Customer` tabela contém nomes de usuários e senhas para autenticação de usuários. Também indica se o usuário tem uma subscrição. Os usuários com subscrição receberão licenças sob o modelo de uso da *Subscrição* . Para conceder acesso a um usuário nos modelos de uso *Download para* próprio ou *Vídeo sob demanda* , uma entrada pode ser adicionada à `CustomerAuthorization` tabela, que especifica cada parte do conteúdo que o usuário tem permissão para acessar e o modelo de uso. Consulte o [!DNL PopulateSampleDB.sql] script para obter detalhes sobre como preencher cada tabela.
+Para controlar o modelo de utilização ao abrigo do qual um determinado utilizador deve receber uma licença, podem ser acrescentadas entradas à base de dados de implementação de referência. A tabela `Customer` contém nomes de usuário e senhas para autenticação de usuários. Também indica se o usuário tem uma subscrição. Os usuários com subscrição receberão licenças sob o modelo de uso *Subscrição*. Para conceder acesso a um usuário nos modelos de uso *Baixar para Próprio* ou *Vídeo sob demanda*, uma entrada pode ser adicionada à tabela `CustomerAuthorization`, que especifica cada parte do conteúdo que o usuário tem permissão para acessar e o modelo de uso. Consulte o script [!DNL PopulateSampleDB.sql] para obter detalhes sobre como preencher cada tabela.
 
-Quando um usuário solicita uma licença, o servidor de Implementação de referência verifica os metadados enviados pelo cliente para determinar se o conteúdo foi empacotado usando a `RI_UsageModelDemo` propriedade. Em caso afirmativo, são usadas as seguintes regras de negócios:
+Quando um usuário solicita uma licença, o servidor de Implementação de referência verifica os metadados enviados pelo cliente para determinar se o conteúdo foi empacotado usando a propriedade `RI_UsageModelDemo`. Em caso afirmativo, são usadas as seguintes regras de negócios:
 
 * Se uma das políticas exigir autenticação:
 
    * Se a solicitação contiver um token de autenticação válido, procure o usuário na tabela do banco de dados Cliente. Se o usuário foi encontrado:
 
-      * Se a `Customer.IsSubscriber` propriedade for `true`, gere uma licença para o modelo de uso da *Subscrição* e envie-a ao usuário.
+      * Se a propriedade `Customer.IsSubscriber` for `true`, gere uma licença para o modelo de utilização *Subscrição* e envie-a ao utilizador.
 
-      * Procure um registro na tabela do `CustomerAuthorization` banco de dados para esse usuário e ID de conteúdo. Se um registro foi encontrado:
+      * Procure por um registro na tabela do banco de dados `CustomerAuthorization` desse usuário e ID de conteúdo. Se um registro foi encontrado:
 
-         * Se `CustomerAuthorization.UsageType` for `DTO`, gere uma licença para o modelo de uso *Baixar para* o proprietário e envie-a para o usuário.
+         * Se `CustomerAuthorization.UsageType` for `DTO`, gere uma licença para o modelo de uso *Baixar para próprio* e envie-a ao usuário.
 
-         * Se `CustomerAuthorization.UsageType` for `VOD`, gere uma licença para o modelo de uso do *Video On Demand* e envie-a ao usuário.
+         * Se `CustomerAuthorization.UsageType` for `VOD`, gere uma licença para o modelo de uso *Vídeo sob demanda* e envie-a ao usuário.
    * Se nenhuma das políticas permitir acesso anônimo:
 
       * Se não houver um token de autenticação válido na solicitação, retorne um erro de &quot;autenticação obrigatória&quot;.
@@ -55,7 +55,7 @@ Quando um usuário solicita uma licença, o servidor de Implementação de refer
 
 * Se uma das políticas permitir acesso anônimo, gere uma licença para o modelo de uso financiado pelo anúncio e envie-a ao usuário.
 
-Antes que o servidor de Implementação de referência possa emitir licenças para a demonstração do modelo de uso, o servidor precisa ser configurado para especificar como as licenças são geradas para cada um dos quatro modelos de uso. Isso é feito especificando uma política para cada modelo de uso. A Implementação de referência inclui quatro exemplos de políticas ( [!DNL dto-policy.pol], [!DNL vod-policy.pol], [!DNL sub-policy.pol], [!DNL ad-policy.pol]) ou você pode substituir suas próprias políticas. Em [!DNL flashaccess-refimpl.properties], defina as seguintes propriedades para especificar a política a ser usada para cada modelo de uso e coloque os arquivos de política no diretório especificado pela `config.resourcesDirectory` propriedade:
+Antes que o servidor de Implementação de referência possa emitir licenças para a demonstração do modelo de uso, o servidor precisa ser configurado para especificar como as licenças são geradas para cada um dos quatro modelos de uso. Isso é feito especificando uma política para cada modelo de uso. A Implementação de referência inclui quatro políticas de amostra ( [!DNL dto-policy.pol], [!DNL vod-policy.pol], [!DNL sub-policy.pol], [!DNL ad-policy.pol]) ou você pode substituir suas próprias políticas. Em [!DNL flashaccess-refimpl.properties], defina as seguintes propriedades para especificar a política a ser usada para cada modelo de uso e coloque os arquivos de política no diretório especificado pela propriedade `config.resourcesDirectory`:
 
 ```
 # Policy file name for Download To Own usage  
