@@ -1,18 +1,21 @@
 ---
-description: Os editores podem criar players de vídeo compatíveis com HLS que funcionam com os fluxos de trabalho de rastreamento de anúncio do lado do cliente do servidor manifest Primetime. As interfaces com o servidor manifest para os casos de transmissão ao vivo e vídeo sob demanda (VOD) são ligeiramente diferentes.
-seo-description: Os editores podem criar players de vídeo compatíveis com HLS que funcionam com os fluxos de trabalho de rastreamento de anúncio do lado do cliente do servidor manifest Primetime. As interfaces com o servidor manifest para os casos de transmissão ao vivo e vídeo sob demanda (VOD) são ligeiramente diferentes.
+description: Os editores podem criar players de vídeo compatíveis com HLS que funcionam com os workflows de rastreamento de anúncio do lado do cliente do servidor manifest Primetime. As interfaces com o servidor manifest para os casos de transmissão ao vivo e vídeo sob demanda (VOD) são ligeiramente diferentes.
+seo-description: Os editores podem criar players de vídeo compatíveis com HLS que funcionam com os workflows de rastreamento de anúncio do lado do cliente do servidor manifest Primetime. As interfaces com o servidor manifest para os casos de transmissão ao vivo e vídeo sob demanda (VOD) são ligeiramente diferentes.
 seo-title: Visão geral do rastreamento de cliente não TVSDK
 title: Visão geral do rastreamento de cliente não TVSDK
 uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '762'
+ht-degree: 0%
 
 ---
 
 
 # Visão geral do rastreamento de cliente não TVSDK {#overview-of-non-tvsdk-client-side-tracking}
 
-Os editores podem criar players de vídeo compatíveis com HLS que funcionam com os fluxos de trabalho de rastreamento de anúncio do lado do cliente do servidor manifest Primetime. As interfaces com o servidor manifest para os casos de transmissão ao vivo e vídeo sob demanda (VOD) são ligeiramente diferentes.
+Os editores podem criar players de vídeo compatíveis com HLS que funcionam com os workflows de rastreamento de anúncio do lado do cliente do servidor manifest Primetime. As interfaces com o servidor manifest para os casos de transmissão ao vivo e vídeo sob demanda (VOD) são ligeiramente diferentes.
 
 O servidor manifest fornece uma API para permitir que players personalizados solicitem os seguintes URLs, que podem ser usados para relatar eventos de rastreamento de anúncios:
 
@@ -21,14 +24,14 @@ O servidor manifest fornece uma API para permitir que players personalizados sol
 * Progresso do pod de anúncios
 * Progresso do pod de conteúdo
 
-A API do servidor manifest presume que qualquer player de vídeo que a utilize atenda aos requisitos mínimos. Consulte Requisitos [do reprodutor de](../../msapi-topics/ms-player-req.md) vídeo para obter mais detalhes.
+A API do servidor manifest presume que qualquer player de vídeo que a utilize atenda aos requisitos mínimos. Consulte [Requisitos do reprodutor de vídeo](../../msapi-topics/ms-player-req.md) para obter mais detalhes.
 
 ## Fluxo de trabalho de rastreamento do cliente {#section_cst_flow}
 
 ![](assets/pt_ssai_notvsdk_csat_ai-workflow.png)
 
 1. O player obtém um URL de servidor de manifesto do editor.
-1. O Player anexa os parâmetros de consulta específicos aos requisitos de inserção de publicidade e envia uma solicitação HTTP GET para o URL do Bootstrap resultante. O URL do Bootstrap tem a seguinte sintaxe:
+1. O Player anexa parâmetros de query específicos aos requisitos de inserção de anúncios e envia uma solicitação HTTP de GET para o URL de Bootstrap resultante. O URL do Bootstrap tem a seguinte sintaxe:
 
    ```
    http{s}://{manifest-server:port}/auditude/variant/{PublisherAssetID}/{urlSafeBase64({Content URL})}.m3u8?{query parameters}
@@ -39,7 +42,7 @@ A API do servidor manifest presume que qualquer player de vídeo que a utilize a
    u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2&__sid__=docExample02
    ```
 
-   O URL inclui os elementos descritos em [Enviar um comando para o servidor](../../msapi-topics/ms-getting-started/ms-sending-cmd.md)de manifesto.
+   O URL inclui os elementos descritos em [Envie um comando para o Manifest Server](../../msapi-topics/ms-getting-started/ms-sending-cmd.md).
 
 1. O servidor manifest estabelece uma sessão para esse player e gera uma ID de sessão exclusiva. Ele cria um novo URL da lista de reprodução M3U8 variante, que retorna ao player como uma resposta JSON. O JSON tem a seguinte sintaxe:
 
@@ -54,7 +57,7 @@ A API do servidor manifest presume que qualquer player de vídeo que a utilize a
    https://pcor3.manifest.auditude.com/auditude/variant/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3B0ZGVtb3MuY29tL3ZpZGVvcy90b3NoZHVuZW5jcnlwdGVkL2hscy90ZXN0Mi5tM3U4.3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. O player usa o URL da resposta JSON para solicitar a nova lista de reprodução mestre M3U8 variante do servidor manifest.
+1. O player usa o URL da resposta JSON para solicitar a nova lista de reprodução principal M3U8 do servidor manifest.
 1. O servidor manifest retorna uma nova variante M3U8 contendo URLs de lista de reprodução em nível de fluxo com uma sintaxe semelhante à seguinte:
 
    ```
@@ -114,7 +117,7 @@ A API do servidor manifest presume que qualquer player de vídeo que a utilize a
 
    >[!NOTE]
    >
-   >O player seleciona o URL da lista de reprodução em nível de fluxo para obter o fluxo de conteúdo. O servidor manifest recupera a lista de reprodução original do CDN. Alguns codificadores podem inserir detalhes adicionais no atributo de `#EXTINF` título, por exemplo:
+   >O player seleciona o URL da lista de reprodução em nível de fluxo para obter o fluxo de conteúdo. O servidor manifest recupera a lista de reprodução original do CDN. Alguns codificadores podem inserir detalhes adicionais no atributo de título `#EXTINF`, por exemplo:
    >
    >
    ```
@@ -124,14 +127,14 @@ A API do servidor manifest presume que qualquer player de vídeo que a utilize a
    Como o servidor manifest não pode inferir o significado de atributos não padrão para modificá-los em uma lista de reprodução com pontos de anúncio, o servidor manifest remove todos os atributos adicionais além das informações de duração dessa tag. Consulte a entrada [EXTINF](https://tools.ietf.org/html/rfc8216#section-4.3.2.1) na especificação HLS para obter mais detalhes.
 
 
-1. Para solicitar informações de rastreamento, o player anexa o parâmetro de consulta `pttrackingposition` com qualquer valor alfanumérico ao URL da lista de reprodução no nível do fluxo para a taxa de bits selecionada. Por exemplo:
+1. Para solicitar informações de rastreamento, o player anexa o parâmetro do query `pttrackingposition` com qualquer valor alfanumérico ao URL da lista de reprodução no nível do fluxo para a taxa de bits selecionada. Por exemplo:
 
    ```
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d
    &z=173475&pttrackingmode=simple&pttrackingversion=v2&pttrackingposition=1
    ```
 
-1. O servidor manifest retorna o arquivo da lista de reprodução preenchido com um objeto [JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) ou [VMAP](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) que contém os dados de rastreamento de anúncio para o arquivo m3u8 no nível de fluxo solicitado no momento.
+1. O servidor manifest retorna o arquivo da lista de reprodução preenchido com um objeto [JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) ou [VMAP](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) que contém os dados de rastreamento de anúncio para o arquivo m3u8 no nível de fluxo atualmente solicitado.
 
    >[!NOTE]
    >
@@ -139,12 +142,12 @@ A API do servidor manifest presume que qualquer player de vídeo que a utilize a
 
    >[!NOTE]
    >
-   >O servidor manifest gera o objeto de rastreamento de anúncio com base no `pttrackingversion` valor no URL do Bootstrap. Se o valor `pttrackingversion` for omitido ou tiver um valor inválido, o servidor manifest preencherá automaticamente as informações de rastreamento de anúncio nas `#EXT-X-MARKER` tags de cada lista de reprodução de nível de fluxo solicitada. Consulte [para obter mais detalhes](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
+   >O servidor manifest gera o objeto de rastreamento de anúncio com base no valor `pttrackingversion` no URL do Bootstrap. Se `pttrackingversion` for omitido ou tiver um valor inválido, o servidor manifest preencherá automaticamente as informações de rastreamento de anúncio nas tags `#EXT-X-MARKER` em cada lista de reprodução de nível de fluxo solicitada. Consulte [para obter mais detalhes](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
 
 1. O player solicita cada URL de rastreamento de anúncio para cada evento de rastreamento de anúncio no momento apropriado.
 
 >[!NOTE]
 >
->Para fluxos ao vivo, o player deve repetir as etapas de 6 a 10, pois o empacotador atualiza constantemente a lista de reprodução durante todo o tempo do evento ao vivo.
+>Para fluxos ao vivo, o player deve repetir as etapas de 6 a 10, pois o empacotador atualiza constantemente a lista de reprodução durante todo o evento ao vivo.
 
 Enquanto o vídeo é reproduzido, o player deve rastrear a posição do indicador de reprodução e usar essa posição juntamente com URLs de rastreamento recebidos do Primetime ad insertion. Os URLs de rastreamento são agrupados por deslocamento de tempo a partir do início da reprodução. Para cada deslocamento de tempo, há um URL para cada sistema de anúncios para o qual enviar informações de rastreamento. Detalhes adicionais do formato diferem entre vídeo ao vivo e vídeo sob demanda.
