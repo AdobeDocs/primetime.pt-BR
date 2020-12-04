@@ -1,18 +1,21 @@
 ---
-description: Se o cliente solicitar informações de rastreamento, o servidor manifest enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro de consulta pttrackingversion
-seo-description: Se o cliente solicitar informações de rastreamento, o servidor manifest enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro de consulta pttrackingversion
+description: Se o cliente solicitar informações de rastreamento, o servidor manifest enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro do query pttrackingversion
+seo-description: Se o cliente solicitar informações de rastreamento, o servidor manifest enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro do query pttrackingversion
 seo-title: Formato VMAP para URLs de rastreamento
 title: Formato VMAP para URLs de rastreamento
 uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# Formato VMAP para URLs de rastreamento {#vmap-format-for-tracking-urls}
+# Formato VMAP para rastrear URLs {#vmap-format-for-tracking-urls}
 
-Se o cliente solicitar informações de rastreamento, o servidor manifest enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro de consulta `pttrackingversion`
+Se o cliente solicitar informações de rastreamento, o servidor manifest enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro do query `pttrackingversion`
 
 ## Formato VMAP único {#vmap}
 
