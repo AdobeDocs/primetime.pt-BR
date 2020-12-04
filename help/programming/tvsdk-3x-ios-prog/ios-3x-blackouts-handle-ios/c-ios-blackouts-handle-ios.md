@@ -6,11 +6,14 @@ title: Naufrágios de mão
 uuid: 00b6f204-6ba4-4245-9028-6f7c392e9275
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
 
-# Naufrágios de mão {#handle-blackouts}
+# Gerenciar blecautes {#handle-blackouts}
 
 O TVSDK trata de blecautes em fluxos de vídeo ao vivo e fornece conteúdo alternativo durante um blecaute.
 
@@ -23,17 +26,17 @@ Para implementar a solução para este caso de uso:
    O TVSDK não está ciente diretamente das tags de blecaute, mas permite que seu aplicativo assine notificações quando tags específicas forem encontradas durante a análise do arquivo manifest.
 1. Adicione um ouvinte de notificação para `PTTimedMetadataChangedNotification`.
 
-   Essa notificação é enviada toda vez que uma tag assinada é analisada no manifesto e uma nova `PTTimedMetadata` é preparada a partir dela.
+   Esta notificação é enviada sempre que uma tag assinada é analisada no manifesto e um novo `PTTimedMetadata` é preparado a partir dele.
 
-1. Implemente um método de ouvinte, como `onMediaPlayerSubscribedTagIdentified`, para `PTTimedMetadata` objetos em primeiro plano.
+1. Implemente um método de ouvinte, como `onMediaPlayerSubscribedTagIdentified`, para objetos `PTTimedMetadata` em primeiro plano.
 
-1. Sempre que houver uma atualização durante a reprodução, use o `PTMediaPlayerTimeChangeNotification` ouvinte para manipular `PTTimedMetadata` objetos.
+1. Sempre que houver uma atualização durante a reprodução, use o ouvinte `PTMediaPlayerTimeChangeNotification` para manipular os objetos `PTTimedMetadata`.
 
-1. Adicione o `PTTimedMetadata` manipulador.
+1. Adicione o manipulador `PTTimedMetadata`.
 
-   Esse manipulador permite alternar para o conteúdo alternativo e retornar ao conteúdo principal, conforme indicado pelo `PTTimedMetadata` objeto e seu tempo de reprodução.
+   Esse manipulador permite alternar para o conteúdo alternativo e retornar ao conteúdo principal, conforme indicado pelo objeto `PTTimedMetadata` e seu tempo de reprodução.
 
-1. Use `onSubscribedTagInBackground` para implementar o método listener para `PTTimedMetadata` objetos em segundo plano.
+1. Use `onSubscribedTagInBackground` para implementar o método listener para objetos `PTTimedMetadata` em segundo plano.
 
    Este método monitora a temporização no fluxo em segundo plano, o que ajuda a determinar quando você pode alternar de conteúdo alternativo de volta para o conteúdo principal.
 
