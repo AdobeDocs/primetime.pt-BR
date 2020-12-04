@@ -6,6 +6,9 @@ title: Recursos HLS suportados
 uuid: 033d81f8-cea4-4687-b2fb-1524d9164d39
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ O TVSDK do navegador suporta vários recursos HLS que você pode implementar par
 
 >[!TIP]
 >
->Nas tabelas de matriz de recursos abaixo, o ícone ![](assets/supported15.png) suportado significa que o recurso é suportado na versão atual.
+>Nas tabelas de matriz de recursos abaixo, ![ícone suportado](assets/supported15.png) significa que o recurso é suportado na versão atual.
 
 >[!TIP]
 >
@@ -85,31 +88,31 @@ Removed Nielsen row
 
 | Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Integrações | VOD + Live | Integração VHL do Adobe Analytics | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Integrações | VOD + Live | Integração Adobe Analytics VHL | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 
-## Recursos avançados de inserção de anúncios (CSAI) do HLS {#hls-advanced-ad-insertion}
-
-| Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
-|--- |--- |--- |--- |--- |--- |
-| Inserção do anúncio | VOD | Somente publicidade | Não suportado | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Inserção do anúncio | VOD + Live | Parâmetros de definição de metas | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Inserção do anúncio | VOD + Live | Política de anúncio personalizada | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Inserção do anúncio | VOD + Live | Carregamento de anúncio ocioso | ![ícone suportado](assets/supported15.png) | Não suportado | Limitação da plataforma |
-| Inserção do anúncio | VOD | Anúncios complementares, anúncios em banners e anúncios clicáveis | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Inserção do anúncio | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
-
-## Recursos de inserção de anúncio principal do HLS (CSAI) {#hls-core-ad-insertion}
+## Recursos avançados de inserção de anúncios (CSAI) HLS {#hls-advanced-ad-insertion}
 
 | Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Inserção do anúncio | VOD + Live | Pré-lançamento | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Inserção do anúncio | VOD + Live | Meia rolagem | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Inserção do anúncio | VOD + Live | Pós-rolagem | Somente VOD | Somente VOD | Somente VOD |
-| Inserção do anúncio | FER VOD | Resolução e comportamento do anúncio | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Inserção do anúncio | VOD + Live | Política de publicidade padrão | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Inserção do anúncio | VOD + Live | VAST 2.0/3.0 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Inserção do anúncio | VOD + Live | VMAP 1.0 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Inserção do anúncio | VOD + Live | CRS v3.1 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD | Somente publicidade | Não suportado | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Parâmetros de definição de metas | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Política de anúncio personalizada | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Ad Insertion | VOD + Live | Carregamento de anúncio ocioso | ![ícone suportado](assets/supported15.png) | Não suportado | Limitação da plataforma |
+| Ad Insertion | VOD | Anúncios complementares, anúncios em banners e anúncios clicáveis | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
+
+## Recursos de inserção de anúncio do núcleo do HLS (CSAI) {#hls-core-ad-insertion}
+
+| Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+|--- |--- |--- |--- |--- |--- |
+| Ad Insertion | VOD + Live | Pré-lançamento | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Meia rolagem | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Ad Insertion | VOD + Live | Pós-rolagem | Somente VOD | Somente VOD | Somente VOD |
+| Ad Insertion | FER VOD | Resolução e comportamento do anúncio | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Ad Insertion | VOD + Live | Política de publicidade padrão | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Ad Insertion | VOD + Live | VAST 2.0/3.0 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Live | VMAP 1.0 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Live | CRS v3.1 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 
 ## Recursos de proteção de conteúdo HLS {#hls-content-protection}
 
@@ -117,7 +120,7 @@ Removed Nielsen row
 |--- |--- |--- |--- |--- |--- |
 | Proteção de conteúdo | VOD + Live | AES-128 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 | Proteção de conteúdo | VOD + Live | AES de amostra | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Proteção de conteúdo | VOD | DRM | Adobe Access | Não suportado | FairPlay |
+| Proteção de conteúdo | VOD | DRM | Acesso ao Adobe | Não suportado | FairPlay |
 
 ## Recursos de reprodução avançada HLS {#hls-advanced-playback}
 
