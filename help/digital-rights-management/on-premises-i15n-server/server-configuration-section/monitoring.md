@@ -4,6 +4,9 @@ title: Monitoramento
 uuid: ee62c55f-0d44-40f4-a2c7-39456f4d3d99
 translation-type: tm+mt
 source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ O servidor de Individualização e o servidor de Geração de Chave têm uma pá
 
 * **Página de status de individualização:** [!DNL https://SERVER:PORT/flashaccess/status]
 
-   * Relata &quot;Vivo&quot; se o servidor de aplicativos estiver em execução e o aplicativo puder fazer uma solicitação GET ao servidor de geração de chave
+   * Reporta &quot;Vivo&quot; se o servidor de aplicativos estiver em execução e o aplicativo puder fazer uma solicitação de GET para o servidor de geração de chave
    * A página informa &quot;Vivo&quot; ou nada. Nenhuma informação sobre o aplicativo é revelada, portanto esta página pode ser usada para monitoramento fora do firewall.
 
 * **Página de status Geração de chave:** [!DNL https://SERVER:PORT/flashaccess-kgs/status]
