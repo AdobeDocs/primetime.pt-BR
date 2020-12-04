@@ -6,6 +6,9 @@ title: Otimização de redirecionamento HTTP 302
 uuid: 91ed8919-a3c1-4e57-9eaf-e3ba430de35f
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +21,7 @@ Se uma solicitação de manifesto principal for redirecionada e a otimização 3
 
 ## Desabilitar ou habilitar a otimização de redirecionamento 302 {#section_8977448B268E41D69A8F75B60EB9DA3B}
 
-Use a `useRedirectedUrl` propriedade para ativar ou desativar o redirecionamento 302 ( `true`) ou `false`).
+Use a propriedade `useRedirectedUrl` para ativar o redirecionamento 302 ( `true`) ou desativar ( `false`).
 
 <!--<a id="example_888749F70C8A43279D06A29BD68E7E4D"></a>-->
 
