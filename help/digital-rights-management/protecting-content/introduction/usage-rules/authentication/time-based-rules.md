@@ -4,6 +4,9 @@ title: Regras baseadas em tempo
 uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
@@ -15,15 +18,15 @@ O Primetime DRM usa a &quot;aplicação flexível&quot; das restrições de lice
 Embora a aplicação flexível seja o comportamento padrão, também é possível ativar a aplicação forçada executando uma das seguintes tarefas:
 
 * Solicite ao seu reprodutor de vídeo que pesquise periodicamente a licença para verificar se nenhuma das restrições de tempo expirou. Isso pode ser feito chamando `DRMManager.loadVoucher(LOCAL_ONLY).` Um código de erro indica que a licença armazenada localmente não é mais válida.
-* Sempre que o usuário clica **[!UICONTROL Pause]**, você pode gravar o carimbo de data e hora do vídeo atual e depois chamar `Netstream.stop()`. Quando o usuário clica no botão Reproduzir, você pode procurar no local gravado e depois chamar `Netstream.play()`.
+* Sempre que o usuário clicar em **[!UICONTROL Pause]**, você poderá gravar o carimbo de data e hora do vídeo atual e depois chamar `Netstream.stop()`. Quando o usuário clica no botão Reproduzir, você pode procurar no local gravado e depois chamar `Netstream.play()`.
 
-## Data de início {#start-date}
+## Data do start {#start-date}
 
-A data de início especifica a data após a qual uma licença é válida.
+A data de start especifica a data após a qual uma licença é válida.
 
 Exemplo de caso de uso: Use uma data absoluta para emitir licenças de conteúdo antes da data de disponibilidade de um ativo ou para aplicar um período de &quot;embargo&quot;.
 
-## Data de término {#end-date}
+## Data final {#end-date}
 
 A data de término especifica a data após a qual uma licença expira.
 
@@ -49,8 +52,8 @@ A janela de reprodução especifica a duração de validade de uma licença apó
 
 Exemplo de caso de uso: Alguns modelos de negócios permitem um período de aluguel de 30 dias, mas, uma vez iniciada a reprodução, a reprodução precisa ser concluída em 48 horas. Nesse caso, a duração de 48 horas da licença é a janela de reprodução.
 
-**Da versão 5.3 em diante** - A janela de reprodução também suporta a opção de ativar ou desativar a Parada sólida, que indica se o contexto de descriptografia para a reprodução deve parar na expiração da janela de reprodução (ativada) ou continuar apesar da expiração (desativada).
+**Da versão 5.3 em diante**  - A janela de reprodução também suporta a opção de ativar ou desativar a Parada sólida, que indica se o contexto de descriptografia para a reprodução deve parar na expiração da janela de reprodução (ativada) ou continuar apesar da expiração (desativada).
 
 >[!NOTE]
 >
->A opção hard stop não funciona corretamente com a Janela de reprodução se usada em conjunto com ela (a janela de reprodução não será respeitada). Reproduzir conteúdo com a janela Reprodução sem parada segura respeita a restrição da janela de reprodução.
+>A opção hard stop não funciona corretamente com a janela Reprodução se usada em conjunto com ela (a janela Reprodução não será respeitada). Reproduzir conteúdo com a janela Reprodução sem parada segura respeita a restrição da janela de reprodução.
