@@ -46,5 +46,5 @@ Os atributos a seguir podem identificar os recursos do dispositivo:
 >
 >Esta regra de uso é suportada pelos clientes DRM da Adobe Primetime versão 2.0.2 e posterior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças.
 >
->Consulte Versão [](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)mínima do cliente.
+>Consulte [Versão mínima do cliente](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 
