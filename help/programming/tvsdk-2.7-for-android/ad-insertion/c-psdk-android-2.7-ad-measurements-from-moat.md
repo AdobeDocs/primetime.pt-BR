@@ -1,22 +1,25 @@
 ---
-description: O TVSDK coleta informações do FreeWheel e de outros servidores de anúncios, fornecendo respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor se os criativos capturam ou negligenciam os interesses de um público-alvo.
-seo-description: O TVSDK coleta informações do FreeWheel e de outros servidores de anúncios, fornecendo respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor se os criativos capturam ou negligenciam os interesses de um público-alvo.
+description: O TVSDK coleta informações do FreeWheel e de outros servidores de anúncios, fornecendo respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor se os criativos capturam ou negligenciam interesses de audiências.
+seo-description: O TVSDK coleta informações do FreeWheel e de outros servidores de anúncios, fornecendo respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor se os criativos capturam ou negligenciam interesses de audiências.
 seo-title: Medições de anúncios do Moat
 title: Medições de anúncios do Moat
 uuid: b89f900f-50ab-4152-9c0f-11f82d92bffa
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 0%
 
 ---
 
 
 # Medições de anúncios do Moat{#ad-measurements-from-moat}
 
-O TVSDK coleta informações do FreeWheel e de outros servidores de anúncios, fornecendo respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor se os criativos capturam ou negligenciam os interesses de um público-alvo.
+O TVSDK coleta informações do FreeWheel e de outros servidores de anúncios, fornecendo respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor se os criativos capturam ou negligenciam interesses de audiências.
 
 Moat é um serviço que mede e exibe diversos usos, de navegadores a aplicativos internos. O Moat gera dados de análise de marketing em tempo real em várias plataformas.
 
-O XML de resposta VAST tem uma propriedade e um elemento que seu código pode ler, a propriedade mais externa `Ad id` e o elemento mais externo `Extension` . De qualquer forma, seu código pode usar o TVSDK para salvar as `Ad id` informações e as `Extension` informações e, em seguida, organizar as informações em uma estrutura em árvore. Com essa organização, seu código pode coletar os dados de qualquer nível e passá-los para onde for necessário. O valor da propriedade mais externa `Ad id` permite que seu código coordene informações da campanha associada.
+O XML de resposta VAST tem uma propriedade e um elemento que seu código pode ler, a propriedade mais externa `Ad id` e o elemento mais externo `Extension`. De qualquer forma, seu código pode usar o TVSDK para salvar as informações `Ad id` e `Extension`, em seguida, organizar as informações em uma estrutura em árvore. Com essa organização, seu código pode coletar os dados de qualquer nível e passá-los para onde for necessário. O valor da propriedade mais externa `Ad id` permite que seu código coordene informações da campanha associada.
 
 Por exemplo, o FreeWheel pode retornar dados em um elemento Extensões. Abaixo está um elemento de amostra.
 
@@ -36,7 +39,7 @@ Por exemplo, o FreeWheel pode retornar dados em um elemento Extensões. Abaixo e
 </Extensions> 
 ```
 
-O Freeroda também pode definir a `id` propriedade no `Ad` elemento, como mostrado na amostra abaixo.
+O FreeWheel também pode definir a propriedade `id` no elemento `Ad`, conforme mostrado na amostra abaixo.
 
 ```xml
 <Ad id="118566" sequence="1">
