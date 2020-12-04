@@ -6,6 +6,9 @@ title: Visão geral
 uuid: 9752a239-690b-4b2b-aab1-1e82470d84d1
 translation-type: tm+mt
 source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +23,13 @@ O TVSDK inclui descrições de API e exemplos de código para ajudá-lo a integr
 
 Para obter os requisitos específicos de hardware e software para o uso do TVSDK, consulte [Requisitos](../../c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/r-psdk-dhls-1.4-requirements-system.md).
 
-## Público {#section_527860B373734D3BA89FCF5EC1F6DC37}
+## Audiência {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-Este guia supõe que você saiba como desenvolver aplicativos e players de vídeo usando o ActionScript. Você implementa uma interface de usuário do player de vídeo usando esse idioma e incorpora recursos do TVSDK.
+Este guia pressupõe que você saiba como desenvolver aplicativos e players de vídeo usando o ActionScript. Você implementa uma interface de usuário do player de vídeo usando esse idioma e incorpora recursos do TVSDK.
 
 ## Sobre este guia {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
-Este guia fornece informações que permitem incorporar recursos do TVSDK em um player de vídeo usando o ActionScript em computadores desktop.
+Este guia fornece informações que permitem incorporar recursos do TVSDK em um player de vídeo usando ActionScript em computadores desktop.
 
 ## Notação de namespace neste guia {#section_8B866054E9ED4B5F99DCA7A681404632}
 
