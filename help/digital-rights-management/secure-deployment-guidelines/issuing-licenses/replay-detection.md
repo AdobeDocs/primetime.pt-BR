@@ -6,11 +6,14 @@ title: Proteção contra repetição
 uuid: 93749dd3-a42c-4866-ac54-1b20d6683c42
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
 
-# Proteção contra repetição{#replay-protection}
+# Reproduzir proteção{#replay-protection}
 
 A proteção de repetição impede que um invasor reproduza uma mensagem de solicitação de licença e possivelmente causa um ataque de negação de serviço (DoS) contra o cliente.
 
