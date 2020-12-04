@@ -6,11 +6,14 @@ title: classe TimeRangeCollection
 uuid: 5705dc9d-4325-44b0-b5aa-196d09c3a67e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '124'
+ht-degree: 0%
 
 ---
 
 
-# classe TimeRangeCollection{#timerangecollection-class}
+# Classe TimeRangeCollection{#timerangecollection-class}
 
 A classe do utilitário TimeRangeCollection abstrai a noção de uma coleção ordenada de especificações TimeRange e fornece serviços para se traduzir em uma instância Metadata.
 
@@ -32,4 +35,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-O `type` parâmetro, que é o primeiro parâmetro posicional na assinatura dos métodos do construtor, é uma instância da `TimeRangeCollection#Type` enumeração. Isto é parte da `TimeRangeCollection` classe. Os valores que estão definidos atualmente por essa enumeração são `MARK_RANGES`, `DELETE_RANGES`e `REPLACE_RANGES`. É possível criar `TimeRangeCollection` objetos usando esses três tipos.
+O parâmetro `type`, que é o primeiro parâmetro posicional na assinatura dos métodos do construtor, é uma instância da lista discriminada `TimeRangeCollection#Type`. Isso faz parte da classe `TimeRangeCollection`. Os valores atualmente definidos por essa lista discriminada são `MARK_RANGES`, `DELETE_RANGES` e `REPLACE_RANGES`. Você pode criar `TimeRangeCollection` objetos usando esses três tipos.
