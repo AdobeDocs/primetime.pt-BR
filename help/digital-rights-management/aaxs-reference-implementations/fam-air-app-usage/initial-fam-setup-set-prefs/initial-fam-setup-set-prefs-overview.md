@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Visão geral das preferências de configuração {#setting-preferences-overview}
 
-Com exceção do URL do servidor Packager, todas as preferências especificadas abaixo são armazenadas no [!DNL flashaccess-refimpl-packager.properties] arquivo no servidor. Todas as configurações podem ser modificadas diretamente no arquivo de propriedades ou pelo aplicativo AIR. As senhas são criptografadas quando são armazenadas no arquivo de propriedades no servidor. Digite a senha não criptografada na interface do usuário e ela será criptografada antes de ser armazenada no arquivo.
+Com exceção do URL do servidor Packager, todas as preferências especificadas abaixo são armazenadas no arquivo [!DNL flashaccess-refimpl-packager.properties] no servidor. Todas as configurações podem ser modificadas diretamente no arquivo de propriedades ou pelo aplicativo AIR. As senhas são criptografadas quando são armazenadas no arquivo de propriedades no servidor. Digite a senha não criptografada na interface do usuário e ela será criptografada antes de ser armazenada no arquivo.
 
 >[!NOTE]
 >
