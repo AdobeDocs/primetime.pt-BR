@@ -19,7 +19,7 @@ A Publisher ID é exclusiva do certificado usado para criar um arquivo AIR. Se v
 
 >[!NOTE]
 >
->A ID do editor usada para a imposição de lista de permissões do AIR não é a mesma ID do editor que o editor do aplicativo especifica no [!DNL application.xml] arquivo do aplicativo.
+>A ID do editor usada para a imposição de lista de permissões do AIR não é a mesma ID do editor que o editor do aplicativo especifica no arquivo [!DNL application.xml] do aplicativo.
 
 ## Uso da linha de comando do utilitário AIR Publisher ID {#air-publisher-id-utility-command-line-usage}
 
@@ -37,10 +37,10 @@ java -jar AdobePublisherIDUtility.jar
 ```
 
 * 
-   * `signaturefile`* especifica um caminho para o arquivo do aplicativo AIR, localizado no [!DNL signatures.xml] diretório de aplicativos [!DNL META-INF]
+   * `signaturefile`* especifica um caminho para o  [!DNL signatures.xml] arquivo do aplicativo AIR, localizado no  [!DNL META-INF] diretório de aplicativos
 
 * `signingcert` especifica o certificado usado para assinar um aplicativo AIR
 
 >[!NOTE]
 >
->Para determinar a ID do editor para um aplicativo Android, é necessário usar a `-s` opção para especificar o certificado usado para assinar o pacote de aplicativo Android (APK). O Primetime DRM é necessário para criar aplicativos Android que possam reproduzir conteúdo protegido por DRM Primetime.
+>Para determinar a ID do editor para um aplicativo Android, é necessário usar a opção `-s` para especificar o certificado usado para assinar o pacote de aplicativo Android (APK). O Primetime DRM é necessário para criar aplicativos Android que possam reproduzir conteúdo protegido por DRM Primetime.
