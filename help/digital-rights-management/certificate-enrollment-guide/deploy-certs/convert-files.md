@@ -4,6 +4,9 @@ title: Converter arquivos
 uuid: e17ee003-5ac2-4bb8-83b7-81ee8fa9ee46
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +47,7 @@ Usando um utilitário como OpenSSL e a chave privada, o Solicitante gera os arqu
 
    >[!NOTE]
    >
-   >Embora não seja obrigatório, a Adobe recomenda usar senhas diferentes para a chave privada (private_key_password) e o PFX (pfx_password).
+   >Embora não seja obrigatório, o Adobe recomenda o uso de senhas diferentes para a chave privada (private_key_password) e o PFX (pfx_password).
 
    Este arquivo PEM final contém apenas seu certificado.
 
@@ -58,5 +61,5 @@ Usando um utilitário como OpenSSL e a chave privada, o Solicitante gera os arqu
 
    >[!NOTE]
    >
-   >Os arquivos DER são necessários apenas para o empacotador HTTP Dynamic Streaming.
+   >Os arquivos DER são necessários apenas para o empacotador de HTTP Dynamic Streaming.
 
