@@ -1,24 +1,27 @@
 ---
-description: Se quiser configurar o DRM Primetime, copie os arquivos do DVD. Esses arquivos incluem arquivos JAR que incluem código, certificados e classes de terceiros. Além disso, é necessário solicitar um certificado da Adobe Systems, Incorporated. Em seguida, a Adobe emite várias credenciais que você usa para proteger a integridade do conteúdo empacotado, das licenças e da comunicação entre o cliente e o servidor.
-seo-description: Se quiser configurar o DRM Primetime, copie os arquivos do DVD. Esses arquivos incluem arquivos JAR que incluem código, certificados e classes de terceiros. Além disso, é necessário solicitar um certificado da Adobe Systems, Incorporated. Em seguida, a Adobe emite várias credenciais que você usa para proteger a integridade do conteúdo empacotado, das licenças e da comunicação entre o cliente e o servidor.
+description: Se quiser configurar o Primetime DRM, copie os arquivos do DVD. Esses arquivos incluem arquivos JAR que incluem código, certificados e classes de terceiros. Além disso, é necessário solicitar um certificado da Adobe Systems, Incorporated. O Adobe emite várias credenciais que você usa para proteger a integridade do conteúdo, das licenças e da comunicação entre o cliente e o servidor.
+seo-description: Se quiser configurar o Primetime DRM, copie os arquivos do DVD. Esses arquivos incluem arquivos JAR que incluem código, certificados e classes de terceiros. Além disso, é necessário solicitar um certificado da Adobe Systems, Incorporated. O Adobe emite várias credenciais que você usa para proteger a integridade do conteúdo, das licenças e da comunicação entre o cliente e o servidor.
 seo-title: Configurar seu ambiente de desenvolvimento
 title: Configurar seu ambiente de desenvolvimento
 uuid: 68afefe8-7ec6-466e-89a8-bc0da8afb4c8
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
 
-# Configurar seu ambiente de desenvolvimento {#set-up-your-development-environment}
+# Configure seu ambiente de desenvolvimento {#set-up-your-development-environment}
 
-Se quiser configurar o DRM Primetime, copie os arquivos do DVD. Esses arquivos incluem arquivos JAR que incluem código, certificados e classes de terceiros. Além disso, é necessário solicitar um certificado da Adobe Systems, Incorporated. Em seguida, a Adobe emite várias credenciais que você usa para proteger a integridade do conteúdo empacotado, das licenças e da comunicação entre o cliente e o servidor.
+Se quiser configurar o Primetime DRM, copie os arquivos do DVD. Esses arquivos incluem arquivos JAR que incluem código, certificados e classes de terceiros. Além disso, é necessário solicitar um certificado da Adobe Systems, Incorporated. O Adobe emite várias credenciais que você usa para proteger a integridade do conteúdo, das licenças e da comunicação entre o cliente e o servidor.
 
-A Adobe fornece o SDK do DRM Primetime em DVD:
+O Adobe fornece o SDK do DRM Primetime em DVD:
 
-1. Copie os seguintes arquivos do [!DNL [DRM DVD]/SDK/] para o sistema de desenvolvimento (no caminho de classe Java):
+1. Copie os seguintes arquivos de [!DNL [DRM DVD]/SDK/] para seu sistema de desenvolvimento (no caminho de classe Java):
 
-   * [!DNL adobe-flashaccess-certs.jar] - Inclui certificados raiz da Adobe
+   * [!DNL adobe-flashaccess-certs.jar] - Inclui certificados raiz Adobe
    * [!DNL adobe-flashaccess-sdk.jar] - Inclui classes SDK principais do Primetime DRM
    * [!DNL adobe-flashaccess-sdk-pro.jar] - Inclui classes SDK do Primetime DRM Professional, necessárias somente para recursos Professional
 
@@ -48,6 +51,6 @@ A Adobe fornece o SDK do DRM Primetime em DVD:
       >
       >As versões de 32 bits e 64 bits dessas bibliotecas estão disponíveis. Você só deve usar a versão de 64 bits se tiver um SO de 64 bits e executar a versão de 64 bits do Java.
 
-1. (Opcional) Para a funcionalidade relacionada à compatibilidade do Adobe Flash Media Rights Management Server (FMRMS) 1.x, copie `[DRM DVD]/SDK/adobe-flashaccess-lcrm.jar]` para o seu sistema de desenvolvimento:
+1. (Opcional) Para obter a funcionalidade relacionada à compatibilidade do FMRMS (Adobe Flash Media Rights Management Server) 1.x, copie `[DRM DVD]/SDK/adobe-flashaccess-lcrm.jar]` para seu sistema de desenvolvimento:
 
    Implante isso somente se você implantou o FMRMS 1.x anteriormente e não quiser empacotar novamente seu conteúdo protegido por FMRMS. Nesse caso, você deve adicionar esse suporte ao seu servidor de licenças para que ele possa gerenciar conteúdo e clientes antigos.
