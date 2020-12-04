@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Use o Media Packager ( [!DNL AdobePackager.jar]) para especificar uma política de DRM a ser aplicada ao seu conteúdo e especificar qual parte do conteúdo será criptografada. Por exemplo, você pode especificar que o empacotador deve criptografar os dados de vídeo, mas não os dados de áudio.
 
-Antes de executar [!DNL AdobePackager.jar], você deve definir as propriedades na seção Propriedades do Media Packager do arquivo de configuração.
+Antes de executar [!DNL AdobePackager.jar], defina as propriedades na seção Propriedades do Media Packager do arquivo de configuração.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ java -jar AdobePackager.jar
 
    Se você especificar um diretório, o arquivo criptografado será salvo automaticamente no diretório especificado com o mesmo nome de arquivo especificado como o arquivo de origem. No entanto, não é possível especificar um diretório de destino que inclua o arquivo de origem.
 
-**Empacote vários arquivos com a mesma chave** (para suporte à taxa de vários bits):
+**Empacote vários arquivos com a mesma chave**  (para suporte à taxa de vários bits):
 
 ```
 java -jar AdobePackager.jar  
@@ -78,11 +78,11 @@ java -jar AdobePackager.jar -d
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
 ```
 
-* `metadatafile` é um [!DNL .metadata] arquivo que inclui metadados DRM.
+* `metadatafile` é um  [!DNL .metadata] arquivo que inclui metadados DRM.
 
 >[!NOTE]
 >
->Durante o empacotamento, o Media Packager não pode mais gerar um [!DNL .header] arquivo por padrão. Para gerar um [!DNL .header] arquivo, use a `-h` opção durante o empacotamento.
+>Durante o empacotamento, o Media Packager não pode mais gerar um arquivo [!DNL .header] por padrão. Para gerar um arquivo [!DNL .header], use a opção `-h` durante o empacotamento.
 
 **Quadro 3: Opções**
 
@@ -96,47 +96,47 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> configfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica o nome e o local do arquivo de configuração. </p> <p class="- topic/p ">Se você não especificar um nome ou um local, o DRM Media Packager pesquisará por <span class="filepath"> flashaccess stools.properties </span> no diretório de trabalho atual. </p> <p>Observação:  As opções especificadas na linha de comando têm prioridade sobre as opções especificadas no arquivo de configuração. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica o nome e o local do arquivo de configuração. </p> <p class="- topic/p ">Se você não especificar um nome ou um local, o DRM Media Packager pesquisará <span class="filepath"> flashaccess stools.properties </span> no diretório de trabalho atual. </p> <p>Observação:  As opções especificadas na linha de comando têm prioridade sobre as opções especificadas no arquivo de configuração. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d arquivo <span class="+ topic/ph pr-d/codeph codeph"> encryptedfile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> arquivo criptografado </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite que você visualização informações sobre um arquivo que já foi empacotado. </p> <p class="- topic/p ">Os arquivos de origem e de destino não são obrigatórios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadatafile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> arquivo de metadados </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite que você visualização informações sobre metadados existentes. </p> <p class="- topic/p ">Os arquivos de origem e de destino não são obrigatórios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-e </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extrai as políticas de DRM de um arquivo empacotado quando você aplica essa opção em conjunto com a opção <span class="codeph"> -d </span> . </p> <p class="- topic/p ">Um arquivo é criado automaticamente no mesmo diretório no qual o arquivo criptografado está localizado com um nome de arquivo e um identificador de política DRM. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extrai as políticas de DRM de um arquivo empacotado quando você aplica essa opção em conjunto com a opção <span class="codeph"> -d </span>. </p> <p class="- topic/p ">Um arquivo é criado automaticamente no mesmo diretório no qual o arquivo criptografado está localizado com um nome de arquivo e um identificador de política DRM. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-h </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extrai o cabeçalho DRM de um arquivo empacotado quando você aplica essa opção em conjunto com a opção <span class="codeph"> -d </span> . </p> <p class="- topic/p ">Um arquivo é criado automaticamente no mesmo diretório no qual o arquivo criptografado está localizado com o nome do arquivo e a extensão <span class="filepath"> .header </span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extrai o cabeçalho DRM de um arquivo empacotado quando você aplica essa opção em conjunto com a opção <span class="codeph"> -d </span>. </p> <p class="- topic/p ">Um arquivo é criado automaticamente no mesmo diretório no qual o arquivo criptografado está localizado com o nome do arquivo e a extensão <span class="filepath"> .header </span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-i <span class="+ topic/ph pr-d/codeph codeph"> contentID </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica um identificador exclusivo para este segmento de conteúdo. </p> <p class="- topic/p ">Se você não especificar um identificador, então o nome do arquivo destfile será aplicado automaticamente. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> chave </span>= <span class="+ topic/ph pr-d/codeph codeph"> valor </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica uma chave/valor personalizado para adicionar aos metadados do conteúdo. </p> <p class="- topic/p ">Você pode especificar várias <span class="codeph"> opções -k </span> . </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> tecla </span>= <span class="+ topic/ph pr-d/codeph codeph"> valor </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica uma chave/valor personalizado para adicionar aos metadados do conteúdo. </p> <p class="- topic/p ">Você pode especificar várias opções <span class="codeph"> -k </span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-m </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extraia metadados de um arquivo empacotado quando você aplicar essa opção em conjunto com a opção <span class="codeph"> -d </span> . </p> <p class="- topic/p ">Um arquivo é criado automaticamente no mesmo diretório que o arquivo criptografado com um nome de arquivo e uma extensão <span class="codeph"> .metadata </span> . </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extraia metadados de um arquivo empacotado quando você aplicar essa opção em conjunto com a opção <span class="codeph"> -d </span>. </p> <p class="- topic/p ">Um arquivo é criado automaticamente no mesmo diretório que o arquivo criptografado com um nome de arquivo e uma extensão <span class="codeph"> .metadata </span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-noprompt </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Não pergunte se o arquivo de destino deve ser substituído. </p> <p class="- topic/p ">Se o arquivo de destino já existir e <span class="codeph"> -o não </span> estiver definido, ocorrerá um erro. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Não pergunte se o arquivo de destino deve ser substituído. </p> <p class="- topic/p ">Se o arquivo de destino já existir e <span class="codeph"> -o </span> não estiver definido, ocorrerá um erro. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-o </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Substitui o arquivo de destino sem que você seja solicitado, a menos que ele já exista. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p nome <span class="+ topic/ph pr-d/codeph codeph"> do arquivo [domínio-transporte-cert] </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica o nome do arquivo que inclui a política de DRM. </p> <p class="- topic/p ">Se a política de DRM exigir o registro de domínio com um servidor que use um certificado de transporte diferente daquele especificado no arquivo de propriedades, será necessário fornecer o certificado de transporte de domínio. </p> <p class="- topic/p ">É possível especificar várias <span class="codeph"> opções -p </span> . O cliente sempre aplica a primeira opção por padrão. Os valores especificados na linha de comando têm prioridade sobre os especificados no arquivo de configuração. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph"> nome do arquivo [domain-transport-cert] </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica o nome do arquivo que inclui a política de DRM. </p> <p class="- topic/p ">Se a política de DRM exigir o registro de domínio com um servidor que use um certificado de transporte diferente daquele especificado no arquivo de propriedades, será necessário fornecer o certificado de transporte de domínio. </p> <p class="- topic/p ">Você pode especificar várias opções <span class="codeph"> -p </span>. O cliente sempre aplica a primeira opção por padrão. Os valores especificados na linha de comando têm prioridade sobre os especificados no arquivo de configuração. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -147,7 +147,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 >[!NOTE]
 >
->Para nomes de propriedades que incluem* n*, *n* representa um número inteiro que start com 1 e aumenta para cada instância da propriedade.
+>Para nomes de propriedade que incluem* n*, *n* representa um número inteiro que start com 1 e aumenta para cada instância da propriedade.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_dx4_mpy_n4"> 
  <thead class="- topic/thead "> 
@@ -167,11 +167,11 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.content.script</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Indica se os dados de script devem ser criptografados em mp4s. </p> <p><i class="+ topic/ph hi-d/i ">as tags de dados de script onMetaData</i> e <i class="+ topic/ph hi-d/i ">onXMP</i> nunca são criptografadas mesmo se você ativar essa opção. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Indica se os dados de script devem ser criptografados em mp4s. </p> <p><i class="+ topic/ph hi-d/i ">As tags de dados </i> onMetaData e  <i class="+ topic/ph hi-d/i "></i> onXMPscript nunca são criptografadas mesmo se você ativar essa opção. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.content.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica o nível de criptografia do vídeo. </p> <p class="- topic/p ">Um valor <span class="codeph"> alto</span> é usado para criptografar todo o conteúdo de vídeo, enquanto valores de <span class="codeph"> médio</span> e <span class="codeph"> baixo</span> são usados para criptografar partes do conteúdo de vídeo para arquivos mp4 que incluem conteúdo H.264. </p> <p class="- topic/p ">valor = <span class="codeph"> alto | meio | baixo</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica o nível de criptografia do vídeo. </p> <p class="- topic/p ">Um valor de <span class="codeph"> high</span> é usado para criptografar todo o conteúdo de vídeo, enquanto os valores de <span class="codeph"> medium</span> e <span class="codeph"> low</span> são usados para criptografar partes do conteúdo de vídeo para arquivos mp4 que incluem conteúdo H.264. </p> <p class="- topic/p ">value = <span class="codeph"> high | meio | low</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.content.secondUnencrypted</span> </td> 
@@ -183,7 +183,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">encrypt.keys.policyFile.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Essa propriedade é usada repetidamente para criar uma lista de políticas de DRM a serem aplicadas ao conteúdo. <span class="codeph"> n</span> representa um número inteiro cujo valor é 1 ou maior. O cliente usa a primeira instância por padrão. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Essa propriedade é usada repetidamente para criar uma lista de políticas de DRM a serem aplicadas ao conteúdo. <span class="codeph"> </span> representa um número inteiro cujo valor é 1 ou maior. O cliente usa a primeira instância por padrão. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverurl</span> </td> 
@@ -191,7 +191,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.servercert</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">O certificado de transporte do servidor de licenças. </p> <p class="- topic/p ">Essa propriedade especifica um arquivo <span class="filepath"> .cer</span> que inclui somente o certificado (o formato PEM ou DER é aceitável). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">O certificado de transporte do servidor de licenças. </p> <p class="- topic/p ">Esta propriedade especifica um arquivo <span class="filepath"> .cer</span> que inclui somente o certificado (o formato PEM ou DER é aceitável). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certfile</span> </td> 
@@ -206,8 +206,8 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Define a versão mínima do servidor necessária para emitir licenças para o conteúdo que está sendo empacotado. </p> <p class="- topic/p ">Especifique x (para Primetime DRM x.0), onde x representa um número de versão principal. Quaisquer versões de servidores que antecedem a versão 3.0 do Adobe Primetime não suportam essa configuração. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.transportcert </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Se uma política de DRM <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> exigir o registro de domínio com um servidor que suporte um certificado de transporte diferente daquele especificado em <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>, é necessário fornecer as necessidades do certificado de transporte de domínio. </p> <p class="- topic/p ">Essa propriedade especifica um arquivo que inclui somente o certificado (o formato PEM ou DER é aceitável). </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.transportcert  </span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Se uma política de DRM <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> exigir o registro de domínio com um servidor que suporte um certificado de transporte diferente daquele que você especificou em <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>, é necessário fornecer as necessidades de certificado de transporte de domínio. </p> <p class="- topic/p ">Essa propriedade especifica um arquivo que inclui somente o certificado (o formato PEM ou DER é aceitável). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.licenseKey</span> </td> 
@@ -219,7 +219,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rots.key.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sequência de chaves giradas que você pode especificar para criptografar o conteúdo quando a rotação de chaves estiver ativada. </p> <p class="- topic/p ">Se você não especificar nenhuma chave, então as chaves serão geradas aleatoriamente. As chaves devem ter 16 bytes de comprimento e ser especificadas como valores hexadecimais. </p> <p class="- topic/p ">O espaço em branco entre os valores hexadecimais é opcional. <i class="+ topic/ph hi-d/i ">n</i> deve aumentar monotonicamente, a partir de 1. Quando você especifica várias teclas, elas são percorridas na ordem indicada. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sequência de chaves giradas que você pode especificar para criptografar o conteúdo quando a rotação de chaves estiver ativada. </p> <p class="- topic/p ">Se você não especificar nenhuma chave, então as chaves serão geradas aleatoriamente. As chaves devem ter 16 bytes de comprimento e ser especificadas como valores hexadecimais. </p> <p class="- topic/p ">O espaço em branco entre os valores hexadecimais é opcional. <i class="+ topic/ph hi-d/i ">Não </i> deve aumentar monotonicamente, a partir de 1. Quando você especifica várias teclas, elas são percorridas na ordem indicada. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.otação.range</span> </td> 
