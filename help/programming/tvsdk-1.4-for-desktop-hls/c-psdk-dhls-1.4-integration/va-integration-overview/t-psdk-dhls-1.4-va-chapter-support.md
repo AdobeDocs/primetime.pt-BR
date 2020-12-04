@@ -6,11 +6,14 @@ title: Implementar suporte a capítulo
 uuid: 85d14b83-7910-4f5d-9ef2-511de916abd6
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
 
-# Implementar suporte a capítulo {#implement-chapter-support}
+# Implementar o suporte de capítulo {#implement-chapter-support}
 
 Você pode definir e rastrear capítulos para rastreamento de vídeo em um aplicativo baseado em TVSDK das seguintes maneiras:
 
