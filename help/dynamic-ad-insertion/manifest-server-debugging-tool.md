@@ -47,13 +47,13 @@ Ao chamar a ferramenta de depuração, você tem várias opções para quais inf
 
 Ao iniciar o registro de depuração para uma sessão do servidor manifest, você pode adicionar o parâmetro ptdebug ao URL da solicitação para especificar as seguintes opções para as informações que o servidor manifest retorna nos cabeçalhos HTTP:
 
-* ptdebug=true Todos os registros, exceto `TRACE_HTTP_HEADER` e a maioria `call/response data` dos `TRACE_AD_CALL` registros.
-* ptdebug=AdCall Apenas registros TRACE_AD_*type* (por exemplo, TRACE_AD_CALL).
+* ptdebug=true Todos os registros, exceto `TRACE_HTTP_HEADER` e a maioria `call/response data` dos registros `TRACE_AD_CALL`.
+* ptdebug=AdCall Somente registros TRACE_AD_*type* (por exemplo, TRACE_AD_CALL).
 * ptdebug=Somente cabeçalho registros TRACE_HTTP_HEADER.
 
 As opções não afetam o que o servidor manifest posiciona nos arquivos de log. Você não tem controle sobre isso, mas os arquivos de registro são arquivos de texto, portanto, você pode aplicar uma grande variedade de ferramentas para extrair e reformatar as informações que lhe interessam.
 
-Este é um exemplo do cabeçalho HTTP retornado quando `ptdebug=Header`. Algumas sequências longas de dígitos hexadecimais são substituídas por `. . .` clareza.
+Este é um exemplo do cabeçalho HTTP retornado quando `ptdebug=Header`. Algumas sequências longas de dígitos hexadecimais são substituídas por `. . .` para maior clareza.
 
 ```
 X-ADBE-AI-DBG-1 TRACE_MISC    HTTP request received
@@ -99,7 +99,7 @@ A estrutura de um registro de log é a seguinte:
 | record_type | string | Tipo de evento que está sendo registrado |
 | outros campos | *** | Depende do tipo de evento |
 
-### registros TRACE_REQUEST_INFO {#trace-request-info-records}
+### TRACE_REQUEST_INFO registra {#trace-request-info-records}
 
 Os registros deste tipo registram os resultados das solicitações HTTP. Os campos além de TRACE_REQUEST_INFO aparecem na ordem mostrada na tabela, separados por guias.
 
@@ -128,7 +128,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 ?u=cecebae72a919de350b9ac52602623f3&z=189938&ptcueformat=turner& sid =yk-cnnlive-003 &ptdebug=true 0 0 0 Variant 111.22.3.44 111.22.3.45 127.0.0.1:46383
 ```
 
-### registros TRACE_HTTP_HEADER {#trace-http-header-records}
+### TRACE_HTTP_HEADER registra {#trace-http-header-records}
 
 Registros desse tipo de cabeçalhos HTTP de log trocados durante chamadas HTTP entre o servidor do manifesto e o cliente, o servidor de publicidade ou o servidor de conteúdo. Os campos além de TRACE_HTTP_HEADER aparecem na ordem mostrada na tabela, separados por guias.
 
@@ -174,7 +174,7 @@ Um exemplo:
     UNKNOWN RESPONSE  Via MS4xIH. . .
 ```
 
-### registros TRACE_AD_CALL {#trace-ad-call-records}
+### TRACE_AD_CALL registra {#trace-ad-call-records}
 
 Registros desse tipo registram os resultados de solicitações de anúncios do servidor manifest. Os campos além de TRACE_AD_CALL aparecem na ordem mostrada na tabela, separados por guias.
 
@@ -237,7 +237,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 ```
 
-### registros TRACE_TRACKING_URL {#trace-tracking-url-records}
+### TRACE_TRACKING_URL records {#trace-tracking-url-records}
 
 Registros desse tipo registram os resultados de solicitações de anúncios do servidor manifest. Os campos além de TRACE_TRACKING_URL aparecem na ordem mostrada na tabela, separados por guias.
 
@@ -256,15 +256,15 @@ Um exemplo:
     sid:3086f5cd . . .;pts:0    200
 ```
 
-### registros de TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE {#trace-transcoding-no-media-to-transcode-records}
+### TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE registros {#trace-transcoding-no-media-to-transcode-records}
 
 Registros desse tipo registram uma publicidade criativa ausente. O único campo além de TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE aparece na tabela.
 
 | Campo | Tipo | Descrição |
 |--- |--- |--- |
-| ad_id | string | ID de anúncio totalmente qualificada `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` PROTOCOLO: AUDITUDE,VAST`)` |
+| ad_id | string | ID de anúncio totalmente qualificado `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID: PROTOCOLO `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]`: AUDITUDE,VAST`)` |
 
-### registros TRACE_TRANSCODING_REQUESTED {#trace-transcoding-requested-records}
+### TRACE_TRANSCODING_REQUESTED registros {#trace-transcoding-requested-records}
 
 Registros desse tipo registram os resultados das solicitações de transcodificação que o servidor manifest envia para o CRS. Os campos além de TRACE_TRANSCODING_REQUESTED aparecem na ordem mostrada na tabela, separados por guias.
 
@@ -276,7 +276,7 @@ Registros desse tipo registram os resultados das solicitações de transcodifica
 | sinalizadores | string | ID3 indica se a solicitação de transcodificação inclui uma solicitação para adicionar uma tag ID3 |
 | público alvo_duration | string | Duração do público alvo (segundos) do anúncio transcodificado |
 
-### registros TRACE_TRACKING_REQUEST {#trace-tracking-request-records}
+### TRACE_TRACKING_REQUEST registra {#trace-tracking-request-records}
 
 Registros desse tipo indicam uma solicitação para fazer o rastreamento do lado do servidor. Os campos além de TRACE_TRACKING_REQUEST aparecem na ordem mostrada na tabela, separados por guias.
 
@@ -286,7 +286,7 @@ Registros desse tipo indicam uma solicitação para fazer o rastreamento do lado
 | start | flutuante | Tempo de start do fragmento PTS (segundos com precisão de milissegundos) |
 | end | flutuante | Tempo de término do fragmento PTS (segundos com precisão de milissegundos) |
 
-### registros TRACE_TRACKING_REQUEST_URL {#trace-tracking-request-url-records}
+### TRACE_TRACKING_REQUEST_URL registra {#trace-tracking-request-url-records}
 
 Os registros deste tipo fornecem um URL de rastreamento para o rastreamento do lado do servidor. Os campos além de TRACE_TRACKING_REQUEST_URL são exibidos na ordem mostrada na tabela, separados por guias.
 
@@ -296,7 +296,7 @@ Os registros deste tipo fornecem um URL de rastreamento para o rastreamento do l
 | ad_system | string | Sistema de publicidade (por exemplo, auditude) |
 | url | string | URL para ping |
 
-### registros TRACE_WEBVTT_REQUEST {#trace-webvtt-request-records}
+### TRACE_WEBVTT_REQUEST registra {#trace-webvtt-request-records}
 
 Registros desse tipo de solicitações de log feitas pelo servidor manifest para legendas WEBVTT. Os campos além de TRACE_WEBVTT_REQUEST aparecem na ordem mostrada na tabela, separados por guias.
 
@@ -307,16 +307,16 @@ Registros desse tipo de solicitações de log feitas pelo servidor manifest para
 | start | flutuante | Dividir tempo de start (segundos com precisão de milissegundos) |
 | end | flutuante | Tempo de término dividido (segundos com precisão de milissegundos) |
 
-### registros TRACE_WEBVTT_RESPONSE {#trace-webvtt-response-records}
+### TRACE_WEBVTT_RESPONSE registra {#trace-webvtt-response-records}
 
-Registra ``of ``esse ``type ``log ``responses ``no ``manifest ``servidor ``sends ``para fazer ``clients ``logon `` `answer` ``em ``requests ```for` ``WEBVTT ``legendas. Os campos além de TRACE_WEBVTT_RESPONSE &quot;aparecem na ordem mostrada na tabela, `by`guias separadas.
+Registra ``of ``este ``type ``log ``responses ``o ``manifest ``servidor ``sends ``para ``clients ``em `` `answer` ``para ``requests `` `for` ``WEBVTT ``legendas. Os campos além de TRACE_WEBVTT_RESPONSE &quot;aparecem na ordem mostrada na tabela, separando `by`guias.
 
 | Campo | Tipo | Descrição |
 |--- |--- |--- |
 | status | string | Código de status HTTP retornado |
 | resposta | string | Resposta codificada em base64 enviada ao cliente |
 
-### registros TRACE_WEBVTT_SOURCE {#trace-webvtt-source-records}
+### TRACE_WEBVTT_SOURCE registra {#trace-webvtt-source-records}
 
 Registros desse tipo de respostas de log para solicitações feitas pelo servidor manifest para legendas WEBVTT. Os campos além de TRACE_WEBVTT_SOURCE são exibidos na ordem mostrada na tabela, separados por guias.
 
@@ -326,81 +326,81 @@ Registros desse tipo de respostas de log para solicitações feitas pelo servido
 | fonte | string | Conteúdo VTT original codificado em base64 |
 
 
-### registros TRACE_MISC {#trace-misc-records}
+### TRACE_MISC registra {#trace-misc-records}
 
 Registros desse tipo permitem que o servidor manifest registre eventos e informações não planejadas de outra forma quando ele ingere anúncios. O campo além de TRACE_MISC consiste em uma string de mensagem. As mensagens que podem aparecer incluem:
 
-* Anúncio ignorado:AdPlacement `[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1]`
+* Anúncio ignorado: AdPlacement `[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1]`
 * AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*segundos*, ignore=*ignore*, redirectAd=*redirectAd*, priority=*priority*
 * O posicionamento do anúncio retornou nulo.
 * Anúncio costurado com êxito.
-* Falha na chamada de anúncio: *mensagem* de erro.
-* Adicionando Agente de Usuário para buscar o manifesto bruto: *agente* do usuário.
+* Falha na chamada de anúncio: *mensagem de erro*.
+* Adicionando Agente de Usuário para buscar o manifesto bruto: *user-agent*.
 * Adicionar cookie para buscar o manifesto bruto: [cookie]
-* Mensagem *de erro de URL* solicitada incorreta. (Falha ao analisar o URL variante)
-* URL chamado: URL *obtido retorno: código* de resposta. (Live URL)
-* URL chamado: Código de *retorno do URL: código* de resposta. (URL VOD)
+* URL inválido *mensagem de erro de URL solicitada*. (Falha ao analisar o URL variante)
+* URL chamado: URL *tem retorno: código de resposta*. (Live URL)
+* URL chamado: URL *código de retorno: código de resposta*. (URL VOD)
 * Conflito encontrado ao resolver anúncios: quer um dos start médios ou médios, quer um dos valores médios normais, quer um dos valores anteriores à rolagem, quer um dos valores anteriores à rolagem (VOD).
-* Exceção sem tratamento detectada emitida pelo manipulador para URI: *URL* de solicitação.
-* Conclusão da geração do manifesto da variante. (Variante)
-* Conclusão da geração do manifesto da variante.
-* Exceção ao manipular o redirecionamento VAST *URL de redirecionamento *erro: *mensagem* de erro.
-* Falha ao obter a lista de reprodução do anúncio para o URL *do manifesto do* anúncio.
+* Exceção sem tratamento detectada emitida pelo manipulador para URI: *solicitação URL*.
+* Geração de manifesto de variante concluída. (Variante)
+* Geração de manifesto de variante concluída.
+* Exceção ao manipular o redirecionamento VAST *URL de redirecionamento *erro: *mensagem de erro*.
+* Falha ao obter a lista de reprodução do anúncio para *URL do manifesto do anúncio*.
 * Falha ao gerar manifesto direcionado. (HLSManifestResolver)
-* Falha ao analisar a primeira resposta de chamada de anúncio: *mensagem* de erro.
-* Falha ao processar *GET|POST *solicitação para caminho: *URL* de solicitação. (Ao vivo/VOD)
-* Falha ao processar a solicitação de manifesto ao vivo: *URL* de solicitação. (Ao vivo)
-* Falha ao retornar um manifesto de variante: *mensagem* de erro.
-* Falha ao validar a ID de grupo: *ID* do grupo.
-* Buscando manifesto bruto: *URL* do conteúdo. (Ao vivo)
+* Falha ao analisar a primeira resposta de chamada de anúncio: *mensagem de erro*.
+* Falha ao processar *GET|POST *solicitação para caminho: *solicitação URL*. (Ao vivo/VOD)
+* Falha ao processar a solicitação de manifesto ao vivo: *solicitação URL*. (Ao vivo)
+* Falha ao retornar um manifesto de variante: *mensagem de erro*.
+* Falha ao validar a ID de grupo: *ID de grupo*.
+* Buscando manifesto bruto: *URL de conteúdo*. (Ao vivo)
 * Após o redirecionamento VAST: *redirecionar URL*.
 * Encontrado vazio disponível. (VOD)
 * Encontrado *número *anúncios. (VOD)
 * Solicitação HTTP recebida. (Primeira mensagem)
 * Ignorando anúncio porque a diferença entre a duração da resposta do anúncio (*duração da resposta do anúncio *s) e a duração do anúncio real (*duração real *s) é maior que o limite. (HLSManifestResolver)
 * Ignorando o valor que não forneceu nenhum valor de ID. (GroupAdResolver.java)
-* Ignorando o valor de tempo inválido fornecido: *time *for availId = ID ** válida.
-* Ignorando o valor de duração inválido fornecido: *duração *para availId = *ID* válida.
+* Ignorando o valor de tempo inválido fornecido: *time *for availId = *ID disponível*.
+* Ignorando o valor de duração inválido fornecido: *duração *para availId = *ID disponível*.
 * Inicializar nova sessão. (Variante)
 * Método HTTP inválido. Deve ser uma GET. (VOD)
 * Método HTTP inválido. A solicitação de rastreamento deve ser um GET. (Ao vivo)
-* Mensagem *de erro de URL* solicitada inválida. (Variante)
+* URL inválido *mensagem de erro de URL solicitada*. (Variante)
 * Grupo inválido. (HLSManifestResolver)
 * Solicitação inválida. Legenda não é uma solicitação de rastreamento válida. (VOD)
 * Solicitação inválida. A solicitação de legenda deve ser feita após a sessão ser estabelecida. (VOD)
 * Solicitação inválida. A solicitação de rastreamento deve ser feita após a sessão ser estabelecida. (VOD)
-* Instância de servidor inválida para ID de grupo de sobrecarga: *ID* do grupo. (Ao vivo)
-* Limite de redirecionamentos VAST atingido - *número*.
-* Efetuando chamada de anúncio: *URL* da chamada do anúncio.
-* Nenhum manifesto encontrado para: *URL* do conteúdo. (Ao vivo)
-* Não foi encontrado nenhum valor correspondente para a ID disponível: *ID* disponível. (HLSManifestResolver)
+* Instância de servidor inválida para ID de grupo de sobrecarga: *ID de grupo*. (Ao vivo)
+* Limite de redirecionamentos VAST atingido - *number*.
+* Efetuando chamada de anúncio: *anúncio URL*.
+* Nenhum manifesto encontrado para: *URL de conteúdo*. (Ao vivo)
+* Não foi encontrado nenhum valor correspondente para a ID disponível: *ID disponível*. (HLSManifestResolver)
 * Nenhuma sessão de reprodução encontrada. (HLSManifestResolver)
-* Processando solicitação VOD para URL *de* conteúdo manifest.
+* Processando solicitação VOD para o manifesto *URL de conteúdo*.
 * Variante de processamento.
-* Processando solicitação de legenda para URL *de* conteúdo manifest.
+* Processando solicitação de legenda para o manifesto *URL de conteúdo*.
 * Processando solicitação de rastreamento. (VOD)
 * Redirecionar resposta de anúncio vazia. (VASTStAX)
 * Solicitando: *URL*.
 * Retornando resposta de erro para solicitação de GET porque nenhuma sessão de reprodução foi encontrada. (VOD)
 * Retornando resposta de erro para solicitação de GET devido a um erro interno do servidor.
-* Retornando resposta de erro para solicitação de GET especificando um ativo inválido: *ID* de solicitação de anúncio. (VOD)
-* Retornando resposta de erro para solicitação de GET especificando uma ID de grupo inválida ou vazia: *ID* do grupo. (VOD)
+* Retornando resposta de erro para solicitação de GET especificando um ativo inválido: *ID de solicitação de anúncio*. (VOD)
+* Retornando resposta de erro para solicitação de GET especificando uma ID de grupo inválida ou vazia: *ID de grupo*. (VOD)
 * Resposta de erro de retorno para solicitação de GET que especifica um valor de posição de rastreamento inválido. (VOD)
-* Retornando resposta de erro para solicitação de GET com sintaxe inválida - URL *de* solicitação. (Ao vivo/VOD)
+* Retornando resposta de erro para solicitação de GET com sintaxe inválida - *solicitação URL*. (Ao vivo/VOD)
 * Retornando resposta de erro para solicitação com método HTTP não suportado: *GET|POST*. (Ao vivo/VOD)
 * Retornando manifesto do cache. (VOD)
 * O servidor está sobrecarregado. Continue sem solicitação de ponto de anúncio. (Variante)
 * Start que gera manifesto direcionado. (HLSManifestResolver)
-* Manifesto de variante de geração de start de: *URL* do conteúdo. (Variante)
+* Manifesto de variante de geração de start de: *URL de conteúdo*. (Variante)
 * Start costurando publicidades em manifesto. (VODHLSResolver)
-* Tentando juntar anúncios em *HH:MM:SS*: AdPlacement adManifestURL=*ad Manifest URL*, durationSeconds=*segundos*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority*. (HLSManifestResolver)
+* Tentando unir anúncio em *HH:MM:SS*: AdPlacement adManifestURL=*ad Manifest URL*, durationSeconds=*segundos*, ignore=*ignore*, redirectAd=*redirecionar ad*, priority=*priority* ... (HLSManifestResolver)
 * Não é possível obter anúncios devido a uma linha de tempo inválida - retornou o conteúdo sem anúncios. (VOD)
 * Não é possível obter anúncios: retornou o conteúdo sem anúncios. (VOD)
 * Não é possível obter o query do anúncio e nenhum URL de conteúdo foi fornecido. (VOD)
 * URL válido recebido. (VOD/Variant)
 * Variante M3U8 não encontrada. (Variante)
 
-### registros TRACE_TRACKING_URL {#trace-tracking-url-records-1}
+### TRACE_TRACKING_URL records {#trace-tracking-url-records-1}
 
 O servidor manifest gera registros desse tipo depois de chamar um URL de rastreamento durante o fluxo de trabalho de rastreamento do lado do servidor. Os campos além de TRACE_TRACKING_URL aparecem na ordem mostrada na tabela, separados por guias.
 
@@ -411,7 +411,7 @@ O servidor manifest gera registros desse tipo depois de chamar um URL de rastrea
 | url | string | URL com ping |
 | estado | string | Código de status HTTP |
 
-### registros TRACE_PLAYBACK_PROGRESS {#trace-playback-progress-records}
+### TRACE_PLAYBACK_PROGRESS registra {#trace-playback-progress-records}
 
 O servidor manifest gera registros desse tipo quando recebe um sinal sobre o progresso da reprodução durante o fluxo de trabalho de rastreamento do lado do servidor. Os campos além de TRACE_PLAYBACK_PROGRESS aparecem na ordem mostrada na tabela, separados por guias.
 
@@ -433,4 +433,4 @@ O servidor manifest gera registros desse tipo quando recebe um sinal sobre o pro
 
 ## Recursos úteis {#helpful-resources}
 
-* Consulte a documentação completa da ajuda na página Aprendizagem e suporte [da](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte da Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
