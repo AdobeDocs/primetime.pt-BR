@@ -17,16 +17,16 @@ ht-degree: 0%
 
 O arquivo de configuração flashaccess-global.xml inclui configurações que se aplicam a todos os locatários do servidor de licenças.
 
-Você deve colocar o arquivo de configuração no [!DNL LicenseServer.ConfigRoot] diretório.
+Você deve colocar o arquivo de configuração no diretório [!DNL LicenseServer.ConfigRoot].
 
-Consulte o [!DNL configs] diretório para obter um exemplo de um arquivo de configuração global.
+Consulte o diretório [!DNL configs] para obter um exemplo de um arquivo de configuração global.
 
 O arquivo de configuração global inclui:
 
 * Cache — Controla o cache de arquivos de configuração na memória.
 
-   Consulte *Atualização de arquivos* de configuração para obter informações sobre as configurações de cache.
+   Consulte *Atualizando arquivos de configuração* para obter informações sobre as configurações de cache.
 * Registro — Especifica o nível de registro e a frequência de rolagem dos arquivos de registro.
 * Senha HSM — Necessário somente se um HSM for usado para armazenar credenciais de servidor.
 
-Consulte os comentários no arquivo de configuração global de exemplo que está localizado no Primetime DRM `<DVD>`\Adobe Primetime DRM Server for Protected Streaming\configs para obter mais detalhes.
+Consulte os comentários no arquivo de configuração global de exemplo localizado em Primetime DRM `<DVD>`\Adobe Primetime DRM Server for Protected Streaming\configs para obter mais detalhes.
