@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Uso da linha de comando {#command-line-usage}
 
-Antes de usar o Media Packager, verifique se você atende aos requisitos listados em Requisitos e se o arquivo de configuração contém as informações necessárias (consulte Arquivo de configuração em *Uso das implementações* de referência de acesso ao Adobe.
+Antes de usar o Media Packager, verifique se você atende aos requisitos listados em Requisitos e se o arquivo de configuração contém as informações necessárias (consulte Arquivo de configuração em *Usando as Implementações de referência de acesso ao Adobe*.
 
-O Media Packager está no [!DNL \Reference Implementation\Command Line tools] diretório do DVD. Para criptografar um único arquivo, use a seguinte sintaxe:
+O Media Packager está no diretório [!DNL \Reference Implementation\Command Line tools] no DVD. Para criptografar um único arquivo, use a seguinte sintaxe:
 
 ```
 java -jar AdobePackager.jar  
@@ -68,11 +68,11 @@ Para visualização de informações sobre um arquivo de metadados, use a seguin
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
 ```
 
-* `metadatafile` é um [!DNL .metadata] arquivo que contém os metadados DRM.
+* `metadatafile` é um  [!DNL .metadata] arquivo que contém os metadados DRM.
 
 >[!NOTE]
 >
->Durante o empacotamento, o Media Packager não gerará mais um arquivo .header por padrão. Para gerar esse arquivo, use a `-h` opção durante o empacotamento.
+>Durante o empacotamento, o Media Packager não gerará mais um arquivo .header por padrão. Para gerar esse arquivo, use a opção `-h` durante o empacotamento.
 
 A tabela a seguir contém descrições das opções de linha de comando mostradas na sintaxe acima:
 
@@ -86,14 +86,14 @@ A tabela a seguir contém descrições das opções de linha de comando mostrada
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> configfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica o local do arquivo de configuração. Se essa opção não for usada, o Media Packager procurará por <span class="filepath"> flashaccess stools.properties </span> no diretório de trabalho. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica o local do arquivo de configuração. Se essa opção não for usada, o Media Packager procurará <span class="filepath"> flashaccess stools.properties </span> no diretório de trabalho. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d arquivo <span class="+ topic/ph pr-d/codeph codeph"> encryptedfile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> arquivo criptografado </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Mostra informações sobre um arquivo que já foi empacotado. Os arquivos de origem e de destino não são obrigatórios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadatafile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> arquivo de metadados </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Mostra informações sobre metadados existentes. Os arquivos de origem e de destino não são obrigatórios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -109,8 +109,8 @@ A tabela a seguir contém descrições das opções de linha de comando mostrada
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica um identificador exclusivo para este conteúdo. Se nenhum identificador for especificado, o nome do arquivo desfile será usado. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> chave </span>= <span class="+ topic/ph pr-d/codeph codeph"> valor </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica uma chave/valor personalizado para adicionar aos metadados do conteúdo. Várias <span class="codeph"> opções de -k </span> podem ser especificadas. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> tecla </span>= <span class="+ topic/ph pr-d/codeph codeph"> valor </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica uma chave/valor personalizado para adicionar aos metadados do conteúdo. Várias opções <span class="codeph"> -k </span> podem ser especificadas. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-m </p> </td> 
@@ -125,7 +125,7 @@ A tabela a seguir contém descrições das opções de linha de comando mostrada
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Substitui o arquivo de destino sem avisar, se já existir. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p nome <span class="+ topic/ph pr-d/codeph codeph"> do arquivo [domínio-transporte-cert] </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph"> nome do arquivo [domain-transport-cert] </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica o nome do arquivo que contém a política. Se a política exigir o registro de domínio em um servidor que use um certificado de transporte diferente daquele especificado no arquivo de propriedades, o certificado de transporte de domínio também precisará ser fornecido. </p> <p class="- topic/p ">Várias opções <span class="codeph"> -p </span> podem ser especificadas e o cliente usará a primeira por padrão. Os valores especificados na linha de comando têm prioridade sobre os especificados no arquivo de configuração. </p> </td> 
   </tr> 
  </tbody> 
