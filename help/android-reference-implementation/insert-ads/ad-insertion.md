@@ -6,6 +6,9 @@ title: Inserção de anúncio
 uuid: 75c1d77a-a7ff-4cb6-ad7f-7c83a950b7cb
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +19,6 @@ A implementação de referência ilustra como configurar o player para anúncios
 
 O processo de configuração de um player para inserção de anúncios inclui:
 
-* **Feed de entrada:** Preenchendo um feed de entrada com metadados de anúncio. Consulte Formato [do catálogo](../set-up-dev-environment/exploring-code/catalog-format.md).
+* **Feed de entrada:** Preenchimento de um feed de entrada com metadados de anúncio. Consulte [Formato de catálogo](../set-up-dev-environment/exploring-code/catalog-format.md).
 * **Adaptador de feed de implementação de referência:** Analisando o feed de entrada para preencher um objeto de metadados de anúncio.
-* **AdsManager:** Usar o AdsManager para recuperar os metadados do anúncio e criar o AdProvider correspondente.
+* **AdsManager:** usar o AdsManager para recuperar os metadados do anúncio e criar o AdProvider correspondente.
