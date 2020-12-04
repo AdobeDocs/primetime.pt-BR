@@ -6,6 +6,9 @@ title: Efeito na inserção e exclusão de anúncios no modo de sinalização de
 uuid: 49abab49-4e52-477d-b7ed-688ee63e7473
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
 
 **Mapa do servidor**
 
-| **Metadados de anúncio** | **Resolvedores criados** | **`PlacementInformations`created ** | **Comportamento resultante** |
+| **Metadados de anúncio** | **Resolvedores criados** | **`PlacementInformations`created** | **Comportamento resultante** |
 |--- |--- |--- |--- |
 |  | Excluir | Excluir | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)` | Intervalos excluídos |
 | Excluir, Auditude | Excluir, Auditude | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),` <br>`PlacementInfo (Type.SERVER_MAP, Mode.INSERT)` | Intervalos excluídos, Anúncios inseridos |
