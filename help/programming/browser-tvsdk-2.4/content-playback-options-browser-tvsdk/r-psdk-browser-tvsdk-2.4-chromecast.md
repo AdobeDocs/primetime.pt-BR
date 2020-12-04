@@ -6,6 +6,9 @@ title: Aplicativo Google Cast para TVSDK do navegador
 uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +53,7 @@ Esta é uma visão geral do processo:
 } 
 ```
 
-Ao enviar mensagens personalizadas, como a mensagem de busca por meio dos SDKs de transmissão, é necessário um namespace de mensagem personalizado. Este é um exemplo em JavaScript:
+Ao enviar mensagens personalizadas, como a mensagem de busca por meio dos SDKs de transmissão, é necessária uma namespace de mensagem personalizada. Este é um exemplo em JavaScript:
 
 ```js
 Custom Message Namespace 
@@ -63,9 +66,9 @@ var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime";
 >
 >As APIs TVSDK do navegador não são envolvidas ao estabelecer a conexão.
 
-Para estabelecer uma conexão, o remetente e o destinatário devem realizar as seguintes tarefas:
+Para estabelecer uma conexão, o remetente e o destinatário devem completar as seguintes tarefas:
 
-* O remetente deve revisar a documentação da plataforma em Desenvolvimento [de aplicativo do](https://developers.google.com/cast/docs/sender_apps)remetente.
+* O remetente deve revisar a documentação da plataforma em [Desenvolvimento de aplicativos do remetente](https://developers.google.com/cast/docs/sender_apps).
 * O receptor usa as APIs de receptor de transmissão para estabelecer uma conexão com o aplicativo remetente. Por exemplo:
 
    ```js
@@ -87,7 +90,7 @@ Para enviar mensagens ao receptor, consulte a documentação da plataforma do re
 
 >[!IMPORTANT]
 >
->Você deve incluir o namespace personalizado da mensagem, `MSG_NAMESPACE` em todas as mensagens.
+>Você deve incluir a namespace de mensagem personalizada, `MSG_NAMESPACE` em todas as mensagens.
 
 Para o aplicativo receptor, siga a documentação das APIs de receptor de difusão.
 
@@ -97,9 +100,9 @@ Para o aplicativo receptor, siga a documentação das APIs de receptor de difus�
 window.session.sendMessage(MSG_NAMESPACE, message, successCallback, errorCallback); //https://developers.google.com/cast/docs/reference/chrome/chrome.cast.Session#sendMessage
 ```
 
-**Tratamento de eventos de remetente com base no Chrome**
+**Manuseio de Evento do Remetente Baseado no Chrome**
 
-Vincule manipuladores de eventos aos elementos da interface do usuário que enviarão mensagens quando os eventos correspondentes forem acionados. Por exemplo, para um aplicativo remetente baseado no Chrome, o evento de busca pode ser enviado desta forma:
+Vincule os manipuladores de evento aos elementos da interface do usuário que enviarão mensagens quando os eventos correspondentes forem disparados. Por exemplo, para um aplicativo remetente baseado no Chrome, o evento de busca pode ser enviado desta forma:
 
 ```js
 document.getElementById("#seekBar").addEventListener("click", seekEventHandler); 
