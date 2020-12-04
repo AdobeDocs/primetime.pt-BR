@@ -7,13 +7,13 @@ uuid: 3debfad4-084f-4fb5-b699-ea5e8fd1ed51
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
 
 
-# Classe de metadados cronometrados{#timed-metadata-class}
+# Classe de metadados cronometrada{#timed-metadata-class}
 
 Quando o TVSDK detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar a tag e expô-la na forma de um objeto TimedMetadata.
 
@@ -29,27 +29,27 @@ A classe fornece os seguintes elementos:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> id </span> </td> 
+   <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> Identificador exclusivo dos metadados cronometrados. Normalmente, esse valor é extraído do atributo da ID da tag/cue. Caso contrário, um valor aleatório exclusivo será fornecido. Use <span class="codeph"> getId </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> metadados </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadados  </span> </td> 
    <td colname="col02"> Metadados </td> 
    <td colname="col2"> As informações processadas/extraídas da tag personalizada playlist/manifest. Use <span class="codeph"> getMetadata </span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
    <td colname="col02"> String </td> 
-   <td colname="col2"> O nome dos metadados cronometrados. Se o tipo for <span class="codeph"> TAG </span>, o valor representa o nome da indicação/tag. Se o tipo for <span class="codeph"> ID3 </span>, será nulo. Use <span class="codeph"> getName </span>. </td> 
+   <td colname="col2"> O nome dos metadados cronometrados. Se o tipo for <span class="codeph"> TAG </span>, o valor representará o nome da marca/indicação. Se o tipo for <span class="codeph"> ID3 </span>, será nulo. Use <span class="codeph"> getName </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> time </span> </td> 
+   <td colname="col1"> <span class="codeph"> time  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> A posição de tempo, em milissegundos, em relação ao start do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. Use <span class="codeph"> getTime </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> type </span> </td> 
+   <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> Tipo </td> 
    <td colname="col2"> O tipo de metadados cronometrados. Use <span class="codeph"> getType </span>. 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
