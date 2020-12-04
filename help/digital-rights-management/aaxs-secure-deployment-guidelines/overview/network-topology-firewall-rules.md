@@ -78,11 +78,11 @@ Configure seu firewall externo para que exponha somente os URLs para a funcional
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs para uso pelo cliente para converter metadados DRM FMRMS 1.x em metadados DRM de acesso ao Adobe. </p> <p class="- topic/p ">Observação: <i class="+ topic/ph hi-d/i ">Esse URL deve usar SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs para uso pelo cliente para converter metadados DRM FMRMS 1.x em metadados DRM de acesso ao Adobe. </p> <p class="- topic/p ">Observação: <i class="+ topic/ph hi-d/i ">Este URL tem de utilizar SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL do serviço da Web de LiveCycle Rights Management ES. Se o conteúdo foi publicado usando uma versão anterior do FMRMS, esse URL permite que clientes antigos se conectem ao servidor e sejam solicitados a atualizar para o Adobe Access. </p> <p class="- topic/p ">Observação: <i class="+ topic/ph hi-d/i ">Esse URL deve usar SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL do serviço da Web de LiveCycle Rights Management ES. Se o conteúdo foi publicado usando uma versão anterior do FMRMS, esse URL permite que clientes antigos se conectem ao servidor e sejam solicitados a atualizar para o Adobe Access. </p> <p class="- topic/p ">Observação: <i class="+ topic/ph hi-d/i ">Este URL tem de utilizar SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
@@ -99,7 +99,7 @@ Configure seu firewall externo para que exponha somente os URLs para a funcional
 
 O servidor de licenças requer acesso por meio do firewall para baixar as seguintes CRLs do Adobe:
 
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
-* <span></span>https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
+* h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
+* ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
