@@ -6,13 +6,16 @@ title: Medição de anúncio do Moat
 uuid: a29c1e74-df15-47d2-9bd6-1d366c5cdf37
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
 
 # Medição de anúncio do Moat {#ad-measurement-from-moat}
 
-O TVSDK coleta informações do FreeWheel e de outros servidores que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e com uma precisão que mostra melhor que as criações capturam ou negligenciam os interesses de um público-alvo.
+O TVSDK coleta informações do FreeWheel e de outros servidores que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mate. O serviço Mat conta impressões e impressões com uma precisão que mostra melhor que os criativos capturam ou negligenciam interesses de audiências.
 
 Moat é um serviço que mede e exibe diversos usos, de navegadores a aplicativos internos. O Moat gera dados de análise de marketing em tempo real em várias plataformas.
 
