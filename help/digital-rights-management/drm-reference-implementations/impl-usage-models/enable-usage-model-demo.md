@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Ativar a demonstração do modelo de uso{#enable-the-usage-model-demo}
+# Habilitar a demonstração do modelo de uso{#enable-the-usage-model-demo}
 
-1. Especifique a propriedade personalizada `RI_UsageModelDemo=true` no horário de empacotamento.
+1. Especifique a propriedade personalizada `RI_UsageModelDemo=true` no momento do empacotamento.
 
    Se você estiver empacotando conteúdo usando a ferramenta de linha de comando Media Packager, digite:
 
