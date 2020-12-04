@@ -6,6 +6,9 @@ title: Visão geral da interface do DRM
 uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ O TVSDK do navegador fornece uma interface DRM que você pode usar para reproduz
 >
 >O suporte a DRM está disponível para streams MPEG-Dash protegidos com sistemas DRM Microsoft PlayReady (no Internet Explorer no Windows 8.1 e Edge) e Widevine (no Google Chrome). O suporte a DRM está disponível para fluxos HLS no Safari que são protegidos com o FairPlay.
 
-A interface principal do fluxo de trabalho do DRM é a `DRMManager`. Uma referência à `DRMManager` instância pode ser obtida por meio da instância MediaPlayer:
+A interface principal do fluxo de trabalho do DRM é `DRMManager`. Uma referência à instância `DRMManager` pode ser obtida por meio da instância MediaPlayer:
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
@@ -100,14 +103,14 @@ Este é um fluxo de trabalho de alto nível para reprodução de conteúdo prote
 
 1. Por padrão, o tipo de sessão da licença DRM é temporário, o que significa que a licença não é armazenada depois que a sessão é fechada.
 
-   Você pode especificar um tipo de sessão usando uma API em `DRMManager`.  Para compatibilidade com versões anteriores, os tipos de sessão incluem `temporary`, `persistent-license`, `persistent-usage-record`e `persistent`.
+   Você pode especificar um tipo de sessão usando uma API em `DRMManager`.  Para compatibilidade com versões anteriores, os tipos de sessão incluem `temporary`, `persistent-license`, `persistent-usage-record` e `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. Quando o `sessionType` usado é `persistent-license` ou `persistent`, a licença DRM pode ser devolvida chamando-se `DRMManager.returnLicense`.
+1. Quando `sessionType` usado for `persistent-license` ou `persistent`, a licença do DRM poderá ser devolvida invocando `DRMManager.returnLicense`.
 
    ```js
    var onLicenseReturnFunc = function () { 
