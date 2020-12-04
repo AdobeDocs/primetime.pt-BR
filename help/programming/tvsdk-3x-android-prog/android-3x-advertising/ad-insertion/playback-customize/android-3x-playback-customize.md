@@ -6,6 +6,9 @@ title: Personalizar reprodução com anúncios
 uuid: e0d3dfb2-b2d2-4590-aa19-26bea916a252
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Quando a reprodução atinge uma pausa de anúncio, passa uma pausa de anúncio 
 
 >[!TIP]
 >
->Você pode substituir o comportamento padrão usando a `AdBreakPolicySelector` classe.
+>Você pode substituir o comportamento padrão usando a classe `AdBreakPolicySelector`.
 
 O comportamento padrão varia, dependendo se o usuário passa no intervalo do anúncio durante a reprodução normal ou procurando em um vídeo ou reposicionando-o com avanço rápido ou retrocesso (peça).
 
