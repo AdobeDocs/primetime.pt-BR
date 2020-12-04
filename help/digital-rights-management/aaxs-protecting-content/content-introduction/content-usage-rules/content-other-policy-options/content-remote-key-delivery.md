@@ -24,4 +24,4 @@ O delivery de chave remota é habilitado por meio da política usada para dispon
 >
 >A seleção do delivery principal afeta apenas os clientes iOS. Todos os outros dispositivos que consomem conteúdo HLS sempre usarão o delivery de chave &quot;Local&quot;, mesmo se &quot;Remoto&quot; tiver sido especificado.
 
-Para obter informações, consulte *Uso do servidor* de chave de acesso ao Adobe.
+Para obter informações, consulte *Usando o Servidor de Chaves de Acesso ao Adobe*.
