@@ -6,25 +6,28 @@ title: Capturar o player
 uuid: 516ff846-d76d-4062-b64b-3032f7a70470
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '1449'
+ht-degree: 0%
 
 ---
 
 
-# Capturar o player {#skinning-the-player}
+# Skinning do player {#skinning-the-player}
 
 Você pode usar as seguintes informações para ajudá-lo a aplicar a capa no player. Para cada construção visual, os comportamentos correspondentes são mencionados no comportamento padrão.
 
 >[!IMPORTANT]
 >
->Os detalhes de skinning neste documento são para os elementos de interface padrão criados pela estrutura de interface do usuário. Se o player modificou esses elementos, os elementos de capa também precisam ser alterados.
+>Os detalhes da capa neste documento são para os elementos padrão da interface do usuário criados pela estrutura da interface do usuário. Se o player modificou esses elementos, os elementos de capa também precisam ser alterados.
 
-## Divs do contêiner {#section_99B0D598219D4150B57E97D5381B118F}
+## Container divs {#section_99B0D598219D4150B57E97D5381B118F}
 
-Estes são os estilos para os divs do contêiner:
+Estes são os estilos para os container divs:
 
 >[!TIP]
 >
->Esses divs estão listados no `common-styles.css` arquivo.
+>Esses divs estão listados no arquivo `common-styles.css`.
 
 Estes são os estilos para a div principal:
 
@@ -61,7 +64,7 @@ Estes são os estilos para a div principal:
    <td colname="col2"> <p>O estilo da div em que o vídeo PIP é reproduzido. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .view-as-main-video</span> </td> 
+   <td colname="col1"><span class="codeph"> .visualização como vídeo principal</span> </td> 
    <td colname="col2"> <p>Aplicado ao PIP inicial quando ele foi trocado e é exibido como o vídeo principal. </p> </td> 
   </tr> 
   <tr> 
@@ -69,16 +72,16 @@ Estes são os estilos para a div principal:
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .ptp-multi-view-container</span> </td> 
-   <td colname="col2"> <p>É usado na exibição de vários vídeos. </p> </td> 
+   <td colname="col1"><span class="codeph"> .ptp-multi-visualização-container</span> </td> 
+   <td colname="col2"> <p>É usado na visualização de vários vídeos. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .ptp-multi-view-view</span> </td> 
-   <td colname="col2"> <p>Um estilo css comum que é colocado em cada vídeo na multivisualização. </p> </td> 
+   <td colname="col1"><span class="codeph"> .ptp-multi-visualização-visualização</span> </td> 
+   <td colname="col2"> <p>Um estilo css comum colocado em cada vídeo na multivisualização. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .multiview</span> </td> 
-   <td colname="col2"> <p>Quando o contêiner que hospeda cada um dos vídeos em várias exibições estiver em várias exibições. </p> </td> 
+   <td colname="col2"> <p>Quando o container que hospeda cada um dos vídeos em várias exibições estiver em várias exibições. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -89,7 +92,7 @@ Estes são os estilos para controles de player genéricos:
 
 >[!TIP]
 >
->Esses estilos estão listados no `default-controls.css` arquivo.
+>Esses estilos estão listados no arquivo `default-controls.css`.
 
 <table id="table_0ACB6BAB5DAD42DBBD18CA7C0385A261"> 
  <thead> 
@@ -112,8 +115,8 @@ Estes são os estilos para controles de player genéricos:
    <td colname="col2"> <p>Cabeçalho dos painéis </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-vertical-list-menu-item</span> </td> 
-   <td colname="col2"> <p>Lista de menus no estilo vertical </p> </td> 
+   <td colname="col1"><span class="codeph"> ptp-vertical-lista-item-menu</span> </td> 
+   <td colname="col2"> <p>Lista do menu no estilo vertical </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-fill-spacer</span> </td> 
@@ -155,7 +158,7 @@ Estes são os estilos da barra de controle:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-control-bar</span> (comportamento padrão)</td>
+   <td colname="col1"><span class="codeph"> ptp-control-bar</span>  (comportamento padrão)</td>
    <td colname="col2"> <p>Aplicável à barra de controlo </p> </td> 
   </tr> 
  </tbody> 
@@ -234,11 +237,11 @@ Estes são os estilos para o botão Reproduzir/Pausar:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td>
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> no estado de pausa </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausa no estado de pausa </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td> 
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> no estado de reprodução </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausando o estado de reprodução </p> </td>
   </tr>
  </tbody>
 </table>
@@ -372,7 +375,7 @@ Este é o estilo do botão de rebobinar rápido:
 
 O comportamento padrão é `fastRewindButtonBehavior`.
 
-## Retrocesso lento {#section_38A22BB8681B430F8C6808C3BD21FB4E}
+## Retroceder lentamente {#section_38A22BB8681B430F8C6808C3BD21FB4E}
 
 Este é o estilo do botão de rebobinar lento:
 
@@ -414,7 +417,7 @@ Este é o estilo do botão para frente lento:
 
 O comportamento padrão é `slowForwardButtonBehavior`.
 
-## Avançar rapidamente {#section_F90ED8B3739B49ACAB1F12DF18F0E4D6}
+## Avanço rápido {#section_F90ED8B3739B49ACAB1F12DF18F0E4D6}
 
 Este é o estilo do botão avançar rapidamente:
 
@@ -477,7 +480,7 @@ Estes são os estilos para configurar a faixa de áudio:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-select-header</span> </td>
-   <td colname="col2"> <p>O cabeçalho para o painel <span class="codeph"></span>ptp-audio-track-select. </p> </td>
+   <td colname="col2"> <p>O cabeçalho para <span class="codeph"> ptp-audio-track-select-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> <p><b>Menu de seleção da faixa de áudio (N)</b> </p> </td>
@@ -485,12 +488,12 @@ Estes são os estilos para configurar a faixa de áudio:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-select-menu</span> </td>
-   <td colname="col2"> <p>Os itens de menu no painel <span class="codeph"></span>ptp-audio-track-select. </p> </td>
+   <td colname="col2"> <p>Os itens de menu no <span class="codeph"> ptp-audio-track-select-panel</span>. </p> </td>
   </tr>
  </tbody>
 </table>
 
-## Compartilhamento {#section_B2ADC76E76304A68AD648A00A12B676E}
+## Compartilhando {#section_B2ADC76E76304A68AD648A00A12B676E}
 
 Estes são os estilos para configurar o compartilhamento:
 
@@ -508,7 +511,7 @@ Estes são os estilos para configurar o compartilhamento:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video</span> </td> 
-   <td colname="col2"> <p>O botão de compartilhamento de mídia social na barra de controle que abrirá o painel <span class="codeph"></span>ptp-share-video. </p> </td>
+   <td colname="col2"> <p>O botão de compartilhamento de mídia social na barra de controle que abrirá <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1">O comportamento padrão é <span class="codeph"> shareVideoButtonBehavior</span>. </td>
@@ -531,15 +534,15 @@ Estes são os estilos para configurar o compartilhamento:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-select-header</span> </td>
-   <td colname="col2"> <p>O cabeçalho para o painel <span class="codeph"></span>ptp-audio-track-select. </p> </td>
+   <td colname="col2"> <p>O cabeçalho para <span class="codeph"> ptp-audio-track-select-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .share-video-panel-menu</span> </td>
-   <td colname="col2"> <p>O menu no painel <span class="codeph"></span> ptp-share-video que exibe todas as opções para compartilhar conteúdo nas redes sociais. </p> </td>
+   <td colname="col2"> <p>O menu em <span class="codeph"> ptp-share-video-panel</span> que exibe todas as opções para compartilhar conteúdo em redes sociais. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-share-video-panel-menu-item</span> </td>
-   <td colname="col2"> <p>O item de menu no menu <span class="codeph"> do painel de</span>compartilhamento de vídeo. </p> </td>
+   <td colname="col2"> <p>O item de menu em <span class="codeph"> share-video-panel-menu</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video-facebook</span> </td>
@@ -578,7 +581,7 @@ Estes são os estilos para configurar legendas fechadas:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-closed-caption</span> </td>
-   <td colname="col2"> <p>O botão <span class="uicontrol"> Legendas</span> fechadas na barra de controle. </p> </td>
+   <td colname="col2"> <p>O botão <span class="uicontrol"> Legendas ocultas</span> na barra de controle. </p> </td>
   </tr>
   <tr>
    <td colname="col1">O comportamento padrão é <span class="codeph"> closedCaptionButtonBehavior</span>. </td>
@@ -606,10 +609,10 @@ Estes são os estilos para configurar legendas fechadas:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-panel:</span> </td>
-   <td colname="col2"> <p>O cabeçalho para o painel <span class="codeph"></span>ptp-audio-track-select. </p> </td>
+   <td colname="col2"> <p>O cabeçalho para <span class="codeph"> ptp-audio-track-select-panel</span>. </p> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-menu: </span> </td>
+   <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-menu:  </span> </td>
    <td colname="col2"> <p>O menu no painel de legendas fechadas. </p> </td>
   </tr>
   <tr>
@@ -618,7 +621,7 @@ Estes são os estilos para configurar legendas fechadas:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-btn</span> </td>
-   <td colname="col2"> <p>O botão <span class="uicontrol"> Opções</span> no painel de opções de legendas fechadas. </p> </td>
+   <td colname="col2"> <p>O botão <span class="uicontrol"> Options</span> no painel de opções de legendas fechadas. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-panel</span> </td>
@@ -658,11 +661,11 @@ Estes são os estilos para configurar legendas fechadas:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-menu-item</span> </td> 
-   <td colname="col2"> <p>O item de menu Opções <span class="uicontrol"></span> de legenda fechada. </p> </td> 
+   <td colname="col2"> <p>O item de menu Opções<span class="uicontrol"> da legenda fechada</span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-closed-caption-preview-panel</span> </td> 
-   <td colname="col2"> <p>O painel de visualização da legenda fechada. </p> </td> 
+   <td colname="col1"><span class="codeph"> painel de pré-visualização de legenda fechada-ptp</span> </td> 
+   <td colname="col2"> <p>O painel pré-visualização de legenda fechada. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-footer</span> </td> 
@@ -696,11 +699,11 @@ Estes são os estilos para configurar opções adicionais:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options</span> </td> 
-   <td colname="col2"> <p>O botão <span class="uicontrol"> Mais opções</span> . </p> </td> 
+   <td colname="col2"> <p>O botão <span class="uicontrol"> Mais opções</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options.ptp-control-bar-btn</span> </td> 
-   <td colname="col2"> <p>As <span class="codeph"> ptp-btn-more-options</span> usadas na barra de controle. </p> </td> 
+   <td colname="col2"> <p>As <span class="codeph"> ptp-btn-more-options</span> que são usadas na barra de controle. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel</span> </td> 
@@ -721,7 +724,7 @@ O comportamento padrão é `moreOptionsButtonBehavior`.
 
 ## Botão PIP (W) {#section_1EE039DEA99541D391B30BD1DF72A83E}
 
-Este é o estilo do [!UICONTROL PIP<] botão:
+Este é o estilo do botão [!UICONTROL PIP<]:
 
 <table id="table_EE2E882C87E24D39B8D5347686F29E55"> 
  <thead> 
@@ -756,7 +759,7 @@ Este é o estilo para configurar a tela inteira:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-fullscreen</span> </td> 
-   <td colname="col2"> <p>O botão <span class="uicontrol"> Tela</span> cheia na barra de controle. </p> </td> 
+   <td colname="col2"> <p>O botão <span class="uicontrol"> Tela cheia</span> na barra de controle. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -798,7 +801,7 @@ Este é o estilo para configurar a visualização múltipla:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-multiview</span> </td> 
-   <td colname="col2"> <p>O botão <span class="uicontrol"> MultiView</span> na barra de controle e o estado inicial do botão <span class="uicontrol"> Multiview</span> . </p> </td> 
+   <td colname="col2"> <p>O botão <span class="uicontrol"> MultiView</span> na barra de controle e o estado inicial do botão <span class="uicontrol"> Multiview</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">O comportamento padrão é <span class="codeph"> multiViewButtonBehavior</span>. </td> 
@@ -900,18 +903,18 @@ Este é o estilo do botão avançar rapidamente:
       <li id="li_FDF2CEDB0A854098907FF9CBCF1A61C1"><span class="codeph"> .ptp-btn-devagar</span> </li> 
       <li id="li_CD2E14DB3DD64C10A253DA23FBE04A04"><span class="codeph"> .ptp-btn-devagar</span> </li> 
       <li id="li_A230359E8F7F4571A9EBFF0E4C2462D7"><span class="codeph"> .ptp-btn-vagar</span> </li> 
-      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options </span> </li> 
+      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options  </span> </li> 
       <li id="li_71C8E76077A84ED590160AB5ABFCC0D7"><span class="codeph"> .ptp-btn-share-video</span> </li> 
-      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-closed-caption </span> </li> 
+      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-closed-caption  </span> </li> 
       <li id="li_901A0186D65A48A1B774DC555CEC5367"><span class="codeph"> .ptp-btn-audio-track</span> </li> 
-      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip </span> </li> 
+      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip  </span> </li> 
       <li id="li_7BB39BDF5E294AEB8FA3DCD9F9A29468"><span class="codeph"> .ptp-btn-rewind</span> </li> 
       <li id="li_E4FEF5A7486A40F6A5FE1119BD63AFEF"><span class="codeph"> .ptp-scrub-bar</span> </li> 
       <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp-search-to-bar</span> </li> 
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .multi-view</span> </td> 
+   <td colname="col1"><span class="codeph"> .multi-visualização</span> </td> 
    <td colname="col2"> <p>O estado do controle enquanto estiver em várias visualizações. </p> <p>Aplica-se ao seguinte: 
      <ul id="ul_A8AC653C30814AC49041F3B58A2106F4"> 
       <li id="li_0407167DA21647A8A6960DFE55A33F42"><span class="codeph"> .ptp-btn-fastward</span> </li> 
@@ -924,7 +927,7 @@ Este é o estilo do botão avançar rapidamente:
    <td colname="col1"><span class="codeph"> .fullscreen-state</span> </td> 
    <td colname="col2"> <p>O player está no modo de tela cheia. </p> <p>Aplica-se ao seguinte: 
      <ul id="ul_B235C1D339F64B2FAC6BC72F03807616"> 
-      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar </span> </li> 
+      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar  </span> </li> 
       <li id="li_67D54B1A41764B2DA544479CDA1C901C"><span class="codeph"> .ptp-btn-fullscreen</span> </li> 
      </ul> </p> </td> 
   </tr> 
