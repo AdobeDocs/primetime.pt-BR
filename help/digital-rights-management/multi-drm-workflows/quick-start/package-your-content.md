@@ -6,11 +6,14 @@ title: Empacote seu conteúdo
 uuid: b9bc6104-a1ea-4ea0-a0a4-af8a606e5d47
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
 
-# Empacote seu conteúdo {#package-your-content}
+# Encapsulamento seu conteúdo {#package-your-content}
 
 O empacotamento de conteúdo é o processo de preparação de conteúdo de vídeo para reprodução na Web. O empacotamento inclui a transformação de vídeo bruto em arquivos de manifesto e, opcionalmente, a criptografia do conteúdo usando diferentes soluções DRM para dispositivos e navegadores diferentes.
 
@@ -25,15 +28,15 @@ Para preparar seu conteúdo, você pode usar o Adobe Offline Packager ou outras 
 
 1. Compacte ou obtenha conteúdo para usar para testar sua configuração.
 
-   Um dos pontos cruciais a lembrar para o empacotamento é que a ID-chave (ID de conteúdo) usada nessa etapa de empacotamento é a mesma que você deve fornecer na solicitação subsequente do token de licença. A ID da chave é o único item que identifica seu CEK (que pode ser armazenado em seu próprio banco de dados de gerenciamento de chave) ou armazenado usando o Serviço [de armazenamento de chave do](https://www.expressplay.com/developer/key-storage/)ExpressPlay.
+   Um dos pontos cruciais a lembrar para o empacotamento é que a ID-chave (ID de conteúdo) usada nessa etapa de empacotamento é a mesma que você deve fornecer na solicitação subsequente do token de licença. A ID da chave é o único item que identifica seu CEK (que pode ser armazenado em seu próprio banco de dados de gerenciamento de chave) ou armazenado usando o [Serviço de Armazenamento chave do ExpressPlay](https://www.expressplay.com/developer/key-storage/).
 
    >[!NOTE]
    >
-   >Para aqueles que estão familiarizados com o Adobe Access, essa é uma diferença importante em como as diferentes soluções funcionam. No Access, a chave de Licença está incorporada nos Metadados DRM e é transmitida para frente e para trás com o conteúdo protegido. Nos sistemas Multi-DRM descritos aqui, a Licença real não é aprovada, mas armazenada com segurança e obtida por meio da ID da chave.
+   >Para aqueles que estão familiarizados com o Acesso ao Adobe, essa é uma diferença importante em como as diferentes soluções funcionam. No Access, a chave de Licença está incorporada nos Metadados DRM e é transmitida para frente e para trás com o conteúdo protegido. Nos sistemas Multi-DRM descritos aqui, a Licença real não é aprovada, mas armazenada com segurança e obtida por meio da ID da chave.
 
 <!--<a id="example_52AF76B730174B79B6088280FCDF126D"></a>-->
 
-Este é um exemplo de empacotamento usando o Adobe Offline Packager for Widevine. O Packager usa um arquivo de configuração (por exemplo, [!DNL widevine.xml]), que se parece com o seguinte:
+Este é um exemplo de empacotamento usando o Adobe Offline Packager for Widevine. O Packager usa um arquivo de configuração (por exemplo, [!DNL widevine.xml]), que tem uma aparência semelhante a:
 
 ```
 <config> 
@@ -54,18 +57,18 @@ Este é um exemplo de empacotamento usando o Adobe Offline Packager for Widevine
 * `in_path` - Essa entrada aponta para o local do vídeo de origem em sua máquina de embalagem local.
 * `out_type` - Esta entrada descreve o tipo de saída empacotada, neste caso DASH (para proteção de Widevine em HTML5).
 * `out_path` - O local na máquina local para onde deseja que a saída seja enviada.
-* `drm_sys` - A solução DRM para a qual você está empacotando. Isto será `widevine`, `fairplay`ou `playready`.
+* `drm_sys` - A solução DRM para a qual você está empacotando. Isso será `widevine`, `fairplay` ou `playready`.
 
-* `frag_dur` e `target_dur` são entradas de duração específicas do DASH pertencentes à reprodução do vídeo.
+* `frag_dur` e  `target_dur` são entradas de duração específicas do DASH pertencentes à reprodução do vídeo.
 
 * `key_file_path` - Este é o local do arquivo de licença no seu computador de empacotamento que serve como sua Chave de criptografia de conteúdo (CEK). É uma string hexadecimal de 16 bytes codificada em Base 64.
-* `widevine_content_id` - Viúva &quot;estereotipada&quot;; é sempre `2a`. (Não confunda isso com o `widevine_key_id`.)
+* `widevine_content_id` - Viúva &quot;estereotipada&quot;; é sempre  `2a`. (Não confunda isso com `widevine_key_id`.)
 
-* `widevine_provider` - Para os nossos propósitos, sempre defina para `intertrust`.
+* `widevine_provider` - Para os nossos propósitos, sempre defina para  `intertrust`.
 
-* `widevine_key_id` - Este é o identificador da licença especificada na `key_file_path` entrada. Em outras palavras, isso identifica a chave que você usa para criptografar o conteúdo. Essa ID é uma string HEX de 16 bytes que você mesmo cria.
+* `widevine_key_id` - Este é o identificador da licença especificada na  `key_file_path` entrada. Em outras palavras, isso identifica a chave que você usa para criptografar o conteúdo. Essa ID é uma string HEX de 16 bytes que você mesmo cria.
 
-Conforme declarado na documentação [do](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)Packager, &quot;Como prática recomendada, crie um arquivo de configuração que contenha as opções comuns que você deseja usar para gerar as saídas. Em seguida, crie a saída fornecendo opções específicas como um argumento de linha de comando.&quot; Nesse caso, nosso arquivo de configuração está bastante completo, portanto, você pode criar sua saída da seguinte maneira:
+Conforme declarado na [documentação do Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf), &quot;Como prática recomendada, crie um arquivo de configuração que contenha as opções comuns que você deseja usar para gerar as saídas. Em seguida, crie a saída fornecendo opções específicas como um argumento de linha de comando.&quot; Nesse caso, nosso arquivo de configuração está bastante completo, portanto, você pode criar sua saída da seguinte maneira:
 
 ```
 java -jar OfflinePackager.jar -conf_path widevine.xml -out_path test_dash/ 
