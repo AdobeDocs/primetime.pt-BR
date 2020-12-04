@@ -6,6 +6,9 @@ title: Autenticação DRM antes da reprodução
 uuid: 6b4fbcfb-95fd-4591-bbb2-a17afd783383
 translation-type: tm+mt
 source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
+workflow-type: tm+mt
+source-wordcount: '364'
+ht-degree: 1%
 
 ---
 
@@ -19,9 +22,9 @@ Um ativo de vídeo pode ter um arquivo de metadados DRM associado, por exemplo:
 * `"url": "https://www.domain.com/asset.m3u8"`
 * `"drmMetadata": "https://www.domain.com/asset.metadata"`
 
-Neste exemplo, você pode usar `DRMHelper` métodos para baixar o conteúdo do arquivo de metadados DRM, analisá-lo e verificar se a autenticação DRM é necessária.
+Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo do arquivo de metadados DRM, analisá-lo e verificar se a autenticação DRM é necessária.
 
-1. Use `loadDRMMetadata` para carregar o conteúdo do URL de metadados e analisar os bytes baixados para um `DRMMetadata`.
+1. Use `loadDRMMetadata` para carregar o conteúdo do URL de metadados e analisar os bytes baixados em `DRMMetadata`.
 
    >[!TIP]
    >
@@ -46,9 +49,9 @@ Neste exemplo, você pode usar `DRMHelper` métodos para baixar o conteúdo do a
 
    Se os usuários não souberem que a operação é assíncrona, talvez eles se perguntem por que a reprodução ainda não foi iniciada. Por exemplo, você pode mostrar uma roda giratória enquanto os metadados DRM estão sendo baixados e analisados.
 
-1. Implemente os retornos de chamada no `DRMLoadMetadataListener`.
+1. Implemente os retornos de chamada em `DRMLoadMetadataListener`.
 
-   As `loadDRMMetadata` chamadas desses manipuladores de evento.
+   O `loadDRMMetadata` chama esses manipuladores de evento.
 
    ```java
    public interface DRMLoadMetadataListener { 
@@ -71,7 +74,7 @@ Neste exemplo, você pode usar `DRMHelper` métodos para baixar o conteúdo do a
    * `onLoadMetadataUrlComplete` detecta quando o URL de metadados terminou de ser carregado.
    * `onLoadMetadataUrlError` indica que os metadados não foram carregados.
 
-1. Depois que o carregamento estiver concluído, inspecione o `DRMMetadata` objeto para determinar se a autenticação DRM é necessária.
+1. Depois que o carregamento estiver concluído, inspecione o objeto `DRMMetadata` para determinar se a autenticação DRM é necessária.
 
    ```java
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
