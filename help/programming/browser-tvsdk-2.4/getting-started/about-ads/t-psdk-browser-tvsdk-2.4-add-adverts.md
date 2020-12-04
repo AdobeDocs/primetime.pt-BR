@@ -6,6 +6,9 @@ title: Adicionar publicidade
 uuid: 7762506f-b55e-445d-b8a2-c1208358a370
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
      new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
    ```
 
-1. Adicione as configurações à configuração e adicione uma fábrica de `SpliceOut` analisadores.
+1. Adicione as configurações à configuração e adicione uma fábrica de analisadores `SpliceOut`.
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -36,8 +39,8 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
    config.advertisingFactory = new ExtCueOutContentFactory(auditudeSettings);
    ```
 
-1. Adicione a seção `ExtCueOutContentFactory` da biblioteca.
-1. Baixe a seção `ExtCueOutContentFactory.js` da biblioteca e coloque-a na pasta de trabalho.
+1. Adicione `ExtCueOutContentFactory` à seção da biblioteca.
+1. Baixe o `ExtCueOutContentFactory.js` da seção da biblioteca e coloque-o na pasta de trabalho.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
