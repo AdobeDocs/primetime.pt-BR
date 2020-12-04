@@ -6,11 +6,14 @@ title: Gerador de oportunidades
 uuid: 26f4dcab-6c6b-4d27-a073-017673bf098f
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '8'
+ht-degree: 0%
 
 ---
 
 
-# Gerador de oportunidades{#opportunity-generator}
+# Gerador de Oportunidade{#opportunity-generator}
 
 ```
 if (resource.metadata != null) { 
