@@ -6,6 +6,9 @@ title: Considerações e práticas recomendadas
 uuid: b37a5710-e811-4c3e-be8c-7c34ee5944e5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Para usar o TVSDK de forma mais eficiente, considere alguns detalhes de sua oper
 
 Lembre-se das seguintes informações ao usar o TVSDK:
 
-* O Adobe Primetime não funciona em simuladores iOS.
+* A Adobe Primetime não funciona em simuladores iOS.
 
    Você deve usar dispositivos reais para teste.
 * A reprodução é compatível somente com conteúdo HTTP Live Streaming (HLS).
@@ -31,7 +34,7 @@ Lembre-se das seguintes informações ao usar o TVSDK:
       Por exemplo, um anúncio não pode ser removido da linha do tempo depois de ser reproduzido. Se o usuário retornar à apresentação, o mesmo anúncio será reproduzido novamente mesmo se a política tiver sido remover o anúncio.
    * Dependendo da precisão do codificador, a duração real da mídia codificada pode diferir das durações que são registradas no manifesto do recurso de fluxo.
 
-      Não há uma maneira confiável de ressincronizar entre a linha do tempo virtual ideal e a linha do tempo de reprodução real. O rastreamento de andamento da reprodução de fluxo para o gerenciamento de anúncios e o Video Analytics deve usar o tempo de reprodução real, de modo que o comportamento de relatório e interface do usuário pode não rastrear com precisão o conteúdo de mídia e anúncio.
+      Não há uma maneira confiável de ressincronizar entre a linha do tempo virtual ideal e a linha do tempo de reprodução real. O rastreamento de andamento da reprodução de fluxo para o gerenciamento de anúncios e o Video Analytics deve usar o tempo de reprodução real, de modo que o comportamento do relatórios e da interface do usuário pode não rastrear com precisão o conteúdo de mídia e anúncio.
    * O agente de usuário recebido para todas as solicitações HTTP do TVSDK nesta plataforma é determinado pelo dispositivo e pela versão do iOS que está sendo executada no dispositivo.
 
       O valor da sequência do agente do usuário padroniza o que o sistema operacional atribui.
@@ -40,9 +43,9 @@ Lembre-se das seguintes informações ao usar o TVSDK:
 
 Estas são as práticas recomendadas para o TVSDK:
 
-* Use a versão 3.0 ou superior do HLS para conteúdo do programa.
+* Use a versão 3.0 ou superior do HLS para conteúdo de programas.
 * Use a ferramenta mediastreamvalidator da Apple para validar fluxos VOD.
-* A `PTSDKConfig` classe fornece métodos para aplicar o SSL em solicitações feitas aos servidores de decisão de anúncio Primetime, DRM e Video Analytics.
+* A classe `PTSDKConfig` fornece métodos para aplicar o SSL em solicitações feitas nos servidores de decisão de anúncio Primetime, DRM e Video Analytics.
 
    Para obter mais informações, consulte os métodos `forceHTTPS` e `isForcingHTTPS` nesta classe.
 
