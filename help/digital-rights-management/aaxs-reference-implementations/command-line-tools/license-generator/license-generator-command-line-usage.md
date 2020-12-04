@@ -4,6 +4,9 @@ title: Uso da linha de comando
 uuid: b3a995de-653e-491a-9262-86dc56b9ce31
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Para gerar uma licença, use a seguinte sintaxe:
 </i class="+ topic>
 ```
 
-`metadata` é um arquivo .metadata que contém os metadados DRM do Adobe Access. Esse arquivo pode ser obtido de conteúdo protegido usando a `-d -m` opção Media Packager.
+`metadata` é um arquivo .metadata que contém os metadados DRM de Adobe Access. Esse arquivo pode ser obtido de conteúdo protegido usando a opção `-d -m` do Media Packager.
 
 Para exibir uma licença gerada anteriormente, use a seguinte sintaxe:
 
@@ -33,7 +36,7 @@ Para exibir uma licença gerada anteriormente, use a seguinte sintaxe:
 </i class="+ topic>
 ```
 
-`license` é um arquivo que contém uma licença do Adobe Access gerada pelo Gerador de licenças.
+`license` é um arquivo que contém uma licença de Adobe Access gerada pelo Gerador de licenças.
 
 A tabela a seguir descreve as opções de linha de comando que podem ser especificadas junto com a sintaxe mencionada anteriormente:
 
@@ -50,7 +53,7 @@ A tabela a seguir descreve as opções de linha de comando que podem ser especif
    <td colname="2" class="- topic/entry "> Especifique o local do arquivo de configuração. Se essa opção não for usada, o Gerador de Licenças procurará flashaccess.properties no diretório de trabalho. As opções especificadas na linha de comando têm prioridade sobre as presentes no arquivo de configuração. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d arquivo <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> licenciado</span></i> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> arquivo licenciado</span></i> </p> </td> 
    <td colname="2" class="- topic/entry "> Mostrar informações sobre uma licença que já foi gerada. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -74,8 +77,8 @@ A tabela a seguir descreve as opções de linha de comando que podem ser especif
    <td colname="2" class="- topic/entry "> Se os metadados contiverem várias políticas, especifique o número da política a ser usada (começando em 1) para gerar a licença. Se não for especificado, a primeira política será usada. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r certificado do destinatário</span> </td> 
-   <td colname="2" class="- topic/entry ">Gerar uma licença para o destinatário especificado. Um dispositivo ou certificado de domínio pode ser usado. Várias <span class="+ topic/ph pr-d/codeph codeph"> </span>opções -r podem ser especificadas para criar uma licença para vários destinatários. </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r certificado de recipient</span> </td> 
+   <td colname="2" class="- topic/entry ">Gere uma licença para o recipient especificado. Um dispositivo ou certificado de domínio pode ser usado. Várias <span class="+ topic/ph pr-d/codeph codeph"> -r </span>opções podem ser especificadas para criar uma licença para vários recipient. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root root-filename</span> </td> 
