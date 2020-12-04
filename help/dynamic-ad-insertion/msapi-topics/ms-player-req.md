@@ -6,6 +6,9 @@ title: Requisitos do player de vídeo
 uuid: 29593d67-2901-4d9e-a08f-23c8a7667283
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Para usar a API de inserção de anúncio Primetime, um player de vídeo deve at
 * É possível solicitar URLs de rastreamento nos horários especificados.
 * É executado em uma plataforma de dispositivo compatível com HLS v3 ou posterior, incluindo:
 
-   * Descontinuações de PTS como marcadas por `EXT-X-DISCONTINUITY` tags
+   * Descontinuidades do PTS marcadas pelas tags `EXT-X-DISCONTINUITY`
    * `EXT-X-DISCONTINUITY-SEQUENCE`
    * `EXT-X-PROGRAM-DATE-TIME`
    * `EXT-X-START`
