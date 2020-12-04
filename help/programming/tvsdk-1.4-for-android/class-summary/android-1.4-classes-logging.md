@@ -6,11 +6,14 @@ title: Classes de registro
 uuid: 8b07472e-b529-4c35-b49b-a499debfcff0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
 
-# Classes de registro{#logging-classes}
+# Registrar classes{#logging-classes}
 
 Essas classes permitem que você personalize o registro em log.
 
@@ -38,7 +41,7 @@ Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a> </span></td> 
-   <td colname="2">Interface. Os métodos necessários para implementar um agente de log personalizado para a <code>primetime-sdk-name</code> Frase. </td> 
+   <td colname="2">Interface. Os métodos necessários para implementar um agente de log personalizado para a frase <code>primetime-sdk-name</code>. </td> 
   </tr> 
  </tbody>
 </table>
