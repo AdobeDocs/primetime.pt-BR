@@ -6,11 +6,14 @@ title: Implementar gerenciamento de blecaute
 uuid: a447ff24-8386-4cae-878e-0859fb191de2
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
 
-# Implementar gerenciamento de blecaute {#implement-blackout-handling}
+# Implementar o controle de blecaute {#implement-blackout-handling}
 
 O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
 
@@ -37,7 +40,7 @@ Para implementar o gerenciamento de blecaute e fornecer conteúdo alternativo du
    }
    ```
 
-1. Implemente um método de ouvinte para `PTTimedMetadata` objetos em primeiro plano.
+1. Implemente um método de ouvinte para objetos `PTTimedMetadata` em primeiro plano.
 
    Por exemplo:
 
@@ -61,7 +64,7 @@ Para implementar o gerenciamento de blecaute e fornecer conteúdo alternativo du
    }
    ```
 
-1. Manuseie `TimedMetadata` objetos com atualizações constantes durante a reprodução.
+1. Manuseie objetos `TimedMetadata` com atualizações constantes durante a reprodução.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +85,7 @@ Para implementar o gerenciamento de blecaute e fornecer conteúdo alternativo du
    }
    ```
 
-1. Adicione o manipulador para alternar para o conteúdo alternativo e retornar ao conteúdo principal, conforme indicado pelo `PTTimedMetadata` `PTTimedMetadata` objeto e pelo tempo de reprodução.
+1. Adicione o manipulador `PTTimedMetadata` para alternar para o conteúdo alternativo e retornar ao conteúdo principal, conforme indicado pelo objeto `PTTimedMetadata` e seu tempo de reprodução.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +200,7 @@ Para implementar o gerenciamento de blecaute e fornecer conteúdo alternativo du
    }
    ```
 
-1. Implemente um método de ouvinte para `PTTimedMetadata` objetos em segundo plano.
+1. Implemente um método de ouvinte para objetos `PTTimedMetadata` em segundo plano.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
