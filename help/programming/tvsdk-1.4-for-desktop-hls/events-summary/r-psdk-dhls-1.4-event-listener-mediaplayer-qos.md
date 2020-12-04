@@ -1,20 +1,23 @@
 ---
-description: O TVSDK despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como buffering ou busca.
-seo-description: O TVSDK despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como buffering ou busca.
+description: O TVSDK despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar no cálculo das estatísticas de QoS, como buffering ou busca.
+seo-description: O TVSDK despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar no cálculo das estatísticas de QoS, como buffering ou busca.
 seo-title: Eventos de QoS
 title: Eventos de QoS
 uuid: fd657cf0-c6d4-4e9a-b212-7d09d483cae9
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
 
-# Eventos de QoS{#qos-events}
+# Eventos QoS{#qos-events}
 
-O TVSDK despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como buffering ou busca.
+O TVSDK despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar no cálculo das estatísticas de QoS, como buffering ou busca.
 
-Para ser notificado sobre todos os eventos relacionados a QoS, registre os ouvintes de eventos no `MediaPlayer` objeto para os seguintes eventos:
+Para ser notificado sobre todos os eventos relacionados a QoS, registre os ouvintes de evento com o objeto `MediaPlayer` para os seguintes eventos:
 
 | Evento | Significado |
 |---|---|
