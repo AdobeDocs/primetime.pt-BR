@@ -6,6 +6,9 @@ title: Suporte para legendas WebVTT
 uuid: 1dc728b0-5aeb-4c48-8f3b-54ff4b135742
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
@@ -29,4 +32,4 @@ O fluxo de trabalho para fluxos de conteúdo VOD é o seguinte:
 
 >[!NOTE]
 >
->Se um cliente solicitar que um vídeo seja reproduzido em um idioma específico, como inglês, e solicitar que o vídeo seja reproduzido em francês, o servidor manifest não poderá detectar que o cliente solicitou a alteração do idioma para francês. Como o cliente não se comunica com o servidor manifest, o servidor manifest insere a legenda do anúncio no fluxo de vídeo usando o primeiro idioma especificado no arquivo mestre M3U8 do anúncio.
+>Se um cliente solicitar que um vídeo seja reproduzido em um idioma específico, como inglês, e solicitar que o vídeo seja reproduzido em francês, o servidor manifest não poderá detectar que o cliente solicitou a alteração do idioma para francês. Como o cliente não se comunica com o servidor manifest, o servidor manifest insere a legenda do anúncio no fluxo de vídeo usando o primeiro idioma especificado no arquivo principal M3U8 do anúncio.
