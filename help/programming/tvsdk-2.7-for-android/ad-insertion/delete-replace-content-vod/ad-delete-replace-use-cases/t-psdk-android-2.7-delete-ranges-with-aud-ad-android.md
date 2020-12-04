@@ -6,6 +6,9 @@ title: Excluir intervalos
 uuid: 637829a7-efa8-4b83-9a04-ef01c043621f
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Você pode remover TimeRanges entre o início e o fim em localTime da linha do t
 
 >[!TIP]
 >
->Para remover apenas determinados intervalos do conteúdo, crie uma `CustomRangeMetadata` instância e especifique o tipo como uma `DELETE` operação com os intervalos personalizados definidos.
+>Para remover apenas determinados intervalos do conteúdo, crie uma instância `CustomRangeMetadata` e especifique o tipo como uma operação `DELETE` com os intervalos personalizados definidos.
 
 O mapa de anúncios deve ser usado conforme definido pelo servidor de anúncios.
 
-1. Para excluir intervalos com um anúncio de decisão do Adobe Primetime:
+1. Para excluir intervalos com um anúncio de decisão de anúncio do Adobe Primetime:
 
    ```
    {   
