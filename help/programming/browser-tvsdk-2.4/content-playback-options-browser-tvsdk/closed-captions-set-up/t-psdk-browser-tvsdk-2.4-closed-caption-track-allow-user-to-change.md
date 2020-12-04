@@ -6,6 +6,9 @@ title: Permitir que o usuário altere a faixa
 uuid: bd3d4d20-9b52-4365-b656-83ec2a405a1c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
@@ -14,14 +17,14 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Este é um exemplo de como um usuário pode selecionar um rastreamento de legenda.
 
-1. Para exibir as faixas de legenda fechadas disponíveis, use a `MediaPlayerItem.closedCaptionsTracks` propriedade.
+1. Para exibir as faixas de legenda fechadas disponíveis, use a propriedade `MediaPlayerItem.closedCaptionsTracks`.
 
    ```js
    var tracks = item.closedCaptionsTracks;
    ```
 
-1. Para definir qual rastreamento de legenda é atual, use o `MediaPlayerItem.selectClosedCaptionsTrack` método.
-1. Depois que o item do player de mídia for preparado, recupere-o do player de mídia usando o ` MediaPlayer.  currentItem ` método.
+1. Para definir qual rastreamento de legenda é atual, use o método `MediaPlayerItem.selectClosedCaptionsTrack`.
+1. Depois que o item do player de mídia for preparado, recupere-o do player de mídia usando o método ` MediaPlayer.  currentItem `.
 
    ```js
    // Select the cc track with index k. 
