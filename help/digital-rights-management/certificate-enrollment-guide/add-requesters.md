@@ -4,30 +4,33 @@ title: Adicionar solicitadores
 uuid: 1b3b4895-1ece-4794-b0cc-10bbdcc37438
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
 
-# Adicionar solicitadores{#add-requesters}
+# Adicionar Solicitadores{#add-requesters}
 
-Um licenciado do Adobe Primetime DRM pode ter até cinco solicitantes. No entanto, a Adobe recomenda que você limite o número de Solicitantes aos indivíduos que estão desenvolvendo a solução DRM Primetime. Os Solicitantes são responsáveis por armazenar a chave privada em um local seguro.
+Um licenciado Adobe Primetime DRM pode ter até cinco solicitantes. No entanto, a Adobe aconselha você a limitar o número de Solicitantes aos indivíduos que estão desenvolvendo a solução DRM Primetime. Os Solicitantes são responsáveis por armazenar a chave privada em um local seguro.
 
-1. Um administrador faz logon no site de inscrição de certificado com uma ID da Adobe válida que contém o nome de domínio do licenciado.
-1. Na página inicial, clique em **[!UICONTROL Add a Requester]**.
+1. Um administrador faz logon no site de inscrição de certificado com um Adobe ID válido que contém o nome de domínio do licenciado.
+1. No Home page, clique em **[!UICONTROL Add a Requester]**.
 1. Na guia Contas de usuário, execute *um* dos seguintes procedimentos:
 
    * Adicionar usuário.
 
-      Se o funcionário tiver uma conta da Adobe, insira o endereço de email. Clique **[!UICONTROL Add]** e continue.
+      Se o funcionário tiver uma conta Adobe, informe o endereço de email. Clique em **[!UICONTROL Add]** e continue.
    * Convidar usuário.
 
-      Se o funcionário não tiver uma conta da Adobe, convide-o a criar uma. Insira o endereço de email e o nome do funcionário e clique em **[!UICONTROL Send an invitation]**. O site envia um convite por email para o convidado. O email contém um link para adobe.com no qual o convidado pode criar uma conta. O convidado deve usar o endereço de email para o qual o convite foi enviado.
+      Se o funcionário não tiver uma conta Adobe, convide-o a criar uma. Insira o endereço de email e o nome do funcionário e clique em **[!UICONTROL Send an invitation]**. O site envia um convite por email para o convidado. O email contém um link para adobe.com no qual o convidado pode criar uma conta. O convidado deve usar o endereço de email para o qual o convite foi enviado.
 
       >[!NOTE]
       >
-      >O administrador não recebe notificação quando um usuário criou uma conta. Verifique a **[!UICONTROL User accounts]** guia no site Inscrição de certificados para ver se um convidado criou uma conta.
+      >O administrador não recebe notificação quando um usuário criou uma conta. Verifique a guia **[!UICONTROL User accounts]** no site Inscrição de certificados para ver se um convidado criou uma conta.
 
-1. Se você tiver adicionado um usuário, a tela da seção de função na **[!UICONTROL User accounts]** guia será aberta. Faça o seguinte:
+1. Se você tiver adicionado um usuário, a tela da seção de função na guia **[!UICONTROL User accounts]** será aberta. Faça o seguinte:
 
    1. Confirme se as informações do usuário estão corretas.
    1. Insira o número de telefone da empresa e a frase de desafio.
@@ -41,12 +44,12 @@ Um licenciado do Adobe Primetime DRM pode ter até cinco solicitantes. No entant
 1. Se você convidou um usuário, faça o seguinte:
 
    1. Faça logon no site de Inscrição de certificados.
-   1. Selecione a **[!UICONTROL User accounts]** guia.
-   1. Localize o usuário na **[!UICONTROL Invitations Sent]** seção e clique em **[!UICONTROL Authorize]**.
+   1. Selecione a guia **[!UICONTROL User accounts]**.
+   1. Localize o usuário na seção **[!UICONTROL Invitations Sent]** e clique em **[!UICONTROL Authorize]**.
 
       >[!NOTE]
       >
-      >Se não houver um **[!UICONTROL Authorize]** link na **[!UICONTROL Actions]** coluna, o convidado ainda não criou uma conta da Adobe.
+      >Se não houver um link **[!UICONTROL Authorize]** na coluna **[!UICONTROL Actions]**, o convidado ainda não criou uma conta Adobe.
 
    1. Confirme se as informações do solicitante estão corretas.
    1. Insira o número de telefone da empresa e a frase de desafio.
