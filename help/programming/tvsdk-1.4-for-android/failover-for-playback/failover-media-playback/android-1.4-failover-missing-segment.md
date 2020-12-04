@@ -6,6 +6,9 @@ title: Failover de segmento ausente
 uuid: 17ee1221-e1eb-4f64-a406-4d7eff1d7555
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ Se um segmento estiver ausente no servidor porque, por exemplo, o arquivo manife
 1. Faça o ciclo de cada taxa de bits disponível em cada variante disponível.
 1. Ignore o segmento e emita um aviso.
 
-Quando o TVSDK não pode obter um segmento alternativo, ele aciona uma notificação de `CONTENT_ERROR` erro. Esta notificação contém uma notificação interna com o código `DOWNLOAD_ERROR` . Se o fluxo com o problema for uma faixa de áudio alternativa, gerará a notificação de `AUDIO_TRACK_ERROR` erro.
+Quando o TVSDK não pode obter um segmento alternativo, ele aciona uma notificação de erro `CONTENT_ERROR`. Esta notificação contém uma notificação interna com o código `DOWNLOAD_ERROR`. Se o fluxo com o problema for uma faixa de áudio alternativa, gerará a notificação de erro `AUDIO_TRACK_ERROR`.
 
-Se o mecanismo de vídeo não conseguir obter segmentos continuamente, ele limita o segmento contínuo a saltar para 5, após o qual a reprodução é interrompida e emite um `NATIVE_ERROR` erro com o código 5.
+Se o mecanismo de vídeo não conseguir obter segmentos continuamente, ele limita o segmento contínuo para 5, após o qual a reprodução é interrompida e emite um `NATIVE_ERROR` com o código 5.
 
 >[!NOTE]
 >
