@@ -19,7 +19,7 @@ Você pode selecionar uma faixa de uma lista de faixas de legenda disponíveis n
 
 >[!TIP]
 >
->As legendas ocultas estão sempre ativadas. Todas as faixas de legenda fechada padrão são consideradas como presentes. As faixas padrão (como CC1-CC4, CS1-CS6) são enumeradas em `ClosedCaptionsTrack.DefaultCCTypes`. Quando a reprodução começa, o TVSDK procura atividade em qualquer um desses canais. Se encontrar atividade, ele define o `isActive` método para esse rastreamento e despacha o `MediaPlayer.PlaybackEventListener.onUpdated` evento.
+>As legendas ocultas estão sempre ativadas. Todas as faixas de legenda fechada padrão são consideradas como presentes. As faixas padrão (como CC1-CC4, CS1-CS6) são enumeradas em `ClosedCaptionsTrack.DefaultCCTypes`. Quando a reprodução começa, o TVSDK procura atividade em qualquer um desses canais. Se encontrar atividade, ele definirá o método `isActive` para esse rastreamento e despachará o evento `MediaPlayer.PlaybackEventListener.onUpdated`.
 
 1. Aguarde até que o player de mídia esteja pelo menos no estado PREPARADO.
 1. Analise estes eventos:
