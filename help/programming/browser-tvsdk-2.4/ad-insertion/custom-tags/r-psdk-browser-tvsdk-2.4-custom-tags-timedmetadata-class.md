@@ -6,15 +6,18 @@ title: Classe de metadados cronometrados
 uuid: 3f276618-5f61-4b41-bd2d-78e7f32178d9
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
 
-# Classe de metadados cronometrados{#timed-metadata-class}
+# Classe de metadados cronometrada{#timed-metadata-class}
 
 Quando o TVSDK do navegador detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar a tag e expô-la como um objeto TimedMetadata.
 
-A `TimedMetadata` classe fornece os seguintes elementos:
+A classe `TimedMetadata` fornece os seguintes elementos:
 
 <table id="table_5827A0626EDC45F68DC3E7644F3EFF69"> 
  <thead> 
@@ -37,7 +40,7 @@ A `TimedMetadata` classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"> <p>time </p> </td> 
    <td colname="col02"> <p>Número </p> </td> 
-   <td colname="col2"> <p>A posição de hora local (milissegundos) relativa ao início do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. </p> </td> 
+   <td colname="col2"> <p>A posição de hora local (milissegundos) relativa ao start do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>id </p> </td> 
@@ -52,7 +55,7 @@ A `TimedMetadata` classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"> <p>conteúdo </p> </td> 
    <td colname="col02"> <p>String </p> </td> 
-   <td colname="col2"> <p>O conteúdo bruto dos metadados cronometrados. </p> <p>Se o tipo for TAG, o valor representará a lista inteira de atributos da indicação/tag. Se a ID do tipo ID3, o valor será nulo. </p> </td> 
+   <td colname="col2"> <p>O conteúdo bruto dos metadados cronometrados. </p> <p>Se o tipo for TAG, o valor representará a lista do atributo inteiro da dica/tag. Se a ID do tipo ID3, o valor será nulo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>metadados </p> </td> 
