@@ -59,7 +59,7 @@ Nenhum recurso novo.
 **Versão 1.4.39**
 
 * O iOS TVSDK é certificado com VHL 2.0.1 e com VHL 2.0.1 com Nielsen.
-* O iOS TVSDK é atualizado para fazer solicitações de CRS do novo host Akamai `primetime-a.akamaihd.net`.
+* O iOS TVSDK é atualizado para fazer solicitações de CRS do novo host do Akamai `primetime-a.akamaihd.net`.
 * A nova configuração de nome de host fornece delivery de ativo CRS por HTTP e HTTPS (SSL) em maior escala.
 
 **Versão 1.4.36**
@@ -70,11 +70,11 @@ Integrar e certificar o VHL 2.0 no iOS TVSDK: Reduza a barreira na implementaç�
 
 * Informações sobre anúncios de rede
 
-   As APIs TVSDK agora fornecem informações adicionais sobre respostas VAST de terceiros. A ID do anúncio, o sistema de anúncios e as extensões de anúncio VAST são fornecidos na `PTNetworkAdInfo` classe acessível por meio de uma `networkAdInfo` propriedade em um Ativo de anúncio. Essas informações podem ser usadas para integração com outras plataformas do Ad Analytics, como o **Moat Analytics**.
+   As APIs TVSDK agora fornecem informações adicionais sobre respostas VAST de terceiros. ID do anúncio, Sistema de anúncio e Extensões de anúncio VAST são fornecidas na classe `PTNetworkAdInfo` acessível por meio da propriedade `networkAdInfo` em um Ativo de anúncio. Essas informações podem ser usadas para integração com outras plataformas do Ad Analytics, como **Mata do Analytics**.
 
 **Versão 1.4.31**
 
-* **Métricas** de faturamento Para acomodar clientes que desejam pagar apenas pelo que usam, em vez de uma taxa fixa independentemente do uso real, o Adobe coleta métricas de uso e usa essas métricas para determinar quanto faturar os clientes.
+* **Métricas de faturamentoPara acomodar clientes que desejam pagar apenas pelo que usam, em vez de uma taxa fixa independentemente do uso real, o Adobe coleta métricas de uso e usa essas métricas para determinar quanto faturar os clientes.** 
 
 Toda vez que o TVSDK gera um evento de start de fluxo, o start do player envia mensagens HTTP periodicamente para o sistema de faturamento do Adobe. O período, conhecido como duração faturável, pode ser diferente para VOD padrão, VOD pro VOD (anúncios intermediários ativados) e conteúdo ao vivo. A duração padrão para cada tipo de conteúdo é de 30 minutos, mas seu contrato com a Adobe determina os valores reais.
 
@@ -92,7 +92,7 @@ A classe PTSDKConfig fornece métodos para aplicar o SSL em solicitações feita
 
 O Primetime iOS TVSDK agora é compatível com as criações do Javascript VPAID 2.0 para permitir uma experiência avançada de anúncios interativos em fluxo.
 
-Para obter mais informações sobre o VPAID 2.0, consulte Suporte [a anúncios](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md)VPAID.
+Para obter mais informações sobre o VPAID 2.0, consulte [VPAID ad support](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md).
 
 **Versão 1.4.17**
 
@@ -128,7 +128,7 @@ Para obter mais informações sobre o VPAID 2.0, consulte Suporte [a anúncios](
 
 Para anúncios VAST (criativos) com a regra de fallback ativada, o TVSDK trata um anúncio com um tipo MIME inválido como um anúncio vazio e tenta usar anúncios de fallback em seu lugar. Você pode configurar alguns aspectos do comportamento de fallback.
 
-Para obter mais informações, consulte [Anúncio de fallback para anúncios](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md)VAST e VMAP.
+Para obter mais informações, consulte [Anúncio de fallback para anúncios VAST e VMAP](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md).
 
 **Versão 1.4.9**
 
@@ -180,7 +180,7 @@ As Políticas de DRM agora podem especificar a resolução mais alta permitida, 
 
 >[!NOTE]
 >
->Os seguintes recursos **não** são suportados no TVSDK:
+>Os seguintes recursos são **não** suportados no TVSDK:
 >
 >* Movimentação lenta, em qualquer plataforma ou versão.
 >* Brincadeira ao vivo.
@@ -215,7 +215,7 @@ Esta versão do TVSDK foi certificada com o Suporte FairPlay para iOS e tvOS.
    * O suporte a tvOs TVSDK está limitado a fluxos criptografados não-Adobe DRM. Você deve remover a referência a drmNativeInterface.framework nas configurações de compilação tvOS. Ainda há suporte para fluxos criptografados AES.
    * A Apple exige que todos os aplicativos Apple TV tenham código de bits ativado, portanto, você deve ativar esse sinalizador nas configurações do projeto.
 
-## Problemas resolvidos no 1.4 {#resolved-issues-in}
+## Problemas resolvidos em 1.4 {#resolved-issues-in}
 
 <!-- 
 
@@ -240,7 +240,7 @@ Comment Type: draft
    * Correção de problemas de compilação com o TVSDK no XCode 10. Devido aos requisitos do XCode 10, os aplicativos criados no TVSDK para iOS 1.4.45 e versões posteriores exigem um público alvo mínimo de implantação como iOS 7.0
 
 * Ticket #36321 - Discrepância observada no intervalo pesquisável entre a instância PTMediaPlayer e AVPlayer no estado &quot;Reproduzindo&quot;.
-* Ticket #36493 - suporte ao iOS 12 `libstdc++`
+* Ticket #36493 - `libstdc++` suporte no iOS 12
 
    * Correção de problemas de compilação com o TVSDK no iOS 12. Os aplicativos criados no TVSDK para iOS 1.4.45 e versões posteriores exigem um público alvo mínimo de implantação como iOS 7.0
 
@@ -330,7 +330,7 @@ Comment Type: draft
 * (ZD #31951) - Tela em branco em uma pausa de anúncio e sem a conclusão da pausa de anúncio.
 
    Solucionado um problema em que os anúncios VPAID do Facebook costumavam retornar vários blocos CDATA em um único \&amp;lt;AdParameters\&amp;gt; nó VAST.
-* (ZD #33336) - TVSDK do [iOS] - Os pods de anúncios não estão sendo preenchidos, apesar de o número de anúncios ser retornado pelo FreeWheel.
+* (ZD #33336) - [iOS] TVSDK - Os pods de anúncio não estão sendo preenchidos, apesar de o número de anúncios ser retornado pelo FreeWheel.
 
    Foi criada uma relação pai-filho entre o anúncio de sequência e o anúncio de fallback e a classificação com base na sequência principal e no índice.
 
@@ -430,7 +430,7 @@ Corrigidas várias falhas relacionadas à sincronização.
 
 * (ZD# 28481) - Fim da FER devido à chave incorreta ser anexada no final de uma pausa de anúncio para esses fluxos FER
 
-Para um fluxo FER, a tecla antes do intervalo do anúncio é inserida após o fim do intervalo do anúncio. Esse problema foi resolvido ao anexar a *última chave* vista no final do intervalo do anúncio.
+Para um fluxo FER, a tecla antes do intervalo do anúncio é inserida após o fim do intervalo do anúncio. Esse problema foi resolvido ao anexar a *última chave vista* no final do intervalo do anúncio.
 
 **Versão 1.4.33** (1.4.33.803 para iOS 6.0+)
 
@@ -444,7 +444,7 @@ Esse problema foi resolvido atualizando o carregamento de recursos para procurar
 
 * (ZD# 27460) Primeira chamada de anúncio do Midroll - POST para cdn.auditude<span></span>.com retornando 403.
 
-A nova conta CDN não consegue processar uma solicitação de CDN POST. Esse problema foi resolvido com a atualização do código para fazer com que a solicitação de `cdn.auditude.com` anúncio fosse GET em vez de POST.
+A nova conta CDN não consegue processar uma solicitação de CDN POST. Esse problema foi resolvido atualizando o código para fazer com que a solicitação de anúncio `cdn.auditude.com` fosse GET em vez de POST.
 
 **Versão 1.4.32** (1.4.32.792 para iOS 6.0+)
 
@@ -460,7 +460,7 @@ O problema foi resolvido colocando a tag no início da lista de reprodução.
 
 * (ZD# 24528) Implementar métricas de uso do TVSDK para faturamento
 
-Para obter mais informações, consulte Métricas [de](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md)faturamento.
+Para obter mais informações, consulte [Métricas de Faturamento](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md).
 
 * (ZD# 24642) Suporte Picture-in-Picture para TVSDK
 
@@ -512,7 +512,7 @@ Quando o último start de intervalo de anúncio do VMAP cair antes da duração 
 
    * (ZD #22351) VHL - Analytics: Duração de ativos de vídeo ao vivo
 
-Esse problema foi resolvido adicionando a API assetDuration para `PTVideoAnalyticsTrackingMetadata` atualizar a duração do ativo para fluxos ao vivo/linear e fornecer uma lógica para a verificação do fluxo ao vivo.
+Esse problema foi resolvido adicionando a API assetDuration a `PTVideoAnalyticsTrackingMetadata` para atualizar a duração do ativo para fluxos ao vivo/linear e fornecer uma lógica para verificar o fluxo ao vivo.
 
 * (ZD# 22675) VHL - Analytics: Atualização da duração de ativos de vídeo ao vivo
 
@@ -562,7 +562,7 @@ Esse problema foi resolvido calculando corretamente o desvio de duração nas li
 
 Esse problema foi resolvido usando o servidor Web local para legendas quando os arquivos WebVTT eram restritos geograficamente.
 
-**Versão 1.4.27** (1.4.27.711) para iOS 6.0+
+**Versão 1.4.27**  (1.4.27.711) para iOS 6.0+
 
 * (ZD #24089) - Otimizações para a resolução de anúncios em fluxos de DVR longos
 
@@ -586,7 +586,7 @@ O problema no formato de log que causou a falha em dispositivos de 32 bits quand
 
    * Corrigido ao atualizar as bibliotecas com suporte a módulo
 
-**Versão 1.4.25** (1.4.25.684) para iOS 6.0+
+**Versão 1.4.25**  (1.4.25.684) para iOS 6.0+
 
 * (ZD #19629) - Vídeo ao vivo pausa ao entrar no Airplay para ATV 4
 
@@ -661,7 +661,7 @@ Esse problema foi resolvido com o manuseio de caracteres não seguros e permitin
 
 Esse problema foi resolvido atualizando a lógica para mostrar a visualização do player se um anúncio VPAID não for reproduzido.
 
-**Versão 1.4.23** (1.4.23.641) para iOS 6.0+
+**Versão 1.4.23**  (1.4.23.641) para iOS 6.0+
 
 * (ZD #18016) - Nenhuma resposta do Primetime SDK com uma condição de rede incorreta
 
@@ -687,7 +687,7 @@ Esse problema foi resolvido melhorando o tratamento de tags de anúncios VAST de
 
 O problema no qual o TVSDK que retornava um erro 101000 ao iniciar a reprodução em fluxos de DRM de acesso ao Adobe foi corrigido.
 
-**Versão 1.4.22** (1.4.22.627) para iOS 6.0+
+**Versão 1.4.22**  (1.4.22.627) para iOS 6.0+
 
 * (ZD #18709) - Falha no TVSDK para iOS
 
@@ -746,7 +746,7 @@ Esse problema foi resolvido fornecendo um evento de tempo limite (requestTimeout
 Esse problema foi resolvido ao permitir que o aplicativo assinasse EXT-X-PROGRAMA-DATE-TIME em fluxos ao vivo.
 
 * (ZD #19459) - Falha ao preparar áudio alternativo com PTMediaPlayerItem prepareAudioOptionsWithAVMediaSelectionOptions
-* (ZD #19460) - Travamento - [PTMediaPlayerItem prepareLegendasOpçõesComAVMediaSelectionOptions:nonForcedOptions:]
+* (ZD #19460) - Travamento - [PTMediaPlayerItem prepareSubtítulosOptionsWithAVMediaSelectionOptions:nonForcedOptions:]
 
 Este problema é o mesmo que Zendesk #19459.
 
@@ -780,7 +780,7 @@ O tipo mime JavaScript nem sempre estava sendo incluído ou considerado como um 
 
 O problema em que alguns dos criativos não estão sendo reembalados foi resolvido.
 
-**Versão 1.4.19** (1.4.19.563) para iOS 6.0+
+**Versão 1.4.19**  (1.4.19.563) para iOS 6.0+
 
 * ZD #18639) - O TVSDK usa CPU/recursos excessivos em um ativo de gravação automática demorado
 
@@ -790,17 +790,17 @@ Esse problema foi resolvido com a otimização da regravação da lista de repro
 
 Esse problema foi resolvido com a atualização da implementação da API PTMediaPlayer.drmManager para coletar o DRMManager da estrutura DRM.
 
-**Versão 1.4.18** (1.4.18.557) para iOS 6.0+
+**Versão 1.4.18** ( 1.4.18.557) para iOS 6.0+
 
 * (ZD #18844) Rastreamento do indicador de reprodução para conteúdo ao vivo no iOS player.
 
 Esse problema foi resolvido permitindo que os aplicativos definissem seu próprio valor de indicador de reprodução.
 
-* Zendesk #18518 - Se o nome do vídeo não for especificado, o nome do TVSDK assumirá como padrão o player baseado em *PSDK.*
+* Zendesk #18518 - Se o nome do vídeo não for especificado, o nome do TVSDK assumirá *player baseado no PSDK.*
 
 Esse problema foi resolvido com a remoção do valor padrão do nome do player.
 
-**Versão 1.4.17** (1.4.17.545) para iOS 6.0+
+**Versão 1.4.17**  (1.4.17.545) para iOS 6.0+
 
 * Zendesk #2228 - Aprimorar o TVSDK para retornar a resposta JSON da busca de um manifesto
 
@@ -810,7 +810,7 @@ Em vez de enviar um erro quando o conteúdo não é M3U8, a Estrutura DRM retorn
 
 Mesma resolução do Zendesk nº 2228
 
-* Zendesk #3304 - macro VAST 3.0 `[ERRORCODE]` não sendo preenchida
+* A macro Zendesk #3304 - VAST 3.0 `[ERRORCODE]` não está sendo preenchida
 
 O problema no qual o SDK do Auditude não envia um ping quando o URL de rastreamento tem espaços no início foi resolvido.
 
@@ -854,7 +854,7 @@ Essa falha ocorre ao chamar as APIs MediaCodecList e MediaCodecInfo ao verificar
 
 Esse problema foi resolvido fornecendo suporte para o mapa de fontes CTS do Android.
 
-**Versão 1.4.15** (1.4.15.512) para iOS 6.0+
+**Versão 1.4.15**  (1.4.15.512) para iOS 6.0+
 
 **Observação**: O módulo Nielsen foi removido da compilação TVSDK, mas o TVSDK será atualizado em breve com um novo módulo de integração Nielsen.
 
@@ -878,9 +878,9 @@ Corrigida uma falha intermitente devido a problemas de simultaneidade.
 
 **Versão 1.4.13** (iOS 6.0+)
 
-* (ZD #3304) - `[ERRORCODE]` macro VAST 3.0 que não está sendo preenchida
+* (ZD #3304) - macro VAST 3.0 `[ERRORCODE]` que não está sendo preenchida
 
-   * O código de erro 400 será exposto se o anúncio em linha apresentar anúncios mal criados.
+   * O código de erro 400 será exposto se estiver em linha   o anúncio tem uma má criação.
    * `[ERRORCODE]` a macro será codificada no URL.
 
 * (ZD #3865) Integração do Heartbeat com anúncios IMA
@@ -919,7 +919,7 @@ Solução com correção para ZD #4279
 
 Corrigido o bug quando um ativo de anúncio estava usando um URL de redirecionamento relativo
 
-**Versão 1.4.9** (1.4.9.427) para iOS 6.0+
+**Versão 1.4.9**  (1.4.9.427) para iOS 6.0+
 
 * (ZD #3075) Problema de acessibilidade à Internet - iOS
 
@@ -976,7 +976,7 @@ Suporte para fazer ping de URLs de rastreamento de quebra de anúncio vazios, o 
 
 * Zendesk #1024 - Recurso para remover anúncio do fluxo via manifesto
 
-## Problemas conhecidos no 1.4 {#known-issues-in}
+## Problemas conhecidos em 1.4 {#known-issues-in}
 
 * No iOS TVSDK, todos os anúncios são agrupados no manifesto do conteúdo. Os comportamentos de publicidade são implementados buscando com base na duração do conteúdo e dos segmentos de anúncios. Portanto, se a duração do segmento não for precisa, a busca pode nem sempre terminar no quadro exato do início ou do fim do intervalo do anúncio. Mesmo se as durações forem para o quadro, há uma tolerância que a própria plataforma impõe à busca e pode haver alguns quadros ou anúncios ou conteúdos exibidos. Essa é uma limitação da plataforma e a maneira como a inserção de anúncios funciona com TVSDK no iOS.
 * A decisão de ignorar acontece no evento de busca neste caso. No entanto, como as durações do segmento de anúncio no manifesto não representam com precisão a duração real do anúncio, a busca não é precisa de quadros. Assim, você verá alguns quadros do anúncio quando as políticas de publicidade forem aplicadas.
@@ -984,7 +984,7 @@ Suporte para fazer ping de URLs de rastreamento de quebra de anúncio vazios, o 
 * Pode ser que o vídeo de rotação de licença não seja reproduzido no iOS 11 e será reproduzido corretamente no iOS 9.x e no iOS 10.x.
 * No suporte a VPAID 2.0, se a reprodução estiver ativa no AirPlay, os anúncios VPAID serão ignorados.
 * O drmNativeInterface.framework não é vinculado corretamente quando o público alvo mínimo está definido como iOS7 (ou posterior).\
-   Solução: Especifique o `libstdc++6`.  biblioteca dylib, como se segue: Vá para Público alvo->Criar fases->Vincular binário com bibliotecas e adicione `libstdc++.6.dylib`.
+   Solução: Especifique explicitamente `libstdc++6`.  biblioteca dylib, como se segue: Vá para Público alvo->Criar fases->Vincular binário com bibliotecas e adicione `libstdc++.6.dylib`.
 
 * Anúncio pós-rolagem não é inserido para substituir a API.
 * Buscar uma pausa de anúncio (sem sair dela) emite uma notificação de start de anúncio de duplicado e quebra de anúncio
@@ -994,4 +994,4 @@ Suporte para fazer ping de URLs de rastreamento de quebra de anúncio vazios, o 
 
 ## Recursos úteis {#helpful-resources}
 
-* Consulte a documentação completa da ajuda na página Aprendizagem e suporte [da](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte da Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
