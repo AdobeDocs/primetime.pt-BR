@@ -1,28 +1,31 @@
 ---
-description: Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK inicia a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
-seo-description: Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK inicia a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
+description: Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK start a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
+seo-description: Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK start a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
 seo-title: Reprodução e failover de mídia
 title: Reprodução e failover de mídia
 uuid: 197a6ee0-f1ff-40ac-bd49-eafeae6167d4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 0%
 
 ---
 
 
 # Reprodução e failover de mídia{#media-playback-and-failover}
 
-Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK inicia a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
+Para mídia ao vivo e vídeo sob demanda (VOD), o TVSDK start a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos de mídia definidos pela lista de reprodução. Ele seleciona rapidamente a lista de reprodução de taxa de bits de alta resolução e sua mídia associada e continua o processo de download.
 
 ## Failover de lista de reprodução ausente {#section_E6B6A15930894F56A0A8501577B35E7F}
 
 Quando uma lista de reprodução inteira estiver ausente, por exemplo, quando o arquivo M3U8 especificado em um arquivo manifest de nível superior não for baixado, o TVSDK tentará recuperar. Se não puder ser recuperado, seu aplicativo determinará a próxima etapa.
 
-Se a lista de reprodução associada à taxa de bits de resolução média estiver ausente, o TVSDK pesquisará uma lista de reprodução variante na mesma resolução. Se encontrar a mesma resolução, o download da lista de reprodução variante e dos segmentos da posição correspondente será iniciado. Se o TVSDK não encontrar a mesma lista de reprodução de resolução, ele tentará percorrer outras listas de reprodução de taxa de bits e suas variantes. Uma taxa de bits imediatamente menor é a primeira escolha, depois sua variante e assim por diante. Se todas as listas de reprodução de taxa de bits inferior e suas variantes estiverem esgotadas na tentativa de encontrar uma lista de reprodução válida, o TVSDK irá para a taxa de bits superior e contará a partir daí. Se não for possível encontrar uma lista de reprodução válida, o processo falhará e o player será movido para o estado ERROR.
+Se a lista de reprodução associada à taxa de bits de resolução média estiver ausente, o TVSDK pesquisará uma lista de reprodução variante na mesma resolução. Se encontrar a mesma resolução, ele start o download da lista de reprodução variante e dos segmentos da posição correspondente. Se o TVSDK não encontrar a mesma lista de reprodução de resolução, ele tentará percorrer outras listas de reprodução de taxa de bits e suas variantes. Uma taxa de bits imediatamente menor é a primeira escolha, depois sua variante e assim por diante. Se todas as listas de reprodução de taxa de bits inferior e suas variantes estiverem esgotadas na tentativa de encontrar uma lista de reprodução válida, o TVSDK irá para a taxa de bits superior e contará a partir daí. Se não for possível encontrar uma lista de reprodução válida, o processo falhará e o player será movido para o estado ERROR.
 
-Seu aplicativo pode determinar como lidar com essa situação. Por exemplo, você pode querer fechar a atividade do player e direcionar o usuário para a atividade do catálogo. O evento de interesse é o `STATUS_CHANGED` evento e o retorno de chamada correspondente é o `onStatusChange` método. Este é um código que monitora se o player altera seu estado interno para ERRO:
+Seu aplicativo pode determinar como lidar com essa situação. Por exemplo, talvez você queira fechar a atividade do player e direcionar o usuário para a atividade do catálogo. O evento de interesse é o evento `STATUS_CHANGED` e o retorno de chamada correspondente é o método `onStatusChange`. Este é um código que monitora se o player altera seu estado interno para ERRO:
 
-Para obter mais informações, consulte o `PSDKDemo` arquivo. Os ouvintes de eventos são anexados à instância do MediaPlayer.
+Para obter mais informações, consulte o arquivo `PSDKDemo`. Os ouvintes de evento estão conectados à instância do MediaPlayer.
 
 ```
 case MediaPlayerStatus.ERROR: 
@@ -59,9 +62,9 @@ Se um segmento estiver ausente no servidor porque, por exemplo, o arquivo manife
 1. Faça o ciclo de cada taxa de bits disponível em cada variante disponível.
 1. Ignore o segmento e emita um aviso.
 
-Quando o TVSDK não pode obter um segmento alternativo, ele aciona uma notificação de `CONTENT_ERROR` erro. Esta notificação contém uma notificação interna com o código `DOWNLOAD_ERROR` . Se o fluxo com o problema for uma faixa de áudio alternativa, o TVSDK gera a notificação de `AUDIO_TRACK_ERROR` erro.
+Quando o TVSDK não pode obter um segmento alternativo, ele aciona uma notificação de erro `CONTENT_ERROR`. Esta notificação contém uma notificação interna com o código `DOWNLOAD_ERROR`. Se o fluxo com o problema for uma faixa de áudio alternativa, o TVSDK gera a notificação de erro `AUDIO_TRACK_ERROR`.
 
-Se o mecanismo de vídeo não conseguir obter segmentos continuamente, ele limita o segmento contínuo para 5, após o qual a reprodução é interrompida e o TVSDK emite um erro `NATIVE_ERROR` com o código 5.
+Se o mecanismo de vídeo não conseguir obter segmentos continuamente, ele limitará os segmentos contínuos a saltar para 5, após o que a reprodução será interrompida e o TVSDK emitirá um `NATIVE_ERROR` com o código 5.
 
 >[!NOTE]
 >
