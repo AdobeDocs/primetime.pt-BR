@@ -6,6 +6,9 @@ title: Requisitos de conteúdo e manifesto
 uuid: 22ee7d02-b06d-4162-a8a4-a2391658fdb3
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
@@ -18,11 +21,11 @@ Verifique as restrições e os requisitos para streams e playlists (manifestos).
  <tbody> 
   <tr> 
    <td colname="col1"> Duração do segmento de conteúdo </td> 
-   <td colname="col2"> A duração de um segmento não deve exceder a duração de destino especificada no arquivo manifest. </td> 
+   <td colname="col2"> A duração de um segmento não deve exceder a duração do público alvo especificada no arquivo manifest. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Requisito de conteúdo </td> 
-   <td colname="col2"> Cada segmento TS deve começar com um quadro chave. </td> 
+   <td colname="col2"> Cada segmento TS deve ser start com um quadro chave. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Conteúdo HLS </td> 
@@ -42,7 +45,7 @@ Verifique as restrições e os requisitos para streams e playlists (manifestos).
      <ul id="ul_9D33C2418F9F49DEAE0E642301726F89"> 
       <li id="li_74C69A21A7BD4831B92F0D57900E1CB1">Para fluxos ao vivo - o perfil ao vivo com tipo dinâmico é suportado. </li> 
       <li id="li_0C8743DB152047819D23C9F180998AD7">Para fluxos VOD - o perfil live com tipo estático é suportado. </li> 
-      <li id="li_FBC6828663FB413798A4BDAF0B9831AA">Para fluxos VOD - O perfil sob demanda não é certificado para fluxos de trabalho de anúncios. </li> 
+      <li id="li_FBC6828663FB413798A4BDAF0B9831AA">Para fluxos VOD - O perfil sob demanda não é certificado para workflows de anúncios. </li> 
       <li id="li_4393B9B1F6144BDEAE484C879750ED23">A reprodução de fluxos DASH com vários períodos não é suportada. </li> 
       <li id="li_6A2CEC4E974C4D44A45F5503A1A9D8D0">Legendas incorporadas (608/708), sinalizadas por meio da tag Acessibilidade, são suportadas. </li> 
       <li id="li_EDE93DF4F3A64A53BA80877F701A8F0D">Arquivos VTT fragmentados/segmentados não são suportados. </li> 
