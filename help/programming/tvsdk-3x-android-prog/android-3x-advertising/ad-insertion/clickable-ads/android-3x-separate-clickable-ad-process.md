@@ -6,6 +6,9 @@ title: Separe o processo de anúncio clicável
 uuid: a5254ac5-3005-483e-935e-acbbef03df0e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,9 @@ Você deve separar a lógica da interface do seu player do processo que gerencia
    } 
    ```
 
-1. Implemente um fragmento diferente para exibir um elemento de interface que indica que um anúncio pode ser clicado, monitorar esse elemento de interface e comunicar os cliques do usuário ao fragmento que contém o `MediaPlayer`.
+1. Implemente um fragmento diferente para exibir um elemento de interface que indica que um anúncio pode ser clicado, monitore esse elemento de interface e comunique os cliques do usuário ao fragmento que contém o `MediaPlayer`.
 
-   Esse fragmento deve declarar uma interface para a comunicação do fragmento. O fragmento captura a implementação da interface durante seu método de `onAttach()` ciclo de vida e pode chamar os métodos da interface para se comunicar com a atividade.
+   Esse fragmento deve declarar uma interface para a comunicação do fragmento. O fragmento captura a implementação da interface durante seu método de ciclo de vida `onAttach()` e pode chamar os métodos da interface para se comunicar com a atividade.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
