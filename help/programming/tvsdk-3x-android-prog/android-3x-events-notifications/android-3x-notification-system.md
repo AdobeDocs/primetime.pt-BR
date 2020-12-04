@@ -7,25 +7,25 @@ uuid: c4a108e7-72aa-4c96-9538-b1385343d6af
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
 
 
-# Notificações e eventos para status, atividade, erros e registro do player {#notifications-and-events-for-player-status-activity-errors-and-logging}
+# Notificações e eventos para status do player, atividade, erros e registro {#notifications-and-events-for-player-status-activity-errors-and-logging}
 
 Eventos e notificações ajudam a gerenciar os aspectos assíncronos do aplicativo de vídeo.
 
-`MediaPlayerStatus` objetos fornecem informações sobre alterações no status do player. `Notification` objetos fornecem informações sobre avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player. Você implementa ouvintes de eventos para capturar e responder a eventos ( `MediaPlayerEvent` objetos).
+`MediaPlayerStatus` objetos fornecem informações sobre alterações no status do player. `Notification` objetos fornecem informações sobre avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player. Você implementa ouvintes de evento para capturar e responder a eventos ( `MediaPlayerEvent` objetos).
 
 Seu aplicativo pode recuperar informações de notificação e status. Usando essas informações, você também pode criar um sistema de registro para diagnóstico e validação.
 
-## Conteúdo da notificação {#section_DF951FF601794CF592841BB7406DC1A1}
+## Conteúdo de notificação {#section_DF951FF601794CF592841BB7406DC1A1}
 
 `MediaPlayerNotification` fornece informações relacionadas ao status do player.
 
-O TVSDK fornece uma lista cronológica de `MediaPlayerNotification` notificações e cada notificação contém as seguintes informações:
+O TVSDK fornece uma lista cronológica de `MediaPlayerNotification` notificações, e cada notificação contém as seguintes informações:
 
 * Um carimbo de data e hora
 * Metadados de diagnóstico que consistem nos seguintes elementos:
@@ -35,24 +35,24 @@ O TVSDK fornece uma lista cronológica de `MediaPlayerNotification` notificaçõ
    * `name`: Uma descrição legível pela pessoa da notificação, como SEEK_ERROR
    * `metadata`: Pares chave/valor que contêm informações relevantes sobre a notificação. Por exemplo, uma chave chamada `URL` fornece um valor que é um URL relacionado à notificação.
 
-   * `innerNotification`: Uma referência a outro `MediaPlayerNotification` objeto que afeta diretamente essa notificação.
+   * `innerNotification`: Uma referência a outro  `MediaPlayerNotification` objeto que afeta diretamente essa notificação.
 
 Você pode armazenar essas informações localmente para análise posterior ou enviá-las para um servidor remoto para registro e representação gráfica.
 
-## Configurar seu sistema de notificação {#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
+## Configure seu sistema de notificação {#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
 
 Você pode acompanhar as notificações.
 
-O núcleo do sistema de notificação do Primetime Player é a `Notification` classe, que representa uma notificação independente.
+O núcleo do sistema de notificação do Primetime Player é a classe `Notification`, que representa uma notificação independente.
 
 Para receber notificações, ouça as notificações da seguinte maneira:
 
-1. Implemente o `NotificationEventListener.onNotification()` retorno de chamada.
-1. O TVSDK passa um `NotificationEvent` objeto para o retorno de chamada.
+1. Implemente o retorno de chamada `NotificationEventListener.onNotification()`.
+1. O TVSDK transmite um objeto `NotificationEvent` para o retorno de chamada.
 
    >[!NOTE]
    >
-   >Os tipos de notificações são enumerados na `Notification.Type` enumeração:
+   >Os tipos de notificações são enumerados na enumeração `Notification.Type`:
 
    * `ERROR`
    * `INFO`
