@@ -6,15 +6,18 @@ title: Ativar reprodução de vídeo
 uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
 
-# Ativar reprodução de vídeo {#enable-video-playback}
+# Habilitar reprodução de vídeo {#enable-video-playback}
 
 Crie um PlaybackManager que gerencia a configuração e a operação de reprodução do fluxo HLS. Nenhuma outra configuração é necessária.
 
-1. Crie o objeto media player, verificando se o seguinte código existe em [!DNL PlayerFragment.java]:
+1. Crie o objeto do player de mídia verificando se o seguinte código existe em [!DNL PlayerFragment.java]:
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -24,20 +27,20 @@ Crie um PlaybackManager que gerencia a configuração e a operação de reprodu�
 
    <!-- I've duplicated this information. It also exists in the PlayerFragment section, just before the Feature manager section. I figured that I should have it here as well, in case they jump directly to this section.-->
 
-1. Crie o gerenciador de reprodução por meio do `ManagerFactory`:
+1. Crie o gerenciador de reprodução por meio de `ManagerFactory`:
 
    ```java
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implemente o `PlaybackManagerEventListener` no para `PlayerFragment` manipular os eventos de reprodução:
+1. Implemente `PlaybackManagerEventListener` em `PlayerFragment` para manipular os eventos de reprodução:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
      new PlaybackManagerEventListener() 
    ```
 
-1. Registre o ouvinte de eventos no `PlayerFragment`:
+1. Registre o ouvinte do evento em `PlayerFragment`:
 
    ```
    playbackManager.addEventListener(playbackManagerEventListener);
@@ -49,7 +52,7 @@ Crie um PlaybackManager que gerencia a configuração e a operação de reprodu�
    playbackManager.setupVideo(url, adsManager); 
    ```
 
-1. Configure as operações da barra de controle no `PlayerFragment`:
+1. Configure as operações da barra de controle em `PlayerFragment`:
 
    ```
    controlBar.pressPlay() { 
