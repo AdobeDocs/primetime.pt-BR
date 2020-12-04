@@ -1,20 +1,23 @@
 ---
-description: Use o comando HTTP GET para interagir com o servidor manifest.
-seo-description: Use o comando HTTP GET para interagir com o servidor manifest.
+description: Use o comando GET HTTP para interagir com o servidor manifest.
+seo-description: Use o comando GET HTTP para interagir com o servidor manifest.
 seo-title: Enviar um comando para o servidor de manifesto
 title: Enviar um comando para o servidor de manifesto
 uuid: e9680563-d268-406d-87ce-1521a677e9ec
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# Enviar um comando para o servidor de manifesto {#send-a-command-to-the-manifest-server}
+# Enviar um comando para o Servidor Manifesto {#send-a-command-to-the-manifest-server}
 
-Use o comando HTTP GET para interagir com o servidor manifest.
+Use o comando GET HTTP para interagir com o servidor manifest.
 
-1. Envie uma `HTTP GET` solicitação para um URL de inicialização construído com o seguinte padrão:
+1. Envie uma solicitação `HTTP GET` para um URL de inicialização construído usando o seguinte padrão:
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -22,11 +25,11 @@ Use o comando HTTP GET para interagir com o servidor manifest.
     ?{query parameters}
    ```
 
-* **PublisherAssetID** obrigatório. ID exclusiva do editor para o conteúdo específico.
+* **** PublisherAssetIDRequired. ID exclusiva do editor para o conteúdo específico.
 
-* **URL** do conteúdo obrigatório. URL do arquivo M3U8 de conteúdo, Base64 codificado para ser seguro dentro do URL do servidor manifest. O URL do conteúdo deve apontar para um arquivo M3U8 variante, mesmo se houver apenas um fluxo de taxa de bits.
+* **Conteúdo** URLRequired. URL do arquivo M3U8 de conteúdo, Base64 codificado para ser seguro dentro do URL do servidor manifest. O URL do conteúdo deve apontar para um arquivo M3U8 variante, mesmo se houver apenas um fluxo de taxa de bits.
 
-* **Parâmetros** de consulta Alguns são obrigatórios, alguns opcionais. Estes constituem a parte mais variada do pedido. Eles informam ao servidor manifest qual tipo de cliente está fazendo a solicitação e o que ele deseja que o servidor manifest faça.
+* **Parâmetros** do queryAlguns são obrigatórios, alguns opcionais. Estes constituem a parte mais variada do pedido. Eles informam ao servidor manifest qual tipo de cliente está fazendo a solicitação e o que ele deseja que o servidor manifest faça.
 
    Por exemplo:
 
