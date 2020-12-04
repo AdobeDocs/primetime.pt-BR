@@ -6,6 +6,9 @@ title: Comportamento de reprodução padrão e personalizado com anúncios
 uuid: 58f11167-a764-4647-8490-05ca66eb6c47
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '522'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Para substituir o comportamento padrão, use `AdBreakPolicySelector`.
 
 >[!IMPORTANT]
 >
->O TVSDK do navegador não fornece uma maneira de desativar a busca durante os anúncios. A Adobe recomenda que você configure seu aplicativo para desativar a busca durante os anúncios.
+>O TVSDK do navegador não fornece uma maneira de desativar a busca durante os anúncios. O Adobe recomenda que você configure seu aplicativo para desativar a busca durante os anúncios.
 
 A tabela a seguir descreve como o TVSDK do navegador lida com anúncios e quebras de anúncios durante a reprodução:
 
@@ -38,7 +41,7 @@ A tabela a seguir descreve como o TVSDK do navegador lida com anúncios e quebra
      <li id="li_D5CC30F063934C738971E2E8AF00C137"> Para live/linear, reproduz o intervalo do anúncio, mesmo se o intervalo do anúncio já tiver sido observado. </li> 
      <li id="li_D962C0938DA74186AE99D117E5A74E38">Para VOD, reproduz o intervalo do anúncio e marca o intervalo do anúncio como observado. </li> 
     </ul> </td> 
-   <td colname="col3">Especifique uma política diferente para o intervalo do anúncio usando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Especifique uma política diferente para a quebra de anúncio usando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo busca encaminhar o(s) intervalo(s) do anúncio para o conteúdo principal. </td> 
@@ -63,12 +66,12 @@ A tabela a seguir descreve como o TVSDK do navegador lida com anúncios e quebra
   <tr> 
    <td colname="col1"> Seu aplicativo busca encaminhar ou retroceder sobre quebra(s) de anúncios observados para o conteúdo principal. </td> 
    <td colname="col2"> Se a última quebra de anúncio ignorada já tiver sido observada, ignora a posição de busca selecionada pelo usuário. </td> 
-   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas usando <span class="codeph"> AdBreaksToPlay</span> e determine quais quebras já foram observadas ao usar <span class="codeph"> isWatched</span>. </td> 
+   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas usando <span class="codeph"> selectAdBreaksToPlay</span> e determine quais quebras já foram observadas usando <span class="codeph"> isWatched</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo busca avançar ou retroceder em um ou mais anúncios quebrados e cai em um intervalo de anúncios observado. </td> 
    <td colname="col2"> Ignora o intervalo do anúncio e busca a posição imediatamente após o intervalo do anúncio. </td> 
-   <td colname="col3">Especifique uma política de publicidade diferente para o intervalo (com o status observado definido como true) e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col3">Especifique uma política de publicidade diferente para o intervalo de anúncios (com o status observado definido como true) e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo busca anúncios que foram inseridos usando marcadores de anúncio personalizados. </td> 
@@ -80,4 +83,4 @@ A tabela a seguir descreve como o TVSDK do navegador lida com anúncios e quebra
 
 ## Configuração de comportamentos de anúncio personalizados {#section_custom_ad_behaviors}
 
-Você pode definir seu comportamento preferido na fábrica de conteúdo de anúncio no `retrieveAdPolicySelectorCallbackFunc` método. Você pode usar os métodos `selectPolicyForAdBreak`, `selectWatchedPolicyForAdBreak`, `selectPolicyForSeekIntoAd`e `selectAdBreaksToPlay` na fábrica de conteúdo para selecionar uma política.
+Você pode definir seu comportamento preferido na fábrica de conteúdo de anúncio no método `retrieveAdPolicySelectorCallbackFunc`. Você pode usar os métodos `selectPolicyForAdBreak`, `selectWatchedPolicyForAdBreak`, `selectPolicyForSeekIntoAd` e `selectAdBreaksToPlay` no fatory de conteúdo para selecionar uma política.
