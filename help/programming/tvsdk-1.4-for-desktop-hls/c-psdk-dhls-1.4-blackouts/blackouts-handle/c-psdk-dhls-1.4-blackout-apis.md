@@ -6,6 +6,9 @@ title: Elementos da API de blecaute
 uuid: 65e1668c-6a19-4910-83a2-46d364e94e5f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
@@ -22,15 +25,15 @@ Você pode usar o seguinte ao implementar uma solução de blecaute no player.
 
    * `unregisterCurrentBackgroundItem`  Limpa o recurso em segundo plano definido no momento e para de buscar e analisar o manifesto em segundo plano.
 
-* **BlackoutMetadata** Um tipo de Metadados que é específico para blecautes.
+* **Tipo de Metadados de** BlecauteMetadadosUm tipo de Metadados que é específico para blecautes.
 
-   Isso permite definir intervalos não pesquisáveis (um `TimeRange` atributo adicional chamado `nonseekableRange`) no TVSDK. O TVSDK verifica esses intervalos (se a posição de busca desejada está dentro de uma `nonseekableRange`) toda vez que o usuário busca. Se estiver definido e o usuário buscar em um intervalo não pesquisável, o TVSDK força o visualizador para a hora de término do `seekableRange`.
+   Isso permite definir intervalos não pesquisáveis (um atributo `TimeRange` adicional chamado `nonseekableRange`) no TVSDK. O TVSDK verifica esses intervalos (se a posição de busca desejada está dentro de `nonseekableRange`) toda vez que o usuário busca. Se estiver definido e o usuário buscar em um intervalo não pesquisável, o TVSDK força o visualizador para a hora de término do `seekableRange`.
 
-* **INICIAR AQUI PRÓXIMO** **DefaultMetadataKeys** Ative ou desative a pré-rolagem em um fluxo ao vivo definindo `ENABLE_LIVE_PREROLL` como true ou false. Se falso, o TVSDK não faz uma chamada explícita do servidor de publicidade para anúncios precedentes antes da reprodução do conteúdo e, portanto, não reproduz o pré-roll. Isso não tem impacto sobre os andares médios. O padrão é verdadeiro.
+* **START AQUI** **** NEXTDefaultMetadataKeysAtive ou desative a pré-rolagem em um fluxo ao vivo definindo  `ENABLE_LIVE_PREROLL` como verdadeiro ou falso. Se falso, o TVSDK não faz uma chamada explícita do servidor de publicidade para anúncios precedentes antes da reprodução do conteúdo e, portanto, não reproduz o pré-roll. Isso não tem impacto sobre os andares médios. O padrão é verdadeiro.
 
 * **TimedMetadataEvent**
 
-   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` subtipo de evento - Despachado quando o TVSDK detecta uma tag subscrita no manifesto em segundo plano.
+   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` Subtipo de evento - Despachado quando o TVSDK detecta uma tag subscrita no manifesto do plano de fundo.
 
 * **Notificações**
 
