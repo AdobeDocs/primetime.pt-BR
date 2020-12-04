@@ -28,50 +28,51 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fluxo ao vivo </td> 
-   <td colname="2"> <span class="codeph"> live </span> </td> 
+   <td colname="2"> <span class="codeph"> live  </span> </td> 
    <td colname="3"> True se o fluxo for ao vivo; false se for VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Legendas ocultas </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
    <td colname="3"> True se as faixas de legenda fechada estiverem disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> closedCaptionsTracks  </span> </td> 
    <td colname="3"> Fornece uma lista de faixas de legenda disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> seletedClosedCaptionsTrack </span> </td> 
+   <td colname="2"> <span class="codeph"> seletedClosedCaptionsTrack  </span> </td> 
    <td colname="3"> Recupera a faixa de legenda fechada selecionada com <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Áudio alternativo </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
    <td colname="3"> <p>True se o fluxo tiver faixas de áudio alternativas. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
    <td colname="3"> Fornece uma lista de trilhas de áudio alternativas disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> seletedAudioTrack </span> </td> 
+   <td colname="2"> <span class="codeph"> seletedAudioTrack  </span> </td> 
    <td colname="3"> 
     <pre>
-      Recupera a faixa de áudio atualmente selecionada que foi selecionada com <span class="codeph"> selectAudioTrack </span>. 
+      Recupera a faixa de áudio selecionada atualmente com 
+     <span class="codeph"> selectAudioTrack </span>. 
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Metadados cronometrados </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
    <td colname="3"> True se o fluxo tiver metadados cronometrados associados. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
    <td colname="3"> Fornece uma lista dos objetos de metadados cronometrados associados ao fluxo. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Vários perfis (taxas de bits) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> perfis </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> perfis  </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -79,7 +80,7 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Recurso de mídia </td> 
-   <td colname="2"> <span class="codeph"> recurso </span> </td> 
+   <td colname="2"> <span class="codeph"> recurso  </span> </td> 
    <td colname="3"> Retorna o recurso de mídia associado a este item. </td> 
   </tr> 
  </tbody> 
