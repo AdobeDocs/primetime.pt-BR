@@ -6,11 +6,14 @@ title: Classes de resolução de linha do tempo
 uuid: a36349b2-23ee-4774-99b2-7e1cd9168686
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 0%
 
 ---
 
 
-# Classes de resolução de linha do tempo{#timeline-resolvers-classes}
+# A linha do tempo resolve classes{#timeline-resolvers-classes}
 
 Essas classes ajudam a resolver o conteúdo, como anúncios, a ser colocado na linha do tempo.
 
