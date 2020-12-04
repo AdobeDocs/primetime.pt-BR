@@ -6,6 +6,9 @@ title: Recursos do Primetime TVSDK
 uuid: 7a9218c7-a67c-49ac-83b0-fe40650a3625
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -17,8 +20,8 @@ O TVSDK para Android inclui vários recursos e fornece os seguintes recursos pri
 * Reprodução VOD e ao vivo/linear
 
    * Gerenciamento da janela de reprodução, incluindo métodos que reproduzem, param, pausam, buscam e recuperam a posição do indicador de reprodução
-   * Suporte para reprodução completa de eventos
-   * Legendas ocultas (608, 708, WebVTT) e formas alternativas de áudio para maior acessibilidade
+   * Suporte para reprodução de evento completo
+   * Legendas ocultas (608, 708, WebVTT) e formas alternativas de áudio para aumentar a acessibilidade
    * Controle para estilização de texto em legendas
    * Recurso DVR, recuo rápido para frente/rápido (modo de jogo de truques)
    * Lógica da taxa de bits adaptável (ABR) e configuração inicial dos controles ABR
@@ -46,7 +49,7 @@ O TVSDK para Android inclui vários recursos e fornece os seguintes recursos pri
 * Rastreamento de vídeo e anúncio
 
    * Rastreamento de eventos QoS
-   * Notificações que ajudam o TVSDK e seu aplicativo a se comunicar de forma assíncrona sobre o status de vídeos, anúncios e outros elementos, e também sobre a atividade de registro
+   * Notificações que ajudam o TVSDK e seu aplicativo a se comunicar de forma assíncrona sobre o status de vídeos, anúncios e outros elementos, além da atividade de log
 
 * Registro
 
