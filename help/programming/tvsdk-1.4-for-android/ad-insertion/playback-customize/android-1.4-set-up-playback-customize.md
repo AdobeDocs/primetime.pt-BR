@@ -19,10 +19,11 @@ Você pode personalizar ou sobrescrever o comportamento do anúncio, registrando
 
 Para personalizar os comportamentos de publicidade, execute um dos procedimentos a seguir:
 
-* Implemente a `AdPolicySelector` interface e todos os seus métodos.
+* Implemente a interface `AdPolicySelector` e todos os seus métodos.
 Essa opção é recomendada se você precisar substituir todos os comportamentos padrão de anúncio.
 
-* Amplie a `DefaultAdPolicySelector` classe e forneça implementações somente para os comportamentos que exigem personalização.
+* Estende a classe `DefaultAdPolicySelector` e fornece implementações somente para os comportamentos que exigem
+personalização.
 Essa opção é recomendada se você precisar substituir apenas alguns dos comportamentos padrão.
 
 Para ambas as opções, conclua as seguintes tarefas:
