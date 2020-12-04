@@ -13,17 +13,17 @@ ht-degree: 0%
 ---
 
 
-# Exibir estatísticas de reprodução e dispositivo de QoS {#display-qos-playback-and-device-statistics}
+# Exibir a reprodução QoS e as estatísticas de dispositivo {#display-qos-playback-and-device-statistics}
 
 Você pode configurar seu player para ler as estatísticas de reprodução e dispositivo do QoSProvider sempre que necessário.
 
-A `QoSProvider` classe fornece várias estatísticas, incluindo a taxa de quadros, a taxa de bits do perfil, o tempo total gasto no buffering, o número de tentativas de buffering, o tempo necessário para obter o primeiro byte do primeiro fragmento de vídeo, o tempo necessário para renderizar o primeiro quadro, a duração do buffer no momento e o tempo do buffer.
+A classe `QoSProvider` fornece várias estatísticas, incluindo a taxa de quadros, a taxa de bits do perfil, o tempo total gasto no buffering, o número de tentativas de buffering, o tempo necessário para obter o primeiro byte do primeiro fragmento de vídeo, o tempo necessário para renderizar o primeiro quadro, a duração do buffer no momento e o tempo do buffer.
 
-A implementação de referência fornece uma `QoSManager` classe na qual você pode ativar a exibição da sobreposição de QoS. Você também pode ativar a visibilidade de QoS na interface do usuário de Configurações:
+A implementação de referência fornece uma classe `QoSManager` na qual você pode ativar a exibição da sobreposição QoS. Você também pode ativar a visibilidade de QoS na interface do usuário de Configurações:
 
 ![](assets/qos-configuration.jpg)
 
-O `QoSManager` rastreia as estatísticas de QoS obtendo informações do dispositivo, anexando-as ao player de mídia e atualizando-as com as últimas informações de QoS.
+O `QoSManager` acompanha as estatísticas de QoS obtendo informações do dispositivo, anexando-as ao player de mídia e atualizando-as com as informações mais recentes de QoS.
 
 **Ativar ou desativar o relatórios de estatísticas de QoS**
 
