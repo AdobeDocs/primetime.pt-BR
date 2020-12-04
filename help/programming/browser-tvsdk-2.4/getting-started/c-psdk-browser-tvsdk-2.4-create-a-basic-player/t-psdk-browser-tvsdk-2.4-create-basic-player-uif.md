@@ -6,15 +6,18 @@ title: Criar um player básico usando a Estrutura da interface do usuário
 uuid: d1a82dbb-1c05-4d0c-b6bc-e07cbede93cb
 translation-type: tm+mt
 source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 1%
 
 ---
 
 
-# Criar um player básico usando a Estrutura da interface do usuário{#create-a-basic-player-using-the-ui-framework}
+# Crie um player básico usando a Estrutura da interface{#create-a-basic-player-using-the-ui-framework}
 
 Para criar um player básico usando a Estrutura da interface do usuário:
 
-1. Crie um `<div>` para a sua instância do player.
+1. Crie um `<div>` para a instância do player.
 
    Por exemplo:
 
@@ -33,7 +36,7 @@ Para criar um player básico usando a Estrutura da interface do usuário:
    </script>
    ```
 
-   Quando o player é criado, o `<div>` elemento especificado recebe uma classe CSS de `ptp-main-video-div-style`. O DOM resultante é semelhante a:
+   Quando o player é criado, o elemento `<div>` especificado recebe uma classe CSS de `ptp-main-video-div-style`. O DOM resultante é semelhante a:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -70,7 +73,7 @@ Para criar um player básico usando a Estrutura da interface do usuário:
    </div>
    ```
 
-O objeto retornado da chamada `ptp.videoPlayer()` fornece um comportamento que envolve a API do player de mídia TVSDK e permite o controle programático da reprodução. Quando você faz chamadas na instância do player de mídia, a interface do usuário atualiza-se com base em eventos acionados pelo player de mídia:
+O objeto retornado da chamada `ptp.videoPlayer()` fornece um comportamento que envolve a API do player de mídia TVSDK e permite o controle programático da reprodução. Quando você efetua chamadas na instância do player de mídia, a interface do usuário atualiza-se com base em eventos acionados pelo player de mídia:
 
 ```js
 <script> 
