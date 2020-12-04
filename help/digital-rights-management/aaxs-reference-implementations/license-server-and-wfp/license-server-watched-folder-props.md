@@ -4,11 +4,14 @@ title: Propriedades da pasta assistida
 uuid: fc204bb4-033a-46fe-8642-737f6a4cd1f1
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
 
-# Propriedades da pasta assistida {#watched-folder-properties}
+# Propriedades de pastas monitoradas {#watched-folder-properties}
 
 Cada pasta assistida contém um arquivo chamado [!DNL properties/watchfolder.properties]. Este arquivo contém as opções de empacotamento para o conteúdo inserido nesta pasta, incluindo o que criptografar e quais políticas aplicar. Todas as alterações feitas nos valores no arquivo de propriedade entrarão em vigor na próxima vez que o empacotador de pastas assistido for executado (você não precisa reiniciar o servidor).
 
