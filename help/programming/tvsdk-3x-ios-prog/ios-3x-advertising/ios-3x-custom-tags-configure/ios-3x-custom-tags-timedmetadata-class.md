@@ -7,13 +7,13 @@ uuid: d76b2a6b-2995-4559-b15d-82ded4c27eea
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
 
 
-# Classe de metadados cronometrados {#timed-metadata-class}
+# Classe de metadados cronometrada {#timed-metadata-class}
 
 Quando o TVSDK detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar a tag e expô-la na forma de um objeto PTTimedMetadata.
 
@@ -36,7 +36,7 @@ A classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"><span class="codeph"> name</span> </td> 
    <td colname="col02"><span class="codeph"> NSString</span></td> 
-   <td colname="col2"> O nome dos metadados cronometrados. Se o tipo for <span class="codeph"> TAG</span>, o valor representará o nome da indicação/tag. Se o tipo for <span class="codeph"> ID3</span>, será nulo. </td> 
+   <td colname="col2"> O nome dos metadados cronometrados. Se o tipo for <span class="codeph"> TAG</span>, o valor representará o nome da marca/indicação. Se o tipo for <span class="codeph"> ID3</span>, será nulo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> time</span> </td> 
