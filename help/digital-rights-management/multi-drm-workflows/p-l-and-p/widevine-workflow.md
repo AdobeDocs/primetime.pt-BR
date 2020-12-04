@@ -6,6 +6,9 @@ title: Fluxo de trabalho de vários DRM para Widevine e PlayReady
 uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ O Primetime TVSDK oferece suporte à reprodução de conteúdo DASH criptografad
 >
 >Nenhum plano foi feito para oferecer suporte ao Android TVSDK 1.X na reprodução de conteúdo DASH criptografado por Widevine.
 
-## Resumo geral do conteúdo DASH e da criptografia comum {#section_33A881158F724835B4B89AAE97302B17}
+## Conteúdo do DASH e Criptografia Comum em um piscar de olhos {#section_33A881158F724835B4B89AAE97302B17}
 
 O conteúdo do traço consiste em um manifesto principal, gravado em xml, que aponta para arquivos de vídeo e áudio para a reprodução. No exemplo abaixo, o manifesto DASH aponta para um url de vídeo, video/1080_30.mp4, e um url de áudio, audio/1080_30.mp4, em relação ao URL do manifesto.
 
@@ -44,7 +47,7 @@ O conteúdo do traço consiste em um manifesto principal, gravado em xml, que ap
 </MPD>
 ```
 
-Abaixo está um exemplo de manifesto com Criptografia comum aplicada. Os elementos XML de proteção de conteúdo de Widevine (os `<ContentProtection>` blocos) no manifesto contêm uma caixa pssh codificada em base 64 (cabeçalho específico do sistema de proteção). A caixa pssh contém os dados necessários para inicializar a descriptografia do conteúdo. Esses dados também são incorporados ao conteúdo de áudio/vídeo ao qual o manifesto se refere. O conteúdo DASH pode ter vários elementos de proteção de conteúdo, por exemplo 1 para PlayReady e 1 para Widevine.
+Abaixo está um exemplo de manifesto com Criptografia comum aplicada. Os elementos XML de proteção de conteúdo de Widevine (os blocos `<ContentProtection>`) no manifesto contêm uma caixa pssh codificada em base64 (cabeçalho específico do sistema de proteção). A caixa pssh contém os dados necessários para inicializar a descriptografia do conteúdo. Esses dados também são incorporados ao conteúdo de áudio/vídeo ao qual o manifesto se refere. O conteúdo DASH pode ter vários elementos de proteção de conteúdo, por exemplo 1 para PlayReady e 1 para Widevine.
 
 ```
 <?xml version="1.0" ?>
