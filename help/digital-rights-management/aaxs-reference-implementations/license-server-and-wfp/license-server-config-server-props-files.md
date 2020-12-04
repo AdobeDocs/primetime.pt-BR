@@ -39,4 +39,4 @@ Para preparar corretamente a senha da sua credencial:
 >
 >O exemplo anterior usa um ponto-e-vírgula (;) como delimitador. Para plataformas diferentes do Microsoft Windows, use dois pontos (:) como delimitador.
 
-O utilitário gera a senha criptografada, que você deve copiar para o [!DNL .properties] arquivo.
+O utilitário gera a senha criptografada, que você deve copiar para o arquivo [!DNL .properties].
