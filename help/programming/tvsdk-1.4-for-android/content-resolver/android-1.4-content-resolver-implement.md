@@ -6,6 +6,9 @@ title: Implementar um resolvedor de conteúdo personalizado
 uuid: 88627fdc-3b68-4a9f-847e-a490ea8e3034
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +19,7 @@ Você pode implementar seus próprios resolvedores de conteúdo com base nos res
 
 Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedores de conteúdo registrados procurando por uma que seja capaz de resolver essa oportunidade. O primeiro que retornar verdadeiro é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar quando o processo foi concluído.
 
-1. Crie uma `AdvertisingFactory` instância personalizada e substitua `createContentResolver`.
+1. Crie uma instância `AdvertisingFactory` personalizada e substitua `createContentResolver`.
 
    Por exemplo:
 
@@ -53,9 +56,9 @@ Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedor
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Passe um `AdvertisingMetadata` objeto para o TVSDK da seguinte maneira:
-   1. Crie um `AdvertisingMetadata` objeto e um `MetadataNode` objeto.
-   1. Salve o `AdvertisingMetadata` objeto em `MetadataNode`.
+1. Passe um objeto `AdvertisingMetadata` para TVSDK da seguinte maneira:
+   1. Crie um objeto `AdvertisingMetadata` e um objeto `MetadataNode`.
+   1. Salve o objeto `AdvertisingMetadata` em `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,7 +66,7 @@ Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedor
                   advertisingMetadata);
    ```
 
-1. Crie uma classe personalizada de resolvedor de anúncios que estende a `ContentResolver` classe.
+1. Crie uma classe personalizada de resolvedor de anúncios que estende a classe `ContentResolver`.
    1. No resolvedor de publicidade personalizado, substitua esta função protegida:
 
       ```java
@@ -71,7 +74,7 @@ Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedor
                         PlacementOpportunity placementOpportunity)
       ```
 
-      Os metadados contêm o seu `AdvertisingMetada`. Use-o para a geração de `TimelineOperation` vetores a seguir.
+      Os metadados contêm `AdvertisingMetada`. Use-o para a seguinte geração de vetor `TimelineOperation`.
 
    1. Para cada oportunidade de posicionamento, crie um `Vector<TimelineOperation>`.
 
@@ -94,6 +97,7 @@ Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedor
 
       * Se a resolução do anúncio for bem-sucedida: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
       * Se a resolução do anúncio falhar: `notifyResolveError(Error error)`
+
       Por exemplo, se falhar:
 
       ```java
