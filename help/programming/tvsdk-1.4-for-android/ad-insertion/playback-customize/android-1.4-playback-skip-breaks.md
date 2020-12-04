@@ -6,11 +6,14 @@ title: Ignorar quebras de anúncio por um período de tempo
 uuid: f07d838b-3c1d-4cea-a3aa-dba33964ac81
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
 
 
-# Ignorar quebras de anúncio por um período de tempo {#skip-ad-breaks-for-a-period-of-time}
+# Ignorar quebras de anúncio por um período {#skip-ad-breaks-for-a-period-of-time}
 
 Por padrão, o TVSDK força uma pausa de anúncio a ser reproduzida quando o usuário busca uma pausa de anúncio. Você pode personalizar o comportamento para ignorar uma quebra de anúncio se o tempo decorrido desde uma conclusão de quebra anterior estiver dentro de um determinado número de minutos.
 
