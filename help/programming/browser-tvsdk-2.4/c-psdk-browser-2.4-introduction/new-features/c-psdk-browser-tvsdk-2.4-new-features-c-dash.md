@@ -7,7 +7,7 @@ uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ O TVSDK do navegador suporta vários recursos do DASH que você pode implementar
 
 >[!TIP]
 >
->Nas tabelas de matriz de recursos abaixo,  ![](assets/supported15.png)
+>Nas tabelas de matriz de recursos abaixo, ![](assets/supported15.png)
 >significa que o recurso é suportado na versão atual.
 
 Os seguintes recursos são suportados:
@@ -102,7 +102,7 @@ Os seguintes recursos são suportados:
 | Ad Insertion | VOD | Anúncios complementares, anúncios em banner e anúncios clicáveis | Não suportado |
 | Ad Insertion | VOD | VPAID 2.0 | Não suportado |
 
-## Principais recursos de inserção de anúncio do DASH (CSAI) {#dash-core-ad-insertion}
+## Principais recursos de inserção de anúncio (CSAI) do DASH {#dash-core-ad-insertion}
 
 | Categoria | Tipo de conteúdo | Recurso | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
@@ -158,7 +158,7 @@ Os seguintes recursos são suportados:
  </tbody> 
 </table>
 
-## Recursos de reprodução avançada DASH {#dash-advanced-playback}
+## Recursos de reprodução avançada do DASH {#dash-advanced-playback}
 
 | Categoria | Tipo de conteúdo | Recurso | HTML5, FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
