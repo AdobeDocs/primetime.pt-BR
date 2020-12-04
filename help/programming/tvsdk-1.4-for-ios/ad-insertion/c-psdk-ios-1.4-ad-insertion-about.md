@@ -7,13 +7,13 @@ uuid: 6fffb340-65ea-4c47-a55b-c0ec4917d37c
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '628'
 ht-degree: 0%
 
 ---
 
 
-# Inserir anúncios{#insert-ads}
+# Inserir publicidades{#insert-ads}
 
 A inserção de anúncios resolve os anúncios para vídeo sob demanda (VOD), para transmissão ao vivo e para transmissão linear com rastreamento de anúncios e reprodução de anúncios. O TVSDK faz as solicitações necessárias para o servidor de anúncios, recebe informações sobre anúncios para o conteúdo especificado e coloca os anúncios no conteúdo em fases.
 
@@ -23,7 +23,7 @@ Um *`ad break`* contém uma ou mais publicidades que são reproduzidas em sequê
 >
 >Se o anúncio tiver erros, o TVSDK ignorará o anúncio.
 
-## Resolva e insira anúncios VOD {#section_157344F857C64F36B48AD441F6E7FABA}
+## Resolver e inserir anúncios VOD {#section_157344F857C64F36B48AD441F6E7FABA}
 
 O TVSDK suporta vários casos de uso para VOD e solução e inserção de anúncios.
 
@@ -47,13 +47,13 @@ O TVSDK resolve os anúncios e os insere quando um ponto de sinalização é enc
 * # EXT-X-CUE
 * # EXT-X-CUE-OUT
 
-Esses marcadores exigem o campo de metadados `DURATION` em segundos e a ID exclusiva da dica. Por exemplo:
+Esses marcadores exigem `DURATION` do campo de metadados em segundos e a ID exclusiva da dica. Por exemplo:
 
 ```
 #EXT-X-CUE DURATION=27 ID=identiferForThisCue ... 
 ```
 
-Para obter mais informações sobre dicas adicionais, consulte [Assinar tags](../ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-subscribe.md)personalizadas.
+Para obter mais informações sobre dicas adicionais, consulte [Assinar tags personalizadas](../ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-subscribe.md).
 
 ## Rastrear anúncio do cliente {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
 
@@ -61,7 +61,7 @@ O TVSDK rastreia automaticamente anúncios para transmissão VOD e transmissão 
 
 As notificações são usadas para informar seu aplicativo sobre o progresso de um anúncio, incluindo informações sobre quando um anúncio começa e quando termina.
 
-## Implementar um retorno antecipado de anúncios {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
+## Implementar um retorno antecipado de intervalo de anúncios {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
 
 Para a inserção de um anúncio ao vivo, talvez seja necessário sair de uma quebra de anúncio antes que todos os anúncios na quebra sejam reproduzidos até a conclusão.
 
@@ -74,7 +74,7 @@ Estes são alguns exemplos de retorno antecipado de anúncios:
 
 A capacidade de sair de uma quebra de anúncio é identificada por meio de uma tag personalizada no manifesto conhecida como splice-in ou uma tag de sugestão. O TVSDK permite que o aplicativo assine essas tags splice-in para fornecer uma oportunidade splice-in.
 
-* Para usar a `#EXT-X-CUE-IN` tag como uma oportunidade exclusiva e implementar um retorno antecipado de quebra de anúncio:
+* Para usar a tag `#EXT-X-CUE-IN` como uma oportunidade dividida e implementar um retorno antecipado de quebra de anúncio:
 
    1. Assine a tag .
 
@@ -94,11 +94,11 @@ A capacidade de sair de uma quebra de anúncio é identificada por meio de uma t
 
 * Para compartilhar a mesma tag para separação e separação:
 
-   1. Se o aplicativo estiver compartilhando a mesma dica para indicar a saída/separação e a entrada/saída, estenda `PTDefaultAdOpportunityResolver` e implemente o `preparePlacementOpportunity` método.
+   1. Se o aplicativo estiver compartilhando a mesma dica para indicar cue-out/splice-out e cue-in/splice-in, estenda `PTDefaultAdOpportunityResolver` e implemente o método `preparePlacementOpportunity`.
 
       >[!TIP]
       >
-      >O código a seguir supõe que o aplicativo tenha uma implementação para o `isCueInOpportunity` método.
+      >O código a seguir supõe que o aplicativo tenha uma implementação para o método `isCueInOpportunity`.
       >
       >
       ```
@@ -115,7 +115,7 @@ A capacidade de sair de uma quebra de anúncio é identificada por meio de uma t
       >}
       >```
 
-   1. Registre o resolvedor de oportunidades estendidas na `PTDefaultMediaPlayerClientFactory` instância.
+   1. Registre o resolvedor de oportunidades estendidas na instância `PTDefaultMediaPlayerClientFactory`.
 
       ```
       // self.player is the PTMediaPlayer instance created for content and ad playback 
