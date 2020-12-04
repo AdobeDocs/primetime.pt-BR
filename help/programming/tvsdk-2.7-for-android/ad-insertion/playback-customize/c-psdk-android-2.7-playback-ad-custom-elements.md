@@ -6,6 +6,9 @@ title: Elementos de API para reprodução de anúncio
 uuid: 5e21e709-8446-4fed-8711-aa4f629f1147
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Os seguintes elementos de API são úteis para personalizar a reprodução:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="apiname"> AdvertisingMetadata </span> </td> 
+   <td colname="col1"><span class="apiname"> AdvertisingMetadata  </span> </td> 
    <td colname="col2">Controle se uma quebra de anúncio deve ser marcada como assistida por um visualizador e, em caso afirmativo, quando marcá-la. Defina e obtenha a política assistida usando <span class="codeph"> setAdBreakAsWatched</span> e <span class="codeph"> getAdBreakAsWatched</span>. </td> 
   </tr> 
   <tr> 
@@ -37,11 +40,11 @@ Os seguintes elementos de API são úteis para personalizar a reprodução:
    <td colname="col2"> Enumera possíveis políticas de reprodução para anúncios. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="apiname"> AdPolicySelector </span> </td> 
+   <td colname="col1"><span class="apiname"> AdPolicySelector  </span> </td> 
    <td colname="col2"> Interface que permite a personalização do comportamento do anúncio TVSDK. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="apiname"> DefaultAdPolicySelector </span> </td> 
+   <td colname="col1"><span class="apiname"> DefaultAdPolicySelector  </span> </td> 
    <td colname="col2"> Classe que implementa o comportamento padrão do TVSDK. Seu aplicativo pode substituir essa classe para personalizar os comportamentos padrão sem implementar a interface completa. </td> 
   </tr> 
   <tr> 
@@ -51,11 +54,11 @@ Os seguintes elementos de API são úteis para personalizar a reprodução:
      <li id="li_B465170D449E49489C5924572BEEB4A5"><span class="codeph"> getLocalTime</span> <p>Esta é a hora local da reprodução, exceto as pausas de anúncio inseridas. </p> </li> 
      <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"><span class="codeph"> searchToLocal</span>. <p>Aqui, a busca ocorre em relação a uma hora local no fluxo. </p> </li> 
      <li id="li_9DBCA75537DC4824AA66B53A3FA28812"><span class="codeph"> getTimeline.convertToLocalTime</span>. <p>A posição virtual na linha do tempo é convertida para a posição local. </p> </li> 
-    </ul> <p>Importante:  <span class="codeph"> getLocalTime</span> no <span class="codeph"> MediaPlayer</span> retorna a hora atual em relação ao conteúdo original, sem anúncios dinamicamente duplicados. <span class="codeph"> getLocalTime</span> em <span class="codeph"> AdBreak</span> retorna a hora de início da quebra em relação ao conteúdo original. </p> </td> 
+    </ul> <p>Importante:  <span class="codeph"> getLocalTime</span> em <span class="codeph"> MediaPlayer</span> retorna o tempo atual em relação ao conteúdo original, sem anúncios dinamicamente splicados. <span class="codeph"> </span> getLocalTimein  <span class="codeph"> </span> AdBreakretorna o tempo de start da quebra em relação ao conteúdo original. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="apiname"> AdBreak</span> </td> 
-   <td colname="col2"><span class="codeph"> propriedade isWatched</span> . Indica se o visualizador assistiu ao anúncio. </td> 
+   <td colname="col2"><span class="codeph"> </span> isWatchedproperty. Indica se o visualizador assistiu ao anúncio. </td> 
   </tr> 
  </tbody> 
 </table>
