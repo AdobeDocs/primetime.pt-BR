@@ -7,13 +7,13 @@ uuid: f142e60d-5581-4d1c-9d4d-a4a58ac1b67b
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
 
-# Controlar a visibilidade da legenda {#control-closed-caption-visibility}
+# Controlar visibilidade de legenda fechada {#control-closed-caption-visibility}
 
 É possível controlar a visibilidade das legendas ocultas. Quando a visibilidade é ativada, a faixa selecionada no momento é exibida. Se você alterar qual faixa é atual, a configuração de visibilidade permanecerá a mesma.
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 >}
 >```
 
-1. Aguarde até `MediaPlayer` o estado PREPARADO. Para obter mais informações, consulte [Aguardar um status](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)válido.
+1. Aguarde até que `MediaPlayer` esteja no status PREPARADO. Para obter mais informações, consulte [Aguarde um status válido](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
 
 1. Para obter a configuração de visibilidade atual de legendas fechadas, use o método getter em `MediaPlayer`, que retorna um valor de visibilidade.
 
