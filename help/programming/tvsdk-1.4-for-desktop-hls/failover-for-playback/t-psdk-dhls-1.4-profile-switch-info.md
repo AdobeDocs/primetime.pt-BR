@@ -1,27 +1,31 @@
 ---
 description: Quando o player de mídia alterna seu perfil atual para um novo perfil, você pode recuperar informações sobre o switch, inclusive quando ele comutou, informações de largura e altura ou por que uma taxa de bits diferente foi usada.
 seo-description: Quando o player de mídia alterna seu perfil atual para um novo perfil, você pode recuperar informações sobre o switch, inclusive quando ele comutou, informações de largura e altura ou por que uma taxa de bits diferente foi usada.
-seo-title: Obter informações sobre a opção de perfil
-title: Obter informações sobre a opção de perfil
+seo-title: Obter informações sobre a chave do perfil
+title: Obter informações sobre a chave do perfil
 uuid: e26ad9fb-6c54-450e-ab62-784d9033d214
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 0%
 
 ---
 
 
-# Obter informações sobre a opção de perfil{#get-information-about-profile-switch}
+# Obter informações sobre o comutador de perfis{#get-information-about-profile-switch}
 
 Quando o player de mídia alterna seu perfil atual para um novo perfil, você pode recuperar informações sobre o switch, inclusive quando ele comutou, informações de largura e altura ou por que uma taxa de bits diferente foi usada.
 
-1. Escute o `ProfileEvent.PROFILE_CHANGED` evento.
+1. Analise o evento `ProfileEvent.PROFILE_CHANGED`.
 
    O player de mídia TVSDK despacha esse evento quando seu algoritmo de switching de taxa de bits adaptável muda para outro perfil devido às condições da rede ou da máquina. (Quando a taxa de bits ou o período muda.)
 1. Quando o evento ocorrer, verifique as seguintes propriedades para obter informações sobre o switch:
 
    * `profile`: Identificador para o novo perfil que está sendo usado.
    * `time`: A hora de fluxo na qual o switch ocorreu.
-   * `description`: Descrição textual do motivo de uma alteração na taxa de bits, como uma sequência de pares de chave/valor separados por ponto-e-vírgula. Inclui um máximo de um `Reason` e um `Bitrate`. Se as informações não estiverem disponíveis ou a taxa de bits não for alterada, essa string estará vazia.
+   * `description`: Descrição textual do motivo de uma alteração na taxa de bits, como uma sequência de pares de chave/valor separados por ponto-e-vírgula. Inclui um máximo de `Reason` e um `Bitrate`. Se as informações não estiverem disponíveis ou a taxa de bits não for alterada, essa string estará vazia.
+
    <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
     <thead> 
       <tr> 
@@ -31,7 +35,7 @@ Quando o player de mídia alterna seu perfil atual para um novo perfil, você po
     </thead>
     <tbody> 
       <tr> 
-      <td colname="col1"> <span class="codeph"> Motivo </span> </td> 
+      <td colname="col1"> <span class="codeph"> Motivo  </span> </td> 
       <td colname="col2"> 
        <ul id="ul_37DDE3F297634ED6B47DF5D73F969369"> 
        <li id="li_E374B029E1AF40689D70A9D30E057C5B">Adaptação de rede </li> 
@@ -41,11 +45,11 @@ Quando o player de mídia alterna seu perfil atual para um novo perfil, você po
        </ul> </td> 
       </tr> 
       <tr> 
-      <td colname="col1"> <span class="codeph"> Taxa de bits </span> </td> 
+      <td colname="col1"> <span class="codeph"> Taxa de bits  </span> </td> 
       <td colname="col2"> 
        <ul id="ul_1B49BD90A91147359712E1AFD8877E23"> 
-       <li id="li_1C8E593C65D34742B14A8D0EAD43E0A9"> <span class="codeph"> up </span>: A taxa de bits aumentou </li> 
-       <li id="li_B1A00E3985A849B6855E15CF70D79BB8"> <span class="codeph"> para baixo </span>: A taxa de bits diminuiu </li> 
+       <li id="li_1C8E593C65D34742B14A8D0EAD43E0A9"> <span class="codeph"> up  </span>: A taxa de bits aumentou </li> 
+       <li id="li_B1A00E3985A849B6855E15CF70D79BB8"> <span class="codeph"> para baixo  </span>: A taxa de bits diminuiu </li> 
        </ul> </td> 
       </tr> 
     </tbody>
@@ -64,7 +68,7 @@ Quando o player de mídia alterna seu perfil atual para um novo perfil, você po
     
     >[!NOTE]
     >
-    >Os dados de largura e altura só estão disponíveis quando estão incluídos na tag `RESOLUÇÃO&#39; no manifesto M3U8. Se as informações não forem incluídas no M3U8, as propriedades de largura e altura serão definidas como 0, pois não fazem parte das informações do perfil.
+    >Os dados de largura e altura só estão disponíveis quando estão incluídos na tag `RESOLUÇÃO&#39; no manifesto M3U8. Se as informações não forem incluídas no M3U8, as propriedades de largura e altura serão definidas como 0, já que não fazem parte das informações do perfil.
 
 <!--<a id="example_A713D420AE2E4E3CB7B78C6BC732BE90"></a>-->
 
