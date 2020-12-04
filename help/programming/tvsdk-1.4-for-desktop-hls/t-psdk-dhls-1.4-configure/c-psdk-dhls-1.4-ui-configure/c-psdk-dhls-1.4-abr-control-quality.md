@@ -7,7 +7,7 @@ uuid: e3d5ef90-067d-48e0-a025-081de931d842
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -25,24 +25,24 @@ Você pode definir a política de switching de taxa de bits adaptável (ABR) e a
  <tbody> 
   <tr> 
    <td colname="col01"> Taxa de bits inicial </td> 
-   <td colname="col2"> <p>A taxa de bits de reprodução desejada (em bits por segundo) para o primeiro segmento. Quando os start de reprodução, o perfil mais próximo, igual ou superior à taxa de bits inicial, é usado para o primeiro segmento. </p> <p> Se uma taxa de bits mínima for definida e a taxa de bits inicial for inferior à taxa mínima, o TVSDK selecionará o perfil com a taxa de bits mais baixa acima da taxa de bits mínima. Se a taxa inicial estiver acima da taxa máxima, o TVSDK selecionará a taxa mais alta abaixo da taxa máxima. </p> <p>Se a taxa de bits inicial for zero ou indefinida, a taxa de bits inicial será determinada pela política ABR. </p> <p> <span class="apiname"> ABRInitialBitRate </span> retorna um valor inteiro que representa o perfil byte por segundo. </p> </td> 
+   <td colname="col2"> <p>A taxa de bits de reprodução desejada (em bits por segundo) para o primeiro segmento. Quando os start de reprodução, o perfil mais próximo, igual ou superior à taxa de bits inicial, é usado para o primeiro segmento. </p> <p> Se uma taxa de bits mínima for definida e a taxa de bits inicial for inferior à taxa mínima, o TVSDK selecionará o perfil com a taxa de bits mais baixa acima da taxa de bits mínima. Se a taxa inicial estiver acima da taxa máxima, o TVSDK selecionará a taxa mais alta abaixo da taxa máxima. </p> <p>Se a taxa de bits inicial for zero ou indefinida, a taxa de bits inicial será determinada pela política ABR. </p> <p> <span class="apiname"> ABRInitialBitRate  </span> retorna um valor inteiro que representa o perfil byte por segundo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Taxa mínima de bits </td> 
-   <td colname="col2"> <p>A menor taxa de bits permitida para a qual o ABR pode alternar. A alternância ABR ignora perfis com uma taxa de bits inferior a essa taxa de bits. </p> <p> <span class="apiname"> ABRMinBitRate </span> retorna um valor inteiro que representa o perfil bits por segundo. </p> </td> 
+   <td colname="col2"> <p>A menor taxa de bits permitida para a qual o ABR pode alternar. A alternância ABR ignora perfis com uma taxa de bits inferior a essa taxa de bits. </p> <p> <span class="apiname"> ABRMinBitRate  </span> retorna um valor inteiro que representa o perfil bits por segundo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Taxa máxima de bits </td> 
-   <td colname="col2"> <p>A maior taxa de bits permitida para a qual o ABR pode alternar. A comutação ABR ignora perfis com uma taxa de bits superior a essa taxa de bits. </p> <p> <span class="apiname"> ABRMaxBitRate </span> retorna um valor inteiro que representa o perfil bits por segundo. </p> </td> 
+   <td colname="col2"> <p>A maior taxa de bits permitida para a qual o ABR pode alternar. A comutação ABR ignora perfis com uma taxa de bits superior a essa taxa de bits. </p> <p> <span class="apiname"> ABRMaxBitRate  </span> retorna um valor inteiro que representa o perfil bits por segundo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Política de comutação ABR </td> 
    <td colname="col2"> A reprodução alterna gradualmente para o perfil de taxa de bits mais alta, quando possível. Você pode definir a política para a alternância ABR, que determina a velocidade de alternância de TVSDK entre perfis. O padrão é <span class="codeph"> MODERATE_POLICY </span>. <p>Quando o TVSDK decide alternar para uma taxa de bits mais alta, o player seleciona o perfil ideal da taxa de bits para alternar com base na política ABR atual: 
      <ul id="ul_058D0FFC944C476A83BB9E756B95DEBD"> 
-      <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVATIVE_POLICY </span>: Alterna para o perfil com a próxima taxa de bits mais alta quando a largura de banda for 50% mais alta do que a taxa de bits atual. </li> 
-      <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> MODERATE_POLICY </span>: Alterna para o próximo perfil de taxa de bits mais alta quando a largura de banda for 20% mais alta do que a taxa de bits atual. </li> 
-      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> AGRESSIVE_POLICY </span>: Alterna imediatamente para o perfil de taxa de bits mais alta quando a largura de banda for maior que a taxa de bits atual. </li> 
-     </ul> </p> <p>Se a taxa de bits inicial for zero ou não for especificada, mas uma política for especificada, os start de reprodução com o perfil de taxa de bits mais baixo para conservador, o perfil mais próximo da taxa de bits mediana dos perfis disponíveis para moderado e o perfil de taxa de bits mais alta para agressivo. </p> <p>A política funciona nas restrições das taxas de bits mínimas e máximas, se essas taxas forem especificadas. </p> <p> <span class="codeph"> ABRPolicy </span> retorna a configuração atual da enumeração <span class="codeph"> ABRControlParameters </span> : CONSERVATIVE_POLICY, MODERATE_POLICY ou AGRESSIVE_POLICY. </p> </td> 
+      <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVATIVE_POLICY  </span>: Alterna para o perfil com a próxima taxa de bits mais alta quando a largura de banda for 50% mais alta do que a taxa de bits atual. </li> 
+      <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> MODERATE_POLICY  </span>: Alterna para o próximo perfil de taxa de bits mais alta quando a largura de banda for 20% mais alta do que a taxa de bits atual. </li> 
+      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> AGRESSIVE_POLICY  </span>: Alterna imediatamente para o perfil de taxa de bits mais alta quando a largura de banda for maior que a taxa de bits atual. </li> 
+     </ul> </p> <p>Se a taxa de bits inicial for zero ou não for especificada, mas uma política for especificada, os start de reprodução com o perfil de taxa de bits mais baixo para conservador, o perfil mais próximo da taxa de bits mediana dos perfis disponíveis para moderado e o perfil de taxa de bits mais alta para agressivo. </p> <p>A política funciona nas restrições das taxas de bits mínimas e máximas, se essas taxas forem especificadas. </p> <p> <span class="codeph"> ABRPolicy  </span> retorna a configuração atual da  <span class="codeph"> enumeração  </span> ABRControlParameters: CONSERVATIVE_POLICY, MODERATE_POLICY ou AGRESSIVE_POLICY. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -50,7 +50,7 @@ Você pode definir a política de switching de taxa de bits adaptável (ABR) e a
 Lembre-se das seguintes informações:
 
 * O mecanismo de failover TVSDK pode substituir suas configurações, pois o TVSDK favorece uma experiência de reprodução contínua em vez de seguir rigorosamente seus parâmetros de controle.
-* Quando a taxa de bits muda, o TVSDK é despachado `ProfileEvent.PROFILE_CHANGED`.
+* Quando a taxa de bits muda, o TVSDK despacha `ProfileEvent.PROFILE_CHANGED`.
 * Você pode alterar as configurações de ABR a qualquer momento, e o player muda para usar o perfil que mais corresponde às configurações mais recentes.
 
 Por exemplo, se um fluxo tiver os seguintes perfis:
@@ -65,21 +65,21 @@ Se você especificar um intervalo de 300000 a 2000000, o TVSDK considerará some
 
 Para definir parâmetros de controle ABR, siga um destes procedimentos:
 
-* Use a classe `ABRControlParameterBuilder` helper para definir qualquer subconjunto dos parâmetros (opera em segundo plano `ABRControlParameter` )
+* Use a classe auxiliar `ABRControlParameterBuilder` para definir qualquer subconjunto dos parâmetros (opera em `ABRControlParameter` nos bastidores)
 
-* Defina os parâmetros na `ABRControlParameter` classe.
+* Defina os parâmetros na classe `ABRControlParameter`.
 
 ## Configure as taxas de bits adaptáveis usando ABRControlParametersBuilder {#section_3DDE397A7CE445E1832EBAA46CE5C069}
 
-Usar a classe `ABRControlParametersBuilder` helper é a maneira mais simples e eficiente de definir parâmetros ABR.
+Usar a classe auxiliar `ABRControlParametersBuilder` é a maneira mais simples e eficiente de definir parâmetros ABR.
 
-* O `ABRControlParametersBuilder` construtor define todos os parâmetros ABR como valores padrão no `ABRControlParameters` objeto subjacente.
+* O construtor `ABRControlParametersBuilder` define todos os parâmetros ABR como valores padrão no objeto `ABRControlParameters` subjacente.
 
-* Você pode redefinir parâmetros ABR individuais durante o tempo de execução, desde que mantenha uma referência à mesma `ABRControlParametersBuilder` instância.
+* Você pode redefinir parâmetros ABR individuais durante o tempo de execução, desde que mantenha uma referência à mesma instância `ABRControlParametersBuilder`.
 
-Essa classe também inclui o método `toABRControlParameters()` helper. Use esse método para obter uma instância do `ABRControlParameters` e defini-la na `mediaPlayer.ABRControlParameters` propriedade. Isso faz com que suas configurações entrem em vigor no player.
+Essa classe também inclui o método auxiliar `toABRControlParameters()`. Use esse método para obter uma instância de `ABRControlParameters` e defina-a na propriedade `mediaPlayer.ABRControlParameters`. Isso faz com que suas configurações entrem em vigor no player.
 
-1. Instancie a classe `ABRControlParametersBuilder` helper e defina os parâmetros no Media Player.
+1. Instancie a classe auxiliar `ABRControlParametersBuilder` e defina os parâmetros no Media Player.
 
    >[!NOTE]
    >
@@ -106,15 +106,15 @@ Essa classe também inclui o método `toABRControlParameters()` helper. Use esse
      abrBuilder.toABRControlParameters();
    ```
 
-   Para manter as configurações anteriores, é necessário manter uma referência à mesma `ABRControlParametersBuilder` instância criada na Etapa 1.
+   Para manter suas configurações anteriores, é necessário manter uma referência à mesma instância `ABRControlParametersBuilder` que você criou na Etapa 1.
 
 ## Configure as taxas de bits adaptáveis usando ABRControlParameters {#section_02161FD0A73F40ED9CAE17F9AF850483}
 
 Você pode definir valores de controle ABR somente com `ABRControlParameters`, mas pode criar um novo a qualquer momento.
 
-Essa capacidade de definir parâmetros ABR era suportada antes da existência da `ABRControlParametersBuilder` classe, mas essa capacidade ainda é eficaz para definir parâmetros ABR no momento da construção. No entanto, para alterar parâmetros individuais após a construção, você deve usar a `ABRControlParametersBuilder` classe.
+Essa capacidade de definir parâmetros ABR era suportada antes da existência da classe `ABRControlParametersBuilder`, mas essa capacidade ainda é eficaz para definir parâmetros ABR no momento da construção. No entanto, para alterar parâmetros individuais após a construção, você deve usar a classe `ABRControlParametersBuilder`.
 
-As seguintes condições aplicam-se a `ABRControlParameters`:
+As seguintes condições se aplicam a `ABRControlParameters`:
 
 * Você deve fornecer valores para todos os parâmetros no momento da construção.
 * Não é possível alterar valores individuais após o tempo de construção.
@@ -127,7 +127,7 @@ As seguintes condições aplicam-se a `ABRControlParameters`:
    * `MODERATE_POLICY`
    * `AGGRESSIVE_POLICY`
 
-1. Defina os valores dos parâmetros ABR no `ABRControlParameters` construtor e atribua-os ao Media Player.
+1. Defina os valores dos parâmetros ABR no construtor `ABRControlParameters` e atribua-os ao Media Player.
 
    ```
    mediaPlayer.abrControlParameters = new ABRControlParameters( 
