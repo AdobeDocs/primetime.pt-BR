@@ -42,5 +42,5 @@ Os recursos do dispositivo podem ser identificados pelos atributos especificados
 
 >[!NOTE]
 >
->Esta regra de uso é suportada pelos clientes do Adobe Access versão 2.0.2 e superior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças. Consulte, Versão [](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)mínima do cliente.
+>Esta regra de uso é suportada pelos clientes do Adobe Access versão 2.0.2 e superior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças. Consulte, [Versão mínima do cliente](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
 
