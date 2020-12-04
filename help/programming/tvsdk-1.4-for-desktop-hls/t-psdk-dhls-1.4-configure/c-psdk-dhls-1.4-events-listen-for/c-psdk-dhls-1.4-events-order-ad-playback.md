@@ -6,11 +6,14 @@ title: Ordem dos eventos publicitários
 uuid: 34a6a606-2f2e-42de-88fd-c91202cafddf
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
 
-# Ordem dos eventos publicitários{#order-of-advertising-events}
+# Ordem dos eventos de publicidade{#order-of-advertising-events}
 
 Quando a reprodução inclui publicidade, o TVSDK envia eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
 
