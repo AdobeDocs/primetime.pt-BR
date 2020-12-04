@@ -1,11 +1,14 @@
 ---
 description: Este guia fornece informações sobre como desenvolver aplicativos de player de vídeo usando o TVSDK para Android, que é implementado em Java.
 seo-description: Este guia fornece informações sobre como desenvolver aplicativos de player de vídeo usando o TVSDK para Android, que é implementado em Java.
-seo-title: Visão geral do produto, público-alvo e este guia
-title: Visão geral do produto, público-alvo e este guia
+seo-title: Visão geral do produto, audiência e este guia
+title: Visão geral do produto, audiência e este guia
 uuid: dd281a3e-a85f-4470-a730-2c5e87d0e490
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
@@ -16,15 +19,15 @@ Este guia fornece informações sobre como desenvolver aplicativos de player de 
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* Para obter uma lista dos recursos compatíveis com o TVSDK, consulte Recursos [do](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md)Primetime TVSDK.
+* Para obter uma lista dos recursos compatíveis com o TVSDK, consulte [Recursos do Primetime TVSDK](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md).
 * Para obter os requisitos específicos de hardware e software para o uso do TVSDK, consulte [Requisitos](../../../tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md).
-* Para obter uma lista das APIs disponíveis, consulte [TVSDK Android APIs](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html).
+* Para obter uma lista de APIs disponíveis, consulte [TVSDK Android APIs](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html).
 
 ## Visão geral do produto {#section_9664959F25C948878F2F7EF3D360CA95}
 
 O TVSDK inclui descrições de API e exemplos de código para ajudá-lo a integrar recursos avançados de funcionalidade de vídeo, proteção de conteúdo e publicidade ao player. Você usa o Java para criar uma interface de usuário do player de vídeo. O TVSDK ajuda a conectar a interface do usuário ao player de mídia. Isso permite que você reproduza vídeos e anúncios com base em manifestos de mídia. Você também pode usar o TVSDK para recuperar informações sobre o vídeo, lidar com a segurança e controlar e monitorar a reprodução.
 
-## Público {#section_527860B373734D3BA89FCF5EC1F6DC37}
+## Audiência {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
 Este guia supõe que você saiba como desenvolver aplicativos e players de vídeo usando Java. Você implementa a interface do usuário do player de vídeo em Java e incorpora os recursos do TVSDK necessários.
 
