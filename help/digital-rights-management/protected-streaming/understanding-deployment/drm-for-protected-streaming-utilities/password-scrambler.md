@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Senha {#password-scrambler}
+# Senha de script {#password-scrambler}
 
 O utilitário Scrambler de senha criptografa uma senha para o Adobe Primetime DRM Server para arquivos de configuração de streaming protegidos.
 
