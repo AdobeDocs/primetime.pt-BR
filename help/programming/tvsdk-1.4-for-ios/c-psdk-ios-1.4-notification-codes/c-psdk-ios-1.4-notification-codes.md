@@ -53,7 +53,7 @@ Os objetos de notificação fornecem informações relacionadas ao status do pla
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span></td> 
-   <td colname="2">Uma referência a outro objeto de notificação <span class="codeph"> PTNotificação</span> que afetou diretamente essa notificação. Um exemplo pode ser uma notificação sobre uma falha de inserção de anúncio que corresponde diretamente a um conflito de inserção de linha do tempo. Nem todas as notificações fornecem uma notificação interna. </td> 
+   <td colname="2">Uma referência a outro objeto <span class="codeph"> PTNotificação</span> que afetou diretamente esta notificação. Um exemplo pode ser uma notificação sobre uma falha de inserção de anúncio que corresponde diretamente a um conflito de inserção de linha do tempo. Nem todas as notificações fornecem uma notificação interna. </td> 
   </tr> 
  </tbody> 
 </table>
