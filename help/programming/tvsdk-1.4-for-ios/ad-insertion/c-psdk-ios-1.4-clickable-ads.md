@@ -6,6 +6,9 @@ title: Anúncios clicáveis
 uuid: dc02cba7-34ad-4c74-9ceb-2fc1050d54aa
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -28,8 +31,8 @@ Quando um usuário clica em um anúncio, em um anúncio de banner complementar o
 
 1. Monitore as interações do usuário em anúncios clicáveis.
 1. Quando o usuário toca ou clica no anúncio ou botão, para notificar o TVSDK, use `[_player notifyClick:_currentAd.primaryAsset];`.
-1. Analise o `PTMediaPlayerAdClickNotification` evento do TVSDK.
-1. Para recuperar o URL de click-through e as informações relacionadas, use o `PTMediaPlayerAdClickURLKey` objeto.
+1. Analise o evento `PTMediaPlayerAdClickNotification` do TVSDK.
+1. Para recuperar o URL de click-through e as informações relacionadas, use o objeto `PTMediaPlayerAdClickURLKey`.
 1. Pause o vídeo.
 1. Use as informações de click-through para exibir o URL de click-through do anúncio e as informações relacionadas.
 
@@ -42,7 +45,7 @@ Quando um usuário clica em um anúncio, em um anúncio de banner complementar o
       Em plataformas de desktop, a área de reprodução de vídeo e anúncio é usada para invocar URLs de click-through nos cliques do usuário.
    * Redirecione os usuários para seu navegador móvel externo.
 
-      Em dispositivos móveis, a área de reprodução do anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela cheia e assim por diante. Nesses dispositivos, uma exibição separada, como um botão patrocinador, é usada para iniciar o URL de click-through.
+      Em dispositivos móveis, a área de reprodução do anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela cheia e assim por diante. Nesses dispositivos, uma visualização separada, como um botão patrocinador, é usada para iniciar o URL de click-through.
 
 1. Feche a janela do navegador na qual as informações de click-through são exibidas e retome a reprodução do vídeo.
 
