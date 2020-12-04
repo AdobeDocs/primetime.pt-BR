@@ -6,6 +6,9 @@ title: Redefinir ou reutilizar uma instância MediaPlayer
 uuid: b376096b-0aed-4ac2-96e5-e30a4eaf742e
 translation-type: tm+mt
 source-git-commit: c547002eb8946f8ccc5a79d0836f3f814e823b97
+workflow-type: tm+mt
+source-wordcount: '201'
+ht-degree: 0%
 
 ---
 
@@ -18,17 +21,17 @@ Quando você redefine uma instância do MediaPlayer, ela é retornada ao seu est
 
 Essa operação é útil nos seguintes casos:
 
-* Você deseja reutilizar uma `MediaPlayer` instância, mas precisa carregar uma nova `MediaResource` (conteúdo de vídeo) e substituir a instância anterior.
+* Você deseja reutilizar uma instância `MediaPlayer`, mas precisa carregar uma nova `MediaResource` (conteúdo de vídeo) e substituir a instância anterior.
 
-   A redefinição permite reutilizar a `MediaPlayer` instância sem a sobrecarga de liberar recursos, recriar os recursos `MediaPlayer`e realocar os recursos. Os métodos `replaceCurrentItem` e `replaceCurrentResource` executam automaticamente essas etapas para você, sem precisar chamar o método reset.
+   A redefinição permite reutilizar a instância `MediaPlayer` sem a sobrecarga de liberar recursos, recriar `MediaPlayer` e realocar recursos. Os métodos `replaceCurrentItem` e `replaceCurrentResource` fazem automaticamente essas etapas para você, sem precisar chamar o método reset.
 
-* Quando o `MediaPlayer` tiver um status de ERRO e precisar ser apagado.
+* Quando `MediaPlayer` tiver um status ERROR e precisar ser apagado.
 
    >[!IMPORTANT]
    >
    >Essa é a única maneira de recuperar do status ERROR.
 
-1. Chame `reset` para retornar a `MediaPlayer` instância ao seu estado não inicializado:
+1. Chame `reset` para retornar a instância `MediaPlayer` ao seu estado não inicializado:
 
    ```
    function reset():void; 
@@ -40,4 +43,4 @@ Essa operação é útil nos seguintes casos:
    >
    >Para apagar um erro, carregue o mesmo `MediaResource`.
 
-1. Ao receber o teste `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` com o `PREPARED` status, inicie a reprodução.
+1. Quando você receber o `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` com o status `PREPARED`, start a reprodução.
