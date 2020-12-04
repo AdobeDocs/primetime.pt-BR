@@ -6,6 +6,9 @@ title: Comportamento de reprodução padrão e personalizado com anúncios
 uuid: 45e6b0cd-fb0b-4896-b53a-d3bd78a3c1f3
 translation-type: tm+mt
 source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+workflow-type: tm+mt
+source-wordcount: '571'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Para substituir o comportamento padrão, use `AdPolicySelector`.
 
 >[!IMPORTANT]
 >
->O TVSDK não fornece uma maneira de desativar a busca durante os anúncios. A Adobe recomenda que você configure seu aplicativo para desativar a busca durante os anúncios.
+>O TVSDK não fornece uma maneira de desativar a busca durante os anúncios. O Adobe recomenda que você configure seu aplicativo para desativar a busca durante os anúncios.
 
 A tabela a seguir descreve como o TVSDK lida com anúncios e quebras de anúncios durante a reprodução:
 
@@ -27,7 +30,7 @@ A tabela a seguir descreve como o TVSDK lida com anúncios e quebras de anúncio
   <tr> 
    <th colname="col1" class="entry"> Atividade de vídeo </th> 
    <th colname="col2" class="entry"> Política de comportamento TVSDK padrão </th> 
-   <th colname="col3" class="entry">Personalização disponível por meio do <span class="codeph"> AdPolicySelector</span> </th> 
+   <th colname="col3" class="entry">Personalização disponível por meio de <span class="codeph"> AdPolicySelector</span> </th> 
   </tr>
  </thead>
  <tbody> 
@@ -38,7 +41,7 @@ A tabela a seguir descreve como o TVSDK lida com anúncios e quebras de anúncio
      <li id="li_D5CC30F063934C738971E2E8AF00C137"> Para live/linear, reproduz o intervalo do anúncio, mesmo se o intervalo do anúncio já tiver sido observado. </li> 
      <li id="li_D962C0938DA74186AE99D117E5A74E38">Para VOD, reproduz o intervalo do anúncio e marca o intervalo do anúncio como observado. </li> 
     </ul> </td> 
-   <td colname="col3">Especifique uma política diferente para o intervalo do anúncio usando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Especifique uma política diferente para a quebra de anúncio usando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo busca encaminhar o(s) intervalo(s) do anúncio para o conteúdo principal. </td> 
@@ -68,12 +71,12 @@ A tabela a seguir descreve como o TVSDK lida com anúncios e quebras de anúncio
   <tr> 
    <td colname="col1"> Seu aplicativo busca avançar ou retroceder em um ou mais anúncios quebrados e cai em um intervalo de anúncios observado. </td> 
    <td colname="col2"> Ignora o intervalo do anúncio e busca a posição imediatamente após o intervalo do anúncio. </td> 
-   <td colname="col3">Especifique uma política de publicidade diferente para o intervalo (com o status observado definido como true) e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col3">Especifique uma política de publicidade diferente para o intervalo de anúncios (com o status observado definido como true) e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo entra no modo de peça (DVR). A taxa de reprodução pode ser negativa (rebobinar) ou maior que 1 (avançar rapidamente). </td> 
    <td colname="col2"> Ignora todos os anúncios durante um avanço rápido ou retrocesso, reproduz o último intervalo ignorado após o término da reprodução de truques e ignora a posição de reprodução de truques selecionada pelo usuário quando esse intervalo termina a reprodução. </td> 
-   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas após o término da reprodução do truque usando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas após o término da reprodução de truques usando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Seu aplicativo busca anúncios que foram inseridos usando marcadores de anúncio personalizados. </td> 
