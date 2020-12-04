@@ -6,6 +6,9 @@ title: Anúncios
 uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Quando o conteúdo está sendo reproduzido, o TVSDK do navegador pode exibir anúncios e transmitir informações sobre anúncios ao criar o objeto MediaResource.
 
-Opcionalmente, você pode chamar a `prepareToPlay` função depois de receber `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
+Opcionalmente, você pode chamar a função `prepareToPlay` depois de receber `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
 
 ```js
 function onStatusChange (event) { 
@@ -39,7 +42,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
 var mediaResource = new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
 ```
 
-O TVSDK do navegador também fornece os seguintes eventos específicos para anúncios que você pode usar em seus manipuladores de eventos para impedir que o conteúdo seja encaminhado rapidamente quando os anúncios estiverem sendo reproduzidos:
+O TVSDK do navegador também fornece os seguintes eventos específicos para anúncios que você pode usar nos manipuladores de eventos para impedir que o conteúdo seja encaminhado rapidamente quando os anúncios estiverem sendo reproduzidos:
 
 * `AdobePSDK.PSDKEventType.AD_BREAK_STARTED`
 * `AdobePSDK.PSDKEventType.AD_BREAK_COMPLETED`
@@ -68,4 +71,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-Para obter mais informações sobre os metadados necessários `AuditudeSettings`, consulte Metadados [de inserção de](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md)anúncios.
+Para obter mais informações sobre os `AuditudeSettings` necessários, consulte [Metadados de inserção de anúncio](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
