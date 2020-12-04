@@ -1,16 +1,19 @@
 ---
 description: Você pode obter uma descrição da linha do tempo associada ao item atualmente selecionado que está sendo reproduzido pelo TVSDK. Isso é mais útil quando seu aplicativo exibe um controle de barra de depuração personalizado no qual as seções de conteúdo que correspondem ao conteúdo do anúncio são identificadas.
 seo-description: Você pode obter uma descrição da linha do tempo associada ao item atualmente selecionado que está sendo reproduzido pelo TVSDK. Isso é mais útil quando seu aplicativo exibe um controle de barra de depuração personalizado no qual as seções de conteúdo que correspondem ao conteúdo do anúncio são identificadas.
-seo-title: Inspecione a linha do tempo de reprodução
-title: Inspecione a linha do tempo de reprodução
+seo-title: Inspect na linha do tempo da reprodução
+title: Inspect na linha do tempo da reprodução
 uuid: 2f903493-2d88-4af2-ac71-36300b49735b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
 
-# Inspecione a linha do tempo de reprodução{#inspect-the-playback-timeline}
+# Inspect a linha do tempo de reprodução{#inspect-the-playback-timeline}
 
 Você pode obter uma descrição da linha do tempo associada ao item atualmente selecionado que está sendo reproduzido pelo TVSDK. Isso é mais útil quando seu aplicativo exibe um controle de barra de depuração personalizado no qual as seções de conteúdo que correspondem ao conteúdo do anúncio são identificadas.
 
@@ -19,11 +22,11 @@ Este é um exemplo de implementação, como visto na seguinte captura de tela.
 
 ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
 
-1. Acesse o `Timeline` objeto no `MediaPlayer` usando o `get` método.
+1. Acesse o objeto `Timeline` em `MediaPlayer` usando o método `get`.
 
-   A `Timeline` classe encapsula as informações relacionadas ao conteúdo da linha do tempo que está associado ao item de mídia que está carregado atualmente pela `MediaPlayer` instância. A `Timeline` classe fornece acesso a uma exibição somente leitura da linha do tempo subjacente. A `Timeline` classe fornece um método getter para obter todos os `TimelineMarker` objetos inseridos.
+   A classe `Timeline` encapsula as informações relacionadas ao conteúdo da linha do tempo que está associado ao item de mídia que está carregado atualmente pela instância `MediaPlayer`. A classe `Timeline` fornece acesso a uma visualização somente leitura da linha do tempo subjacente. A classe `Timeline` fornece um método getter para obter todos os objetos `TimelineMarker` colocados.
 
-1. Iterar pela lista de `TimelineMarkers` e usar as informações retornadas para implementar sua linha do tempo.
+1. Itere pela lista de `TimelineMarkers` e use as informações retornadas para implementar sua linha do tempo.
 
        Um objeto &quot;TimelineMarker&quot; contém duas informações:
    
