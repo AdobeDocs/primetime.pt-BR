@@ -1,18 +1,21 @@
 ---
-description: O módulo de criptografia do mecanismo de vídeo da Adobe retorna essas notificações no objeto de metadados NATIVE_ERROR.
-seo-description: O módulo de criptografia do mecanismo de vídeo da Adobe retorna essas notificações no objeto de metadados NATIVE_ERROR.
+description: O módulo de criptografia do mecanismo de vídeo Adobe retorna essas notificações no objeto de metadados NATIVE_ERROR.
+seo-description: O módulo de criptografia do mecanismo de vídeo Adobe retorna essas notificações no objeto de metadados NATIVE_ERROR.
 seo-title: Valores de criptografia NATIVE_ERROR
 title: Valores de criptografia NATIVE_ERROR
 uuid: 6f5cea7d-688f-421e-bba6-62aeae1ec9ee
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 6%
 
 ---
 
 
 # NATIVE_ERROR: Valores de criptografia{#native-error-crypto-values}
 
-O módulo de criptografia do mecanismo de vídeo da Adobe retorna essas notificações no objeto de metadados NATIVE_ERROR.
+O módulo de criptografia do mecanismo de vídeo Adobe retorna essas notificações no objeto de metadados NATIVE_ERROR.
 
 | Valor da chave de metadados RUNTIME_CODE | Valor para a chave de metadados RUNTIME_CODE_MESSAGE | Significado |
 |---|---|---|
