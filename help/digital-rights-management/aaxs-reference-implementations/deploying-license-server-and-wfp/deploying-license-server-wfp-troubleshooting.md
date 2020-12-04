@@ -4,6 +4,9 @@ title: Solução de problemas
 uuid: db76d6a4-c285-4d86-95a1-4f1a85ed3743
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ A seguir estão listados problemas comuns e soluções para implantação:
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Verifique se a senha está criptografada usando a `ScrambleUtil` classe fornecida.
+   Verifique se a senha está criptografada usando a classe `ScrambleUtil` fornecida.
 
 * Se você vir o seguinte erro:
 
