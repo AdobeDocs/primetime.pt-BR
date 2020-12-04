@@ -1,16 +1,19 @@
 ---
 description: Um player de vídeo cliente ou o servidor manifest pode interagir com o CRS para obter o reempacotamento JIT. Ambos usam a mesma lógica de seleção de anúncio.
 seo-description: Um player de vídeo cliente ou o servidor manifest pode interagir com o CRS para obter o reempacotamento JIT. Ambos usam a mesma lógica de seleção de anúncio.
-seo-title: Fluxos de trabalho detalhados para reempacotamento JIT
-title: Fluxos de trabalho detalhados para reempacotamento JIT
+seo-title: Workflows detalhados para reempacotamento JIT
+title: Workflows detalhados para reempacotamento JIT
 uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
 
 
-# Fluxos de trabalho detalhados para reempacotamento JIT {#detailed-workflows-for-jit-repackaging}
+# Workflows detalhados para o reempacotamento JIT {#detailed-workflows-for-jit-repackaging}
 
 Um player de vídeo cliente ou o servidor manifest pode interagir com o CRS para obter o reempacotamento JIT. Ambos usam a mesma lógica de seleção de anúncio.
 
@@ -26,7 +29,7 @@ O fluxo de trabalho para reempacotamento JIT no lado do servidor manifest é o s
 
    >[!NOTE]
    >
-   >Em uma configuração de vários CDN, o servidor manifest usa o `ptcdn` parâmetro no URL de inicialização para identificar o servidor CDN.
+   >Em uma configuração de vários CDN, o servidor manifest usa o parâmetro `ptcdn` no URL de inicialização para identificar o servidor CDN.
 
 1. O servidor manifest verifica a resposta:
 
@@ -54,7 +57,7 @@ Um cliente com base no TVSDK ou com recursos semelhantes pode interagir com o CR
 
       >[!NOTE]
       >
-      >Em uma configuração de vários CDN, o servidor manifest usa o `ptcdn` parâmetro no URL de inicialização para identificar o servidor CDN.
+      >Em uma configuração de vários CDN, o servidor manifest usa o parâmetro `ptcdn` no URL de inicialização para identificar o servidor CDN.
 
 1. O cliente verifica a resposta do servidor CDN.
 
@@ -64,7 +67,7 @@ Um cliente com base no TVSDK ou com recursos semelhantes pode interagir com o CR
 1. O servidor de anúncios solicita que a publicidade não HLS seja transcodificada para HLS.
 1. O CRS cria uma versão HLS e a carrega no servidor CDN para uso futuro.
 
-## Prioridades e linha do tempo do formato de anúncio {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
+## Prioridades e Linha do tempo do formato de anúncio {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
 
 O servidor manifest e o cliente usam a mesma lógica de seleção para determinar as prioridades para a reprodução de anúncios disponíveis. Anúncios formatados em HLS são a primeira prioridade, seguidos por MP4, FLV e, finalmente, WebM.
 
