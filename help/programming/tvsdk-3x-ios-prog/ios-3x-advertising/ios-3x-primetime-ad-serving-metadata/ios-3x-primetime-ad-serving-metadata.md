@@ -7,7 +7,7 @@ uuid: 61e224dd-551a-438f-8560-e64915087fef
 translation-type: tm+mt
 source-git-commit: 9d60bff4035963572e49fa49effa576ca854f799
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,14 +21,14 @@ O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD
 
 Antes de incluir publicidade no conteúdo de vídeo, forneça as seguintes informações de metadados:
 
-* A, que identifica o conteúdo específico a ser reproduzido. `mediaID`
+* Um `mediaID`, que identifica o conteúdo específico a ser reproduzido.
 * Seu `zoneID`, que identifica sua empresa ou site.
 * O domínio do servidor de publicidade, que especifica o domínio do servidor de publicidade atribuído.
 * Outros parâmetros de definição de metas.
 
-## Configurar metadados do servidor e do Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Configurar os metadados do Primetime e do servidor {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Seu aplicativo deve fornecer ao TVSDK as informações necessárias `PTAuditudeMetadata` para se conectar ao servidor de anúncios.
+Seu aplicativo deve fornecer ao TVSDK as informações `PTAuditudeMetadata` necessárias para se conectar ao servidor de publicidade.
 
 Para configurar os metadados do servidor de publicidade:
 
@@ -42,7 +42,7 @@ Para configurar os metadados do servidor de publicidade:
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Defina a `PTAuditudeMetadata` instância como metadados para os `PTMediaPlayerItem` metadados atuais usando `PTAdResolvingMetadataKey`.
+1. Defina a instância `PTAuditudeMetadata` como metadados para os metadados `PTMediaPlayerItem` atuais usando `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
