@@ -4,17 +4,20 @@ title: Atualizar o DB de implementação de referência
 uuid: 2883045e-ad62-466d-94a2-fc45ded2a4f5
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
 
-# Atualizar o DB de implementação de referência{#update-the-reference-implementation-db}
+# Atualizar a implementação de referência DB{#update-the-reference-implementation-db}
 
 Para controlar os modelos de uso nos quais uma licença é emitida para um usuário designado, adicione entradas ao banco de dados de implementação de referência.
 
-1. Adicione entradas à `Customer` tabela.
+1. Adicione entradas à tabela `Customer`.
 
-   A `Customer` tabela inclui nomes de usuários e senhas para autenticar usuários. Também indica se um usuário tem uma assinatura (uma licença emitida sob o modelo de uso da *assinatura* ).
+   A tabela `Customer` inclui nomes de usuários e senhas para autenticar usuários. Também indica se um usuário tem uma subscrição (uma licença emitida sob o modelo de uso *Subscrição*).
 
 1. Conceda acesso a um usuário nos modelos de uso Download para o proprietário ou Vídeo sob demanda.
 
@@ -23,4 +26,4 @@ Para controlar os modelos de uso nos quais uma licença é emitida para um usuá
    * O modelo de uso
    * Cada segmento do conteúdo que um usuário pode acessar
 
-Para obter mais informações sobre como preencher cada tabela, consulte o [!DNL PopulateSampleDB.sql] script (incluído no DVD do Primetime DRM no [!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/] diretório).
+Para obter mais informações sobre como preencher cada tabela, consulte o script [!DNL PopulateSampleDB.sql] (incluído no DVD do Primetime DRM no diretório [!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/]).
