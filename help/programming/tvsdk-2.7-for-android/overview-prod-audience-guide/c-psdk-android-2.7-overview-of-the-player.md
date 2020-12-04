@@ -6,6 +6,9 @@ title: Recursos do Primetime TVSDK
 uuid: 20ef9abf-1a33-4afc-bb2e-4910e3398a7a
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -19,10 +22,10 @@ Recursos do TVSDK:
 * **Reprodução VOD e ao vivo/linear**
 
    * Gerenciamento da janela de reprodução, incluindo métodos que reproduzem, param, pausam, buscam e recuperam a posição do indicador de reprodução
-   * Suporte para reprodução completa de eventos
-   * Legendas ocultas (608, 708, WebVTT) e formas alternativas de áudio para maior acessibilidade
+   * Suporte para reprodução de evento completo
+   * Legendas ocultas (608, 708, WebVTT) e formas alternativas de áudio para aumentar a acessibilidade
    * Controles para estilo de texto em legendas
-   * Recurso DVR, avanço rápido e retrocesso rápido (os dois últimos são conhecidos como modo *de* jogo de truque)
+   * Recurso DVR, avanço rápido e retrocesso rápido (os dois últimos são conhecidos como *modo trick-play*)
    * Lógica da taxa de bits adaptável (ABR) e configuração inicial dos controles ABR
    * Suporte a failover de manifesto ao vivo
    * Buffers de reprodução ajustáveis
