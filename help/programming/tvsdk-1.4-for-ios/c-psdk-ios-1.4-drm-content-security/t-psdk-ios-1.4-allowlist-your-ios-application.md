@@ -33,9 +33,9 @@ Antes de enviar um aplicativo iOS, você precisa assiná-lo e publicá-lo na App
 
 Devido à nova assinatura, as informações de permissão de listagem geradas antes de serem enviadas para a Apple App Store não podem ser usadas.
 
-Para trabalhar com essa política de envio, o Adobe criou uma `machotools` ferramenta que fará a impressão digital do aplicativo iOS para criar um valor de compilação, assinar esse valor e inserir esse valor no aplicativo iOS. Após a impressão digital do aplicativo iOS, envie o aplicativo para a Apple App Store. Quando um usuário executa seu aplicativo a partir da App Store, o Primetime DRM faz um cálculo em tempo de execução da impressão digital do aplicativo e o confirma com o valor de compilação anteriormente inserido no aplicativo. Se a impressão digital corresponder, o aplicativo será confirmado como permitido e o conteúdo protegido poderá ser reproduzido.
+Para trabalhar com essa política de envio, o Adobe criou uma ferramenta `machotools` que irá fazer a impressão digital do aplicativo iOS para criar um valor de compilação, assinar esse valor e inserir esse valor no aplicativo iOS. Após a impressão digital do aplicativo iOS, envie o aplicativo para a Apple App Store. Quando um usuário executa seu aplicativo a partir da App Store, o Primetime DRM faz um cálculo em tempo de execução da impressão digital do aplicativo e o confirma com o valor de compilação anteriormente inserido no aplicativo. Se a impressão digital corresponder, o aplicativo será confirmado como permitido e o conteúdo protegido poderá ser reproduzido.
 
-A ferramenta Adobe `machotools` está incluída no SDK TVSDK do iOS, no [!DNL [..]pasta /tools/DRM].
+A ferramenta Adobe `machotools` está incluída no SDK TVSDK do iOS, no [!DNL [...pasta ]/tools/DRM].
 
 Para usar `machotools`:
 
@@ -100,7 +100,7 @@ Para usar `machotools`:
    ```
 
 1. Crie uma nova Política DRM ou atualize sua política existente para incluir o valor de hash da ID do editor retornado.
-1. Usando o [!DNL AdobePolicyManager.jar], crie uma nova Política DRM (atualize sua política existente) para incluir o valor de hash da ID do editor retornado, uma ID do aplicativo opcional e os atributos de versão mín. e máx. no arquivo incluído [!DNL flashaccess-tools.properties] .
+1. Usando [!DNL AdobePolicyManager.jar], crie uma nova Política DRM (atualize sua política existente) para incluir o valor de hash da ID do editor retornado, uma ID do aplicativo opcional e os atributos de versão mín. e máx. no arquivo [!DNL flashaccess-tools.properties] incluído.
 
    ```shell
    java -jar libs/AdobePolicyManager.jar new app_allowlist.pol
