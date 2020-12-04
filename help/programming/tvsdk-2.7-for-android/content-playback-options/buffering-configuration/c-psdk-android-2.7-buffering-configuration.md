@@ -6,6 +6,9 @@ title: Buffering
 uuid: 7f9f0deb-5f18-441d-b7a4-67c631a798f4
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '520'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
 
 Para fornecer uma experiência de visualização mais suave, o TVSDK às vezes armazena o fluxo de vídeo em buffer. Você pode configurar como o player é armazenado em buffer.
 
-O TVSDK define uma duração de buffer de reprodução de pelo menos 30 segundos e um tempo de buffer inicial antes da reprodução da mídia, de pelo menos 2 segundos. Depois que o aplicativo chama `play`, mas antes do início da reprodução, o TVSDK armazena a mídia em buffer até o momento inicial para proporcionar um início suave quando a reprodução é iniciada.
+O TVSDK define uma duração de buffer de reprodução de pelo menos 30 segundos e um tempo de buffer inicial antes da reprodução dos start de mídia de pelo menos 2 segundos. Depois que o aplicativo chama `play`, mas antes do início da reprodução, o TVSDK armazena a mídia em buffer até o momento inicial para proporcionar um start suave quando ela realmente start.
 
 Você pode alterar os tempos do buffer definindo novas políticas de buffering e pode alterar quando o buffering inicial ocorrer usando instantaneamente.
 
@@ -22,7 +25,7 @@ Você pode alterar os tempos do buffer definindo novas políticas de buffering e
 
 Dependendo do seu ambiente (incluindo o dispositivo, o sistema operacional ou as condições da rede), você pode definir diferentes políticas de buffering para o player, como alterar a duração mínima para buffering inicial e para buffering contínuo de reprodução.
 
-Depois de ligar `play`, o player de mídia inicia o buffering do vídeo. Quando o player de mídia armazena em buffer a quantidade de vídeo especificada pelo tempo inicial do buffer, a reprodução é iniciada. Esse processo melhora o tempo de inicialização porque o player não espera que todo o buffer de reprodução seja preenchido antes de iniciar a reprodução. Em vez disso, após os poucos segundos iniciais serem armazenados em buffer, a reprodução é iniciada.
+Depois que você chamar `play`, o player de mídia começará a armazenar o vídeo em buffer. Quando o player de mídia armazena em buffer a quantidade de vídeo especificada pelo tempo inicial do buffer, a reprodução é iniciada. Esse processo melhora o tempo de start porque o player não espera que todo o buffer de reprodução seja preenchido antes de iniciar a reprodução. Em vez disso, após os poucos segundos iniciais serem armazenados em buffer, a reprodução é iniciada.
 
 Enquanto o vídeo está sendo renderizado, o TVSDK continua a armazenar em buffer novos fragmentos até que ele tenha armazenado em buffer a quantidade especificada pelo tempo do buffer de reprodução. Se o tamanho atual do buffer cair abaixo do tempo de buffer de reprodução, o player baixará fragmentos adicionais. Quando a duração atual do buffer estiver acima do tempo do buffer de reprodução em alguns segundos, o TVSDK interromperá o download dos fragmentos.
 
@@ -30,7 +33,7 @@ Enquanto o vídeo está sendo renderizado, o TVSDK continua a armazenar em buffe
 >
 >Se o valor inicial do buffer for alto, ele pode dar ao usuário um tempo de buffering inicial longo antes de iniciar. Isso pode propiciar uma reprodução suave por mais tempo. no entanto, se as condições da rede forem precárias, a reprodução inicial poderá ser atrasada.
 
-Se você ativar a ativação imediata ao chamar `prepareBuffer`, o buffering inicial começará nesse momento, em vez de esperar `play`.
+Se você ativar o instantâneo ao chamar `prepareBuffer`, o buffering inicial começará nesse momento, em vez de aguardar `play`.
 
 ## Definir tempos de buffering {#section_05CDD927869D47EBA1D2069B1416B2E4}
 
@@ -40,7 +43,7 @@ O `MediaPlayer` fornece métodos para definir e obter o tempo de buffering inici
 >
 >Se você não definir os parâmetros de controle de buffer antes de iniciar a reprodução, o player de mídia assumirá 2 segundos como padrão para o buffer inicial e 30 segundos para o tempo de buffer de reprodução em andamento.
 
-1. Configure o `BufferControlParameters` objeto, que encapsula o tempo de buffer inicial e os parâmetros de controle de tempo do buffer de reprodução.
+1. Configure o objeto `BufferControlParameters`, que encapsula os parâmetros de controle de tempo do buffer inicial e do buffer de reprodução.
 
    Esta classe fornece os seguintes métodos de fábrica:
 
@@ -57,19 +60,19 @@ O `MediaPlayer` fornece métodos para definir e obter o tempo de buffering inici
         long initialBuffer,  
         long bufferTime)
       ```
-   Se os parâmetros não forem válidos, esses métodos serão lançados `MediaPlayerException` com o código de erro `PSDKErrorCode.INVALID_ARGUMENT`, como quando as seguintes condições forem atendidas:
+   Se os parâmetros não forem válidos, esses métodos acionarão `MediaPlayerException` com o código de erro `PSDKErrorCode.INVALID_ARGUMENT`, como quando as seguintes condições forem atendidas:
 
    * O tempo inicial do buffer é menor que zero.
    * O tempo inicial do buffer é maior que o tempo do buffer.
 
 
-1. Para definir os valores dos parâmetros de buffer, use este `MediaPlayer` método:
+1. Para definir os valores dos parâmetros de buffer, use este método `MediaPlayer`:
 
    ```java
    void setBufferControlParameters(BufferControlParameters params)
    ```
 
-1. Para obter os valores de parâmetro de buffer atuais, use este `MediaPlayer` método:
+1. Para obter os valores de parâmetro de buffer atuais, use este método `MediaPlayer`:
 
    ```java
       BufferControlParameters getBufferControlParameters()  
