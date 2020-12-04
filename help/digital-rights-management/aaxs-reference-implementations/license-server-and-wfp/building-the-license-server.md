@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Criação do servidor de licenças {#building-the-license-server}
+# Criando o servidor de licenças {#building-the-license-server}
 
 O servidor de licença de implementação de referência inclui arquivos WAR para a implantação do servidor de licenças. Ele também inclui todo o código-fonte do servidor de licenças e um script de construção Ant (Referência Implementation\Server\refimpl\build-refimpl.xml) para que você possa fazer alterações facilmente no código.
 
@@ -19,4 +19,4 @@ O servidor de licença de implementação de referência inclui arquivos WAR par
 >
 >Essa etapa só é necessária se você quiser modificar o código-fonte. Para fins de avaliação, você pode ignorar esta etapa e usar os arquivos WAR conforme enviados.
 
-Antes de executar o script Ant, modifique o script para especificar os locais do SDK de Acesso ao Adobe, Tomcat, MySQL e Log4J. Abra build-refimpl.xml em um editor de texto e edite os valores das propriedades `sdkdir, tomcatdir, mysqldir, and log4jdir`. Para compilar o código-fonte e criar os arquivos WAR para a implementação de referência, execute o script usando `ant -f build-refimpl.xml all` o diretório que contém o script Ant. Quando o script for concluído, um [!DNL refimpl-build/wars] diretório contendo os arquivos WAR do servidor será criado.
+Antes de executar o script Ant, modifique o script para especificar os locais do SDK de Acesso ao Adobe, Tomcat, MySQL e Log4J. Abra build-refimpl.xml em um editor de texto e edite os valores das propriedades `sdkdir, tomcatdir, mysqldir, and log4jdir`. Para compilar o código-fonte e criar os arquivos WAR para a implementação de referência, execute o script usando `ant -f build-refimpl.xml all` no diretório que contém o script Ant. Quando o script for concluído, um diretório [!DNL refimpl-build/wars] contendo os arquivos WAR do servidor será criado.
