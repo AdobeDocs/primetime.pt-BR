@@ -40,7 +40,8 @@ Os objetos de notificação fornecem informações relacionadas ao status do pla
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Eventos de notificação de informações, de 300000 a 399999 </li> 
     </ul> <p>Cada intervalo de nível superior, como erros, é dividido em subintervalos, como 101000 a 101999 representando erros de reprodução. </p>
     <pre>
-     A lista discriminada <span class="codeph"> mediacore.PSDKErrorCode</span> lista os valores possíveis.
+     A lista discriminada 
+     <span class="codeph"> mediacore.PSDKErrorCode</span> lista os valores possíveis.
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
