@@ -6,6 +6,9 @@ title: Trabalhar com cookies
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
 source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Esta é uma amostra de solicitação ao servidor de chaves com alguma autentica�
 
 Para trabalhar com cookies:
 
-1. Crie um `cookieManager` e adicione seus cookies para os URIs à sua cookieStore.
+1. Crie um `cookieManager` e adicione seus cookies para os URIs ao cookieStore.
 
    Por exemplo:
 
@@ -45,9 +48,9 @@ Para trabalhar com cookies:
    >
    >Quando o redirecionamento 302 estiver ativado, a solicitação de anúncio poderá ser redirecionada para um domínio diferente do domínio ao qual o cookie pertence.
 
-   O TVSDK query isso `cookieManager` no tempo de execução, verifica se há cookies associados ao URL e usa esses cookies automaticamente.
+   O TVSDK query esse `cookieManager` no tempo de execução, verifica se há cookies associados ao URL e usa esses cookies automaticamente.
 
-   Se os cookies precisarem ser atualizados no aplicativo durante a reprodução, não use a `networkConfiguration.setCookieHeaders` API, pois a atualização ocorrerá no armazenamento de cookies JAVA.
+   Se os cookies precisarem ser atualizados no aplicativo durante a reprodução, não use a API `networkConfiguration.setCookieHeaders`, pois a atualização ocorrerá no armazenamento de cookies JAVA.
 
    `networkConfiguration.setCookieHeaders` A API define os cookies como CookieStore C++ da TVSDK.
 
