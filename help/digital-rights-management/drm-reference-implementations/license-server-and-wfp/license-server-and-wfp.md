@@ -30,27 +30,27 @@ Requisitos do servidor de licenças:
 
 Depois de instalar o Tomcat e o MySQL, entre em contato com o Adobe para obter o conjunto de credenciais de DRM necessárias.
 
-## Criar o servidor de licenças {#build-the-license-server}
+## Crie o servidor de licenças {#build-the-license-server}
 
 >[!NOTE]
 >
 >A criação do servidor de licenças só é necessária se você pretende modificar o código fonte. Para fins de avaliação, basta usar os arquivos WAR conforme enviados.
 
-O servidor de licença de implementação de referência inclui todo o código fonte do servidor de licenças ( `([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\src/`), juntamente com um script de compilação Ant ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/build-refimpl.xml`) com o qual você pode personalizar o servidor de licenças para atender às suas necessidades comerciais.
+O servidor de licenças de implementação de referência inclui todo o código fonte do servidor de licenças ( `([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\src/`), juntamente com um script de compilação Ant ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/build-refimpl.xml`) com o qual você pode personalizar o servidor de licenças para atender às suas necessidades comerciais.
 
 1. Modifique o script de compilação Ant para especificar os locais do SDK do Primetime DRM, Tomcat, MySQL e Log4J.
 
-   Abra o [!DNL build-refimpl.xml] arquivo em um editor de texto e defina estes valores de propriedade:
+   Abra o arquivo [!DNL build-refimpl.xml] em um editor de texto e defina estes valores de propriedade:
 
    * `sdkdir`
    * `tomcatdir`
    * `mysqldir`
    * `log4jdir`
 
-1. Execute o script de construção Ant com a `all` propriedade, no diretório em que o script de construção Ant está localizado.
+1. Execute o script de compilação Ant com a propriedade `all`, no diretório em que o script de construção Ant está localizado.
 
    ```
    ant -f build-refimpl.xml all
    ```
 
-   O script de criação Ant cria um [!DNL refimpl-build/wars] diretório que inclui os arquivos WAR do servidor.
+   O script de criação Ant cria um diretório [!DNL refimpl-build/wars] que inclui os arquivos WAR do servidor.
