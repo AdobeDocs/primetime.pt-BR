@@ -4,11 +4,14 @@ title: Data de término
 uuid: be9bbad7-5ec7-4012-ae2b-91de965cbc64
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '32'
+ht-degree: 0%
 
 ---
 
 
-# Data de término{#end-date}
+# Data final{#end-date}
 
 A data de término especifica a data após a qual uma licença expira.
 
