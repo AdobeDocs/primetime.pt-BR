@@ -6,16 +6,19 @@ title: Inscrever-se em tags de publicidade personalizadas
 uuid: 208f61f4-dc33-4363-aa71-878458740a8d
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
 
-# Inscrever-se em tags de publicidade personalizadas{#subscribe-to-custom-ad-tags}
+# Assine tags de publicidade personalizadas{#subscribe-to-custom-ad-tags}
 
 O TVSDK do navegador prepara objetos TimedMetadata para tags assinadas sempre que esses objetos são encontrados no arquivo MPD (Media Presentation Description).
 
-Você deve assinar as tags antes do início da reprodução.
-Para assinar as tags, defina um vetor que contenha os nomes das tags personalizadas para a `subscribedTags` propriedade. Se você também precisar alterar as tags de publicidade usadas pelo gerador de oportunidades padrão, defina um vetor que contenha os nomes de tags de publicidade personalizadas para a `adTags` propriedade.
+Você deve assinar as tags antes dos start de reprodução.
+Para assinar as tags, defina um vetor que contenha os nomes das tags personalizadas para a propriedade `subscribedTags`. Se você também precisar alterar as tags de publicidade usadas pelo gerador de oportunidades padrão, defina um vetor que contenha os nomes de tags de publicidade personalizadas para a propriedade `adTags`.
 
 Para assinar tags personalizadas:
 
@@ -35,14 +38,14 @@ Para assinar tags personalizadas:
 
    >[!IMPORTANT]
    >
-   >Se você estiver lidando com fluxos HLS, lembre-se de incluir o `#` prefixo.
+   >Se você estiver lidando com fluxos HLS, lembre-se de incluir o prefixo `#`.
 
    ```js
    subscribeTags.push("urn:mpeg:dash:event:2012"); 
    subscribeTags.push("urn:com:adobe:dpi:simple:2015"); 
    ```
 
-1. Atribua o vetor atualizado à `mediaPlayerItemConfig.subscribeTags` propriedade.
+1. Atribua o vetor atualizado à propriedade `mediaPlayerItemConfig.subscribeTags`.
 
    ```js
    mediaPlayerItemConfig.subscribeTags = subscribeTags;
@@ -60,7 +63,7 @@ Para assinar tags personalizadas:
    adTags.push("urn:com:adobe:dpi:simple:2015");
    ```
 
-1. Atribua o vetor atualizado à `mediaPlayerItemConfig.adTags` propriedade.
+1. Atribua o vetor atualizado à propriedade `mediaPlayerItemConfig.adTags`.
 
    ```js
    mediaPlayerItemConfig.adTags = adTags;
