@@ -6,6 +6,9 @@ title: Classes de linha do tempo
 uuid: dd4af4b4-215e-45cb-8bac-574a461ac1ce
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 0%
 
 ---
 
@@ -33,11 +36,11 @@ Pacote: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/ap
    <td colname="2"> Interface que fornece um iterador para processar marcadores de linha do tempo. Representa a linha do tempo do conteúdo, incluindo quebras de anúncios. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> Item</a> da linha do tempo </span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> ItemLinhaDoTempo</a> </span> </td> 
    <td colname="2"> Classe. Representação imutável genérica de um item de linha do tempo. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> Marcador</a> LinhaTempo </span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> MarcadorLinhaTempo</a> </span> </td> 
    <td colname="2"> Interface que representa um marcador na linha do tempo. Isso marca uma região de interesse na linha do tempo real. Atualmente, as regiões de interesse são os anúncios, que você pode querer marcar, por exemplo, com uma cor diferente na interface do usuário da barra de depuração. Cada marcador é definido por uma posição e uma duração (cada uma expressa em milissegundos). </td> 
   </tr> 
   <tr rowsep="0"> 
