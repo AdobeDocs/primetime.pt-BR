@@ -18,7 +18,7 @@ A maioria dos anunciantes requer informações sobre quando, por quanto tempo e 
 
 No rastreamento de anúncios do cliente, o servidor envia ao cliente uma estrutura JSON, VMAP ou in-manifest que especifica eventos de rastreamento e URLs junto com a lista de reprodução de anúncios.
 
-Para ativar o rastreamento de anúncios do cliente, especifique os seguintes parâmetros na API [do](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)Bootstrap.
+Para ativar o rastreamento de anúncios do cliente, especifique os seguintes parâmetros na [API do Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
 * `pttrackingmode=simple`
 
@@ -26,19 +26,19 @@ Para ativar o rastreamento de anúncios do cliente, especifique os seguintes par
 
 >[!NOTE]
 >
->A configuração do `pttrackingmode=simple` fará com que a solicitação da API de inicialização retorne uma resposta JSON, em vez de um documento HLS ou DASH.
+>A configuração de `pttrackingmode=simple` fará com que a solicitação da API de inicialização retorne uma resposta JSON, em vez de um documento HLS ou DASH.
 
-Para obter mais informações sobre `pttrackingmode`, `pttrackingversion` formatos, consulte Referência [da API: Parâmetros](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)do query do servidor manifest.
+Mais informações sobre os formatos `pttrackingmode`, `pttrackingversion` podem ser encontradas em [Referência da API: Parâmetros de query do servidor manifest](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
-## Rastreamento de anúncios do servidor {#server-side-ad-tracking}
+## Rastreamento de anúncio do servidor {#server-side-ad-tracking}
 
 Usando esse método, os dados de rastreamento de anúncio são calculados totalmente no lado do servidor. Isso é útil quando a atualização do aplicativo cliente não é viável. No entanto, o rastreamento de anúncios do lado do servidor pode não corresponder à atividade de reprodução do lado do cliente. Por exemplo, o servidor considera que um anúncio deve ser reproduzido após a entrega dos segmentos, mesmo se o usuário final não visualização todo o anúncio.
 
-Para ativar o rastreamento de anúncios do lado do servidor, especifique o seguinte parâmetro na API [do](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)Bootstrap.
+Para ativar o rastreamento de anúncios do lado do servidor, especifique o seguinte parâmetro na [API do Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
 `pttrackingmode=sstm`
 
-Consulte `pttrackingmode` as seções da API [do](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)Bootstrap.
+Consulte `pttrackingmode` seções de [API de Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
 Todos os beacons de rastreamento de anúncios são enviados com os seguintes cabeçalhos de Solicitação HTTP:
 
@@ -48,7 +48,7 @@ Todos os beacons de rastreamento de anúncios são enviados com os seguintes cab
 
 Esses valores contêm o cliente/agente do usuário do player e o endereço IP do cliente.
 
-## Rastreamento de anúncios híbridos {#hybrid-ad-tracking}
+## Rastreamento de anúncio híbrido {#hybrid-ad-tracking}
 
 Essa abordagem é semelhante ao rastreamento do lado do servidor, mas o aplicativo cliente também solicita dispositivos auxiliares do Primetime Ad Insertion para obter informações detalhadas sobre o rastreamento. O rastreamento de anúncios híbridos pode fornecer anúncios não lineares, como sobreposições e companheiros, para o aplicativo cliente, e ainda depender do Primetime Ad Insertion para enviar URLs de rastreamento de anúncios individuais.
-Para ativar o rastreamento de anúncios híbridos, consulte o `pttrackingmode` parâmetro na API [do](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)Bootstrap.
+Para ativar o rastreamento de anúncios híbridos, consulte o parâmetro `pttrackingmode` na [API de Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
