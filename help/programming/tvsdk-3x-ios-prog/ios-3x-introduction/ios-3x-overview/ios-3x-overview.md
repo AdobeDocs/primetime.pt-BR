@@ -4,15 +4,18 @@ title: Introdução
 uuid: 7c7d5fb0-bc4d-47e9-8856-53df57b8c6d3
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 0%
 
 ---
 
 
 # Visão geral {#overview}
 
-O Adobe Primetime Software Development Kit (TVSDK) é um kit de ferramentas que permite adicionar funcionalidades avançadas de reprodução de vídeo aos seus aplicativos.
+O Adobe Primetime Software Development Kit (TVSDK) é um kit de ferramentas que permite adicionar funcionalidade avançada de reprodução de vídeo aos seus aplicativos.
 
-* Para obter uma lista dos recursos compatíveis com o TVSDK, consulte Recursos [do](../../ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md)Primetime Player TVSDK.
+* Para obter uma lista dos recursos compatíveis com o TVSDK, consulte [Recursos do Primetime Player TVSDK](../../ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md).
 * Para obter os requisitos específicos de hardware e software para o uso do TVSDK, consulte [Requisitos](../../ios-3x-introduction/ios-3x-requirements.md).
 
 Este guia fornece informações sobre como desenvolver aplicativos de player de vídeo usando o TVSDK para iOS, que é implementado no Objetive-C.
@@ -23,7 +26,7 @@ O TVSDK inclui descrições de API e exemplos de código para ajudá-lo a integr
 
 Para obter os requisitos específicos de hardware e software para o uso do TVSDK, consulte Requisitos
 
-## Público {#section_527860B373734D3BA89FCF5EC1F6DC37}
+## Audiência {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
 Este guia supõe que você saiba como desenvolver aplicativos e players de vídeo usando o Objetive-C. Você implementa uma interface de usuário do player de vídeo usando esse idioma e incorpora recursos do TVSDK.
 
