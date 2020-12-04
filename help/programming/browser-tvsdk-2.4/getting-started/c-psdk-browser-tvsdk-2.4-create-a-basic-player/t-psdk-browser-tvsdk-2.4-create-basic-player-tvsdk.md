@@ -6,6 +6,9 @@ title: Criar um player básico usando TVSDK
 uuid: ec15cf53-197f-4190-a6b2-600a57815390
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
@@ -42,14 +45,14 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. Para a tag body, adicione a `onLoad` seção.
+1. Para a tag body, adicione a seção `onLoad`.
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Comece a implementar a `startVideo` função.
-1. Adicione uma tag de script e crie a `startVideo` função na tag .
+1. Start que implementa a função `startVideo`.
+1. Adicione uma tag de script e crie a função `startVideo` na tag .
 
    Isso deveria estar na seção de cabeçalho da página.
 
@@ -70,7 +73,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
 
    >[!TIP]
    >
-   >Este é o local em `div` que você criou anteriormente.
+   >É aqui que o `div` que você criou anteriormente é usado.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -78,7 +81,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
    player.view = view;
    ```
 
-1. Adicione o ouvinte de eventos do player.
+1. Adicione o ouvinte do evento do player.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
@@ -141,7 +144,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
    }; 
    ```
 
-1. Crie o `MediaResource`, que passa pelo link M3U8 (ou mpd).
+1. Crie `MediaResource`, que passa pelo link M3U8 (ou mpd).
 
    ```js
    var resourceUrl = "https://example.com/a/yourUrl.m3u8"; 
@@ -157,7 +160,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Quando o player estiver no estado INICIALIZADO, ligue `prepareToPlay`.
+1. Quando o player estiver no estado INICIALIZADO, chame `prepareToPlay`.
 
    ```js
    case INITIALIZED: 
@@ -165,7 +168,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
     break;
    ```
 
-1. Depois que o player estiver no estado PREPARADO, ligue `play`.
+1. Depois que o player estiver no estado PREPARADO, chame `play`.
 
    ```js
    case PREPARED: 
