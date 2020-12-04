@@ -7,11 +7,14 @@ title: Ativar resolução de anúncios ociosos
 uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 0%
 
 ---
 
 
-# Ativar resolução de anúncios ociosos {#enable-lazy-ad-resolving}
+# Habilitar lento e resolver {#enable-lazy-ad-resolving}
 
 Você pode ativar ou desativar o recurso Resolução de anúncios preguiçosos usando o mecanismo de Carregamento de anúncios preguiçoso (a Resolução de anúncios preguiçosos está desativada por padrão).
 
@@ -20,10 +23,10 @@ Você pode ativar ou desativar a Resolução de anúncios preguiçosos chamando 
 * Use os métodos Boolean *hasDelayAdLoading* e *setDelayAdLoading* em AdvertisingMetadata para controlar o tempo de resolução do anúncio e o posicionamento dos anúncios na linha do tempo:
 
    * Se *hasDelayAdLoading* retornar falso, o TVSDK aguarda até que todos os anúncios sejam resolvidos e colocados antes da transição para o estado PREPARADO.
-   * Se *hasDelayAdLoading* retornar true, o TVSDK resolve somente os anúncios e transições iniciais para o estado PREPARADO.
+   * Se *hasDelayAdLoading* retornar true, o TVSDK resolverá apenas os anúncios e transições iniciais para o estado PREPARADO.
 
       * Os anúncios restantes são resolvidos e colocados durante a reprodução.
-   * Quando *hasPreroll *ou *hasLivePreroll* retornar false, o TVSDK assume que não há um anúncio de pré-lançamento e inicia a reprodução do conteúdo imediatamente. Estes são definidos como true.
+   * Quando *hasPreroll *ou *hasLivePreroll* retornar false, o TVSDK assume que não há um anúncio de pré-lançamento e start a reprodução do conteúdo imediatamente. Estes são definidos como true.
 
 
 **APIs relevantes para a resolução de anúncios ociosos:**
@@ -46,11 +49,11 @@ Methods:
     public Placement.Type getPlacementType() // Returns whether
 ```
 
-Para refletir com precisão as publicidades como dicas em uma barra de depuração, escute o `TimelineEvent`evento e redesenhe a barra de depuração sempre que receber esse evento.
+Para refletir com precisão os anúncios como dicas em uma barra de depuração, ouça o evento `TimelineEvent`e redesenhe a barra de depuração toda vez que receber esse evento.
 
-Quando a Solução de anúncios ociosos estiver ativada para fluxos VOD, todas as quebras de anúncios serão colocadas na linha do tempo, no entanto, muitas das quebras de anúncios ainda não serão resolvidas. O aplicativo pode determinar se deseja ou não desenhar esses marcadores verificando o `TimelineMarker::getDuration()`. Se o valor for maior que zero, os anúncios no intervalo do anúncio foram resolvidos.
+Quando a Solução de anúncios ociosos estiver ativada para fluxos VOD, todas as quebras de anúncios serão colocadas na linha do tempo, no entanto, muitas das quebras de anúncios ainda não serão resolvidas. O aplicativo pode determinar se deseja ou não desenhar esses marcadores verificando `TimelineMarker::getDuration()`. Se o valor for maior que zero, os anúncios no intervalo do anúncio foram resolvidos.
 
-O TVSDK despacha esse evento quando uma pausa de anúncio é resolvida e também quando o player muda para o status PREPARED.
+O TVSDK despacha esse evento quando uma pausa de anúncio é resolvida e também quando o player transição para o status PREPARADO.
 
 ```
 mediaPlayer.addEventListener(MediaPlayerEvent.TIMELINE_UPDATED, timelineUpdatedEventListener); 
