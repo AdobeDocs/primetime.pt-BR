@@ -17,12 +17,12 @@ ht-degree: 0%
 
 A implementação de referência fornece `ScrambleUtil.class`, uma classe que garante a segurança da senha da sua credencial.
 
-Use essa ferramenta para criptografar a senha antes de incluí-la no [!DNL flashaccess-refimpl.properties] arquivo.
+Use essa ferramenta para criptografar a senha antes de incluí-la no arquivo [!DNL flashaccess-refimpl.properties].
 
 Para executar a ferramenta, você pode usar um script Ant ou Java.
 
-O utilitário gera a senha criptografada, que você deve copiar para o [!DNL flashaccess-refimpl.properties] arquivo.
+O utilitário gera a senha criptografada, que você deve copiar para o arquivo [!DNL flashaccess-refimpl.properties].
 
 >[!NOTE]
 >
->As senhas que foram codificadas com o `ScrambleUtil.class` que foi fornecido com a implementação de referência não funcionam com o Primetime DRM Server for Protected Streaming.
+>As senhas que foram codificadas com `ScrambleUtil.class` que foram fornecidas com a implementação de referência não funcionam com o Primetime DRM Server for Protected Streaming.
