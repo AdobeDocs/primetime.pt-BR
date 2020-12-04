@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Se o licenciamento baseado em identidade for usado, o servidor verificará se há um token de autenticação válido antes de emitir uma licença.
 
-Consulte Autenticação [do](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication) usuário para obter detalhes sobre como manipular tokens de autenticação.
+Consulte [Autenticação do usuário](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication) para obter detalhes sobre como manipular tokens de autenticação.
 
 >[!NOTE]
 >
