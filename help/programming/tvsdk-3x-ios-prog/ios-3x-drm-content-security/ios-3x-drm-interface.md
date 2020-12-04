@@ -40,7 +40,7 @@ Esses são os elementos de API mais importantes para trabalhar com DRM:
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 
-O TVSDK emite uma `PTMediaPlayerItemDRMMetadataChanged` notificação quando os metadados do DRM são alterados. Esses metadados são usados como entrada para quase todas as funções da `DRMManager` classe.
+O TVSDK emite uma notificação `PTMediaPlayerItemDRMMetadataChanged` quando os metadados do DRM são alterados. Esses metadados são usados como entrada para quase todas as funções da classe `DRMManager`.
 
 <!--<a id="section_223DCF63BAB6438792A85352A79044CC"></a>-->
 
@@ -54,7 +54,7 @@ Se o fluxo protegido por DRM estiver codificado com várias taxas de bits (MBR),
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 ```
 
-O parâmetro da string de `faxs=1` query indica que o conteúdo está protegido por DRM e aciona o fluxo de trabalho de decodificação de DRM de acordo com o TVSDK do iOS. Você também pode anexar a `faxs=1` tag em URLs de ativos HLS protegidos por DRM destinados a outras plataformas; é observado conforme necessário no iOS ou tratado como não operacional em players em outras plataformas.
+O parâmetro `faxs=1` da string de query indica que o conteúdo está protegido por DRM e aciona o fluxo de trabalho de decodificação de DRM de acordo com o TVSDK do iOS. Você também pode anexar a tag `faxs=1` nos URLs de ativos HLS protegidos por DRM destinados a outras plataformas; é observado conforme necessário no iOS ou tratado como não operacional em players em outras plataformas.
 
 ## Implementação do Primetime DRM em um aplicativo TSVDK {#implement-primetime-drm-in-a-tsvdk-application}
 
