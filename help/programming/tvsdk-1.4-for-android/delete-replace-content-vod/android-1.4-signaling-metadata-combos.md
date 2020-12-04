@@ -6,11 +6,14 @@ title: Efeito na inserção e exclusão de anúncios no modo de sinalização de
 uuid: c2ae8148-889d-46ae-848a-5f45d993a0e2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '472'
+ht-degree: 0%
 
 ---
 
 
-# Efeito na inserção e exclusão de anúncios no modo de sinalização de anúncios e combinações de metadados de anúncios{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Efeito na inserção e exclusão de anúncios do modo de sinalização de anúncios e combinações de metadados de anúncios{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
 Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes modos de sinalização de anúncio e combinações de metadados de anúncio. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
 
@@ -26,7 +29,7 @@ Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando
    <th class="entry"> Modo de sinalização de anúncios </th> 
    <th class="entry"> Metadados de anúncio </th> 
    <th class="entry"> Resolvedores criados </th> 
-   <th class="entry"><span class="codeph"> InserçãoInformações</span> criadas </th> 
+   <th class="entry"><span class="codeph"> </span> PlacementInformationScreated </th> 
    <th class="entry"> Comportamento resultante </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando
    <td> Excluir, Auditude </td> 
    <td> 
     <ul> 
-     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Intervalos excluídos, Anúncios inseridos </td> 
