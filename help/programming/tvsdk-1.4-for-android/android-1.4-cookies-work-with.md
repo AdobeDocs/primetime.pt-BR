@@ -26,7 +26,7 @@ Este é um exemplo com algum tipo de autenticação ao fazer solicitações ao s
 
 Para trabalhar com cookies:
 
-1. Crie um `cookieManager` e adicione seus cookies para os URIs ao seu `cookieStore`.
+1. Crie um `cookieManager` e adicione seus cookies para os URIs a seu `cookieStore`.
 
    Por exemplo:
 
@@ -46,7 +46,7 @@ Para trabalhar com cookies:
 
    O TVSDK query este cookieManager em tempo de execução, verifica se há cookies associados ao URL e os usa automaticamente.
 
-   Outra opção é usar `cookieHeaders` em `NetworkConfiguration` para definir uma string de cabeçalho de cookie arbitrária a ser usada para solicitações. Por padrão, esse cabeçalho de cookie é enviado somente com solicitações de chave. Para enviar o cabeçalho do cookie com todas as solicitações, use o `NetworkConfiguration` método `setUseCookieHeadersForAllRequests`:
+   Outra opção é usar `cookieHeaders` em `NetworkConfiguration` para definir uma string de cabeçalho de cookie arbitrária a ser usada para solicitações. Por padrão, esse cabeçalho de cookie é enviado somente com solicitações de chave. Para enviar o cabeçalho do cookie com todas as solicitações, use o método `NetworkConfiguration` `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
