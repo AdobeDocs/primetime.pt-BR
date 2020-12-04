@@ -6,6 +6,9 @@ title: Modo de sinalização de anúncios
 uuid: 46f919f9-8ca1-46ff-b7a4-c9a03b5f1ccd
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 O modo de sinalização de anúncio especifica onde o fluxo de vídeo deve obter informações de publicidade.
 
-Os valores válidos são `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`e `PTAdSignalingModeServerMap`.
+Os valores válidos são `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` e `PTAdSignalingModeServerMap`.
 
 A tabela a seguir descreve o efeito de `AdSignalingMode` valores para vários tipos de fluxo HLS:
 
