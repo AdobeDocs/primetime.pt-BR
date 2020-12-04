@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Para atualizar uma política existente, escolha o nome do arquivo na lista suspensa e clique em **[!UICONTROL Open]**. Modifique quaisquer atributos de política desejados. Todos os atributos podem ser modificados, exceto os relacionados à Autenticação e Encadeamento de Licenças.
 
-Quando terminar, clique em **[!UICONTROL Save]**. O arquivo de política no [!DNL Resource] Diretório será substituído pela versão atualizada.
+Quando terminar, clique em **[!UICONTROL Save]**. O arquivo de política no diretório [!DNL Resource] será substituído pela versão atualizada.
 
 >[!NOTE]
 >
->Mesmo se o nome da política for alterado, o nome do arquivo no [!DNL Resource] Diretório não será modificado.
+>Mesmo se o nome da política for alterado, o nome do arquivo no diretório [!DNL Resource] não será modificado.
 
