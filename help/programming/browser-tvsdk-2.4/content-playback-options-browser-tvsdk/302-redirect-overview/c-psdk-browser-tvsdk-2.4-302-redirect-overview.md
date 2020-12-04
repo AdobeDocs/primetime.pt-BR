@@ -6,6 +6,9 @@ title: Otimização de redirecionamento HTTP 302
 uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +21,9 @@ Se uma solicitação de manifesto principal for redirecionada e a otimização 3
 
 >[!IMPORTANT]
 >
->Esse recurso é suportado somente nos navegadores certificados que suportam a `responseURL` propriedade no `XMLHttpRequest` objeto.
+>Esse recurso é suportado somente nos navegadores certificados que oferecem suporte à propriedade `responseURL` no objeto `XMLHttpRequest`.
 
-Para fallback de Flash, lembre-se das seguintes informações:
+Para o fallback do Flash, lembre-se das seguintes informações:
 
 * Seus usuários finais devem ter o Adobe Flash Player versão 23 ou posterior instalado.
 * Se a integridade do fluxo estiver desativada, o redirecionamento 302 será suportado somente em navegadores certificados.
