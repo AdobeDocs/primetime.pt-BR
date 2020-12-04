@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Use a guia Package Media (Mídia do pacote) para empacotar o conteúdo. A seção Propriedades do Packager exibe as configurações do Packager que foram inseridas na guia Preferências. Para modificar essas configurações, vá para a guia Preferências, altere as configurações e Salve.
 
-Se desejar disponibilizar um único arquivo FLV ou F4V, escolha a **[!UICONTROL Select Single File]** opção e insira o caminho completo para o arquivo de origem e o caminho completo onde o arquivo criptografado deve ser salvo.
+Se desejar disponibilizar um único arquivo FLV ou F4V, escolha a opção **[!UICONTROL Select Single File]** e insira o caminho completo para o arquivo de origem e o caminho completo onde o arquivo criptografado deve ser salvo.
 
-Se desejar disponibilizar todos os arquivos em uma pasta, escolha a **[!UICONTROL Select Single Folder]** opção. Especifique a pasta que contém os arquivos de origem. Somente os arquivos na Pasta de entrada que correspondem aos **[!UICONTROL Input Media File Selection]** critérios serão empacotados (os arquivos nas subpastas não são empacotados). Opte por criptografar [!DNL .flv] arquivos, [!DNL .f4v] arquivos ou inserir uma expressão regular personalizada (por exemplo &quot;.*&quot; criptografa todos os arquivos na pasta). Os arquivos criptografados serão salvos na pasta de saída especificada, usando o mesmo nome de arquivo que o arquivo original.
+Se desejar disponibilizar todos os arquivos em uma pasta, escolha a opção **[!UICONTROL Select Single Folder]**. Especifique a pasta que contém os arquivos de origem. Somente os arquivos na Pasta de entrada que correspondem aos critérios **[!UICONTROL Input Media File Selection]** serão empacotados (os arquivos nas subpastas não são empacotados). Escolha criptografar arquivos [!DNL .flv], [!DNL .f4v] ou insira uma expressão regular personalizada (por exemplo &quot;).*&quot; criptografa todos os arquivos na pasta). Os arquivos criptografados serão salvos na pasta de saída especificada, usando o mesmo nome de arquivo que o arquivo original.
 
 >[!NOTE]
 >
@@ -35,4 +35,4 @@ A tabela a seguir descreve as preferências do Package Media:
 | Criptografar script | Marque essa caixa de seleção para criptografar dados de script (somente FLV) |
 | Propriedades personalizadas | Especifique as propriedades personalizadas a serem incluídas no conteúdo empacotado. Essas propriedades estarão disponíveis para o servidor de licenças ao emitir uma licença. (Opcional) |
 
-Depois que as opções de empacotamento forem selecionadas, clique no **[!UICONTROL Package Media]** botão para começar a empacotar os arquivos.
+Depois que as opções de empacotamento forem selecionadas, clique no botão **[!UICONTROL Package Media]** para começar a empacotar os arquivos.
