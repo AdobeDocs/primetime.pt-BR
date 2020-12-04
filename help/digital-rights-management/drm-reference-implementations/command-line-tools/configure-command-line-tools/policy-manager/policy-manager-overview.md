@@ -4,6 +4,9 @@ title: Visão geral
 uuid: 0a4a4f7a-6cf0-4cb9-a929-fc04864904af
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 
 Use a ferramenta de linha de comando do Primetime DRM Policy Manager ( [!DNL AdobePolicyManager.jar]) para criar e gerenciar políticas de DRM.
 
-Antes de executar [!DNL AdobePolicyManager.jar], você deve definir as propriedades na seção Propriedades do Gerenciador de políticas do arquivo de configuração. Os valores definidos no arquivo de configuração são aplicados a todas as políticas de DRM.
+Antes de executar [!DNL AdobePolicyManager.jar], você deve definir as propriedades na seção Propriedades do Policy Manager do arquivo de configuração. Os valores definidos no arquivo de configuração são aplicados a todas as políticas de DRM.
 
 >[!NOTE]
 >
