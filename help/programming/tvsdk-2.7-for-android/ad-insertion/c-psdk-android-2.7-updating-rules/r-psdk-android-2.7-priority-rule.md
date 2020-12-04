@@ -7,6 +7,9 @@ title: Regras de prioridade
 uuid: 4ca31dc7-9c5e-400c-9111-e7b6fc11a392
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,7 @@ A regra de prioridade define a ordem de prioridade dos anúncios que serão sele
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> String</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Atualmente, apenas <span class="codeph"> o host</span> é suportado. Este atributo deve estar presente quando <span class="codeph"> corresponde</span> e <span class="codeph"> valores</span> os atributos são definidos.</td> 
+   <td>Atualmente, apenas <span class="codeph"> host</span> é suportado. Este atributo deve estar presente quando os atributos <span class="codeph"> correspondem</span> e <span class="codeph"> valores</span> estiverem definidos.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matches</span></td> 
@@ -49,21 +52,21 @@ A regra de prioridade define a ordem de prioridade dos anúncios que serão sele
      <li><span class="codeph"> ne</span> - não é igual</li> 
      <li><span class="codeph"> co</span> - contém</li> 
      <li><span class="codeph"> nc</span> - não contém</li> 
-     <li><span class="codeph"> sw</span> - começa com</li> 
-     <li><span class="codeph"> ew</span> - termina com</li> 
+     <li><span class="codeph"> sw</span> - start com</li> 
+     <li><span class="codeph"> ew</span>  - termina com</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> String</span></td> 
    <td><span class="codeph"> prioridade</span></td> 
-   <td>O valor deve ser sempre <span class="codeph"></span></td> 
+   <td>O valor deve ser sempre <span class="codeph"> priority</span></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Matriz</span></td> 
    <td></td> 
-   <td> <p>O TVSDK usará o atributo de <span class="codeph"> correspondência</span> no <span class="codeph"> item</span> do criativo de origem e corresponderá aos valores definidos nesta matriz</p> </td> 
+   <td> <p>O TVSDK usará o atributo <span class="codeph"> corresponde</span> no <span class="codeph"> item</span> do criativo de origem e corresponderá aos valores definidos nesta matriz</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> stream</span></td> 
