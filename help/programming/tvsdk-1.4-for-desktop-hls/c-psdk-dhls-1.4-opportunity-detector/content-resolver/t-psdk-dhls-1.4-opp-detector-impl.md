@@ -6,6 +6,9 @@ title: Implementar um detector de oportunidade personalizado
 uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Você pode implementar seus próprios detectores de oportunidade.
 
-* Se o gerador de oportunidades for baseado em `TimedMetadata` objetos associados ao fluxo de mídia atual, ele deverá estender o `SpliceOutOpportunityGenerator` ou `TimedMetadataOpportunityGenerator`.
+* Se seu gerador de oportunidades for baseado em `TimedMetadata` objetos associados ao fluxo de mídia atual, ele deverá estender `SpliceOutOpportunityGenerator` ou `TimedMetadataOpportunityGenerator`.
 
 * Se o seu gerador de oportunidades for baseado em dados fora de banda fornecidos por um serviço externo (como um CIS), ele deverá estender o `OpportunityGenerator`.
 
@@ -23,7 +26,7 @@ Você pode implementar seus próprios detectores de oportunidade.
        Se o seu gerador de oportunidade personalizado for baseado em objetos TimedMetadata, estenda &quot;TimedMetadataOpportunityGenerator&quot; e substitua estes métodos:
    
    * `doConfigure` - Este método é chamado após a criação do item do player de mídia e oferece o gerador de oportunidades para criar um conjunto inicial de oportunidades, se necessário
-   * `doProcess` - Este método é chamado sempre que novas `TimedMetadata` forem detectadas (por exemplo, para fluxos ao vivo/lineares toda vez que a lista de reprodução/manifesto for atualizado)
+   * `doProcess` - Este método é chamado sempre que  `TimedMetadata` for detectada uma nova ocorrência (por exemplo, para fluxos ao vivo/lineares toda vez que a lista de reprodução/manifesto for atualizado)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
