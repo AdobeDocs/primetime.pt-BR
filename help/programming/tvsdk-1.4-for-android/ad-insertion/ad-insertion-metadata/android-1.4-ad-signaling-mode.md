@@ -6,15 +6,18 @@ title: Modo de sinalização de anúncios
 uuid: 7d2f61bc-ea66-4ac4-ae71-ffee69ef0036
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
-# Modo de sinalização de anúncios {#ad-signaling-mode}
+# Modo de sinalização de anúncio {#ad-signaling-mode}
 
 O modo de sinalização de anúncio especifica onde o fluxo de vídeo deve obter informações de publicidade.
 
-Os valores válidos são `DEFAULT`, `SERVER_MAP`e `MANIFEST_CUES`.
+Os valores válidos são `DEFAULT`, `SERVER_MAP` e `MANIFEST_CUES`.
 
 A tabela a seguir descreve o efeito de `AdSignalingMode` valores para vários tipos de fluxo HLS:
 
