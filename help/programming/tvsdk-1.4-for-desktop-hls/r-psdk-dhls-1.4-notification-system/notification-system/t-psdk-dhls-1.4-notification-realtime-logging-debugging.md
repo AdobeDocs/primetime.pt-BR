@@ -6,6 +6,9 @@ title: Adicionar registro e depuração em tempo real
 uuid: 568ea2e7-963b-427e-9cb2-e261e4423902
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -22,16 +25,16 @@ O sistema de notificação permite coletar informações de registro e depuraç�
 
 Este é um exemplo de como recuperar notificações.
 
-1. Crie um thread de execução com base em temporizador para seu aplicativo de vídeo que consulta periodicamente os dados coletados pelo sistema de notificação TVSDK.
+1. Crie um thread de execução com base em temporizador para seu aplicativo de vídeo que query periodicamente os dados coletados pelo sistema de notificação TVSDK.
 
-1. Se o intervalo do temporizador for muito grande e o tamanho da lista de eventos for muito pequeno, a lista de eventos de notificação será estendida. Para evitar esse sobrefluxo, execute um dos procedimentos a seguir:
+1. Se o intervalo do temporizador for muito grande e o tamanho da lista do evento for muito pequeno, a lista do evento de notificação estourará. Para evitar esse sobrefluxo, execute um dos procedimentos a seguir:
 
    * Diminua o intervalo de tempo que direciona o thread que pesquisa novos eventos.
-   * Aumente o tamanho da lista de notificações.
+   * Aumente o tamanho da lista de notificação.
 
-1. Serialize as entradas de evento de notificação mais recentes no formato JSON e envie as entradas para um servidor remoto para pós-processamento.
+1. Serialize as entradas mais recentes do evento de notificação no formato JSON e envie as entradas para um servidor remoto para pós-processamento.
 
    O servidor remoto poderia então exibir graficamente os dados fornecidos em tempo real.
-1. Para detectar a perda de eventos de notificação, procure por lacunas na sequência de valores de índice de eventos.
+1. Para detectar a perda de eventos de notificação, procure por lacunas na sequência de valores de índice de evento.
 
-   Cada evento de notificação tem um valor de índice que é incrementado automaticamente pela `NotificationHistory` classe.
+   Cada evento de notificação tem um valor de índice que é incrementado automaticamente pela classe `NotificationHistory`.
