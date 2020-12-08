@@ -1,16 +1,12 @@
 ---
-source-git-commit: cb347453d4a08b869842aaaaca61538095978c91
+source-git-commit: 8c828661016782f79257c11708bf7cac618853b7
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '460'
-ht-degree: 6%
+source-wordcount: '378'
+ht-degree: 7%
 
 ---
 # Artigo do Contribute
-
-| EXL-PR | EXL | Pré-visualização | Ativar | Publicado | Ajuda |
-|--- |--- |--- |--- |--- |--- |
-| [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/lastBuild/) | [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/lastBuild) | [URL de pré-visualização](https://experienceleague.corp.adobe.com/docs/primetime/programming/home.html?lang=en) | [ativate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [Live URL](https://experienceleague.adobe.com/docs/primetime/programming/home.html?lang=en) | [Guia de criação](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 Saudamos as contribuições de nossa comunidade, bem como de funcionários do Adobe de fora das equipes de documentação.
 
@@ -20,13 +16,13 @@ Este projeto adotou o [Código de conduta de código aberto da Adobe](code-of-co
 
 ## Sobre suas contribuições para o conteúdo de Adobe
 
-Consulte o Guia [do colaborador de](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)Adobe Docs.
+Consulte o [Guia do colaborador de documentos do Adobe](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
 
 A forma como você contribui depende de quem você é e do tipo de mudanças que você gostaria de contribuir:
 
 ### Alterações menores
 
-Se você estiver contribuindo com atualizações secundárias devido à bondade de seu coração, visite o artigo e clique no link **Editar** no artigo que vai para a fonte GitHub do artigo. Em seguida, use a interface do usuário do GitHub para fazer suas atualizações. Consulte o guia [geral do colaborador de](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) Adobe Docs para obter mais informações.
+Se você estiver contribuindo com atualizações secundárias devido à bondade de seu coração, visite o artigo e clique no link **Editar** no artigo que vai para a fonte GitHub do artigo. Em seguida, use a interface do usuário do GitHub para fazer suas atualizações. Consulte o guia geral [do colaborador do Adobe Docs](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) para obter mais informações.
 
 Pequenas correções ou esclarecimentos que você submete para documentação e exemplos de código neste acordo de recompra são cobertos pelos termos de uso do Adobe.
 
@@ -46,7 +42,7 @@ Se você for um gravador técnico, gerente de programas ou desenvolvedor da equi
 
 Os contribuidores comunitários podem usar a interface do usuário do GitHub para a edição básica ou garfo do acordo de recompra para dar contribuições importantes.
 
-Consulte o Guia [do colaborador de](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) Adobe Docs para obter detalhes.
+Consulte o [Guia do colaborador de documentos do Adobe](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) para obter detalhes.
 
 ## Como usar a marcação para formatar seu tópico
 
