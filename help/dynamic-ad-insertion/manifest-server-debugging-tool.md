@@ -13,9 +13,9 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 3efbd1113e82c4d5f84798997b6f744daf6f508e
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -309,7 +309,7 @@ Registros desse tipo de solicitações de log feitas pelo servidor manifest para
 
 ### TRACE_WEBVTT_RESPONSE registra {#trace-webvtt-response-records}
 
-Registra ``of ``este ``type ``log ``responses ``o ``manifest ``servidor ``sends ``para ``clients ``em `` `answer` ``para ``requests `` `for` ``WEBVTT ``legendas. Os campos além de TRACE_WEBVTT_RESPONSE &quot;aparecem na ordem mostrada na tabela, separando `by`guias.
+Registros desse tipo de respostas de log que o servidor manifest envia aos clientes em resposta a solicitações de legendas `WEBVTT`. Os campos além de `TRACE_WEBVTT_RESPONSE` aparecem na ordem mostrada na tabela, separados por guias.
 
 | Campo | Tipo | Descrição |
 |--- |--- |--- |
