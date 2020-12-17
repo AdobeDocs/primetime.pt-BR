@@ -1,28 +1,52 @@
 ---
-title: Notas de versão do PTAI 20.10.1
-description: As notas de versão PTAI 20.10.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Ad Insertion no ano 2020.
+title: Notas de versão do PTAI 20.12.1
+description: As notas de versão do PTAI descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Ad Insertion em 2020.
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1081'
 ht-degree: 0%
 
 ---
 
 
-# Notas de versão do Primetime Ad Insertion 20.10.1
+# Notas de versão do Primetime Ad Insertion 20.12.1
 
-As notas de versão do Primetime Ad Insertion 20.10.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Ad Insertion no ano 2020.
+As notas de versão do Primetime Ad Insertion 20.12.1 descrevem o que é novo ou alterado, os problemas resolvidos e os problemas conhecidos no Primetime Ad Insertion no ano 2020.
 
-## Novidades do PTAI 20.10.1
+## Novidades do PTAI 20.12.1
+
+**Quando:** terça-feira, 8 de dezembro de 2020, das 01h00 às 04h00, horário do leste
+
+**Alterações**
+
+* Inclui hotfix para resolver problemas intermitentes de conectividade de cliente (5xx) no Primetime Ad Insertion encontrado em 30 de novembro de 2020.
+
+### Aprimoramentos e correções nas versões anteriores
+
+#### Versão 201.11.1
+
+**Quando:** quinta-feira, 5 de novembro de 2020, das 2h00 às 05h00, horário do leste
+
+**Alterações**
+
+* Atualizações de manutenção.
+
+#### Versão 201.10.2
+
+**Quando:** quinta-feira, 29 de outubro de 2020, das 12h01 às 06h00, horário do leste
+
+**Alterações**
+
+* Atualizações de manutenção.
+
+#### Versão 201.10.1
 
 **Quando:** terça-feira, 13 de outubro de 2020, das 03:00 às 07:00, horário do leste
 
 **Alterações**
 
 * Atualizações de manutenção.
-
-### Aprimoramentos e correções nas versões anteriores
 
 #### Versão 20.9.3
 
