@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Notas de versão do Primetime
 user-guide-description: Fornece informações específicas sobre versão, requisitos de sistema, limitações, problemas corrigidos e problemas conhecidos.
 translation-type: tm+mt
-source-git-commit: c17145da29d148f3dbfe1bcd1011acfa7177bc25
+source-git-commit: d1b79fb39c0f51b6e06653caaaaa491aef7129d7
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -17,7 +17,7 @@ ht-degree: 14%
 
 + [Visão geral das notas de versão](home.md)
 + Primetime Ad Insertion {#ptai}
-   + [Notas de versão do PTAI 21.1.1](ptai-21x-release-notes.md)
+   + [Notas de versão do PTAI 21.1.2](ptai-21x-release-notes.md)
    + [Notas de versão do PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Notas de versão do PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK para iOS {#tvsdk-ios}
