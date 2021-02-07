@@ -4,7 +4,7 @@ seo-title: Notas de versão do Adobe Primetime
 description: nulo
 seo-description: nulo
 translation-type: tm+mt
-source-git-commit: d1b79fb39c0f51b6e06653caaaaa491aef7129d7
+source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 39%
@@ -16,9 +16,9 @@ ht-degree: 39%
 
 Bem-vindo às Notas de versão da Adobe Primetime. Os documentos listados na navegação esquerda fornecem informações específicas da versão, requisitos do sistema, limitações, problemas fixos e problemas conhecidos.
 
-## Aprimoramentos e correções no PTAI 21.1.2
+## Aprimoramentos e correções no PTAI 21.2.1
 
-A versão inclui a atualização dos clusters de memória backend do Primetime Ad Insertion.
+A versão inclui suporte para otimização de saída DASH: consolidação de nó baseada em tempo.
 
 ## Correções no Android TVSDK 3.12
 
