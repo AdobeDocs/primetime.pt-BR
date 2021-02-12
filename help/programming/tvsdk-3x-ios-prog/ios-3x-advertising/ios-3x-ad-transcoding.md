@@ -5,9 +5,9 @@ seo-title: Reempacotar anúncios incompatíveis usando o serviço de reempacotam
 title: Reempacotar anúncios incompatíveis usando o serviço de reempacotamento da Creative Adobe
 uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,6 @@ Os anúncios veiculados de vários terceiros, como um servidor de agência, seu 
 Quando o TVSDK encontra um anúncio incompatível pela primeira vez, o player ignora o anúncio e emite uma solicitação para o serviço de reempacotamento de anúncios (CRS), que faz parte do back-end de inserção de anúncios do Primetime, para reempacotar o anúncio em um formato compatível. O CRS tenta gerar execuções M3U8 de taxa múltipla do anúncio e armazena essas execuções no Primetime Content Delivery Network (CDN). Na próxima vez que o TVSDK receber uma resposta de anúncio que aponte para esse anúncio, o player usará a versão M3U8 compatível com HLS do CDN.
 
 Para ativar este recurso opcional, entre em contato com seu representante de Adobe.
-
-Para obter mais informações sobre o CRS, consulte [Creative Packaging Service (CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Suporte a vários CDN para delivery de anúncio CRS {#section_900FDDA5454143718F1EB4C9732C8E1C}
 
