@@ -4,10 +4,10 @@ seo-title: Notas de versão do Adobe Primetime
 description: nulo
 seo-description: nulo
 translation-type: tm+mt
-source-git-commit: ff723dd66ff4c576bf5c70f5fb061962d021e330
+source-git-commit: 0c0ef7249688137a67482eab902e9d188b4c661c
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 39%
+source-wordcount: '297'
+ht-degree: 36%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 39%
 
 Bem-vindo às Notas de versão da Adobe Primetime. Os documentos listados na navegação esquerda fornecem informações específicas da versão, requisitos do sistema, limitações, problemas fixos e problemas conhecidos.
 
-## Aprimoramentos e correções no PTAI 21.2.1
+## Aprimoramentos e correções no PTAI 21.2.2
 
-A versão inclui suporte para otimização de saída DASH: consolidação de nó baseada em tempo.
+A versão inclui suporte para inserção/sincronização do fluxo EXT-X-IMAGE-STREAM-INF em fluxos HLS. O recurso é ativado por meio de uma configuração no servidor. Entre em contato com seu representante de conta técnica para ativar o recurso.
 
 ## Correções no Android TVSDK 3.12
 
