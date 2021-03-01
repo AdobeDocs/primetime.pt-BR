@@ -16,7 +16,7 @@ ht-degree: 14%
 # Notas de versão do Primetime  {#release-notes}
 
 + [Visão geral das notas de versão](home.md)
-+ Primetime Ad Insertion {#ptai}
++ Inserção de anúncio do Primetime {#ptai}
    + [Notas de versão do PTAI 21.2.2](ptai-21x-release-notes.md)
    + [Notas de versão do PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Notas de versão do PTAI 19.11.1](ptai-19x-release-notes.md)
@@ -29,14 +29,14 @@ ht-degree: 14%
    + [Notas de versão do TVSDK 2.4.1 para Android](tvsdk-24-android.md)
    + [Notas de versão do TVSDK 1.4 para Android](tvsdk-1-4-android.md)
 + TVSDK do navegador {#browser-tvsdk}
-   + [Notas de versão do navegador TVSDK 2.4](tvsdk-24-browser.md)
+   + [Notas de versão do Browser TVSDK 2.4](tvsdk-24-browser.md)
 + TVSDK para Desktop HLS {tvsdk-desktop-hls}
    + [Notas de versão do TVSDK 1.4 para Desktop HLS](tvsdk-1-4-desktop-hls.md)
-+ Primetime Offline Packager {#offline-packager}
-   + [Versões do Primetime Offline Packager versão 2](offline-packager-2x-release-note.md)
-+ Servidor de Streaming Primetime {#streaming-server}
-   + [Versões do Primetime Streaming Server versão 1](primetime-streaming-server-1x.md)
++ Pacote Offline do Primetime {#offline-packager}
+   + [Versões 2 do Primetime Offline Packager](offline-packager-2x-release-note.md)
++ Servidor de transmissão do Primetime {#streaming-server}
+   + [Versões 1 do Primetime Streaming Server](primetime-streaming-server-1x.md)
 + TVSDK para Playstation 4 {#tvsdk-playstation}
    + [Notas de versão do TVSDK 2.1 PlayStation 4](tvsdk-21-ps4.md)
-+ Digital Rights Management {#drm}
++ Gerenciamento de direitos digitais {#drm}
    + [Notas de versão do DRM 5.3.1](drm-531-release-notes.md)
