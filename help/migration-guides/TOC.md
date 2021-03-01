@@ -16,5 +16,5 @@ ht-degree: 64%
 # Ajuda da migração do Primetime  {#migration}
 
 + [Visão geral da ajuda da migração](home.md)
-+ [TVSDK 1.4 a 2.5 para Android (Java)](tvsdk-14-25-android.md)
-+ [Conversão TVSDK - 1.3 para 2.0 para JavaScript](tvsdk-13-to-20-for-javascript.md)
++ [TVSDK 1.4 para 2.5 para Android (Java)](tvsdk-14-25-android.md)
++ [Conversão de TVSDK - 1.3 para 2.0 para JavaScript](tvsdk-13-to-20-for-javascript.md)
