@@ -1,13 +1,10 @@
 ---
-description: Você pode remover TimeRanges entre o início e o fim em localTime da linha do tempo.
-seo-description: Você pode remover TimeRanges entre o início e o fim em localTime da linha do tempo.
-seo-title: Excluir intervalos
+description: Você pode remover Intervalos de tempo entre o início e o fim em localTime da linha do tempo.
 title: Excluir intervalos
-uuid: 637829a7-efa8-4b83-9a04-ef01c043621f
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '75'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Excluir intervalos{#delete-ranges}
 
-Você pode remover TimeRanges entre o início e o fim em localTime da linha do tempo.
+Você pode remover Intervalos de tempo entre o início e o fim em localTime da linha do tempo.
 
 >[!TIP]
 >
@@ -23,7 +20,7 @@ Você pode remover TimeRanges entre o início e o fim em localTime da linha do t
 
 O mapa de anúncios deve ser usado conforme definido pelo servidor de anúncios.
 
-1. Para excluir intervalos com um anúncio de decisão de anúncio do Adobe Primetime:
+1. Para excluir intervalos com um anúncio de decisão do Adobe Primetime:
 
    ```
    {   
