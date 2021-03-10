@@ -1,13 +1,10 @@
 ---
-description: Quando a reprodução inclui publicidade, o TVSDK envia eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
-seo-description: Quando a reprodução inclui publicidade, o TVSDK envia eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
-seo-title: Ordem dos eventos publicitários
+description: Quando a reprodução inclui publicidade, o TVSDK despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 title: Ordem dos eventos publicitários
-uuid: 34a6a606-2f2e-42de-88fd-c91202cafddf
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
@@ -15,14 +12,14 @@ ht-degree: 0%
 
 # Ordem dos eventos de publicidade{#order-of-advertising-events}
 
-Quando a reprodução inclui publicidade, o TVSDK envia eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
+Quando a reprodução inclui publicidade, o TVSDK despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 
 <!--<a id="section_69E3CCBC57BB48399799876E83908348"></a>-->
 
-Ao reproduzir publicidades, a ordem dos eventos é:
+Ao reproduzir anúncios, a ordem dos eventos é:
 
 * `AdBreakPlaybackEvent.AD_BREAK_STARTED`
-* Os seguintes anúncios são enviados para cada anúncio no intervalo de anúncios:
+* Os itens a seguir são despachados para cada anúncio no ad break:
 
    * `AdPlaybackEvent.AD_STARTED`
    * `AdPlaybackEvent.AD_PROGRESS` (várias vezes durante a reprodução de um anúncio)
