@@ -1,21 +1,18 @@
 ---
-description: Essas classes permitem que você personalize o registro em log.
-seo-description: Essas classes permitem que você personalize o registro em log.
-seo-title: Classes de registro
+description: Essas classes permitem personalizar o registro.
 title: Classes de registro
-uuid: feb4ee77-37de-4260-85fa-4931e059e034
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
 
-# Registrar classes{#logging-classes}
+# Registrando classes{#logging-classes}
 
-Essas classes permitem que você personalize o registro em log.
+Essas classes permitem personalizar o registro.
 
 <table frame="all" colsep="1" rowsep="1" id="table_389797D3CEF14EA2862E0B20C6E6CC41"> 
  <thead> 
@@ -27,15 +24,15 @@ Essas classes permitem que você personalize o registro em log.
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1" rowsep="0"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogEntry.html" format="html" scope="external"> PTLogEntry</a> </td> 
-   <td colname="2" rowsep="0"> Classe que define um log de entrada e armazena informações sobre uma mensagem de log. </td> 
+   <td colname="2" rowsep="0"> Classe que define um log de entrada e mantém informações sobre uma mensagem de log. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogFactory.html" format="html" scope="external"> PTLogFactory</a> </td> 
-   <td colname="2"> Classe que permite o registro personalizado.</td> 
+   <td colname="2"> Classe que permite o logon personalizado.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLogger</a> </td> 
-   <td colname="2"> Protocolo. Os métodos necessários para implementar um agente de log personalizado para o TVSDK. </td> 
+   <td colname="2"> Protocolo Os métodos necessários para implementar um logger personalizado para o TVSDK. </td> 
   </tr> 
  </tbody> 
 </table>
