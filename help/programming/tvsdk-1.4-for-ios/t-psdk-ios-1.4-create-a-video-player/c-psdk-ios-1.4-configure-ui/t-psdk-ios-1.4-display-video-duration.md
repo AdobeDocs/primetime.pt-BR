@@ -1,13 +1,10 @@
 ---
 description: Você pode exibir a duração do conteúdo ativo no momento.
-seo-description: Você pode exibir a duração do conteúdo ativo no momento.
-seo-title: Exibir a duração do vídeo
 title: Exibir a duração do vídeo
-uuid: 02042070-9c55-4cbb-9dc1-49987451eb8f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -19,10 +16,10 @@ Você pode exibir a duração do conteúdo ativo no momento.
 
 Implemente uma exibição de duração do vídeo usando o seguinte código de amostra:
 
-    A propriedade `PTMediaPlayer&#39;, [SEKableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange), contém o intervalo de janelas pesquisável atual:
+    A propriedade `PTMediaPlayer`, [SekableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange), contém o intervalo de janelas buscável atual:
     
-    * Para VOD, esse intervalo é o intervalo de conteúdo VOD inteiro, incluindo anúncios.
-    * Para live/linear, esse intervalo representa a janela que pode ser buscada.
+    * Para VOD, esse intervalo é todo o intervalo de conteúdo de VOD, incluindo anúncios.
+    * Para live/linear, esse intervalo representa a janela pesquisável.
     
     Para obter mais informações sobre a API, consulte [TVSDK 1.4 para referência à API do iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/index.html)
 
