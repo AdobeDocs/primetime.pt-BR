@@ -1,25 +1,22 @@
 ---
 description: O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
-seo-description: O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
-seo-title: Implementar gerenciamento de blecaute
-title: Implementar gerenciamento de blecaute
-uuid: 3b4e3f53-0e27-4369-85f2-940380ed16ac
+title: Implementar o gerenciamento de blecaute
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
 
-# Implementar a manipulação de blecautes{#implement-blackout-handling}
+# Implementar o tratamento de blecaute{#implement-blackout-handling}
 
 O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
 
-Para implementar o tratamento de blecaute, incluindo fornecer conteúdo alternativo durante o blecaute:
+Para implementar a manipulação de blecaute, incluindo o fornecimento de conteúdo alternativo durante o blecaute:
 
-1. Configure seu aplicativo para detectar tags de blecaute em um manifesto de fluxo ao vivo.
+1. Configure seu aplicativo para detectar tags de blecaute em um manifesto de transmissão ao vivo.
 
    ```
    private function startPlayback(resource:MediaResource):void { 
@@ -160,7 +157,7 @@ Para implementar o tratamento de blecaute, incluindo fornecer conteúdo alternat
    }
    ```
 
-1. Crie métodos para alternar o conteúdo no start e no final do período de blecaute.
+1. Crie métodos para alternar o conteúdo no início e no fim do período de blecaute.
 
    ```
    public function initiate(event:TimerEvent=null):void { 
