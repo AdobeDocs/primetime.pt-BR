@@ -1,13 +1,10 @@
 ---
-description: O TVSDK fornece elementos de API úteis na implementação de blecautes, incluindo métodos, metadados e notificações.
-seo-description: O TVSDK fornece elementos de API úteis na implementação de blecautes, incluindo métodos, metadados e notificações.
-seo-title: Elementos da API de blecaute
+description: O TVSDK fornece elementos de API úteis ao implementar blecautes, incluindo métodos, metadados e notificações.
 title: Elementos da API de blecaute
-uuid: 65e1668c-6a19-4910-83a2-46d364e94e5f
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -15,25 +12,25 @@ ht-degree: 0%
 
 # Elementos da API de blecaute{#blackout-api-elements}
 
-O TVSDK fornece elementos de API úteis na implementação de blecautes, incluindo métodos, metadados e notificações.
+O TVSDK fornece elementos de API úteis ao implementar blecautes, incluindo métodos, metadados e notificações.
 
-Você pode usar o seguinte ao implementar uma solução de blecaute no player.
+Você pode usar o seguinte ao implementar uma solução de blecaute no reprodutor.
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Salva o recurso carregado no momento como o recurso em segundo plano. Se `replaceCurrentResource` for chamado após esse método, o TVSDK continuará baixando o manifesto do item em segundo plano até que você chame `unregisterCurrentBackgroundItem`.
+   * `registerCurrentItemAsBackgroundItem` Salva o recurso carregado no momento como o recurso em segundo plano. Se `replaceCurrentResource` for chamado após esse método, o TVSDK continuará baixando o manifesto do item de segundo plano até que você chame `unregisterCurrentBackgroundItem`.
 
    * `unregisterCurrentBackgroundItem`  Limpa o recurso em segundo plano definido no momento e para de buscar e analisar o manifesto em segundo plano.
 
-* **Tipo de Metadados de** BlecauteMetadadosUm tipo de Metadados que é específico para blecautes.
+* **** Tipo de metadados BlackoutMetadata que é específico para blecautes.
 
-   Isso permite definir intervalos não pesquisáveis (um atributo `TimeRange` adicional chamado `nonseekableRange`) no TVSDK. O TVSDK verifica esses intervalos (se a posição de busca desejada está dentro de `nonseekableRange`) toda vez que o usuário busca. Se estiver definido e o usuário buscar em um intervalo não pesquisável, o TVSDK força o visualizador para a hora de término do `seekableRange`.
+   Isso permite que você defina intervalos não pesquisáveis (um atributo `TimeRange` adicional chamado `nonseekableRange`) no TVSDK. O TVSDK verifica esses intervalos (se a posição de busca desejada está dentro de um `nonseekableRange`) toda vez que o usuário procura. Se estiver definido e o usuário buscar em um intervalo não pesquisável, o TVSDK força o visualizador para a hora final do `seekableRange`.
 
-* **START AQUI** **** NEXTDefaultMetadataKeysAtive ou desative a pré-rolagem em um fluxo ao vivo definindo  `ENABLE_LIVE_PREROLL` como verdadeiro ou falso. Se falso, o TVSDK não faz uma chamada explícita do servidor de publicidade para anúncios precedentes antes da reprodução do conteúdo e, portanto, não reproduz o pré-roll. Isso não tem impacto sobre os andares médios. O padrão é verdadeiro.
+* **INICIE AQUI** **** NEXTDefaultMetadataKeysEnable ou desative a pré-visualização em um stream ao vivo definindo  `ENABLE_LIVE_PREROLL` como true ou false. Se falso, o TVSDK não faz uma chamada explícita de servidor de publicidade para anúncios antes da reprodução do conteúdo e, portanto, não reproduz o anúncio precedente. Isso não tem impacto sobre os rolos médios. O padrão é true.
 
 * **TimedMetadataEvent**
 
-   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` Subtipo de evento - Despachado quando o TVSDK detecta uma tag subscrita no manifesto do plano de fundo.
+   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` subtipo de evento - Despachado quando o TVSDK detecta uma tag subscrita no manifesto em segundo plano.
 
 * **Notificações**
 
