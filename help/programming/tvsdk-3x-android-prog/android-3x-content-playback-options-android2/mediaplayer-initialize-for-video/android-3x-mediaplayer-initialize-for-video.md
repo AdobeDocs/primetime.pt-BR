@@ -1,16 +1,13 @@
 ---
-description: Para cada novo conteúdo de vídeo, inicialize uma instância MediaResource com informações sobre o conteúdo de vídeo e carregue o recurso de mídia.
-seo-description: Para cada novo conteúdo de vídeo, inicialize uma instância MediaResource com informações sobre o conteúdo de vídeo e carregue o recurso de mídia.
-seo-title: Inicialize o player de mídia para um vídeo específico
-title: Inicialize o player de mídia para um vídeo específico
-uuid: aff3a71f-6e01-49af-9791-84db9f095238
+description: Para cada novo conteúdo de vídeo, inicialize uma instância MediaResource com informações sobre o conteúdo do vídeo e carregue o recurso de mídia.
+title: Inicializar o reprodutor de mídia para um vídeo específico
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '36'
 ht-degree: 0%
 
 ---
 
 
-# Inicialize o player de mídia para um vídeo específico {#initialize-the-media-player-for-a-specific-video}
+# Inicialize o reprodutor de mídia para um vídeo específico {#initialize-the-media-player-for-a-specific-video}
