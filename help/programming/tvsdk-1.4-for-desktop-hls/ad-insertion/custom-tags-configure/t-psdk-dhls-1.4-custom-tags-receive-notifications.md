@@ -1,13 +1,10 @@
 ---
-description: Para receber notificações sobre tags no manifesto, registre os ouvintes de evento apropriados.
-seo-description: Para receber notificações sobre tags no manifesto, registre os ouvintes de evento apropriados.
-seo-title: Adicionar ouvintes para notificações de metadados cronometrados
+description: Para receber notificações sobre tags no manifesto, registre os ouvintes de eventos apropriados.
 title: Adicionar ouvintes para notificações de metadados cronometrados
-uuid: 419f4204-e3c3-4608-beb4-4cd259c8474d
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -15,21 +12,21 @@ ht-degree: 0%
 
 # Adicionar ouvintes para notificações de metadados cronometrados{#add-listeners-for-timed-metadata-notifications}
 
-Para receber notificações sobre tags no manifesto, registre os ouvintes de evento apropriados.
+Para receber notificações sobre tags no manifesto, registre os ouvintes de eventos apropriados.
 
-Você pode monitorar os metadados cronometrados ouvindo os seguintes eventos, que notificam sua aplicação da atividade relacionada:
+Você pode monitorar metadados cronometrados escutando os seguintes eventos, que notificam o aplicativo da atividade relacionada:
 
-* `MediaPlayerItemEvent.ITEM_CREATED`: A lista inicial de  `TimedMetadata` objetos está disponível depois que o objeto  `MediaPlayerItem` é criado.
+* `MediaPlayerItemEvent.ITEM_CREATED`: A lista inicial de  `TimedMetadata` objetos está disponível depois que o  `MediaPlayerItem` é criado.
 
-   Este evento notifica seu aplicativo quando isso acontece.
+   Esse evento notifica seu aplicativo quando isso acontece.
 
-* `MediaPlayerItemEvent.ITEM_UPDATED`: Para fluxos ao vivo/lineares nos quais o manifesto/lista de reprodução é atualizado periodicamente, outras tags personalizadas podem aparecer na lista de reprodução/manifesto atualizado, portanto,  `TimedMetadata` objetos adicionais podem ser adicionados à  `MediaPlayerItem.timedMetadata` propriedade.
+* `MediaPlayerItemEvent.ITEM_UPDATED`: Para fluxos ao vivo/lineares onde o manifesto/lista de reprodução é atualizado periodicamente, tags personalizadas adicionais podem aparecer na lista de reprodução/manifesto atualizado, portanto,  `TimedMetadata` objetos adicionais podem ser adicionados à  `MediaPlayerItem.timedMetadata` propriedade.
 
-   Este evento notifica seu aplicativo quando isso acontece.
+   Esse evento notifica seu aplicativo quando isso acontece.
 
-* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Cada vez que um novo  `TimedMetadata` objeto é criado, esse evento é despachado pelo MediaPlayer.
+* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Cada vez que um novo  `TimedMetadata` objeto é criado, esse evento é enviado pelo MediaPlayer.
 
-   Este evento não é despachado para o objeto `TimedMetadata` criado durante a fase de inicialização.
+   Esse evento não é despachado para o objeto `TimedMetadata` criado durante a fase de inicialização.
 
 1. Implemente os ouvintes apropriados.
 
@@ -59,4 +56,4 @@ Você pode monitorar os metadados cronometrados ouvindo os seguintes eventos, qu
                            onTimedMetadataAvailable);
    ```
 
-Os metadados ID3 são enviados pelo mesmo `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`. No entanto, isso não deve causar confusão, pois você pode usar uma propriedade `type` do objeto TimedMetadata para diferenciar entre TAG e ID3. Para obter mais informações sobre tags ID3, consulte [tags ID3](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).
+Os metadados ID3 são despachados por meio do mesmo `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`. No entanto, isso não deve causar confusão, pois é possível usar a propriedade `type` de um objeto TimedMetadata para diferenciar entre TAG e ID3. Para obter mais informações sobre as tags ID3, consulte [ID3 tags](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).
