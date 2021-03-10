@@ -1,16 +1,13 @@
 ---
-description: Com o TVSDK, você pode controlar a experiência básica de reprodução de vídeo e ao vivo sob demanda (VOD). O TVSDK fornece métodos e propriedades na instância do player que você pode usar para configurar a interface do usuário do player.
-seo-description: Com o TVSDK, você pode controlar a experiência básica de reprodução de vídeo e ao vivo sob demanda (VOD). O TVSDK fornece métodos e propriedades na instância do player que você pode usar para configurar a interface do usuário do player.
-seo-title: Configurar a interface do usuário do player
-title: Configurar a interface do usuário do player
-uuid: e8ffa4fc-d6bc-4db5-a4ef-2537b08b6e5d
+description: Com o TVSDK, você pode controlar a experiência básica de reprodução de vídeo ao vivo e sob demanda (VOD). O TVSDK fornece métodos e propriedades na instância do reprodutor que você pode usar para configurar a interface do usuário do reprodutor.
+title: Configurar a interface do usuário do reprodutor
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: '45'
 ht-degree: 0%
 
 ---
 
 
-# Configurar a interface do usuário do player {#configure-the-player-user-interface}
+# Configurar a interface do usuário do reprodutor {#configure-the-player-user-interface}
