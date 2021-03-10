@@ -1,29 +1,26 @@
 ---
-description: Por padrão, o TVSDK força uma pausa de anúncio a ser reproduzida quando o usuário busca uma pausa de anúncio. Você pode personalizar o comportamento para ignorar uma quebra de anúncio se o tempo decorrido desde uma conclusão de quebra anterior estiver dentro de um determinado número de minutos.
-seo-description: Por padrão, o TVSDK força uma pausa de anúncio a ser reproduzida quando o usuário busca uma pausa de anúncio. Você pode personalizar o comportamento para ignorar uma quebra de anúncio se o tempo decorrido desde uma conclusão de quebra anterior estiver dentro de um determinado número de minutos.
-seo-title: Ignorar quebras de anúncio por um período de tempo
-title: Ignorar quebras de anúncio por um período de tempo
-uuid: f07d838b-3c1d-4cea-a3aa-dba33964ac81
+description: Por padrão, o TVSDK força a reprodução de um ad break quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um ad break se o tempo decorrido desde o término de um ad break anterior estiver em um determinado número de minutos.
+title: Ignorar ad breaks por um período de tempo
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
 
 
-# Ignorar quebras de anúncio por um período {#skip-ad-breaks-for-a-period-of-time}
+# Ignorar ad breaks por um período {#skip-ad-breaks-for-a-period-of-time}
 
-Por padrão, o TVSDK força uma pausa de anúncio a ser reproduzida quando o usuário busca uma pausa de anúncio. Você pode personalizar o comportamento para ignorar uma quebra de anúncio se o tempo decorrido desde uma conclusão de quebra anterior estiver dentro de um determinado número de minutos.
+Por padrão, o TVSDK força a reprodução de um ad break quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um ad break se o tempo decorrido desde o término de um ad break anterior estiver em um determinado número de minutos.
 
 >[!IMPORTANT]
 >
 >Quando há uma busca interna para ignorar um anúncio, pode haver uma pequena pausa na reprodução.
 
-O exemplo a seguir de um seletor de política de anúncios personalizado ignora os anúncios nos próximos cinco minutos (hora do relógio da parede) depois que um usuário assistir a uma pausa de anúncio.
+O exemplo a seguir de um seletor de política de anúncio personalizado ignora os anúncios nos próximos cinco minutos (hora do relógio da parede) depois que o usuário assiste a um ad break.
 
-1. Salve a hora atual do sistema quando o usuário terminar de assistir a uma pausa de anúncio.
+1. Salve a hora atual do sistema quando o usuário terminar de assistir um ad break.
 
    ```java
    @Override 
