@@ -1,9 +1,9 @@
 ---
-seo-title: Configuração do HSM
 title: Configuração do HSM
-uuid: 1cc5be99-c24c-4c1e-9348-fb69f96d8ca5
+description: Configuração do HSM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%
@@ -13,16 +13,16 @@ ht-degree: 0%
 
 # Configuração do HSM {#hsm-configuration}
 
-O uso de um HSM não é obrigatório, mas é recomendado. A implementação de referência pode ser configurada para usar o provedor Sun PKCS11 para suporte a HSM. Para usar uma credencial em um HSM, é necessário criar um arquivo de configuração para o provedor Sun PKCS11. Consulte a documentação do Sun para obter detalhes. Para verificar se seu arquivo de configuração HSM e Sun PKCS11 estão configurados corretamente, você pode usar o seguinte comando (keytool is installed with the Java JDK):
+Não é necessário usar um HSM, mas é recomendado. A implementação de referência pode ser configurada para usar o provedor Sun PKCS11 para suporte a HSM. Para usar uma credencial em um HSM, você deve criar um arquivo de configuração para o provedor Sun PKCS11. Consulte a documentação da Sun para obter detalhes. Para verificar se o seu arquivo de configuração HSM e Sun PKCS11 estão configurados corretamente, você pode usar o seguinte comando (keytool está instalado com o Java JDK):
 
 ```
     keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 
         -providerArg pkcs11.cfg -list
 ```
 
-Se você vir suas credenciais na lista, o HSM será configurado corretamente.
+Se você vir suas credenciais na lista, o HSM é configurado corretamente.
 
 >[!NOTE]
 >
->A partir do Java 1.7, o Sun Java para Windows de 64 bits não oferece suporte às interfaces PKCS11 que o DRM de acesso ao Adobe para se comunicar com dispositivos HSM. Se você planeja usar um HSM, use uma versão de 32 bits do Java ou um JDK que suporte as interfaces completas do PKCS11.
+>A partir do Java 1.7, o Sun Java para Windows de 64 bits não é compatível com as interfaces PKCS11 que o DRM de acesso ao Adobe requer para se comunicar com dispositivos HSM. Se você planeja usar um HSM, use uma versão de 32 bits do Java ou um JDK que seja compatível com todas as interfaces PKCS11.
 
