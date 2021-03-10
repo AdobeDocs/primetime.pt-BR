@@ -1,13 +1,10 @@
 ---
-description: Quando a reprodução atinge uma pausa de anúncio, passa uma pausa de anúncio ou termina em uma pausa de anúncio, o TVSDK define algum comportamento padrão para o posicionamento do indicador de reprodução atual.
-seo-description: Quando a reprodução atinge uma pausa de anúncio, passa uma pausa de anúncio ou termina em uma pausa de anúncio, o TVSDK define algum comportamento padrão para o posicionamento do indicador de reprodução atual.
-seo-title: Personalizar reprodução com anúncios
+description: Quando a reprodução atinge um ad break, passa um ad break ou termina em um ad break, o TVSDK define algum comportamento padrão para o posicionamento do indicador de reprodução atual.
 title: Personalizar reprodução com anúncios
-uuid: b21a2b1b-5376-41cb-a772-a8945fd56f3c
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -15,38 +12,38 @@ ht-degree: 0%
 
 # Personalizar reprodução com anúncios {#customize-playback-with-ads}
 
-Quando a reprodução atinge uma pausa de anúncio, passa uma pausa de anúncio ou termina em uma pausa de anúncio, o TVSDK define algum comportamento padrão para o posicionamento do indicador de reprodução atual.
+Quando a reprodução atinge um ad break, passa um ad break ou termina em um ad break, o TVSDK define algum comportamento padrão para o posicionamento do indicador de reprodução atual.
 
 >[!TIP]
 >
 >Você pode substituir o comportamento padrão usando a classe `PTAdPolicySelector`.
 
-O comportamento padrão varia, dependendo se o usuário passa no intervalo do anúncio durante a reprodução normal ou procurando em um vídeo.
+O comportamento padrão varia dependendo se o usuário passa o ad break durante a reprodução normal ou ao buscar em um vídeo.
 
-Você pode personalizar o comportamento de reprodução de anúncios das seguintes maneiras:
+Você pode personalizar o comportamento da reprodução de anúncio das seguintes maneiras:
 
-* Salve a posição na qual o usuário parou de assistir ao vídeo e retomará a reprodução na mesma posição em uma sessão futura.
-* Se uma pausa de anúncio for apresentada ao usuário, não exiba anúncios adicionais por alguns minutos, mesmo se o usuário buscar uma nova posição.
+* Salve a posição em que o usuário parou de assistir ao vídeo e retomou a reprodução na mesma posição em uma sessão futura.
+* Se um ad break for apresentado ao usuário, ele não exibirá anúncios adicionais por alguns minutos, mesmo se o usuário buscar uma nova posição.
 * Se o conteúdo não for reproduzido após alguns minutos, reinicie o fluxo ou faça failover para uma fonte diferente para o mesmo conteúdo.
 
-   Na sessão de reprodução de failover, para permitir que o usuário pule os anúncios e retome para a posição anterior com falha, você pode desativar os anúncios anteriores e/ou intermediários. O TVSDK fornece métodos para permitir a omissão de anúncios precedentes e intermediários.
+   Na sessão de reprodução de failover, para permitir que o usuário ignore os anúncios e retome para a posição de falha anterior, é possível desativar os anúncios precedentes e/ou intermediários. O TVSDK fornece métodos para permitir a ignorância de anúncios precedentes e intermediários.
 
 ## Elementos de API para reprodução de anúncio {#section_296ADE00CFEA40CBA1B46142720D13A5}
 
 O TVSDK fornece classes e métodos que você pode usar para personalizar o comportamento de reprodução do conteúdo que contém publicidade.
-Os seguintes elementos de API são úteis para personalizar a reprodução:
+Os seguintes elementos da API são úteis para personalizar a reprodução:
 
 <table id="table_B07E373B9D2B425AB36466B1D42411AD"> 
  <thead> 
   <tr> 
    <th colname="col1" class="entry"><b>Elemento da API</b></th> 
-   <th colname="col2" class="entry"><b>Conteúdo que suporta publicidade</b></th> 
+   <th colname="col2" class="entry"><b>Conteúdo compatível com publicidade</b></th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTAdMetadata  </span> </td> 
-   <td colname="col2"> Controle se uma quebra de anúncio deve ser marcada como assistida por um visualizador e, em caso afirmativo, quando marcá-la. Defina e obtenha a política assistida usando a propriedade <span class="codeph"> adBreakAsWatched </span>. </td> 
+   <td colname="col2"> Controle se um ad break deve ser marcado como visto por um visualizador e, em caso positivo, quando marcá-lo. Defina e obtenha a política assistida usando a propriedade <span class="codeph"> adBreakAsWatched </span> . </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTAdPolicySelector  </span> </td> 
@@ -60,14 +57,14 @@ Os seguintes elementos de API são úteis para personalizar a reprodução:
    <td colname="col1"> <span class="codeph"> PTMediaPlayer  </span> </td> 
    <td colname="col2"> 
     <ul id="ul_37700A741403448A8760FDDA68B099AA"> 
-     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime  </span>. <p>Esta é a hora local da reprodução, exceto as pausas de anúncio inseridas. </p> </li> 
-     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime  </span> . <p>Aqui, a busca ocorre em relação a uma hora local no fluxo. </p> </li> 
-     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime  </span>. <p>A posição virtual na linha do tempo é convertida para a posição local. </p> </li> 
+     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime  </span>. <p>Esse é o horário local da reprodução, excluindo as quebras de anúncio. </p> </li> 
+     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime  </span> . <p>Aqui, a busca ocorre em relação a um horário local no fluxo. </p> </li> 
+     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.conversionToLocalTime  </span>. <p>A posição virtual na linha do tempo é convertida para a posição local. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTAdBreak  </span> </td> 
-   <td colname="col2"> <span class="codeph">  </span> propriedade isWatched. Indica se o visualizador assistiu ao anúncio. </td> 
+   <td colname="col2"> <span class="codeph">  </span> propriedade isWatched Indica se o visualizador assistiu ao anúncio. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -76,11 +73,11 @@ Os seguintes elementos de API são úteis para personalizar a reprodução:
 
 Antes de personalizar ou substituir comportamentos de publicidade, registre a instância da política de publicidade no TVSDK.
 
-Para personalizar os comportamentos de publicidade, execute um dos procedimentos a seguir:
+Para personalizar os comportamentos do anúncio, siga um destes procedimentos:
 
-* Conformar-se com o protocolo `PTAdPolicySelector` e implementar todos os métodos de seleção de política necessários.
+* Siga o protocolo `PTAdPolicySelector` e implemente todos os métodos de seleção de política necessários.
 
-   Essa opção é recomendada se você precisar substituir **all** os comportamentos padrão do anúncio.
+   Essa opção é recomendada se você precisar substituir **all** os comportamentos de publicidade padrão.
 
 * Substitua a classe `PTDefaultAdPolicySelector` e forneça implementações somente para os comportamentos que exigem personalização.
 
@@ -88,11 +85,11 @@ Para personalizar os comportamentos de publicidade, execute um dos procedimentos
 
 Para ambas as opções, conclua as seguintes tarefas:
 
-1. Registre a instância de política a ser usada pelo TVSDK na fábrica do cliente.
+1. Registre a instância de política a ser usada pelo TVSDK por meio da fábrica do cliente.
 
    >[!NOTE]
    >
-   >As políticas de publicidade personalizadas registradas no início da reprodução são apagadas quando a instância `PTMediaPlayer` é desalocada. Seu aplicativo deve registrar uma instância do seletor de política sempre que uma nova sessão de reprodução for criada.
+   >As políticas de anúncio personalizadas registradas no início da reprodução são apagadas quando a instância `PTMediaPlayer` é desalocada. O aplicativo deve registrar uma instância do seletor de políticas sempre que uma nova sessão de reprodução for criada.
 
    Por exemplo:
 
@@ -107,17 +104,17 @@ Para ambas as opções, conclua as seguintes tarefas:
 
 1. Implemente suas personalizações.
 
-## Ignorar quebras de anúncio por um período {#section_99809BE4D9BB4DEEBBF596C746CA428A}
+## Ignorar ad breaks por um período {#section_99809BE4D9BB4DEEBBF596C746CA428A}
 
-Por padrão, o TVSDK força uma pausa de anúncio a ser reproduzida quando o usuário busca uma pausa de anúncio. Você pode personalizar o comportamento para ignorar uma quebra de anúncio se o tempo decorrido desde uma conclusão de quebra anterior estiver dentro de um determinado número de minutos.
+Por padrão, o TVSDK força a reprodução de um ad break quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um ad break se o tempo decorrido desde o término de um ad break anterior estiver em um determinado número de minutos.
 
 >[!IMPORTANT]
 >
 >Quando há uma busca interna para ignorar um anúncio, pode haver uma pequena pausa na reprodução.
 
-O exemplo a seguir de um seletor de política de anúncios personalizado ignora os anúncios nos próximos cinco minutos (hora do relógio da parede) depois que um usuário assistir a uma pausa de anúncio.
+O exemplo a seguir de um seletor de política de anúncio personalizado ignora os anúncios nos próximos cinco minutos (hora do relógio da parede) depois que o usuário assiste a um ad break.
 
-1. Registre a instância de política a ser usada pelo TVSDK na fábrica do cliente.
+1. Registre a instância de política a ser usada pelo TVSDK por meio da fábrica do cliente.
 
    ```
    // Create an instance of the custom policy selector 
@@ -252,23 +249,23 @@ double MIN_BREAK_INTERVAL  = 60 * 5; // 5 minutes
 
 ## Salve a posição do vídeo e retome mais tarde {#section_FAE252E38CED48D4BDD38BAA4A6A20A4}
 
-Você pode salvar a posição de reprodução atual em um vídeo e retomar a reprodução na mesma posição em uma sessão futura.
+Você pode salvar a posição atual da reprodução em um vídeo e retomar a reprodução na mesma posição em uma sessão futura.
 
-As publicidades inseridas dinamicamente diferem entre as sessões do usuário, portanto, salvar a posição **com** publicidades em spliced refere-se a uma posição diferente em uma sessão futura. O TVSDK fornece métodos para recuperar a posição de reprodução ao ignorar anúncios segmentados.
+As publicidades inseridas dinamicamente diferem entre sessões de usuário, portanto, salvar a posição **com** publicidades em spliced refere-se a uma posição diferente em uma sessão futura. O TVSDK fornece métodos para recuperar a posição da reprodução ao ignorar anúncios em spliced.
 
 1. Quando o usuário sai de um vídeo, seu aplicativo recupera e salva a posição no vídeo.
 
    >[!TIP]
    >
-   >A duração do anúncio não está incluída.
+   >As durações dos anúncios não são incluídas.
 
-   As quebras de anúncios podem variar em cada sessão devido aos padrões de anúncios, limitação de frequência e assim por diante. A hora atual do vídeo em uma sessão pode ser diferente em uma sessão futura. Ao salvar uma posição no vídeo, o aplicativo recupera a hora local. Use a propriedade `localTime` para ler essa posição, que pode ser salva no dispositivo ou em um banco de dados no servidor.
+   As quebras de anúncios podem variar em cada sessão devido aos padrões de anúncios, limite de frequência e assim por diante. O horário atual do vídeo em uma sessão pode ser diferente em uma sessão futura. Ao salvar uma posição no vídeo, o aplicativo recupera a hora local . Use a propriedade `localTime` para ler essa posição , que pode ser salva no dispositivo ou em um banco de dados no servidor.
 
    Por exemplo, se o usuário estiver no 20º minuto do vídeo e essa posição incluir cinco minutos de anúncios, `currentTime` terá 1200 segundos, enquanto `localTime` nessa posição terá 900 segundos.
 
    >[!IMPORTANT]
    >
-   >A hora local e a hora atual são as mesmas para fluxos ao vivo/lineares. Nesse caso, `convertToLocalTime` não tem efeito. Para VOD, o tempo local permanece inalterado enquanto os anúncios são reproduzidos.
+   >A hora local e a hora atual são as mesmas para fluxos ao vivo/lineares. Nesse caso, `convertToLocalTime` não tem efeito. Para VOD, o tempo local permanece inalterado enquanto os anúncios são exibidos.
 
    ```
    - (void) onMediaPlayerTimeChange:(NSNotification *)notification { 
@@ -287,11 +284,11 @@ As publicidades inseridas dinamicamente diferem entre as sessões do usuário, p
 
    >[!TIP]
    >
-   >Esse método é chamado somente com valores de hora locais. Se o método for chamado com os resultados de tempo atuais, ocorrerá comportamento incorreto.
+   >Esse método é chamado somente com valores de hora locais. Se o método for chamado com os resultados de tempo atuais, ocorrerá um comportamento incorreto.
 
-   Para buscar o horário atual, use `seekToTime`.
+   Para procurar no horário atual, use `seekToTime`.
 
-1. Quando o aplicativo receber o evento de alteração de status `PTMediaPlayerStatusReady`, procure o horário local salvo.
+1. Quando o aplicativo recebe o evento de alteração de status `PTMediaPlayerStatusReady`, procure no horário local salvo.
 
    ```
    [self.player seekToLocalTime:CMTimeMake(900, 1) completionHandler:^(BOOL finished) { 
@@ -299,10 +296,10 @@ As publicidades inseridas dinamicamente diferem entre as sessões do usuário, p
    }];
    ```
 
-1. Forneça os intervalos de anúncio conforme especificado na interface da política de anúncios.
-1. Implemente um seletor de política de publicidade personalizado estendendo o seletor de política de publicidade padrão.
-1. Forneça as pausas de anúncio que devem ser apresentadas ao usuário implementando `selectAdBreaksToPlay`
+1. Forneça os ad breaks conforme especificado na interface da política de anúncios.
+1. Implemente um seletor de política de anúncio personalizado estendendo o seletor de política de anúncio padrão.
+1. Forneça os ad breaks que devem ser apresentados ao usuário implementando `selectAdBreaksToPlay`
 
    >[!NOTE]
    >
-   >Esse método inclui uma pausa de anúncio precedente e uma pausa de anúncio intermediário antes da posição de hora local. Seu aplicativo pode decidir reproduzir um intervalo de anúncios precedente e retomar para o horário local especificado, reproduzir um intervalo de anúncios intermediário e retomar para o horário local especificado, ou não reproduzir nenhum intervalo de anúncios.
+   >Esse método inclui um ad break precedente e o ad breaks intermediários antes da posição de hora local. Seu aplicativo pode decidir reproduzir um ad break precedente e retomar para o horário local especificado, reproduzir um ad break intermediário e retomar para o horário local especificado, ou não reproduzir ad breaks.
