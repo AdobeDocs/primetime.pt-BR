@@ -1,13 +1,10 @@
 ---
-description: Quando um usuário clica em um anúncio, seu aplicativo deve pausar a reprodução do conteúdo principal do vídeo.
-seo-description: Quando um usuário clica em um anúncio, seu aplicativo deve pausar a reprodução do conteúdo principal do vídeo.
-seo-title: Pausar e retomar a reprodução
+description: Quando um usuário clica em um anúncio, o aplicativo deve pausar a reprodução do conteúdo do vídeo principal.
 title: Pausar e retomar a reprodução
-uuid: a8fec392-3a71-4086-abf1-23522d023680
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '67'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Pausar e retomar a reprodução {#pause-and-resume-playback}
 
-Quando um usuário clica em um anúncio, seu aplicativo deve pausar a reprodução do conteúdo principal do vídeo.
+Quando um usuário clica em um anúncio, o aplicativo deve pausar a reprodução do conteúdo do vídeo principal.
 
 Substitua `onPause` e `onResume` da Atividade do Android.
 
