@@ -1,14 +1,11 @@
 ---
 description: Você pode implementar seu próprio gerador de oportunidades estendendo a interface OpportunityGenerator.
-seo-description: Você pode implementar seu próprio gerador de oportunidades estendendo a interface OpportunityGenerator.
-seo-title: Implementar um gerador de oportunidade personalizado
 title: Implementar um gerador de oportunidade personalizado
-uuid: b80da2da-32d5-41f7-86ca-936d6f25b015
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 4%
+source-wordcount: '78'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +14,7 @@ ht-degree: 4%
 
 Você pode implementar seu próprio gerador de oportunidades estendendo a interface OpportunityGenerator.
 
-1. Crie o gerador de oportunidades personalizado.
+1. Crie o gerador de oportunidade personalizado.
 
    Por exemplo:
 
@@ -47,7 +44,7 @@ Você pode implementar seu próprio gerador de oportunidades estendendo a interf
    }; 
    ```
 
-1. Crie a fábrica de conteúdo personalizada, que usa o gerador de oportunidade personalizado.
+1. Crie a fábrica de conteúdo personalizado, que usa o gerador de oportunidade personalizado.
 
    Por exemplo:
 
@@ -69,9 +66,9 @@ Você pode implementar seu próprio gerador de oportunidades estendendo a interf
    }; 
    ```
 
-1. Registre a fábrica de conteúdo personalizado para o fluxo de mídia a ser reproduzido.
+1. Registre a fábrica de conteúdo personalizado do fluxo de mídia a ser reproduzido.
 
-   No player da UI Framework, você pode especificar a fábrica de conteúdo personalizado da seguinte maneira:
+   No reprodutor da Estrutura de interface do usuário, você pode especificar a fábrica de conteúdo personalizado da seguinte maneira:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
