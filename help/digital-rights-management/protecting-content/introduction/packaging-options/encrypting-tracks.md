@@ -1,9 +1,9 @@
 ---
-seo-title: Criptografar trilhas
-title: Criptografar trilhas
-uuid: 75444553-cb55-4beb-b486-c6c615b54ca0
+title: Rastreio de criptografia
+description: Rastreio de criptografia
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%
@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# Criptografar trilhas {#encrypting-tracks}
+# Rastreamento de criptografia {#encrypting-tracks}
 
-Esta opção de empacotamento especifica quais partes do conteúdo você deseja criptografar: áudio, vídeo ou ambos.
+Essa opção de empacotamento especifica quais partes do conteúdo você deseja criptografar: áudio, vídeo ou ambos.
 
-Exemplo de caso de uso: As permissões que criptografam somente as faixas que exigem proteção reduzem a sobrecarga de decodificação no cliente e melhoram o desempenho da reprodução.
+Exemplo de caso de uso: Permite que o criptografe somente as faixas que exigem proteção reduza a sobrecarga da descriptografia no cliente e melhore o desempenho da reprodução.
