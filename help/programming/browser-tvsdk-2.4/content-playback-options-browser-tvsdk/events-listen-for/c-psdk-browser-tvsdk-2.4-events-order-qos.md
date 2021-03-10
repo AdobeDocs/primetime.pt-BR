@@ -1,23 +1,20 @@
 ---
-description: O TVSDK do navegador despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como eventos de buffering e busca.
-seo-description: O TVSDK do navegador despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como eventos de buffering e busca.
-seo-title: Eventos de QoS
+description: O TVSDK do navegador despacha eventos de qualidade do serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como eventos de buffer e busca.
 title: Eventos de QoS
-uuid: 3384bc51-b435-4cd9-a1f8-9abf2605205b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '105'
 ht-degree: 1%
 
 ---
 
 
-# Eventos QoS{#qos-events}
+# Eventos de QoS{#qos-events}
 
-O TVSDK do navegador despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como eventos de buffering e busca.
+O TVSDK do navegador despacha eventos de qualidade do serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como eventos de buffer e busca.
 
-Para ser notificado sobre todos os eventos relacionados a QoS, crie uma instância de `AdobePSDK.QOSProvider` e anexe a instância MediaPlayer a esta instância `QOSProvider`:
+Para ser notificado sobre todos os eventos relacionados a QoS, crie uma instância de `AdobePSDK.QOSProvider` e anexe a instância MediaPlayer a essa instância `QOSProvider`:
 
 ```js
 var qosProvider = new AdobePSDK.QOSProvider(); 
