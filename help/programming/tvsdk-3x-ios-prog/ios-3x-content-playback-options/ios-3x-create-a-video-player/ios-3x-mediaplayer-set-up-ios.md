@@ -1,29 +1,26 @@
 ---
-description: A interface PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto de player de mídia.
-seo-description: A interface PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto de player de mídia.
-seo-title: Configurar o PTMediaPlayer
+description: A interface PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto do reprodutor de mídia.
 title: Configurar o PTMediaPlayer
-uuid: 698034d3-1260-416f-83b0-6b7d058750a0
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
 
-# Configurar PTMediaPlayer {#set-up-the-ptmediaplayer}
+# Configurar o PTMediaPlayer {#set-up-the-ptmediaplayer}
 
-O TVSDK fornece ferramentas para a criação de um aplicativo de player de vídeo avançado (seu player do Primetime), que pode ser integrado a outros componentes do Primetime.
+O TVSDK fornece ferramentas para criar um aplicativo de reprodutor de vídeo avançado (seu reprodutor Primetime), que pode ser integrado a outros componentes do Primetime.
 
-Use as ferramentas da sua plataforma para criar um player e conectá-lo à visualização do player de mídia no TVSDK, que tem métodos para reproduzir e gerenciar vídeos. Por exemplo, o TVSDK fornece métodos de reprodução e pausa. Você pode criar botões da interface do usuário na plataforma e definir os botões para chamar esses métodos TVSDK.
+Use as ferramentas da plataforma para criar um reprodutor e conectá-lo à exibição do reprodutor de mídia no TVSDK, que tem métodos para reproduzir e gerenciar vídeos. Por exemplo, o TVSDK fornece métodos de reprodução e pausa. Você pode criar botões da interface do usuário na sua plataforma e definir os botões para chamar esses métodos TVSDK.
 
-A interface PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto de player de mídia.
+A interface PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto do reprodutor de mídia.
 
 Para configurar seu `PTMediaPlayer`:
 
-1. Procure o URL da mídia na interface do usuário, por exemplo, em um campo de texto.
+1. Busque o URL da mídia na interface do usuário, por exemplo, em um campo de texto.
 
    ```
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
@@ -31,7 +28,7 @@ Para configurar seu `PTMediaPlayer`:
 
 1. Crie `PTMetadata`.
 
-   Suponha que seu método `createMetada` prepare metadados (consulte [Publicidade](../../ios-3x-advertising/ios-3x-advertising-requirements.md)).
+   Suponha que seu método `createMetada` prepare metadados (consulte [Advertising](../../ios-3x-advertising/ios-3x-advertising-requirements.md)).
 
    ```
    PTMetadata *metadata = [self createMetadata]
@@ -67,7 +64,7 @@ Para configurar seu `PTMediaPlayer`:
    player.allowsAirPlayVideo          = YES;
    ```
 
-1. Defina a propriedade de visualização do player.
+1. Defina a propriedade view do reprodutor.
 
    ```
    CGRect playerRect = self.adPlayerView.frame;  
@@ -80,14 +77,14 @@ Para configurar seu `PTMediaPlayer`:
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. Adicione a visualização do player na subexibição atual da visualização.
+1. Adicione a exibição do reprodutor na subexibição atual.
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Chame `play` para a reprodução de mídia de start.
+1. Chame `play` para iniciar a reprodução de mídia.
 
    ```
    [player play];
