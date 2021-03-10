@@ -1,27 +1,24 @@
 ---
-description: O TVSDK fornece ferramentas para a criação de um aplicativo de player de vídeo avançado (seu player do Primetime), que pode ser integrado a outros componentes do Primetime. Ele também fornece vários recursos projetados para maximizar a qualidade da reprodução do vídeo.
-seo-description: O TVSDK fornece ferramentas para a criação de um aplicativo de player de vídeo avançado (seu player do Primetime), que pode ser integrado a outros componentes do Primetime. Ele também fornece vários recursos projetados para maximizar a qualidade da reprodução do vídeo.
-seo-title: Configurar o Media Player
-title: Configurar o Media Player
-uuid: 1f672484-b340-4f92-8a47-dad4c9f3b3fc
+description: O TVSDK fornece ferramentas para criar um aplicativo de reprodutor de vídeo avançado (seu reprodutor Primetime), que pode ser integrado a outros componentes do Primetime. Ele também fornece vários recursos projetados para maximizar a qualidade da reprodução do vídeo.
+title: Configurar o reprodutor de mídia
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
 
-# Configure o Media Player {#set-up-the-media-player}
+# Configurar o reprodutor de mídia {#set-up-the-media-player}
 
-O TVSDK fornece ferramentas para a criação de um aplicativo de player de vídeo avançado (seu player do Primetime), que pode ser integrado a outros componentes do Primetime. Ele também fornece vários recursos projetados para maximizar a qualidade da reprodução do vídeo.
+O TVSDK fornece ferramentas para criar um aplicativo de reprodutor de vídeo avançado (seu reprodutor Primetime), que pode ser integrado a outros componentes do Primetime. Ele também fornece vários recursos projetados para maximizar a qualidade da reprodução do vídeo.
 
 <!--<a id="section_1FE83A68DE624F20B52C0959851F5699"></a>-->
 
-Instancie um `MediaPlayer` e insira uma visualização dele em um layout de quadro.
+Instancie um `MediaPlayer` e coloque uma visualização dele em um layout de quadro.
 
-1. Instancie `MediaPlayer`, transmitindo um objeto `android.content.Context` para o construtor:
+1. Instancie `MediaPlayer`, transmitindo um objeto `android.content.Context` ao construtor:
 
    ```java
    MediaPlayer mediaPlayer = new MediaPlayer(context);
