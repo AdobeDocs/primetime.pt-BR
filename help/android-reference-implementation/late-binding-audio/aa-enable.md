@@ -1,13 +1,10 @@
 ---
-description: É possível integrar fluxos de áudio de ligação tardia ou alternativos ao player, criando um gerenciador de recursos de áudio alternativo.
-seo-description: É possível integrar fluxos de áudio de ligação tardia ou alternativos ao player, criando um gerenciador de recursos de áudio alternativo.
-seo-title: Integrar áudio de ligação tardia
+description: Você pode integrar fluxos de áudio de ligação tardia ou alternativos ao seu player criando um gerenciador de recursos de áudio alternativo.
 title: Integrar áudio de ligação tardia
-uuid: cd2e259a-2af4-4d7b-a856-79bd087e8ca6
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Integrar áudio de ligação tardia {#integrate-late-binding-audio}
 
-É possível integrar fluxos de áudio de ligação tardia ou alternativos ao player, criando um gerenciador de recursos de áudio alternativo.
+Você pode integrar fluxos de áudio de ligação tardia ou alternativos ao seu player criando um gerenciador de recursos de áudio alternativo.
 
 * Para criar um gerenciador de áudio alternativo:
 
@@ -23,7 +20,7 @@ ht-degree: 0%
    AAManager aaManager = new AAManagerOn(); 
    ```
 
-* Para usar o ManagerFactory para habilitar áudio alternativo, verifique se a seguinte linha de código está no arquivo `PlayerFragment.java`:
+* Para usar o ManagerFactory para ativar o áudio alternativo, verifique se a seguinte linha de código está no arquivo `PlayerFragment.java`:
 
    ```java
    aaManager = ManagerFactory.getAAManager( 
