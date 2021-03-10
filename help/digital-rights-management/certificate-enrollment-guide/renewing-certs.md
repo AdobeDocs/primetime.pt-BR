@@ -1,9 +1,9 @@
 ---
-seo-title: Renovar certificados
 title: Renovar certificados
-uuid: 12a560b0-966b-424e-bfe5-22e9c10d8667
+description: Renovar certificados
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -13,23 +13,23 @@ ht-degree: 0%
 
 # Renovar certificados{#renew-certificates}
 
-Você deve estar ciente das seguintes restrições de renovação de certificado que se baseiam na configuração do SDK do Adobe Primetime DRM:
+Você deve estar ciente das seguintes restrições de renovação de certificado que são baseadas na configuração do SDK do Adobe Primetime DRM:
 
-* SDK de produção do DRM Primetime
+* SDK de produção de DRM do Primetime
 
-   O Adobe fornece o conjunto inicial de certificados gratuitos para o SDK de produção Primetime DRM quando você compra um contrato de suporte. Se você não tiver um contrato de suporte, poderá comprar um conjunto de certificados de renovação válidos por dois anos.
-* SDK de avaliação do DRM Primetime
+   O Adobe fornece o conjunto inicial de certificados gratuitos para o SDK de produção de DRM do Primetime quando você compra um contrato de suporte. Se você não tiver um contrato de suporte, poderá comprar um conjunto de certificados de renovação válidos por dois anos.
+* SDK de avaliação de DRM do Primetime
 
-   O certificado definido para este SDK é válido por um ano e não pode ser renovado.
-* SDK de avaliação do DRM Primetime
+   O conjunto de certificados para este SDK é válido por um ano e não pode ser renovado.
+* SDK de avaliação de DRM do Primetime
 
-   O SDK de avaliação do DRM Primetime é válido por três meses e o Adobe fornece um conjunto de certificados de renovação gratuitos.
+   O SDK de avaliação de DRM do Primetime é válido por três meses e o Adobe fornece um conjunto de certificados de renovação gratuitos.
 
-## Implementação de novos certificados e uso de certificados antigos para conteúdo existente {#section_345C92D1C9794B0BBB9A9B0702EC95FF}
+## Implementar novos certificados e usar certificados antigos para conteúdo existente {#section_345C92D1C9794B0BBB9A9B0702EC95FF}
 
-No DRM Primetime, é possível permitir que um servidor de licenças emita uma licença para conteúdo empacotado com certificados empacotadores anteriores (ou mesmo expirados). Para configurar o servidor para aceitar solicitações de licença de conteúdo empacotado anteriormente, forneça seu certificado antigo ao servidor e atualize o arquivo de configuração do servidor para que o servidor saiba onde encontrar os certificados antigos. Para obter mais informações, consulte *Manipulação de atualizações de certificados quando certificados emitidos por Adobe expirarem* em *Usando o Adobe Primetime DRM SDK para Proteção de Conteúdo*.
+No Primetime DRM, você pode permitir que um servidor de licenças emita uma licença para conteúdo empacotado com certificados anteriores (ou mesmo expirados) do empacotador. Para configurar o servidor para aceitar solicitações de licença de conteúdo empacotado anteriormente, forneça seu certificado antigo ao servidor e atualize o arquivo de configuração do servidor para que o servidor saiba onde encontrar os certificados antigos. Para obter mais informações, consulte *Manipular atualizações de certificado quando certificados emitidos por Adobe expirarem* em *Usar o Adobe Primetime DRM SDK para proteger conteúdo*.
 
-Se o aplicativo do servidor for baseado na Implementação de referência do DRM Primetime, não será necessário atualizar o programa do lado do servidor. No arquivo `flashaccess-refimpl.properties`, há campos nos quais você pode especificar certificados adicionais de Transporte e Servidor de Licenças. Se você tiver apenas um certificado, não será necessário preencher essas propriedades. Se tiver certificados expirados e quiser usá-los ao emitir respostas de licença, forneça-os ao arquivo de configuração e reinicie o servidor.
+Se o aplicativo de servidor for baseado na Implementação de referência de DRM do Primetime, não será necessário atualizar o programa do lado do servidor. No arquivo `flashaccess-refimpl.properties`, há campos nos quais você pode especificar certificados adicionais de Servidor de Transporte e Licença. Se você tiver apenas um certificado, não precisará preencher essas propriedades. Se você tiver expirado os certificados e quiser usá-los ao emitir respostas de licença, forneça esses certificados ao arquivo de configuração e reinicie o servidor.
 
 Para especificar certificados antigos, use as seguintes propriedades:
 
