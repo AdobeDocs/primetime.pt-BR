@@ -1,13 +1,10 @@
 ---
 description: Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
-seo-description: Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
-seo-title: Implementar um resolvedor de conteúdo personalizado
 title: Implementar um resolvedor de conteúdo personalizado
-uuid: 5f63cc1e-3f4b-460c-9151-2b9d364800e2
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 2%
 
 Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
 
-Quando o TVSDK gera uma nova oportunidade, ele repete por meio dos resolvedores de conteúdo registrados procurando por um que seja capaz de resolver essa oportunidade. A primeira que retorna `true` é selecionada para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar o TVSDK quando o processo é concluído.
+Quando o TVSDK gera uma nova oportunidade, ele repete por meio dos resolvedores de conteúdo registrados que procuram uma que seja capaz de resolver essa oportunidade. O primeiro que retorna `true` é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar o TVSDK quando o processo estiver concluído.
 
 1. Implemente seu próprio `ContentFactory` personalizado, estendendo a interface `ContentFactory` e substituindo `retrieveResolvers`.
 
@@ -54,7 +51,7 @@ Quando o TVSDK gera uma nova oportunidade, ele repete por meio dos resolvedores 
    } 
    ```
 
-1. Registre `ContentFactory` em `MediaPlayer`.
+1. Registre o `ContentFactory` no `MediaPlayer`.
 
    Por exemplo:
 
@@ -84,8 +81,8 @@ Quando o TVSDK gera uma nova oportunidade, ele repete por meio dos resolvedores 
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. Crie uma classe personalizada de resolvedor de anúncios que estende a classe `ContentResolver`.
-   1. No resolvedor de publicidade personalizado, substitua `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
+1. Crie uma classe personalizada do resolvedor de anúncios que estende a classe `ContentResolver`.
+   1. No resolvedor de anúncios personalizado, substitua `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
 
       ```java
       void doConfigure(MediaPlayerItem item); 
@@ -139,7 +136,7 @@ Quando o TVSDK gera uma nova oportunidade, ele repete por meio dos resolvedores 
 
 <!--<a id="example_463B718749504A978F0B887786844C39"></a>-->
 
-Este exemplo de resolvedor de anúncios personalizado resolve uma oportunidade e fornece um anúncio simples:
+Este exemplo de resolvedor de anúncios personalizado resolve uma oportunidade e serve um anúncio simples:
 
 ```java
 public class CustomContentResolver extends ContentResolver { 
