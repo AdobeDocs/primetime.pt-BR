@@ -1,13 +1,11 @@
 ---
-description: nulo
-seo-description: nulo
-seo-title: Modo de sinalização e intervalo de tempo
 title: Modo de sinalização e intervalo de tempo
-uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
+description: Modo de sinalização e intervalo de tempo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -26,7 +24,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> CustomRange OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> Gerador de Oportunidade de Intervalo Personalizado  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -92,7 +90,7 @@ ht-degree: 0%
    <td> N/A (modo de sinalização CustomRange automático) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de  </span> sinalização CustomRange </td> 
+   <td> <span class="codeph"> Modo de  </span> sinalização de intervalo personalizado </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -165,7 +163,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> <span class="codeph"> Modo de  </span> sinalização do SeverMap </td> 
-   <td> Não presente (o anúncio está desativado). </td> 
+   <td> Não presente (anúncio desativado). </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -179,7 +177,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> <span class="codeph"> Modo  </span> de sinalização ManifestCue </td> 
-   <td> Não presente (o anúncio está desativado). </td> 
+   <td> Não presente (anúncio desativado). </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -192,10 +190,10 @@ ht-degree: 0%
    <td> N/A (modo de sinalização <span class="codeph"> CustomRange </span> automático) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de  </span> sinalização CustomRange </td> 
-   <td> Não presente (o anúncio está desativado). </td> 
+   <td> <span class="codeph"> Modo de  </span> sinalização de intervalo personalizado </td> 
+   <td> Não presente (anúncio desativado). </td> 
    <td> Nenhum </td> 
-   <td> Nenhum (cuidadoso de <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
+   <td> Nenhum (cuidamos de em <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>
