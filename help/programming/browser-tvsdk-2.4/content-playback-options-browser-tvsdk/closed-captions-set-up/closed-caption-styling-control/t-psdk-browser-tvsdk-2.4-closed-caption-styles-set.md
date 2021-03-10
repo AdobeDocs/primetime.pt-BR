@@ -1,13 +1,10 @@
 ---
 description: É possível definir o formato, como fonte, tamanho, cor, borda e opacidade para texto de legenda.
-seo-description: É possível definir o formato, como fonte, tamanho, cor, borda e opacidade para texto de legenda.
-seo-title: Definir estilos de legenda
 title: Definir estilos de legenda
-uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
@@ -52,7 +49,7 @@ ht-degree: 0%
 
 1. Para alterar as configurações de estilo, use `MediaPlayer.ccStyle`, transmitindo uma instância da interface `TextFormat`.
 
-   Você pode usar esse método mesmo se o fluxo de mídia atual não tiver legendas fechadas.
+   Você pode usar esse método mesmo se o fluxo de mídia atual não tiver legendas ocultas.
 
    ```js
    ccStyle :AdobePSDK.TextFormat 
@@ -60,5 +57,5 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >A configuração do estilo de legenda fechada é assíncrona, portanto, pode levar alguns segundos para que as alterações sejam exibidas na tela.
+   >A configuração do estilo de legenda oculta é assíncrona, portanto, pode levar alguns segundos para que as alterações sejam exibidas na tela.
 
