@@ -1,14 +1,11 @@
 ---
-description: Você pode ativar ou desativar o recurso Resolução de anúncios preguiçosos usando o mecanismo de Carregamento de anúncios preguiçoso (a Resolução de anúncios preguiçosos está ativada por padrão).
-keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: Você pode ativar ou desativar o recurso Resolução de anúncios preguiçosos usando o mecanismo de Carregamento de anúncios preguiçoso (a Resolução de anúncios preguiçosos está ativada por padrão).
-seo-title: Ativar resolução de anúncios ociosos
-title: Ativar resolução de anúncios ociosos
-uuid: a084ee0b-53af-4600-91f6-d30ccc89699d
+description: Você pode ativar ou desativar o recurso de Resolução de anúncios preguiçosos usando o mecanismo de Carregamento de anúncios preguiçosos (a Resolução de anúncios preguiçosos é ativada por padrão).
+keywords: Preguiçoso;Resolução de anúncio;Carregamento de anúncio;delayLoading
+title: Habilitar a resolução de anúncio lento
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
@@ -16,17 +13,17 @@ ht-degree: 0%
 
 # Habilitar lento e resolver {#enable-lazy-ad-resolving}
 
-Você pode ativar ou desativar o recurso Resolução de anúncios preguiçosos usando o mecanismo de Carregamento de anúncios preguiçoso (a Resolução de anúncios preguiçosos está ativada por padrão).
+Você pode ativar ou desativar o recurso de Resolução de anúncios preguiçosos usando o mecanismo de Carregamento de anúncios preguiçosos (a Resolução de anúncios preguiçosos é ativada por padrão).
 
-Você pode ativar ou desativar a Resolução de anúncios preguiçosos chamando [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) com `true` ou `false`.
+Você pode ativar ou desativar a Resolução de anúncio preguiçoso ao chamar [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) com `true` ou `false`.
 
-1. Use os métodos Boolean `hasDelayAdLoading` e `setDelayAdLoading` em `AdvertisingMetadata` para controlar o tempo de resolução do anúncio e o posicionamento dos anúncios na linha do tempo:
+1. Use os métodos Booleano `hasDelayAdLoading` e `setDelayAdLoading` em `AdvertisingMetadata` para controlar o tempo da resolução do anúncio e o posicionamento dos anúncios na linha do tempo:
 
    * Se `hasDelayAdLoading` retornar falso, o TVSDK aguarda até que todos os anúncios sejam resolvidos e colocados antes da transição para o estado PREPARADO.
-   * Se `hasDelayAdLoading` retornar true, o TVSDK resolverá somente os anúncios e transições iniciais no estado PREPARED. Os anúncios restantes são resolvidos e colocados durante a reprodução.
-   * Quando `hasPreroll` ou `hasLivePreroll` retornar false, o TVSDK assume que não há um anúncio de pré-lançamento e start a reprodução do conteúdo imediatamente. O padrão é true.
+   * Se `hasDelayAdLoading` retornar true, o TVSDK resolverá apenas os anúncios iniciais e fará a transição para o estado PREPARADO. Os anúncios restantes são resolvidos e colocados durante a reprodução.
+   * Quando `hasPreroll` ou `hasLivePreroll` retornar falso, o TVSDK assume que não há um anúncio de pré-lançamento e inicia a reprodução do conteúdo imediatamente. O padrão é true.
 
-      APIs relevantes para a resolução de anúncios ociosos:
+      APIs relevantes para a resolução de anúncios lentos:
 
       ```
       Class: 
@@ -43,11 +40,11 @@ Você pode ativar ou desativar a Resolução de anúncios preguiçosos chamando 
       […]
       ```
 
-1. Para refletir com precisão as publicidades como dicas em uma barra de depuração, escute o evento `TimelineEvent` e redesenhe a barra de depuração toda vez que receber esse evento.
+1. Para refletir com precisão os anúncios como dicas em uma barra de depuração, escute o evento `TimelineEvent` e redesenhe a barra de depuração sempre que receber esse evento.
 
-   Quando a Resolução de anúncios ociosos está ativada para fluxos VOD, nem todos os anúncios são colocados na linha do tempo quando o player entra no estado PREPARADO, de modo que o player deve redesenhar explicitamente a barra de depuração.
+   Quando a resolução de anúncios ociosos está ativada para fluxos VOD, nem todos os anúncios são colocados na linha do tempo quando o reprodutor entra no estado PREPARADO, de modo que o reprodutor deve redesenhar explicitamente a barra de depuração.
 
-   O TVSDK otimiza o despacho desse evento para minimizar o número de vezes que você deve redesenhar a barra de depuração; portanto, o número de eventos de linha do tempo não está relacionado ao número de quebras de anúncios a serem colocadas na linha do tempo. Por exemplo, se você tiver cinco pausas de anúncio, talvez não receba exatamente cinco eventos.
+   O TVSDK otimiza o despacho desse evento para minimizar o número de vezes que você deve redesenhar a barra de depuração; portanto, o número de eventos de linha do tempo não está relacionado ao número de ad breaks a serem colocados na linha do tempo. Por exemplo, se você tiver cinco ad breaks, talvez você não receba exatamente cinco eventos.
 
    ```java
    mediaPlayer.addEventListener 
@@ -63,5 +60,5 @@ Você pode ativar ou desativar a Resolução de anúncios preguiçosos chamando 
    } 
    ```
 
->Para verificar se o recurso Resolução de anúncios ociosos está ativado ou desativado, chame `AdvertisingMetadata.hasDelayAdLoading`. Um valor de retorno de `true` significa que a Resolução de anúncios preguiçosa está ativada; `false` significa que o recurso está desativado.
+>Para verificar se o recurso de Resolução de Anúncios Preguiçosos está ativado ou desativado, chame `AdvertisingMetadata.hasDelayAdLoading`. Um valor de retorno de `true` significa que a Resolução de Anúncios Preguiçosos está ativada; `false` significa que o recurso está desativado.
 
