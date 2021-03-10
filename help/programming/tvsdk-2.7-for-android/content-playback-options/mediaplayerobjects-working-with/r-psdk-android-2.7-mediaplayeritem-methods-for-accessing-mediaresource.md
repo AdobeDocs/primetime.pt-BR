@@ -1,19 +1,16 @@
 ---
 description: Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo de conteúdo representado por um MediaResource carregado.
-seo-description: Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo de conteúdo representado por um MediaResource carregado.
-seo-title: Métodos MediaPlayerItem para acessar informações de MediaResource
-title: Métodos MediaPlayerItem para acessar informações de MediaResource
-uuid: c6e77eb7-cefd-48aa-9373-2b44a96217a5
+title: Métodos MediaPlayerItem para acessar informações do MediaResource
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
 
 
-# Métodos MediaPlayerItem para acessar informações de MediaResource {#mediaplayeritem-methods-for-accessing-mediaresource-information}
+# Métodos MediaPlayerItem para acessar as informações do MediaResource {#mediaplayeritem-methods-for-accessing-mediaresource-information}
 
 Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo de conteúdo representado por um MediaResource carregado.
 
@@ -31,23 +28,23 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> &lt;string&gt; ListgetAdTags()  </span> </td> 
-   <td colname="3"> Fornece a lista de tags de anúncio usadas no processo de posicionamento do anúncio. </td> 
+   <td colname="3"> Fornece a lista de tags de anúncio usadas para o processo de posicionamento do anúncio. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <b>Fluxo ao vivo</b> </td> 
+   <td colname="2"> <b>Live stream</b> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isLive();  </span> </td> 
-   <td colname="3"> True se o fluxo for ao vivo; false se for VOD. </td> 
+   <td colname="2"> <span class="codeph"> booleano isLive();  </span> </td> 
+   <td colname="3"> Verdadeiro se o fluxo for em tempo real; falso se for VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <b>DRM protegido</b> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isProtected();  </span> </td> 
-   <td colname="3"> True se o fluxo estiver protegido por DRM. </td> 
+   <td colname="2"> <span class="codeph"> booleano isProtected();  </span> </td> 
+   <td colname="3"> Verdadeiro se o fluxo estiver protegido por DRM. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> &lt;drmmetadatainfo&gt; ListgetDRMMetadataInfos();  </span> </td> 
@@ -58,15 +55,15 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean hasClosedCaptions();  </span> </td> 
+   <td colname="2"> <span class="codeph"> booleano hasClosedCaptions();  </span> </td> 
    <td colname="3"> True se as faixas de legenda fechada estiverem disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> &lt;closedcaptionstrack&gt; ListgetClosedCationsTracks();  </span> </td> 
-   <td colname="3"> Fornece uma lista de faixas de legenda disponíveis. </td> 
+   <td colname="3"> Fornece uma lista de faixas de legendas ocultas disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> ClosedCaptionsTrack get SeletedCaptionsTrack();  </span> </td> 
+   <td colname="2"> <span class="codeph"> ClosedCaptionsTrack get SeletedClosedCaptionsTrack();  </span> </td> 
    <td colname="3"> Recupera o rastreamento de legenda fechada atual selecionado com <span class="codeph"> SelectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -74,12 +71,12 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
    <td colname="3"> Define uma faixa de legenda fechada para ser a faixa de legenda fechada atual. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <b>Faixas de áudio alternativas</b> </td> 
+   <td colname="2"> <b>Trilhas de áudio alternativas</b> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> booleano hasAlternateAudio();  </span> </td> 
-   <td colname="3"> True se o fluxo tiver faixas de áudio alternativas. <p>Observação:  A faixa de áudio principal (padrão) também faz parte da lista de faixa de áudio alternativa. </p> <p>O TVSDK para Android considera que a faixa de áudio principal é um dos itens na lista de faixa de áudio alternativa. Por esse motivo, o único caso em que <span class="codeph"> MediaPlayerItem.hasAlternateAudio </span> retorna false é quando o fluxo não tem nenhum áudio. Se o conteúdo tiver apenas uma faixa de áudio, esse método retornará true e <span class="codeph"> MediaPlayerItem.getAudioTracks </span> retornará uma lista com um único elemento (a faixa de áudio padrão). </p> </td> 
+   <td colname="3"> True é verdadeiro se o fluxo tiver trilhas de áudio alternativas. <p>Observação:  A faixa de áudio principal (padrão) também faz parte da lista de faixa de áudio alternativa. </p> <p>O TVSDK para Android considera a faixa de áudio principal um dos itens na lista de faixa de áudio alternativa. Por causa disso, o único caso em que <span class="codeph"> MediaPlayerItem.hasAlternateAudio </span> retorna falso é quando o fluxo não tem nenhum áudio. Se o conteúdo tiver apenas uma faixa de áudio, esse método retornará true e <span class="codeph"> MediaPlayerItem.getAudioTracks </span> retornará uma lista com um único elemento (a faixa de áudio padrão). </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> &lt;audiotrack&gt; ListgetAudioTracks();  </span> </td> 
@@ -98,7 +95,7 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean hasTimedMetadata();  </span> </td> 
+   <td colname="2"> <span class="codeph"> booleano hasTimedMetadata();  </span> </td> 
    <td colname="3"> True se o fluxo tiver metadados cronometrados associados. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -110,32 +107,32 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isDynamic();  </span> </td> 
+   <td colname="2"> <span class="codeph"> booleano isDynamic();  </span> </td> 
    <td colname="3"> True se o fluxo for um fluxo de taxa de bits múltipla (MBR). </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> &lt;profile&gt; ListgetProfiles();  </span> </td> 
-   <td colname="3"> Fornece uma lista dos perfis de taxa de bits associados. Para cada perfil, é possível recuperar sua taxa de bits e a altura e a largura do perfil. </td> 
+   <td colname="3"> Fornece uma lista dos perfis de taxa de bits associados. Para cada perfil, você pode recuperar sua taxa de bits e a altura e a largura do perfil. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> Perfil getSeletedProfile()  </span> </td> 
    <td colname="3"> Recupera o perfil selecionado no momento. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <b>peça</b> </td> 
+   <td colname="2"> <b>Trick Play</b> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isTrickPlaySupported();  </span> </td> 
-   <td colname="3"> Verdadeiro se o player suportar avanço rápido, retrocesso e retomada. </td> 
+   <td colname="2"> <span class="codeph"> booleano isTrickPlaySupported();  </span> </td> 
+   <td colname="3"> Verdadeiro se o reprodutor suportar avançar, retroceder e retomar rapidamente. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> &lt; Float=""&gt; ListgetAvailablePlaybackRates()  </span> </td> 
-   <td colname="3"> Fornece a lista das taxas de reprodução disponíveis no contexto do recurso de peça-play. </td> 
+   <td colname="3"> Fornece a lista de taxas de reprodução disponíveis no contexto do recurso de trick-play. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> Flutuar getSeletedPlaybackRate()  </span> </td> 
-   <td colname="3"> Recupera a taxa de reprodução atualmente selecionada. </td> 
+   <td colname="3"> Recupera a taxa de reprodução selecionada no momento. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> MediaPlayerItemConfig getConfig()  </span> </td> 
