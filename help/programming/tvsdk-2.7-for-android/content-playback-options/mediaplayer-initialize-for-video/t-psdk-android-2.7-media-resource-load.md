@@ -1,27 +1,24 @@
 ---
-description: Carregue um recurso instanciando diretamente um MediaResource e carregando o conteúdo de vídeo a ser reproduzido. Esta é uma maneira de carregar um recurso de mídia.
-seo-description: Carregue um recurso instanciando diretamente um MediaResource e carregando o conteúdo de vídeo a ser reproduzido. Esta é uma maneira de carregar um recurso de mídia.
-seo-title: Carregar um recurso de mídia no player de mídia
-title: Carregar um recurso de mídia no player de mídia
-uuid: 0334fa69-1d92-44d8-8891-2bc90a1ea498
+description: Carregue um recurso instanciando diretamente um MediaResource e carregando o conteúdo de vídeo a ser reproduzido. Essa é uma maneira de carregar um recurso de mídia.
+title: Carregar um recurso de mídia no reprodutor de mídia
 translation-type: tm+mt
-source-git-commit: 67975894814fbed8cfc49764a54b80d123032a49
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
 
-# Carregue um recurso de mídia no player de mídia {#load-a-media-resource-in-the-media-player}
+# Carregar um recurso de mídia no reprodutor de mídia {#load-a-media-resource-in-the-media-player}
 
-Carregue um recurso instanciando diretamente um MediaResource e carregando o conteúdo de vídeo a ser reproduzido. Esta é uma maneira de carregar um recurso de mídia.
+Carregue um recurso instanciando diretamente um MediaResource e carregando o conteúdo de vídeo a ser reproduzido. Essa é uma maneira de carregar um recurso de mídia.
 
-1. Defina o player de mídia para reproduzir o novo recurso.
+1. Defina o reprodutor de mídia para reproduzir o novo recurso.
 
-   Substitua o item que pode ser reproduzido atualmente, chamando `MediaPlayer.replaceCurrentResource()` e transmitindo uma instância `MediaResource` existente.
+   Substitua o item que pode ser reproduzido chamando `MediaPlayer.replaceCurrentResource()` e transmitindo uma instância `MediaResource` existente.
 
-   Isso start o processo de carregamento de recursos.
+   Isso inicia o processo de carregamento de recursos.
 
 1. Registre o evento `MediaPlayerEvent.STATUS_CHANGED` com a instância `MediaPlayer`. Na chamada de retorno, verifique pelo menos os seguintes valores de status:
 
@@ -29,12 +26,12 @@ Carregue um recurso instanciando diretamente um MediaResource e carregando o con
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
 
-   Por meio desses eventos, o objeto `MediaPlayer` notifica seu aplicativo quando ele carregou com êxito o recurso de mídia.
-1. Quando o status do player de mídia mudar para `INITIALIZED`, você poderá chamar `MediaPlayer.prepareToPlay()`.
+   Por meio desses eventos, o objeto `MediaPlayer` notifica seu aplicativo quando ele tiver carregado com êxito o recurso de mídia.
+1. Quando o status do reprodutor de mídia for alterado para `INITIALIZED`, você poderá chamar `MediaPlayer.prepareToPlay()`.
 
-   Esse status indica que a mídia foi carregada com êxito. O novo `MediaPlayerItem` está pronto para reprodução. Chamar `prepareToPlay()` start a resolução e o processo de colocação do anúncio, se houver.
+   Esse status indica que a mídia foi carregada com êxito. O novo `MediaPlayerItem` está pronto para reprodução. Chamar `prepareToPlay()` inicia a resolução e o processo de posicionamento do anúncio, se houver.
 
-Se ocorrer uma falha, o player de mídia alterna para o status `ERROR`.
+Se ocorrer uma falha, o reprodutor de mídia alterna para o status `ERROR`.
 
 O código de amostra simplificado a seguir ilustra o processo de carregamento de um recurso de mídia:
 
