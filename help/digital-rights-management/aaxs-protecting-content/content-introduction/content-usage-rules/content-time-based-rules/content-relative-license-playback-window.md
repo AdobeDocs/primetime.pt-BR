@@ -1,9 +1,9 @@
 ---
-seo-title: Janela de reprodução
 title: Janela de reprodução
-uuid: be3b1430-e522-442e-85ca-5a2f78b60130
+description: Janela de reprodução
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Janela de reprodução{#playback-window}
 
-Especifica a duração de validade de uma licença após a primeira vez que é usada para reproduzir conteúdo protegido.
+Especifica a duração em que uma licença é válida após a primeira vez em que é usada para reproduzir conteúdo protegido.
 
-Exemplo de caso de uso: Alguns modelos de negócios permitem um período de aluguel de 30 dias, mas, uma vez iniciada a reprodução, ela deve ser concluída em 48 horas. Essa longevidade de 48 horas da licença é definida como a janela de reprodução.
+Exemplo de caso de uso: Alguns modelos de negócios permitem um período de aluguel de 30 dias, mas, uma vez iniciada a reprodução, ele deve ser concluído em 48 horas. Essa longevidade de 48 horas da licença é definida como a janela de reprodução.
