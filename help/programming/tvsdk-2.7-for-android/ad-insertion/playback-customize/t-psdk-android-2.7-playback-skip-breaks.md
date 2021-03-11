@@ -1,45 +1,42 @@
 ---
-description: Por padrão, o TVSDK força uma pausa de anúncio a ser reproduzida quando o usuário busca uma pausa de anúncio. Você pode personalizar o comportamento para ignorar uma quebra de anúncio se o tempo decorrido desde uma conclusão de quebra anterior estiver dentro de um determinado número de minutos.
-seo-description: Por padrão, o TVSDK força uma pausa de anúncio a ser reproduzida quando o usuário busca uma pausa de anúncio. Você pode personalizar o comportamento para ignorar uma quebra de anúncio se o tempo decorrido desde uma conclusão de quebra anterior estiver dentro de um determinado número de minutos.
-seo-title: Ignorar quebras de anúncio por um período de tempo
-title: Ignorar quebras de anúncio por um período de tempo
-uuid: f8a5c1e3-e97f-421f-ac98-79de94a82955
+description: Por padrão, o TVSDK força a reprodução de um ad break quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um ad break se o tempo decorrido desde o término de um ad break anterior estiver em um determinado número de minutos.
+title: Ignorar ad breaks por um período de tempo
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
 
-# Ignorar quebras de anúncio por um período {#skip-ad-breaks-for-a-period-of-time}
+# Ignorar ad breaks por um período {#skip-ad-breaks-for-a-period-of-time}
 
-Por padrão, o TVSDK força uma pausa de anúncio a ser reproduzida quando o usuário busca uma pausa de anúncio. Você pode personalizar o comportamento para ignorar uma quebra de anúncio se o tempo decorrido desde uma conclusão de quebra anterior estiver dentro de um determinado número de minutos.
+Por padrão, o TVSDK força a reprodução de um ad break quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um ad break se o tempo decorrido desde o término de um ad break anterior estiver em um determinado número de minutos.
 
 >[!IMPORTANT]
 >
 >Se você precisar concluir uma busca interna para perdoar um anúncio, pode haver uma pequena pausa durante a reprodução.
 
-Para substituir o comportamento padrão de quebra de anúncios do TVSDK, é possível estender o seletor padrão de políticas de publicidade. Há quatro políticas de quebra de anúncio disponíveis:
+Para substituir o comportamento padrão do TVSDK e break, você pode estender o seletor de política de anúncios padrão. Há quatro políticas de ad break disponíveis:
 
-* JOGAR
-* PULAR
+* REPRODUZIR
+* IGNORAR
 
    >[!NOTE]
    >
-   >A política de quebra de anúncio do SKIP pode não funcionar como esperado para fluxos ao vivo quando um anúncio está presente no ponto ativo. Por exemplo, para um precedente, o SKIP causará uma busca até o final do intervalo do anúncio, que pode ser maior que o ponto ativo. Nesse caso, o TVSDK pode procurar no meio de um anúncio.
+   >A política de SKIP ad break pode não funcionar conforme esperado para fluxos ao vivo quando um anúncio está presente no ponto de entrada ao vivo. Por exemplo, para um anúncio precedente, o SKIP causará uma busca ao fim do ad break, que pode ser maior que o ponto ativo. Nesse caso, o TVSDK pode procurar no meio de um anúncio.
 
-* REMOVE_AFTER
+* REMOVER_APÓS
 * REMOVER
 
    >[!NOTE]
    >
-   >A política de `REMOVE` quebra de anúncio está bloqueada para desaprovação. O Adobe recomenda que você use a política de `SKIP` quebra de anúncio no lugar de `REMOVE`.
+   >A política de `REMOVE` ad break está marcada para descontinuação. O Adobe recomenda usar a `SKIP` política de ad break no lugar de `REMOVE`.
 
-O exemplo a seguir de um seletor de política de anúncios personalizado ignora os anúncios nos próximos cinco minutos (hora do relógio da parede) depois que um usuário assistir a uma pausa de anúncio.
+O exemplo a seguir de um seletor de política de anúncio personalizado ignora os anúncios nos próximos cinco minutos (hora do relógio da parede) depois que o usuário assiste a um ad break.
 
-1. Quando o usuário terminar de assistir a uma pausa de anúncio, salve a hora atual do sistema.
+1. Quando o usuário terminar de assistir a um ad break, salve o tempo atual do sistema.
 
    ```java
    @Override 
@@ -52,7 +49,7 @@ O exemplo a seguir de um seletor de política de anúncios personalizado ignora 
    }
    ```
 
-1. Estende `AdPolicySelector`.
+1. Estender `AdPolicySelector`.
 
    ```java
    package com.adobe.mediacore.sample.advertising; 
