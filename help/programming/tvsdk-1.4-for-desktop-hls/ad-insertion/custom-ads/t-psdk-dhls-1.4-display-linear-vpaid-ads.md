@@ -1,32 +1,29 @@
 ---
-description: O TVSDK oferece suporte à exibição de anúncios lineares de Definição de interface do player de vídeo (VPAID) em uma pausa de anúncio. A versão 1.0 do VPAID requer Flash, enquanto a versão 2.0 também funciona com o TVSDK do navegador e o JavaScript.
-seo-description: O TVSDK oferece suporte à exibição de anúncios lineares de Definição de interface do player de vídeo (VPAID) em uma pausa de anúncio. A versão 1.0 do VPAID requer Flash, enquanto a versão 2.0 também funciona com o TVSDK do navegador e o JavaScript.
-seo-title: Exibir anúncios VPAID lineares em uma pausa de anúncio
-title: Exibir anúncios VPAID lineares em uma pausa de anúncio
-uuid: 1f3a5426-79f5-49a1-a913-923708c09ade
+description: O TVSDK oferece suporte à exibição de anúncios lineares de Definição de interface de reprodutor de vídeo (VPAID) em um ad break. A versão 1.0 do VPAID requer o Flash, enquanto a versão 2.0 também funciona com o Browser TVSDK e o JavaScript.
+title: Exibir anúncios VPAID lineares em um ad break
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
 
-# Exibir anúncios VPAID lineares em um intervalo de anúncio{#display-linear-vpaid-ads-in-an-ad-break}
+# Exibir anúncios VPAID lineares em um ad break{#display-linear-vpaid-ads-in-an-ad-break}
 
-O TVSDK oferece suporte à exibição de anúncios lineares de Definição de interface do player de vídeo (VPAID) em uma pausa de anúncio. A versão 1.0 do VPAID requer Flash, enquanto a versão 2.0 também funciona com o TVSDK do navegador e o JavaScript.
+O TVSDK oferece suporte à exibição de anúncios lineares de Definição de interface de reprodutor de vídeo (VPAID) em um ad break. A versão 1.0 do VPAID requer o Flash, enquanto a versão 2.0 também funciona com o Browser TVSDK e o JavaScript.
 
-Para exibir anúncios VPAID corretamente, é necessário fornecer um container de anúncio ( `AdContainerView`) na instância `MediaPlayerContext`.
+Para exibir anúncios VPAID corretamente, você deve fornecer um contêiner de anúncio ( `AdContainerView`) na instância `MediaPlayerContext`.
 
 Limitações para anúncios VPAID:
 
-* Anúncios VPAID não têm necessariamente uma duração predefinida, visto que o anúncio pode ser interativo. Portanto, a duração do anúncio (definida pela resposta do servidor de anúncios) pode não corresponder sempre exatamente à duração real do anúncio.
-* Para anúncios VPAID 1.0, o TVSDK exige o player de Flash 14.0.0.160 ou superior instalado no dispositivo. Para versões anteriores do player de Flash, esse recurso é desativado e os anúncios VPAID 1.0 são ignorados.
+* Anúncios VPAID não têm necessariamente uma duração predefinida, visto que o anúncio pode ser interativo. Portanto, a duração do anúncio (definida pela resposta do servidor de anúncios) pode nem sempre corresponder exatamente à duração real do anúncio.
+* Para anúncios VPAID 1.0, o TVSDK requer o player do Flash 14.0.0.160 ou superior instalado no dispositivo. Para versões anteriores do reprodutor do Flash, esse recurso é desativado e os anúncios VPAID 1.0 são ignorados.
 
-Para configurar um container de anúncio para exibir anúncios VPAID (versão 1.0 ou 2.0) em uma quebra de anúncio:
+Para configurar um contêiner de anúncio para exibir anúncios VPAID (versão 1.0 ou 2.0) em um ad break:
 
-1. Use o seguinte código de exemplo para configurar um container de anúncio que possa mostrar anúncios VPAID.
+1. Use o código de exemplo a seguir para configurar um contêiner de anúncio que possa exibir anúncios VPAID.
 
    ```
    var context:MediaPlayerContext =  
@@ -41,7 +38,7 @@ Para configurar um container de anúncio para exibir anúncios VPAID (versão 1.
    _player = new DefaultMediaPlayer(context);
    ```
 
-1. Quando a visualização for redimensionada, redefina o tamanho no container do anúncio.
+1. Quando a exibição for redimensionada, redefina o tamanho no contêiner de publicidade.
 
    ```
    adContainer.setSize(stage.stageWidth, stage.stageHeight);
@@ -49,7 +46,7 @@ Para configurar um container de anúncio para exibir anúncios VPAID (versão 1.
 
    >[!NOTE]
    >
-   >Ao obter um evento de alteração em tela cheia e definir o novo tamanho no container do anúncio, passe o estado de exibição do palco da seguinte maneira para garantir que o player seja redimensionado corretamente:
+   >Ao obter um evento de alteração de tela cheia e definir o novo tamanho no contêiner de anúncio, passe o estado de exibição do palco da seguinte maneira para garantir que o redimensionamento do reprodutor seja feito corretamente:
    >
    >
    ```
