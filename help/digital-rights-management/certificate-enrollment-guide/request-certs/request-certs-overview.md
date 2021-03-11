@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral dos certificados de solicitação
 title: Visão geral dos certificados de solicitação
-uuid: 3a4e79d7-1832-49d8-bcf2-a029b3729e6d
+description: Visão geral dos certificados de solicitação
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 # Visão geral {#request-certificates-overview}
 
-Para usar o Adobe Primetime DRM Production SDK, repita as seguintes etapas para solicitar cada certificado (License Server, Packager e Transport). O SDK de avaliação e o SDK de avaliação usam um único certificado.
+Para usar o SDK de produção de DRM da Adobe Primetime, repita as etapas a seguir para solicitar cada certificado (License Server, Packager e Transport). O SDK de avaliação e o SDK de avaliação usam um único certificado.
 
 >[!NOTE]
 >
->Os exemplos fornecidos neste documento usam o OpenSSL. Você também pode usar outros utilitários. Use esses exemplos apenas para referência. Para obter informações sobre como gerar pares de chaves e armazenar chaves e certificados em seu Módulo de segurança de hardware (HSM), consulte a documentação do seu HSM.
+>Os exemplos fornecidos neste documento usam OpenSSL. Você também pode usar outros utilitários. Use estes exemplos somente para referência. Para obter informações sobre a geração de pares de chaves e o armazenamento de chaves e certificados em seu Módulo de segurança de hardware (HSM), consulte a documentação do seu HSM.
