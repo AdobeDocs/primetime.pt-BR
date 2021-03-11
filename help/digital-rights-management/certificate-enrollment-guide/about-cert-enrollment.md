@@ -1,9 +1,9 @@
 ---
-seo-title: Sobre funções de inscrição de certificados
-title: Sobre funções de inscrição de certificados
-uuid: 100776c2-6622-4b94-bc9b-5d4a04fd3260
+title: Sobre funções de registro de certificado
+description: Sobre funções de registro de certificado
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
@@ -11,34 +11,34 @@ ht-degree: 0%
 ---
 
 
-# Sobre funções de inscrição de certificados {#about-certificate-enrollment-roles}
+# Sobre funções de registro de certificado {#about-certificate-enrollment-roles}
 
-O processo de inscrição de certificados requer pelo menos dois funcionários: um Administrador e um Solicitante. O licenciado do SDK do DRM Primetime nomeia um administrador de conta. Só pode haver um administrador de conta. O administrador da conta pode designar um administrador secundário.
+O processo de registro de certificado requer pelo menos dois funcionários: um Administrador e um Requerente. O licenciado do SDK de DRM do Primetime nomeia um administrador de conta. Só pode haver um Administrador de conta. O administrador da conta pode designar um administrador secundário.
 
-Os administradores podem designar até cinco solicitantes. Os solicitantes são funcionários da sua empresa que solicitam e implantam certificados. Os administradores aprovam as solicitações de certificado. Cada conta Adobe ID pode ter apenas uma função.
+Os administradores podem designar até cinco solicitantes. Os solicitantes são funcionários de sua empresa que solicitam e implantam certificados. Os administradores aprovam as solicitações de certificado. Cada conta do Adobe ID pode ter apenas uma função.
 
-A seguir estão as habilidades de cada função:
+Veja a seguir as capacidades de cada função:
 
 * Administrador da conta
 
-   * Um administrador de conta por licença
-   * Adicionar solicitadores
+   * Administrador de conta por licença
+   * Adicionar Solicitadores
    * Adicionar um administrador secundário
-   * Editar as informações de telefone e a frase de desafio da empresa do solicitante
-   * Remover solicitantes e administradores secundários
+   * Editar as informações de telefone e a frase de desafio da empresa solicitante
+   * Remova solicitantes e administradores secundários
    * Aprovar ou rejeitar solicitações de certificado
    * Revogar certificados emitidos
 
 * Administrador secundário
 
-   * Um administrador secundário por licença
-   * Adicionar solicitadores
-   * Editar as informações de telefone e a frase de desafio da empresa do solicitante
-   * Remover solicitadores
+   * Administrador secundário por licença
+   * Adicionar Solicitadores
+   * Editar as informações de telefone e a frase de desafio da empresa solicitante
+   * Remover Solicitadores
    * Aprovar ou rejeitar solicitações de certificado
    * Revogar certificados emitidos
 
-* Solicitante
+* Requerente
 
    * Até cinco solicitantes por licença
    * Solicitar certificados
