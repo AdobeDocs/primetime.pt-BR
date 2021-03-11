@@ -1,13 +1,10 @@
 ---
 description: Você pode implementar seus próprios detectores de oportunidade implementando a interface PlacementOpportunityDetector.
-seo-description: Você pode implementar seus próprios detectores de oportunidade implementando a interface PlacementOpportunityDetector.
-seo-title: Implementar um detector de oportunidade personalizado
 title: Implementar um detector de oportunidade personalizado
-uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
@@ -39,13 +36,13 @@ Você pode implementar seus próprios detectores de oportunidade implementando a
    ```
 
 1. Crie uma classe de detector de oportunidade personalizada que estende a classe `PlacementOpportunityDetector`.
-   1. No detector de oportunidade personalizado, substitua esta função:
+   1. No detector de oportunidade personalizado, substitua essa função:
 
       ```java
       public List<PlacementOpportunity> process(List<TimedMetadata> timedMetadataList, Metadata metadata)
       ```
 
-      O `timedMetadataList` contém a lista de `TimedMetadata` disponível, que é classificada. Os metadados contêm os parâmetros de definição de metas e os parâmetros personalizados a serem enviados ao provedor de publicidade.
+      O `timedMetadataList` contém a lista de `TimedMetadata` disponíveis, que é classificada. Os metadados contêm os parâmetros de definição de metas e os parâmetros personalizados a serem enviados ao provedor de anúncios.
 
    1. Para cada `TimedMetadata`, crie um `List<PlacementOpportunity>`. A lista pode estar vazia, mas não nula. `PlacementOpportunity` deve ter os seguintes atributos:
 
@@ -57,9 +54,9 @@ Você pode implementar seus próprios detectores de oportunidade implementando a
       )
       ```
 
-   1. Após criar oportunidades de posicionamento para todos os objetos de metadados cronometrados detectados, retorne a lista `PlacementOpportunity`.
+   1. Após criar oportunidades de posicionamento para todos os objetos de metadados cronometrados detectados, basta retornar a lista `PlacementOpportunity`.
 
-Este é um exemplo de detector de oportunidade de disposição personalizado:
+Este é um exemplo de detector de oportunidade de posicionamento personalizado:
 
 ```java
 public class CustomPlacementOpportunityDetector implements PlacementOpportunityDetector { 
