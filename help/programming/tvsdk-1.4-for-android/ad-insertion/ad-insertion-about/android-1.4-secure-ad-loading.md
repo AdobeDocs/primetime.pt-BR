@@ -1,23 +1,21 @@
 ---
-description: nulo
-seo-description: nulo
-seo-title: Carregamento de anúncio seguro por HTTPS
 title: Carregamento de anúncio seguro por HTTPS
-uuid: 0d680fef-a372-4157-a89b-d9f10003c768
+description: Carregamento de anúncio seguro por HTTPS
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
 
-# Carregamento de anúncio seguro em HTTPS{#secure-ad-loading-over-https}
+# Carregamento de anúncio seguro por HTTPS{#secure-ad-loading-over-https}
 
-A Adobe Primetime fornece uma opção para solicitar a primeira chamada para o servidor de anúncios Primetime e as chamadas relacionadas a CRS por HTTPS.
+A Adobe Primetime fornece uma opção para solicitar a primeira chamada para o servidor de anúncios Primetime e as chamadas relacionadas ao CRS por HTTPS.
 
-O recurso não está ativado por padrão. Use o seguinte para ativar o carregamento seguro de anúncios.
+O recurso não está habilitado por padrão. Use o seguinte para ativar o carregamento seguro de anúncios.
 
 ```
 AuditudeSettings auditudeSettings = new AuditudeSettings(); 
