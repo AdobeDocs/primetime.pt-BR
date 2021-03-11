@@ -1,9 +1,9 @@
 ---
-seo-title: Data de término
-title: Data de término
-uuid: be9bbad7-5ec7-4012-ae2b-91de965cbc64
+title: Data final
+description: Data final
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%
@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Data final{#end-date}
 
-A data de término especifica a data após a qual uma licença expira.
+A data final especifica a data após a qual uma licença expira.
 
 Exemplo de caso de uso: Use uma data de expiração absoluta para refletir o fim dos direitos de distribuição.
