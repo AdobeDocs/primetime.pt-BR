@@ -1,9 +1,9 @@
 ---
-seo-title: Criação de uma política DRM com a API Java
-title: Criação de uma política DRM com a API Java
-uuid: 1672a6d0-e38c-4330-97b0-02147f99db47
+title: Criação de uma política de DRM com a API Java
+description: Criação de uma política de DRM com a API Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -11,12 +11,12 @@ ht-degree: 0%
 ---
 
 
-# Criação de uma política DRM com a API Java {#creating-a-drm-policy-with-the-java-api}
+# Criação de uma política de DRM com a API Java {#creating-a-drm-policy-with-the-java-api}
 
 Para criar uma política de DRM com a API Java:
 
-1. Configure seu ambiente de desenvolvimento e inclua no seu projeto todos os arquivos JAR listados em [Configure seu ambiente de desenvolvimento.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Crie um objeto `com.adobe.flashaccess.sdk.policy.Policy` e especifique suas propriedades, incluindo direitos, duração do armazenamento em cache de licenças e data de término da política de DRM.
+1. Configure seu ambiente de desenvolvimento e inclua em seu projeto todos os arquivos JAR listados em [Configurar seu ambiente de desenvolvimento.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Crie um objeto `com.adobe.flashaccess.sdk.policy.Policy` e especifique suas propriedades, incluindo direitos, duração do armazenamento em cache de licenças e data final da política de DRM.
 
    ```java
    // Create a new DRM policy object.  
@@ -65,4 +65,4 @@ Para criar uma política de DRM com a API Java:
    out.close(); 
    ```
 
-Consulte [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] no diretório Reference Implementation Command Line Tools [!DNL samples] para obter a fonte completa desse código de amostra.
+Consulte [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] no diretório Ferramentas de linha de comando de implementação de referência [!DNL samples] para obter a fonte completa deste código de amostra.
