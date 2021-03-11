@@ -1,9 +1,9 @@
 ---
-seo-title: Criptografar senhas
 title: Criptografar senhas
-uuid: 94dc7fe9-fe40-4779-912a-d84b58e4ee36
+description: Criptografar senhas
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Criptografar senhas{#encrypt-passwords}
 
-Os arquivos de propriedades incluem vários valores de senha que você não deve digitar como texto sem formatação. Criptografe esses valores usando o seguinte comando:
+Os arquivos de propriedades incluem vários valores de senha que você não deve inserir como texto sem formatação. Criptografe esses valores usando o seguinte comando:
 
 `java -jar adobe-flashaccess-i15n-setup.jar password`
 
-Esse comando exibirá uma senha criptografada, que você usará nos arquivos de propriedades.
+Esse comando gerará uma senha criptografada, que será usada nos arquivos de propriedades.
 
 >[!NOTE]
 >Este não é o utilitário usado para criptografar senhas do License Server.
