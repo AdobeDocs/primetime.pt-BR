@@ -1,28 +1,25 @@
 ---
-description: Você deve liberar uma instância e recursos do MediaPlayer quando não precisar mais do MediaResource.
-seo-description: Você deve liberar uma instância e recursos do MediaPlayer quando não precisar mais do MediaResource.
-seo-title: Liberar uma instância e recursos do MediaPlayer
+description: Você deve lançar uma instância e recursos do MediaPlayer quando não precisar mais do MediaResource.
 title: Liberar uma instância e recursos do MediaPlayer
-uuid: e7b2112e-8add-4789-9345-5f829d39d639
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
 
 
-# Liberar uma instância e recursos do MediaPlayer{#release-a-mediaplayer-instance-and-resources}
+# Liberar uma instância do MediaPlayer e recursos{#release-a-mediaplayer-instance-and-resources}
 
-Você deve liberar uma instância e recursos do MediaPlayer quando não precisar mais do MediaResource.
+Você deve lançar uma instância e recursos do MediaPlayer quando não precisar mais do MediaResource.
 
-Quando você solta um objeto `MediaPlayer`, os recursos de hardware subjacentes associados a esse objeto `MediaPlayer` são desalocados.
+Quando você lança um objeto `MediaPlayer`, os recursos de hardware subjacentes associados a esse objeto `MediaPlayer` são desalocados.
 
-Estes são alguns motivos para liberar um `MediaPlayer`:
+Estes são alguns motivos para lançar um `MediaPlayer`:
 
 * A retenção de recursos desnecessários pode afetar o desempenho.
-* Se várias instâncias do mesmo codec de vídeo não forem suportadas em um dispositivo, poderá ocorrer uma falha na reprodução em outros aplicativos.
+* Se várias instâncias do mesmo codec de vídeo não forem suportadas em um dispositivo, a falha de reprodução poderá ocorrer em outros aplicativos.
 
 1. Solte o `MediaPlayer`.
 
@@ -30,4 +27,4 @@ Estes são alguns motivos para liberar um `MediaPlayer`:
    function release():void;
    ```
 
-Depois que a instância `MediaPlayer` for lançada, você não poderá mais usá-la. Se qualquer método da interface `MediaPlayer` for chamado depois que for lançado, um `IllegalStateException` será lançado.
+Depois que a instância `MediaPlayer` for lançada, não será mais possível usá-la. Se qualquer método da interface `MediaPlayer` for chamado depois de ser lançado, um `IllegalStateException` será lançado.
