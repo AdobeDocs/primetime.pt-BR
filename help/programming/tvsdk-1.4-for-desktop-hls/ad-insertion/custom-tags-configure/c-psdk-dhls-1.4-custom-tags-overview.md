@@ -1,9 +1,9 @@
 ---
-seo-title: Exemplo de um ativo VOD personalizado
 title: Exemplo de um ativo VOD personalizado
-uuid: 599054c3-d6ef-4f85-9a0f-39c7e4f6ab24
+description: Exemplo de um ativo VOD personalizado
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Exemplo de um ativo VOD personalizado{#example-of-a-customized-vod-asset}
 
-Este é um exemplo de um ativo VOD personalizado:
+Veja um exemplo de um ativo VOD personalizado:
 
 ```
 #EXTM3U
@@ -43,6 +43,6 @@ seg5.ts
 
 Seu aplicativo pode configurar os seguintes cenários:
 
-* Uma notificação quando as tags `#EXT-X-ASSET`, ou qualquer outro conjunto de nomes de tags personalizadas que você assinou, existem no arquivo.
-* Insira publicidades quando uma tag `#EXT-X-AD`, ou qualquer outro nome de tag personalizado, for encontrada no fluxo.
+* Uma notificação quando `#EXT-X-ASSET` tags, ou qualquer outro conjunto de nomes de tags personalizados que você assinou, existem no arquivo.
+* Insira anúncios quando uma tag `#EXT-X-AD` ou qualquer outro nome de tag personalizada for encontrada no fluxo.
 
