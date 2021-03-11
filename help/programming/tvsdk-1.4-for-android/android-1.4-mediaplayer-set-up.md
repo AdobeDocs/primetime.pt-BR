@@ -1,27 +1,24 @@
 ---
-description: A interface do MediaPlayer para Android encapsula a funcionalidade e o comportamento de um player de mídia.
-seo-description: A interface do MediaPlayer para Android encapsula a funcionalidade e o comportamento de um player de mídia.
-seo-title: Configurar o MediaPlayer
+description: A interface MediaPlayer para Android encapsula a funcionalidade e o comportamento de um reprodutor de mídia.
 title: Configurar o MediaPlayer
-uuid: 492b4693-acdf-4213-98e5-d6f0f1ae086d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
 
-# Configure o MediaPlayer {#set-up-the-mediaplayer}
+# Configurar o MediaPlayer {#set-up-the-mediaplayer}
 
-A interface do MediaPlayer para Android encapsula a funcionalidade e o comportamento de um player de mídia.
+A interface MediaPlayer para Android encapsula a funcionalidade e o comportamento de um reprodutor de mídia.
 
-O TVSDK fornece uma implementação da interface `MediaPlayer`, a classe `DefaultMediaPlayer`. Quando precisar da funcionalidade de reprodução de vídeo, instancie `DefaultMediaPlayer`.
+O TVSDK fornece uma implementação da interface `MediaPlayer`, a classe `DefaultMediaPlayer`. Quando precisar da funcionalidade de reprodução de vídeo, exemplifique `DefaultMediaPlayer`.
 
 >[!TIP]
 >
->Interaja com a instância `DefaultMediaPlayer` somente com os métodos expostos pela interface `MediaPlayer`.
+>Interaja com a instância `DefaultMediaPlayer` somente com os métodos que são expostos pela interface `MediaPlayer`.
 
 1. Instancie um MediaPlayer usando o método de fábrica `DefaultMediaPlayer.create` público, transmitindo um objeto de contexto de aplicativo Java Android.
 
