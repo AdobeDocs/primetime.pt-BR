@@ -1,31 +1,28 @@
 ---
-description: A estrutura da interface do usuário é uma camada da interface na parte superior do TVSDK do navegador, que fornece várias construções da interface do usuário relacionadas ao player de vídeo fora da caixa. Você pode criar um player altamente personalizável fazendo as alterações pontuais apropriadas para o seu ambiente.
-seo-description: A estrutura da interface do usuário é uma camada da interface na parte superior do TVSDK do navegador, que fornece várias construções da interface do usuário relacionadas ao player de vídeo fora da caixa. Você pode criar um player altamente personalizável fazendo as alterações pontuais apropriadas para o seu ambiente.
-seo-title: A estrutura da interface do usuário
+description: A estrutura da interface do usuário é uma camada da interface do usuário sobre o TVSDK do navegador, que fornece várias construções da interface do usuário relacionadas ao player de vídeo prontas para uso. Você pode criar um reprodutor altamente personalizável fazendo as alterações pontuais apropriadas para seu ambiente.
 title: A estrutura da interface do usuário
-uuid: 8460d65c-b9aa-40d0-9e68-771b9f73a7b4
 translation-type: tm+mt
-source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
 
 
-# A Estrutura de IU {#the-ui-framework}
+# A estrutura da interface do usuário {#the-ui-framework}
 
-A estrutura da interface do usuário é uma camada da interface na parte superior do TVSDK do navegador, que fornece várias construções da interface do usuário relacionadas ao player de vídeo fora da caixa. Você pode criar um player altamente personalizável fazendo as alterações pontuais apropriadas para o seu ambiente.
+A estrutura da interface do usuário é uma camada da interface do usuário sobre o TVSDK do navegador, que fornece várias construções da interface do usuário relacionadas ao player de vídeo prontas para uso. Você pode criar um reprodutor altamente personalizável fazendo as alterações pontuais apropriadas para seu ambiente.
 
 >[!TIP]
 >
->O comportamento visual (de skinning) e da interface do usuário é personalizável.
+>O comportamento visual (skinning) e da interface do usuário é personalizável.
 
-Você pode reescrever seus próprios comportamentos ou substituir a funcionalidade de determinados comportamentos padrão. Você também pode reutilizar os comportamentos fornecidos com o SDK ao gravar os comportamentos do zero.
+Você pode reescrever seus próprios comportamentos ou substituir a funcionalidade de determinados comportamentos padrão. Também é possível reutilizar os comportamentos fornecidos com o SDK, gravando os comportamentos do zero.
 
-## Criar um player básico {#section_30E4812C4DDA4B519C9C837930B6AE45}
+## Criar um reprodutor básico {#section_30E4812C4DDA4B519C9C837930B6AE45}
 
-`primetimevisualapi.min.js` é a biblioteca da estrutura da interface do usuário e toda sua funcionalidade é exposta por meio da ptp do objeto global. No exemplo a seguir, os métodos `videoPlayer` criam o player subjacente:
+`primetimevisualapi.min.js` é a biblioteca de estrutura da interface do usuário e toda sua funcionalidade é exposta por meio do ptp de objeto global. No exemplo a seguir, os métodos `videoPlayer` criam o reprodutor subjacente:
 
 ```js
 <script src="scripts/primetimevisualapi.min.js"></script> 
@@ -36,35 +33,35 @@ Você pode reescrever seus próprios comportamentos ou substituir a funcionalida
 </script>
 ```
 
-## Configurar o player {#section_9FC936B983CD40439E6D7675197B226C}
+## Configuração do reprodutor {#section_9FC936B983CD40439E6D7675197B226C}
 
-Você pode configurar o player de uma das seguintes maneiras:
+Você pode configurar o reprodutor de uma das seguintes maneiras:
 
 * Uso do objeto JSON
 * Uso de APIs
 
-Para gerar o objeto JSON, o TVSDK do navegador fornece uma ferramenta Configurador de interface. Na ferramenta, você pode selecionar várias configurações, clicar em **[!UICONTROL Test Configuration]** para verificar as configurações e clicar em **[!UICONTROL Download Configuration]** para baixar as configurações. O conteúdo do arquivo baixado é usado como objeto JSON a ser passado para a API `ptp.videoPlayer`.
+Para gerar o objeto JSON, o Browser TVSDK fornece uma ferramenta UI Configurator. Na ferramenta, você pode selecionar várias configurações, clicar em **[!UICONTROL Test Configuration]** para verificar as configurações e clicar em **[!UICONTROL Download Configuration]** para baixar as configurações. O conteúdo do arquivo baixado é usado como objeto JSON a ser passado para a API `ptp.videoPlayer`.
 
 **Como executar a ferramenta** UI Configurator:
 
-1. Hospede a pasta `frameworks`, que está disponível no TVSDK do navegador, em um servidor da Web local.
+1. Hospede a pasta `frameworks`, que está disponível no Browser TVSDK, em um servidor da Web local.
 1. Para abrir a ferramenta, abra um navegador e navegue até `< path-to-hosted-frameworks-folder>/ui-framework/ui-configurator/`.
 
-**Configurar o comportamento do player**
+**Configuração do comportamento do reprodutor**
 
 Você pode configurar o comportamento do player de uma das seguintes maneiras:
 
 >[!TIP]
 >
->Para algumas das configurações, ambas estão disponíveis.
+>Para algumas das configurações, ambas as opções estão disponíveis.
 
-* **Usar a** `ptp.videoPlayer` API videoBehavior retorna o  `ptp.videoBehavior`, que permite configurar o player de vídeo subjacente. Se alguma configuração relacionada à reprodução precisar ser configurada, você pode usar essa opção.
+* **Usar a** `ptp.videoPlayer` API videoBehavior retorna o  `ptp.videoBehavior`, o que permite configurar o reprodutor de vídeo subjacente. Se alguma configuração relacionada à reprodução precisar ser configurada, use essa opção.
 
    ```js
    player.setAbrControlParameters ({object})
    ```
 
-* **Transmissão de um objeto de configuração para a** função videoPlayerQuando você usa esse objeto, o comportamento da interface do usuário pode ser configurado além das configurações de reprodução discutidas acima. O chamador precisa especificar os parâmetros que devem ser alterados e o player continuará a usar os valores padrão para os parâmetros não especificados.
+* **Transmissão de um objeto de configuração para a** função videoPlayerQuando você usa esse objeto, o comportamento da interface do usuário pode ser configurado além das configurações de reprodução discutidas acima. O chamador precisa especificar os parâmetros que devem ser alterados e o reprodutor continuará a usar os valores padrão para os parâmetros não especificados.
 
    ```js
    var player = ptp.videoPlayer('#video1', { 
@@ -75,17 +72,17 @@ Você pode configurar o comportamento do player de uma das seguintes maneiras:
    });
    ```
 
-   No exemplo acima, os parâmetros de controle ABR foram configurados usando um objeto de configuração. Um objeto também foi transmitido para configurar o comportamento da barra de controle.
+   No exemplo acima, os parâmetros de controle ABR foram configurados usando um objeto de configuração. Um objeto também foi passado para configurar o comportamento da barra de controle.
 
-   Consulte a seção de estrutura de objetos de Configuração de Visualização abaixo para obter a estrutura do objeto de configuração.
+   Consulte a seção Exibir estrutura de objetos de configuração abaixo para obter a estrutura do objeto de configuração.
 
-* **Acesso ao AdobePSDK.** MediaPlayerVocê pode usar  `videoPlayer.getMediaPlayer` em determinados casos de uso avançado em que precisa acessar o MediaPlayer do TVSDK do navegador.
+* **Acesso ao AdobePSDK.** MediaPlayerVocê pode usar o  `videoPlayer.getMediaPlayer` em determinados casos de uso avançado em que precisa acessar o MediaPlayer do Browser TVSDK.
 
-* **Configuração da capa do** playerPara obter mais informações sobre como captar o player, consulte  [Captura do player](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md).
+* **Configuração do skinning do** reprodutorPara obter mais informações sobre o skinning do reprodutor, consulte  [Skinning do reprodutor](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md).
 
-## Modificando um comportamento padrão {#section_D5D692638FFF4BEF81F7BE70E438CCE9}
+## Modificar um comportamento padrão {#section_D5D692638FFF4BEF81F7BE70E438CCE9}
 
-Na terminologia da estrutura da interface do usuário, um comportamento é uma construção que define a parte visual e a parte de interação de um componente específico. Ao usar a estrutura de objetos descrita abaixo, é possível modificar o que você deseja alterar no comportamento.
+Na terminologia da estrutura da interface do usuário, um comportamento é uma construção que define a parte visual e a parte de interação de um componente específico. Ao usar a estrutura de objeto descrita abaixo, você pode modificar o que deseja alterar no comportamento.
 
 Por exemplo, depois que o controle deslizante de volume estiver visível, se você não quiser ocultá-lo, use a seguinte amostra:
 
@@ -114,15 +111,15 @@ var player = ptp.videoPlayer('.videoHolder', {
 
 >[!NOTE]
 >
->Dependendo da personalização desejada, você pode substituir determinadas funcionalidades no comportamento ou escrever seu próprio comportamento. Para obter mais informações sobre qual funcionalidade pode ser substituída, consulte a documentação da API [UI framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
+>Dependendo da personalização desejada, você pode substituir determinadas funcionalidades no comportamento ou escrever seu próprio comportamento. Para obter mais informações sobre qual funcionalidade pode ser substituída, consulte a documentação da API [UI framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) .
 
 ## Referências {#section_0A76A3F44D8A49B09FE4C83F3FACCB76}
 
-Estas são algumas informações adicionais de referência:
+Estas são algumas informações de referência adicionais:
 
-* **Estrutura de objetos de Configuração de visualizaçãoEssa é a estrutura completa de objetos que menciona todos os comportamentos padrão de maneira hierárquica com os elementos padrão dos comportamentos.** Na configuração de amostra, as fábricas de interface foram usadas para criar o elemento. Você pode usar os mesmos ou suas formas preferidas para construir os elementos.
+* **Exibir** estrutura de objetos de configuração Essa é a estrutura completa de objetos que menciona todos os comportamentos padrão de maneira hierárquica com os elementos padrão dos comportamentos. Na configuração de amostra, as fábricas da interface do usuário foram usadas para criar o elemento . Você pode usar os mesmos ou suas maneiras preferidas para construir os elementos.
 
-   Você precisa especificar apenas as partes que deseja alterar e o restante da funcionalidade será selecionado dos padrões. Para o start, dependendo do caso de uso, é necessário fornecer a estrutura `SingleViewConfigurationObject` ou `MultiViewConfigurationObject`.
+   Você precisa especificar apenas as partes que deseja alterar e o restante da funcionalidade será selecionado dos padrões. Para começar, dependendo do caso de uso, você precisa fornecer a estrutura `SingleViewConfigurationObject` ou `MultiViewConfigurationObject`.
 
    ```js
    var DEFAULT_CONTROL_BAR_CONFIG = { 
@@ -771,11 +768,11 @@ Estas são algumas informações adicionais de referência:
 
 * **Helper** constrtsEsta construção é composta do seguinte:
 
-   * **** FábricasPara criar os elementos visuais, você pode usar  `ptp.factories.simpleButtonFactory`,  `ptp.factories.simpleDivFactory`,  `ptp.factories.simpleHRFactory`e  `ptp.factories.simpleSliderFactory`. Para obter mais informações, consulte a documentação da API [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
+   * **** FábricasPara criar os elementos visuais, você pode usar  `ptp.factories.simpleButtonFactory`,  `ptp.factories.simpleDivFactory`,  `ptp.factories.simpleHRFactory` e  `ptp.factories.simpleSliderFactory`. Para obter mais informações, consulte a documentação da API [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) .
 
-   * **** MixinsMixins são módulos composíveis que podem ser compostos nos comportamentos para usar construções comuns. Por exemplo, muitos dos componentes gostariam de estar cientes de mudanças que podem afetar seu comportamento quando, por exemplo, um anúncio está sendo reproduzido. Todos esses elementos adicionarão uma classe `adBreak`.
+   * **** MixinsMixins são módulos composíveis que podem ser compostos nos comportamentos para usar construções comuns. Por exemplo, muitos dos componentes gostariam de estar cientes de alterações que podem afetar seu comportamento quando, por exemplo, um anúncio está sendo reproduzido. Todos esses elementos adicionarão uma classe `adBreak`.
 
-      Este é um exemplo de como implementar a combinação integrada `adBreakStyling`:
+      Este é um exemplo de como implementar a combinação interna `adBreakStyling`:
 
       ```js
       adBreakStyling = function (element, player) { 
@@ -788,7 +785,7 @@ Estas são algumas informações adicionais de referência:
       }
       ```
 
-      Veja como um comportamento pode usar essa combinação:
+      Veja como um comportamento pode usar essa mistura:
 
       ```js
       customBehavior = function (element, configuration, player) { 
@@ -801,7 +798,7 @@ Estas são algumas informações adicionais de referência:
       }
       ```
 
-      Agora `customBehavior` pode usar todos os métodos expostos por `adBreakStyling`, que neste exemplo é `manageAdBreakStyle`. Um caso de uso adicional é quando uma mistura pode adicionar ouvintes de evento e, no manipulador, a mistura pode modificar o elemento de alguma forma. Subsequentemente, os componentes que estão usando essa combinação terão essa funcionalidade automaticamente.
+      Agora `customBehavior` pode usar todos os métodos expostos por `adBreakStyling`, que neste exemplo é `manageAdBreakStyle`. Um caso de uso adicional é quando uma mixin pode adicionar ouvintes de eventos e, no manipulador, a mixin pode modificar o elemento de alguma forma. Posteriormente, os componentes que estão usando essa mixin terão essa funcionalidade automaticamente.
 
-   * **** UtilitáriosAlguns utilitários, como  `ptp.elementGetter`, que é usado na seção de configuração e  `ptp.deepmerge`, podem ajudá-lo a gravar ou estender comportamentos. Para obter mais informações, consulte a documentação da API [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
+   * **** UtilitáriosAlguns utilitários, como  `ptp.elementGetter`, que é usado na seção de configuração e  `ptp.deepmerge`, podem ajudá-lo a gravar ou estender comportamentos. Para obter mais informações, consulte a documentação da API [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) .
 
