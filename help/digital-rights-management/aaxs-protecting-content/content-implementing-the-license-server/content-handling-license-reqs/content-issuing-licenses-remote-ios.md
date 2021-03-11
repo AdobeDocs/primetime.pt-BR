@@ -1,9 +1,9 @@
 ---
-seo-title: Emissão de licenças para delivery de chave remota para clientes iOS (requer Adobe Primetime)
-title: Emissão de licenças para delivery de chave remota para clientes iOS (requer Adobe Primetime)
-uuid: 43d88426-209f-4d31-a810-ea8d75f31da9
+title: Emitir licenças para delivery de chave remota para clientes do iOS (requer Adobe Primetime)
+description: Emitir licenças para delivery de chave remota para clientes do iOS (requer Adobe Primetime)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
@@ -11,6 +11,6 @@ ht-degree: 0%
 ---
 
 
-# Emissão de licenças para delivery de chave remota para clientes iOS (requer Adobe Primetime){#issuing-licenses-for-remote-key-delivery-to-ios-clients-requires-adobe-primetime}
+# Emitir licenças para entrega de chave remota para clientes do iOS (requer Adobe Primetime){#issuing-licenses-for-remote-key-delivery-to-ios-clients-requires-adobe-primetime}
 
-Para emitir licenças para conteúdo que requer o delivery de chave remota para dispositivos iOS, o certificado do Servidor de chave do License deve ser especificado em `HandlerConfiguration.setKeyServerCertificate()`.
+Para emitir licenças para o conteúdo que requer a entrega de Chave Remota para dispositivos iOS, o certificado do Servidor de Licenças do Servidor de Chave deve ser especificado em `HandlerConfiguration.setKeyServerCertificate()`.
