@@ -1,13 +1,10 @@
 ---
-description: Seu aplicativo deve usar os objetos TimedMetadata apropriados nos momentos apropriados.
-seo-description: Seu aplicativo deve usar os objetos TimedMetadata apropriados nos momentos apropriados.
-seo-title: Armazenar objetos de metadados cronometrados à medida que são despachados
+description: O aplicativo deve usar os objetos TimedMetadata apropriados em momentos apropriados.
 title: Armazenar objetos de metadados cronometrados à medida que são despachados
-uuid: 0e6d2a42-37a8-477e-b925-66bbc23445c1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -15,16 +12,16 @@ ht-degree: 0%
 
 # Armazenar objetos de metadados cronometrados à medida que são despachados {#store-timed-metadata-objects-as-they-are-dispatched}
 
-Seu aplicativo deve usar os objetos TimedMetadata apropriados nos momentos apropriados.
+O aplicativo deve usar os objetos TimedMetadata apropriados em momentos apropriados.
 
-Durante a análise de conteúdo, que ocorre antes da reprodução, o TVSDK identifica as tags assinadas e notifica seu aplicativo sobre essas tags. A hora associada a cada `TimedMetadata` é a hora local na linha do tempo de reprodução.
+Durante a análise de conteúdo, o que acontece antes da reprodução, o TVSDK identifica as tags assinadas e notifica seu aplicativo sobre essas tags. O tempo associado a cada `TimedMetadata` é o horário local na linha do tempo da reprodução.
 
-Seu aplicativo deve concluir as seguintes tarefas:
+O aplicativo deve realizar as seguintes tarefas:
 
-1. Acompanhe o tempo de reprodução atual.
-1. Corresponder o tempo de reprodução atual aos objetos `TimedMetadata` despachados.
+1. Rastreie o tempo de reprodução atual.
+1. Corresponda o tempo de reprodução atual aos objetos `TimedMetadata` despachados.
 
-1. Use `TimedMetadata` onde a hora do start for igual à hora atual de reprodução local.
+1. Use `TimedMetadata` onde a hora de início é igual à hora de reprodução local atual.
 
    O exemplo a seguir mostra como salvar `TimedMetadata` objetos em um `ArrayList`.
 
