@@ -1,13 +1,10 @@
 ---
-description: Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão de publicidade da Adobe Primetime.
-seo-description: Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão de publicidade da Adobe Primetime.
-seo-title: Requisitos de publicidade
+description: Você pode inserir anúncios no VOD e conteúdo ao vivo/linear usando a interface do Adobe Primetime Ad Decisioning.
 title: Requisitos de publicidade
-uuid: 734e6fc1-9343-4a5c-86a9-2a6d8e2b9acc
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Requisitos de publicidade{#advertising-requirements}
 
-Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão de publicidade da Adobe Primetime.
+Você pode inserir anúncios no VOD e conteúdo ao vivo/linear usando a interface do Adobe Primetime Ad Decisioning.
 
 <!--<a id="section_4889E0ED7A4241D98E61AD6C846B84B6"></a>-->
 
-A decisão do anúncio Primetime funciona com o TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
-Para incorporar anúncios ao seu conteúdo de vídeo, certifique-se de que a publicidade e o conteúdo de vídeo principal atendam aos seguintes requisitos:
+O Primetime ad decisioning funciona com TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
+Para incorporar anúncios no seu conteúdo de vídeo, verifique se o anúncio e o conteúdo principal do vídeo atendem aos seguintes requisitos:
 
 * A versão HLS do conteúdo de publicidade não pode ser superior à versão HLS do conteúdo principal.
-* Os anúncios não precisam ser multiplexados (sem restrições), independentemente de o conteúdo principal ser multiplexado.
+* Os anúncios não precisam ser multiplexados (sem restrições), independentemente do conteúdo principal ser multiplexado.
 
