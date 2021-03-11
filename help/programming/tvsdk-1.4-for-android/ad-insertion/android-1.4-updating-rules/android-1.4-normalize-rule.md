@@ -1,14 +1,11 @@
 ---
-description: A regra normalize define uma transformação de URL a ser aplicada a um URL criativo de origem obtido de uma resposta VAST/VMAP.
-keywords: normalize rule;creative selection rules
-seo-description: A regra normalize define uma transformação de URL a ser aplicada a um URL criativo de origem obtido de uma resposta VAST/VMAP.
-seo-title: Normalizar regras
+description: A regra normalizar define uma transformação de URL para aplicar a um URL criativo de origem obtido de uma resposta VAST/VMAP.
+keywords: normalizar regra, regras de seleção criativa
 title: Normalizar regras
-uuid: eccae85b-907e-4e16-9bb8-6c2be6cb0ab6
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '168'
 ht-degree: 1%
 
 ---
@@ -16,14 +13,14 @@ ht-degree: 1%
 
 # Normalizar regras{#normalize-rules}
 
-A regra normalize define uma transformação de URL a ser aplicada a um URL criativo de origem obtido de uma resposta VAST/VMAP.
+A regra normalizar define uma transformação de URL para aplicar a um URL criativo de origem obtido de uma resposta VAST/VMAP.
 
-**Quadro 2: A regra normalize tem os seguintes atributos e valores possíveis:**
+**Quadro 2: A regra de normalização tem os seguintes atributos e valores possíveis:**
 
 <table id="table_ljp_tgx_hz">  
  <thead> 
   <tr> 
-   <th class="entry"> Principal</th> 
+   <th class="entry"> Chave</th> 
    <th class="entry"> Tipo</th> 
    <th class="entry"> Valores</th> 
    <th class="entry"> Descrição</th> 
@@ -33,14 +30,14 @@ A regra normalize define uma transformação de URL a ser aplicada a um URL cria
   <tr> 
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> String</span></td> 
-   <td><span class="codeph"> normalize</span></td> 
+   <td><span class="codeph"> normalizar</span></td> 
    <td>O valor deve ser sempre <span class="codeph"> normalize</span>.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> String</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Atualmente, apenas <span class="codeph"> host</span> é suportado. Este atributo deve estar presente quando os atributos <span class="codeph"> correspondem</span> e <span class="codeph"> valores</span> estiverem definidos.</td> 
+   <td>Atualmente, somente <span class="codeph"> host</span> é suportado. Esse atributo deve estar presente quando <span class="codeph"> corresponder a</span> e <span class="codeph"> valores</span> forem definidos.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matches</span></td> 
@@ -48,11 +45,11 @@ A regra normalize define uma transformação de URL a ser aplicada a um URL cria
    <td></td> 
    <td>Valores possíveis:
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span> - igual</li> 
-     <li><span class="codeph"> ne</span> - não é igual</li> 
+     <li><span class="codeph"> eq</span>  - igual</li> 
+     <li><span class="codeph"> ne</span>  - não é igual</li> 
      <li><span class="codeph"> co</span> - contém</li> 
-     <li><span class="codeph"> nc</span> - não contém</li> 
-     <li><span class="codeph"> sw</span> - start com</li> 
+     <li><span class="codeph"> nc</span>  - não contém</li> 
+     <li><span class="codeph"> sw</span>  - começa com</li> 
      <li><span class="codeph"> ew</span>  - termina com</li> 
     </ul></td> 
   </tr> 
@@ -60,7 +57,7 @@ A regra normalize define uma transformação de URL a ser aplicada a um URL cria
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Matriz</span></td> 
    <td></td> 
-   <td>O TVSDK usará o atributo <span class="codeph"> corresponde</span> no <span class="codeph"> item</span> do criativo de origem e corresponderá aos valores definidos nesta matriz.</td> 
+   <td>O TVSDK usará o atributo <span class="codeph"> corresponde</span> no <span class="codeph"> item</span> do criativo de origem e corresponderá aos valores definidos nessa matriz.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> find</span></td> 
@@ -72,7 +69,7 @@ A regra normalize define uma transformação de URL a ser aplicada a um URL cria
    <td><span class="codeph"> replace</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td> Uma expressão regular a ser aplicada no URL criativo de origem para substituição com base na correspondência.</td> 
+   <td> Uma expressão regular a ser aplicada no URL criativo de origem para substituir com base na correspondência.</td> 
   </tr> 
  </tbody> 
 </table>
