@@ -1,30 +1,28 @@
 ---
-description: O TVSDK apresenta delivery seguro em HTTPS.
-seo-description: O TVSDK apresenta delivery seguro em HTTPS.
-seo-title: Delivery seguro em HTTPS
-title: Delivery seguro em HTTPS
+description: O TVSDK apresenta entrega segura por HTTPS.
+title: Entrega segura por HTTPS
 translation-type: tm+mt
-source-git-commit: 4a2271fc481b37bb0a437091de6efe98fcb348d9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
 
-# Delivery seguro em HTTPS {#secure-delivery-https}
+# Entrega segura por HTTPS {#secure-delivery-https}
 
-O Adobe Primetime TVSDK fornece suporte para o delivery HTTPS para todas as chamadas originadas do TVSDK, que incluem
+O Adobe Primetime TVSDK fornece suporte para entrega HTTPS para todas as chamadas originadas do TVSDK, que incluem
 
 * Chamadas de servidor de anúncios do Auditude
-* Pedidos CRS
-* Chamadas de licença DRM
+* Solicitações de CRS
+* Chamadas de licença de DRM
 * Pings do Video Analytics
-* Faturamento
+* Pings de Faturamento
 
 Para usar esse recurso, verifique se os servidores configurados para atender às solicitações acima são compatíveis com HTTPS.
 
-Esse novo comportamento não é ativado por padrão. Use o seguinte para ativar o delivery seguro antes de chamar `MediaPlayer.replaceCurrentResource()`
+Esse novo comportamento não é habilitado por padrão. Use o seguinte para ativar a entrega segura antes de chamar `MediaPlayer.replaceCurrentResource()`
 
 ```java
 MediaPlayerItemConfig config = new MediaPlayerItemConfig(context);
