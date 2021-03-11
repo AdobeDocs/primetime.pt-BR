@@ -1,13 +1,10 @@
 ---
 description: Você pode personalizar ou substituir comportamentos de publicidade.
-seo-description: Você pode personalizar ou substituir comportamentos de publicidade.
-seo-title: Configurar reprodução personalizada
 title: Configurar reprodução personalizada
-uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '159'
 ht-degree: 1%
 
 ---
@@ -15,28 +12,28 @@ ht-degree: 1%
 
 # Configurar reprodução personalizada {#cset-up-customized-playback}
 
-Você pode personalizar ou sobrescrever o comportamento do anúncio, registrando a instância da política de publicidade no TVSDK.
+Você pode personalizar ou substituir o comportamento do anúncio, registrando a instância da política de anúncio com TVSDK.
 
-Para personalizar os comportamentos de publicidade, execute um dos procedimentos a seguir:
+Para personalizar os comportamentos do anúncio, siga um destes procedimentos:
 
 * Implemente a interface `AdPolicySelector` e todos os seus métodos.
-Essa opção é recomendada se você precisar substituir todos os comportamentos padrão de anúncio.
+Essa opção é recomendada se você precisar substituir todos os comportamentos de publicidade padrão.
 
-* Estende a classe `DefaultAdPolicySelector` e fornece implementações somente para os comportamentos que exigem
+* Estender a classe `DefaultAdPolicySelector` e fornecer implementações somente para os comportamentos que exigem
 personalização.
 Essa opção é recomendada se você precisar substituir apenas alguns dos comportamentos padrão.
 
 Para ambas as opções, conclua as seguintes tarefas:
 
-Para personalizar comportamentos de publicidade:
+Para personalizar os comportamentos do anúncio:
 
 1. Implemente a interface AdPolicySelector e todos os seus métodos.
 
-1. Atribua a instância de política a ser usada pelo TVSDK por meio da fábrica de publicidade.
+1. Atribua a instância de política a ser usada pelo TVSDK por meio do setor de publicidade.
 
 >[!IMPORTANT]
 >
->As políticas de publicidade personalizadas registradas no início da >reprodução são apagadas quando a instância do MediaPlayer é >desalocada. Seu aplicativo deve registrar uma instância de política >seletor sempre que uma nova sessão de reprodução é criada.
+>As políticas de anúncio personalizadas registradas no início da reprodução são apagadas quando a instância MediaPlayer é >desalocada. O aplicativo deve registrar uma instância de política > seletor sempre que uma nova sessão de reprodução for criada.
 
 Por exemplo:
 
