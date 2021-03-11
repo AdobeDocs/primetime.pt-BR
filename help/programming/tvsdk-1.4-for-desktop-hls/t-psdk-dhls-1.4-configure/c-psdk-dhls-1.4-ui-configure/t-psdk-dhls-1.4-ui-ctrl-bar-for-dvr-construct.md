@@ -1,13 +1,10 @@
 ---
-description: Você pode implementar uma barra de controle com suporte a DVR para transmissão ao vivo e VOD. O suporte a DVR inclui o conceito de uma janela pesquisável e o ponto ativo do cliente.
-seo-description: Você pode implementar uma barra de controle com suporte a DVR para transmissão ao vivo e VOD. O suporte a DVR inclui o conceito de uma janela pesquisável e o ponto ativo do cliente.
-seo-title: Construa uma barra de controle aprimorada para DVR
+description: É possível implementar uma barra de controle com suporte a DVR para VOD e transmissão ao vivo. O suporte a DVR inclui o conceito de uma janela pesquisável e o ponto ativo do cliente.
 title: Construa uma barra de controle aprimorada para DVR
-uuid: 08f943e8-90da-4860-92dd-dd289fd68cba
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
@@ -15,29 +12,29 @@ ht-degree: 0%
 
 # Construa uma barra de controle aprimorada para DVR{#construct-a-control-bar-enhanced-for-dvr}
 
-Você pode implementar uma barra de controle com suporte a DVR para transmissão ao vivo e VOD. O suporte a DVR inclui o conceito de uma janela pesquisável e o ponto ativo do cliente.
+É possível implementar uma barra de controle com suporte a DVR para VOD e transmissão ao vivo. O suporte a DVR inclui o conceito de uma janela pesquisável e o ponto ativo do cliente.
 
-* Para VOD, o comprimento da janela pesquisável é a duração do ativo inteiro.
+* Para VOD, o comprimento da janela que pode ser buscada é a duração do ativo inteiro.
 * Para transmissão ao vivo, o comprimento da janela DVR (pesquisável) é definido como o intervalo de tempo que começa na janela de reprodução ao vivo e termina no ponto ativo do cliente.
 
-   O ponto ativo do cliente é calculado subtraindo o comprimento do buffer do final da janela ativa. A duração do público alvo é um valor maior ou igual à duração máxima de um fragmento no manifesto.
+   O ponto ativo do cliente é calculado subtraindo o comprimento do buffer do final da janela ativa. A duração do target é um valor maior ou igual à duração máxima de um fragmento no manifesto.
 
    O valor padrão é 10000 ms.
 
-   A barra de controle para reprodução ao vivo suporta DVR ao posicionar primeiro a miniatura no ponto ativo do cliente ao iniciar a reprodução e ao exibir uma região que marca a área na qual a busca não é permitida.
+   A barra de controle da reprodução ao vivo oferece suporte a DVR, posicionando primeiro o polegar no ponto de entrada do cliente ao iniciar a reprodução e exibindo uma região que marca a área onde a busca não é permitida.
 
 <!--<a id="fig_37A39A28BA714BA5A2C461357ED5BD41"></a>-->
 
 ![](assets/dvr-window.PNG){width=&quot;684&quot;}
 
-1. Para implementar uma barra de controle com suporte a DVR, siga as etapas para exibir uma barra de depuração de busca, com algumas pequenas diferenças:
+1. Para implementar uma barra de controle com suporte DVR, siga as etapas para exibir uma barra de movimentação, com algumas pequenas diferenças:
 
-   * Você pode optar por implementar uma barra de controle que seja mapeada somente para o intervalo pesquisável em vez de para o intervalo de reprodução. Qualquer interação do usuário para busca pode ser considerada segura no intervalo pesquisável.
-   * Você pode optar por implementar uma barra de controle que esteja mapeada para o intervalo de reprodução, mas que também exiba o intervalo pesquisável.
+   * É possível optar por implementar uma barra de controle mapeada somente para o intervalo pesquisável, em vez de para o intervalo de reprodução. Qualquer interação do usuário para busca pode ser considerada segura no intervalo pesquisável.
+   * É possível optar por implementar uma barra de controle que é mapeada para o intervalo de reprodução, mas que também exibe o intervalo pesquisável.
 
       Para uma barra de controle:
    1. Adicione uma sobreposição à barra de controle que representa o intervalo de reprodução.
-   1. Quando o usuário start buscar, verifique se a posição de busca desejada está dentro do intervalo pesquisável usando a propriedade `MediaPlayer.seekableRange`.
+   1. Quando o usuário começar a procurar, verifique se a posição de busca desejada está dentro do intervalo pesquisável usando a propriedade `MediaPlayer.seekableRange` .
 
       Por exemplo:
 
