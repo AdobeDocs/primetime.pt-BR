@@ -1,29 +1,26 @@
 ---
-description: O TVSDK do navegador fornece uma interface DRM que você pode usar para reproduzir conteúdo protegido por diferentes soluções DRM, incluindo o FairPlay, PlayReady e Widevine.
-seo-description: O TVSDK do navegador fornece uma interface DRM que você pode usar para reproduzir conteúdo protegido por diferentes soluções DRM, incluindo o FairPlay, PlayReady e Widevine.
-seo-title: Visão geral da interface do DRM
-title: Visão geral da interface do DRM
-uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
+description: O Browser TVSDK fornece uma interface DRM que pode ser usada para reproduzir conteúdo protegido por diferentes soluções DRM, incluindo FairPlay, PlayReady e Widevine.
+title: Visão geral da interface DRM
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
 
-# Visão geral da interface do DRM{#drm-interface-overview}
+# Visão geral da interface DRM{#drm-interface-overview}
 
-O TVSDK do navegador fornece uma interface DRM que você pode usar para reproduzir conteúdo protegido por diferentes soluções DRM, incluindo o FairPlay, PlayReady e Widevine.
+O Browser TVSDK fornece uma interface DRM que pode ser usada para reproduzir conteúdo protegido por diferentes soluções DRM, incluindo FairPlay, PlayReady e Widevine.
 
 <!--<a id="section_59994F2059B245E996E0776214804A0A"></a>-->
 
 >[!IMPORTANT]
 >
->O suporte a DRM está disponível para streams MPEG-Dash protegidos com sistemas DRM Microsoft PlayReady (no Internet Explorer no Windows 8.1 e Edge) e Widevine (no Google Chrome). O suporte a DRM está disponível para fluxos HLS no Safari que são protegidos com o FairPlay.
+>O suporte a DRM está disponível para fluxos MPEG-Dash protegidos com os sistemas DRM Microsoft PlayReady (no Internet Explorer no Windows 8.1 e Edge) e Widevine (no Google Chrome). O suporte a DRM está disponível para fluxos HLS no Safari, protegidos com o FairPlay.
 
-A interface principal do fluxo de trabalho do DRM é `DRMManager`. Uma referência à instância `DRMManager` pode ser obtida por meio da instância MediaPlayer:
+A principal interface do fluxo de trabalho do DRM é o `DRMManager`. Uma referência à instância `DRMManager` pode ser obtida por meio da instância MediaPlayer:
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
@@ -32,7 +29,7 @@ A interface principal do fluxo de trabalho do DRM é `DRMManager`. Uma referênc
 
 Este é um fluxo de trabalho de alto nível para reprodução de conteúdo protegido por DRM:
 
-1. Para anexar os dados específicos do sistema DRM que serão usados pelo TVSDK do navegador no processo de aquisição de licença para um fluxo protegido, faça a seguinte chamada antes de chamar `mediaPlayer.replaceCurrentResource`:
+1. Para anexar os dados específicos do sistema DRM que serão usados pelo Browser TVSDK no processo de aquisição de licença para um fluxo protegido, faça a seguinte chamada antes de chamar `mediaPlayer.replaceCurrentResource`:
 
    ```js
    var protectionData = { 
@@ -50,7 +47,7 @@ Este é um fluxo de trabalho de alto nível para reprodução de conteúdo prote
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Se for esperado que o mesmo conteúdo funcione com diferentes sistemas DRM em navegadores diferentes, os dados de proteção poderão ser especificados para vários sistemas DRM.
+1. Se o mesmo conteúdo deve funcionar com diferentes sistemas DRM em navegadores diferentes, os dados de proteção podem ser especificados para vários sistemas DRM.
 
    ```js
    var protectionData = { 
@@ -95,13 +92,13 @@ Este é um fluxo de trabalho de alto nível para reprodução de conteúdo prote
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Quando os dados de proteção não estão definidos, as informações necessárias, como o URL da licença, são recuperadas da caixa PSSH para sistemas DRM, onde aplicável.
+1. Quando os dados de proteção não são definidos, as informações necessárias, como o URL da licença, são recuperadas da caixa PSSH para sistemas DRM, quando aplicável.
 
    >[!TIP]
    >
    >A especificação de dados de proteção substitui o URL da licença especificado na caixa PSSH.
 
-1. Por padrão, o tipo de sessão da licença DRM é temporário, o que significa que a licença não é armazenada depois que a sessão é fechada.
+1. Por padrão, o tipo de sessão da licença de DRM é temporário, o que significa que a licença não é armazenada após o fechamento da sessão.
 
    Você pode especificar um tipo de sessão usando uma API em `DRMManager`.  Para compatibilidade com versões anteriores, os tipos de sessão incluem `temporary`, `persistent-license`, `persistent-usage-record` e `persistent`.
 
@@ -110,7 +107,7 @@ Este é um fluxo de trabalho de alto nível para reprodução de conteúdo prote
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. Quando `sessionType` usado for `persistent-license` ou `persistent`, a licença do DRM poderá ser devolvida invocando `DRMManager.returnLicense`.
+1. Quando `sessionType` usado for `persistent-license` ou `persistent`, a licença de DRM poderá ser retornada chamando `DRMManager.returnLicense`.
 
    ```js
    var onLicenseReturnFunc = function () { 
