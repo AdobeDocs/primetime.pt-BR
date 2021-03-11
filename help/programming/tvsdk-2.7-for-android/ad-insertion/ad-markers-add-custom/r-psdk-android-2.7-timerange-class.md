@@ -1,13 +1,10 @@
 ---
-description: Os marcadores de anúncio personalizados permitem que você passe um conjunto de especificações TimeRange que representam segmentos de linha do tempo para TVSDK.
-seo-description: Os marcadores de anúncio personalizados permitem que você passe um conjunto de especificações TimeRange que representam segmentos de linha do tempo para TVSDK.
-seo-title: classe TimeRange
-title: classe TimeRange
-uuid: e5a176af-29b9-4aa6-848e-5aba7988584b
+description: Os marcadores de anúncios personalizados permitem que você transmita um conjunto de especificações de Intervalo de tempo que representam segmentos de linha do tempo para o TVSDK.
+title: Classe TimeRange
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
@@ -15,19 +12,19 @@ ht-degree: 0%
 
 # Classe TimeRange {#timerange-class}
 
-Os marcadores de anúncio personalizados permitem que você passe um conjunto de especificações TimeRange que representam segmentos de linha do tempo para TVSDK.
+Os marcadores de anúncios personalizados permitem que você transmita um conjunto de especificações de Intervalo de tempo que representam segmentos de linha do tempo para o TVSDK.
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Cada especificação `TimeRange` no conjunto representa um segmento na linha do tempo de reprodução mantido internamente pelo TVSDK e que deve ser marcado adequadamente como um período relacionado a anúncios.
+Cada especificação `TimeRange` no conjunto representa um segmento na linha do tempo de reprodução que é mantido internamente pelo TVSDK e que deve ser marcado adequadamente como um período relacionado a anúncios.
 
-A classe `TimeRange` é uma estrutura de dados simples que expõe a posição do start e a posição final na linha do tempo. Essas duas propriedades somente leitura abstrairão a ideia de um intervalo de tempo na linha do tempo de reprodução.
+A classe `TimeRange` é uma estrutura de dados simples que expõe a posição inicial e final na linha do tempo. Essas duas propriedades somente leitura abstraindo a ideia de um intervalo de tempo na linha do tempo da reprodução.
 
 >[!TIP]
 >
 >Ambos os valores são expressos em milissegundos.
 
-Este é um resumo da classe `TimeRange`:
+Aqui está um resumo da classe `TimeRange`:
 
 ```java
 public final class TimeRange {
