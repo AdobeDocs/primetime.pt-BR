@@ -1,34 +1,31 @@
 ---
-description: Você pode fornecer informações de estilização para faixas de legenda fechada usando a classe TextFormat. Isso define o estilo de todas as legendas ocultas exibidas pelo player.
-seo-description: Você pode fornecer informações de estilização para faixas de legenda fechada usando a classe TextFormat. Isso define o estilo de todas as legendas ocultas exibidas pelo player.
-seo-title: Controlar estilo de legenda
-title: Controlar estilo de legenda
-uuid: 331b0833-3e8a-482e-a3df-5e92b69d0a94
+description: Você pode fornecer informações de estilo para faixas de legenda fechada usando a classe TextFormat. Isso define o estilo para quaisquer legendas ocultas exibidas pelo seu reprodutor.
+title: Controle o estilo da legenda oculta
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
 
 
-# Controlar o estilo de legenda fechada {#control-closed-caption-styling-overview}
+# Controlar estilo de legenda {#control-closed-caption-styling-overview}
 
-Você pode fornecer informações de estilização para faixas de legenda fechada usando a classe TextFormat. Isso define o estilo de todas as legendas ocultas exibidas pelo player.
+Você pode fornecer informações de estilo para faixas de legenda fechada usando a classe TextFormat. Isso define o estilo para quaisquer legendas ocultas exibidas pelo seu reprodutor.
 
-Essa classe encapsula informações de estilo de legenda fechada, como tipo de fonte, tamanho, cor e opacidade de plano de fundo. Uma classe auxiliar associada, `TextFormatBuilder`, facilita o trabalho com configurações de estilo de legenda fechada.
+Essa classe encapsula informações de estilo de legenda fechada, como tipo de fonte, tamanho, cor e opacidade do plano de fundo. Uma classe auxiliar associada, `TextFormatBuilder`, facilita o trabalho com configurações de estilo de legenda fechada.
 
-## Definir estilos de legenda fechada {#set-closed-caption-styles}
+## Definir estilos de legenda {#set-closed-caption-styles}
 
-É possível criar o estilo do texto de legenda com métodos TVSDK.
+Você pode criar um estilo para o texto de legenda com métodos TVSDK.
 
-1. Aguarde o player de mídia estar no estado PREPARADO.
+1. Aguarde até que o reprodutor de mídia esteja pelo menos no estado PREPARADO.
 1. Crie uma instância `TextFormatBuilder`.
 
    Você pode fornecer todos os parâmetros de estilo de legenda agora ou defini-los posteriormente.
 
-   O TVSDK encapsula informações de estilo de legenda na interface `TextFormat`. A classe `TextFormatBuilder` cria objetos que implementam essa interface.
+   O TVSDK encapsula informações de estilo de legenda fechada na interface `TextFormat`. A classe `TextFormatBuilder` cria objetos que implementam essa interface.
 
    ```java
    public TextFormatBuilder( 
@@ -44,15 +41,15 @@ Essa classe encapsula informações de estilo de legenda fechada, como tipo de f
       int fillOpacity)
    ```
 
-1. Para obter uma referência a um objeto que implemente a interface `TextFormat`, chame o método público `TextFormatBuilder.toTextFormat`.
+1. Para obter uma referência a um objeto que implementa a interface `TextFormat`, chame o método público `TextFormatBuilder.toTextFormat`.
 
-   Isso retorna um objeto `TextFormat` que pode ser aplicado ao player de mídia.
+   Isso retorna um objeto `TextFormat` que pode ser aplicado ao reprodutor de mídia.
 
    ```java
    public TextFormat toTextFormat()
    ```
 
-1. Como opção, obtenha as configurações atuais de estilo de legenda fechada executando um dos procedimentos a seguir:
+1. Opcionalmente, obtenha as configurações de estilo de legenda fechada atuais seguindo um destes procedimentos:
 
    * Obtenha todas as configurações de estilo com `MediaPlayer.getCCStyle`.
 
@@ -68,7 +65,7 @@ Essa classe encapsula informações de estilo de legenda fechada, como tipo de f
       public TextFormat getCCStyle() throws IllegalStateException;
       ```
 
-   * Obtenha as configurações, uma de cada vez, pelos métodos getter da interface `TextFormat`.
+   * Obtenha as configurações, uma de cada vez, por meio dos métodos getter da interface `TextFormat`.
 
       ```js
       public Color getFontColor(); 
@@ -86,9 +83,9 @@ Essa classe encapsula informações de estilo de legenda fechada, como tipo de f
 
    >[!NOTE]
    >
-   >Não é possível alterar o tamanho das legendas WebVTT.
+   >Não é possível alterar o tamanho das legendas da WebVTT.
 
-   * Use o método setter `MediaPlayer.setCCStyle`, passando uma instância da interface `TextFormat`:
+   * Use o método setter `MediaPlayer.setCCStyle`, transmitindo uma instância da interface `TextFormat`:
 
       ```js
       /** 
@@ -106,7 +103,7 @@ Essa classe encapsula informações de estilo de legenda fechada, como tipo de f
 
    * Use a classe `TextFormatBuilder`, que define métodos setter individuais.
 
-      A interface `TextFormat` define um objeto imutável para que haja apenas métodos getter e sem setters. Você pode definir os parâmetros de estilo de legenda fechada somente com a classe `TextFormatBuilder`:
+      A interface `TextFormat` define um objeto imutável para que haja apenas métodos getter e nenhum setters. Você pode definir os parâmetros de estilo de legenda fechada somente com a classe `TextFormatBuilder` :
 
       ```js
       // set font type 
@@ -126,11 +123,11 @@ Essa classe encapsula informações de estilo de legenda fechada, como tipo de f
       public void setFontColor(Color fontColor)
       ```
 
-A configuração do estilo de legenda fechada é uma operação assíncrona, portanto, pode levar até alguns segundos para que as alterações sejam exibidas na tela.
+A configuração do estilo de legenda oculta é uma operação assíncrona; portanto, pode levar até alguns segundos para que as alterações sejam exibidas na tela.
 
-## Opções de estilo de legenda fechada {#closed-caption-styling-options}
+## Opções de estilo de legenda ocultas {#closed-caption-styling-options}
 
-É possível especificar várias opções de estilo de legenda e essas opções substituem as opções de estilo nas legendas originais
+Você pode especificar várias opções de estilo de legenda, e essas opções substituem as opções de estilo nas legendas originais
 
 ```
 public TextFormatBuilder(
@@ -149,7 +146,7 @@ public TextFormatBuilder(
 
 >[!TIP]
 >
->Nas opções que definem valores padrão (por exemplo, DEFAULT), esse valor se refere ao que a configuração era quando a legenda foi originalmente especificada.
+>Nas opções que definem valores padrão (por exemplo, DEFAULT), esse valor refere-se à configuração quando a legenda foi originalmente especificada.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -161,56 +158,56 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fonte </td> 
-   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente para um valor definido pela lista discriminada <span class="codeph"> TextFormat.Font </span> e representa, por exemplo, um espaçamento único com ou sem servidores. </p> <p>Dica:  As fontes reais disponíveis em um dispositivo podem variar e as substituições são usadas quando necessário. O espaço único com serifs é normalmente utilizado como substituto, embora essa substituição possa ser específica do sistema. </p> </td> 
+   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente como um valor definido pela enumeração <span class="codeph"> TextFormat.Font </span> e representa, por exemplo, um espaçamento único com ou sem serifs. </p> <p>Dica:  As fontes reais disponíveis em um dispositivo podem variar, e as substituições são usadas quando necessário. O espaço único com serifs é normalmente utilizado como substituto, embora esta substituição possa ser específica do sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamanho </td> 
-   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente para um valor definido pela lista discriminada <span class="codeph"> TextFormat.Size </span>: 
+   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente como um valor definido pela enumeração <span class="codeph"> TextFormat.Size </span>: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MÉDIO  </span> - Tamanho normal </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MÉDIO  </span> - O tamanho padrão </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Aproximadamente 30% maior que a média </li> 
       <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUENO  </span> - Aproximadamente 30% menor que o médio </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PADRÃO  </span> - O tamanho padrão da legenda; igual ao meio </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT  </span> - O tamanho padrão da legenda; igual ao meio </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Borda da fonte </td> 
-   <td colname="2"> <p>O efeito usado para a borda da fonte, como elevado ou nenhum. </p> <p>Pode ser definido somente para um valor definido pela lista discriminada <span class="codeph"> TextFormat.FontEdge </span>. </p> </td> 
+   <td colname="2"> <p>O efeito usado para a borda da fonte, como acima ou não. </p> <p>Pode ser definido somente como um valor definido pela enumeração <span class="codeph"> TextFormat.FontEdge </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da fonte </td> 
-   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente para um valor definido pela lista discriminada <span class="codeph"> TextFormat.Color </span>. </p> </td> 
+   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente como um valor definido pela enumeração <span class="codeph"> TextFormat.Color </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da borda </td> 
-   <td colname="2"> <p>A cor do efeito da borda. </p> <p>Pode ser definido para qualquer um dos valores disponíveis para a cor da fonte. </p> </td> 
+   <td colname="2"> <p>A cor do efeito da borda. </p> <p>Pode ser definido como qualquer um dos valores disponíveis para a cor da fonte. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor do plano de fundo </td> 
-   <td colname="2"> <p>A cor da célula do caractere de plano de fundo. </p> <p>Pode ser definido somente para valores que estão disponíveis para a cor da fonte. </p> </td> 
+   <td colname="2"> <p>A cor da célula do caractere de fundo. </p> <p>Pode ser definido somente para valores que estão disponíveis para a cor da fonte. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor de preenchimento </td> 
-   <td colname="2"> <p>A cor do plano de fundo da janela na qual o texto está localizado. </p> <p>Pode ser definido para qualquer um dos valores disponíveis para a cor da fonte. </p> </td> 
+   <td colname="2"> <p>A cor do plano de fundo da janela em que o texto está localizado. </p> <p>Pode ser definido como qualquer um dos valores disponíveis para a cor da fonte. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidade da fonte </td> 
-   <td colname="2"> <p>A opacidade do texto. </p> <p>Expresso como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para a fonte é 100. </p> </td> 
+   <td colname="2"> <p>A opacidade do texto. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> para a fonte é 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Opacidade do plano de fundo </td> 
-   <td colname="2"> <p>A opacidade da célula de caractere de plano de fundo. </p> <p>Expresso como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para o plano de fundo é 100. </p> </td> 
+   <td colname="1"> Opacidade de fundo </td> 
+   <td colname="2"> <p>A opacidade da célula do caractere de plano de fundo. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> para o plano de fundo é 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidade de preenchimento </td> 
-   <td colname="2"> <p>A opacidade do plano de fundo da janela da legenda. </p> <p>Expresso como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para preenchimento é 0. </p> </td> 
+   <td colname="2"> <p>A opacidade do plano de fundo da janela da legenda. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> para preenchimento é 0. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Exemplos de formatação de legenda {#examples-caption-formatting}
 
-É possível especificar a formatação de legenda fechada.
+É possível especificar a formatação de legenda oculta.
 
 **Exemplo 1: Especificar valores de formato explicitamente**
 
