@@ -1,17 +1,13 @@
 ---
 title: Notas de versão do TVSDK 2.1 PlayStation 4
-seo-title: Notas de versão do TVSDK 2.1 PlayStation 4
-description: As notas de versão do TVSDK 2.1 para PlayStation 4 descrevem os recursos compatíveis e os problemas conhecidos no TVSDK 2.1 PlayStation 4.
-seo-description: As notas de versão do TVSDK 2.1 para PlayStation 4 descrevem os recursos compatíveis e os problemas conhecidos no TVSDK 2.1 PlayStation 4.
-uuid: 494569cf-07e2-476a-b88e-e46c9cca4cdc
+description: As Notas de versão do TVSDK 2.1 para PlayStation 4 descrevem os recursos compatíveis e os problemas conhecidos no TVSDK 2.1 PlayStation 4 .
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-discoiquuid: ebfc8819-f5a9-47a2-b454-0e4e6f9e4640
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -19,7 +15,7 @@ ht-degree: 0%
 
 # Notas de versão do TVSDK 2.1 PlayStation 4 {#tvsdk-playstation-release-notes}
 
-As notas de versão do TVSDK 2.1 para PlayStation 4 descrevem os recursos compatíveis e os problemas conhecidos no TVSDK 2.1 PlayStation 4.
+As Notas de versão do TVSDK 2.1 para PlayStation 4 descrevem os recursos compatíveis e os problemas conhecidos no TVSDK 2.1 PlayStation 4 .
 
 ## Problemas resolvidos {#resolved-issues}
 
@@ -28,119 +24,119 @@ Estes são os problemas resolvidos para TVSDK 2.1 para PlayStation 4:
 **Versão 2.1.0.638**
 
 * **PTPLAY-10439:**
-Quando o link de anúncio do invólucro VMAP estava quebrado, o player estava ficando preso no estado Preparando (ele não estava enviando 
+Quando o link de anúncio do invólucro VMAP estava quebrado, o reprodutor estava ficando preso no estado Preparando (não estava enviando) 
 `onComplete` para o chamador).
 
 * **PTPLAY-10179:**
 
-   `creativeRepackaging` e  `fallbackOnInvalidCreative` os valores agora estão desativados por padrão. Além disso, quando o sinalizador `creativeRepackaging` foi definido, mas nenhum formato `creativeRepackaging` foi fornecido, o `onRepackagingComplete` estava sendo chamado quantas vezes mais que havia anúncios no intervalo do anúncio, fazendo com que as quebras de anúncios fossem criadas várias vezes.
+   `creativeRepackaging` Os  `fallbackOnInvalidCreative` valores e agora estão incorretos por padrão. Além disso, quando o sinalizador `creativeRepackaging` era definido, mas nenhum formato `creativeRepackaging` era fornecido, o `onRepackagingComplete` era chamado tantas vezes quanto havia anúncios no ad break, fazendo com que os ad breaks fossem criados várias vezes.
 
-* **Zendesk #10304**: A variável de ativação/desativação do anúncio não foi inicializada. Agora inicializamos a variável do fator `DataSetEntry's`.
+* **Zendesk nº 10304**: A variável de ativação/desativação do anúncio forveness não foi inicializada. Agora inicializamos a variável do operador `DataSetEntry's`.
 
 * **PTPLAY-10318:**
-Foi introduzido o suporte para o modo de fundo.
+foi introduzido o suporte para o modo em segundo plano.
 * **Zendesk # 17409:**
-Ao entrar no modo de reprodução de truque, em seguida, voltar ao modo de reprodução normal e, em seguida, entrar novamente no modo de reprodução de truque, a posição de reprodução estava pulando.
+ao entrar no modo de reprodução de truque, em seguida, voltar ao modo de reprodução normal e, em seguida, entrar novamente no modo de reprodução de truque, a posição de reprodução estava pulando.
 * **PTPLAY-9552:**
-Após analisar os arquivos XML de resposta, o código de erro 1108 agora é pingado sempre que não há anúncios presentes.
+depois de analisar os arquivos XML de resposta, o código de erro 1108 agora é pingado sempre que não há anúncios presentes.
 * **PTPLAY-9551:**
-Quando não há quebra de anúncio após o processamento Auditude, o CRS chama 
-**** onPrefetchComplete, que diminui groupCount. Como não há quebra de anúncio, **groupCount** é 0 e reduzido em 1. Anteriormente, **groupCount** era **uint32_t**, por causa do qual costumava mudar para o valor máximo. Agora é **int32_t**.
+Quando não há interrupção de anúncio após o processamento do Auditude, o CRS chama 
+**** onPrefetchComplete, que diminui groupCount. Como não há ad break, o **groupCount** é 0 e diminuído em 1. Anteriormente, **groupCount** era **uint32_t**, pelo que costumava alterar para o valor máximo. Agora é **int32_t**.
 
 **Versão 2.1.0.621**
 
-* **Zendesk #4555**
-Instant on Memory emite erros de carregamento principais - 
-`MediaItemLoader` Correção de falha ao liberar  `mediaitemloader`
+* **Zendesk # 4555**
+Instant on Memory Problemas de carregamento inicial - Erros de carregamento instantâneo 
+`MediaItemLoader` Correção de falha ao lançar  `mediaitemloader`
 
 * **Zendesk #17223**
-2.x CSAI: Nem todos os URLs de rastreamento de anúncio são disparados
-   * Alguns anúncios VAST que, por sua vez, apontavam para um anúncio embutido estavam sem URL de rastreamento.
-   * Quando há várias marcas de impressão em um anúncio no XML VAST, somente o primeiro url de impressão foi salvo e o restante foi ignorado. Agora todos os urls de impressão serão salvos e colados posteriormente.
-* **O agente do usuário do Zendesk #17224**
-PS4 move as informações do horário de funcionamento para o fim do UAString
+2.x CSAI: Nem todos os URLs de rastreamento de anúncios são acionados
+   * Alguns anúncios VAST, que, por sua vez, apontavam para um anúncio em linha, não possuíam urls de rastreamento.
+   * Quando há várias marcas de impressão em um anúncio no VAST XML, somente o primeiro url de impressão foi salvo e o restante foi ignorado. Agora, todos os urls de impressão serão salvos e colados posteriormente.
+* **Zendesk #17224**
+Agente do usuário PS4 para mover informações do tempo de vida útil para o fim do UAString
 * **Zendesk #17226**
-2.x CSAI: Nem todos os anúncios costurados.
+2.x CSAI: Nem todos os anúncios compilados.
 \
-   A correção indica que a linha do tempo foi alterada devido às operações insertBy ou eraseBy e que o período muda de acordo.
+   Correção para indicar que a linha do tempo foi alterada devido às operações insertBy ou apagarBy e fazer a mudança de período de acordo.
 
-* **Zendesk #17284**
+* **Zendesk nº 17284**
    [Todas as ] plataformasAs legendas ocultas não são exibidas.\
    HLS - suporte para a tag `EXT-X-MEDIA-TIME` para arquivos de legenda VTT.
 
 * **Zendesk #17889**
-Reprodução &quot;Látea&quot; no PS4
+Reprodução &quot;leitosa&quot; no PS4
 \
    yoffset correto aplicado (para conversão de cores)
 
 * **Zendesk #17954**
-Ad fallback logic + manuseio vazio e vasto
+Lógica de fallback de anúncio + manipulação de objetos vazios
 \
-   Corrigido o problema se um dos invólucros Vast estava vazio, o analisador Vast usado para continuar processando o invólucro.
+   Correção do problema se um dos invólucros Vast estava vazio, o analisador Vast usado para continuar processando o invólucro.
 
 * **Zendesk #17807**
-Não pode passar de vazio, mesmo que Zendesk #3103
+Não pode ultrapassar o vasto campo vazio Igual ao Zendesk #3103
 
 * **Zendesk #17865**
-Fallback Logic em PS4 e XBox One
+Lógica de fallback no PS4 e XBox One
 \
-   Igual ao Zendesk #3103
+   Igual ao Zendesk nº 3103
 
 **Versão 2.1.0.591**
 
-* **Trecho de código de anúncio do Zendesk #3767**
-PS4, a resolução de anúncio falha ao processar redirecionamentos do VMAP.
+* **Snippet de código de anúncio do Zendesk # 3767**
+PS4, a resolução do anúncio falha ao processar redirecionamentos do VMAP.
 * **Zendesk #4096**
-PS4 CSAI: Falha de segmentação Corrigida falha quando o TVSDK lança falha de segmentação quando a biblioteca de publicidade está processando uma resposta VMAP.
+PS4 CSAI: Falha de segmentação Correção de falha quando o TVSDK gera falha de segmentação quando a biblioteca de anúncios está processando uma resposta VMAP.
 
-* **Zendesk #4161**
-Trickplay 16x no final do filme congela o bloqueio fixo que ocorre quando o trickplay retorna à reprodução normal
+* **O Zendesk #4161**
+Trickplay 16x no final do filme congela o impasse corrigido que acontecia quando a reprodução de trickplay retorna à reprodução normal
 
-* **Zendesk #4208Falha**
-aleatória quando as legendas ocultas estão ativadas Memória fixa vazamento quando as legendas ocultas estão ativadas
+* **Zendesk #4208**
+Travamento aleatório quando as legendas ocultas são ativadas Vazamento de memória fixa quando as legendas ocultas são ativadas
 
-* **Zendesk #4213**
-PS4 CSAI: Alterar a string padrão user-agent para todas as chamadas relacionadas a anúncios A string User-agent é criada usando a mesma string UA que o navegador está usando + adicionar a string Primetime
+* **Zendesk nº 4213**
+PS4 CSAI: Alterar a sequência padrão do agente do usuário para todas as chamadas relacionadas a anúncios A sequência de agente do usuário é criada usando a mesma sequência de caracteres UA que o navegador está usando + adicionar cadeia de caracteres do Primetime
 
-* **PTPLAY-7675**  (interno) Os anúncios transcodificados não estão reproduzindo a Reembalagem da Creative estava falhando quando chamada em uma resposta VMAP ou VAST. A correção é apenas ler o arquivo mediático do anúncio em vez de ler do ativo no caso de grandes anúncios.
+* **PTPLAY-7675**  (interno) Os anúncios transcodificados não estão reproduzindo Reempacotamento Criativo estava falhando quando foi chamado em uma resposta VMAP ou VAST. A correção é apenas ler o arquivo de mídia do anúncio em vez de ler do ativo no caso de anúncios grandes.
 
-* **PTPLAY-7895** (interno) Quando  `allowMultipleAds=false`, nenhum anúncio reproduz um bug fixo no qual o  `allowMultipleAds` parâmetro não estava sendo seguido corretamente.
+* **PTPLAY-7895**  (interno) Quando  `allowMultipleAds=false`, nenhum anúncio reproduz um erro fixo, onde o  `allowMultipleAds` parâmetro não estava sendo seguido corretamente.
 
-* **PTPLAY-7896**  (interno) Os anúncios estão sendo reproduzidos fora da ordem de sequência no PS4 Corrigido o problema no qual os anúncios não estavam na ordem em que apareciam nas respostas XML.
+* **PTPLAY-7896**  (interno) Os anúncios estão sendo reproduzidos da ordem de sequência em um problema PS4 corrigido em que os anúncios não estavam na ordem em que apareciam nas respostas XML.
 
-* PS4 TVSDK testado novamente em um mini aplicativo em vez de um jogo.
+* PS4 TVSDK retestado em um mini aplicativo em vez de jogo.
 
 **Versão 2.1.0.563**
 
 * **Zendesk #3868**
-O TVSDK oferece suporte ao Playstation SDK 2.5 O TVSDK agora é criado com o SDK 2.5 do Playstation.
+O TVSDK é compatível com o SDK do Playstation 2.5 O TVSDK agora foi criado com o SDK do Playstation 2.5.
 
 * **Zendesk #4093**
-targetingInformações pares de valor chave na solicitação de anúncios publicitários.
+targetingInfo pares de valores-chave na solicitação de anúncios de página.
 \
-   Um caractere de nova linha que separa os pares de chave/valor foi adicionado.
+   Um caractere de nova linha que separa os pares chave/valor foi adicionado.
 
 ## Recursos compatíveis {#supported-features}
 
-Os seguintes recursos são suportados no TVSDK 2.1 para PlayStation 4:
+Os seguintes recursos são compatíveis com o TVSDK 2.1 para PlayStation 4:
 
 **Versão 2.1.0.621**
 
-* Anúncio de fallback, encadeamento de margarida na lógica de seleção de anúncios (Zendesk #3103)
-Para anúncios VAST (criativos) com a regra de fallback ativada, o TVSDK trata um anúncio com um tipo MIME inválido como um anúncio vazio e tenta usar anúncios de fallback em seu lugar.Você pode configurar alguns aspectos do comportamento de fallback
+* Fallback do anúncio, encadeamento de margarida na lógica de seleção do anúncio (Zendesk nº 3103)
+Para anúncios VAST (criações) com a regra de fallback ativada, o TVSDK trata um anúncio com um tipo MIME inválido como um anúncio vazio e tenta usar anúncios de fallback em seu lugar.Você pode configurar alguns aspectos do comportamento de fallback
 
 **Versão 2.1.0.538**
 
-* Reprodução VOD HLS, incluindo reprodução, pausa, busca
-* Streaming adaptável de taxa de bits
-* Reprodução de conteúdo criptografado com conteúdo protegido por AES Primetime DRM e baunilha
-* Inserção de anúncio do cliente com comportamentos de anúncio padrão e perdão de anúncios
+* Reprodução de VOD do HLS, incluindo reprodução, pausa, busca
+* Fluxo adaptável de taxa de bits
+* Reprodução de conteúdo criptografado com conteúdo protegido por AES do Primetime DRM e baunilha
+* Inserção de anúncio do lado do cliente com comportamentos de anúncio padrão e perdão de anúncios
 * Reembalagem criativa
-* Legendas de WebVTT fechadas
-* Instantâneo com a posição personalizada do start
-* Brincar com avanço rápido e retrocesso rápido
-* Redirecionamento 302
+* Legendas ocultas da WebVTT
+* Instantâneo com posição inicial personalizada
+* Brincadeiras de truque com avanço rápido e retrocesso rápido
+* 302 redirecionamento
 
 ## Recursos úteis {#helpful-resources}
 
-* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte da Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
+* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte do Adobe Primetime](https://helpx.adobe.com/support/primetime.html) .
