@@ -1,47 +1,44 @@
 ---
 description: Os manipuladores de eventos permitem que o TVSDK responda aos eventos.
-seo-description: Os manipuladores de eventos permitem que o TVSDK responda aos eventos.
-seo-title: Implementação de ouvintes e retornos de chamada de evento
-title: Implementação de ouvintes e retornos de chamada de evento
-uuid: 6b7859a4-55f9-48b1-b1f1-7b79bc92610a
+title: Implementar ouvintes e retornos de chamada do evento
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
 
 
-# Implementar ouvintes e retornos de chamada de evento{#implement-event-listeners-and-callbacks}
+# Implementar ouvintes de eventos e retornos de chamada{#implement-event-listeners-and-callbacks}
 
 Os manipuladores de eventos permitem que o TVSDK responda aos eventos.
 
-Quando um evento ocorre, o mecanismo de evento do TVSDK chama o manipulador de eventos registrado e transmite as informações do evento ao manipulador.
+Quando um evento ocorre, o mecanismo de evento do TVSDK chama o manipulador de eventos registrado e transmite as informações do evento para o manipulador.
 
-O TVSDK define os ouvintes como interfaces internas públicas na interface `MediaPlayer`.
+O TVSDK define ouvintes como interfaces internas públicas na interface `MediaPlayer`.
 
-Seu aplicativo deve implementar ouvintes de evento para eventos TVSDK que afetam seu aplicativo.
+Seu aplicativo deve implementar ouvintes de eventos para eventos TVSDK que afetam seu aplicativo.
 
-Para obter uma lista completa dos eventos para análise de vídeo, consulte Monitoramento da reprodução de vídeo principal.
+Para obter uma lista completa dos eventos para análise de vídeo, consulte Rastreamento da reprodução de vídeo principal.
 
-1. Determine para quais eventos seu aplicativo deve ouvir.
+1. Determine quais eventos seu aplicativo deve ouvir.
 
    * **Eventos** obrigatórios: Analise todos os eventos de reprodução.
 
       >[!IMPORTANT]
       >
-      >O evento de reprodução `onStateChanged` fornece o estado do player, incluindo erros. Qualquer um dos estados pode afetar a próxima etapa do player
+      >O evento de reprodução `onStateChanged` fornece o estado do player, incluindo erros. Qualquer um dos estados pode afetar a próxima etapa do reprodutor
 
-   * **Outros eventos**: Opcional, dependendo do aplicativo.
+   * **Outros eventos**: Opcional, dependendo do seu aplicativo.
 
-      Por exemplo, se você incorporar publicidade na reprodução, implemente os retornos de chamada AdPlaybackEventListener.
+      Por exemplo, se você incorporar publicidade em sua reprodução, implemente os retornos de chamada AdPlaybackEventListener .
 
-1. Implemente ouvintes de evento para cada evento.
+1. Implemente ouvintes de eventos para cada evento.
 
-   O TVSDK retorna valores de parâmetro para os retornos de chamada do ouvinte de eventos. Esses valores fornecem informações relevantes sobre o evento que você pode usar em seus ouvintes para executar ações apropriadas.
+   O TVSDK retorna valores de parâmetro para seus retornos de chamada do ouvinte de eventos. Esses valores fornecem informações relevantes sobre o evento que você pode usar em seus ouvintes para executar as ações apropriadas.
 
-   `MediaPlayer.EventListener` lista todas as interfaces de retorno de chamada. Cada interface exibe o nome e os parâmetros de retorno de chamada retornados para cada evento.
+   `MediaPlayer.EventListener` lista todas as interfaces de retorno de chamada. Cada interface exibe o nome da chamada de retorno e os parâmetros retornados para cada evento.
 
    Por exemplo:
 
@@ -64,28 +61,28 @@ Para obter uma lista completa dos eventos para análise de vídeo, consulte Moni
 
 ## Ordem dos eventos de reprodução {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
-O TVSDK despacha eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
+O TVSDK despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 
 Os exemplos a seguir mostram a ordem de alguns eventos que incluem eventos de reprodução.
 
 * Ao carregar com êxito um recurso de mídia por meio de `MediaPlayer.replaceCurrentResource`, a ordem dos eventos é:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` estado  `MediaPlayer.PlayerState.INITIALIZING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` com estado  `MediaPlayer.PlayerState.INITIALIZING`
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` estado  `MediaPlayer.PlayerState.INITIALIZED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` com estado  `MediaPlayer.PlayerState.INITIALIZED`
 
 >[!TIP]
 >
->Carregue o recurso de mídia no thread principal. Se você carregar um recurso de mídia em um thread em segundo plano, essa operação ou as operações subsequentes do TVSDK, ou ambas, podem gerar um erro (por exemplo, `IllegalStateException`) e sair.
+>Carregue o recurso de mídia no thread principal. Se você carregar um recurso de mídia em um thread em segundo plano, essa operação ou as operações subsequentes do TVSDK, ou ambas, poderão gerar um erro (por exemplo, `IllegalStateException`) e sair.
 
-* Ao preparar a reprodução por `MediaPlayer.prepareToPlay`, a ordem dos eventos é:
+* Ao preparar para reprodução por meio de `MediaPlayer.prepareToPlay`, a ordem dos eventos é:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` estado  `MediaPlayerStatus.PREPARING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` com estado  `MediaPlayerStatus.PREPARING`
 
-1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` se as publicidades foram inseridas.
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` estado  `MediaPlayerStatus.PREPARED`
+1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` se anúncios foram inseridos.
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` com estado  `MediaPlayerStatus.PREPARED`
 
-* Para fluxos ao vivo/lineares, durante a reprodução à medida que a janela de reprodução avança e oportunidades adicionais são resolvidas, a ordem dos eventos é:
+* Para fluxos ao vivo/lineares, durante a reprodução, à medida que a janela de reprodução avança e as oportunidades adicionais são resolvidas, a ordem dos eventos é:
 
 1. `MediaPlayer.PlaybackEventListener.onUpdated`
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` se anúncios foram inseridos
@@ -115,12 +112,12 @@ mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,
 
 ## Ordem dos eventos de publicidade {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
-Quando a reprodução inclui publicidade, o TVSDK envia eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
+Quando a reprodução inclui publicidade, o TVSDK despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 
-Ao reproduzir publicidades, a ordem dos eventos é:
+Ao reproduzir anúncios, a ordem dos eventos é:
 
 * `AdPlaybackEventListener.onAdBreakStart`
-* Os seguintes anúncios são enviados para cada anúncio no intervalo de anúncios:
+* Os itens a seguir são despachados para cada anúncio no ad break:
 
    * `AdPlaybackEventListener.onAdStart`
    * `AdPlaybackEventListener.onAdProgress` (várias vezes durante a reprodução de um anúncio)
@@ -148,10 +145,10 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-Ao reproduzir publicidades, a ordem dos eventos é:
+Ao reproduzir anúncios, a ordem dos eventos é:
 
 * `AdPlaybackEventListener.onAdBreakStart`
-* Os seguintes anúncios são enviados para cada anúncio no intervalo de anúncios:
+* Os itens a seguir são despachados para cada anúncio no ad break:
 
    * `AdPlaybackEventListener.onAdStart`
    * `AdPlaybackEventListener.onAdProgress` (várias vezes durante a reprodução de um anúncio)
@@ -180,9 +177,9 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-## Eventos QoS {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
+## Eventos de QoS {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
 
-O TVSDK despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar no cálculo das estatísticas de QoS, como eventos de buffering e busca.
+O TVSDK despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como eventos de buffer e busca.
 
 O exemplo a seguir mostra uma progressão típica desses eventos:
 
@@ -210,9 +207,9 @@ mediaPlayer.addEventListener(MediaPlayer.Event.QOS,
 
 ## Eventos DRM {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
-O TVSDK despacha eventos de gerenciamento de direitos digitais (DRM) em resposta a operações relacionadas ao DRM, como quando novos metadados do DRM ficam disponíveis. O player pode implementar ações em resposta a esses eventos.
+O TVSDK despacha eventos de gerenciamento de direitos digitais (DRM) em resposta a operações relacionadas a DRM, como quando novos metadados de DRM são disponibilizados. O reprodutor pode implementar ações em resposta a esses eventos.
 
-Para ser notificado sobre todos os eventos relacionados ao DRM, aguarde `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. O TVSDK despacha eventos DRM adicionais por meio da classe `DRMManager`.
+Para ser notificado sobre todos os eventos relacionados a DRM, escute `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. O TVSDK despacha eventos de DRM adicionais por meio da classe `DRMManager` .
 
 O exemplo a seguir mostra uma progressão típica:
 
@@ -224,12 +221,12 @@ mediaPlayer.addEventListener(MediaPlayer.Event.DRM,
 }); 
 ```
 
-## Eventos do carregador {#section_5638F8EDACCE422A9425187484D39DCC}
+## Eventos de carregamento {#section_5638F8EDACCE422A9425187484D39DCC}
 
-O player pode implementar ações com base nos seguintes eventos:
+O reprodutor pode implementar ações com base nos seguintes eventos:
 
 | Evento | Significado |
 |---|---|
-| `onLoadComplete (mediaPlayerItem playerItem)` | O carregamento do recurso de mídia foi concluído com êxito. |
+| `onLoadComplete (mediaPlayerItem playerItem)` | Carregamento do recurso de mídia concluído com êxito. |
 | `onError` | Ocorreu um problema com o carregamento de recursos de mídia. |
 
