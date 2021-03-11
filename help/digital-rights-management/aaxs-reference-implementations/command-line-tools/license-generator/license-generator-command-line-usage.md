@@ -1,11 +1,11 @@
 ---
-seo-title: Uso da linha de comando
 title: Uso da linha de comando
-uuid: b3a995de-653e-491a-9262-86dc56b9ce31
+description: Uso da linha de comando
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Para gerar uma licença, use a seguinte sintaxe:
 </i class="+ topic>
 ```
 
-`metadata` é um arquivo .metadata que contém os metadados DRM de Adobe Access. Esse arquivo pode ser obtido de conteúdo protegido usando a opção `-d -m` do Media Packager.
+`metadata` é um arquivo .metadata contendo os metadados DRM de acesso ao Adobe. Esse arquivo pode ser obtido de conteúdo protegido usando a opção `-d -m` do Media Packager.
 
 Para exibir uma licença gerada anteriormente, use a seguinte sintaxe:
 
@@ -36,9 +36,9 @@ Para exibir uma licença gerada anteriormente, use a seguinte sintaxe:
 </i class="+ topic>
 ```
 
-`license` é um arquivo que contém uma licença de Adobe Access gerada pelo Gerador de licenças.
+`license` é um arquivo que contém uma licença de Adobe Access gerada pelo Gerador de Licenças.
 
-A tabela a seguir descreve as opções de linha de comando que podem ser especificadas junto com a sintaxe mencionada anteriormente:
+A tabela a seguir descreve as opções da linha de comando que podem ser especificadas junto com a sintaxe mencionada anteriormente:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_skr_vry_n4"> 
  <thead class="- topic/thead "> 
@@ -54,14 +54,14 @@ A tabela a seguir descreve as opções de linha de comando que podem ser especif
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> arquivo licenciado</span></i> </p> </td> 
-   <td colname="2" class="- topic/entry "> Mostrar informações sobre uma licença que já foi gerada. </td> 
+   <td colname="2" class="- topic/entry "> Mostrar informações sobre uma licença já gerada. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-folha de nome de arquivo</span> </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-leaf-filename</span> </td> 
    <td colname="2" class="- topic/entry "> Gere uma licença de folha e grave a saída em um arquivo especificado. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-m metadata-filename</span> </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-m nome do arquivo de metadados</span> </td> 
    <td colname="2" class="- topic/entry "> Especifique os metadados de conteúdo para os quais gerar uma licença. (Obrigatório para gerar licença) </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -78,10 +78,10 @@ A tabela a seguir descreve as opções de linha de comando que podem ser especif
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r certificado de recipient</span> </td> 
-   <td colname="2" class="- topic/entry ">Gere uma licença para o recipient especificado. Um dispositivo ou certificado de domínio pode ser usado. Várias <span class="+ topic/ph pr-d/codeph codeph"> -r </span>opções podem ser especificadas para criar uma licença para vários recipient. </td> 
+   <td colname="2" class="- topic/entry ">Gere uma licença para o recipient especificado. Um dispositivo ou certificado de domínio pode ser usado. Várias opções <span class="+ topic/ph pr-d/codeph codeph"> -r </span>podem ser especificadas para criar uma licença para vários recipients. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root root-filename</span> </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root-filename</span> </td> 
    <td colname="2" class="- topic/entry "> Gere uma licença raiz e grave a saída no arquivo especificado. </td> 
   </tr> 
  </tbody> 
