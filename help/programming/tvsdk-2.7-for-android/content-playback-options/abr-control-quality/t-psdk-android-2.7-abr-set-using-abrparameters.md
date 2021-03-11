@@ -1,13 +1,10 @@
 ---
-description: Você pode definir valores de controle ABR somente com ABRControlParameters, mas pode criar um novo a qualquer momento.
-seo-description: Você pode definir valores de controle ABR somente com ABRControlParameters, mas pode criar um novo a qualquer momento.
-seo-title: Configure as taxas de bits adaptáveis usando ABRControlParameters
-title: Configure as taxas de bits adaptáveis usando ABRControlParameters
-uuid: 7084e954-196b-492e-846f-f8b36bed13a9
+description: Você pode definir valores de controle ABR somente com ABRControlParameters, mas pode construir um novo a qualquer momento.
+title: Configurar taxas de bits adaptáveis usando ABRControlParameters
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Configure as taxas de bits adaptáveis usando ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
-Você pode definir valores de controle ABR somente com ABRControlParameters, mas pode criar um novo a qualquer momento.
+Você pode definir valores de controle ABR somente com ABRControlParameters, mas pode construir um novo a qualquer momento.
 
 As seguintes condições se aplicam a `ABRControlParameters`:
 
