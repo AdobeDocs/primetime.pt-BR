@@ -1,13 +1,10 @@
 ---
-seo-title: Documentação da API relacionada
 title: Documentação da API relacionada
 description: Documentação da API relacionada
-seo-description: Documentação da API relacionada
-uuid: e99172ab-3fa7-4ec1-a100-ca16b9dae569
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '123'
 ht-degree: 0%
 
 ---
@@ -16,9 +13,9 @@ ht-degree: 0%
 # Documentação da API relacionada {#related-api-documentation}
 
 * [Classe AdsManager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AdsManager.html)
-* [Classe AdsManagerOn](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AdsManagerOn.html)
+* [AdsManagerOn de classe](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AdsManagerOn.html)
 * [AdsManagerEvent](https://help.adobe.com/en_US/primetime/api/ref_impl/dhls/asdoc/com/adobe/primetime/reference/events/AdsManagerEvent.html)
 * [AdsManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AdsManager.AdsManagerEventListener.html)
 * [mediacore.metadata.Metadata](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/Metadata.html)
-* [mediacore.timeline.advertit.AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/timeline/advertising/AdBreak.html)
-* [mediacore.timeline.publish.Ad](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/timeline/advertising/Ad.html)
+* [mediacore.timeline.advertising.AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/timeline/advertising/AdBreak.html)
+* [mediacore.timeline.advertising.Ad](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/timeline/advertising/Ad.html)
