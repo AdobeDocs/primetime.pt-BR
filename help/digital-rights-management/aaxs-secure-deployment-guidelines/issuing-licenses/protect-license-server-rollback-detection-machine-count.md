@@ -1,9 +1,9 @@
 ---
-seo-title: Contagem de máquina ao emitir licenças
 title: Contagem de máquina ao emitir licenças
-uuid: d57f8b0b-0363-4b26-bd71-76f4abe5b68f
+description: Contagem de máquina ao emitir licenças
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -13,12 +13,12 @@ ht-degree: 0%
 
 # Contagem de máquina ao emitir licenças{#machine-count-when-issuing-licenses}
 
-Se as regras de negócios exigirem que o número de máquinas para um usuário seja rastreado, o License Server ou o Domain Server deverá armazenar as IDs de máquina associadas ao usuário. A maneira mais robusta de rastrear IDs de máquina é armazenar o valor retornado pelo método `MachineId.getBytes()` em um banco de dados. Quando uma nova solicitação entrar, compare a ID da máquina na solicitação com as IDs de máquina conhecidas usando `MachineId.matches()`.
+Se as regras de negócios exigirem que o número de máquinas para um usuário seja rastreado, o License Server ou o Domain Server deverá armazenar as IDs de máquina associadas ao usuário. A maneira mais robusta de rastrear IDs de máquina é armazenar o valor retornado pelo método `MachineId.getBytes()` em um banco de dados. Quando uma nova solicitação entrar, compare a ID do computador na solicitação com as IDs do computador conhecidas usando `MachineId.matches()`.
 
-`MachineId.matches()` realiza uma comparação de IDs para determinar se representam a mesma máquina. Essa comparação só é prática se houver um pequeno número de IDs de máquina para comparação. Por exemplo, se um usuário tiver permissão para cinco computadores dentro de seu domínio, você poderá pesquisar no banco de dados as IDs de máquina associadas ao nome de usuário do usuário e obter um pequeno conjunto de dados para comparação.
+`MachineId.matches()` O executa uma comparação das IDs para determinar se elas representam a mesma máquina. Essa comparação só é prática se houver um pequeno número de IDs de máquina para comparar. Por exemplo, se um usuário tiver permissão para cinco máquinas em seu domínio, você poderá pesquisar o banco de dados para as IDs de máquina associadas ao nome de usuário do usuário e obter um pequeno conjunto de dados para comparação.
 
 >[!NOTE]
 >
->Essa comparação não é prática para implantações que permitem acesso anônimo. Nesses casos, `MachineId.getUniqueID()` pode ser usado, no entanto, essa ID não será a mesma se o usuário acessar o conteúdo dos tempos de execução do Flash e do Adobe AIR® e não sobreviverá se o usuário reformatar seu disco rígido.
+>Essa comparação não é prática para implantações que permitem acesso anônimo. Nesses casos, `MachineId.getUniqueID()` pode ser usado, no entanto, essa ID não será a mesma se o usuário acessar o conteúdo tanto do Flash quanto do Adobe AIR® runtimes, e não sobreviverá se o usuário reformatar seu disco rígido.
 
-Para saber mais sobre `MachineToken.getMachineId()`e `MachineId.matches()`, consulte *Referência da API de Acesso ao Adobe*.
+Para saber mais sobre `MachineToken.getMachineId()`e `MachineId.matches()`, consulte a *Referência da API de acesso ao Adobe*.
