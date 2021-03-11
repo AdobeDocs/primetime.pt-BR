@@ -1,13 +1,10 @@
 ---
-description: O Adobe Offline Packager utiliza como entrada conteúdo mp4 não criptografado.
-seo-description: O Adobe Offline Packager utiliza como entrada conteúdo mp4 não criptografado.
-seo-title: Compacte seu conteúdo com o Adobe Offline Packager
+description: O Adobe Offline Packager assume como entrada conteúdo mp4 não criptografado.
 title: Compacte seu conteúdo com o Adobe Offline Packager
-uuid: d0676147-c20f-49ea-93a6-9c8dbbbba992
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Compacte seu conteúdo com o Adobe Offline Packager{#package-your-content-with-adobe-offline-packager}
 
-O Adobe Offline Packager utiliza como entrada conteúdo mp4 não criptografado.
+O Adobe Offline Packager assume como entrada conteúdo mp4 não criptografado.
 
 **Chamando o Adobe Offline Packager**
 
@@ -29,9 +26,9 @@ Uma chamada típica do adobe offline packager seria semelhante à chamada abaixo
     -playready_LA_
     URLhttp://pr.test.expressplay.com/playready/RightsManager.asmx
     -playready_keyid c595f214d84dc7ecf31a8ebf1b7dda5
-    -content_id c595f211 4d84dc7ecf31a8ebf1b7dda5
+    -content_id c595f21 4d84dc7ecf31a8ebf1b7dda5
 
-Nesse caso específico, o empacotador offline está adicionando dados de inicialização de proteção de conteúdo do Widevine e PlayReady ao conteúdo de saída DASH. O valor de `-key_file_path` é para uma chave codificada em base64. O valor de `-playready_LA_URL` é para aquisição de licença PlayReady.
+Nesse caso específico, o empacotador offline está adicionando dados de inicialização de proteção de conteúdo Widevine e PlayReady ao conteúdo DASH de saída. O valor de `-key_file_path` é para uma chave codificada em base64. O valor de `-playready_LA_URL` é para aquisição da licença PlayReady.
 
 O argumento conf_path aponta para o arquivo de configuração que conteria o seguinte:
 
@@ -41,4 +38,4 @@ O argumento conf_path aponta para o arquivo de configuração que conteria o seg
     &lt;encrypt_audio>falso&lt;/encrypt_audio>
     &lt;/config>
 
-Porque certos dispositivos Android... principalmente a Amazon Fire TV — não suporta a descriptografia de áudio, a criptografia de áudio é opcional.
+Como certos dispositivos Android — principalmente o Amazon Fire TV — não suportam a descriptografia de áudio, a criptografia de áudio é opcional.
