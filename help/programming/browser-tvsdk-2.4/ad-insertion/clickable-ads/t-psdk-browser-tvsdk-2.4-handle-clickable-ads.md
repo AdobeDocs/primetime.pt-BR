@@ -1,21 +1,18 @@
 ---
-description: O MediaPlayer fornece uma função NotificationClick() que despacha eventos relacionados a anúncios quando um anúncio clicável está sendo reproduzido. Esses eventos fornecem informações de quebra de anúncios e anúncios que seu aplicativo pode usar para fornecer a funcionalidade de click-through.
-seo-description: O MediaPlayer fornece uma função NotificationClick() que despacha eventos relacionados a anúncios quando um anúncio clicável está sendo reproduzido. Esses eventos fornecem informações de quebra de anúncios e anúncios que seu aplicativo pode usar para fornecer a funcionalidade de click-through.
-seo-title: Manipular anúncios clicáveis
-title: Manipular anúncios clicáveis
-uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
+description: O MediaPlayer fornece uma função notifyClick() que despacha eventos relacionados a anúncios quando um anúncio clicável é reproduzido. Esses eventos fornecem informações de ad break e ad break que seu aplicativo pode usar para fornecer funcionalidade de click-through.
+title: Gerenciar anúncios clicáveis
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
 
-# Tratar anúncios clicáveis {#handle-clickable-ads}
+# Gerenciar anúncios clicáveis {#handle-clickable-ads}
 
-O MediaPlayer fornece uma função NotificationClick() que despacha eventos relacionados a anúncios quando um anúncio clicável está sendo reproduzido. Esses eventos fornecem informações de quebra de anúncios e anúncios que seu aplicativo pode usar para fornecer a funcionalidade de click-through.
+O MediaPlayer fornece uma função notifyClick() que despacha eventos relacionados a anúncios quando um anúncio clicável é reproduzido. Esses eventos fornecem informações de ad break e ad break que seu aplicativo pode usar para fornecer funcionalidade de click-through.
 
 O MediaPlayer aciona os seguintes eventos quando um anúncio clicável é reproduzido:
 
@@ -28,7 +25,7 @@ O `AdClickedEvent` contém as informações necessárias para processar a funç�
 1. Forneça um controle no player para que os usuários cliquem em anúncios clicáveis.
 
    Pode ser um botão ou qualquer outro elemento para capturar o clique do usuário.
-1. Adicione um ouvinte de evento para o evento de cliques em anúncios do usuário.
+1. Adicione um ouvinte de evento para o evento de clique de anúncio do usuário.
 
    Por exemplo:
 
@@ -37,7 +34,7 @@ O `AdClickedEvent` contém as informações necessárias para processar a funç�
    <i>your_click_control_id</i>]).addEventListener("click", onAdClick);
    ```
 
-1. Adicione um manipulador para o evento click do usuário.
+1. Adicione um manipulador para o evento de clique do usuário.
 
    Esse manipulador precisa solicitar que o MediaPlayer acione o evento `AdClicked`.
 
@@ -53,7 +50,7 @@ O `AdClickedEvent` contém as informações necessárias para processar a funç�
    } 
    ```
 
-1. Adicione ouvintes de evento para o start de anúncio do MediaPlayer, o anúncio clicado e as notificações concluídas do anúncio.
+1. Adicione ouvintes de eventos para o início do anúncio do MediaPlayer, o anúncio clicado e as notificações concluídas do anúncio.
 
    ```
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted); 
@@ -64,8 +61,8 @@ O `AdClickedEvent` contém as informações necessárias para processar a funç�
    ```
 
 1. Adicione manipuladores de evento.
-a. Manuseie o evento do start do anúncio.
-Isso pode fazer qualquer coisa, como configurar a interface do usuário.
+a. Manipule o evento de início do anúncio.
+Isso pode fazer qualquer coisa, como configurar a interface do usuário para o usuário.
 
    ```
    onAdStarted = function (event) { 
@@ -80,8 +77,8 @@ Isso pode fazer qualquer coisa, como configurar a interface do usuário.
    }
    ```
 
-   b. Manuseie o evento clicado no anúncio.
-Neste exemplo, obtemos informações de publicidade do evento e abrimos uma nova janela do navegador usando essas informações:
+   b. Manipule o evento de anúncio clicado.
+Neste exemplo, obtemos informações de anúncio do evento e abrimos uma nova janela do navegador usando essas informações:
 
    ```
    onAdClickedEvent = function (event) { 
@@ -99,7 +96,7 @@ Neste exemplo, obtemos informações de publicidade do evento e abrimos uma nova
    }
    ```
 
-   c. Manuseie o evento de anúncio concluído.
+   c. Lide com o evento de anúncio concluído.
 
    ```
    onAdCompleted = function (event) { 
