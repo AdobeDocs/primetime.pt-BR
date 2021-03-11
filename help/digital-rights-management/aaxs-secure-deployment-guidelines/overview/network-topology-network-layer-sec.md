@@ -1,9 +1,9 @@
 ---
-seo-title: Segurança da camada de rede
 title: Segurança da camada de rede
-uuid: bd53bccf-1130-4189-97ec-4259bd25762f
+description: Segurança da camada de rede
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Segurança da camada de rede{#network-layer-security}
 
-As vulnerabilidades de segurança de rede estão entre as primeiras ameaças a qualquer servidor de aplicativos voltado para a Internet ou para a intranet. Esta seção descreve o processo de endurecimento de hosts na rede contra essas vulnerabilidades. Ele aborda a segmentação de rede, o endurecimento da pilha do protocolo de controle de transmissão/protocolo TCP/IP e o uso de firewalls para proteção de host.
+As vulnerabilidades de segurança de rede estão entre as primeiras ameaças a qualquer servidor de aplicativos voltado para a Internet ou para a intranet. Esta seção descreve o processo de proteção de hosts na rede contra essas vulnerabilidades. Ele trata da segmentação de rede, da proteção de pilha do protocolo TCP/IP (Transmission Control Protocol/Internet Protocol) e do uso de firewalls para proteção de host.
 
 Esta tabela descreve técnicas comuns que reduzem as vulnerabilidades de segurança da rede.
 
@@ -31,14 +31,14 @@ Esta tabela descreve técnicas comuns que reduzem as vulnerabilidades de seguran
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Endereços IP privados </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Use a tradução de endereço de rede (NAT) com endereços IP privados RFC 1918 nos servidores de aplicativos de acesso a Adobe. Atribua endereços IP privados (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) para tornar mais difícil para um invasor rotear tráfego de e para um host interno NAT pela Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Use a NAT (Network Address Translation, tradução de endereço de rede) com endereços IP privados RFC 1918 em servidores de aplicativos Adobe Access. Atribua endereços IP privados (10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16) para tornar mais difícil para um invasor rotear tráfego de e para um host interno NAT pela Internet. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Firewalls </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Use os seguintes critérios para selecionar uma solução de firewall: </p> <p class="- topic/p "> 
      <ul class="- topic/ul " id="ul-wjf-lhz-n4"> 
-      <li class="- topic/li " id="li-8031632160F44037B092988183139202"> <p class="- topic/p ">Implemente firewalls que suportam servidores proxy e/ou inspeção de estado em vez de soluções simples de filtragem de pacotes. </p> </li> 
-      <li class="- topic/li " id="li-B65CBB92113E4503B79EB194C34FCA50"> <p class="- topic/p ">Use um firewall que suporte um paradigma de segurança no qual você pode negar todos os serviços, exceto aqueles explicitamente permitidos. </p> </li> 
+      <li class="- topic/li " id="li-8031632160F44037B092988183139202"> <p class="- topic/p ">Implemente firewalls que sejam compatíveis com servidores proxy e/ou inspeção com estado, em vez de soluções simples de filtragem de pacotes. </p> </li> 
+      <li class="- topic/li " id="li-B65CBB92113E4503B79EB194C34FCA50"> <p class="- topic/p ">Use um firewall que ofereça suporte a um paradigma de segurança no qual você possa negar todos os serviços, exceto aqueles explicitamente permitidos. </p> </li> 
       <li class="- topic/li " id="li-5CE4C7B65D84410DB4BE966FD8922993"> <p class="- topic/p ">Implemente uma solução de firewall que seja dual-homed ou multi-homed. Essa arquitetura oferece o maior nível de segurança e ajuda a impedir que usuários não autorizados ignorem a segurança do firewall. </p> </li> 
      </ul> </p> </td> 
   </tr> 
