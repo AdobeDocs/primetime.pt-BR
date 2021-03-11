@@ -1,9 +1,9 @@
 ---
-seo-title: Conteúdo de empacotamento
-title: Conteúdo de empacotamento
-uuid: 5d1d4b9d-f241-4291-9577-e9de5a8b92be
+title: Conteúdo do empacotamento
+description: Conteúdo do empacotamento
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
@@ -19,12 +19,12 @@ Ao empacotar conteúdo, o URL do servidor de licenças deve ser especificado. O 
 http(s):// license-server-host:port/flashaccessserver/tenant-name
 ```
 
-Por exemplo, para o nome do host do servidor de licenças &quot;mylicencieserver.com&quot; que escuta na porta 8080 e um locatário chamado &quot;locatário1&quot;, o URL do servidor de licenças a ser especificado no momento do empacotamento é:
+Por exemplo, para o nome de host do servidor de licenças &quot;mylicencieserver.com&quot; que escuta na porta 8080 e um locatário chamado &quot;tenant1&quot;, o URL do servidor de licenças a ser especificado no momento da embalagem é:
 
 ```
 https://mylicenseserver.com:8080/flashaccessserver/tenant1
 ```
 
-Se cada locatário usar um License Server e uma credencial de transporte diferentes, especifique o certificado correto do locatário no empacotador.
+Se cada locatário usar um License Server e uma Credencial de Transporte diferentes, certifique-se de especificar o certificado correto do locatário no empacotador.
 
-Para garantir que o servidor emita licenças somente para o conteúdo empacotado por empacotadores conhecidos, inclua o certificado do empacotador na lista de permissões Packager do arquivo de configuração do locatário.
+Para garantir que o servidor emita licenças somente para conteúdo empacotado por empacotadores conhecidos, inclua o certificado do empacotador na lista de permissões do empacotador do arquivo de configuração do locatário.
