@@ -1,26 +1,23 @@
 ---
-description: O TVSDK prepara objetos PTTimedMetadata para tags assinantes sempre que esses objetos forem encontrados no manifesto de conteúdo.
-seo-description: O TVSDK prepara objetos PTTimedMetadata para tags assinantes sempre que esses objetos forem encontrados no manifesto de conteúdo.
-seo-title: Assinar tags personalizadas
+description: O TVSDK prepara objetos PTTimedMetadata para as tags assinadas sempre que esses objetos são encontrados no manifesto de conteúdo.
 title: Assinar tags personalizadas
-uuid: de66d3db-46d1-485f-9d3a-6e28495bfb13
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 1%
+source-wordcount: '91'
+ht-degree: 2%
 
 ---
 
 
-# Assine tags personalizadas {#subscribe-to-custom-tags}
+# Assinar tags personalizadas {#subscribe-to-custom-tags}
 
-O TVSDK prepara objetos PTTimedMetadata para tags assinantes sempre que esses objetos forem encontrados no manifesto de conteúdo.
+O TVSDK prepara objetos PTTimedMetadata para as tags assinadas sempre que esses objetos são encontrados no manifesto de conteúdo.
 
-Antes dos start de reprodução, você deve assinar as tags.
-Para ser notificado sobre tags personalizadas em manifestos HLS:
+Antes de a reprodução começar, você deve assinar as tags .
+Para ser notificado sobre tags personalizadas em manifestos de HLS:
 
-1. Defina os nomes de tags de publicidade personalizadas globalmente transmitindo uma matriz que contenha as tags personalizadas para `setSubscribedTags` em `PTSDKConfig`.
+1. Defina os nomes personalizados das tags de publicidade globalmente, transmitindo uma matriz que contenha as tags personalizadas para `setSubscribedTags` em `PTSDKConfig`.
 
    >[!IMPORTANT]
    >
