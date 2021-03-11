@@ -1,19 +1,16 @@
 ---
 description: Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe QOSProvider.
-seo-description: Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe QOSProvider.
-seo-title: Leia as estatísticas de reprodução, buffering e dispositivo do QOS
-title: Leia as estatísticas de reprodução, buffering e dispositivo do QOS
-uuid: 5ee631fc-cd6f-4f35-8621-2ffdc51a57c7
+title: Ler a reprodução do QOS, o buffering e as estatísticas do dispositivo
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '122'
 ht-degree: 1%
 
 ---
 
 
-# Leia as estatísticas de reprodução, buffering e dispositivo do QOS{#read-qos-playback-buffering-and-device-statistics}
+# Ler a reprodução do QOS, o buffering e as estatísticas do dispositivo{#read-qos-playback-buffering-and-device-statistics}
 
 Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe QOSProvider.
 
@@ -21,8 +18,8 @@ A classe `QOSProvider` fornece várias estatísticas, incluindo informações so
 
 Ele também fornece informações sobre o dispositivo, como fabricante, modelo, sistema operacional, versão do SDK e tamanho/densidade da tela.
 
-1. Instanciar um player de mídia.
-1. Crie um objeto `QOSProvider` e anexe-o ao player de mídia.
+1. Instancie um reprodutor de mídia.
+1. Crie um objeto `QOSProvider` e o anexe ao reprodutor de mídia.
 
    ```
    // Create Media Player. 
@@ -32,7 +29,7 @@ Ele também fornece informações sobre o dispositivo, como fabricante, modelo, 
 
 1. (Opcional) Leia as estatísticas de reprodução.
 
-   Uma solução para ler as estatísticas de reprodução é ter um timer, que periodicamente obtém os novos valores de QoS do `QOSProvider`. Por exemplo:
+   Uma solução para ler as estatísticas de reprodução é ter um temporizador que busca periodicamente os novos valores de QoS do `QOSProvider`. Por exemplo:
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  
