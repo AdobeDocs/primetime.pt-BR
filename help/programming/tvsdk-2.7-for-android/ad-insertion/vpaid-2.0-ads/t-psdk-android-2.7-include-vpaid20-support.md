@@ -1,25 +1,22 @@
 ---
-description: Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
-seo-description: Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
-seo-title: Implementação da integração com VPAID 2.0
-title: Implementação da integração com VPAID 2.0
-uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
+description: Para adicionar suporte ao VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
+title: Implementar a integração com o VPAID 2.0
 translation-type: tm+mt
-source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '169'
 ht-degree: 2%
 
 ---
 
 
-# Implementação da integração com VPAID 2.0 {#implement-vpaid-integration}
+# Implementar a integração do VPAID 2.0 {#implement-vpaid-integration}
 
-Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
+Para adicionar suporte ao VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
 
-Para adicionar suporte a VPAID 2.0:
+Para adicionar suporte ao VPAID 2.0:
 
-1. Adicione a visualização de anúncio personalizada à interface do player quando o player estiver no estado PREPARADO.
+1. Adicione a visualização de anúncio personalizada à interface do reprodutor quando ele estiver no estado PREPARADO.
 
    ```java
    ... 
@@ -36,17 +33,17 @@ Para adicionar suporte a VPAID 2.0:
        _playerFrame.addView(view);
    ```
 
-1. Crie ouvintes e processe os eventos descritos em ouvintes de eventos.
+1. Crie ouvintes e processe os eventos descritos em ouvintes de eventos .
 
    >[!IMPORTANT]
    >
-   >Em um fluxo de trabalho VPAID 2.0, para visualizações de anúncio personalizadas, é muito importante manter sua instância `CustomAdView` em start `AdBreak` (evento `AD_BREAK_START`) e `AdBreak` em conclusões (evento `AD_BREAK_COMPLETE`), desde o momento em que você cria a visualização de anúncio personalizada até quando ela é descartada. Ou seja, não crie uma visualização de anúncio personalizada em cada start de intervalo de anúncios e descarte-a em cada intervalo de anúncios concluído.
+   >Em um fluxo de trabalho VPAID 2.0, para exibições de anúncios personalizadas, é muito importante manter sua instância `CustomAdView` em `AdBreak` inícios (evento `AD_BREAK_START`) e `AdBreak` conclusões (evento `AD_BREAK_COMPLETE`), do momento em que você cria a exibição de anúncio personalizada até quando ela é eliminada. Ou seja, não crie uma visualização de anúncio personalizada em cada início e descarte-a em cada conclusão de ad break.
    >
    >
    >Além disso, você só deve criar sua visualização de anúncio personalizada quando o player estiver no estado PREPARADO,
    >
    >
-   >Descarte somente a visualização de anúncio personalizada quando redefinir for chamado. Por exemplo:
+   >Descarte apenas a exibição de anúncio personalizada quando a redefinição for chamada. Por exemplo:
    >
    >
    ```
