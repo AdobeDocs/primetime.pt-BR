@@ -1,13 +1,10 @@
 ---
-description: O TVSDK do navegador suporta vários recursos HLS que você pode implementar para adicionar funcionalidade aos seus aplicativos de vídeo.
-seo-description: O TVSDK do navegador suporta vários recursos HLS que você pode implementar para adicionar funcionalidade aos seus aplicativos de vídeo.
-seo-title: Recursos HLS suportados
+description: O TVSDK do navegador é compatível com vários recursos de HLS que você pode implementar para adicionar funcionalidade a seus aplicativos de vídeo.
 title: Recursos HLS suportados
-uuid: 033d81f8-cea4-4687-b2fb-1524d9164d39
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -15,14 +12,14 @@ ht-degree: 0%
 
 # Recursos HLS suportados {#supported-hls-features}
 
-O TVSDK do navegador suporta vários recursos HLS que você pode implementar para adicionar funcionalidade aos seus aplicativos de vídeo.
+O TVSDK do navegador é compatível com vários recursos de HLS que você pode implementar para adicionar funcionalidade a seus aplicativos de vídeo.
 
-* [Reprodução principal HLS](#hls-core-playback)
+* [Reprodução principal do HLS](#hls-core-playback)
 * [Recursos de reprodução avançada HLS](#hls-advanced-playback)
-* [Recursos de proteção de conteúdo HLS](#hls-content-protection)
-* [Recursos de inserção de anúncio do HLS Core](#hls-core-ad-insertion)
-* [Recursos avançados de inserção de anúncios HLS](#hls-advanced-ad-insertion)
-* [Integrações HLS](#hls-integrations)
+* [Recursos de proteção de conteúdo do HLS](#hls-content-protection)
+* [Recursos de inserção de anúncios do HLS Core](#hls-core-ad-insertion)
+* [Recursos avançados de inserção de anúncios do HLS](#hls-advanced-ad-insertion)
+* [Integrações de HLS](#hls-integrations)
 
 >[!TIP]
 >
@@ -30,11 +27,11 @@ O TVSDK do navegador suporta vários recursos HLS que você pode implementar par
 
 >[!TIP]
 >
->Na coluna Safari, &quot;Limitação da plataforma&quot; significa que o caso de uso não é suportado porque essa plataforma não permite a implementação do suporte para ela. No caso de uma inserção, utilize SSAI. Se houver limitações de reprodução importantes para você, force o fallback para o Flash no Safari até que a plataforma suporte o caso de uso de inserção de anúncio.
+>Na coluna Safari, &quot;Limitação da plataforma&quot; significa que o caso de uso não é suportado, pois essa plataforma não permite a implementação do suporte para ela. No caso de uma inserção, use SSAI. Se houver limitações de reprodução importantes para você, force o fallback para o Flash no Safari até que a plataforma suporte o caso de uso de inserção de anúncio.
 
 <!--<a id="section_9FB9193D5763448CB228B96164661738"></a>-->
 
-Os seguintes recursos são suportados:
+Os seguintes recursos são compatíveis:
 
 <!-- 
 
@@ -84,20 +81,20 @@ Removed Nielsen row
 
  -->
 
-## Integrações HLS {#hls-integrations}
+## Integrações de HLS {#hls-integrations}
 
 | Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Integrações | VOD + Live | Integração Adobe Analytics VHL | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Integrações | VOD + Ao vivo | Integração do Adobe Analytics VHL | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 
-## Recursos avançados de inserção de anúncios (CSAI) HLS {#hls-advanced-ad-insertion}
+## Recursos avançados de inserção de anúncio (CSAI) do HLS {#hls-advanced-ad-insertion}
 
 | Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Ad Insertion | VOD | Somente publicidade | Não suportado | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Ad Insertion | VOD + Live | Parâmetros de definição de metas | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Ad Insertion | VOD + Live | Política de anúncio personalizada | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Ad Insertion | VOD + Live | Carregamento de anúncio ocioso | ![ícone suportado](assets/supported15.png) | Não suportado | Limitação da plataforma |
+| Ad Insertion | VOD + Ao vivo | Parâmetros de direcionamento | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Ao vivo | Política de anúncio personalizada | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Ad Insertion | VOD + Ao vivo | Carregamento lento de anúncio | ![ícone suportado](assets/supported15.png) | Não suportado | Limitação da plataforma |
 | Ad Insertion | VOD | Anúncios complementares, anúncios em banners e anúncios clicáveis | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 | Ad Insertion | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
 
@@ -105,52 +102,52 @@ Removed Nielsen row
 
 | Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Ad Insertion | VOD + Live | Pré-lançamento | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Ad Insertion | VOD + Live | Meia rolagem | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Ad Insertion | VOD + Live | Pós-rolagem | Somente VOD | Somente VOD | Somente VOD |
+| Ad Insertion | VOD + Ao vivo | Antes da exibição | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Ao vivo | Meio da exibição | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Ad Insertion | VOD + Ao vivo | Pós-lançamento | Somente VOD | Somente VOD | Somente VOD |
 | Ad Insertion | FER VOD | Resolução e comportamento do anúncio | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Ad Insertion | VOD + Live | Política de publicidade padrão | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Ad Insertion | VOD + Live | VAST 2.0/3.0 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Ad Insertion | VOD + Live | VMAP 1.0 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Ad Insertion | VOD + Live | CRS v3.1 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Ao vivo | Política de publicidade padrão | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Ad Insertion | VOD + Ao vivo | VAST 2.0/3.0 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Ao vivo | VMAP 1.0 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD + Ao vivo | CRS v3.1 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 
 ## Recursos de proteção de conteúdo HLS {#hls-content-protection}
 
 | Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Proteção de conteúdo | VOD + Live | AES-128 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Proteção de conteúdo | VOD + Live | AES de amostra | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Proteção de conteúdo | VOD + Ao vivo | AES-128 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Proteção de conteúdo | VOD + Ao vivo | AES de exemplo | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 | Proteção de conteúdo | VOD | DRM | Acesso ao Adobe | Não suportado | FairPlay |
 
 ## Recursos de reprodução avançada HLS {#hls-advanced-playback}
 
 | Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Reprodução | VOD | Reprodução em offset | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Reprodução | VOD | Reprodução no offset | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 | Reprodução | VOD | Reprodução somente de áudio | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Reprodução | VOD | peça | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Reprodução | VOD | Brincadeira suave | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Reprodução | VOD + Live | Análise de ID3 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Não suportado |
-| Reprodução | VOD + Live | Suporte ao marcador de descontinuidade | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Reprodução | VOD + Live | Fluxos Tokenized | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Reprodução | VOD + Live | Cobrança | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Reprodução | VOD + Live | Procurar | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Reprodução | VOD | Trick Play | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Reprodução | VOD | Peça de truque suave | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Reprodução | VOD + Ao vivo | Análise do ID3 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Não suportado |
+| Reprodução | VOD + Ao vivo | Suporte ao marcador de descontinuidade | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Reprodução | VOD + Ao vivo | Fluxos Tokenized | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Reprodução | VOD + Ao vivo | Faturamento | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Reprodução | VOD + Ao vivo | Procurar | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 
 ## Reprodução principal HLS {#hls-core-playback}
 
 | Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Reprodução | VOD + Live | Reprodução geral (Reproduzir, Pausar, Buscar) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Reprodução | VOD + Ao vivo | Reprodução geral (Reproduzir, Pausar, Buscar) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
 | Reprodução | FER VOD | Reprodução geral (Reproduzir, Pausar, Buscar) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Reprodução | VOD + Live | Taxa de bits adaptável | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Reprodução | VOD + Live | Legendas 608/708 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Reprodução | VOD + Live | WebVTT | ![ícone suportado](assets/supported15.png) | Somente VOD | Somente VOD |
-| Reprodução | VOD + Live | Failover Manifest | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Reprodução | VOD + Live | Failover avançado | ![ícone suportado](assets/supported15.png) | Somente VOD | Limitação da plataforma |
-| Reprodução | VOD + Live | Notificações de QoS e player | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Suporte a QoS limitado |
-| Reprodução | VOD + Live | Suporte para cabeçalhos de cookies | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Reprodução | VOD + Live | Definição de parâmetros de controle de buffer | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Reprodução | VOD + Live | Definir controles adaptáveis de taxa de bits | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Reprodução | VOD + Live | Tags personalizadas | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Reprodução | VOD + Live | Áudio de ligação tardia | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
-| Reprodução | VOD + Live | Redirecionamento 302 | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Reprodução | VOD + Ao vivo | Taxa de bits adaptável | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Reprodução | VOD + Ao vivo | 608/708 legendas | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Reprodução | VOD + Ao vivo | WebVTT | ![ícone suportado](assets/supported15.png) | Somente VOD | Somente VOD |
+| Reprodução | VOD + Ao vivo | Failover Manifest | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Reprodução | VOD + Ao vivo | Failover avançado | ![ícone suportado](assets/supported15.png) | Somente VOD | Limitação da plataforma |
+| Reprodução | VOD + Ao vivo | Notificações de QoS e player | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Suporte a QoS limitado |
+| Reprodução | VOD + Ao vivo | Suporte para cabeçalhos de cookies | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Reprodução | VOD + Ao vivo | Definindo parâmetros de controle de buffer | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Reprodução | VOD + Ao vivo | Definir controles adaptáveis da taxa de bits | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Reprodução | VOD + Ao vivo | Tags personalizadas | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Reprodução | VOD + Ao vivo | Áudio de ligação tardia | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
+| Reprodução | VOD + Ao vivo | 302 redirecionamento | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) | Limitação da plataforma |
