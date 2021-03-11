@@ -1,23 +1,20 @@
 ---
-description: Remova os Intervalos de tempo entre o início e o fim em localTime da linha do tempo.
-seo-description: Remova os Intervalos de tempo entre o início e o fim em localTime da linha do tempo.
-seo-title: Excluir intervalos com anúncio de decisão do anúncio Primetime
-title: Excluir intervalos com anúncio de decisão do anúncio Primetime
-uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
+description: Remover Intervalos de Tempo entre o início e o fim em localTime da linha do tempo.
+title: Excluir intervalos com o anúncio de decisão do Primetime
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
 
-# Excluir intervalos com o anúncio de decisão do anúncio Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
+# Excluir intervalos com o anúncio de decisão do anúncio do Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-Remova os Intervalos de tempo entre o início e o fim em localTime da linha do tempo.
+Remover Intervalos de Tempo entre o início e o fim em localTime da linha do tempo.
 
-Exclua intervalos com um anúncio em Frase.
+Exclua intervalos com um anúncio de Frase.
 
 ```
 {   
