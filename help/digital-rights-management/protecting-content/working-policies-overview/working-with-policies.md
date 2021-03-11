@@ -1,9 +1,9 @@
 ---
-seo-title: Como trabalhar com a visão geral das políticas de DRM
 title: Como trabalhar com a visão geral das políticas de DRM
-uuid: 32423448-013c-4183-bea8-e14b6690abdb
+description: Como trabalhar com a visão geral das políticas de DRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -13,24 +13,24 @@ ht-degree: 0%
 
 # Visão geral {#working-with-drm-policies-overview}
 
-Os provedores de conteúdo podem aplicar políticas de DRM a arquivos de mídia usando o SDK do Primetime DRM. Os administradores podem criar, visualização e atualizar políticas de DRM usando APIs de gerenciamento de políticas.
+Os provedores de conteúdo podem aplicar políticas de DRM a arquivos de mídia usando o SDK de DRM do Primetime. Os administradores podem criar, exibir detalhes e atualizar políticas de DRM usando APIs de gerenciamento de políticas.
 
-Um *`DRM policy`* é uma coleção de informações que inclui configurações de segurança, requisitos de autenticação e direitos de uso. A política define como os usuários podem visualização conteúdo. As políticas, a criptografia e a assinatura do DRM permitem que os provedores de conteúdo mantenham o controle de seu conteúdo, independentemente do tamanho da distribuição do conteúdo.
+Um *`DRM policy`* é uma coleção de informações que inclui configurações de segurança, requisitos de autenticação e direitos de uso. A política define como os usuários podem visualizar conteúdo. As políticas, criptografia e assinatura de DRM permitem que os provedores de conteúdo mantenham o controle de seu conteúdo, independentemente da amplitude da distribuição do conteúdo.
 
-Uma política DRM serve como um modelo que o servidor de licenças usa quando gera uma licença. Um cliente também pode consultar a política de DRM antes de solicitar uma licença, para determinar se o cliente precisa solicitar a autenticação do usuário antes de emitir uma solicitação de licença ao servidor.
+Uma política de DRM serve como um modelo que o servidor de licenças usa ao gerar uma licença. Um cliente também pode consultar a política de DRM antes de solicitar uma licença, para determinar se ele precisa solicitar a autenticação do usuário antes de emitir uma solicitação de licença ao servidor.
 
-Você pode fornecer conteúdo protegido usando um Flash Media Server Adobe ou um servidor HTTP. Os usuários podem baixar e reproduzir conteúdo protegido em players personalizados criados com o SDK do Primetime DRM.
+Você pode fornecer conteúdo protegido usando o Adobe Flash Media Server ou um servidor HTTP. Os usuários podem baixar e reproduzir conteúdo protegido em players personalizados criados com o SDK DRM do Primetime.
 
-Uma política de DRM especifica um ou mais direitos que são concedidos ao cliente. Normalmente, uma política de DRM inclui, no mínimo, *`Play Right`*. Você também pode especificar vários Direitos de reprodução, cada um com restrições diferentes. Quando o cliente recebe uma licença com vários Direitos de reprodução, usa a primeira licença que atende a todas as restrições. Por exemplo, você pode aplicar diferentes configurações de proteção de saída em diferentes plataformas.
+Uma política de DRM especifica um ou mais direitos que são concedidos ao cliente. Normalmente, uma política de DRM inclui, no mínimo, o *`Play Right`*. Você também pode especificar vários Direitos de reprodução, cada um com diferentes restrições. Quando o cliente recebe uma licença com vários Direitos de reprodução, ele usa a primeira licença que atende a todas as restrições. Por exemplo, você pode impor diferentes configurações de proteção de saída em diferentes plataformas.
 
-Consulte `CreatePolicyWithOutputProtection.java` no diretório Reference Implementation Command Line Tools [!DNL samples] para obter exemplos de códigos que ilustram este exemplo.
+Consulte `CreatePolicyWithOutputProtection.java` no diretório Ferramentas de linha de comando da implementação de referência [!DNL samples] para obter o código de amostra que ilustra este exemplo.
 
-Você pode concluir as seguintes tarefas com as APIs de gerenciamento de política do DRM Primetime:
+Você pode concluir as seguintes tarefas com as APIs de gerenciamento de políticas de DRM do Primetime:
 
 * Criar e atualizar políticas
-* Detalhes da política DRM de visualização
+* Exibir detalhes da política de DRM
 * Gerenciar listas de atualização da política DRM
 
-Consulte *Referência da API DRM Primetime* para obter detalhes sobre a API Java.
+Consulte a *Referência da API DRM do Primetime* para obter detalhes sobre a API do Java.
 
-Consulte o guia *Using the Primetime DRM Reference Implementations* para obter informações sobre o Primetime DRM Policy Manager.
+Consulte o guia *Using the Primetime DRM Reference Implementations* para obter informações sobre o Gerenciador de políticas de DRM do Primetime.
