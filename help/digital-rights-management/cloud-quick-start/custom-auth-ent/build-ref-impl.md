@@ -1,9 +1,9 @@
 ---
-seo-title: Criar a implementação de referência BEES
-title: Criar a implementação de referência BEES
-uuid: c9358188-e626-4f99-a02c-4928b06d6ae2
+title: Criar a implementação de referência do BEES
+description: Criar a implementação de referência do BEES
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
@@ -11,14 +11,14 @@ ht-degree: 0%
 ---
 
 
-# Criar a implementação de referência do BEES {#build-the-bees-reference-implementation}
+# Criar a implementação de referência BEES {#build-the-bees-reference-implementation}
 
 Verifique se você está usando o Java 1.6.0_24 ou posterior.
 1. Preencha os caminhos vazios necessários, como `tomcatdir` e `fasterxmldir` em [!DNL build-bees.xml]
 
-   XML/Jackson mais rápido está incluído. Você também pode baixá-lo de [https://jar-download.com/artifacts/com.fasterxml.jackson.core](https://jar-download.com/artifacts/com.fasterxml.jackson.core).
-1. Atualize os nomes de arquivos jar reais em [!DNL build.common.xml] se quiser usar uma versão diferente das bibliotecas Jackson.
-1. Execute o público alvo `all` de [!DNL build-bees.xml]:
+   FasterXML/Jackson é incluído. Também é possível baixá-lo em [https://jar-download.com/artifacts/com.fasterxml.jackson.core](https://jar-download.com/artifacts/com.fasterxml.jackson.core).
+1. Atualize os nomes de arquivo jar reais em [!DNL build.common.xml] se desejar usar uma versão diferente das bibliotecas Jackson.
+1. Execute o destino `all` de [!DNL build-bees.xml]:
 
    ```
    ant -f build-bees.xml
