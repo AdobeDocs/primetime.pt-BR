@@ -1,13 +1,11 @@
 ---
-description: nulo
-seo-description: nulo
-seo-title: Adicionar publicidade
 title: Adicionar publicidade
-uuid: 7762506f-b55e-445d-b8a2-c1208358a370
+description: Adicionar publicidade
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '49'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 # Adicionar publicidade {#add-advertising}
 
-1. Defina os metadados do anúncio.
+1. Defina os metadados de publicidade.
 
    ```js
    var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
@@ -24,7 +22,7 @@ ht-degree: 0%
      auditudeSettings.zoneId = "123869";
    ```
 
-1. Adicione os metadados do anúncio ao `MediaResource`.
+1. Adicione os metadados de anúncio ao `MediaResource`.
 
    ```js
    var mediaResource =  
@@ -39,8 +37,8 @@ ht-degree: 0%
    config.advertisingFactory = new ExtCueOutContentFactory(auditudeSettings);
    ```
 
-1. Adicione `ExtCueOutContentFactory` à seção da biblioteca.
-1. Baixe o `ExtCueOutContentFactory.js` da seção da biblioteca e coloque-o na pasta de trabalho.
+1. Adicione o `ExtCueOutContentFactory` à seção da biblioteca.
+1. Baixe o `ExtCueOutContentFactory.js` na seção da biblioteca e coloque-o na pasta de trabalho.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
