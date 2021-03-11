@@ -1,13 +1,10 @@
 ---
-description: A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Configuration Validator antes de start do servidor. Este utilitário pode detectar a maioria dos erros de configuração precocemente, antes de causar falhas durante o processamento da solicitação.
-seo-description: A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Configuration Validator antes de start do servidor. Este utilitário pode detectar a maioria dos erros de configuração precocemente, antes de causar falhas durante o processamento da solicitação.
-seo-title: Validador de configuração
+description: O Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Validador de Configuração antes de iniciar o servidor. Esse utilitário pode detectar a maioria dos erros de configuração antecipadamente, antes que eles causem falhas durante o processamento da solicitação.
 title: Validador de configuração
-uuid: 7b44919a-0319-4675-95e2-ad1ad72ec0cb
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Validador de configuração{#configuration-validator}
 
-A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Configuration Validator antes de start do servidor. Este utilitário pode detectar a maioria dos erros de configuração precocemente, antes de causar falhas durante o processamento da solicitação.
+O Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Validador de Configuração antes de iniciar o servidor. Esse utilitário pode detectar a maioria dos erros de configuração antecipadamente, antes que eles causem falhas durante o processamento da solicitação.
 
 Para executar o validador, digite:
 
@@ -35,7 +32,7 @@ java -jar libs/flashaccess-validator.jar
 </i class="+ topic>
 ```
 
-Para cada um dos arquivos de configuração do servidor de licenças, o Validador pode executar a validação baseada em arquivo, garantindo que o arquivo XML esteja bem formado e esteja em conformidade com o schema do arquivo de configuração.
+Para cada um dos arquivos de configuração do servidor de licenças, o Validador pode executar a validação baseada em arquivo, o que garante que o arquivo XML esteja bem formado e em conformidade com o esquema do arquivo de configuração.
 
 Para executar a validação baseada em arquivo no arquivo de configuração global, digite:
 
@@ -49,17 +46,17 @@ Para executar a validação baseada em arquivo no arquivo de configuração do l
 Validator --<file path>/flashaccess-tenant.xml --tenant
 ```
 
-O Validador também pode executar a validação baseada em implantação. Além de verificar a conformidade com o schema, esse nível de validação também verifica se os valores especificados são válidos. Por exemplo, garante que os arquivos referenciados existam.
+O Validador também pode executar a validação baseada em implantação. Além de verificar a conformidade com o esquema, esse nível de validação também verifica se os valores especificados são válidos. Por exemplo, isso garante a existência de arquivos referenciados.
 
 A validação baseada na implantação pode ser executada nos seguintes níveis:
 
-* `Tenant` — Valida o arquivo de configuração e as credenciais de um locatário específico. Se desejar validar a configuração para `<tenant1>`, digite:
+* `Tenant` — Valida o arquivo de configuração e as credenciais de um locatário específico. Se quiser validar a configuração de `<tenant1>`, digite:
 
    ```
        Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
    ```
 
-* `Global` — Valida o arquivo de configuração global e a validação do locatário para todos os locatários. Se desejar executar a validação global baseada em implantação, digite:
+* `Global` — Valida o arquivo de configuração global e a validação do locatário para todos os locatários. Se você deseja executar a validação baseada em implantação global, digite:
 
    ```
        Validator --<root-path-to-LicenseServer.ConfigRoot> -g
