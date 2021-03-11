@@ -1,13 +1,10 @@
 ---
-description: O TVSDK despacha eventos de reprodução quando ocorrem operações de reprodução de mídia, como um vídeo que começa a ser reproduzido.
-seo-description: O TVSDK despacha eventos de reprodução quando ocorrem operações de reprodução de mídia, como um vídeo que começa a ser reproduzido.
-seo-title: Eventos de reprodução
+description: O TVSDK envia eventos de reprodução quando ocorrem operações de reprodução de mídia, como um vídeo que começa a ser reproduzido.
 title: Eventos de reprodução
-uuid: 809a8e0e-f4d8-4013-b04a-49fb93d7ca8a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Eventos de reprodução{#playback-events}
 
-O TVSDK despacha eventos de reprodução quando ocorrem operações de reprodução de mídia, como um vídeo que começa a ser reproduzido.
+O TVSDK envia eventos de reprodução quando ocorrem operações de reprodução de mídia, como um vídeo que começa a ser reproduzido.
 
-Para ser notificado sobre todos os eventos relacionados à reprodução, registre uma implementação de `MediaPlayer.PlaybackEventListener`, incluindo os retornos de chamada do evento a seguir.
+Para ser notificado sobre todos os eventos relacionados à reprodução, registre uma implementação de `MediaPlayer.PlaybackEventListener`, incluindo os retornos de chamada de evento a seguir.
 
 <table frame="all" colsep="1" rowsep="1"> 
  <thead> 
@@ -40,8 +37,8 @@ Para ser notificado sobre todos os eventos relacionados à reprodução, registr
    <td colname="2"> A reprodução de uma fonte de mídia foi iniciada. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSeleted</a> (taxa flutuante) </td> 
-   <td colname="2"> O usuário ou TVSDK selecionou uma nova taxa de reprodução, como avançar, retroceder ou reiniciar a reprodução em uma velocidade normal. </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSeleted</a>  (taxa flutuante) </td> 
+   <td colname="2"> O usuário ou TVSDK selecionou uma nova taxa de reprodução, como avançar, retroceder ou retomar a reprodução em uma velocidade normal. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRatePlaying%28float%29" format="html" scope="external"> onRatePlaying</a>  (taxa flutuante) </td> 
@@ -52,48 +49,48 @@ Para ser notificado sobre todos os eventos relacionados à reprodução, registr
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onPrepared%28%29" format="html" scope="external"> onPreparado</a> </td> 
-   <td colname="2"> O media player foi preparado com êxito. </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onPrepared%28%29" format="html" scope="external"> onPrepared</a> </td> 
+   <td colname="2"> O reprodutor de mídia preparou a mídia com êxito. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onSizeAvailable%28long,%20long%29" format="html" scope="external"> onSizeAvailable</a> (altura longa, largura longa) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onSizeAvailable%28long,%20long%29" format="html" scope="external"> onSizeAvailable</a>  (altura longa, largura longa) </td> 
    <td colname="2"> O tamanho da mídia está disponível. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="col1"><b>Media Player</b> </td> 
+   <td colname="col1"><b>Reprodutor de mídia</b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> MediaPlayer.</a> PlayerStatus,  <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> </a> MediaPlayerNotificationnotification) </td> 
-   <td colname="2"> O estado do player de mídia foi alterado. Seu aplicativo deve lidar com erros nesta chamada de retorno. </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a>  (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> MediaPlayer.</a> PlayerStatus,  <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> </a> MediaPlayerNotificationnotification) </td> 
+   <td colname="2"> O estado do reprodutor de mídia foi alterado. Seu aplicativo deve lidar com erros nesta chamada de retorno. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onProfileChanged%28long,%20long%29" format="html" scope="external"> onProfileChanged</a> (longo perfil, longo tempo) </td> 
-   <td colname="2"> O perfil atual do media player mudou. Use a propriedade <span class="codeph"> Perfil</span> para obter o novo perfil que está sendo reproduzido. Use a propriedade <span class="codeph"> time</span> para obter a hora em que o evento ocorreu. </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onProfileChanged%28long,%20long%29" format="html" scope="external"> onProfileChanged</a>  (perfil longo, tempo longo) </td> 
+   <td colname="2"> O perfil atual do reprodutor de mídia foi alterado. Use a propriedade <span class="codeph"> Profile</span> para obter o novo perfil que está sendo reproduzido. Use a propriedade <span class="codeph"> time</span> para obter a hora em que esse evento ocorreu. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="col1"><b>MediaplayerItem</b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onUpdated%28%29" format="html" scope="external"> onUpdates</a> </td> 
-   <td colname="2">O media player foi atualizado com êxito em qualquer um destes casos: 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onUpdated%28%29" format="html" scope="external"> onUpdated</a> </td> 
+   <td colname="2">O reprodutor de mídia atualizou a mídia com êxito em um destes casos: 
     <ul> 
-     <li>Quando ocorre uma atualização do manifesto para um ativo em tempo real.</li> 
-     <li>Quando um VOD ou ativo ativo tiver legendagem e atividade fechadas é descoberta pela primeira vez para uma faixa de legendagem fechada. </li> 
+     <li>Quando ocorre uma atualização de manifesto para um ativo em tempo real.</li> 
+     <li>Quando um VOD ou ativo tem legendas ocultas e a atividade é descoberta pela primeira vez para uma faixa de legendas ocultas. </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="col1"><b>Manifesto e Linha do tempo</b></td> 
+   <td colname="col1"><b>Manifesto e linha do tempo</b></td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> </a> TimedMetadatatimedMetadata) </td> 
-   <td colname="2"> Um novo metadados cronometrados é detectado no manifesto. </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a>  (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> </a> TimedMetadatatimedMetadata) </td> 
+   <td colname="2"> Um novo metadados cronometrados é descoberto no manifesto. </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimelineUpdated%28%29" format="html" scope="external"> onTimelineUpdates</a> </td> 
-   <td colname="2">O media player adicionou ou removeu anúncios, portanto, ele tem uma linha do tempo atualizada. <p>O manifesto atualizado para um ativo em tempo real e as quebras de anúncio antigas foram removidas da linha do tempo ou novas oportunidades de anúncio (pontos de sinalização) foram descobertas. O player de mídia tenta resolver e colocar quaisquer novos anúncios na linha do tempo. </p><p> Use esse evento para verificar se a linha do tempo tem alguma atualização (o VOD não muda durante a reprodução). Você pode recuperar a linha do tempo usando <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.html#getTimeline%28%29" format="html" scope="external"> MediaPlayer.getTimeline</a>. </p> </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimelineUpdated%28%29" format="html" scope="external"> onTimelineUpdated</a> </td> 
+   <td colname="2">O reprodutor de mídia adicionou removeu anúncios, portanto, tem uma linha do tempo atualizada. <p>O manifesto atualizado para um ativo em tempo real e as quebras de anúncio antigas foram removidas da linha do tempo ou novas oportunidades de anúncio (pontos de sinalização) foram descobertas. O reprodutor de mídia tenta resolver e colocar quaisquer novos anúncios na linha do tempo. </p><p> Use esse evento para verificar se a linha do tempo tem alguma atualização (VOD não é alterado durante a reprodução). Em seguida, é possível recuperar a linha do tempo usando <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.html#getTimeline%28%29" format="html" scope="external"> MediaPlayer.getTimeline</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
