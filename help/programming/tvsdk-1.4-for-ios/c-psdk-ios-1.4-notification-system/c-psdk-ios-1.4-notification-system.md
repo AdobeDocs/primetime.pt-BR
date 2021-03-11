@@ -1,70 +1,67 @@
 ---
-description: Os objetos de notificação PTN fornecem informações sobre alterações no status do player, avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player.
-seo-description: Os objetos de notificação PTN fornecem informações sobre alterações no status do player, avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player.
-seo-title: Notificações de status, atividade, erros e registros do player
-title: Notificações de status, atividade, erros e registros do player
-uuid: 59716a66-3736-4076-8011-8104bfe3a83a
+description: Os objetos PTNotification fornecem informações sobre alterações no status do player, avisos e erros. Erros que interrompem a reprodução do vídeo também causam uma alteração no status do reprodutor.
+title: Notificações para status do reprodutor, atividade, erros e logs
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
 
-# Notificações de status, atividade, erros e registro do player {#notifications-for-player-status-activity-errors-and-logs-overview}
+# Notificações para status do player, atividade, erros e registro {#notifications-for-player-status-activity-errors-and-logs-overview}
 
-Os objetos de notificação PTN fornecem informações sobre alterações no status do player, avisos e erros. Os erros que param a reprodução do vídeo também causam uma alteração no status do player.
+Os objetos PTNotification fornecem informações sobre alterações no status do player, avisos e erros. Erros que interrompem a reprodução do vídeo também causam uma alteração no status do reprodutor.
 
-Seu aplicativo pode recuperar as informações de notificação e status. Você também pode criar um sistema de registro para diagnóstico e validação usando as informações de notificação.
+Seu aplicativo pode recuperar a notificação e as informações de status. Você também pode criar um sistema de registro para diagnósticos e validação usando as informações de notificação.
 
 >[!IMPORTANT]
 >
->O TVSDK também usa *`notification`* para se referir a `NSNotifications` ( `PTMediaPlayer` notificações) *`event`* notificações, despachadas para fornecer informações sobre a atividade do player.
+>O TVSDK também usa *`notification`* para se referir a `NSNotifications` ( `PTMediaPlayer` notificações) *`event`* notificações, despachadas para fornecer informações sobre a atividade do reprodutor.
 
 O TVSDK também emite `PTMediaPlayerNewNotificationItemEntryNotification` quando emite `PTNotification`.
 
-Você implementa ouvintes de eventos para capturar e responder a eventos. Muitos eventos fornecem notificações de status `PTNotification`.
+Você implementa ouvintes de eventos para capturar e responder aos eventos. Muitos eventos fornecem notificações de status `PTNotification`.
 
 ## Conteúdo de notificação {#notification-content}
 
-O PTNotificação fornece informações relacionadas ao status do player.
+A notificação PTN fornece informações relacionadas ao status do player.
 
-O TVSDK fornece uma lista cronológica de `PTNotification` notificações. Cada notificação contém as seguintes informações:
+O TVSDK fornece uma lista cronológica de notificações `PTNotification`. Cada notificação contém as seguintes informações:
 
-* Carimbo de data e hora
+* Carimbo de data/hora
 * Metadados de diagnóstico que consistem nos seguintes elementos:
 
    * `type`: INFO, AVISO ou ERRO.
    * `code`: Uma representação numérica da notificação.
-   * `name`: Uma descrição legível pela pessoa da notificação, como SEEK_ERROR
-   * `metadata`: Pares chave/valor que contêm informações relevantes sobre a notificação. Por exemplo, uma chave chamada `URL` fornece um valor que é um URL relacionado à notificação.
+   * `name`: Uma descrição legível da notificação, como SEEK_ERROR
+   * `metadata`: Pares de chave/valor que contêm informações relevantes sobre a notificação. Por exemplo, uma chave chamada `URL` fornece um valor que é um URL relacionado à notificação.
 
    * `innerNotification`: Uma referência a outro  `PTNotification` objeto que afeta diretamente essa notificação.
 
-Você pode armazenar essas informações localmente para análise posterior ou enviá-las para um servidor remoto para registro e representação gráfica.
+Você pode armazenar essas informações localmente para análise posterior ou enviá-las a um servidor remoto para registro e representação gráfica.
 
 ## Configuração de notificação {#notification-setup}
 
-O TVSDK configura o player para notificações básicas, embora você deva concluir a mesma configuração para suas notificações personalizadas.
+O TVSDK configura o reprodutor para notificações básicas, embora você deva concluir a mesma configuração para suas notificações personalizadas.
 
 Há duas implementações para `PTNotification`:
 
 * Para ouvir
 * Para adicionar notificações personalizadas a `PTNotificationHistory`
 
-Para ouvir notificações, o TVSDK instancia a classe `PTNotification` e a anexa a uma instância do `PTMediaPlayerItem`, que está anexada a uma instância do PTMediaPlayer. Há apenas uma instância `PTNotificationHistory` por `PTMediaPlayer`.
+Para ouvir notificações, o TVSDK instancia a classe `PTNotification` e a anexa a uma instância do `PTMediaPlayerItem`, que é anexada a uma instância PTMediaPlayer. Há apenas uma instância `PTNotificationHistory` por `PTMediaPlayer`.
 
 >[!IMPORTANT]
 >
 >Se você estiver adicionando personalizações, seus aplicativos e não o TVSDK, deverão executar essas etapas.
 
-## Escutar notificações {#listen-to-notifications}
+## Ouça as notificações {#listen-to-notifications}
 
-Há duas maneiras de ouvir a notificação `PTNotification` em `PTMediaPlayer`:
+Há duas maneiras de ouvir a notificação `PTNotification` no `PTMediaPlayer`:
 
-1. Verifique manualmente `PTNotificationHistory` do `PTMediaPlayerItem` com um temporizador e verifique as diferenças:
+1. Verifique manualmente o `PTNotificationHistory` do `PTMediaPlayerItem` com um temporizador e verifique as diferenças:
 
    ```
    //Access to the PTMediaPlayerItem  
@@ -75,8 +72,8 @@ Há duas maneiras de ouvir a notificação `PTNotification` em `PTMediaPlayer`:
    NSArray *notifications = notificationHistory.notificationItems;
    ```
 
-1. Use o [NSNotificação](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html) publicado de `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`.
-1. Registre-se em `NSNotification` usando a instância de `PTMediaPlayer` da qual deseja obter notificações:
+1. Use o [NSNotification](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html) postado do `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`.
+1. Registre-se no `NSNotification` usando a instância do `PTMediaPlayer` do qual deseja obter notificações:
 
    ```
    //Register to the NSNotification 
@@ -87,9 +84,9 @@ Há duas maneiras de ouvir a notificação `PTNotification` em `PTMediaPlayer`:
 
 ## Implementar retornos de chamada de notificação {#implement-notification-callbacks}
 
-Você pode implementar retornos de chamada de notificação.
+É possível implementar retornos de chamada de notificação.
 
-1. Implemente o retorno de chamada de notificação obtendo `PTNotification` das `NSNotification` informações do usuário e lendo seus valores usando `PTMediaPlayerNotificationKey`:
+1. Implemente o retorno de chamada de notificação obtendo o `PTNotification` das informações do usuário `NSNotification` e lendo seus valores usando `PTMediaPlayerNotificationKey`:
 
    ```
    - (void) onMediaPlayerNotification:(NSNotification *) nsnotification { 
