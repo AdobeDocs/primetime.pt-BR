@@ -1,13 +1,10 @@
 ---
 description: O sistema de notificação TVSDK produz vários avisos de erro, aviso e informações que fornecem metadados de diagnóstico.
-seo-description: O sistema de notificação TVSDK produz vários avisos de erro, aviso e informações que fornecem metadados de diagnóstico.
-seo-title: nulo
-title: nulo
-uuid: 20828188-817a-471c-acbc-aeb5f336356b
+title: Códigos de notificação de ERRO
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '448'
 ht-degree: 5%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 5%
 
 # Códigos de notificação de ERRO {#error-notification-codes}
 
-Esta tabela fornece informações detalhadas sobre notificações de tipo de ERRO.
+Esta tabela fornece informações detalhadas sobre notificações do tipo ERROR.
 
 A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso que falhou ao baixar. Algumas notificações contêm metadados para especificar se o problema ocorreu no conteúdo de vídeo principal, no conteúdo de áudio alternativo ou em um anúncio.
 
@@ -24,7 +21,7 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
   <tr rowsep="1"> 
    <th colname="1" class="entry"><b>Código</b></th> 
    <th colname="2" class="entry"><b>Nome</b></th> 
-   <th colname="3" class="entry"><b>InnerNotification</b></th> 
+   <th colname="3" class="entry"><b>NotificaçãoInterna</b></th> 
    <th colname="4" class="entry"><b>Chaves de metadados</b></th> 
    <th colname="5" class="entry"><b>Comentários</b></th> 
   </tr> 
@@ -70,7 +67,7 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
    <td colname="2"><span class="codeph"> SEEK_ERROR  </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"><span class="codeph"> DESCRIÇÃO</span> </td> 
-   <td colname="5"> <p>Ocorreu um erro ao executar uma operação de busca. </p> </td> 
+   <td colname="5"> <p>Erro ao executar uma operação de busca. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 101009  </span> </td> 
@@ -110,21 +107,21 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 104001  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_METADATA_INVALID  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_METADATA_ INVALID  </span> </td> 
    <td colname="3"> <span class="codeph"> AD_NOT_INSERTED</span> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
-   <td colname="5"> <p>Falha na resolução do anúncio devido ao formato inválido de metadados do anúncio. </p> </td> 
+   <td colname="5"> <p>Falha na resolução do anúncio devido ao formato de metadados de anúncio inválido. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 104005  </span> </td> 
    <td colname="2"><span class="codeph"> AD_INSERTION_FAIL  </span> </td> 
    <td colname="3"> <span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
-   <td colname="5"> <p>A fase de resolução do anúncio falhou. </p> </td> 
+   <td colname="5"> <p>Falha na fase de resolução do anúncio. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 104006  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_INACESSÍVEL  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_UNREACHABLE  </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> Nenhum </td> 
    <td colname="5"> </td> 
@@ -162,7 +159,7 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
    <td colname="2"><span class="codeph"> SET_CC_STYLING_ ERROR  </span> </td> 
    <td colname="3"> <span class="codeph"> NATIVE_ERROR  </span> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
-   <td colname="5"> <p>Ocorreu um erro ao tentar alterar as opções de estilização das faixas CC. </p> </td> 
+   <td colname="5"> <p>Ocorreu um erro ao tentar alterar as opções de estilo das faixas de CC. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>iOS exclusivo</b> </td> 
@@ -176,7 +173,7 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
    <td colname="2"><span class="codeph"> AD_HLS_VERSION_INCOMPATÍVEL  </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> <span class="codeph"> AD_ASSET</span> </td> 
-   <td colname="5"> <p>A versão HLS dos anúncios é superior à versão HLS do conteúdo. </p> </td> 
+   <td colname="5"> <p>A versão HLS dos anúncios é mais alta do que a versão HLS do conteúdo. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170001  </span> </td> 
@@ -211,7 +208,7 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
    <td colname="2"><span class="codeph"> MBR_MEDIASEQUENCE_OFFSYNC  </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> Nenhum </td> 
-   <td colname="5"> <p>O número de sequência de mídia não está sincronizado em todos os fluxos HLS deste MBR. </p> </td> 
+   <td colname="5"> <p>O número de sequência da mídia não está sincronizado em todos os fluxos HLS deste MBR. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170006  </span> </td> 
@@ -250,16 +247,16 @@ A maioria dos erros contém metadados relevantes, por exemplo, o URL do recurso 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170011  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_PÚBLICO ALVO_DURATION_INCOMPATIBLE  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_TARGET_DURATION_INCOMPATÍVEL  </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> <span class="codeph"> AD_ASSET</span> </td> 
-   <td colname="5"> <p>A DURAÇÃO do PÚBLICO ALVO do anúncio é superior à DURAÇÃO do PÚBLICO ALVO do conteúdo. </p> </td> 
+   <td colname="5"> <p>A DURAÇÃO DO TARGET do anúncio é maior que a DURAÇÃO DO TARGET do conteúdo. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->adID e fonte (URL) podem ser recuperados por meio de `PTAdAsset` nos metadados de notificação com a chave `AD_ASSET`.
+>adID e fonte (URL) podem ser recuperadas por meio do `PTAdAsset` nos metadados de notificação com a chave `AD_ASSET`.
 >
 >O atributo `[]` especifica uma chave opcional para notificação.
