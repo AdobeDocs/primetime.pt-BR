@@ -1,13 +1,10 @@
 ---
 description: O TVSDK tem requisitos específicos para conteúdo de mídia, conteúdo manifesto, DRM e versões de software.
-seo-description: O TVSDK tem requisitos específicos para conteúdo de mídia, conteúdo manifesto, DRM e versões de software.
-seo-title: Requisitos
 title: Requisitos
-uuid: 06e61b9f-cda2-4813-8da4-fb3e0d88ad35
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ O TVSDK requer propriedades específicas para conteúdo de mídia, conteúdo man
 
 ## Requisitos de sistema e software {#section_96E5B079900246E78682AE44D3F23068}
 
-Para usar o TVSDK, verifique se as versões de hardware, sistema operacional e aplicativo atendem aos requisitos mínimos listados abaixo.
+Para usar o TVSDK, verifique se as versões do hardware, do sistema operacional e do aplicativo atendem aos requisitos mínimos listados abaixo.
 
 | Sistema operacional | iOS 7.0 ou posterior |
 |---|---|
@@ -27,19 +24,19 @@ Para usar o TVSDK, verifique se as versões de hardware, sistema operacional e a
 
 ## Requisitos de conteúdo e manifesto {#section_72DD0E4DA9774DCCADB42887497F1386}
 
-Verifique as restrições e os requisitos para streams e playlists (manifestos), incluindo chaves de criptografia DRM.
+Verifique as restrições e os requisitos para fluxos e listas de reprodução (manifestos), incluindo chaves de criptografia de DRM.
 
 | Quadros principais do segmento de conteúdo | Cada segmento de conteúdo deve começar com um quadro principal. |
 |---|---|
-| Números de sequência em vídeo ao vivo/linear | Deve corresponder entre todas as execuções de taxa de bits do conteúdo principal em qualquer momento. |
+| Números de sequência em vídeo ao vivo/linear | Deve corresponder entre todas as representações de taxa de bits do conteúdo principal em qualquer momento. |
 
 ## Requisitos EXT-X-VERSION {#section_C03D3DCE1D244E26BBD2C1D7144FDFBD}
 
-A versão de `#EXT-X-VERSION` no arquivo manifest [!DNL .m3u8] afeta os recursos disponíveis para seu aplicativo e quais tags `EXT` são válidas.
+A versão de `#EXT-X-VERSION` no arquivo de manifesto [!DNL .m3u8] afeta quais recursos estão disponíveis para seu aplicativo e quais `EXT` tags são válidas.
 
-Estas são algumas informações sobre a tag `#EXT-X-VERSION`, que especifica a versão do protocolo HLS:
+Estas são algumas informações sobre a tag `#EXT-X-VERSION` , que especifica a versão do protocolo HLS:
 
-* A versão deve corresponder aos recursos e atributos da lista de reprodução HLS; caso contrário, podem ocorrer erros de reprodução. Para obter mais informações, consulte [Especificação HTTP Live Streaming](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
+* A versão deve corresponder aos recursos e atributos na lista de reprodução do HLS; caso contrário, podem ocorrer erros de reprodução. Para obter mais informações, consulte a [especificação do HTTP Live Streaming](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
 * O Adobe recomenda usar pelo menos a versão 2 do HLS para reprodução em clientes baseados em TVSDK.
 
    Os clientes e servidores devem implementar as versões da seguinte maneira:
@@ -53,18 +50,18 @@ Estas são algumas informações sobre a tag `#EXT-X-VERSION`, que especifica a 
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> VERSÃO EXT-X:2  </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:2  </span> </td> 
    <td colname="2"> O atributo IV da tag <span class="codeph"> EXT-X-KEY </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> VERSÃO EXT-X:3  </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:3  </span> </td> 
    <td colname="2"> 
     <ul id="ul_C9500D3F934848639C204BF248F139FF"> 
-     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Valores de duração de <span class="codeph"> EXTINF </span> de ponto flutuante <p>As tags de duração ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) na versão 2 foram arredondados para valores inteiros. A versão 3 e superior exigem que as durações sejam especificadas exatamente, em ponto flutuante. </p> </li> 
+     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Valores de duração de ponto flutuante <span class="codeph"> EXTINF </span> <p>As marcas de duração ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) na versão 2 foram arredondadas para valores inteiros. A versão 3 e superior exigem que as durações sejam especificadas exatamente, em ponto flutuante. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"> <span class="codeph"> VERSÃO EXT-X:4  </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:4  </span> </td> 
    <td colname="2"> 
     <ul id="ul_3355A6CBBE2141DDB92660BB4B604D70"> 
      <li id="li_5E73D41AF6DC4CEE88D6C029FFCFC350">A tag <span class="codeph"> EXT-X-BYTERANGE </span> </li> 
