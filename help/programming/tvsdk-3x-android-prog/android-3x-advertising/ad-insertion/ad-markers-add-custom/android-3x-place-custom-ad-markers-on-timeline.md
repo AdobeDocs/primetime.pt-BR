@@ -1,45 +1,42 @@
 ---
-description: Este exemplo mostra a maneira recomendada de incluir marcadores de anúncio personalizados na linha do tempo de reprodução.
-seo-description: Este exemplo mostra a maneira recomendada de incluir marcadores de anúncio personalizados na linha do tempo de reprodução.
-seo-title: Coloque marcadores de anúncio personalizados na linha do tempo
-title: Coloque marcadores de anúncio personalizados na linha do tempo
-uuid: 47e31a97-e5da-46f3-bdcc-327c159c4355
+description: Este exemplo mostra a maneira recomendada de incluir marcadores de anúncio personalizados na linha do tempo da reprodução.
+title: Inserir marcadores de anúncio personalizados na linha do tempo
 translation-type: tm+mt
-source-git-commit: 2a6ea34968ee7085931f99a24dfb23d097721b89
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
 
-# Coloque marcadores de anúncio personalizados na linha do tempo {#place-custom-ad-markers-on-the-timeline}
+# Inserir marcadores de anúncio personalizados na linha do tempo {#place-custom-ad-markers-on-the-timeline}
 
-Este exemplo mostra a maneira recomendada de incluir marcadores de anúncio personalizados na linha do tempo de reprodução.
+Este exemplo mostra a maneira recomendada de incluir marcadores de anúncio personalizados na linha do tempo da reprodução.
 
-1. Traduza as informações de posicionamento de anúncios fora de banda em uma lista/matriz da classe `RepaceTimeRange`.
+1. Traduza as informações de posicionamento de anúncios fora de banda em uma lista/matriz de classe `RepaceTimeRange`.
 1. Crie uma instância da classe `CustomRangeMetadata` e use seu método `setTimeRangeList` com a lista/matriz como seu argumento para definir sua lista de intervalo de tempo.
-1. Use seu método `setType` para definir o tipo como `MARK_RANGE`.
-1. Use o método `MediaPlayerItemConfig.setCustomRangeMetadata` com a instância `CustomRangeMetadata` como seu argumento para definir os metadados do intervalo personalizado.
-1. Use o método `MediaPlayer.replaceCurrentResource` com a instância `MediaPlayerItemConfig` como seu argumento para definir o novo recurso como o atual.
-1. Aguarde um evento `STATE_CHANGED`, que informa que o player está no estado `PREPARED`.
-1. Reprodução de vídeo de start ao chamar `MediaPlayer.play`.
+1. Use o método `setType` para definir o tipo como `MARK_RANGE`.
+1. Use o método `MediaPlayerItemConfig.setCustomRangeMetadata` com a instância `CustomRangeMetadata` como seu argumento para definir os metadados de intervalo personalizados.
+1. Use o método `MediaPlayer.replaceCurrentResource` com a instância `MediaPlayerItemConfig` como seu argumento para definir tornar o novo recurso o atual.
+1. Aguarde um evento `STATE_CHANGED`, que informa que o reprodutor está no estado `PREPARED`.
+1. Inicie a reprodução do vídeo, chamando `MediaPlayer.play`.
 
 Este é o resultado da conclusão das tarefas neste exemplo:
 
-* Se um `ReplaceTimeRange` sobrepor outro na linha do tempo de reprodução, por exemplo, a posição do start de um `ReplaceTimeRange` for anterior à posição final já colocada, o TVSDK ajusta silenciosamente o start do `ReplaceTimeRange` ofensivo para evitar o conflito.
+* Se um `ReplaceTimeRange` se sobrepõe a outro na linha do tempo de reprodução, por exemplo, a posição inicial de um `ReplaceTimeRange` é anterior a uma posição final já colocada, o TVSDK ajusta silenciosamente o início do `ReplaceTimeRange` incorreto para evitar o conflito.
 
-   Isso faz com que o `ReplaceTimeRange` ajustado seja menor do que o especificado originalmente. Se o ajuste levar a uma duração de zero, o TVSDK solta silenciosamente o `ReplaceTimeRange` ofensivo.
+   Isso torna o `ReplaceTimeRange` ajustado menor do que o especificado originalmente. Se o ajuste levar a uma duração de zero, o TVSDK ignora silenciosamente o `ReplaceTimeRange` incorreto.
 
-* O TVSDK procura intervalos de tempo adjacentes para quebras de anúncio personalizadas e as agrupa em quebras de anúncio separadas.
+* O TVSDK busca intervalos de tempo adjacentes para ad breaks personalizados e os agrupa em ad breaks separados.
 
-Os intervalos de tempo não adjacentes a qualquer outro intervalo de tempo são traduzidos em intervalos de anúncios que contêm um único anúncio.
+Intervalos de tempo não adjacentes a qualquer outro intervalo de tempo são traduzidos em ad breaks que contêm um único anúncio.
 
-* Se o aplicativo tentar carregar um recurso de mídia cuja configuração contenha `CustomRangeMetadata` que possa ser usado somente nos marcadores de anúncio personalizados de contexto, o TVSDK lançará uma exceção se o ativo subjacente não for do tipo VOD.
+* Se o aplicativo tentar carregar um recurso de mídia cuja configuração contenha `CustomRangeMetadata` que pode ser usado somente nos marcadores de anúncio personalizados de contexto, o TVSDK acionará uma exceção se o ativo subjacente não for do tipo VOD.
 
-* Ao lidar com marcadores de anúncios personalizados, o TVSDK desativa outros mecanismos de resolução de anúncios (por exemplo, decisões de anúncios da Adobe Primetime).
+* Ao lidar com marcadores de anúncios personalizados, o TVSDK desativa outros mecanismos de resolução de anúncios (por exemplo, Adobe Primetime ad decisioning).
 
-   Você pode usar qualquer módulo TVSDK de resolução de anúncios ou o mecanismo personalizado de marcadores de anúncios. Quando você usa marcadores de anúncio personalizados, o conteúdo do anúncio é considerado resolvido e colocado na linha do tempo.
+   Você pode usar qualquer módulo de resolvedor de anúncios TVSDK ou o mecanismo de marcadores de anúncios personalizados. Quando você usa marcadores de anúncios personalizados, o conteúdo do anúncio é considerado resolvido e colocado na linha do tempo.
 
 O trecho de código a seguir coloca três intervalos de tempo na linha do tempo como marcadores de anúncios personalizados.
 
