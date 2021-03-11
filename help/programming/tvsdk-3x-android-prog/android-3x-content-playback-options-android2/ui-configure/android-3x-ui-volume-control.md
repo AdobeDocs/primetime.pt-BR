@@ -1,14 +1,11 @@
 ---
 description: Você pode configurar um controle da interface do usuário para ajustar o volume do vídeo.
-seo-description: Você pode configurar um controle da interface do usuário para ajustar o volume do vídeo.
-seo-title: Fornecer controle de volume
 title: Fornecer controle de volume
-uuid: c87fe656-0329-4c9c-b65b-43be48c77062
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '98'
+ht-degree: 2%
 
 ---
 
@@ -17,11 +14,11 @@ ht-degree: 1%
 
 Você pode configurar um controle da interface do usuário para ajustar o volume do vídeo.
 
-1. Na rotina de retorno de chamada do elemento de interface de controle de volume, verifique se o player está em um status válido para esse comando.
+1. Na rotina de retorno de chamada do elemento da interface de controle de volume, verifique se o player está em um status válido para esse comando.
 
    >[!TIP]
    >
-   >Qualquer status, exceto para LIBERADO, é válido.
+   >Qualquer status, exceto LIBERADO, é válido.
 
 1. Chame `setVolume` para definir o volume de áudio.
 
