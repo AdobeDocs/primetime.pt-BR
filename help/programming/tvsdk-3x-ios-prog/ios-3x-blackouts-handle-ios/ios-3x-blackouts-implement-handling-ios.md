@@ -1,23 +1,20 @@
 ---
 description: O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
-seo-description: O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
-seo-title: Implementar gerenciamento de blecaute
-title: Implementar gerenciamento de blecaute
-uuid: a447ff24-8386-4cae-878e-0859fb191de2
+title: Implementar o gerenciamento de blecaute
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '129'
 ht-degree: 1%
 
 ---
 
 
-# Implementar o controle de blecaute {#implement-blackout-handling}
+# Implementar o tratamento de blecaute {#implement-blackout-handling}
 
 O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
 
-Para implementar o gerenciamento de blecaute e fornecer conteúdo alternativo durante o blecaute:
+Para implementar o tratamento de blecaute e fornecer conteúdo alternativo durante o blecaute:
 
 1. Configure seu aplicativo para assinar tags de blecaute em um manifesto de fluxo ao vivo.
 
@@ -64,7 +61,7 @@ Para implementar o gerenciamento de blecaute e fornecer conteúdo alternativo du
    }
    ```
 
-1. Manuseie objetos `TimedMetadata` com atualizações constantes durante a reprodução.
+1. Lide com objetos `TimedMetadata` com atualizações constantes durante a reprodução.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -221,7 +218,7 @@ Para implementar o gerenciamento de blecaute e fornecer conteúdo alternativo du
    }
    ```
 
-1. Implemente um método de escuta para erros em segundo plano.
+1. Implemente um método listener para erros em segundo plano.
 
    ```
    - (void) onBackgroundManifestError:(NSNotification *)notification 
