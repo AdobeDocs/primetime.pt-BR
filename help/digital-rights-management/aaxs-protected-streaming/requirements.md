@@ -1,9 +1,9 @@
 ---
-seo-title: Requisitos
 title: Requisitos
-uuid: a5a13187-be20-4feb-ad9e-5ebd81b7e5a3
+description: Requisitos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 # Requisitos{#requirements}
 
 * Microsoft Windows Server 2008 ou Red Hat® Enterprise Linux® 5.6
-* Oracle Java JRE 1.6 (Oracle Java JDK 1.6 é necessário para criar extensões de autorização personalizadas)
+* Oracle Java JRE 1.6 (O Oracle Java JDK 1.6 é necessário para criar extensões de autorização personalizadas)
 * Apache Tomcat® 6 (Disponível na terceira pasta Party\Tomcat\6.0.18 do DVD)
 * Credenciais emitidas pelo Adobe
 
