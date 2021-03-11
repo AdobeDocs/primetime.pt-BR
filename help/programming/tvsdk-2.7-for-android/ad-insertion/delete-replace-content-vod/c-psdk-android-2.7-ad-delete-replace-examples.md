@@ -1,23 +1,20 @@
 ---
-description: Estes são alguns exemplos do processo de exclusão e substituição de publicidades.
-seo-description: Estes são alguns exemplos do processo de exclusão e substituição de publicidades.
-seo-title: Exemplos para excluir e substituir publicidades
-title: Exemplos para excluir e substituir publicidades
-uuid: 31ceb39a-aa30-472e-908a-3ba57559045f
+description: Estes são alguns exemplos do processo para excluir e substituir anúncios.
+title: Exemplos para excluir e substituir anúncios
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
 
-# Exemplos para excluir e substituir publicidades {#examples-to-delete-and-replace-ads}
+# Exemplos para excluir e substituir anúncios {#examples-to-delete-and-replace-ads}
 
-Estes são alguns exemplos do processo de exclusão e substituição de publicidades.
+Estes são alguns exemplos do processo para excluir e substituir anúncios.
 
-Este é um exemplo de uso de `DELETE_RANGE`:
+Este é um exemplo de uso do `DELETE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -46,7 +43,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-Este é um exemplo de uso de `REPLACE_RANGE`:
+Este é um exemplo de uso do `REPLACE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 
