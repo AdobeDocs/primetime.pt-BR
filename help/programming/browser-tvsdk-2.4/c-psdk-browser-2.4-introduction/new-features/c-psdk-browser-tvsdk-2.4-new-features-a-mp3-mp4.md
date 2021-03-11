@@ -1,13 +1,10 @@
 ---
-description: O TVSDK do navegador suporta vários recursos MP3 e MP4 que você pode implementar para adicionar funcionalidade aos seus aplicativos.
-seo-description: O TVSDK do navegador suporta vários recursos MP3 e MP4 que você pode implementar para adicionar funcionalidade aos seus aplicativos.
-seo-title: Recursos MP3 e MP4 suportados
-title: Recursos MP3 e MP4 suportados
-uuid: 33e3130f-fc78-40b8-a4b7-2fcdd5a2b4f9
+description: O TVSDK do navegador é compatível com vários recursos MP3 e MP4 que você pode implementar para adicionar funcionalidade aos seus aplicativos.
+title: Recursos MP3 e MP4 compatíveis
 translation-type: tm+mt
-source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Recursos de MP3 e MP4 compatíveis {#supported-mp-and-mp-features}
 
-O TVSDK do navegador suporta vários recursos MP3 e MP4 que você pode implementar para adicionar funcionalidade aos seus aplicativos.
+O TVSDK do navegador é compatível com vários recursos MP3 e MP4 que você pode implementar para adicionar funcionalidade aos seus aplicativos.
 * [Recursos de áudio MP3 - Reprodução principal](#core-playback)
 * [Recursos de áudio MP4 - Reprodução principal](#mp4-audio-features)
 * [Recursos de vídeo MP4 - Ad Insertion principal](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
@@ -42,9 +39,9 @@ O TVSDK do navegador suporta vários recursos MP3 e MP4 que você pode implement
 
 ## Recursos de vídeo MP4 {#section_1A8CBC5AA4FA4477813FD9EFF26AC104}
 
-### Inserção do anúncio principal
+### Inserção de anúncio principal
 
 | Categoria | Tipo de conteúdo | Recurso | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Ad Insertion | VOD MP4 | Pré-lançamento | Não suportado | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
-| Ad Insertion | VOD MP4 | Pós-rolagem | Não suportado | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD MP4 | Antes da exibição | Não suportado | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
+| Ad Insertion | VOD MP4 | Pós-lançamento | Não suportado | ![ícone suportado](assets/supported15.png) | ![ícone suportado](assets/supported15.png) |
