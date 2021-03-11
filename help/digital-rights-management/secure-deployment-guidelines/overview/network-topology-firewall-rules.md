@@ -1,13 +1,10 @@
 ---
 description: 'Ao determinar suas regras de firewall, considere os seguintes tipos de URLs '
-seo-description: 'Ao determinar suas regras de firewall, considere os seguintes tipos de URLs '
-seo-title: Regras de firewall
 title: Regras de firewall
-uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -19,15 +16,15 @@ Ao determinar suas regras de firewall, considere os seguintes tipos de URLs:
 
 ## URLs de entrada {#section_F111526A9DB844CBBF21A3CAE5F50880}
 
-Você pode configurar seu firewall externo para que ele exponha somente os URLs para a funcionalidade do aplicativo que deseja fornecer aos usuários finais.
+Você pode configurar seu firewall externo para que ele exponha apenas os URLs da funcionalidade do aplicativo que deseja fornecer aos usuários finais.
 
-Os usuários externos podem acessar os seguintes URLs usando o firewall externo:
+Usuários externos podem acessar os seguintes URLs usando o firewall externo:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_bqs_whz_n4"> 
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
    <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">URL raiz </p> </th> 
-   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Propósito </p> </th> 
+   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Finalidade </p> </th> 
   </tr> 
  </thead>
  <tbody class="- topic/tbody "> 
@@ -44,7 +41,7 @@ Os usuários externos podem acessar os seguintes URLs usando o firewall externo:
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para autenticar usuários. </p> <p>Esse URL deve estar acessível se você usar as APIs do cliente Adobe Primetime DRM para autenticação de usuário. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para autenticar usuários. </p> <p>Esse URL deve ser acessível se você usar as APIs do cliente DRM do Adobe Primetime para autenticação de usuário. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -75,7 +72,7 @@ Os usuários externos podem acessar os seguintes URLs usando o firewall externo:
      <li id="li_CF7590FDAF694EDF9685434BE8EE10CA"><span class="filepath"> /flashaccess/domain/v5</span> </li> 
      <li id="li_CA73424FDFAA4BD8BBE2C1AD165D2C31"><span class="filepath"> /flashaccess/domain/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para registrar domínios. </p> <p>Esse URL deve estar acessível se você implementar o suporte de domínio. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para registrar domínios. </p> <p>Esse URL deve ser acessível se você implementar o suporte de domínio. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -85,7 +82,7 @@ Os usuários externos podem acessar os seguintes URLs usando o firewall externo:
      <li id="li_C761F14F3C97479CBA5C255739E01A28"><span class="filepath"> /flashaccess/dereg/v5</span> </li> 
      <li id="li_23A8AABE7499488EB61B7ED27CC65098"><span class="filepath"> /flashaccess/dereg/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para cancelar o registro de domínios. </p> <p>Esse URL deve estar acessível se você implementar o suporte de domínio. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para cancelar o registro de domínios. </p> <p>Esse URL deve ser acessível se você implementar o suporte de domínio. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
@@ -93,7 +90,7 @@ Os usuários externos podem acessar os seguintes URLs usando o firewall externo:
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL do serviço da Web de LiveCycle Rights Management ES. Se o conteúdo tiver sido publicado usando uma versão anterior do FMRMS, esse URL permitirá que clientes mais antigos se conectem ao servidor. Esses clientes são solicitados a atualizar para o Adobe Primetime DRM. </p> <p class="- topic/p ">Observação: Esse URL deve usar SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL do serviço Web do LiveCycle Rights Management ES. Se o conteúdo foi publicado usando uma versão anterior do FMRMS, esse URL permite que clientes mais antigos se conectem ao servidor. Esses clientes são solicitados a atualizar para o Adobe Primetime DRM. </p> <p class="- topic/p ">Observação: Esse URL deve usar SSL (HTTPS). </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -101,20 +98,20 @@ Os usuários externos podem acessar os seguintes URLs usando o firewall externo:
      <li id="li_24B4D42BECF8405281C73B782F8E7310"><span class="filepath"> /flashaccess/lreturn/v5</span> </li> 
      <li id="li_6B79563205D1421F89131E650D71E83B"><span class="filepath"> /flashaccess/lreturn/v6</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p>Para devolver licenças. </p> <p> O URL deve estar acessível se você implementar o suporte de retorno de licença. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Para devolver licenças. </p> <p> O URL deve ser acessível se você implementar o suporte de retorno de licença. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->O firewall interno só deve permitir conexões com o servidor de licenças Primetime DRM por meio do proxy reverso e somente com os URLs na tabela. Para melhorar a escalabilidade, use HTTP para as conexões entre o proxy reverso e o DRM Primetime.
+>O firewall interno só deve permitir conexões com o servidor de licenças DRM do Primetime por meio do proxy reverso e somente com os URLs na tabela . Para melhorar a escalabilidade, use HTTP para as conexões entre o proxy reverso e o DRM do Primetime.
 
 ## URLs de saída {#section_FFF9F7BB353149F4A27F8788E9934A48}
 
-As URLs de saída permitem que o servidor de licenças baixe as CRLs do Adobe.
+As URLs de saída permitem que o servidor de licença baixe as CRLs do Adobe.
 
-Esta é uma lista dos URLs enviados que você pode usar:
+Esta é uma lista de URLs de saída que você pode usar:
 
 * `https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl`
 * `https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl`
