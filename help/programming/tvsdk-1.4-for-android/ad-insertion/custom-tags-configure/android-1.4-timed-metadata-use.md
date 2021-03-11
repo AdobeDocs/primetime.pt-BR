@@ -1,13 +1,10 @@
 ---
-description: Você pode usar TimedMetadata quando o tempo de reprodução atual corresponder ao tempo do start.
-seo-description: Você pode usar TimedMetadata quando o tempo de reprodução atual corresponder ao tempo do start.
-seo-title: Usar metadados cronometrados
+description: Você pode usar TimedMetadata quando a hora de reprodução atual corresponde à hora de início.
 title: Usar metadados cronometrados
-uuid: 98bb8c08-2794-42d6-b5c3-b1047ac804fe
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '152'
 ht-degree: 1%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 1%
 
 # Usar metadados cronometrados {#use-timed-metadata}
 
-Você pode usar TimedMetadata quando o tempo de reprodução atual corresponder ao tempo do start.
+Você pode usar TimedMetadata quando a hora de reprodução atual corresponde à hora de início.
 
-Para usar esses objetos salvos `TimedMetadata` durante a reprodução, use os `ArrayList` salvos de [Armazenar objetos de metadados cronometrados conforme são despachados](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
+Para usar esses objetos `TimedMetadata` salvos durante a reprodução, use o `ArrayList` salvo de [Armazenar objetos de metadados cronometrados, pois são despachados](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
 
-1. Execute um temporizador e query repetidamente o tempo de reprodução atual.
-1. Encontre todos os objetos `TimedMetadata` com horários de start que correspondam ao tempo de reprodução atual.
+1. Execute um temporizador e consulte repetidamente o tempo de reprodução atual.
+1. Encontre todos os objetos `TimedMetadata` com horários de início que correspondem ao tempo de reprodução atual.
 
    É possível usar esses objetos para concluir várias ações.
 
    >[!IMPORTANT]
    >
-   >Ao verificar se o tempo de reprodução atual corresponde a qualquer objeto `TimedMetadata`, inclua `shouldTriggerSubscribedTagEvent` como uma condição.
+   >Ao verificar se o tempo de reprodução atual corresponde a qualquer objeto `TimedMetadata` , inclua `shouldTriggerSubscribedTagEvent` como uma condição.
 
-   A linha do tempo pode mudar como resultado de vários comportamentos de anúncio. Por exemplo, uma ou mais quebras de anúncio podem ser movidas de suas posições originais na linha do tempo, mas `shouldTriggerSubscribedTagEvent` garante que a hora de start do objeto `TimeMetadata` corresponda à hora de reprodução atual.
+   A linha do tempo pode mudar como resultado de vários comportamentos de publicidade. Por exemplo, uma ou mais quebras de anúncio podem ser movidas de suas posições originais na linha do tempo, mas `shouldTriggerSubscribedTagEvent` garante que a hora de início do objeto `TimeMetadata` corresponda ao tempo de reprodução atual.
 
    Por exemplo:
 
