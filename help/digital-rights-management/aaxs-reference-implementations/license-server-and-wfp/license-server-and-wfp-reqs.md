@@ -1,9 +1,9 @@
 ---
-seo-title: Requisitos
 title: Requisitos
-uuid: c8e87231-d8c1-48f1-8bb1-5d76f561f216
+description: Requisitos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Requisitos {#requirements}
 
-Será necessário verificar se você tem o seguinte instalado:
+Você precisará garantir que tenha o seguinte instalado:
 
 * Tomcat 6.0 ou posterior
-* Um banco de dados como MySQL (necessário somente para o componente do License Server)
+* Um banco de dados como MySQL (necessário somente para o componente License Server)
 * Java 1.6 ou posterior
-* Ant 1.8 ou posterior (para usar os scripts de compilação de amostra)
+* Ant 1.8 ou posterior (para usar os scripts de criação de amostra)
 
 Depois de instalar o Tomcat e o MySQL, obtenha as credenciais do Adobe.
