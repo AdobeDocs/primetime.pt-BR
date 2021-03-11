@@ -1,20 +1,19 @@
 ---
 title: Ajuda da migração do Primetime
-seo-title: Ajuda da migração Adobe Primetime
-description: nulo
-seo-description: nulo
+description: Ajuda da migração do Primetime
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 48%
+source-wordcount: '208'
+ht-degree: 50%
 
 ---
 
 
-# Ajuda para migração e conversão do Primetime
+# Ajuda da migração e conversão do Primetime
 
-Bem-vindo à ajuda de Migração e Conversão para Adobe Primetime. Os documentos listados na navegação à esquerda explicam o processo de conversão e migração para mover do Primetime TVSDK Suite existente para o suite da próxima geração.
+Bem-vindo à ajuda sobre Migração e Conversão do Adobe Primetime. Os documentos listados na navegação à esquerda explicam o processo de conversão e migração para migrar do Primetime TVSDK Suite existente para o suite de próxima geração.
 
 ## Consulte também
 
@@ -25,17 +24,17 @@ Bem-vindo à ajuda de Migração e Conversão para Adobe Primetime. Os documento
 | [Implementação de referência](/help/android-reference-implementation/home.md) | Ajuda a entender o TVSDK e modificar os gerentes de recursos para personalizar o seu reprodutor pessoal. |
 | [Ajuda do Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Explica como monetizar o conteúdo inserindo anúncios dinâmicos direcionados ao usuário no servidor e engajar o público-alvo com anúncios personalizados. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Ajuda você a saber mais sobre vários cenários de usuário no Digital Rights Management (DRM) |
-| [Referências da API Primetime](/help/reference/api-references.md) | Fornece informações detalhadas sobre as funções do TVSDK, estruturas de dados e outras construções de programação. |
+| [Referências da API do Primetime](/help/reference/api-references.md) | Fornece informações detalhadas sobre as funções do TVSDK, estruturas de dados e outras construções de programação. |
 | [Arquivos](https://helpx.adobe.com/primetime/archives.html) | Baixe PDFs da documentação arquivada. |
 
 ## Recursos úteis
 
-* [Conheça a Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
+* [Noções básicas sobre o Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
 
 * [Monitoramento de simultaneidade](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
-* [Autenticação Primetime](https://tve.helpdocsonline.com/home)
+* [Autenticação do Primetime](https://tve.helpdocsonline.com/home)
 
-* [Fóruns do Adobe Primetime DRM](https://forums.adobe.com/community/adobe_access)
+* [Fóruns de DRM da Adobe Primetime](https://forums.adobe.com/community/adobe_access)
 
-* [Recursos do desenvolvedor Adobe Primetime](https://www.adobe.com/devnet/primetime.html)
+* [Recursos do desenvolvedor do Adobe Primetime](https://www.adobe.com/devnet/primetime.html)
