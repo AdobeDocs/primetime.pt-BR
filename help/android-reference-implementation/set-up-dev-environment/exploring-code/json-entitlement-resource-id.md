@@ -1,13 +1,10 @@
 ---
-seo-title: Objeto JSON para ID de recurso de direito
 title: Objeto JSON para ID de recurso de direito
-uuid: f5b659da-1732-404c-bf00-d32a0ae39aa1
-description: O bloco de código a seguir fornece um exemplo de um objeto JSON quando a ID do recurso de direito é uma sequência de texto simples.
-seo-description: O bloco de código a seguir fornece um exemplo de um objeto JSON quando a ID do recurso de direito é uma sequência de texto simples.
+description: O bloco de código a seguir fornece um exemplo de um objeto JSON quando a ID do recurso de direito é uma cadeia de texto simples.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '95'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Objeto JSON para ID de recurso de direito {#json-object-for-entitlement-resource-id}
 
-O bloco de código a seguir fornece um exemplo de um objeto JSON quando a ID do recurso de direito é uma sequência de texto simples. Nesse caso, a ID do recurso é a string &quot;resource&quot;.
+O bloco de código a seguir fornece um exemplo de um objeto JSON quando a ID do recurso de direito é uma cadeia de texto simples. Nesse caso, a ID do recurso é a cadeia de caracteres &quot;recurso&quot;.
 
 ```
 "metadata" : { 
