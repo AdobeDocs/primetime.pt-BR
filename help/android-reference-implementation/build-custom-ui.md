@@ -1,13 +1,10 @@
 ---
 description: Você pode criar facilmente uma interface de usuário personalizada com base na estrutura de implementação de referência.
-seo-description: Você pode criar facilmente uma interface de usuário personalizada com base na estrutura de implementação de referência.
-seo-title: Criar uma interface de usuário personalizada
 title: Criar uma interface de usuário personalizada
-uuid: b785f6a4-3ef8-4f7a-a087-0d6551da9750
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
@@ -23,13 +20,13 @@ Os componentes da interface do usuário dos seguintes recursos já estão integr
 * Sobreposições de anúncio
 * Áudio de ligação tardia
 * Legendas ocultas
-* Ouvintes para todos os componentes acima
+* Ouvintes de todos os componentes acima
 
-1. Edite o arquivo [!DNL PlayerFragment.java] para inicializar os componentes da interface que você deseja usar no player.
+1. Edite o arquivo [!DNL PlayerFragment.java] para inicializar os componentes da interface do usuário que deseja usar no player.
 
 1. Edite o arquivo [!DNL res/player/player_fragment.xml] para personalizar a interface do usuário.
-1. Construa o projeto.
+1. Crie o projeto.
 
 >[!NOTE]
 >
->Para fazer alterações na interface da barra de busca, edite a classe MarkableSeekBar. A classe [MarkableSeekBar](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/MarkableSeekBar.html) lida com o controle deslizante, o polegar do controle deslizante, o marcador do anúncio, os marcadores de sinalização, o intervalo de buffer e os planos de fundo do intervalo de busca.
+>Para fazer alterações na interface do usuário na barra de busca, você pode editar a classe MarkableSeekBar . A classe [MarkableSeekBar](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/MarkableSeekBar.html) manipula o controle deslizante, o polegar do controle deslizante, o marcador de anúncio, os marcadores de sinalização, o intervalo de buffer e os planos de fundo do intervalo de busca.
