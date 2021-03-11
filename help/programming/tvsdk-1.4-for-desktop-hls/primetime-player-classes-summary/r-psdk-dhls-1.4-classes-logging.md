@@ -1,21 +1,18 @@
 ---
-description: Essas classes permitem que você personalize o registro em log.
-seo-description: Essas classes permitem que você personalize o registro em log.
-seo-title: Classes de registro
+description: Essas classes permitem personalizar o registro.
 title: Classes de registro
-uuid: 947f3ec8-c5fe-4a55-b306-f338205ab4e6
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
 
 
-# Registrar classes{#logging-classes}
+# Registrando classes{#logging-classes}
 
-Essas classes permitem que você personalize o registro em log.
+Essas classes permitem personalizar o registro.
 
 Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/package-detail.html)
 
@@ -29,11 +26,11 @@ Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/BaseLogger.html" format="html" scope="external"> BaseLogger</a></span> </td> 
-   <td colname="2"> Classe. Classe de implementação básica da interface do agente de log. </td> 
+   <td colname="2"> Classe. Classe de implementação base da interface do agente de log. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/DefaultLogger.html" format="html" scope="external"> DefaultLogger</a></span> </td> 
-   <td colname="2"> Classe. O agente de log padrão envia todas as mensagens recebidas para rastreamento. </td> 
+   <td colname="2"> Classe. O logger padrão envia toda a mensagem de entrada para rastreamento. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Log.html" format="html" scope="external"> Log</a></span> </td> 
@@ -41,7 +38,7 @@ Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/LogFactory.html" format="html" scope="external"> LogFactory</a></span> </td> 
-   <td colname="2"> Classe. Fábrica de registro predefinida.</td> 
+   <td colname="2"> Classe. Fábrica de registro padrão.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a></span> </td> 
