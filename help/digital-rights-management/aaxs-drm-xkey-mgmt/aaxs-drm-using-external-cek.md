@@ -1,27 +1,24 @@
 ---
-description: Use o recurso CEK externo para vender e disponibilizar licenças usando seu CKMS existente.
-seo-description: Use o recurso CEK externo para vender e disponibilizar licenças usando seu CKMS existente.
-seo-title: Usando o CEK externo para Vend e as licenças do pacote
-title: Usando o CEK externo para Vend e as licenças do pacote
-uuid: 1bfd8c6c-4ae9-47de-8247-085b5360127d
+description: Use o recurso CEK externo para enviar e empacotar licenças usando seu CKMS existente.
+title: Usando o CEK externo para Vend e licenças de pacote
 translation-type: tm+mt
-source-git-commit: fe9493d610bc6fb97d30351c707b73cda92c67a0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
 
 
-# Usando o CEK externo para Vend e as licenças do pacote{#using-external-cek-to-vend-and-package-licenses}
+# Usando CEK externo para Vend e Licenças de pacote{#using-external-cek-to-vend-and-package-licenses}
 
-Use o recurso CEK externo para vender e disponibilizar licenças usando seu CKMS existente.
+Use o recurso CEK externo para enviar e empacotar licenças usando seu CKMS existente.
 
 ## EncryptContentWithExternalKey.java
 
-Esta é uma ferramenta de linha de comando que criptografará um vídeo pelo AAXS e criará metadados que *not* conterão o CEK (protegido pelo certificado público do servidor de licenças AAXS). Em vez disso, a ferramenta incorpora uma ID CEK nos metadados do vídeo.
+Esta é uma ferramenta de linha de comando que criptografará um vídeo pelo AAXS e criará metadados que *not* conterão o CEK (protegido por um certificado público do servidor de licenças AAXS). Em vez disso, a ferramenta incorpora uma CEK ID aos metadados do vídeo.
 
-Durante a aquisição da licença, o servidor de licença AAXS observa um sinalizador nos metadados que identifica que esse conteúdo foi protegido por meio de um CEK externo. O servidor de licenças extrairá a ID CEK dos metadados e, em seguida, fará o query de um repositório seguro/CKMS para recuperar o CEK apropriado.
+Durante a aquisição da licença, o servidor de licença AXS observa um sinalizador nos metadados que identifica que esse conteúdo foi protegido usando um CEK externo. O servidor de licenças extrairá a ID do CEK dos metadados e, em seguida, consultará um repositório seguro/CKMS para recuperar o CEK apropriado.
 
 ## Fluxo de trabalho de empacotamento
 
@@ -47,7 +44,7 @@ Durante a aquisição da licença, o servidor de licença AAXS observa um sinali
 ## Fluxo de trabalho do servidor
 
 1. Configure a implementação de referência.
-1. Se houver alguma, limpe as implantações anteriores de Implementação de referência:
+1. Se houver algum, limpe as implementações anteriores da Implementação de referência:
 
    1. `delete <tomcat>\work\Catalina\*.*`
    1. `delete <tomcat>\conf\Catalina\*.*`
@@ -55,15 +52,15 @@ Durante a aquisição da licença, o servidor de licença AAXS observa um sinali
 
 1. Verifique se há um arquivo [!DNL CEKDepot.properties] ao lado de [!DNL flashaccess-refimpl.properties]
 
-1. Iniciar uma solicitação de licença de um Adobe Primetime Player
-1. Observe os registros Ref Impl para obter algo semelhante a:
+1. Iniciar uma solicitação de licença de um Player do Adobe Primetime
+1. Observe Ref Impl logs para obter algo semelhante a:
 
    ```
    DEBUG [com.adobe.flashaccess.refimpl.web.RefImplLicenseReqHandler.REQUESTS] 
      Used CEK ID:{abc} to retrieve CEK: {abcdef0123456789} from depot
    ```
 
-   1. Talvez seja necessário alterar suas configurações de [!DNL log4j.xml] para fazer logon em um nível `DEBUG` ( `INFO` está definido por padrão)
+   1. Talvez seja necessário alterar as configurações [!DNL log4j.xml] para fazer logon em um nível `DEBUG` ( `INFO` está definido por padrão)
 
 ## Problemas conhecidos
 
