@@ -1,13 +1,10 @@
 ---
 description: Essas classes fornecem a interface entre o TVSDK e o Adobe Video Analytics.
-seo-description: Essas classes fornecem a interface entre o TVSDK e o Adobe Video Analytics.
-seo-title: Classes do Video Analytics
 title: Classes do Video Analytics
-uuid: ec66dea3-47ae-4c80-a2cb-b1c7cce1b94f
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -21,6 +18,6 @@ Pacote: [com.adobe.mediacore.videoanalytics](https://help.adobe.com/en_US/primet
 
 | Nome | Descrição |
 |---|---|
-| [VideoAnalyticsConfigParameters](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsConfigParameters.html) | Contém metadados de propriedade específicos do rastreamento do Video Analytics no TVSDK. |
+| [VideoAnalyticsConfigParameters](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsConfigParameters.html) | Contém metadados de propriedade específicos para rastreamento do Video Analytics no TVSDK. |
 | [VideoAnalyticsProvider](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsProvider.html) | Anexa a instância `MediaPlayer` ao módulo VideoHeartbeat para rastrear a reprodução. |
 | [VideoAnalyticsMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsMetadata.html) | Contém metadados de propriedade específicos do Video Analytics. |
