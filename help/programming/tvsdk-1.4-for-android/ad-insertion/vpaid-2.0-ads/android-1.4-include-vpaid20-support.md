@@ -1,25 +1,22 @@
 ---
-description: Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
-seo-description: Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
-seo-title: Implementação da integração com VPAID 2.0
-title: Implementação da integração com VPAID 2.0
-uuid: 7d11ffd8-240c-4a95-94e6-ff4417c8942e
+description: Para adicionar suporte ao VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
+title: Implementar a integração com o VPAID 2.0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '65'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
 
-# Implementação da integração com VPAID 2.0{#implement-vpaid-integration}
+# Implementar a integração do VPAID 2.0{#implement-vpaid-integration}
 
-Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
+Para adicionar suporte ao VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
 
-Para adicionar suporte a VPAID 2.0:
+Para adicionar suporte ao VPAID 2.0:
 
-1. Adicione a visualização de anúncio personalizada à interface do player.
+1. Adicione a visualização de anúncio personalizada à interface do reprodutor.
 
    ```java
    _playerFrame.addView(mediaPlayer.createCustomAdView());
