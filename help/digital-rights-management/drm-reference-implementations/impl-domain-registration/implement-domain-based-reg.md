@@ -1,9 +1,9 @@
 ---
-seo-title: Implementar o registro de domínio baseado em identidade
-title: Implementar o registro de domínio baseado em identidade
-uuid: 4a71b2e0-d1a2-4d63-9cbd-980a292774ab
+title: Implementar o registro de domínio baseado na identidade
+description: Implementar o registro de domínio baseado na identidade
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
    policy.domain.url=https://[server:port] 
    ```
 
-1. Torne a autenticação obrigatória com um nome de usuário e senha.
+1. Torne a autenticação obrigatória com nome de usuário e senha.
 
    No arquivo [!DNL .properties], defina:
 
