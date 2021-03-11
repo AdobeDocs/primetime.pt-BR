@@ -1,13 +1,10 @@
 ---
-description: Quando o TVSDK do navegador solicita um anúncio que não está em seu servidor de publicidade primário, o player precisa solicitar o anúncio do servidor secundário. O VAST (Video Ad Serving Template) define o padrão de comunicação entre servidores de anúncios e players de vídeo e é a resposta enviada pelo servidor de anúncios secundário quando o anúncio é solicitado.
-seo-description: Quando o TVSDK do navegador solicita um anúncio que não está em seu servidor de publicidade primário, o player precisa solicitar o anúncio do servidor secundário. O VAST (Video Ad Serving Template) define o padrão de comunicação entre servidores de anúncios e players de vídeo e é a resposta enviada pelo servidor de anúncios secundário quando o anúncio é solicitado.
-seo-title: Anúncios VAST
+description: Quando o TVSDK do navegador solicita um anúncio que não esteja no servidor de anúncios principal, o reprodutor precisa solicitar o anúncio do servidor secundário. O VAST (Video Ad Serving Template) define o padrão de comunicação entre servidores de anúncios e reprodutores de vídeo e é a resposta enviada pelo servidor de anúncio secundário quando o anúncio é solicitado.
 title: Anúncios VAST
-uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -15,17 +12,17 @@ ht-degree: 0%
 
 # Anúncios VAST {#vast-ads}
 
-Quando o TVSDK do navegador solicita um anúncio que não está em seu servidor de publicidade primário, o player precisa solicitar o anúncio do servidor secundário. O VAST (Video Ad Serving Template) define o padrão de comunicação entre servidores de anúncios e players de vídeo e é a resposta enviada pelo servidor de anúncios secundário quando o anúncio é solicitado.
+Quando o TVSDK do navegador solicita um anúncio que não esteja no servidor de anúncios principal, o reprodutor precisa solicitar o anúncio do servidor secundário. O VAST (Video Ad Serving Template) define o padrão de comunicação entre servidores de anúncios e reprodutores de vídeo e é a resposta enviada pelo servidor de anúncio secundário quando o anúncio é solicitado.
 
-Para obter mais informações sobre o VAST, consulte [Modelo de disponibilização de anúncio de vídeo digital (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
+Para obter mais informações sobre VAST, consulte [Modelo de veiculação de anúncio de vídeo digital (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
-O TVSDK do navegador suporta os seguintes elementos de anúncio VAST:
+O TVSDK do navegador é compatível com os seguintes elementos de anúncio VAST:
 
-## Anúncios em linha e no invólucro {#section_11B8A1A8F52F4F77981C6AAC02185087}
+## Anúncios em linha e do invólucro {#section_11B8A1A8F52F4F77981C6AAC02185087}
 
-Os seguintes elementos são suportados:
+Os seguintes elementos são compatíveis:
 
-* **`wrapper`** Quando o player precisar entrar em contato com um servidor de anúncios secundário para solicitar um anúncio, o elemento wrapper fornecerá as informações de redirecionamento. Um elemento de invólucro pode apontar para vários invólucros que, em última análise, apontam para um anúncio VAST.
+* **`wrapper`** Quando o reprodutor precisa entrar em contato com um servidor de publicidade secundário para solicitar um anúncio, o elemento wrapper fornece as informações de redirecionamento. Um elemento wrapper pode apontar para vários wrappers que apontam para um anúncio VAST.
 
 * **`inline`** Os seguintes elementos obrigatórios são suportados:
 
@@ -33,24 +30,24 @@ Os seguintes elementos são suportados:
 * `AdTitle`
 * `Impression`
 
-   Os seguintes elementos opcionais são suportados:
+   Os seguintes elementos opcionais são compatíveis:
 
 * `Description`
 * `Survey`
 * `Error`
 
-## Creative {#section_0121F948CB074E49A8132D202786CAA4}
+## Criações {#section_0121F948CB074E49A8132D202786CAA4}
 
-Este elemento é um arquivo que faz parte de um anúncio VAST e contém um elemento `creative` que pode suportar um anúncio linear, um anúncio não linear ou um anúncio complementar. No elemento `creative`, os elementos `id`, `sequence` e `adId` são suportados.
+Esse elemento é um arquivo que faz parte de um anúncio VAST e contém um elemento `creative` que pode suportar um anúncio linear, um anúncio não linear ou um anúncio complementar. No elemento `creative`, os elementos `id`, `sequence` e `adId` são compatíveis.
 
 Estas são mais informações sobre os tipos de anúncios:
 
-* **** Anúncios linearesOs seguintes elementos são suportados:
+* **** Anúncios linearesOs seguintes elementos são compatíveis:
 
-   * `TrackingEvent`, que contém o  `Tracking` elemento.
+   * `TrackingEvent`, que contém o  `Tracking` elemento .
       * `Duration`
       * `AdParameters`
-      * `VideoClicks`, incluindo:
+      * `VideoClicks`, incluindo o seguinte:
 
       * `ClickThrough`
       * `ClickTracking`
@@ -64,7 +61,7 @@ Estas são mais informações sobre os tipos de anúncios:
          >
          >Neste elemento, os atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework` e `type` são suportados.
 
-* **Anúncios não lineares** Os seguintes elementos são suportados:
+* **** Anúncios não linearesOs seguintes elementos são compatíveis:
 
    * `Non-linear`
 
@@ -78,7 +75,7 @@ Estas são mais informações sobre os tipos de anúncios:
       * `NonLinearClickThrough`
       * `AdParameters`
 
-* **Anúncios** complementaresOs seguintes elementos são suportados:
+* **** Anúncios complementaresOs seguintes elementos são compatíveis:
 
    * `Companion`
 
