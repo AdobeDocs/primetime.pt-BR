@@ -1,27 +1,24 @@
 ---
 description: A solicitação de direito e a resposta são passadas por uma conexão SSL mutuamente autenticada entre o servidor de licença e o serviço de direito do cliente.
-seo-description: A solicitação de direito e a resposta são passadas por uma conexão SSL mutuamente autenticada entre o servidor de licença e o serviço de direito do cliente.
-seo-title: API pública do SEES
-title: API pública do SEES
-uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
+title: API pública SEES
 translation-type: tm+mt
-source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
 
-# API pública do SEES {#sees-public-api}
+# API pública SEES {#sees-public-api}
 
 A solicitação de direito e a resposta são passadas por uma conexão SSL mutuamente autenticada entre o servidor de licença e o serviço de direito do cliente.
 
-O esquema URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) é usado para definir o ponto final de direito, e o método de solicitação POST HTTP ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) é usado para a solicitação. O endpoint de direito, bem como um sinalizador que indica o direito de back-end, é obrigatório e deve ser incluído na política no momento do empacotamento.
+O esquema URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) é usado para definir o endpoint de direito, e o método de solicitação POST HTTP ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) é usado para a solicitação. O endpoint de direito, bem como um sinalizador que indica o direito ao back-end, é necessário e deve ser incluído na política no momento do empacotamento.
 
 ## Solicitação de direito {#section_BFBFEF0795CA46D6842C479256B95F95}
 
-O corpo da solicitação de direito será um objeto JSON definido como mostrado abaixo.
+O corpo da solicitação de direito será um objeto JSON definido conforme mostrado abaixo.
 
 **Definição de objeto de solicitação de direito JSON**
 
