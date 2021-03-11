@@ -1,13 +1,10 @@
 ---
-description: A classe do utilitário TimeRangeCollection abstrai a noção de uma coleção ordenada de especificações TimeRange e fornece serviços para se traduzir em uma instância Metadata.
-seo-description: A classe do utilitário TimeRangeCollection abstrai a noção de uma coleção ordenada de especificações TimeRange e fornece serviços para se traduzir em uma instância Metadata.
-seo-title: classe TimeRangeCollection
-title: classe TimeRangeCollection
-uuid: 5705dc9d-4325-44b0-b5aa-196d09c3a67e
+description: A classe de utilitário TimeRangeCollection abstrai a noção de uma coleção ordenada de especificações TimeRange e fornece serviços para se traduzir em uma instância de Metadados.
+title: Classe TimeRangeCollection
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Classe TimeRangeCollection{#timerangecollection-class}
 
-A classe do utilitário TimeRangeCollection abstrai a noção de uma coleção ordenada de especificações TimeRange e fornece serviços para se traduzir em uma instância Metadata.
+A classe de utilitário TimeRangeCollection abstrai a noção de uma coleção ordenada de especificações TimeRange e fornece serviços para se traduzir em uma instância de Metadados.
 
 <!--<a id="section_D87AA7BC628D458DAB12D5247AD34B41"></a>-->
 
@@ -35,4 +32,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-O parâmetro `type`, que é o primeiro parâmetro posicional na assinatura dos métodos do construtor, é uma instância da lista discriminada `TimeRangeCollection#Type`. Isso faz parte da classe `TimeRangeCollection`. Os valores atualmente definidos por essa lista discriminada são `MARK_RANGES`, `DELETE_RANGES` e `REPLACE_RANGES`. Você pode criar `TimeRangeCollection` objetos usando esses três tipos.
+O parâmetro `type`, que é o primeiro parâmetro posicional na assinatura dos métodos do construtor, é uma instância da enumeração `TimeRangeCollection#Type`. Isso faz parte da classe `TimeRangeCollection`. Os valores atualmente definidos por essa enumeração são `MARK_RANGES`, `DELETE_RANGES` e `REPLACE_RANGES`. Você pode criar objetos `TimeRangeCollection` usando esses três tipos.
