@@ -1,81 +1,78 @@
 ---
 description: Você pode configurar o player para rastrear e analisar o uso do vídeo.
-seo-description: Você pode configurar o player para rastrear e analisar o uso do vídeo.
-seo-title: Inicializar e configurar a análise de vídeo
-title: Inicializar e configurar a análise de vídeo
-uuid: 4a582b35-ae92-4557-806d-e174fc878cc5
+title: Inicializar e configurar análises de vídeo
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
 
-# Inicializar e configurar a análise de vídeo {#initialize-and-configure-video-analytics}
+# Inicializar e configurar análises de vídeo {#initialize-and-configure-video-analytics}
 
 Você pode configurar o player para rastrear e analisar o uso do vídeo.
 
 Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se você tem o seguinte:
 
-* Informações de inicialização do TVSDK de configuração/navegador - Entre em contato com seu representante de Adobe para obter informações específicas sobre sua conta de rastreamento de vídeo:
+* Informações de inicialização do TVSDK de configuração/navegador - Entre em contato com o representante do Adobe para obter as informações específicas da conta de rastreamento de vídeo:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84">
  <tbody>
   <tr>
    <td colname="col1"> Ponto de extremidade do servidor de rastreamento do AppMeasurement </td>
-   <td colname="col2"> O URL do ponto final da coleção back-end do Adobe Analytics (antigo SiteCatalyst). </td>
+   <td colname="col2"> O URL do ponto de extremidade da coleção de back-end do Adobe Analytics (antigo SiteCatalyst). </td>
   </tr>
   <tr>
-   <td colname="col1"> Ponto de extremidade do servidor de rastreamento de análise de vídeo </td>
-   <td colname="col2"> O URL do ponto final da coleção de back-end de análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  A URL do servidor de rastreamento de visitantes é a mesma do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o serviço de ID de Visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementar o serviço de ID </a>. </p> </td>
+   <td colname="col1"> Ponto de extremidade do servidor de rastreamento do Video Analytics </td>
+   <td colname="col2"> O URL do ponto de extremidade da coleção de back-end da análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  O URL do servidor de rastreamento do visitante é o mesmo do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o Serviço de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementar o Serviço de ID </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Nome da conta </td>
-   <td colname="col2"> Também conhecido como ID do conjunto de relatórios (RSID). </td>
+   <td colname="col2"> Também conhecida como ID do conjunto de relatórios (RSID). </td>
   </tr>
   <tr>
    <td colname="col1"> ID da organização do Marketing Cloud </td>
-   <td colname="col2"> Um valor de string necessário para instanciar o componente de Visitante. </td>
+   <td colname="col2"> Um valor da string necessário para instanciar o componente Visitante. </td>
   </tr>
   <tr>
-   <td colname="col1"> Ponto de extremidade do servidor de rastreamento de visitantes </td>
-   <td colname="col2"> O URL do terminal back-end que fornece um identificador exclusivo para o visualizador de vídeo atual. </td>
+   <td colname="col1"> Ponto de extremidade do servidor de rastreamento do visitante </td>
+   <td colname="col2"> O URL do endpoint de back-end que fornece um identificador exclusivo para o visualizador de vídeo atual. </td>
   </tr>
   <tr>
    <td colname="col1"> Editor </td>
-   <td colname="col2"> Esta é a Publisher ID, que é fornecida aos clientes pelo representante do Adobe. <p>Dica:  Essa ID não é apenas uma string com o nome da marca/televisão. </p> </td>
+   <td colname="col2"> Esta é a Publisher ID, fornecida aos clientes pelo representante do Adobe. <p>Dica:  Essa ID não é apenas uma string com o nome da marca/televisão. </p> </td>
   </tr>
  </tbody>
 </table>
 
 Para configurar o rastreamento de vídeo no player:
 
-1. Instanciar e configurar a biblioteca VisitorAPI.
+1. Exemplifique e configure a biblioteca VisitorAPI .
 
        Lembre-se das seguintes informações:
    
-   * A instanciação requer um parâmetro de entrada da ID da organização do Marketing Cloud fornecido pelo Adobe.
+   * A instanciação requer um parâmetro de entrada de ID da organização do Marketing Cloud fornecido pelo Adobe.
 
       Este é um valor de string.
-   * A única opção de configuração para a biblioteca VisitorAPI é o URL do terminal back-end que fornece o identificador exclusivo para o usuário atual.
-   * A URL do servidor de rastreamento de visitantes é a mesma do servidor de rastreamento do Analytics.
+   * A única opção de configuração da biblioteca VisitorAPI é o URL do endpoint de back-end que fornece o identificador exclusivo para o usuário atual.
+   * O URL do servidor de rastreamento do visitante é o mesmo do servidor de rastreamento do Analytics.
 
-      Para obter informações sobre como implementar o serviço de ID de Visitante, consulte [Implementação do serviço de ID de Visitante](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
+      Para obter informações sobre como implementar o Serviço de ID de visitante, consulte [Implementação do Serviço de ID de visitante](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
    _visitor.trackingServer = "URL_OF_THE_VISITOR_TRACKER_SERVER”;
    ```
 
-2. Instanciar e configurar o componente AppMeasurement.
+2. Exemplifique e configure o componente AppMeasurement.
 
-   A instância do AppMeasurement tem muitas opções de configuração. Para obter mais informações, acesse a documentação do [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer). As opções no código de amostra a seguir ( `account`, `visitorNamespace` e `trackingServer`) são necessárias e os valores são fornecidos por Adobe.
+   A instância AppMeasurement tem muitas opções de configuração. Para obter mais informações, acesse a documentação do [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer). As opções no código de amostra a seguir ( `account`, `visitorNamespace` e `trackingServer`) são necessárias e os valores são fornecidos por Adobe.
 
    >[!IMPORTANT]
    >
-   >É necessário garantir que a cadeia de dependência esteja configurada corretamente. A instância do AppMeasurement agregação (depende) o componente da API do Visitante.
+   >Você deve garantir que a cadeia de dependência esteja configurada corretamente. A instância do AppMeasurement agrega (depende) o componente da API do visitante.
 
    ```js
    var appMeasurement = new AppMeasurement();
@@ -89,16 +86,16 @@ Para configurar o rastreamento de vídeo no player:
 
    >[!IMPORTANT]
    >
-   >No seu aplicativo, verifique se `appMeasurementObject.visitor` está preenchido antes de iniciar o fluxo de análise de vídeo, ou você pode não obter resultados de rastreamento. Esses resultados são indicados pelas mensagens no seu log. Você pode adicionar uma chamada de rastreamento vazia ( `appMeasurementObject.track`), pesquisar a propriedade `visitor` até que ela seja preenchida e iniciar a análise de vídeo.
+   >No seu aplicativo, verifique se `appMeasurementObject.visitor` está preenchido antes de iniciar o fluxo de análise de vídeo, ou talvez você não obtenha resultados de rastreamento. Esses resultados são indicados pelas mensagens no seu log. Você pode adicionar uma chamada de rastreamento vazia ( `appMeasurementObject.track`), pesquisar a propriedade `visitor` até que ela seja preenchida e iniciar a análise de vídeo.
 
-3. Inicialize e configure os metadados de rastreamento de pulsação de vídeo.
+3. Inicialize e configure os metadados de rastreamento da pulsação de vídeo.
 
    >[!IMPORTANT]
    >
-   >Você pode interromper o fluxo médio do módulo de análise de vídeo e reinicializá-lo novamente, conforme necessário. Antes de reinicializar o módulo, verifique se os metadados de análise de vídeo também estão atualizados para os metadados de conteúdo corretos. Para recriar os metadados, repita as subetapas 1 e 2.
+   >Você pode interromper o midstream do módulo de análise de vídeo e reinicializá-lo novamente, conforme necessário. Antes de reinicializar o módulo, verifique se os metadados de análise de vídeo também são atualizados para os metadados de conteúdo corretos. Para recriar os metadados, repita as subetapas 1 e 2.
 
    1. Crie uma instância dos metadados do Video Analytics.
-Esta instância contém todas as informações de configuração necessárias para habilitar o rastreamento de pulsação de vídeo. Por exemplo:
+Essa instância contém todas as informações de configuração necessárias para ativar o rastreamento de pulsação de vídeo. Por exemplo:
 
       ```js
       function getVideoAnalyticsMetadata() {
@@ -117,11 +114,11 @@ Esta instância contém todas as informações de configuração necessárias pa
       }
       ```
 
-   2. Depois de criar uma instância do player de mídia, crie uma instância do rastreador do Video Analytics e forneça uma referência à instância do player de mídia.
+   2. Depois de criar uma instância do reprodutor de mídia, crie uma instância do rastreador do Video Analytics e forneça uma referência para a instância do reprodutor de mídia.
 Lembre-se do seguinte:
 
-      * Sempre crie uma nova instância do rastreador para cada sessão de reprodução de conteúdo e remova a referência anterior (após desanexar a instância do player de mídia).
-      * Os metadados criados na sub-etapa 1 devem ser fornecidos no construtor do Controlador do Video Analytics.
+      * Sempre crie uma nova instância do rastreador para cada sessão de reprodução do conteúdo e remova a referência anterior (após desanexar a instância do reprodutor de mídia).
+      * Os metadados criados na subetapa 1 devem ser fornecidos no construtor do Video Analytics Tracker.
 
          ```js
          var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
@@ -136,8 +133,8 @@ Antes de iniciar uma nova sessão de reprodução de conteúdo, destrua a instâ
           videoAnalyticsProvider.detachMediaPlayer();
           videoAnalyticsProvider = null;
       ```
-   4. Marque manualmente o fluxo ao vivo/linear como concluído.
-Se você tiver vários episódios em um fluxo ao vivo, é possível marcar manualmente um episódio como concluído usando a API completa. Isso encerra a sessão de rastreamento de vídeo para o episódio de vídeo atual e você pode start uma nova sessão de rastreamento para o próximo episódio.
+   4. Marca manualmente o fluxo Live/Linear como concluído.
+Se você tiver vários episódios em um stream ao vivo, é possível marcar manualmente um episódio como concluído usando a API completa. Isso encerra a sessão de rastreamento de vídeo do episódio atual e você pode iniciar uma nova sessão de rastreamento do próximo episódio.
       >[!TIP]
       >
       >Essa API é opcional e não é necessária para o rastreamento de vídeo VOD.
