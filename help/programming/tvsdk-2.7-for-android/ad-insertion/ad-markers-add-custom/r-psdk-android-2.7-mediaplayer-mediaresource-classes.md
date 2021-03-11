@@ -1,13 +1,10 @@
 ---
-description: Um MediaResource representa o conteúdo que está prestes a ser carregado pela instância do MediaPlayer.
-seo-description: Um MediaResource representa o conteúdo que está prestes a ser carregado pela instância do MediaPlayer.
-seo-title: Classes MediaPlayer e MediaResource
+description: Um MediaResource representa o conteúdo que está prestes a ser carregado pela instância MediaPlayer.
 title: Classes MediaPlayer e MediaResource
-uuid: dcc747d2-8340-45e3-8cdb-a79d4f9360dc
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 0%
 
 # Classes MediaPlayer e MediaResource {#mediaplayer-and-mediaresource-classes}
 
-Um MediaResource representa o conteúdo que está prestes a ser carregado pela instância do MediaPlayer.
+Um MediaResource representa o conteúdo que está prestes a ser carregado pela instância MediaPlayer.
 
 <!--<a id="section_431AB7221E0249BF949EC72EEB9B428A"></a>-->
 
-O TVSDK fornece os meios de carregar e preparar o conteúdo para reprodução usando o método `replaceCurrentResource` em `MediaPlayer`. Esse método utiliza dois argumentos, uma instância de `MediaPlayerResource` e, opcionalmente, uma instância de `MediaPlayerItemConfig`, que você pode usar para passar parâmetros personalizados definidos pelo aplicativo.
+O TVSDK fornece os meios de carregar e preparar o conteúdo para reprodução usando o método `replaceCurrentResource` em `MediaPlayer`. Esse método utiliza dois argumentos, uma instância de `MediaPlayerResource` e, opcionalmente, uma instância de `MediaPlayerItemConfig`, que pode ser usada para transmitir parâmetros personalizados definidos pelo aplicativo.
 
-* Para obter mais detalhes, consulte mediaplayer-re-or-remove .
-* Para obter detalhes de `MediaPlayerResource`, consulte media-resource-create
+* Para obter mais detalhes, consulte mediaplayer-reuse-or-remove .
+* Para obter detalhes de `MediaPlayerResource`, consulte criar recursos de mídia
 
