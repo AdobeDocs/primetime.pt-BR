@@ -1,28 +1,25 @@
 ---
-description: Você pode selecionar uma faixa de uma lista de faixas de legenda disponíveis no momento. Isso se torna a faixa atual, que é exibida quando a visibilidade está ativada. Algumas trilhas podem não estar disponíveis inicialmente, portanto, observe o evento que indica que mais se tornaram disponíveis.
-seo-description: Você pode selecionar uma faixa de uma lista de faixas de legenda disponíveis no momento. Isso se torna a faixa atual, que é exibida quando a visibilidade está ativada. Algumas trilhas podem não estar disponíveis inicialmente, portanto, observe o evento que indica que mais se tornaram disponíveis.
-seo-title: Selecionar uma faixa de legenda atual entre as faixas disponíveis
-title: Selecionar uma faixa de legenda atual entre as faixas disponíveis
-uuid: ee2bda5e-e398-4d09-bc5c-5a6adbf5f603
+description: Você pode selecionar um rastreamento de uma lista de faixas de legendas ocultas disponíveis no momento. Isso se torna a faixa atual, que é exibida quando a visibilidade está ativada. Algumas faixas podem não estar disponíveis inicialmente, portanto, escute o evento que indica que mais se tornaram disponíveis.
+title: Selecionar uma faixa de legenda atual dentre as faixas disponíveis
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 1%
+source-wordcount: '198'
+ht-degree: 2%
 
 ---
 
 
 # Selecionar uma faixa de legenda atual entre as faixas disponíveis {#select-a-current-caption-track-from-among-available-tracks}
 
-Você pode selecionar uma faixa de uma lista de faixas de legenda disponíveis no momento. Isso se torna a faixa atual, que é exibida quando a visibilidade está ativada. Algumas trilhas podem não estar disponíveis inicialmente, portanto, observe o evento que indica que mais se tornaram disponíveis.
+Você pode selecionar um rastreamento de uma lista de faixas de legendas ocultas disponíveis no momento. Isso se torna a faixa atual, que é exibida quando a visibilidade está ativada. Algumas faixas podem não estar disponíveis inicialmente, portanto, escute o evento que indica que mais se tornaram disponíveis.
 
-1. Aguarde até que o player de mídia tenha pelo menos o status `PREPARED`.
+1. Aguarde até que o reprodutor de mídia tenha pelo menos o status `PREPARED` .
 1. Analise estes eventos:
 
-   * `MediaPlayerEvent.STATUS_CHANGED` com status  `MediaPlayerStatus.INITIALIZED`: A lista inicial das faixas de legenda fechada está disponível.
+   * `MediaPlayerEvent.STATUS_CHANGED` com status  `MediaPlayerStatus.INITIALIZED`: A lista inicial de faixas de legendas ocultas está disponível.
 
-1. Obtenha uma lista de todas as faixas de legenda disponíveis no momento.
+1. Obtenha uma lista de todas as faixas de legendas ocultas atualmente disponíveis.
 
    Por exemplo:
 
@@ -46,6 +43,6 @@ Você pode selecionar uma faixa de uma lista de faixas de legenda disponíveis n
    }
    ```
 
-1. Implemente um ouvinte para o evento que indica que há mais trilhas disponíveis. Quando o TVSDK despachar o evento, recupere a lista atual das faixas disponíveis.
+1. Implemente um ouvinte para o evento que indica que mais rastreamentos estão disponíveis. Quando o TVSDK despachar o evento, recupere a lista atual de rastreamentos disponíveis.
 
    Recupere a lista sempre que o evento ocorrer para garantir que você sempre tenha a lista mais atual.
