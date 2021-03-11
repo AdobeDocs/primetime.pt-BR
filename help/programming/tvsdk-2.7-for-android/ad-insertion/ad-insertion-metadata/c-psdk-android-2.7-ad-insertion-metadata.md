@@ -1,13 +1,10 @@
 ---
-description: Para permitir que o resolvedor de anúncios funcione, os provedores de anúncios, como a tomada de decisões de anúncios da Adobe Primetime, exigem valores de configuração para permitir a conexão com o provedor.
-seo-description: Para permitir que o resolvedor de anúncios funcione, os provedores de anúncios, como a tomada de decisões de anúncios da Adobe Primetime, exigem valores de configuração para permitir a conexão com o provedor.
-seo-title: Metadados de inserção de anúncio
-title: Metadados de inserção de anúncio
-uuid: ee4dd8b8-4c41-4f01-be50-60f4c7dc962d
+description: Para permitir que o resolvedor de anúncios funcione, os provedores de anúncios, como o Adobe Primetime ad decisioning, exigem valores de configuração para habilitar sua conexão com o provedor.
+title: Metadados de inserção do anúncio
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -15,19 +12,19 @@ ht-degree: 0%
 
 # Visão geral {#ad-insertion-metadata-overview}
 
-Para permitir que o resolvedor de anúncios funcione, os provedores de anúncios, como a tomada de decisões de anúncios da Adobe Primetime, exigem valores de configuração para permitir a conexão com o provedor.
+Para permitir que o resolvedor de anúncios funcione, os provedores de anúncios, como o Adobe Primetime ad decisioning, exigem valores de configuração para habilitar sua conexão com o provedor.
 
-O TVSDK inclui a biblioteca de decisão do anúncio Primetime. Para que seu conteúdo inclua anúncios do servidor de decisão do Primetime ad, seu aplicativo deve fornecer as seguintes informações `AuditudeSettings` necessárias:
+O TVSDK inclui a biblioteca de decisão do anúncio do Primetime. Para que seu conteúdo inclua publicidade do Primetime ad decisioningserver, seu aplicativo deve fornecer as seguintes informações `AuditudeSettings` necessárias:
 
-* `mediaID`, que é um identificador exclusivo para o vídeo a ser reproduzido.
+* `mediaID`, que é um identificador exclusivo para a reprodução do vídeo.
 
-   O editor atribui a mediaID ao enviar conteúdo de vídeo e informações de anúncios ao servidor de decisão de publicidade da Adobe Primetime. Essa ID é usada pela decisão do anúncio Primetime para recuperar informações relacionadas ao anúncio do vídeo do servidor.
+   O editor atribui a mediaID ao enviar o conteúdo de vídeo e as informações do anúncio para o servidor de decisão do anúncio do Adobe Primetime. Essa ID é usada pelo Primetime ad Decisioning para recuperar informações de publicidade relacionadas ao vídeo do servidor.
 
 * (Opcional) `defaultMediaId`, que especifica os anúncios que são veiculados quando as seguintes condições são atendidas:
 
    * Sua solicitação para o servidor de publicidade é inválida ou o conteúdo está configurado incorretamente.
-   * A decisão do Primetime ad está sofrendo atrasos na propagação dos dados.
-   * Um dos processos de back-end de decisão do anúncio Primetime está funcionando incorretamente ou indisponível.
+   * A decisão do anúncio do Primetime está enfrentando atrasos na propagação de dados.
+   * Um dos processos de back-end de decisão do Primetime ad está com mau funcionamento ou não está disponível.
 
    >[!TIP]
    >
@@ -37,4 +34,4 @@ O TVSDK inclui a biblioteca de decisão do anúncio Primetime. Para que seu cont
 * O domínio do servidor de publicidade atribuído.
 * Outros parâmetros de definição de metas.
 
-   Você pode incluir esses parâmetros, dependendo de suas necessidades e das necessidades do provedor de publicidade.
+   Você pode incluir esses parâmetros dependendo das suas necessidades e das necessidades do provedor de anúncios.
