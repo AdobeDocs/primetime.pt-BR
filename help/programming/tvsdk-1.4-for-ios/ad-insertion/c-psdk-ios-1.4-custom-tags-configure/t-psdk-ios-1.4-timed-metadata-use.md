@@ -1,25 +1,22 @@
 ---
-description: Você pode usar TimedMetadata quando o tempo de reprodução atual corresponder ao tempo do start.
-seo-description: Você pode usar TimedMetadata quando o tempo de reprodução atual corresponder ao tempo do start.
-seo-title: Usar metadados cronometrados
+description: Você pode usar TimedMetadata quando a hora de reprodução atual corresponde à hora de início.
 title: Usar metadados cronometrados
-uuid: 9bbdaefa-4ac5-4e08-92b4-15ebe5c46864
 translation-type: tm+mt
-source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '100'
+ht-degree: 2%
 
 ---
 
 
 # Usar metadados cronometrados{#use-timed-metadata}
 
-Você pode usar TimedMetadata quando o tempo de reprodução atual corresponder ao tempo do start.
+Você pode usar TimedMetadata quando a hora de reprodução atual corresponde à hora de início.
 
-Para usar esses objetos salvos `PTTimedMetadata` durante a reprodução, use o dicionário salvo de [Armazenar objetos de metadados cronometrados conforme são despachados](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
+Para usar esses objetos `PTTimedMetadata` salvos durante a reprodução, use o dicionário salvo de [Armazenar objetos de metadados cronometrados, pois são despachados](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-1. Extraia e atualize o tempo de reprodução atual desta notificação e localize todos os objetos `PTTimedMetadata` com as horas de start que correspondem ao tempo de reprodução atual.
+1. Extraia e atualize o tempo de reprodução atual a partir dessa notificação e localize todos os objetos `PTTimedMetadata` com horários de início que correspondam ao tempo de reprodução atual.
 
    É possível usar esses objetos para concluir várias ações.
 
