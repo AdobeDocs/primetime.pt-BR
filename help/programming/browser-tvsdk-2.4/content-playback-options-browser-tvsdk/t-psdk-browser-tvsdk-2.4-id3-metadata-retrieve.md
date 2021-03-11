@@ -1,13 +1,10 @@
 ---
-description: As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK do navegador detecta tags ID3 no nível de segmento do fluxo de transporte (TS) nos fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag .
-seo-description: As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK do navegador detecta tags ID3 no nível de segmento do fluxo de transporte (TS) nos fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag .
-seo-title: Tags ID3
+description: As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK do navegador detecta tags ID3 no nível de segmento do fluxo de transporte (TS) em fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag .
 title: Tags ID3
-uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Tags ID3{#id-tags}
 
-As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK do navegador detecta tags ID3 no nível de segmento do fluxo de transporte (TS) nos fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag .
+As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK do navegador detecta tags ID3 no nível de segmento do fluxo de transporte (TS) em fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag .
 
-Quando um novo metadados ID3 é encontrado no fluxo HLS subjacente, o TVSDK do navegador aciona um evento `AdobePSDK.TimedMetadataEvent`.
+Quando um novo metadados ID3 é encontrado no fluxo HLS subjacente, o TVSDK do navegador aciona um evento `AdobePSDK.TimedMetadataEvent` .
 
 O objeto `TimedMetadata` para ID3 tem as seguintes propriedades:
 
@@ -35,7 +32,7 @@ O objeto `TimedMetadata` para ID3 tem as seguintes propriedades:
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> time  </span> </p> </td> 
-   <td colname="col2"> <p> A hora do player em que os metadados cronometrados foram detectados. </p> </td> 
+   <td colname="col2"> <p> A hora do reprodutor em que os metadados cronometrados foram detectados. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> id  </span> </p> </td> 
@@ -47,20 +44,20 @@ O objeto `TimedMetadata` para ID3 tem as seguintes propriedades:
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> conteúdo  </span> </p> </td> 
-   <td colname="col2"> <p>O conteúdo de metadados cronometrados. Para tags ID3, esse valor representa a matriz de bytes serializados. </p> </td> 
+   <td colname="col2"> <p>O conteúdo dos metadados cronometrados. Para tags ID3, esse valor representa a matriz de bytes serializada. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> metadados  </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> As informações  </span> processadas por TimedMetadata, que é uma instância do  <span class="codeph"> AdobePSDK.Metadata  </span> onde os quadros ID3 são armazenados. </p> <p> <p>Observação:  Para a tag Safari <span class="codeph"> video </span>, os dados de quadro específicos da tag ID3 são expostos na forma de objeto por meio de um objeto <span class="codeph"> AdobePSDK.Metadata </span> enquanto para outros navegadores, os dados de quadro da tag ID3 são expostos na forma de uma matriz de bytes por meio do objeto <span class="codeph"> AdobePSDK.Metadata </span>. </p> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> TimedMetadata  </span> processou informações, que é uma instância do  <span class="codeph"> AdobePSDK.Metadata  </span> onde os quadros ID3 são armazenados. </p> <p> <p>Observação:  Para a tag <span class="codeph"> de vídeo </span> do Safari, os dados de quadro específicos da tag ID3 são expostos na forma de objeto por meio de um objeto <span class="codeph"> AdobePSDK.Metadata </span> enquanto para outros navegadores, os dados de quadro da tag ID3 são expostos na forma de uma matriz de bytes por meio de <span class="codeph"> objeto AdobePSDK.Metadata </span>. </p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 &#x200B;
 
-As várias tags ID3 armazenadas em `TimedMetadata` podem ser recuperadas pelo aplicativo das duas maneiras a seguir:
+As várias tags ID3 armazenadas em `TimedMetadata` podem ser recuperadas pelo aplicativo das seguintes duas maneiras:
 
-* No ouvinte de eventos AdobePSDK.PSDKEEventType.TIMED_METADATA_AVAILABLE.
+* No ouvinte de evento AdobePSDK.PSDKEEventType.TIMED_METADATA_AVAILABLE.
 
    ```
    var isSafari = function () { 
@@ -117,7 +114,7 @@ As várias tags ID3 armazenadas em `TimedMetadata` podem ser recuperadas pelo ap
    }); 
    ```
 
-* Usando a propriedade `MediaPlayerItem` de `timedMetadata`.
+* Uso da propriedade `MediaPlayerItem` de `timedMetadata`.
 
    ```
    var isSafari = function () { 
