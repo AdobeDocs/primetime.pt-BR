@@ -1,25 +1,22 @@
 ---
 description: O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
-seo-description: O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
-seo-title: Implementar gerenciamento de blecaute
-title: Implementar gerenciamento de blecaute
-uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
+title: Implementar o gerenciamento de blecaute
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
 
-# Implementar a manipulação de blecautes{#implement-blackout-handling}
+# Implementar o tratamento de blecaute{#implement-blackout-handling}
 
 O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
 
-Para implementar o tratamento de blecaute, incluindo fornecer conteúdo alternativo durante o blecaute:
+Para implementar a manipulação de blecaute, incluindo o fornecimento de conteúdo alternativo durante o blecaute:
 
-1. Configure seu aplicativo para detectar tags de blecaute em um manifesto de fluxo ao vivo.
+1. Configure seu aplicativo para detectar tags de blecaute em um manifesto de transmissão ao vivo.
 
    ```java
    public void createMediaPlayer { 
@@ -78,7 +75,7 @@ Para implementar o tratamento de blecaute, incluindo fornecer conteúdo alternat
    }; 
    ```
 
-1. Manuseie os objetos `TimedMetadata` quando `MediaPlayer` for executado.
+1. Lide com objetos `TimedMetadata` quando o tempo `MediaPlayer` for executado.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -101,7 +98,7 @@ Para implementar o tratamento de blecaute, incluindo fornecer conteúdo alternat
    };
    ```
 
-1. Crie métodos para alternar o conteúdo no start e no final do período de blecaute.
+1. Crie métodos para alternar o conteúdo no início e no fim do período de blecaute.
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -186,7 +183,7 @@ Para implementar o tratamento de blecaute, incluindo fornecer conteúdo alternat
 
    >[!NOTE]
    >
-   >Atualmente, para fluxos ao vivo de várias taxas de bits, ocasionalmente os perfis de taxa de bits ajustáveis (ABR) podem ficar fora de sincronia. Isso causa objetos `timedMetadata` de duplicado para a mesma tag assinada. Para evitar cálculos incorretos não pesquisáveis, é altamente recomendável verificar se há intervalos sobrepostos não pesquisáveis após seus cálculos, como no exemplo a seguir:
+   >Atualmente, para vários fluxos ao vivo com taxa de bits múltipla, ocasionalmente os perfis de taxa de bits ajustáveis (ABR) podem sair de sincronia. Isso causa objetos `timedMetadata` duplicados para a mesma tag subscrita. Para evitar cálculos incorretos que não podem ser buscados, é altamente recomendável verificar a sobreposição de intervalos não pesquisáveis após os cálculos, como no exemplo a seguir:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
