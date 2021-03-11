@@ -1,14 +1,12 @@
 ---
-description: nulo
-keywords: creative selection rules;AdobeTVSDKConfig
-seo-description: nulo
-seo-title: Aplicar regras de seleção criativa
+keywords: regras de seleção criativa;AdobeTVSDKConfig
 title: Aplicar regras de seleção criativa
-uuid: 313306b7-6b99-4d90-8717-2b0a1e39a07b
+description: Aplicar regras de seleção criativa
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
@@ -20,10 +18,10 @@ O TVSDK aplica regras de seleção criativa das seguintes maneiras:
 
 * O TVSDK aplica todas as regras `default` primeiro, seguidas pelas regras específicas da zona.
 * O TVSDK ignora quaisquer regras que não estejam definidas para a ID de zona atual.
-* Depois que o TVSDK aplicar as regras padrão, as regras específicas da zona poderão alterar ainda mais as prioridades criativas com base nas `host` (domínio) correspondências no anúncio selecionado pelas regras `default`.
+* Quando o TVSDK aplica as regras padrão, as regras específicas da zona podem alterar ainda mais as prioridades criativas com base nas `host` (domínio) correspondências no anúncio selecionado pelas regras `default`.
 
-* No arquivo de regras de amostra incluído com regras de zona adicionais, uma vez que o TVSDK aplique as regras `default`, se o domínio criativo M3U8 não contiver [!DNL my.domain.com] ou [!DNL a.bcd.com] e a zona do anúncio for `1234`, os criativos serão reordenados e o Flash do criativo VPAID será reproduzido primeiro, se disponível. Caso contrário, um anúncio MP4 será reproduzido, e assim por diante, até o JavaScript.
+* No arquivo de regras de amostra incluído com regras de zona adicionais, uma vez que o TVSDK aplique as regras `default`, se o domínio criativo M3U8 não contiver [!DNL my.domain.com] ou [!DNL a.bcd.com] e a zona de anúncio for `1234`, os anúncios serão reordenados e o anúncio VPAID do Flash será reproduzido primeiro, se disponível. Caso contrário, um anúncio MP4 será reproduzido, e assim por diante, para JavaScript.
 
-* Se um anúncio for selecionado e o TVSDK não puder ser reproduzido nativamente ( [!DNL .mp4], [!DNL .flv] etc.), o TVSDK emitirá uma solicitação de reempacotamento.
+* Se um anúncio criativo for selecionado e o TVSDK não puder ser reproduzido nativamente ( [!DNL .mp4], [!DNL .flv], etc.), o TVSDK emitirá uma solicitação de reempacotamento.
 
-Observe que os tipos de anúncio que podem ser manipulados pelo TVSDK ainda são definidos pela configuração `validMimeTypes` em `AuditudeSettings`.
+Observe que os tipos de anúncios que podem ser manipulados pelo TVSDK ainda são definidos por meio da configuração `validMimeTypes` em `AuditudeSettings`.
