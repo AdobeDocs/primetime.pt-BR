@@ -1,13 +1,10 @@
 ---
-description: Se você usar a configuração padrão, não há mais nada que você precise fazer para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do seu representante de Ativação de Adobe, use a classe BillingMetricsConfiguration para configurar esses parâmetros antes de inicializar o player de mídia.
-seo-description: Se você usar a configuração padrão, não há mais nada que você precise fazer para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do seu representante de Ativação de Adobe, use a classe BillingMetricsConfiguration para configurar esses parâmetros antes de inicializar o player de mídia.
-seo-title: Configurar métricas de faturamento
+description: Se você usar a configuração padrão, não há mais nada que você precise fazer para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do representante de Ativação do Adobe, use a classe BillingMetricsConfiguration para definir esses parâmetros antes de inicializar o reprodutor de mídia.
 title: Configurar métricas de faturamento
-uuid: d8656ab2-fdd8-4fe4-8578-a6c8ecd378e2
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Configurar métricas de faturamento {#configure-billing-metrics}
 
-Se você usar a configuração padrão, não há mais nada que você precise fazer para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do seu representante de Ativação de Adobe, use a classe BillingMetricsConfiguration para configurar esses parâmetros antes de inicializar o player de mídia.
+Se você usar a configuração padrão, não há mais nada que você precise fazer para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do representante de Ativação do Adobe, use a classe BillingMetricsConfiguration para definir esses parâmetros antes de inicializar o reprodutor de mídia.
 
 >[!TIP]
 >
@@ -23,7 +20,7 @@ Se você usar a configuração padrão, não há mais nada que você precise faz
 
 >[!IMPORTANT]
 >
->A configuração definida permanece em vigor durante a vida útil do player de mídia. Depois de inicializar o media player, não é possível alterar a configuração.
+>A configuração definida permanece em vigor durante a vida útil do reprodutor de mídia. Depois de inicializar o reprodutor de mídia, não é possível alterar a configuração.
 
 Para configurar métricas de faturamento:
 
