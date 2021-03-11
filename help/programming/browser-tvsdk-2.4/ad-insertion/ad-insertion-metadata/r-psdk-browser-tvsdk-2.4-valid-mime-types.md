@@ -1,25 +1,22 @@
 ---
 description: Um anúncio pode ter vários anúncios, dos quais um é selecionado para reprodução.
-seo-description: Um anúncio pode ter vários anúncios, dos quais um é selecionado para reprodução.
-seo-title: Tipos mime válidos
 title: Tipos mime válidos
-uuid: ab2baac9-a9ef-44f1-83a1-2e6e471e3231
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
 
-# Tipos de mime válidos{#valid-mime-types}
+# Tipos mime válidos{#valid-mime-types}
 
 Um anúncio pode ter vários anúncios, dos quais um é selecionado para reprodução.
 
-Com tipos MIME, você pode especificar que tipo criativo os usuários podem priorizar. Os tipos mime especificados pelos usuários e os tipos mime compatíveis com o TVSDK do navegador são usados para determinar qual criação será priorizada.
+Com os tipos MIME, você pode especificar quais tipos de criação os usuários podem priorizar. Os tipos mime especificados pelos usuários e os tipos mime compatíveis com o TVSDK do navegador são usados para determinar qual criação será priorizada.
 
-Para definir os tipos MIME válidos no TVSDK do navegador:
+Para definir os tipos MIME válidos no Browser TVSDK:
 
 ```js
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
@@ -27,6 +24,6 @@ var mimeTypes = [“video/mp4”, “application/x-mpegURL”];
 auditudeSettings.validMimeTypes = mimeTypes; 
 ```
 
-em que `mimeTypes` é uma matriz de sequências de caracteres e cada string representa um tipo mime.
+onde `mimeTypes` é uma matriz de strings e cada string representa um tipo MIME.
 
-Caso vários arquivos de mídia sejam retornados para um anúncio, a seleção depende da ordem em que os arquivos de mídia aparecem na matriz `validMimeTypes`. Os tipos mime com índice mais baixo recebem preferência em relação aos com índice mais alto.
+Caso vários arquivos de mídia sejam retornados para um anúncio, a seleção depende da ordem em que os arquivos de mídia aparecem na matriz `validMimeTypes`. Os tipos mime que têm índice mais baixo recebem preferência em relação aos que têm índice mais alto.
