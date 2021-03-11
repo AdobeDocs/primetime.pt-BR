@@ -1,19 +1,16 @@
 ---
 description: Você pode fornecer metadados personalizados sobre conteúdo, anúncios e chamadas de rastreamento de capítulo usando funções de retorno de chamada.
-seo-description: Você pode fornecer metadados personalizados sobre conteúdo, anúncios e chamadas de rastreamento de capítulo usando funções de retorno de chamada.
-seo-title: Implementação do suporte a metadados personalizados
-title: Implementação do suporte a metadados personalizados
-uuid: 6e23311c-a393-4485-919e-4cf6412789b1
+title: Implementar o suporte a metadados personalizados
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
 
-# Implementação do suporte a metadados personalizados{#implement-custom-metadata-support}
+# Implementar o suporte a metadados personalizados{#implement-custom-metadata-support}
 
 Você pode fornecer metadados personalizados sobre conteúdo, anúncios e chamadas de rastreamento de capítulo usando funções de retorno de chamada.
 
