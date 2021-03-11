@@ -1,23 +1,20 @@
 ---
-description: Para receber notificações sobre atualizações na linha do tempo, registre os ouvintes de evento apropriados.
-seo-description: Para receber notificações sobre atualizações na linha do tempo, registre os ouvintes de evento apropriados.
-seo-title: Adicionar ouvintes para Linha do tempoAtualizadoEvent
-title: Adicionar ouvintes para Linha do tempoAtualizadoEvent
-uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
+description: Para receber notificações sobre atualizações de linha do tempo, registre os ouvintes de eventos apropriados.
+title: Adicionar ouvintes para TimelineUpdatedEvent
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
 
-# Adicionar ouvintes para TimelineUpdatesEvent{#add-listeners-for-timelineupdatedevent}
+# Adicionar ouvintes para TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
 
-Para receber notificações sobre atualizações na linha do tempo, registre os ouvintes de evento apropriados.
+Para receber notificações sobre atualizações de linha do tempo, registre os ouvintes de eventos apropriados.
 
-Sempre que a linha do tempo é atualizada, o `MediaPlayer` despacha `AdobePSDK.TimelineEvent` com o tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
+Cada vez que a linha do tempo é atualizada, o `MediaPlayer` despacha `AdobePSDK.TimelineEvent` com o tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 1. Implemente os ouvintes apropriados.
 
    ```js
