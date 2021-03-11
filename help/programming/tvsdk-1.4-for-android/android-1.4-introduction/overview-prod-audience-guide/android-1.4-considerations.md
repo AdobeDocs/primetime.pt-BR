@@ -1,13 +1,10 @@
 ---
-description: Para usar o TVSDK de forma mais eficiente, considere alguns detalhes de sua operação e siga certas práticas recomendadas.
-seo-description: Para usar o TVSDK de forma mais eficiente, considere alguns detalhes de sua operação e siga certas práticas recomendadas.
-seo-title: Considerações e práticas recomendadas
+description: Para usar o TVSDK de maneira mais eficaz, considere alguns detalhes de sua operação e siga determinadas práticas recomendadas.
 title: Considerações e práticas recomendadas
-uuid: e698ae09-280b-4406-a9b8-4f468b7a6b9c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -15,28 +12,28 @@ ht-degree: 0%
 
 # Considerações e práticas recomendadas{#considerations-and-best-practices}
 
-Para usar o TVSDK de forma mais eficiente, considere alguns detalhes de sua operação e siga certas práticas recomendadas.
+Para usar o TVSDK de maneira mais eficaz, considere alguns detalhes de sua operação e siga determinadas práticas recomendadas.
 
 ## Considerações {#section_tvsdk_considerations}
 
-Lembre-se das seguintes informações ao usar o TVSDK:
+Lembre-se das seguintes informações ao usar TVSDK:
 
-* A Adobe Primetime não funciona atualmente em emuladores Android.
+* No momento, o Adobe Primetime não funciona em emuladores Android.
 
-   Você deve usar dispositivos reais para teste.
+   Você deve usar dispositivos reais para testes.
 * A reprodução é compatível somente com conteúdo HTTP Live Streaming (HLS).
-* O conteúdo de vídeo principal pode ser multiplexado, onde os fluxos de vídeo e áudio estão na mesma execução, ou não multiplexados, onde os fluxos de vídeo e áudio estão em representações separadas.
+* O conteúdo do vídeo principal pode ser multiplexado, onde os fluxos de vídeo e áudio estão na mesma representação, ou não multiplexados, onde os fluxos de vídeo e áudio estão em representações separadas.
 * A API TVSDK é implementada em Java.
-* Atualmente, você precisa executar a maioria das operações da API TVSDK no thread da interface do usuário, que é o thread principal do Android.
+* Atualmente, é necessário executar a maioria das operações da API TVSDK no thread da interface do usuário, que é o thread principal do Android.
 
    As operações executadas corretamente no thread principal podem gerar um erro e sair quando executadas em um thread em segundo plano.
 * A reprodução de vídeo requer o Adobe Video Engine (AVE). Isso afeta como e quando os recursos de mídia podem ser acessados:
 
-   * As legendas ocultas são suportadas na medida fornecida pelo AVE.
-   * Dependendo da precisão do codificador, a duração real da mídia codificada pode diferir das durações que são registradas no manifesto do recurso de fluxo.
+   * As legendas ocultas são suportadas na extensão fornecida pelo AVE.
+   * Dependendo da precisão do codificador, a duração real da mídia codificada pode diferir das durações registradas no manifesto do recurso de fluxo.
 
-      Não há uma maneira confiável de sincronizar novamente entre a linha do tempo virtual ideal e a linha do tempo de reprodução real. O rastreamento de andamento da reprodução de fluxo para o gerenciamento de anúncios e o Video Analytics deve usar o tempo de reprodução real, de modo que o comportamento do relatórios e da interface do usuário pode não rastrear com precisão o conteúdo de mídia e anúncio.
-   * O nome do agente de usuário recebido para todas as solicitações de mídia do TVSDK nesta plataforma recebe o seguinte padrão de string:
+      Não há uma maneira confiável de sincronizar novamente entre a linha do tempo virtual ideal e a linha do tempo de reprodução real. O rastreamento do progresso da reprodução de fluxo para o gerenciamento de anúncios e o Video Analytics devem usar o tempo de reprodução real, de modo que os relatórios e o comportamento da interface do usuário podem não rastrear precisamente o conteúdo de mídia e anúncio.
+   * O seguinte padrão de sequência é atribuído ao nome do agente de usuário de entrada para todas as solicitações de mídia do TVSDK nesta plataforma:
 
       ```
       "Adobe Primetime/ + 
@@ -45,11 +42,11 @@ Lembre-se das seguintes informações ao usar o TVSDK:
       </varname>" 
       ```
 
-      Todas as chamadas relacionadas a anúncios usam o agente de usuário padrão do Android ou o agente de usuário personalizado se você o definir ao configurar metadados de inserção de anúncios.
+      Todas as chamadas relacionadas a anúncios usam o agente de usuário padrão do Android ou o agente de usuário personalizado, se você configurá-lo ao configurar os metadados de inserção de anúncio.
 
 ## Práticas recomendadas {#section_tvsdk_best_practices}
 
-Estas são as práticas recomendadas para o TVSDK:
+Estas são as práticas recomendadas para TVSDK:
 
-* Use a versão 3.0 ou superior do HLS para conteúdo de programas.
-* Execute a maioria das operações TVSDK no thread principal (UI), não nos threads em segundo plano.
+* Use a versão 3.0 ou superior do HLS para conteúdo do programa.
+* Execute a maioria das operações TVSDK no thread principal (interface do usuário), não em threads em segundo plano.
