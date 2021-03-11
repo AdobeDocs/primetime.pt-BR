@@ -1,13 +1,11 @@
 ---
-description: nulo
-seo-description: nulo
-seo-title: Recursos do dispositivo necessários para reproduzir conteúdo protegido
 title: Recursos do dispositivo necessários para reproduzir conteúdo protegido
-uuid: 1490711b-65d9-4716-8779-ae1da7d2c82c
+description: Recursos do dispositivo necessários para reproduzir conteúdo protegido
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -23,28 +21,28 @@ Os atributos a seguir podem identificar os recursos do dispositivo:
  <tbody> 
   <tr> 
    <td><b>Atributo</b> </td> 
-   <td><b>Valores suportados</b> </td> 
-   <td><b>Critérios de correspondência</b> </td> 
+   <td><b>Valores compatíveis</b> </td> 
+   <td><b>Corresponder aos critérios</b> </td> 
    <td><b>Descrição</b> </td> 
   </tr> 
   <tr> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Barramento acessível não para usuários </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Barramento acessível para não usuários </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">"true" ou "false" </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">Correspondência exata </p> </td> 
    <td colname="4" class="- topic/entry "> <p class="- topic/p ">Se verdadeiro, o dispositivo não deve ter um barramento acessível ao usuário. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Raiz de confiança do hardware </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Raiz de hardware da confiança </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">"true" ou "false" </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">Correspondência exata </p> </td> 
-   <td colname="4" class="- topic/entry "> <p class="- topic/p ">Se verdadeiro, o dispositivo deve ter uma raiz de confiança de hardware. </p> </td> 
+   <td colname="4" class="- topic/entry "> <p class="- topic/p ">Se verdadeiro, o dispositivo deve ter uma raiz de hardware de confiança. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->Esta regra de uso é suportada pelos clientes DRM da Adobe Primetime versão 2.0.2 e posterior. O comportamento de clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças.
+>Essa regra de uso é compatível com os clientes DRM Adobe Primetime versão 2.0.2 e posterior. O comportamento em clientes mais antigos depende da versão mínima do cliente compatível com o servidor de licenças.
 >
 >Consulte [Versão mínima do cliente](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 
