@@ -1,13 +1,10 @@
 ---
-description: Com o Adobe Primetime DRM Server for Protected Streaming, você pode especificar todas as regras de uso no servidor com arquivos de configuração.
-seo-description: Com o Adobe Primetime DRM Server for Protected Streaming, você pode especificar todas as regras de uso no servidor com arquivos de configuração.
-seo-title: Sobre regras de uso
+description: Com o Adobe Primetime DRM Server for Protected Streaming, é possível especificar todas as regras de uso no servidor com arquivos de configuração.
 title: Sobre regras de uso
-uuid: 4a794712-db58-43f5-b867-8871e58e12ae
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 0%
 
 # Sobre as regras de uso{#about-usage-rules}
 
-Com o Adobe Primetime DRM Server for Protected Streaming, você pode especificar todas as regras de uso no servidor com arquivos de configuração.
+Com o Adobe Primetime DRM Server for Protected Streaming, é possível especificar todas as regras de uso no servidor com arquivos de configuração.
 
-Todas as regras de uso especificadas na política DRM para o conteúdo protegido são substituídas. Portanto, o Adobe recomenda que você use uma política DRM simples e anônima durante o empacotamento de conteúdo. Qualquer regra de uso que você pode configurar pode ser configurada por locatário.
+Quaisquer regras de uso especificadas na política de DRM para o conteúdo protegido são substituídas. Portanto, o Adobe recomenda usar uma política de DRM simples e anônima durante a embalagem do conteúdo. Quaisquer regras de uso que você pode configurar podem ser configuradas por locatário.
 
-O Primetime DRM Server for Protected Streaming oferece suporte às seguintes regras de uso:
+O servidor DRM Primetime para transmissão protegida oferece suporte às seguintes regras de uso:
 
 * Proteção de saída
 * Restrições de aplicativos Adobe® AIR®, SWF, iOS e Android
-* Restrições de módulo de tempo de execução e DRM
-* Aplicação de detecção de quebra de falhas em plataformas DRM Primetime que suportam detecção de quebra de carga
-* O Cache de Licenças está desativado por padrão. Armazenamento de licenças em cache que você pode ativar especificando a data de término do armazenamento em cache ou uma quantidade de tempo em cache permitida; start quando a licença é emitida.
-* Vários direitos de reprodução que permitem especificar diferentes combinações de Proteção de saída, Restrições de aplicativo e Restrições de DRM/tempo de execução. Por exemplo, você pode especificar diferentes requisitos de Proteção de saída para cada plataforma cliente usando a Restrição de módulo DRM com Proteção de saída.
+* DRM e restrições do módulo de tempo de execução
+* Aplicação de detecção de quebra de martelo em plataformas DRM Primetime que oferecem suporte à detecção de quebra de maré
+* O Cache de Licenças é desativado por padrão. Cache de licenças que você pode ativar especificando a data de término do armazenamento em cache ou uma quantidade de tempo em cache permitida; começa a partir da emissão do certificado.
+* Vários Direitos de Reprodução que permitem especificar diferentes combinações de Proteção de Saída, Restrições de Aplicativo e Restrições de DRM/Tempo de Execução. Por exemplo, você pode especificar diferentes requisitos de Proteção de Saída para cada plataforma de cliente usando a Restrição de Módulo DRM com Proteção de Saída.
 
 >[!NOTE]
 >
->Se você quiser oferecer suporte ao delivery de chave remota para dispositivos iOS, a política de DRM aplicada no momento do empacotamento deverá ter o delivery de chave remota habilitado. Essa configuração não pode ser modificada por meio da configuração do locatário no servidor.
+>Se você quiser oferecer suporte à entrega remota de chaves para dispositivos iOS, a política de DRM aplicada no momento da embalagem deverá ter a entrega remota de chaves ativada. Essa configuração não pode ser modificada por meio da configuração do locatário no servidor.
 
