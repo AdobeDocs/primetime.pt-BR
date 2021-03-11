@@ -1,13 +1,10 @@
 ---
-description: A inserção de anúncios resolve os anúncios para vídeo sob demanda (VOD), para transmissão ao vivo e para transmissão linear com rastreamento de anúncios e reprodução de anúncios. O TVSDK faz as solicitações necessárias para o servidor de anúncios, recebe informações sobre anúncios para o conteúdo especificado e coloca os anúncios no conteúdo em fases.
-seo-description: A inserção de anúncios resolve os anúncios para vídeo sob demanda (VOD), para transmissão ao vivo e para transmissão linear com rastreamento de anúncios e reprodução de anúncios. O TVSDK faz as solicitações necessárias para o servidor de anúncios, recebe informações sobre anúncios para o conteúdo especificado e coloca os anúncios no conteúdo em fases.
-seo-title: Inserir anúncios
-title: Inserir anúncios
-uuid: 25c79822-a861-427b-b6a8-24714b21aae4
+description: A inserção de anúncio resolve os anúncios de VOD (video-on-demand) , para transmissão ao vivo e para transmissão linear com rastreamento de anúncios e reprodução de anúncios. O TVSDK faz as solicitações necessárias para o servidor de publicidade, recebe informações sobre anúncios para o conteúdo especificado e coloca os anúncios em fases.
+title: Inserção de anúncios
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '157'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Visão geral {#inserting-ads-overview}
 
-A inserção de anúncios resolve os anúncios para vídeo sob demanda (VOD), para transmissão ao vivo e para transmissão linear com rastreamento de anúncios e reprodução de anúncios. O TVSDK faz as solicitações necessárias para o servidor de anúncios, recebe informações sobre anúncios para o conteúdo especificado e coloca os anúncios no conteúdo em fases.
+A inserção de anúncio resolve os anúncios de VOD (video-on-demand) , para transmissão ao vivo e para transmissão linear com rastreamento de anúncios e reprodução de anúncios. O TVSDK faz as solicitações necessárias para o servidor de publicidade, recebe informações sobre anúncios para o conteúdo especificado e coloca os anúncios em fases.
 
-Um *`ad break`* contém uma ou mais publicidades que são reproduzidas em sequência. O TVSDK insere publicidades no conteúdo principal como membros de uma ou mais pausas de publicidade.
+Um *`ad break`* contém um ou mais anúncios que são exibidos em sequência. O TVSDK insere anúncios no conteúdo principal como membros de um ou mais ad breaks.
 
 ## Desativar anúncios precedentes {#disable-preroll-ads}
 
-Para desativar o pre-roll, altere os geradores de oportunidade padrão para não fazer a chamada pré-roll. Os geradores de oportunidade padrão são:
+Para desativar o anúncio antes da exibição, altere os geradores de oportunidade padrão para não fazer a chamada antes da exibição. Os geradores de oportunidade padrão são:
 
 ```
 @inheritDoc 
@@ -34,7 +31,7 @@ return result;
 }
 ```
 
-Para desativar a pré-rolagem em fluxos ao vivo, altere as opções acima para incluir somente o SpliceOutOpportunityGenerator:
+Para desativar o precedente em fluxos ao vivo, altere o acima para incluir somente SpliceOutOpportunityGenerator:
 
 ```
 @inheritDoc 
