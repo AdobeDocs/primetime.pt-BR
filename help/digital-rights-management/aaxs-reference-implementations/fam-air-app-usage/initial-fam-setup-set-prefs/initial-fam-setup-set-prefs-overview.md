@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral das preferências de configuração
 title: Visão geral das preferências de configuração
-uuid: d1c067b1-6c2b-460e-8d00-5a5bfee0789c
+description: Visão geral das preferências de configuração
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Visão geral das preferências de configuração {#setting-preferences-overview}
 
-Com exceção do URL do servidor Packager, todas as preferências especificadas abaixo são armazenadas no arquivo [!DNL flashaccess-refimpl-packager.properties] no servidor. Todas as configurações podem ser modificadas diretamente no arquivo de propriedades ou pelo aplicativo AIR. As senhas são criptografadas quando são armazenadas no arquivo de propriedades no servidor. Digite a senha não criptografada na interface do usuário e ela será criptografada antes de ser armazenada no arquivo.
+Com exceção do URL do Servidor do Packager, todas as preferências especificadas abaixo são armazenadas no arquivo [!DNL flashaccess-refimpl-packager.properties] no servidor. Todas as configurações podem ser modificadas diretamente no arquivo de propriedades ou por meio do aplicativo AIR. As senhas são criptografadas quando armazenadas no arquivo de propriedades do servidor. Digite a senha não criptografada na interface do usuário e ela será criptografada antes de ser armazenada no arquivo.
 
 >[!NOTE]
 >
->Todos os diretórios e caminhos se referem aos diretórios no servidor Packager, não ao cliente que está executando o aplicativo AIR.
+>Todos os diretórios e caminhos se referem a diretórios no servidor do empacotador, não no cliente que está executando o aplicativo AIR.
 
-Quaisquer alterações feitas aqui entrarão em vigor imediatamente depois que as preferências forem salvas. Não há necessidade de reiniciar o servidor, a menos que o Thread do Packager seja encerrado devido a problemas de configuração.
+Todas as alterações feitas aqui entrarão em vigor imediatamente após as preferências serem salvas. Não há necessidade de reiniciar o servidor a menos que o Thread do Packager seja encerrado devido a problemas de configuração.
 
 As descrições de preferências usam os seguintes termos:
 
@@ -32,15 +32,15 @@ As descrições de preferências usam os seguintes termos:
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> URL do servidor Packager </td> 
-   <td colname="2" class="- topic/entry "> Localização do servidor que executa <span class="filepath"> flashaccess-packager.war </span>; por exemplo, <span class="filepath"> https://localhost:8080 </span> </td> 
+   <td colname="1" class="- topic/entry "> URL do servidor do pacote </td> 
+   <td colname="2" class="- topic/entry "> Local do servidor executando <span class="filepath"> flashaccess-packager.war </span>; por exemplo, <span class="filepath"> https://localhost:8080 </span> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> Diretório de recursos </td> 
-   <td colname="2" class="- topic/entry "> Diretório que contém políticas, certificados, credenciais e quaisquer outros recursos necessários para o servidor do Packager </td> 
+   <td colname="2" class="- topic/entry "> Diretório contendo políticas, certificados, credenciais e quaisquer outros recursos necessários para o servidor do empacotador </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> URL do servidor de licenças </td> 
+   <td colname="1" class="- topic/entry "> URL do Servidor de Licenças </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL do servidor do qual o cliente deve solicitar uma licença; por exemplo, <span class="filepath"> https://mylicenseserver.com:8080 </span> </p> </td> 
   </tr> 
  </tbody> 
