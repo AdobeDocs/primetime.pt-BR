@@ -1,13 +1,10 @@
 ---
-description: Seu aplicativo pode monitorar a atividade no player e a alteração do estado do player, acompanhando eventos enviados pelo TVSDK.
-seo-description: Seu aplicativo pode monitorar a atividade no player e a alteração do estado do player, acompanhando eventos enviados pelo TVSDK.
-seo-title: Eventos de reprodução
+description: Seu aplicativo pode monitorar a atividade no reprodutor e o estado de alteração do reprodutor, ouvindo eventos despachados pelo TVSDK.
 title: Eventos de reprodução
-uuid: 6d6491d7-cf25-4130-8388-68b8c028bb71
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Eventos de reprodução {#playback-events}
 
-Seu aplicativo pode monitorar a atividade no player e a alteração do estado do player, acompanhando eventos enviados pelo TVSDK.
+Seu aplicativo pode monitorar a atividade no reprodutor e o estado de alteração do reprodutor, ouvindo eventos despachados pelo TVSDK.
 
-O TVSDK despacha eventos de reprodução quando ocorrem operações de reprodução de mídia, como um vídeo que começa a ser reproduzido. Para ser notificado sobre todos os eventos relacionados à reprodução, registre os ouvintes com o objeto `MediaPlayer` para os seguintes eventos.
+O TVSDK envia eventos de reprodução quando ocorrem operações de reprodução de mídia, como um vídeo que começa a ser reproduzido. Para ser notificado sobre todos os eventos relacionados à reprodução, registre os ouvintes com o objeto `MediaPlayer` para os seguintes eventos.
 
 <table frame="all" colsep="1" rowsep="1" id="table_922EEA3DE0BD47BA982E11F890CA0A6B"> 
  <thead> 
@@ -33,7 +30,7 @@ O TVSDK despacha eventos de reprodução quando ocorrem operações de reproduç
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">PlaybackRateEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/PlaybackRateEvent.html#RATE_SELECTED" format="html" scope="external"> RATE_SELECTED</a> </td> 
-   <td colname="2"> O usuário ou TVSDK selecionou uma nova taxa de reprodução, como avançar, retroceder ou reiniciar a reprodução em uma velocidade normal. </td> 
+   <td colname="2"> O usuário ou TVSDK selecionou uma nova taxa de reprodução, como avançar, retroceder ou retomar a reprodução em uma velocidade normal. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">PlaybackRateEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/PlaybackRateEvent.html#RATE_PLAYING" format="html" scope="external"> RATE_PLAYING</a> </td> 
@@ -41,19 +38,19 @@ O TVSDK despacha eventos de reprodução quando ocorrem operações de reproduç
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> TimeChangeEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/TimeChangeEvent.html#TIME_CHANGED" format="html" scope="external"> TIME_CHANGED</a> </td> 
-   <td colname="2"> A posição atual do indicador de reprodução da mídia mudou. Despachado periodicamente quando a hora atual mudou, a cada 250 ms ou mais. </td> 
+   <td colname="2"> A posição atual do indicador de reprodução da mídia foi alterada. Despachado periodicamente quando a hora atual mudou, a cada 250 ms ou mais. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Media Player</b> </td> 
+   <td colname="1"><b>Reprodutor de mídia</b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">MediaPlayerStatus ChangeEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerStatusChangeEvent.html#STATUS_CHANGED" format="html" scope="external"> STATUS_CHANGED</a> </td> 
-   <td colname="2"> O status do player de mídia foi alterado. Seu aplicativo deve lidar com erros neste retorno de chamada do evento. </td> 
+   <td colname="2"> O status do reprodutor de mídia foi alterado. Seu aplicativo deve lidar com erros no retorno de chamada deste evento. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1">ProfileEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html#PROFILE_CHANGED" format="html" scope="external"> PERFIL_CHANGED</a> </td> 
-   <td colname="2">O perfil atual do media player mudou. Use a propriedade <span class="codeph"> ProfileEvent.perfil</span> para obter o novo perfil que está sendo reproduzido. Use a propriedade <span class="codeph"> time</span> para obter a hora em que o evento ocorreu. </td> 
+   <td colname="1">ProfileEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html#PROFILE_CHANGED" format="html" scope="external"> PROFILE_CHANGED</a> </td> 
+   <td colname="2">O perfil atual do reprodutor de mídia foi alterado. Use a propriedade <span class="codeph"> ProfileEvent.profile</span> para obter o novo perfil que está sendo reproduzido. Use a propriedade <span class="codeph"> time</span> para obter a hora em que esse evento ocorreu. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>MediaplayerItem</b> </td> 
@@ -65,10 +62,10 @@ O TVSDK despacha eventos de reprodução quando ocorrem operações de reproduç
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">Evento MediaPlayerItem.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#ITEM_UPDATED" format="html" scope="external"> ITEM_UPDATED</a> </td> 
-   <td colname="2">O media player foi atualizado com êxito em qualquer um destes casos: 
+   <td colname="2">O reprodutor de mídia atualizou a mídia com êxito em um destes casos: 
     <ul id="ul_E4D1A1D468544C3B9F8046E9B68A956D"> 
-     <li id="li_35A2A417BF924E039D9CB36CFBCDFEB6">Quando ocorre uma atualização do manifesto para um ativo em tempo real. </li> 
-     <li id="li_E7AB380C212B4011B07C3B313282681C">Quando um VOD ou ativo ativo tiver legendagem e atividade fechadas é descoberta pela primeira vez para uma faixa de legendagem fechada. </li> 
+     <li id="li_35A2A417BF924E039D9CB36CFBCDFEB6">Quando ocorre uma atualização de manifesto para um ativo em tempo real. </li> 
+     <li id="li_E7AB380C212B4011B07C3B313282681C">Quando um VOD ou ativo tem legendas ocultas e a atividade é descoberta pela primeira vez para uma faixa de legendas ocultas. </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -77,15 +74,15 @@ O TVSDK despacha eventos de reprodução quando ocorrem operações de reproduç
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Evento MediaPlayerItem.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#CAPTION_UPDATED" format="html" scope="external"> CAPTION_UPDATED</a> </td> 
-   <td colname="2">Uma nova faixa de legendagem fechada foi detectada no fluxo de mídia e a coleção <span class="codeph"> closedCaptionsTracks</span> foi atualizada. </td> 
+   <td colname="2">Uma nova faixa de legendas ocultas foi detectada no fluxo de mídia e a coleção <span class="codeph"> closedCaptionsTracks</span> foi atualizada. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Manifesto e Linha do tempo</b> </td> 
+   <td colname="1"><b>Manifesto e linha do tempo</b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1">TimelineEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/TimelineEvent.html#TIMELINE_UPDATED" format="html" scope="external"> TIMELINE_UPDATED</a> </td> 
-   <td colname="2">O media player adicionou ou removeu anúncios, portanto, ele tem uma linha do tempo atualizada. <p>O manifesto atualizado para um ativo em tempo real e as quebras de anúncio antigas foram removidas da linha do tempo ou novas oportunidades de anúncio (pontos de sinalização) foram descobertas. O player de mídia tenta resolver e colocar quaisquer novos anúncios na linha do tempo. </p> <p> Use esse evento para verificar se a linha do tempo tem alguma atualização (o VOD não muda durante a reprodução). Você pode recuperar a linha do tempo usando <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayer.html#timeline" format="html" scope="external"> MediaPlayer.timeline</a>. </p> </td> 
+   <td colname="1">TimelineEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/TimelineEvent.html#TIMELINE_UPDATED" format="html" scope="external"> TIMELINE_UPDATE</a> </td> 
+   <td colname="2">O reprodutor de mídia adicionou removeu anúncios, portanto, tem uma linha do tempo atualizada. <p>O manifesto atualizado para um ativo em tempo real e as quebras de anúncio antigas foram removidas da linha do tempo ou novas oportunidades de anúncio (pontos de sinalização) foram descobertas. O reprodutor de mídia tenta resolver e colocar quaisquer novos anúncios na linha do tempo. </p> <p> Use esse evento para verificar se a linha do tempo tem alguma atualização (VOD não é alterado durante a reprodução). Em seguida, é possível recuperar a linha do tempo usando <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayer.html#timeline" format="html" scope="external"> MediaPlayer.timeline</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
