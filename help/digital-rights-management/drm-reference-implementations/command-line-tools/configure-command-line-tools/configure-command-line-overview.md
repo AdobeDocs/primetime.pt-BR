@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral
 title: Visão geral
-uuid: 04226f33-a269-44d7-9210-f2126cc46095
+description: Visão geral
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 0%
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 # Visão geral{#overview}
 
-As ferramentas de linha de comando têm propriedades associadas para as quais você deve definir valores definidos em [!DNL flashaccesstools.properties] *antes de* executar as ferramentas. Algumas ferramentas de linha de comando também permitem especificar valores de propriedade da linha de comando. Os valores especificados na linha de comando têm prioridade sobre os valores fornecidos de [!DNL flashaccesstools.properties].
+As ferramentas de linha de comando têm propriedades associadas para as quais você deve definir valores em [!DNL flashaccesstools.properties] *antes de* executar as ferramentas. Algumas das ferramentas de linha de comando também permitem especificar valores de propriedade a partir da linha de comando. Os valores especificados na linha de comando têm prioridade sobre os valores fornecidos a partir de [!DNL flashaccesstools.properties].
 
-É necessário modificar as configurações nas seguintes seções de [!DNL flashaccesstools.properties] para ativar as ferramentas de linha de comando correspondentes que você pretende usar:
+Você deve modificar as configurações nas seguintes seções de [!DNL flashaccesstools.properties] para ativar as ferramentas de linha de comando correspondentes que pretende usar:
 
 * **Propriedades**  do Media Packager - (para  [!DNL AdobePackager.jar])
 
-* **Propriedades**  do Gerenciador de Listas e do Gerenciador de Listas de Revogação de Atualização de Política - (para  [!DNL AdobePolicyUpdateListManager.jar] e  [!DNL AdobeRevocationListManager.jar])
+* **Propriedades**  do Gerenciador de Lista de Atualizações de Política e do Gerenciador de Lista de Revogação - (para  [!DNL AdobePolicyUpdateListManager.jar] e  [!DNL AdobeRevocationListManager.jar])
 
 * **Propriedades**  do Gerenciador de Políticas - (para  [!DNL AdobePolicyManager.jar])
 
-* **Propriedades**  do gerador de licenças - (para  [!DNL AdobeLicenseGenerator.jar])
+* **Propriedades**  do Gerador de Licenças - (para  [!DNL AdobeLicenseGenerator.jar])
 
