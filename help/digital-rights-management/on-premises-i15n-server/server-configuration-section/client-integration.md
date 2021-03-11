@@ -1,9 +1,9 @@
 ---
-seo-title: Integração de cliente
-title: Integração de cliente
-uuid: 89b476e4-c382-47ce-8bd1-57c12b060073
+title: Integração de clientes
+description: Integração de clientes
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# Integração do cliente{#client-integration}
+# Integração de cliente{#client-integration}
 
-Para direcionar o cliente para a individualização em relação ao servidor de Individualização no local (em oposição ao Adobe Hosted Global Individualization Server), o cliente deve utilizar os metadados DRM criados anteriormente no local. Fazer com que um cliente não individualizado realize uma aquisição de licença ou inicialize o DRM, usando os metadados especiais, resultará na conexão do cliente ao URL personalizado do servidor de individualização.
+Para direcionar o cliente para a individualização em relação ao servidor de individualização nas instalações (em vez do servidor de individualização global Adobe hospedado), o cliente deve utilizar os metadados DRM nas instalações criados anteriormente. Ter um cliente não individualizado realizar uma aquisição de licença ou inicializar o DRM, usando os metadados especiais, resultará na conexão do cliente ao URL personalizado do servidor de individualização.
 
 Um trecho de código de amostra está incluído na pasta [!DNL client_sample].
