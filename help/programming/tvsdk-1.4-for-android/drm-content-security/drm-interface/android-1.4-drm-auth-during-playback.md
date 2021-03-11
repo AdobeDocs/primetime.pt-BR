@@ -1,13 +1,10 @@
 ---
-description: Quando os metadados DRM de um vídeo estiverem incluídos no fluxo de mídia, execute a autenticação durante a reprodução.
-seo-description: Quando os metadados DRM de um vídeo estiverem incluídos no fluxo de mídia, execute a autenticação durante a reprodução.
-seo-title: Autenticação DRM durante a reprodução
+description: Quando os metadados DRM de um vídeo forem incluídos no fluxo de mídia, execute a autenticação durante a reprodução.
 title: Autenticação DRM durante a reprodução
-uuid: a1a63e3e-be34-49e1-96c4-ae266003b3d1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -15,15 +12,15 @@ ht-degree: 0%
 
 # Autenticação DRM durante a reprodução {#drm-authentication-during-playback}
 
-Quando os metadados DRM de um vídeo estiverem incluídos no fluxo de mídia, execute a autenticação durante a reprodução.
+Quando os metadados DRM de um vídeo forem incluídos no fluxo de mídia, execute a autenticação durante a reprodução.
 
-Considere o recurso de rotação de licença, onde um ativo é criptografado com várias licenças de DRM. Sempre que novos metadados DRM forem descobertos, use os métodos `DRMHelper` para verificar se os metadados DRM exigem autenticação DRM.
+Considere o recurso de rotação de licença, em que um ativo é criptografado com várias licenças de DRM. Sempre que novos metadados de DRM forem detectados, use os métodos `DRMHelper` para verificar se os metadados de DRM exigem autenticação de DRM.
 
 >[!NOTE]
 >
->Este tutorial não lida com licenças vinculadas ao domínio. Idealmente, antes de iniciar a reprodução, verifique se você está lidando com uma licença vinculada ao domínio. Se sim, execute a autenticação de domínio (se necessário) e ingresse no domínio.
+>Este tutorial não lida com licenças vinculadas a domínios. Idealmente, antes de iniciar a reprodução, verifique se você está lidando com uma licença vinculada ao domínio. Se sim, execute a autenticação de domínio (se necessário) e participe do domínio.
 
-1. Quando novos Metadados DRM são descobertos em um ativo, um evento é despachado na camada do aplicativo.
+1. Quando novos metadados de DRM são descobertos em um ativo, um evento é despachado na camada do aplicativo.
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
@@ -37,9 +34,9 @@ Considere o recurso de rotação de licença, onde um ativo é criptografado com
    };
    ```
 
-1. Use `DRMMetadata` para verificar se a autenticação é necessária. Em caso negativo, não fazer nada; a reprodução continua ininterrupta.
-1. Caso contrário, execute a autenticação DRM. Como essa operação é assíncrona e é manipulada em um thread diferente, ela não afeta a interface do usuário nem a reprodução do vídeo.
-1. Se a autenticação falhar, o usuário não poderá continuar a exibição do vídeo e a reprodução será interrompida. Caso contrário, a reprodução continuará ininterrupta.
+1. Use o `DRMMetadata` para verificar se a autenticação é necessária. Em caso negativo, não fazer nada; a reprodução continua ininterrupta.
+1. Caso contrário, execute a autenticação DRM. Como essa operação é assíncrona e é tratada em um thread diferente, não afeta a interface do usuário nem a reprodução do vídeo.
+1. Se a autenticação falhar, o usuário não poderá continuar a visualização do vídeo e a reprodução será interrompida. Caso contrário, a reprodução continuará ininterruptamente.
 
 ```java
 DRMMetadataInfoEventListener drmMetadataInfoEventListener =  
