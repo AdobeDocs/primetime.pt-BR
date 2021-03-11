@@ -1,13 +1,10 @@
 ---
-description: Você deve separar a lógica da interface do seu player do processo que gerencia e clica. Uma maneira de fazer isso é implementar vários fragmentos para uma atividade.
-seo-description: Você deve separar a lógica da interface do seu player do processo que gerencia e clica. Uma maneira de fazer isso é implementar vários fragmentos para uma atividade.
-seo-title: Separe o processo de anúncio clicável
+description: Você deve separar a lógica da interface do usuário do seu reprodutor do processo que gerencia os cliques de anúncio. Uma maneira de fazer isso é implementar vários fragmentos para uma atividade.
 title: Separe o processo de anúncio clicável
-uuid: a5254ac5-3005-483e-935e-acbbef03df0e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Separe o processo de anúncio clicável {#separate-the-clickable-ad-process}
 
-Você deve separar a lógica da interface do seu player do processo que gerencia e clica. Uma maneira de fazer isso é implementar vários fragmentos para uma atividade.
+Você deve separar a lógica da interface do usuário do seu reprodutor do processo que gerencia os cliques de anúncio. Uma maneira de fazer isso é implementar vários fragmentos para uma atividade.
 
 1. Implemente um fragmento para conter o `MediaPlayer`.
 
@@ -31,9 +28,9 @@ Você deve separar a lógica da interface do seu player do processo que gerencia
    } 
    ```
 
-1. Implemente um fragmento diferente para exibir um elemento de interface que indica que um anúncio pode ser clicado, monitore esse elemento de interface e comunique os cliques do usuário ao fragmento que contém o `MediaPlayer`.
+1. Implemente um fragmento diferente para exibir um elemento da interface do usuário que indica que um anúncio é clicável, monitorar esse elemento da interface do usuário e comunicar os cliques do usuário ao fragmento que contém o `MediaPlayer`.
 
-   Esse fragmento deve declarar uma interface para a comunicação do fragmento. O fragmento captura a implementação da interface durante seu método de ciclo de vida `onAttach()` e pode chamar os métodos da interface para se comunicar com a atividade.
+   Esse fragmento deve declarar uma interface para comunicação de fragmento. O fragmento captura a implementação da interface durante seu método de ciclo de vida `onAttach()` e pode chamar os métodos da interface para se comunicar com a atividade.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
