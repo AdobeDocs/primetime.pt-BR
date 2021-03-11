@@ -1,55 +1,52 @@
 ---
-description: O TVSDK oferece suporte à busca para uma posição específica (hora) em que o fluxo é uma lista de reprodução de janela deslizante, tanto no vídeo sob demanda (VOD) quanto nos fluxos ao vivo.
-seo-description: O TVSDK oferece suporte à busca para uma posição específica (hora) em que o fluxo é uma lista de reprodução de janela deslizante, tanto no vídeo sob demanda (VOD) quanto nos fluxos ao vivo.
-seo-title: Exibir uma barra de depuração de busca com a posição de reprodução atual
-title: Exibir uma barra de depuração de busca com a posição de reprodução atual
-uuid: a9f4dd6c-78cf-455c-8c31-b2f7b740d84a
+description: O TVSDK oferece suporte à busca para uma posição específica (hora) em que o fluxo é uma lista de reprodução de janela deslizante, tanto em fluxos de vídeo sob demanda (VOD) quanto em tempo real.
+title: Exibir uma barra de movimentação com a posição de reprodução atual
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
 
-# Exibir uma barra de depuração de busca com a posição de reprodução atual {#display-a-seek-scrub-bar-with-the-current-playback-position}
+# Exibir uma barra de movimentação com a posição de reprodução atual {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-O TVSDK oferece suporte à busca para uma posição específica (hora) em que o fluxo é uma lista de reprodução de janela deslizante, tanto no vídeo sob demanda (VOD) quanto nos fluxos ao vivo.
+O TVSDK oferece suporte à busca para uma posição específica (hora) em que o fluxo é uma lista de reprodução de janela deslizante, tanto em fluxos de vídeo sob demanda (VOD) quanto em tempo real.
 
 >[!IMPORTANT]
 >
->A busca em um fluxo ao vivo é permitida apenas para DVR.
+>A busca em direto só é permitida para DVR.
 
-1. Configure retornos de chamada para busca.
+1. Configurar retornos de chamada para busca.
 
        A busca é assíncrona, portanto, o TVSDK despacha os seguintes eventos relacionados à busca:
    
-   * `QOSEventListener.onSeekStart` - Procure iniciar.
+   * `QOSEventListener.onSeekStart` - Busca a começar.
    * `QOSEventListener.onSeekComplete` - Busca bem-sucedida.
    * `QOSEventListener.onOperationFailed` - Falha na busca.
 
-1. Aguarde o player estar em um estado válido para busca.
+1. Aguarde até que o reprodutor esteja em um estado válido para busca.
 
-   Os estados válidos são PREPARADO, COMPLETO, PAUSADO e REPRODUZIDO.
+   Os estados válidos são PREPARADO, CONCLUÍDO, PAUSADO e REPRODUZINDO.
 
 1. Use a SeekBar nativa para definir `OnSeekBarChangeListener` para ver quando o usuário está depurando.
-1. Escute `QOSEventListener.onOperationFailed` e tome as ações apropriadas.
+1. Escute `QOSEventListener.onOperationFailed` e execute as ações apropriadas.
 
-   Este evento passa o aviso apropriado. Seu aplicativo determina como continuar, por exemplo, tentando a busca novamente ou a reprodução continuada da posição anterior.
+   Esse evento passa o aviso apropriado. Seu aplicativo determina como proceder, por exemplo, experimentando a busca novamente ou continuando a reprodução a partir da posição anterior.
 
-1. Aguarde o TVSDK chamar o retorno de chamada `QOSEventListener.onSeekComplete`.
-1. Recupere a posição final ajustada de reprodução usando o parâmetro de posição do retorno de chamada.
+1. Aguarde TVSDK chamar o retorno de chamada `QOSEventListener.onSeekComplete`.
+1. Recupere a posição final de reprodução ajustada usando o parâmetro de posição do retorno de chamada.
 
-   Isso é importante porque a posição real do start após a busca pode ser diferente da posição solicitada. O comportamento de reprodução pode ser afetado se uma busca ou outro reposicionamento terminar no meio de uma pausa de anúncio ou ignorar quebras de anúncio.
+   Isso é importante porque a posição inicial real após a busca pode ser diferente da posição solicitada. O comportamento de reprodução pode ser afetado se uma busca ou outro reposicionamento terminar no meio de um ad break ou ignorar ad breaks.
 
-1. Use as informações de posição ao exibir uma barra de depuração de busca.
+1. Use as informações de posição ao exibir uma barra de movimentação.
 
 <!--<a id="example_9657AA855B6A4355B0E7D854596FFB54"></a>-->
 
-**Buscando exemplo**
+**Exemplo de busca**
 
-Neste exemplo, o usuário depura a barra de busca para buscar a posição desejada.
+Neste exemplo, o usuário movimenta a barra de busca para buscar a posição desejada.
 
 ```java
 // Use the native SeekBar to set OnSeekBarChangeListener to  
