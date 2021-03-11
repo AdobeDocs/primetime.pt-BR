@@ -1,9 +1,9 @@
 ---
-seo-title: Atualização de uma política usando a API Java
-title: Atualização de uma política usando a API Java
-uuid: 23c50f05-799e-4f5a-869b-4b5e29a36ce1
+title: Atualização de uma política usando a API do Java
+description: Atualização de uma política usando a API do Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Atualização de uma política usando a API Java {#updating-a-policy-using-the-java-api}
 
-Para atualizar uma política usando a API Java, execute as seguintes etapas:
+Para atualizar uma política usando a API do Java, execute as seguintes etapas:
 
-1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Configurar o ambiente de desenvolvimento](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) no seu projeto.
+1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Setting up the development environment](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) no seu projeto.
 1. Crie uma instância `Policy` e leia a política a partir de um arquivo ou banco de dados.
 
    ```
@@ -61,4 +61,4 @@ Para atualizar uma política usando a API Java, execute as seguintes etapas:
       out.close(); 
    ```
 
-Para obter a fonte completa desse código de amostra, consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` no diretório &quot;samples&quot; das Ferramentas de Linha de Comando de Implementação de Referência.
+Para obter a fonte completa deste código de amostra, consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` no diretório &quot;samples&quot; de Ferramentas de Linha de Comando de Implementação de Referência.
