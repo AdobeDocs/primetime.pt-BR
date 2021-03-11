@@ -1,25 +1,22 @@
 ---
-description: O TVSDK prepara objetos TimedMetadata para tags assinadas sempre que esses objetos forem encontrados no manifesto de conteúdo.
-seo-description: O TVSDK prepara objetos TimedMetadata para tags assinadas sempre que esses objetos forem encontrados no manifesto de conteúdo.
-seo-title: Assinar tags personalizadas
+description: O TVSDK prepara objetos TimedMetadata para as tags assinadas sempre que esses objetos são encontrados no manifesto de conteúdo.
 title: Assinar tags personalizadas
-uuid: f1a934bd-772e-435f-84b5-cb48db23c06e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 1%
+source-wordcount: '91'
+ht-degree: 2%
 
 ---
 
 
-# Assine tags personalizadas {#subscribe-to-custom-tags}
+# Assinar tags personalizadas {#subscribe-to-custom-tags}
 
-O TVSDK prepara objetos TimedMetadata para tags assinadas sempre que esses objetos forem encontrados no manifesto de conteúdo.
+O TVSDK prepara objetos TimedMetadata para as tags assinadas sempre que esses objetos são encontrados no manifesto de conteúdo.
 
-Antes dos start de reprodução, você deve assinar as tags. Para ser notificado sobre tags personalizadas em manifestos HLS:
+Antes de a reprodução começar, você deve assinar as tags . Para ser notificado sobre tags personalizadas em manifestos de HLS:
 
-1. Defina os nomes de tags de publicidade personalizadas globalmente transmitindo uma matriz que contenha as tags personalizadas para `setSubscribedTags` em `MediaPlayerItemConfig`.
+1. Defina os nomes personalizados das tags de publicidade globalmente, transmitindo uma matriz que contenha as tags personalizadas para `setSubscribedTags` em `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
