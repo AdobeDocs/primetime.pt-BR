@@ -1,13 +1,10 @@
 ---
 description: Você pode exibir o tempo atual e o restante do conteúdo que está sendo reproduzido.
-seo-description: Você pode exibir o tempo atual e o restante do conteúdo que está sendo reproduzido.
-seo-title: Exibir o tempo atual e o tempo restante
 title: Exibir o tempo atual e o tempo restante
-uuid: b96ade8b-1c81-4367-ba37-fc41a92d7cbc
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Você pode exibir o tempo atual e o restante do conteúdo que está sendo reproduzido.
 
-1. Para implementar uma exibição que mostre o tempo atual e restante do conteúdo ativo, use o seguinte código de amostra:
+1. Para implementar uma exibição que mostre o tempo atual e restante do conteúdo ativo, use o seguinte código de exemplo:
 
    * 
 
@@ -72,7 +69,7 @@ Você pode exibir o tempo atual e o restante do conteúdo que está sendo reprod
    } 
    ```
 
-1. Para implementar uma exibição que mostre o progresso de um anúncio e o tempo restante, use o seguinte código de exemplo:
+1. Para implementar uma exibição que mostra o progresso de um anúncio e o tempo restante, use o seguinte código de exemplo:
 
    * 
 
