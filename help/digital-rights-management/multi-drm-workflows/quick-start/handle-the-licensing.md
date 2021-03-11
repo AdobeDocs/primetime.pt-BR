@@ -1,13 +1,10 @@
 ---
-description: O licenciamento é o principal mecanismo pelo qual os usuários têm permissão ou a capacidade de reproduzir um conteúdo protegido de vídeo é negada. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado do provedor de conteúdo.
-seo-description: O licenciamento é o principal mecanismo pelo qual os usuários têm permissão ou a capacidade de reproduzir um conteúdo protegido de vídeo é negada. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado do provedor de conteúdo.
-seo-title: Licenciamento
+description: O licenciamento é o principal mecanismo pelo qual os usuários têm permissão ou a capacidade de reproduzir um conteúdo de vídeo protegido. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado do provedor de conteúdo.
 title: Licenciamento
-uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
@@ -15,24 +12,24 @@ ht-degree: 0%
 
 # Licenciamento{#licensing}
 
-O licenciamento é o principal mecanismo pelo qual os usuários têm permissão ou a capacidade de reproduzir um conteúdo protegido de vídeo é negada. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado do provedor de conteúdo.
+O licenciamento é o principal mecanismo pelo qual os usuários têm permissão ou a capacidade de reproduzir um conteúdo de vídeo protegido. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado do provedor de conteúdo.
 
-Antes que seu aplicativo ou página da Web em um dispositivo de usuário final possa reproduzir conteúdo protegido por DRM, ele deve adquirir um token de um servidor de direitos ou vitrines que você, o cliente, opere. O Adobe fornece um servidor de referência de amostra para esse fim: [Servidor de referência: Servidor de direito ExpressPlay de amostra (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Antes que seu aplicativo ou página da Web em um dispositivo de usuário final possa reproduzir conteúdo protegido por DRM, ele deve adquirir um token de um servidor de direito ou loja que você, o cliente, opere. O Adobe fornece um servidor de referência de amostra para essa finalidade: [Servidor de referência: Exemplo de SEES (ExpressPlay Entitlement Server)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
-Seu servidor de direito ou vitrine solicitará um token de licença do ExpressPlay Server relevante somente depois de verificar com seus próprios sistemas de back-end para determinar se o usuário específico está autorizado a assistir ao conteúdo solicitado. A resposta retornada da solicitação do token de licença é um URL pronto para uso para o servidor de licença ou a resposta contém o URL em uma estrutura JSON, dependendo da solução DRM com a qual você está trabalhando.
+Seu servidor de direito ou de loja solicitará um token de licença do ExpressPlay Server relevante somente após verificar seus próprios sistemas de back-end para determinar se o usuário específico tem direito a assistir o conteúdo solicitado. A resposta retornada da solicitação de token de licença é um URL pronto para uso para o servidor de licença ou a resposta contém o URL em uma estrutura JSON, dependendo da solução DRM com a qual você está trabalhando.
 
 >[!NOTE]
 >
 >A solicitação de token de licença não pode ser feita do próprio cliente:
->1. Os direitos devem ser verificados num ambiente fidedigno; e
+>1. Os direitos devem ser verificados em um ambiente confiável; e
 >1. O autenticador do cliente deve ser mantido em segredo.
 
 
 1. Faça a solicitação do token de licença.
 
-   Para um cenário de start rápido, no qual você deseja apenas verificar se os vários componentes envolvidos estão funcionando em conjunto, é possível usar algo como [!DNL curl] para fazer sua solicitação de token de licença (em vez de inicialmente colocar um aplicativo em funcionamento e testar chamadas a partir daí). Por exemplo:
+   Para um cenário de início rápido, em que você deseja apenas garantir que os vários componentes envolvidos estejam funcionando juntos, você pode usar algo como [!DNL curl] para fazer sua solicitação de token de licença (em vez de inicialmente colocar um aplicativo em execução e testar chamadas a partir daí). Por exemplo:
 
-   * Widevine:
+   * Viúva:
 
    ```
    curl "https://wv-gen.test.expressplay.com/hms/wv/token?customerAuthenticator= 
@@ -69,7 +66,7 @@ Seu servidor de direito ou vitrine solicitará um token de licença do ExpressPl
       O1PqRkx59Q2q1s2cFNrqfml8Y3RQ 
    ```
 
-   Observe que a resposta da Widevine é uma string de URL &quot;pronta para uso&quot;.
+   Observe que a resposta de Widevine é uma string de URL &quot;pronta para uso&quot;.
 
    * PlayReady:
 
@@ -107,7 +104,7 @@ Seu servidor de direito ou vitrine solicitará um token de licença do ExpressPl
    G_2Qt8RdTGJ2_Q_xtRfnj7H6C-yt6By40IhNaSQ0nNYUsY1_MtCrHXIltlVhN2Ekr_RNyTNvCjYs0V5TqzOPY"} 
    ```
 
-   Observe que a resposta PlayReady é um objeto JSON, com URL e elementos de token separados.
+   Observe que a resposta PlayReady é um objeto JSON, com elementos de URL e token separados.
 
    * FairPlay:
 
