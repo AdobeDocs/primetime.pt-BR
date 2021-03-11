@@ -1,9 +1,9 @@
 ---
-seo-title: Autenticação do usuário
 title: Autenticação do usuário
-uuid: 5cbd76b9-ff64-4a4b-8cfd-54f05c04eaa3
+description: Autenticação do usuário
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -11,10 +11,10 @@ ht-degree: 0%
 ---
 
 
-# Autenticação de usuário {#user-authentication}
+# Autenticação do usuário {#user-authentication}
 
-Uma solicitação do Adobe Primetime DRM pode conter um token de autenticação.
+Uma solicitação de DRM da Adobe Primetime pode conter um token de autenticação.
 
-Se a autenticação de nome de usuário/senha tiver sido usada, a solicitação poderá incluir um `AuthenticationToken` gerado pelo `AuthenticationHandler`. Se quiser acessar e verificar o token, é necessário usar `RequestMessageBase.getAuthenticationToken()`. Para iniciar uma solicitação de nome de usuário/senha no cliente, use o ActionScript `DRMManager.authenticate()` ou a API do iOS.
+Se a autenticação de nome de usuário/senha foi usada, a solicitação pode incluir um `AuthenticationToken` gerado pelo `AuthenticationHandler`. Se quiser acessar e verificar o token, é necessário usar `RequestMessageBase.getAuthenticationToken()`. Para iniciar uma solicitação de nome de usuário/senha no cliente, use o ActionScript `DRMManager.authenticate()` ou a API do iOS.
 
-Se o cliente e o servidor usarem um mecanismo de autenticação personalizado, o cliente obterá um token de autenticação por meio de outro canal e definirá o token de autenticação personalizado usando a API `DRMManager.setAuthenticationToken` do ActionScript 3.0. Use `RequestMessageBase.getRawAuthenticationToken()` para obter o token de autenticação personalizado. A implementação do servidor determina se o token de autenticação personalizado é válido.
+Se o cliente e o servidor usarem um mecanismo de autenticação personalizado, o cliente obterá um token de autenticação por meio de outro canal e definirá o token de autenticação personalizado usando a API `DRMManager.setAuthenticationToken` ActionScript 3.0. Use `RequestMessageBase.getRawAuthenticationToken()` para obter o token de autenticação personalizado. A implementação do servidor determina se o token de autenticação personalizado é válido.
