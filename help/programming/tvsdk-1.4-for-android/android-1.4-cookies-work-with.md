@@ -1,13 +1,10 @@
 ---
-description: Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessão, acesso à porta e assim por diante.
-seo-description: Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessão, acesso à porta e assim por diante.
-seo-title: Trabalhar com cookies
+description: Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessões, acesso à porta e assim por diante.
 title: Trabalhar com cookies
-uuid: f060b520-ceec-48ca-929f-683566fe6ae7
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 0%
 
 # Trabalhar com cookies{#work-with-cookies}
 
-Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessão, acesso à porta e assim por diante.
+Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessões, acesso à porta e assim por diante.
 
 Este é um exemplo com algum tipo de autenticação ao fazer solicitações ao servidor de chaves:
 
-1. Seu cliente entra em seu site em um navegador e seu login mostra que ele tem permissão para visualização de conteúdo.
-1. Seu aplicativo gera um token de autenticação, com base no que é esperado pelo servidor de licenças. Passe esse valor para TVSDK.
+1. O cliente entra no site em um navegador e o logon mostra que tem permissão para visualizar o conteúdo.
+1. Seu aplicativo gera um token de autenticação, com base no esperado pelo servidor de licença. Passe esse valor para TVSDK.
 1. O TVSDK define esse valor no cabeçalho do cookie.
 1. Quando o TVSDK faz uma solicitação ao servidor de chaves para obter uma chave para descriptografar o conteúdo, essa solicitação contém o valor de autenticação no cabeçalho do cookie, de modo que o servidor de chaves saiba que a solicitação é válida.
 
@@ -32,7 +29,7 @@ Para trabalhar com cookies:
 
    >[!IMPORTANT]
    >
-   >Quando o redirecionamento 302 estiver ativado, a solicitação de anúncio poderá ser redirecionada para um domínio diferente do domínio ao qual o cookie pertence.
+   >Quando o redirecionamento 302 é ativado, a solicitação de anúncio pode ser redirecionada para um domínio diferente do domínio ao qual o cookie pertence.
 
    ```java
    CookieManager cookieManager= new CookieManager(); 
@@ -44,9 +41,9 @@ Para trabalhar com cookies:
    cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
    ```
 
-   O TVSDK query este cookieManager em tempo de execução, verifica se há cookies associados ao URL e os usa automaticamente.
+   O TVSDK consulta esse cookieManager em tempo de execução, verifica se há cookies associados ao URL e os usa automaticamente.
 
-   Outra opção é usar `cookieHeaders` em `NetworkConfiguration` para definir uma string de cabeçalho de cookie arbitrária a ser usada para solicitações. Por padrão, esse cabeçalho de cookie é enviado somente com solicitações de chave. Para enviar o cabeçalho do cookie com todas as solicitações, use o método `NetworkConfiguration` `setUseCookieHeadersForAllRequests`:
+   Outra opção é usar `cookieHeaders` em `NetworkConfiguration` para definir uma string de cabeçalho de cookie arbitrária a ser usada para solicitações. Por padrão, esse cabeçalho de cookie é enviado somente com solicitações principais. Para enviar o cabeçalho do cookie com todas as solicitações, use o método `NetworkConfiguration` `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
