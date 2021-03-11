@@ -1,23 +1,20 @@
 ---
-description: O TVSDK despacha eventos de serviço de anúncios em resposta a operações de metadados programados.
-seo-description: O TVSDK despacha eventos de serviço de anúncios em resposta a operações de metadados programados.
-seo-title: Eventos de metadados de veiculação/agendamento de anúncio
-title: Eventos de metadados de veiculação/agendamento de anúncio
-uuid: fd50a937-0c9b-4c47-acb2-1ffc0592ad54
+description: O TVSDK despacha eventos de veiculação de anúncios em resposta a operações de metadados cronometrados.
+title: Eventos de metadados de veiculação de anúncios/cronometragem
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
 
-# Eventos de metadados de veiculação/agendamento de anúncio{#ad-serving-timed-metadata-events}
+# Eventos de metadados de veiculação/hora de anúncio{#ad-serving-timed-metadata-events}
 
-O TVSDK despacha eventos de serviço de anúncios em resposta a operações de metadados programados.
+O TVSDK despacha eventos de veiculação de anúncios em resposta a operações de metadados cronometrados.
 
-Para ser notificado sobre todos esses eventos relacionados, registre os ouvintes de eventos com o objeto `MediaPlayer` para os seguintes eventos.
+Para ser notificado sobre todos esses eventos relacionados, registre ouvintes de eventos com o objeto `MediaPlayer` para os seguintes eventos.
 
 | Evento | Significado |
 |---|---|
