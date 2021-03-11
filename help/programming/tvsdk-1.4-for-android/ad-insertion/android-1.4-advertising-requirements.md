@@ -1,13 +1,10 @@
 ---
-description: Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão de publicidade da Adobe Primetime.
-seo-description: Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão de publicidade da Adobe Primetime.
-seo-title: Requisitos de publicidade
+description: Você pode inserir anúncios no VOD e conteúdo ao vivo/linear usando a interface do Adobe Primetime Ad Decisioning.
 title: Requisitos de publicidade
-uuid: cadcf4b5-d86d-442d-82f1-2d40c14fc938
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 0%
 
 # Requisitos de publicidade{#advertising-requirements}
 
-Você pode inserir publicidades em seu VOD e conteúdo ao vivo/linear usando a interface de decisão de publicidade da Adobe Primetime.
+Você pode inserir anúncios no VOD e conteúdo ao vivo/linear usando a interface do Adobe Primetime Ad Decisioning.
 
-A decisão do anúncio Primetime funciona com o TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
+O Primetime ad decisioning funciona com TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
 
-Para incorporar anúncios ao seu conteúdo de vídeo, certifique-se de que a publicidade e o conteúdo de vídeo principal atendam aos seguintes requisitos:
+Para incorporar anúncios no seu conteúdo de vídeo, verifique se o anúncio e o conteúdo principal do vídeo atendem aos seguintes requisitos:
 
 * A versão HLS do conteúdo de publicidade não pode ser superior à versão HLS do conteúdo principal.
-* Os anúncios não precisam ser multiplexados (sem restrições), independentemente de o conteúdo principal ser multiplexado.
+* Os anúncios não precisam ser multiplexados (sem restrições), independentemente do conteúdo principal ser multiplexado.
 
