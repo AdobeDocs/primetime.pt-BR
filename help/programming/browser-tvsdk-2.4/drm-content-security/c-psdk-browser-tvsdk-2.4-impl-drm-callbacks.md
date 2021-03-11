@@ -1,21 +1,18 @@
 ---
-description: As novas APIs a seguir permitem que você defina retornos de chamada DRM.
-seo-description: As novas APIs a seguir permitem que você defina retornos de chamada DRM.
-seo-title: Implementação de retornos de chamada DRM
-title: Implementação de retornos de chamada DRM
-uuid: a54c5ec2-299f-47b0-b65b-eed5656ab6aa
+description: As novas APIs a seguir permitem definir retornos de chamada de DRM.
+title: Implementar retornos de chamada de DRM
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
 
-# Implementação de retornos de chamada DRM{#implementing-drm-callbacks}
+# Implementando retornos de chamada de DRM{#implementing-drm-callbacks}
 
-As novas APIs a seguir permitem que você defina retornos de chamada DRM.
+As novas APIs a seguir permitem definir retornos de chamada de DRM.
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
@@ -42,7 +39,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-Você pode definir uma função de retorno de chamada (por exemplo, `onCertificateResponseCallback`) para processar uma resposta de certificado de texto e definir a função como `drmManager` usando a API `setCertificateResponseCallback`. Você pode definir `setCertificateResponseCallback` para substituir o comportamento padrão. Por exemplo, se você tiver um `certificateResponseType` diferente de `ArrayBuffer`, poderá usar esse retorno de chamada para converter a resposta do certificado para o tipo `ArrayBuffer`.
+Você pode definir uma função de retorno de chamada (por exemplo, `onCertificateResponseCallback`) para processar uma resposta de certificado de texto e definir a função como `drmManager` usando a API `setCertificateResponseCallback`. Você pode definir `setCertificateResponseCallback` para substituir o comportamento padrão. Por exemplo, se você tiver um `certificateResponseType` que seja diferente de `ArrayBuffer`, poderá usar esse retorno de chamada para converter a resposta do certificado para o tipo `ArrayBuffer`.
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -69,7 +66,7 @@ drmManager.setCertificateResponseCallback(onCertificateResponseCallback);
 
 <!--<a id="section_4DCC1B3ABCED484EB5340A558C9A770A"></a>-->
 
-Você pode definir funções de retorno de chamada para analisar a mensagem de licença e a resposta da licença e passá-las em uma chamada para `drmManager.acquireLicense`. `onLicenseResponseCallback` é um novo parâmetro na  `acquireLicense` API.
+Você pode definir funções de retorno de chamada para analisar a mensagem da licença e a resposta da licença e passá-las em uma chamada para `drmManager.acquireLicense`. `onLicenseResponseCallback` é um novo parâmetro na  `acquireLicense` API.
 
 ```js
 var base64EncodeUint8Array = function (input) { 
@@ -140,4 +137,4 @@ Nos dados de Proteção, o novo campo **[!UICONTROL certificateResponseType]** �
 }
 ```
 
-Usar o campo `certificateResponseType` é opcional. Se não for usado, presume-se que o valor seja `ArrayBuffer`.
+O uso do campo `certificateResponseType` é opcional. Se não for usado, o valor será considerado `ArrayBuffer`.
