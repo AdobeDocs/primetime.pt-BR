@@ -1,26 +1,23 @@
 ---
-description: Complete as etapas a seguir para criar um player básico usando o TVSDK do navegador.
-seo-description: Complete as etapas a seguir para criar um player básico usando o TVSDK do navegador.
-seo-title: Criar um player básico usando TVSDK
-title: Criar um player básico usando TVSDK
-uuid: ec15cf53-197f-4190-a6b2-600a57815390
+description: Complete as etapas a seguir para criar um reprodutor básico usando o Browser TVSDK.
+title: Criar um reprodutor básico usando TVSDK
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
 
-# Criar um player básico usando TVSDK{#create-a-basic-player-using-tvsdk}
+# Criar um reprodutor básico usando TVSDK{#create-a-basic-player-using-tvsdk}
 
-Complete as etapas a seguir para criar um player básico usando o TVSDK do navegador.
+Complete as etapas a seguir para criar um reprodutor básico usando o Browser TVSDK.
 
-1. Crie um novo diretório no qual você pode baixar os arquivos compactados para TVSDK do navegador.
-1. Baixe o navegador TVSDK do Zendesk, descompacte os arquivos e coloque a pasta frameworks no novo diretório.
+1. Crie um novo diretório no qual você pode baixar os arquivos compactados para Browser TVSDK.
+1. Baixe o Browser TVSDK do Zendesk, descompacte os arquivos e coloque a pasta de estruturas no novo diretório.
 1. Crie um padrão estereotipado HTML simples para o código com um `div` nele.
-1. Coloque este padrão estereotipado em um arquivo HTML no diretório criado na etapa 1.
+1. Coloque este padrão estereotipado em um arquivo HTML no diretório que você criou na etapa 1.
 
    ```
    <!DOCTYPE html> 
@@ -36,7 +33,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
    </html>
    ```
 
-1. Adicione as bibliotecas TVSDK do navegador na seção head.
+1. Adicione as bibliotecas TVSDK do navegador na seção do cabeçalho.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -45,16 +42,16 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. Para a tag body, adicione a seção `onLoad`.
+1. Para a tag body , adicione a seção `onLoad` .
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Start que implementa a função `startVideo`.
+1. Comece a implementar a função `startVideo`.
 1. Adicione uma tag de script e crie a função `startVideo` na tag .
 
-   Isso deveria estar na seção de cabeçalho da página.
+   Isso deve estar na seção de cabeçalho da página.
 
    ```js
    <script> 
@@ -73,7 +70,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
 
    >[!TIP]
    >
-   >É aqui que o `div` que você criou anteriormente é usado.
+   >É aqui que o `div` criado anteriormente é usado.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -81,7 +78,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
    player.view = view;
    ```
 
-1. Adicione o ouvinte do evento do player.
+1. Adicione o ouvinte de evento do player.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
@@ -144,7 +141,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
    }; 
    ```
 
-1. Crie `MediaResource`, que passa pelo link M3U8 (ou mpd).
+1. Crie o `MediaResource`, que passa o link M3U8 (ou mpd).
 
    ```js
    var resourceUrl = "https://example.com/a/yourUrl.m3u8"; 
@@ -160,7 +157,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Quando o player estiver no estado INICIALIZADO, chame `prepareToPlay`.
+1. Quando o reprodutor estiver no estado INICIALIZADO, chame `prepareToPlay`.
 
    ```js
    case INITIALIZED: 
@@ -168,7 +165,7 @@ Complete as etapas a seguir para criar um player básico usando o TVSDK do naveg
     break;
    ```
 
-1. Depois que o player estiver no estado PREPARADO, chame `play`.
+1. Depois que o reprodutor estiver no estado PREPARADO, chame `play`.
 
    ```js
    case PREPARED: 
