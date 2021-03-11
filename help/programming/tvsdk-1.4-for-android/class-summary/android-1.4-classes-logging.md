@@ -1,21 +1,18 @@
 ---
-description: Essas classes permitem que você personalize o registro em log.
-seo-description: Essas classes permitem que você personalize o registro em log.
-seo-title: Classes de registro
+description: Essas classes permitem personalizar o registro.
 title: Classes de registro
-uuid: 8b07472e-b529-4c35-b49b-a499debfcff0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
 
-# Registrar classes{#logging-classes}
+# Registrando classes{#logging-classes}
 
-Essas classes permitem que você personalize o registro em log.
+Essas classes permitem personalizar o registro.
 
 Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/package-summary.html)
 
@@ -33,7 +30,7 @@ Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" rowsep="0"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/LogEntry.html" format="html" scope="external"> LogEntry</a> </span></td> 
-   <td colname="2" rowsep="0"> Classe. Define um log de entrada e armazena informações sobre uma mensagem de log. </td> 
+   <td colname="2" rowsep="0"> Classe. Define um log de entrada e mantém informações sobre uma mensagem de log. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/LogFactory.html" format="html" scope="external"> LogFactory</a> </span></td> 
@@ -41,7 +38,7 @@ Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a> </span></td> 
-   <td colname="2">Interface. Os métodos necessários para implementar um agente de log personalizado para a frase <code>primetime-sdk-name</code>. </td> 
+   <td colname="2">Interface. Os métodos necessários para implementar um agente de log personalizado para a Frase <code>primetime-sdk-name</code>. </td> 
   </tr> 
  </tbody>
 </table>
