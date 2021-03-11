@@ -1,9 +1,9 @@
 ---
-seo-title: Licenças de pré-carregamento para reprodução offline visão geral
-title: Licenças de pré-carregamento para reprodução offline visão geral
-uuid: 71e5169b-7f70-4723-9f9b-fdff822c5876
+title: Visão geral das licenças de pré-carregamento para reprodução offline
+description: Visão geral das licenças de pré-carregamento para reprodução offline
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9bbcb228d3367fbf53de811bf2941ca653ce3b0e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 0%
@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Licenças de pré-carregamento para reprodução offline {#pre-loading-licenses-for-offline-playback}
 
-Você pode pré-carregar as licenças necessárias para reproduzir conteúdo protegido pelo Primetime DRM. As licenças pré-carregadas permitem que os usuários visualizações o conteúdo, independentemente de terem ou não uma conexão ativa com a Internet.
+Você pode pré-carregar as licenças necessárias para reproduzir conteúdo protegido pelo DRM do Primetime. As licenças pré-carregadas permitem que os usuários visualizem o conteúdo, independentemente de terem ou não uma conexão ativa com a Internet.
 
-O próprio processo de pré-carregamento *não* requer uma conexão com a Internet. Você pode usar `DRMManager.loadVoucher()` antecipadamente para pré-carregar licenças. Posteriormente, quando o cliente deseja reproduzir o conteúdo desejado, o sistema DRM foi pré-inicializado e pode reproduzir o conteúdo protegido imediatamente.
+O próprio processo de pré-carregamento *faz* necessita de uma ligação à Internet. Você pode usar `DRMManager.loadVoucher()` antecipadamente para pré-carregar as licenças. Posteriormente, quando o cliente deseja reproduzir o conteúdo desejado, o sistema DRM foi pré-preparado e pode reproduzir o conteúdo protegido imediatamente.
