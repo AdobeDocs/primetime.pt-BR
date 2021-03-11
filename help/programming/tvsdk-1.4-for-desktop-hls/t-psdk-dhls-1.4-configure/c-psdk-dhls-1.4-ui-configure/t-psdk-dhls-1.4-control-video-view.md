@@ -1,13 +1,10 @@
 ---
-description: É possível controlar a posição e o tamanho da visualização de vídeo usando o objeto MediaPlayerView.
-seo-description: É possível controlar a posição e o tamanho da visualização de vídeo usando o objeto MediaPlayerView.
-seo-title: Controlar a posição e o tamanho da visualização de vídeo
-title: Controlar a posição e o tamanho da visualização de vídeo
-uuid: 2231c574-03cd-45a8-ab00-4a42f8e044f0
+description: É possível controlar a posição e o tamanho da exibição de vídeo usando o objeto MediaPlayerView .
+title: Controlar a posição e o tamanho da exibição de vídeo
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Controlar a posição e o tamanho da visualização de vídeo{#control-the-position-and-size-of-the-video-view}
 
-É possível controlar a posição e o tamanho da visualização de vídeo usando o objeto MediaPlayerView.
+É possível controlar a posição e o tamanho da exibição de vídeo usando o objeto MediaPlayerView .
 
-Por padrão, o TVSDK tenta manter a proporção da visualização de vídeo sempre que o tamanho ou a posição do vídeo mudar (devido a uma alteração feita pelo aplicativo, ou por um switch de perfil, ou por um switch de conteúdo etc.).
+Por padrão, o TVSDK tenta manter a proporção da exibição de vídeo sempre que o tamanho ou a posição do vídeo é alterado (devido a uma alteração feita pelo aplicativo, por um switch de perfil, por um switch de conteúdo etc.).
 
-Você pode substituir o comportamento padrão de proporção especificando uma *política de escala* diferente. Especifique a política de escala usando a propriedade `MediaPlayerView` do objeto `scalePolicy`. A política de escala padrão de `MediaPlayerView` é definida com uma instância da classe `MaintainAspectRatioScalePolicy`. Para redefinir a política de escala, substitua a instância padrão de `MaintainAspectRatioScalePolicy` em `MediaPlayerView.scalePolicy` por sua própria política. (Não é possível definir a propriedade `scalePolicy` como um valor nulo.)
+Você pode substituir o comportamento da taxa de proporção padrão especificando uma *política de escala* diferente. Especifique a política de escala usando a propriedade `MediaPlayerView` do objeto `scalePolicy`. A política de escala padrão de `MediaPlayerView` é definida com uma instância da classe `MaintainAspectRatioScalePolicy`. Para redefinir a política de escala, substitua a instância padrão de `MaintainAspectRatioScalePolicy` em `MediaPlayerView.scalePolicy` por sua própria política. (Não é possível definir a propriedade `scalePolicy` para um valor nulo.)
 
 1. Implemente a interface `MediaPlayerViewScalePolicy` para criar sua própria política de escala.
 
@@ -61,7 +58,7 @@ Você pode substituir o comportamento padrão de proporção especificando uma *
    >}
    >```
 
-1. Atribua sua implementação à propriedade `MediaPlayerView`.
+1. Atribua sua implementação à propriedade `MediaPlayerView` .
 
    ```
    var view:MediaPlayerView = MediaPlayerView.create(stage.stageVideos[0]); 
