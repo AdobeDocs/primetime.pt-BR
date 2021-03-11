@@ -1,9 +1,9 @@
 ---
-seo-title: Scrambler de senha
-title: Scrambler de senha
-uuid: e488babc-cd50-41b9-acb8-490e8e42e8bc
+title: Scrambler Senha
+description: Scrambler Senha
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Scrambler de senha {#password-scrambler}
 
-O utilitário Scrambler de senha criptografa uma senha para que ela possa ser usada no Adobe Access Server para arquivos de configuração do Protected Streaming. Para executar o script, execute o comando:
+O utilitário Scrambler de senha criptografa uma senha para que ela possa ser usada no Adobe Access Server para arquivos de configuração de fluxo protegido. Para executar o script, execute o comando:
 
 ```
 Scrambler.bat password 
@@ -31,9 +31,9 @@ O utilitário gera a seguinte mensagem:
 Encrypted password: scrambled-password 
 ```
 
-Todas as senhas especificadas em flashaccess-global.xml e flashaccess-locatário.xml devem ser criptografadas.
+Todas as senhas especificadas em flashaccess-global.xml e flashaccess-tenant.xml devem ser criptografadas.
 
 >[!NOTE]
 >
->O utilitário Scrambler de senha no Adobe Access Server para streaming protegido não é intercambiável com o sambler fornecido com o Servidor de licença de implementação de referência.
+>O utilitário Scrambler de senha no Adobe Access Server for Protected Streaming não é intercambiável com o sambler fornecido com o Servidor de licença de implementação de referência.
 
