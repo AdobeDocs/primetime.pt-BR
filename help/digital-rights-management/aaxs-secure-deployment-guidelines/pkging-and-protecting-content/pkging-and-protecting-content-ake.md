@@ -1,9 +1,9 @@
 ---
-seo-title: Criptografia de chave assimétrica
 title: Criptografia de chave assimétrica
-uuid: 0aae25f1-a609-4c73-9aef-13f8ae63f6e1
+description: Criptografia de chave assimétrica
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # Criptografia de chave assimétrica{#asymmetric-key-encryption}
 
-A criptografia de chave assimétrica (também chamada de criptografia de chave pública) usa pares de chaves. É utilizada uma chave para encriptação; a outra para decodificação. A chave de decodificação é mantida secreta e é chamada de *chave privada*. A chave de criptografia, chamada de *chave pública*, é disponibilizada para qualquer pessoa autorizada a criptografar conteúdo. Qualquer pessoa com acesso à chave pública pode criptografar o conteúdo, mas somente alguém com acesso à chave privada pode descriptografá-lo. A chave privada não pode ser reconstruída a partir da chave pública.
+A criptografia de chave assimétrica (também chamada de criptografia de chave pública) usa pares de chaves. É utilizada uma chave para encriptação; o outro para descriptografia. A chave de descriptografia é mantida secreta e é chamada de *chave privada*. A chave de criptografia, chamada de *chave pública*, é disponibilizada para qualquer pessoa autorizada a criptografar conteúdo. Qualquer pessoa com acesso à chave pública pode criptografar o conteúdo, mas somente alguém com acesso à chave privada pode descriptografar o conteúdo. A chave privada não pode ser reconstruída a partir da chave pública.
 
-Ao empacotar conteúdo, a chave pública do License Server é usada para criptografar a chave de criptografia de conteúdo (CEK) nos metadados do DRM. Você deve garantir que somente o License Server tenha acesso à chave privada do License Server; se outra pessoa tiver a chave, ela poderá descriptografar e visualização o conteúdo.
+Ao empacotar conteúdo, a chave pública do License Server é usada para criptografar a chave de criptografia de conteúdo (CEK) nos metadados DRM. Você deve garantir que somente o License Server tenha acesso à chave privada do License Server; se outra pessoa tiver a chave, ela poderá descriptografar e exibir o conteúdo.
 
-***Cuidado:**certifique-se de obter o certificado do License Server (que contém a chave pública) de uma fonte confiável para ter certeza de que é a chave do License Server e não uma chave pública desconhecida. Se um invasor substituísse a chave pública pela chave do License Server, ele seria capaz de descriptografar seu conteúdo.*
+***Cuidado:**certifique-se de obter o certificado do License Server (contendo a chave pública) de uma fonte confiável para ter certeza de que é a chave do License Server, e não uma chave pública não autorizada. Se um invasor substituísse sua chave pública pela chave do License Server, ele seria capaz de descriptografar seu conteúdo.*
 
-Para obter mais informações sobre como empacotar conteúdo, consulte *Usando o SDK de acesso ao Adobe para proteger conteúdo*.
+Para obter mais informações sobre como empacotar conteúdo, consulte *Usar o SDK de acesso ao Adobe para proteger conteúdo*.
