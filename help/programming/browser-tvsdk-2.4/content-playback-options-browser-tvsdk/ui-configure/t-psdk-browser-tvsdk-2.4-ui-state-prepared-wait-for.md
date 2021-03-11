@@ -1,13 +1,10 @@
 ---
 description: Antes de usar a maioria dos métodos do player TVSDK do navegador, o player deve estar em um estado válido.
-seo-description: Antes de usar a maioria dos métodos do player TVSDK do navegador, o player deve estar em um estado válido.
-seo-title: Aguardar um estado válido
 title: Aguardar um estado válido
-uuid: 0add29a8-fbd8-483a-8c99-e4bc6de9e3d3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
@@ -17,15 +14,15 @@ ht-degree: 0%
 
 Antes de usar a maioria dos métodos do player TVSDK do navegador, o player deve estar em um estado válido.
 
-O jogador passa por vários estados. Aguardar o player no estado correto garante que o recurso de mídia tenha sido carregado com êxito. Se o player não estiver no estado necessário, muitos métodos do player lançam `IllegalStateException`.
+O reprodutor passa por vários estados. Aguardar o estado correto do reprodutor garante que este tenha sido carregado com êxito. Se o reprodutor não estiver no estado exigido, muitos métodos do reprodutor exibirão `IllegalStateException`.
 
 O estado necessário geralmente é PREPARADO.
 
-1. Para confirmar que o estado está PREPARADO:
+1. Para confirmar que o estado é PREPARADO:
 
-   Quando o player estiver inicializando, aguarde o TVSDK do navegador despachar o evento `AdobePSDK.MediaPlayerStatusChangeEvent` com um `event.status` de `MediaPlayerStatus.PREPARED`.
+   Quando o reprodutor estiver inicializando, aguarde o Browser TVSDK despachar o evento `AdobePSDK.MediaPlayerStatusChangeEvent` com um `event.status` de `MediaPlayerStatus.PREPARED`.
 
-   Para verificar se o estado atual do objeto MediaPlayer é pelo menos PREPARADO.
+   Para verificar se o estado atual do objeto MediaPlayer é, pelo menos, PREPARADO.
 
    ```
    <readonly> status :AdobePSDK.MediaPlayerStatus
