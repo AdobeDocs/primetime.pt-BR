@@ -1,13 +1,10 @@
 ---
-description: Usamos o empacotador Bento4 e o empacotador offline Adobe para criar conteúdo DASH criptografado. Bento4 assume como entrada conteúdo mp4 não criptografado.
-seo-description: Usamos o empacotador Bento4 e o empacotador offline Adobe para criar conteúdo DASH criptografado. Bento4 assume como entrada conteúdo mp4 não criptografado.
-seo-title: Compacte seu conteúdo com o Bento4
+description: Usamos o pacote Bento4 e o Adobe offline packager para criar conteúdo DASH criptografado. O Bento4 assume como entrada conteúdo mp4 não criptografado.
 title: Compacte seu conteúdo com o Bento4
-uuid: 88323a4e-d0b5-4a41-acec-7126d3e0c90b
 translation-type: tm+mt
-source-git-commit: 75702ea2a524d7b38bb9ac83cb094c8482b1098f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -15,15 +12,15 @@ ht-degree: 0%
 
 # Conteúdo de empacotamento para Widevine e PlayReady {#package-for-widevine}
 
-Usamos o empacotador Bento4 e o empacotador offline Adobe para criar conteúdo DASH criptografado. Bento4 assume como entrada conteúdo mp4 não criptografado.
+Usamos o pacote Bento4 e o Adobe offline packager para criar conteúdo DASH criptografado. O Bento4 assume como entrada conteúdo mp4 não criptografado.
 
-## Empacote seu conteúdo com Bento4{#package-your-content-with-bento}
+## Embale seu conteúdo com o Bento4{#package-your-content-with-bento}
 
-O empacotador Bento4 espera que a entrada mp4 seja pré-fragmentada. A distribuição do empacotador Bento4 inclui uma ferramenta para isso.
+O empacotador Bento4 espera que o mp4 de entrada seja pré-fragmentado. A distribuição do empacotador Bento4 inclui uma ferramenta para isso.
 
-**Chamando Bento4**
+**Chamada de Bento4**
 
-As invocações típicas do empacotador Bento4 seriam semelhantes aos exemplos abaixo:
+As invocações típicas do Bento4 packager seriam semelhantes aos exemplos abaixo:
 
 ```
 ./mp4dash
@@ -48,7 +45,7 @@ As invocações típicas do empacotador Bento4 seriam semelhantes aos exemplos a
 --playready-header=\"LA_URL:http://pr.test.expressplay.com/playready/RightsManager.asmx\"
 ```
 
-O exemplo abaixo combina esquemas PlayReady e Widevine. Nesse caso específico, o empacotador está adicionando dados de inicialização de proteção de conteúdo do Widevine e PlayReady ao conteúdo de saída DASH.
+O exemplo abaixo combina esquemas PlayReady e Widevine. Nesse caso específico, o empacotador está adicionando dados de inicialização da proteção de conteúdo Widevine e PlayReady ao conteúdo DASH de saída.
 
 ```
 /mp4dash
@@ -64,17 +61,17 @@ O exemplo abaixo combina esquemas PlayReady e Widevine. Nesse caso específico, 
 -o "CC_300_640x360_DASH"
 ```
 
-where
+em que
 
 O valor do sinalizador `--encryption-key` está no formato `<base16 encoded key id>:<base16 encoded encryption key>`.
 
-O sinalizador `--widevine-header=provider:intertrust#content_id:2a` diz ao empacotador para incluir a caixa pssh no manifesto, que o TVSDK atualmente requer para reprodução.
+O sinalizador `--widevine-header=provider:intertrust#content_id:2a` informa ao empacotador para incluir a caixa de push no manifesto, que o TVSDK atualmente requer para reprodução.
 
-O valor para `-playready-header` é para aquisição de licença PlayReady.
+O valor de `-playready-header` é para aquisição da licença PlayReady.
 
 ## Compacte seu conteúdo com o Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}
 
-O Adobe Offline Packager utiliza como entrada conteúdo mp4 não criptografado.
+O Adobe Offline Packager assume como entrada conteúdo mp4 não criptografado.
 
 **Chamando o Adobe Offline Packager**
 
@@ -92,7 +89,7 @@ http://pr.test.expressplay.com/playready/RightsManager.asmx
 -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 ```
 
-Nesse caso específico, o empacotador offline está adicionando dados de inicialização de proteção de conteúdo do Widevine e PlayReady ao conteúdo de saída DASH. O valor de `-key_file_path` é para uma chave codificada em base64. O valor de `-playready_LA_URL` é para aquisição de licença PlayReady.
+Nesse caso específico, o empacotador offline está adicionando dados de inicialização de proteção de conteúdo Widevine e PlayReady ao conteúdo DASH de saída. O valor de `-key_file_path` é para uma chave codificada em base64. O valor de `-playready_LA_URL` é para aquisição da licença PlayReady.
 
 O argumento conf_path aponta para o arquivo de configuração que conteria o seguinte:
 
@@ -104,4 +101,4 @@ O argumento conf_path aponta para o arquivo de configuração que conteria o seg
 </config>
 ```
 
-Porque certos dispositivos Android... principalmente a Amazon Fire TV — não suporta a descriptografia de áudio, a criptografia de áudio é opcional.
+Como certos dispositivos Android — principalmente o Amazon Fire TV — não suportam a descriptografia de áudio, a criptografia de áudio é opcional.
