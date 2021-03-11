@@ -1,21 +1,18 @@
 ---
-description: Quando a decisão do anúncio Primetime encontra um anúncio VAST (criativo) vazio ou com um tipo de mídia inválido para HLS, ela avalia os anúncios de fallback para determinar o que retornar.
-seo-description: Quando a decisão do anúncio Primetime encontra um anúncio VAST (criativo) vazio ou com um tipo de mídia inválido para HLS, ela avalia os anúncios de fallback para determinar o que retornar.
-seo-title: Comportamento de fallback do anúncio para VAST e VMAP
-title: Comportamento de fallback do anúncio para VAST e VMAP
-uuid: 612416b9-d070-42e2-b68b-74ba52023345
+description: Quando o Primetime ad decisioning encontra um anúncio VAST (criativo) vazio ou com um tipo de mídia inválido para HLS, ele avalia os anúncios de fallback para determinar o que retornar.
+title: Comportamento de fallback de anúncio para VAST e VMAP
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
 
 
-# Comportamento de fallback do anúncio para VAST e VMAP {#ad-fallback-behavior-for-vast-and-vmap}
+# Comportamento de fallback de anúncio para VAST e VMAP {#ad-fallback-behavior-for-vast-and-vmap}
 
-Quando a decisão do anúncio Primetime encontra um anúncio VAST (criativo) vazio ou com um tipo de mídia inválido para HLS, ela avalia os anúncios de fallback para determinar o que retornar.
+Quando o Primetime ad decisioning encontra um anúncio VAST (criativo) vazio ou com um tipo de mídia inválido para HLS, ele avalia os anúncios de fallback para determinar o que retornar.
 
 <!--<a id="section_9F60AF00CE9645848EAAF8C06A9E426B"></a>-->
 
@@ -25,11 +22,11 @@ Quando há anúncios de fallback independentes, o plug-in de decisão do Primeti
 
 1. Se o reempacotamento estiver ativado, a primeira ocorrência de um anúncio com um tipo de mídia inválido será tratada como outros tipos de mídia inválidos.
 
-   Se a reembalagem falhar, esse processo se aplica a ocorrências adicionais do anúncio.
+   Se o reempacotamento falhar, esse processo se aplica às ocorrências adicionais do anúncio.
 1. Se o TVSDK não encontrar anúncios de fallback válidos, ele retornará o anúncio original com o tipo de mídia inválido.
-1. Se um anúncio de fallback com um tipo MIME válido for retornado em vez do anúncio original, a decisão do anúncio Primetime envia o código de erro 403 para o URL de erro VAST, se disponível.
-1. Se um anúncio de fallback for um invólucro e retornar vários anúncios, somente os anúncios com o tipo de mídia correto serão retornados.
+1. Se um anúncio de fallback com um tipo MIME válido for retornado em vez do anúncio original, o Primetime ad decisioning enviará o código de erro 403 para o URL de erro VAST, se disponível.
+1. Se um anúncio de fallback for um wrapper e retornar vários anúncios, somente os anúncios com o tipo de mídia correto serão retornados.
 
 >[!IMPORTANT]
 >
->Esse comportamento é sempre ativado para anúncios em invólucros VAST. Para anúncios VAST em linha em um VMAP, o comportamento é desativado por padrão, mas seu aplicativo pode ativá-lo.
+>Esse comportamento é sempre ativado para anúncios em invólucros VAST. Para anúncios VAST em linha em um VMAP, o comportamento é desativado por padrão, mas o aplicativo pode habilitá-lo.
