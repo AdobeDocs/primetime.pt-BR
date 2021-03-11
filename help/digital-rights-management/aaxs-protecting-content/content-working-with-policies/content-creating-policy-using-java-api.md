@@ -1,9 +1,9 @@
 ---
-seo-title: Criação de uma política usando a API Java
-title: Criação de uma política usando a API Java
-uuid: c653548d-4abf-46b9-8669-d68b966da359
+title: Criação de uma política usando a API do Java
+description: Criação de uma política usando a API do Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # Criação de uma política usando a API Java {#creating-a-policy-using-the-java-api}
 
-Para criar uma política usando a API Java, execute as seguintes etapas:
+Para criar uma política usando a API do Java, execute as seguintes etapas:
 
-1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Configurar o ambiente de desenvolvimento](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) no seu projeto.
-1. Crie um objeto `com.adobe.flashaccess.sdk.policy.Policy` e especifique suas propriedades, como direitos, duração do armazenamento em cache de licenças e data de término da política.
+1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Setting up the development environment](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) no seu projeto.
+1. Crie um objeto `com.adobe.flashaccess.sdk.policy.Policy` e especifique suas propriedades, como direitos, duração do armazenamento em cache de licenças e data final da política.
 
    ```java
      // Create a new Policy object.  
@@ -52,7 +52,7 @@ Para criar uma política usando a API Java, execute as seguintes etapas:
      }
    ```
 
-1. Serialize o objeto `Policy` e armazene-o em um arquivo ou banco de dados.
+1. Serialize o objeto `Policy` e o armazene em um arquivo ou banco de dados.
 
    ```java
      // Serialize the policy  
