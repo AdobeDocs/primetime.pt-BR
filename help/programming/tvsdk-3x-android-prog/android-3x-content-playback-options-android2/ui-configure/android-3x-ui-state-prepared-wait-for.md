@@ -1,13 +1,10 @@
 ---
-description: Antes de usar a maioria dos métodos do player TVSDK, o player deve estar em um status válido.
-seo-description: Antes de usar a maioria dos métodos do player TVSDK, o player deve estar em um status válido.
-seo-title: Aguarde um status válido
-title: Aguarde um status válido
-uuid: 7a86b4cf-f7a0-4d90-9ff2-401640a395c5
+description: Antes de usar a maioria dos métodos do reprodutor TVSDK, o reprodutor deve estar em um status válido.
+title: Aguardar um status válido
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Aguarde um status válido {#wait-for-a-valid-status}
 
-Com o TVSDK, você pode controlar a experiência básica de reprodução de vídeo e ao vivo sob demanda (VOD). O TVSDK fornece métodos e propriedades na instância do player que você pode usar para configurar a interface do usuário do player.
+Com o TVSDK, você pode controlar a experiência básica de reprodução de vídeo ao vivo e sob demanda (VOD). O TVSDK fornece métodos e propriedades na instância do reprodutor que você pode usar para configurar a interface do usuário do reprodutor.
 
-Antes de usar a maioria dos métodos do player TVSDK, o player deve estar em um status válido.
+Antes de usar a maioria dos métodos do reprodutor TVSDK, o reprodutor deve estar em um status válido.
 
-Aguardar o status correto do player garante que o recurso de mídia tenha sido carregado com êxito. Se o player não tiver pelo menos o status necessário, muitos métodos do player lançarão `MediaPlayerException`.
+Aguardar o status correto do reprodutor garante que ele tenha sido carregado com êxito. Se o reprodutor não tiver pelo menos o status necessário, muitos métodos do reprodutor exibirão `MediaPlayerException`.
 
 O status necessário geralmente é PREPARADO. Quando isso ocorre, a rotina de retorno de chamada para `StatusChangeEventListener.onStatusChanged()` é executada.
 
