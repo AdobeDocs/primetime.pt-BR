@@ -1,13 +1,10 @@
 ---
-description: A otimização do redirecionamento 302 minimiza o número de respostas de redirecionamento 302, o que permite que o aplicativo balanceamento de carga seja mais eficiente.
-seo-description: A otimização do redirecionamento 302 minimiza o número de respostas de redirecionamento 302, o que permite que o aplicativo balanceamento de carga seja mais eficiente.
-seo-title: Desabilitar ou habilitar a otimização de redirecionamento 302
-title: Desabilitar ou habilitar a otimização de redirecionamento 302
-uuid: 7561839f-aec6-4a59-a07a-7e4fa043fdc2
+description: A otimização de redirecionamento 302 minimiza o número de 302 respostas de redirecionamento, o que permite que o aplicativo balanceamento de carga com mais eficiência.
+title: Desative ou ative a otimização de redirecionamento 302
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '104'
 ht-degree: 1%
 
 ---
@@ -15,15 +12,15 @@ ht-degree: 1%
 
 # Otimização de redirecionamento HTTP 302 {#http-302-redirect-optimization}
 
-A otimização do redirecionamento 302 minimiza o número de respostas de redirecionamento 302, o que permite que o aplicativo balanceamento de carga seja mais eficiente.
+A otimização de redirecionamento 302 minimiza o número de 302 respostas de redirecionamento, o que permite que o aplicativo balanceamento de carga com mais eficiência.
 
-Se uma solicitação de manifesto principal for redirecionada e a otimização 302 estiver ativada no player, as solicitações subsequentes feitas para ativos desse manifesto usarão o local de domínio final, o que evita 302 respostas adicionais.
+Se uma solicitação de manifesto principal for redirecionada e a otimização 302 estiver ativada no reprodutor, as solicitações subsequentes feitas para ativos desse manifesto usarão o local de domínio final, o que evita respostas adicionais 302.
 
 Esse recurso é ativado por padrão e você pode alterar essa configuração.
 
-## Desativar ou ativar a otimização de redirecionamento 302{#disable-or-enable-redirect-optimization}
+## Desative ou ative a otimização de redirecionamento 302{#disable-or-enable-redirect-optimization}
 
-Use a propriedade `useRedirectedUrl` para ativar o redirecionamento 302 (true) ou desativar (false).
+Use a propriedade `useRedirectedUrl` para ativar ou desativar o redirecionamento 302 (true).
 Por exemplo:
 
 ```java
