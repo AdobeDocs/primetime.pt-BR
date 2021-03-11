@@ -1,9 +1,9 @@
 ---
-seo-title: Obter certificados de AC de domínio
-title: Obter certificados de AC de domínio
-uuid: 41bbe02b-363a-47f4-9cc0-350730b6c787
+title: Obter certificados de AC de Domínio
+description: Obter certificados de AC de Domínio
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
@@ -11,16 +11,16 @@ ht-degree: 0%
 ---
 
 
-# Obter certificados de AC de domínio{#obtain-domain-ca-certificates}
+# Obter certificados de AC de Domínio{#obtain-domain-ca-certificates}
 
-Ao contrário do certificado de Servidor de Licença, Packager ou Transport, o certificado de CA de Domínio não é emitido pelo Adobe. Você pode obter esse certificado de uma autoridade de certificação ou gerar um certificado autoassinado para usar para essa finalidade.
+Ao contrário do License Server, do Packager ou do Certificado de Transporte, o certificado da autoridade de certificação de domínio não é emitido pelo Adobe. Você pode obter esse certificado de uma autoridade de certificação ou gerar um certificado autoassinado para uso com essa finalidade.
 
-O certificado da CA de domínio deve usar uma chave de 1024 bits e conter os atributos padrão necessários em um certificado da CA:
+O certificado de autoridade de certificação de domínio deve usar uma chave de 1024 bits e conter os atributos padrão necessários em um certificado de autoridade de certificação:
 
-* Extensão Restrições básicas com sinalizador CA definido como true
-* A extensão de uso de chave que especifica a Assinatura de certificado é permitida
+* Extensão Restrições Básicas com o sinalizador CA definido como true
+* A extensão de Uso de Chave que especifica a Assinatura de Certificado é permitida
 
-Por exemplo, usando o OpenSSL, um certificado CA autoassinado pode ser gerado da seguinte forma:
+Por exemplo, usando OpenSSL, um certificado CA autoassinado pode ser gerado da seguinte maneira:
 
 1. Crie um arquivo chamado [!DNL ca-extensions.txt] contendo:
 
