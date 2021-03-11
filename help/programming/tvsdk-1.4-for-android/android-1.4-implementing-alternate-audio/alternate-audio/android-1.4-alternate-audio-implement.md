@@ -1,26 +1,23 @@
 ---
-description: O áudio de ligação tardia utiliza o MediaPlayer para reproduzir um vídeo especificado numa lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
-seo-description: O áudio de ligação tardia utiliza o MediaPlayer para reproduzir um vídeo especificado numa lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
-seo-title: Acessar faixas de áudio alternativas
-title: Acessar faixas de áudio alternativas
-uuid: c7060022-29ec-43c1-811b-41cca5f5356c
+description: O áudio de ligação tardia usa o MediaPlayer para reproduzir um vídeo especificado numa lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
+title: Acessar trilhas de áudio alternativas
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
 
-# Acessar faixas de áudio alternativas{#access-alternate-audio-tracks}
+# Acessar trilhas de áudio alternativas{#access-alternate-audio-tracks}
 
-O áudio de ligação tardia utiliza o MediaPlayer para reproduzir um vídeo especificado numa lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
+O áudio de ligação tardia usa o MediaPlayer para reproduzir um vídeo especificado numa lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
 
-1. Aguarde o MediaPlayer estar no estado PREPARADO.
-1. Ouça este evento:
+1. Aguarde até que o MediaPlayer esteja pelo menos no estado PREPARADO.
+1. Analise este evento:
 
-   `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: A lista inicial das faixas de áudio está disponível.
+   `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: A lista inicial de faixas de áudio está disponível.
 
 1. Obtenha as faixas de áudio disponíveis da instância `MediaPlayerItem`.
 
