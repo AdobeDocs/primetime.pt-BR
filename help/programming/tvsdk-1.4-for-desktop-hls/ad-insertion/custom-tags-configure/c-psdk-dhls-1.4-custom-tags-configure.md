@@ -1,13 +1,10 @@
 ---
-description: Os fluxos de mídia podem conter metadados adicionais na forma de tags na lista de reprodução/arquivo manifest, e esse arquivo indica a colocação de publicidade. Você pode especificar nomes de tags personalizadas e ser notificado quando determinadas tags forem exibidas no arquivo manifest.
-seo-description: Os fluxos de mídia podem conter metadados adicionais na forma de tags na lista de reprodução/arquivo manifest, e esse arquivo indica a colocação de publicidade. Você pode especificar nomes de tags personalizadas e ser notificado quando determinadas tags forem exibidas no arquivo manifest.
-seo-title: Tags personalizadas
+description: Os fluxos de mídia podem conter metadados adicionais na forma de tags no arquivo playlist/manifest, e esse arquivo indica o posicionamento da publicidade. Você pode especificar nomes de tags personalizadas e ser notificado quando determinadas tags forem exibidas no arquivo de manifesto.
 title: Tags personalizadas
-uuid: 648645c8-f7cc-4118-b169-cc5c473afe23
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -15,27 +12,27 @@ ht-degree: 0%
 
 # Tags personalizadas{#custom-tags}
 
-Os fluxos de mídia podem conter metadados adicionais na forma de tags na lista de reprodução/arquivo manifest, e esse arquivo indica a colocação de publicidade. Você pode especificar nomes de tags personalizadas e ser notificado quando determinadas tags forem exibidas no arquivo manifest.
+Os fluxos de mídia podem conter metadados adicionais na forma de tags no arquivo playlist/manifest, e esse arquivo indica o posicionamento da publicidade. Você pode especificar nomes de tags personalizadas e ser notificado quando determinadas tags forem exibidas no arquivo de manifesto.
 
 ## Tags de conteúdo HLS {#section_E99299152089418FBA56F5F09FC547B0}
 
 >[!IMPORTANT]
 >
->Este recurso não está disponível para o Safari em computadores Apple, pois o TVSDK usa a tag de vídeo, em vez de Flash ou MSE, para reproduzir conteúdo HLS.
+>Esse recurso não está disponível para o Safari em computadores da Apple, pois o TVSDK usa a tag de vídeo, em vez de Flash ou MSE, para reproduzir conteúdo HLS.
 
-O TVSDK oferece suporte imediato para tags de publicidade #EXT específicas. Seu aplicativo pode usar tags personalizadas para aprimorar o fluxo de trabalho de publicidade ou para oferecer suporte a cenários de blecaute. Para suportar workflows avançados, o TVSDK permite que você especifique e assine tags adicionais no manifesto. Você pode ser notificado quando essas tags forem exibidas no arquivo manifest.
+O TVSDK fornece suporte pronto para uso para tags de publicidade #EXT específicas. Seu aplicativo pode usar tags personalizadas para aprimorar o fluxo de trabalho de publicidade ou oferecer suporte a cenários de blecaute. Para oferecer suporte a fluxos de trabalho avançados, o TVSDK permite especificar e assinar tags adicionais no manifesto. Você pode ser notificado quando essas tags forem exibidas no arquivo de manifesto.
 
 >[!TIP]
 >
->Você pode assinar tags personalizadas para fluxos VOD e live/linear.
+>Você pode assinar tags personalizadas para fluxos VOD e live/lineares.
 
 >[!NOTE]
 >
->Quando o HLS é reproduzido usando a tag Vídeo no Safari, e não usando o recurso Flash Fallback, esse recurso não estará disponível no Safari.
+>Quando o HLS é reproduzido usando a tag Vídeo no Safari e não usando o Fallback do Flash, esse recurso não estará disponível no Safari.
 
 ## Uso de tags HLS personalizadas {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
-Este é um exemplo de um ativo VOD personalizado:
+Veja um exemplo de um ativo VOD personalizado:
 
 ```
 #EXTM3U
@@ -65,9 +62,9 @@ seg5.ts
 
 Seu aplicativo pode configurar os seguintes cenários:
 
-* Uma notificação quando as tags `#EXT-X-ASSET`, ou qualquer outro conjunto de nomes de tags personalizadas que você assinou, existem no arquivo.
-* Insira publicidades quando uma tag `#EXT-X-AD`, ou qualquer outro nome de tag personalizado, for encontrada no fluxo.
+* Uma notificação quando `#EXT-X-ASSET` tags, ou qualquer outro conjunto de nomes de tags personalizados que você assinou, existem no arquivo.
+* Insira anúncios quando uma tag `#EXT-X-AD` ou qualquer outro nome de tag personalizada for encontrada no fluxo.
 
-Você pode assinar qualquer uma das seguintes tags como tags personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Você é notificado com um evento `TimedMetadata` durante a análise de arquivos manifest.
+Você pode assinar qualquer uma das seguintes tags como tags personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Você é notificado com um evento `TimedMetadata` durante a análise de arquivos de manifesto.
 
-Há algumas tags de publicidade, como `EXT-X-CUE`, nas quais você já está inscrito. Essas tags de publicidade também são usadas pelo gerador de oportunidades padrão. Você pode especificar quais tags de publicidade são usadas pelo gerador de oportunidades padrão, definindo a propriedade `adTags`.
+Há algumas tags de publicidade, como `EXT-X-CUE`, nas quais você já está inscrito. Essas tags de publicidade também são usadas pelo gerador de oportunidades padrão. Você pode especificar quais tags de publicidade são usadas pelo gerador de oportunidades padrão, definindo a propriedade `adTags` .
