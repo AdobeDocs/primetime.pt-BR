@@ -1,9 +1,9 @@
 ---
-seo-title: Uso da linha de comando
 title: Uso da linha de comando
-uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
+description: Uso da linha de comando
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
@@ -35,5 +35,5 @@ java -jar AdobePublisherIDUtility.jar
 
 >[!NOTE]
 >
->Para determinar a ID do editor para um aplicativo iOS, use a opção `-s` e especifique o certificado usado para assinar o aplicativo iOS. ***A Adobe Primetime é necessária para criar aplicativos iOS que possam reproduzir conteúdo*** protegido por acesso.
+>Para determinar a ID do editor de um aplicativo iOS, use a opção `-s` e especifique o certificado usado para assinar o aplicativo iOS. ***A Adobe Primetime é necessária para criar aplicativos iOS que possam reproduzir conteúdo*** protegido por acesso.
 
