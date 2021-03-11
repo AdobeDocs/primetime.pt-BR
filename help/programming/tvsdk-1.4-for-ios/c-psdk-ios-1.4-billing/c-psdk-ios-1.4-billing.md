@@ -1,13 +1,10 @@
 ---
 description: Para acomodar clientes que desejam pagar apenas pelo que usam, em vez de uma taxa fixa independentemente do uso real, o Adobe coleta métricas de uso e usa essas métricas para determinar quanto faturar os clientes.
-seo-description: Para acomodar clientes que desejam pagar apenas pelo que usam, em vez de uma taxa fixa independentemente do uso real, o Adobe coleta métricas de uso e usa essas métricas para determinar quanto faturar os clientes.
-seo-title: Métricas de faturamento
 title: Métricas de faturamento
-uuid: 658ffbcd-dedc-464c-8ec7-aa3bdfcb1512
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -17,30 +14,30 @@ ht-degree: 0%
 
 Para acomodar clientes que desejam pagar apenas pelo que usam, em vez de uma taxa fixa independentemente do uso real, o Adobe coleta métricas de uso e usa essas métricas para determinar quanto faturar os clientes.
 
-Toda vez que o player gera um evento de start de fluxo, start TVSDK enviam mensagens HTTP periodicamente para o sistema de faturamento do Adobe. O período, conhecido como duração faturável, pode ser diferente para VOD padrão, VOD pro VOD (anúncios intermediários ativados) e conteúdo ao vivo. A duração padrão para cada tipo de conteúdo é de 30 minutos, mas seu contrato com a Adobe determina os valores reais.
+Toda vez que gera um evento de início de fluxo, o TVSDK inicia periodicamente mensagens HTTP para enviar mensagens HTTP ao sistema de faturamento do Adobe. O período, conhecido como duração faturável, pode ser diferente para VOD padrão, VOD pro VOD (anúncios intermediários ativados) e conteúdo ao vivo. A duração padrão para cada tipo de conteúdo é de 30 minutos, mas seu contrato com o Adobe determina os valores reais.
 
 As mensagens contêm as seguintes informações:
 
 * Tipo de conteúdo (ao vivo, linear ou VOD)
 * URL do conteúdo
 * Se os anúncios estão ativados
-* Se os anúncios intermediários estão ativados (apenas VOD)
-* Se o fluxo é protegido pelo DRM
+* Se os anúncios intermediários estão ativados (somente VOD)
+* Se o fluxo está protegido pelo DRM
 * A versão e a plataforma do TVSDK
 
-O Adobe pré-configura essa organização, mas se você quiser alterar a organização, trabalhe com seu representante de Ativação do Adobe.
+O Adobe pré-configura esse acordo, mas se você quiser alterar o acordo, trabalhe com seu representante de Ativação do Adobe.
 
-Para monitorar as estatísticas que o TVSDK envia para o Adobe, obtenha o URL do seu representante de Ativação do Adobe e use uma ferramenta de captura de rede, por exemplo, Charles, para ver os dados.
+Para monitorar as estatísticas que o TVSDK envia para o Adobe, obtenha o URL do representante de Ativação do Adobe e use uma ferramenta de captura de rede, por exemplo, Charles, para ver os dados.
 
 ## Configurar métricas de faturamento {#configure-billing-metrics}
 
-Se você usar a configuração padrão, não há mais nada que você precise fazer para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do representante de Ativação de Adobe, use a classe PTBillingMetricsConfiguration para configurar esses parâmetros antes de inicializar o player de mídia.
+Se você usar a configuração padrão, não há mais nada que você precise fazer para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do representante de Ativação do Adobe, use a classe PTBillingMetricsConfiguration para configurar esses parâmetros antes de inicializar o reprodutor de mídia.
 
 A maioria dos clientes deve usar a configuração padrão.
 
 >[!IMPORTANT]
 >
->A configuração definida permanece em vigor durante a vida útil do player de mídia. Depois de inicializar o media player, não é possível alterar a configuração.
+>A configuração definida permanece em vigor durante a vida útil do reprodutor de mídia. Depois de inicializar o reprodutor de mídia, não é possível alterar a configuração.
 
 Para configurar métricas de faturamento:
 
@@ -63,7 +60,7 @@ O TVSDK envia métricas de faturamento para o Adobe em um formato XML.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Se você usar uma ferramenta de captura de rede para monitorar as estatísticas que o TVSDK transmite para o Adobe, você verá unidades como as seguintes:
+Se você usar uma ferramenta de captura de rede para monitorar as estatísticas transmitidas pelo TVSDK para o Adobe, você verá unidades como as seguintes:
 
 ```
 <request> 
@@ -89,4 +86,4 @@ Se você usar uma ferramenta de captura de rede para monitorar as estatísticas 
 </request>
 ```
 
-As propriedades booleanas `drmProtected`, `adsEnabled` e `midrollEnabled` são exibidas somente se forem verdadeiras.
+As propriedades booleanas `drmProtected`, `adsEnabled` e `midrollEnabled` aparecem somente se forem verdadeiras.
