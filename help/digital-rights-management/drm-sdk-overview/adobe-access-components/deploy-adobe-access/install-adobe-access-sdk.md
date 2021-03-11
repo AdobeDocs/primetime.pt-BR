@@ -1,19 +1,16 @@
 ---
-description: O Primetime DRM SDK é fornecido como um arquivo de arquivo Java (JAR). Para saber mais sobre como instalar o Primetime DRM, consulte Usar o Adobe Primetime DRM SDK para proteger conteúdo e diretrizes de implantação segura.
-seo-description: O Primetime DRM SDK é fornecido como um arquivo de arquivo Java (JAR). Para saber mais sobre como instalar o Primetime DRM, consulte Usar o Adobe Primetime DRM SDK para proteger conteúdo e diretrizes de implantação segura.
-seo-title: Instalar Adobe Primetime DRM SDK
-title: Instalar Adobe Primetime DRM SDK
-uuid: eb53fabc-6332-402a-b45c-c5c2da227c38
+description: O SDK de DRM do Primetime é fornecido como um arquivo de arquivo Java (JAR). Para saber mais sobre a instalação do Primetime DRM, consulte Uso do Adobe Primetime DRM SDK para proteção de conteúdo e diretrizes de implantação segura.
+title: Instalar o SDK do Adobe Primetime DRM
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
 
 
-# Instalar o Adobe Primetime DRM SDK{#install-adobe-primetime-drm-sdk}
+# Instalar o SDK do Adobe Primetime DRM{#install-adobe-primetime-drm-sdk}
 
-O Primetime DRM SDK é fornecido como um arquivo de arquivo Java (JAR). Para saber mais sobre como instalar o Primetime DRM, consulte Usar o Adobe Primetime DRM SDK para proteger conteúdo e diretrizes de implantação segura.
+O SDK de DRM do Primetime é fornecido como um arquivo de arquivo Java (JAR). Para saber mais sobre a instalação do Primetime DRM, consulte Uso do Adobe Primetime DRM SDK para proteção de conteúdo e diretrizes de implantação segura.
 
