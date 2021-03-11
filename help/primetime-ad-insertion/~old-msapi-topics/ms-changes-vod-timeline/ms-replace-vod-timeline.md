@@ -1,13 +1,10 @@
 ---
-description: A linha do tempo do anúncio apropriada para uma reprodução do conteúdo VOD pode ser inadequada para reproduções subsequentes. É possível substituir uma linha do tempo VOD sem alterar o conteúdo.
-seo-description: A linha do tempo do anúncio apropriada para uma reprodução do conteúdo VOD pode ser inadequada para reproduções subsequentes. É possível substituir uma linha do tempo VOD sem alterar o conteúdo.
-seo-title: Alterações no VOD
+description: A linha do tempo do anúncio apropriada para uma reprodução do conteúdo de VOD pode ser inadequada para reproduções subsequentes. Você pode substituir uma linha do tempo de VOD sem alterar o conteúdo.
 title: Alterações no VOD
-uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Alterações no VOD {#changes-to-vod}
 
-A linha do tempo do anúncio apropriada para uma reprodução do conteúdo VOD pode ser inadequada para reproduções subsequentes. É possível substituir uma linha do tempo VOD sem alterar o conteúdo.
+A linha do tempo do anúncio apropriada para uma reprodução do conteúdo de VOD pode ser inadequada para reproduções subsequentes. Você pode substituir uma linha do tempo de VOD sem alterar o conteúdo.
 
 As situações nas quais você pode substituir uma linha do tempo VOD incluem:
 
-* Substitua os anúncios locais, mas deixe os anúncios nacionais durante uma janela C3.
+* Substitua anúncios locais, mas deixe anúncios nacionais durante uma janela C3.
 * Substitua os anúncios queimados depois que a janela C3 for fechada.
 * Substitua dinamicamente anúncios C3 antigos por anúncios mais recentes de maior duração.
-* Inserir menos anúncios ou nenhum anúncio.
+* Inserir menos anúncios ou nenhum.
 
-Você pode substituir a linha do tempo do anúncio enviando uma nova solicitação de inserção de publicidade ao arquivo M3U8 original e um valor diferente do parâmetro do query `pttimeline`.
+Você pode substituir a linha do tempo do anúncio enviando uma nova solicitação de inserção de anúncio com o arquivo M3U8 original e um valor diferente do parâmetro de consulta `pttimeline`.
