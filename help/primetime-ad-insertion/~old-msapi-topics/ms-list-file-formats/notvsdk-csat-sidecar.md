@@ -1,13 +1,10 @@
 ---
-description: Se o cliente solicitar informações de rastreamento no formato JSON, o servidor manifest enviará um arquivo de volta em um dos formatos JSON.
-seo-description: Se o cliente solicitar informações de rastreamento no formato JSON, o servidor manifest enviará um arquivo de volta em um dos formatos JSON.
-seo-title: Formatos JSON para rastrear URLs
+description: Se o cliente solicitar informações de rastreamento no formato JSON, o servidor de manifesto enviará um arquivo em um dos formatos JSON.
 title: Formatos JSON para rastrear URLs
-uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Formatos JSON para rastrear URLs {#json-formats-for-tracking-urls}
 
-Se o cliente solicitar informações de rastreamento no formato JSON, o servidor manifest enviará um arquivo de volta em um dos formatos JSON.
+Se o cliente solicitar informações de rastreamento no formato JSON, o servidor de manifesto enviará um arquivo em um dos formatos JSON.
 
 ## Formato JSON para rastreamento da versão 1 {#json_v1}
 
-O arquivo JSON que o servidor manifest envia se `pttrackingversion=v1` tiver o seguinte formato geral:
+O arquivo JSON que o servidor de manifesto envia se `pttrackingversion=v1` tiver o seguinte formato geral:
 
 ```
 { 
@@ -37,9 +34,9 @@ O arquivo JSON que o servidor manifest envia se `pttrackingversion=v1` tiver o s
 
 ## Formato JSON para rastreamento da versão 2 {#json_v2}
 
-O arquivo JSON que o servidor manifest envia se `pttrackingversion=v2` tiver o formato do seguinte exemplo, que vem de um bloco JSON típico.
+O arquivo JSON que o servidor de manifesto envia se `pttrackingversion=v2` tiver o formato do exemplo a seguir, que vem de um bloco JSON típico.
 
-Foi encurtada para evitar repetições desnecessárias, de modo a que a estrutura seja mais clara. Uma reticulação (três pontos, separados por espaços) indica informações omitidas em alguns URLs e entre alguns blocos de código. URLs não encurtados são exibidos em várias linhas, embora sejam exibidos em uma única linha no arquivo JSON.
+Foi encurtado para evitar repetições desnecessárias, de modo a que a estrutura fique mais clara. Uma elipse (três pontos, separados por espaços) indica informações omitidas em alguns URLs e entre alguns blocos de código. URLs não encurtados aparecem em várias linhas, embora apareçam em uma única linha no arquivo JSON.
 
 ```
 { 
@@ -367,11 +364,11 @@ Foi encurtada para evitar repetições desnecessárias, de modo a que a estrutur
 
 >[!NOTE]
 >
->O valor `offset` do atributo `scte35` extraído de `ad breaks` pode ser negativo. Isso ocorre porque o sidecar JSON V2 contém informações sobre as quebras de anúncios que estão parcialmente na janela de reprodução atual. Portanto, o atributo `scte35` também contém informações sobre essas quebras de anúncio.
+>O valor `offset` do atributo `scte35` extraído de `ad breaks` pode ser negativo. Isso ocorre porque o carro lateral JSON V2 contém informações sobre as quebras de anúncios que estão parcialmente na janela de reprodução atual. Portanto, o atributo `scte35` também contém informações sobre essas quebras de anúncios.
 
 ## Formato JSON para rastreamento da versão 3 {#json_v3}
 
-O arquivo JSON que o servidor manifest envia se `pttrackingversion=v3` tiver o seguinte formato geral:
+O arquivo JSON que o servidor de manifesto envia se `pttrackingversion=v3` tiver o seguinte formato geral:
 
 ```
 { 
