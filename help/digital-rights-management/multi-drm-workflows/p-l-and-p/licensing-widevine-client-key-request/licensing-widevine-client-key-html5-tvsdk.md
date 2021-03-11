@@ -1,23 +1,20 @@
 ---
 description: O código pode solicitar uma chave por meio do DRMManager.
-seo-description: O código pode solicitar uma chave por meio do DRMManager.
-seo-title: Fluxo de trabalho de solicitação de chave em HTML5 TVSDK
-title: Fluxo de trabalho de solicitação de chave em HTML5 TVSDK
-uuid: a1f50eba-4301-49a1-b2e5-9add6687cff8
+title: Fluxo de trabalho de solicitação principal em HTML5 TVSDK
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
 
-# Fluxo de trabalho de solicitação de chave em HTML5 TVSDK{#key-request-workflow-on-html-tvsdk}
+# Fluxo de trabalho da solicitação principal em HTML5 TVSDK{#key-request-workflow-on-html-tvsdk}
 
 O código pode solicitar uma chave por meio do DRMManager.
 
-O TVSDK do navegador também expõe uma API setProtectionData por meio do objeto DRMManager:
+O TVSDK do navegador também expõe uma API setProtectionData por meio do objeto DRMManager :
 
 ```
 [  /** 
@@ -34,9 +31,9 @@ license acquisition. </p>
    setProtectionData: function(protectionData) 
 ```
 
-Seu código precisaria chamar essa API antes de iniciar a reprodução normal do conteúdo. MediaPlayer.vo.protection.ProtectionData está documentado aqui: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
+Seu código precisaria chamar essa API antes de iniciar a reprodução do conteúdo da maneira normal. MediaPlayer.vo.protection.ProtectionData está documentado aqui: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
 
-Este é um exemplo de objeto de dados de proteção com URLs de servidor de licenças para PlayReady e Widevine.
+Este é um exemplo de objeto de dados de proteção com URLs do servidor de licenças para PlayReady e Widevine.
 
 ```
 var protectionData = { 
@@ -56,4 +53,4 @@ var protectionData = {
    };
 ```
 
-O TVSDK não fornece nenhuma API para forçar um sistema DRM específico, pois cada navegador suporta apenas um sistema DRM.
+O TVSDK não fornece nenhuma API para forçar um sistema de DRM específico porque cada navegador suporta apenas um sistema de DRM.
