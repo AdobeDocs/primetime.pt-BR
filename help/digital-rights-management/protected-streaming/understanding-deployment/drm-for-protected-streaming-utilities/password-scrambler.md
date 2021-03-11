@@ -1,13 +1,10 @@
 ---
-description: O utilitário Scrambler de senha criptografa uma senha para o Adobe Primetime DRM Server para arquivos de configuração de streaming protegidos.
-seo-description: O utilitário Scrambler de senha criptografa uma senha para o Adobe Primetime DRM Server para arquivos de configuração de streaming protegidos.
-seo-title: Senha
+description: O utilitário Scrambler de senha criptografa uma senha para o Adobe Primetime DRM Server para arquivos de configuração de transmissão protegidos.
 title: Senha
-uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Senha de script {#password-scrambler}
 
-O utilitário Scrambler de senha criptografa uma senha para o Adobe Primetime DRM Server para arquivos de configuração de streaming protegidos.
+O utilitário Scrambler de senha criptografa uma senha para o Adobe Primetime DRM Server para arquivos de configuração de transmissão protegidos.
 
 Para executar o script, digite:
 
@@ -48,4 +45,4 @@ Todas as senhas especificadas nos arquivos [!DNL flashaccess-global.xml] e [!DNL
 
 >[!NOTE]
 >
->O utilitário Scrambler de senha no Primetime DRM Server for Protected Streaming não é intercambiável com o arranhador fornecido com o Servidor de Licença de Implementação de Referência.
+>O utilitário Scrambler de senha no servidor DRM Primetime para transmissão protegida não é intercambiável com o sambler fornecido com o Servidor de licença de implementação de referência.
