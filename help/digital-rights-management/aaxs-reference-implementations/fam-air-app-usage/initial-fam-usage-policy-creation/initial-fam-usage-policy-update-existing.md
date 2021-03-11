@@ -1,9 +1,9 @@
 ---
-seo-title: Atualizar uma política existente
 title: Atualizar uma política existente
-uuid: 081e5dab-e735-4ae9-bcfd-15dd9819bef3
+description: Atualizar uma política existente
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -19,5 +19,5 @@ Quando terminar, clique em **[!UICONTROL Save]**. O arquivo de política no dire
 
 >[!NOTE]
 >
->Mesmo se o nome da política for alterado, o nome do arquivo no diretório [!DNL Resource] não será modificado.
+>Mesmo que o nome da política seja alterado, o nome do arquivo no diretório [!DNL Resource] não será modificado.
 
