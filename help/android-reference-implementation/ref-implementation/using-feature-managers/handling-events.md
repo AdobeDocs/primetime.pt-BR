@@ -1,21 +1,18 @@
 ---
-description: Se o aplicativo precisar lidar com eventos despachados do gerenciador de recursos, ele precisará registrar o gerenciador no arquivo PlayerFragment.java.
-seo-description: Se o aplicativo precisar lidar com eventos despachados do gerenciador de recursos, ele precisará registrar o gerenciador no arquivo PlayerFragment.java.
-seo-title: Manuseio de eventos
-title: Manuseio de eventos
-uuid: 13639f02-0dcc-4a0a-8524-515da5478006
+description: Se o aplicativo precisar lidar com eventos despachados do gerenciador de recursos, ele precisará registrar o gerenciador no arquivo PlayerFragment.java .
+title: Manipulação de eventos
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 2%
+source-wordcount: '50'
+ht-degree: 4%
 
 ---
 
 
-# Tratamento de eventos {#handling-events}
+# Manipular eventos {#handling-events}
 
-Se o aplicativo precisar lidar com eventos despachados do gerenciador de recursos, ele precisará registrar o gerenciador no arquivo PlayerFragment.java.
+Se o aplicativo precisar lidar com eventos despachados do gerenciador de recursos, ele precisará registrar o gerenciador no arquivo PlayerFragment.java .
 
 Por exemplo:
 
