@@ -1,19 +1,16 @@
 ---
 description: Você pode exibir o tempo atual e o restante do conteúdo que está sendo reproduzido.
-seo-description: Você pode exibir o tempo atual e o restante do conteúdo que está sendo reproduzido.
-seo-title: Exibir uma barra de depuração de busca com a posição atual do tempo de reprodução
-title: Exibir uma barra de depuração de busca com a posição atual do tempo de reprodução
-uuid: 3a13f4a5-538d-4e7e-ac24-043927f3f2ee
+title: Exibir uma barra de movimentação com a posição atual do tempo de reprodução
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
 
-# Exibir uma barra de depuração de busca com a posição atual do tempo de reprodução {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# Exibir uma barra de movimentação com a posição atual do tempo de reprodução {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
 Você pode exibir o tempo atual e o restante do conteúdo que está sendo reproduzido.
 
