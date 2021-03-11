@@ -1,13 +1,10 @@
 ---
-description: Se pttrackingmode=simple ou ptplayer=ios-mobileweb, o servidor manifest envia um arquivo formatado JSON contendo Principal-M3U8, um URL para o cliente usar para solicitar o arquivo M3U8 que descreve o conteúdo.
-seo-description: Se pttrackingmode=simple ou ptplayer=ios-mobileweb, o servidor manifest envia um arquivo formatado JSON contendo Principal-M3U8, um URL para o cliente usar para solicitar o arquivo M3U8 que descreve o conteúdo.
-seo-title: Formato JSON para URL para solicitação de lista de reprodução de manifesto variante
-title: Formato JSON para URL para solicitação de lista de reprodução de manifesto variante
-uuid: 9f9693d0-3c93-4555-b20c-7f4576742f41
+description: Se pttrackingmode=simple ou ptplayer=ios-mobileweb, o servidor de manifesto envia um arquivo formatado JSON contendo Principal-M3U8, um URL para o cliente usar para solicitar o arquivo M3U8 descrevendo o conteúdo.
+title: Formato JSON para URL para a lista de reprodução de manifesto da variante de solicitação
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Formato JSON para URL para solicitação de lista de reprodução de manifesto de variante {#json-format-for-url-for-requesting-variant-manifest-playlist}
 
-Se `pttrackingmode=simple` ou `ptplayer=ios-mobileweb`, o servidor manifest enviará um arquivo formatado JSON contendo Principal-M3U8, um URL para o cliente usar para solicitar o arquivo M3U8 que descreve o conteúdo.
+Se `pttrackingmode=simple` ou `ptplayer=ios-mobileweb`, o servidor de manifesto envia um arquivo formatado JSON contendo Principal-M3U8, um URL para o cliente usar para solicitar o arquivo M3U8 descrevendo o conteúdo.
 
-Este é o formato do arquivo JSON que contém o URL `Master-M3U8`.
+Este é o formato do arquivo JSON que contém a URL `Master-M3U8`.
 
 ```
 {
