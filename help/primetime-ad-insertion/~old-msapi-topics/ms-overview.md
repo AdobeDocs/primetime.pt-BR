@@ -1,68 +1,65 @@
 ---
-description: O servidor manifest coordena os sistemas que fornecem conteúdo, fornecem anúncios, reproduzem vídeos e rastreiam anúncios. Ele recebe playlists codificadas em M3U8 (manifestos) que os players de vídeo cliente recebem de provedores de conteúdo, reúne anúncios de provedores de anúncios nos manifestos e transmite os manifestos com pontos para os players de vídeo. Ele oferece suporte ao rastreamento de anúncios do lado do cliente e do lado do servidor. Ele realiza suas interações usando uma interface de serviço da Web baseada em HTTP.
-seo-description: O servidor manifest coordena os sistemas que fornecem conteúdo, fornecem anúncios, reproduzem vídeos e rastreiam anúncios. Ele recebe playlists codificadas em M3U8 (manifestos) que os players de vídeo cliente recebem de provedores de conteúdo, reúne anúncios de provedores de anúncios nos manifestos e transmite os manifestos com pontos para os players de vídeo. Ele oferece suporte ao rastreamento de anúncios do lado do cliente e do lado do servidor. Ele realiza suas interações usando uma interface de serviço da Web baseada em HTTP.
-seo-title: Visão geral das interações do servidor manifest
-title: Visão geral das interações do servidor manifest
-uuid: 3e314a45-a4dd-492f-8915-19224a8fbbc7
+description: O servidor de manifesto coordena os sistemas que fornecem conteúdo, fornecem anúncios, reproduzem vídeo e rastreiam anúncios. Ele recebe listas de reprodução codificadas em M3U8 (manifestos) que os players de vídeo do cliente recebem de provedores de conteúdo, compila anúncios de provedores de anúncios nos manifestos e transmite os manifestos compilados para os players de vídeo. Ele é compatível com o rastreamento de anúncios do lado do cliente e do lado do servidor. Ele realiza suas interações usando uma interface de serviço da Web baseada em HTTP.
+title: Visão geral das interações do Servidor de manifesto
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
 
 
-# Visão geral das interações do Manifest Server {#overview-of-manifest-server-interactions}
+# Visão geral das interações do Servidor de manifesto {#overview-of-manifest-server-interactions}
 
-O servidor manifest coordena os sistemas que fornecem conteúdo, fornecem anúncios, reproduzem vídeos e rastreiam anúncios. Ele recebe playlists codificadas em M3U8 (manifestos) que os players de vídeo cliente recebem de provedores de conteúdo, reúne anúncios de provedores de anúncios nos manifestos e transmite os manifestos com pontos para os players de vídeo. Ele oferece suporte ao rastreamento de anúncios do lado do cliente e do lado do servidor. Ele realiza suas interações usando uma interface de serviço da Web baseada em HTTP.
+O servidor de manifesto coordena os sistemas que fornecem conteúdo, fornecem anúncios, reproduzem vídeo e rastreiam anúncios. Ele recebe listas de reprodução codificadas em M3U8 (manifestos) que os players de vídeo do cliente recebem de provedores de conteúdo, compila anúncios de provedores de anúncios nos manifestos e transmite os manifestos compilados para os players de vídeo. Ele é compatível com o rastreamento de anúncios do lado do cliente e do lado do servidor. Ele realiza suas interações usando uma interface de serviço da Web baseada em HTTP.
 
 Uma configuração típica contém:
 
-* O servidor manifest Primetime
-* O Serviço de Reembalagem Criativa Primetime (CRS)
-* Um cliente, controlando um player de vídeo
-* Um editor, geralmente com um sistema de Gestão de conteúdo (CMS)
-* Uma Rede de Delivery de Conteúdo (CDN)
-* Um servidor de publicidade
-* Um receptor para relatórios de rastreamento de anúncio
+* O servidor manifest do Primetime
+* O Serviço de Reempacotamento Criativo do Primetime (CRS)
+* Um cliente, controlando um reprodutor de vídeo
+* Um editor, geralmente com um Sistema de gerenciamento de conteúdo (CMS)
+* Uma Rede de entrega de conteúdo (CDN)
+* Um servidor de anúncios
+* Um destinatário para relatórios de rastreamento de anúncios
 
-O fluxo de trabalho varia com base em vários fatores, como se o CDN for Akamai, ou se o cliente estiver realizando o rastreamento de anúncios. Para obter um diagrama do fluxo de trabalho do rastreamento de anúncios do cliente, consulte [Fluxo de trabalho de rastreamento do cliente](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow).
+O fluxo de trabalho varia com base em vários fatores, como se a CDN fosse Akamai, ou se o cliente estivesse executando o rastreamento de anúncios. Para obter um diagrama do fluxo de trabalho para o rastreamento de anúncios do lado do cliente, consulte [Fluxo de trabalho de rastreamento do lado do cliente](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow).
 
-O servidor manifest interage com clientes de delivery de vídeo ao receber e responder solicitações de GET HTTP. As respostas são manifestos codificados em M3U8 que descrevem conteúdo com pontos de identificação, incluindo opcionalmente uma estrutura JSON ou VMAP (auxiliar) que contém instruções detalhadas de rastreamento de anúncios (consulte [Formatos de arquivo](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/ms-api-file-formats.md)).
+O servidor de manifesto interage com clientes de entrega de vídeo ao receber e responder solicitações HTTP GET. As respostas são manifestos codificados em M3U8 que descrevem o conteúdo anexado, opcionalmente incluindo uma estrutura JSON ou VMAP (sidecar) contendo instruções detalhadas de rastreamento de anúncio (consulte [Formatos de arquivo](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/ms-api-file-formats.md)).
 
 Um fluxo de trabalho típico tem a seguinte aparência:
 
 1. O editor envia o URL de conteúdo e as informações do servidor de publicidade para o cliente.
-1. O cliente usa as informações do editor para gerar um URL de servidor manifest e envia uma solicitação de GET para esse URL. Isso é conhecido como o URL do Bootstrap.
+1. O cliente usa as informações do editor para gerar um URL de servidor de manifesto e envia uma solicitação de GET para esse URL. Isso é conhecido como URL do Bootstrap.
 1. O servidor manifest estabelece uma sessão com o cliente.
-1. O servidor manifest obtém manifestos de conteúdo do CDN, que podem incluir informações de quebra de anúncio.
+1. O servidor de manifesto obtém manifestos de conteúdo do CDN, que podem incluir informações de ad break.
 1. O servidor manifest redireciona o cliente para o manifesto principal/variante que ele gerou para o cliente.
 
    >[!NOTE]
    >
-   >Se os parâmetros do query de URL do Bootstrap contiverem a configuração `pttrackingmode=simple` ou `ptplayer=ios-mobileweb`, o servidor manifest retornará o URL do manifesto principal/variante em um objeto JSON e o cliente enviará uma solicitação de GET para esse URL do manifesto da variante.
+   >Se os parâmetros de consulta de URL do Bootstrap contiverem a configuração `pttrackingmode=simple` ou `ptplayer=ios-mobileweb` , o servidor de manifesto retornará o URL de manifesto principal/variante em um objeto JSON e o cliente enviará uma solicitação de GET para esse URL de manifesto de variante.
 
-1. O cliente escolhe um fluxo no manifesto de variante gerado para reproduzir, enviando informações de publicidade para o servidor de manifesto.
-1. O servidor manifest transmite as informações fornecidas pelo cliente para o servidor de publicidade e recebe anúncios e URLs de rastreamento de anúncios do servidor de publicidade. Se um anúncio fornecido não estiver no formato HLS, o servidor manifest o enviará para CRS para conversão para HLS.
-1. O servidor manifest agrupa anúncios no manifesto do conteúdo e envia o novo manifesto unido para o cliente.
-1. O cliente reproduz o conteúdo com os anúncios agrupados e faz solicitações nos horários especificados para os URLs de rastreamento especificados.
+1. O cliente escolhe um fluxo no manifesto de variante gerado para reproduzir, enviando informações de anúncio para o servidor de manifesto.
+1. O servidor de manifesto transmite as informações fornecidas pelo cliente para o servidor de anúncios e recebe anúncios e URLs de rastreamento de anúncios do servidor de anúncios. Se um anúncio fornecido não estiver no formato HLS, o servidor de manifesto o enviará para o CRS para conversão para HLS.
+1. O servidor manifest compila anúncios no manifesto do conteúdo e envia o novo manifesto compilado para o cliente.
+1. O cliente reproduz o conteúdo com os anúncios anexados e faz solicitações, nos horários especificados, aos URLs de rastreamento especificados.
 
-A inserção de anúncios do Primetime é compatível com clientes em várias plataformas de delivery de vídeo. Nem todos os clientes são criados no pacote Primetime TVSDK, mas todos os clientes enviam solicitações de GET para o mesmo URL básico. Os parâmetros de query distinguem uma solicitação de cliente da outra informando ao servidor manifest:
+A inserção de anúncio do Primetime é compatível com clientes em muitas plataformas de entrega de vídeo. Nem todos os clientes são criados no pacote Primetime TVSDK, mas todos os clientes enviam solicitações do GET para o mesmo URL básico. Os parâmetros de consulta distinguem uma solicitação de cliente da outra, informando ao servidor manifest:
 
-* qual cliente está a apresentar o pedido,
+* que cliente está a apresentar o pedido,
 * o que esse cliente quer,
-* e quais informações de rastreamento de anúncios devem ser fornecidas.
+* e quais informações de rastreamento de anúncios fornecer.
 
 ## CORS {#section_BEA7F298660944BE92801E4C82FCD038}
 
-O servidor manifest usa o CORS (Cross-Origem Resource Sharing standard). Ele procura um cabeçalho `Origin` nas solicitações que recebe. Se o cabeçalho estiver presente, ele responderá com
+O servidor de manifesto usa o CORS (Cross-Origin Resource Sharing standard). Ele procura um cabeçalho `Origin` nas solicitações que recebe. Se o cabeçalho estiver presente, ele responderá com
 
-* `Access-Control-Allow-Origin: *`string do cabeçalho da Origem`*`
+* `Access-Control-Allow-Origin: *`string do cabeçalho Origem`*`
 * `Access-Control-Allow-Credentials: true`
 * `Access-Control-Allow-Methods: GET`
 
-Em caso negativo, responde com:
+Caso contrário, responde com:
 
 * `Access-Control-Allow-Origin: *`
 * `Access-Control-Allow-Methods: GET`
