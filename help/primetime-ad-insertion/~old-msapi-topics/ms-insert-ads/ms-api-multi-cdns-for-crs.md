@@ -1,30 +1,27 @@
 ---
-description: Embora o cenário padrão do serviço de reempacotamento de criação (CRS) seja o de usar uma Rede de Delivery de Conteúdo (CDN), você pode implantar ativos CRS em mais de um CDN.
-seo-description: Embora o cenário padrão do serviço de reempacotamento de criação (CRS) seja o de usar uma Rede de Delivery de Conteúdo (CDN), você pode implantar ativos CRS em mais de um CDN.
-seo-title: Suporte a vários CDNs para CRS e delivery
-title: Suporte a vários CDNs para CRS e delivery
-uuid: c5557a38-aa49-4161-bb58-3e8dff9a4d64
+description: Embora o cenário padrão do Creative Repackaging Service (CRS) seja usar uma Rede de entrega de conteúdo (CDN), é possível implantar ativos do CRS em mais de uma CDN.
+title: Suporte a várias CDNs para entrega de anúncios CRS
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
 
 
-# Suporte a vários CDN para delivery de anúncio CRS {#multiple-cdn-support-for-crs-ad-delivery}
+# Suporte a várias CDNs para entrega de anúncios CRS {#multiple-cdn-support-for-crs-ad-delivery}
 
-Embora o cenário padrão do serviço de reempacotamento de criação (CRS) seja o de usar uma Rede de Delivery de Conteúdo (CDN), você pode implantar ativos CRS em mais de um CDN.
+Embora o cenário padrão do Creative Repackaging Service (CRS) seja usar uma Rede de entrega de conteúdo (CDN), é possível implantar ativos do CRS em mais de uma CDN.
 
 ## Requisitos
 
-Você pode usar várias CDNs pelos seguintes motivos:
+Você pode usar vários CDNs pelos seguintes motivos:
 
-* Um requisito para aumentar a escala para eventos de visualização grandes
+* Um requisito para dimensionar para eventos de exibição grandes
 * Um requisito para corresponder a fonte CDN do ativo CRS à fonte CDN do conteúdo principal.
 * Um requisito para usar um CDN diferente do CDN padrão do CRS (Akamai).
 
-Quando o servidor manifest faz uma pesquisa para solicitações transcodificadas, ele usa um URL de inicialização que contém vários parâmetros de query. Se você tiver configurado um ambiente de vários CDN, o URL de inicialização também precisará conter o parâmetro `ptcdn`. O servidor manifest usa esse parâmetro para identificar o servidor CDN do qual obter a versão transcodificada do anúncio.
+Quando o servidor manifest faz uma pesquisa de solicitações transcodificadas, ele usa um URL de bootstrap que contém vários parâmetros de consulta. Se você configurou um ambiente de várias CDN, o URL de inicialização também precisará conter o parâmetro `ptcdn`. O servidor manifest usa esse parâmetro para identificar o servidor CDN do qual obter a versão transcodificada do anúncio.
 
 Para obter mais detalhes, consulte [Suporte a vários CDN](../../~old-creative-repackaging-service/multi-cdn-supportt.md) na documentação do CRS.
