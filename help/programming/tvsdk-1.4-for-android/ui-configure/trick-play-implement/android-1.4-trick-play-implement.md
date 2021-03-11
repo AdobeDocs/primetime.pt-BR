@@ -1,13 +1,10 @@
 ---
-description: Quando os usuários avançam rapidamente para a frente ou retrocedem rapidamente pela mídia, eles estão no modo trick play. Para entrar no modo de reprodução de truque, é necessário definir a taxa de reprodução do MediaPlayer para um valor diferente de 1.
-seo-description: Quando os usuários avançam rapidamente para a frente ou retrocedem rapidamente pela mídia, eles estão no modo trick play. Para entrar no modo de reprodução de truque, é necessário definir a taxa de reprodução do MediaPlayer para um valor diferente de 1.
-seo-title: Implementar para frente e retroceder rapidamente
-title: Implementar para frente e retroceder rapidamente
-uuid: 2e5d0fd0-0290-4f08-b9c6-c8ecde26abb8
+description: Quando os usuários avançam ou recuam rapidamente pela mídia, eles estão no modo de peça. Para entrar no modo de reprodução de truque, é necessário definir a taxa de reprodução do MediaPlayer com um valor diferente de 1.
+title: Implementar rapidamente para a frente e retroceder
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -15,16 +12,16 @@ ht-degree: 0%
 
 # Visão geral {#implement-fast-forward-and-rewind-overview}
 
-Quando os usuários avançam rapidamente para a frente ou retrocedem rapidamente pela mídia, eles estão no modo trick play. Para entrar no modo de reprodução de truque, é necessário definir a taxa de reprodução do MediaPlayer para um valor diferente de 1.
+Quando os usuários avançam ou recuam rapidamente pela mídia, eles estão no modo de peça. Para entrar no modo de reprodução de truque, é necessário definir a taxa de reprodução do MediaPlayer com um valor diferente de 1.
 
-Para mudar a velocidade, é necessário definir um valor.
+Para alternar a velocidade, é necessário definir um valor.
 
-1. Mova do modo de reprodução normal (1x) para o modo de reprodução de truque definindo a taxa em `MediaPlayer` para um valor permitido.
+1. Mova do modo de reprodução normal (1x) para o modo de reprodução por engano, definindo a taxa no `MediaPlayer` para um valor permitido.
 
    * A classe `MediaPlayerItem` define as taxas de reprodução permitidas.
-   * O TVSDK seleciona a taxa mais próxima permitida se a taxa especificada não for permitida.
+   * TVSDK seleciona a taxa mais próxima permitida se a taxa especificada não for permitida.
 
-   Este exemplo define a taxa de reprodução interna do player para a taxa solicitada.
+   Este exemplo define a taxa de reprodução interna do reprodutor para a taxa solicitada.
 
    ```java
    import com.adobe.mediacore.MediaPlayer; 
@@ -50,13 +47,13 @@ Para mudar a velocidade, é necessário definir um valor.
    }
    ```
 
-1. Opcionalmente, você pode acompanhar eventos de alteração de taxa, que informam quando você solicitou uma alteração de taxa e quando uma alteração de taxa realmente acontece.
+1. Opcionalmente, é possível acompanhar eventos de alteração de taxa, que informam quando você solicitou uma alteração de taxa e quando uma alteração de taxa realmente ocorre.
 
-       O TVSDK despacha os seguintes eventos relacionados à reprodução de truques:
+       O TVSDK despacha os seguintes eventos relacionados à reprodução de truque:
    
    * `AdobePSDK.PSDKEventType.RATE_SELECTED` quando o  `rate` valor muda para um valor diferente.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` quando a reprodução é retomada na taxa selecionada.
 
-      O TVSDK despacha ambos os eventos quando o player retorna do modo de reprodução de truque para o modo de reprodução normal.
+      O TVSDK despacha ambos os eventos quando o reprodutor volta do modo de trick-play para o modo de reprodução normal.
 
