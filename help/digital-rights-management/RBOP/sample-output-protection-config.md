@@ -1,13 +1,10 @@
 ---
 description: Esta seção apresenta uma configuração de amostra que ilustra os conceitos e a forma da configuração.
-seo-description: Esta seção apresenta uma configuração de amostra que ilustra os conceitos e a forma da configuração.
-seo-title: Exemplo de configuração de RBOP
 title: Exemplo de configuração de RBOP
-uuid: fa5ead93-36c5-4ad1-947b-c4f1f2632d9b
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -17,13 +14,13 @@ ht-degree: 0%
 
 Esta seção apresenta uma configuração de amostra que ilustra os conceitos e a forma da configuração.
 
-A seguinte configuração JSON de exemplo define uma política de saída de pixel que especifica o seguinte:
+A seguinte configuração JSON de amostra define uma política de saída de pixel que especifica o seguinte:
 
 * Restringir a descriptografia do vídeo a resoluções de 1080 ou inferior
-* Impor restrições específicas às resoluções 720 e 480:
+* Impor restrições específicas às resoluções de 720 e 480:
 
-   * Para a resolução 720: Exigir HDCP para saída digital; requer a proteção *Copy Generation Management System - Analog* (CGMS-A) para saída analógica.
-   * Para a resolução 480: Exigir HDCP para saída digital; não requer proteção para analógico
+   * Para a resolução 720: Exigir HDCP para saída digital; requerem proteção *Copy Generation Management System - Analog* (CGMS-A) para saída analógica.
+   * Para a resolução 480: Exigir HDCP para saída digital; não exige proteção para analógico
 
 ```
 { 
