@@ -1,29 +1,26 @@
 ---
 description: Outra maneira de resolver um recurso de mídia é com MediaPlayerItemLoader. Isso é útil quando você deseja obter informações sobre um fluxo de mídia específico sem instanciar uma instância do MediaPlayer.
-seo-description: Outra maneira de resolver um recurso de mídia é com MediaPlayerItemLoader. Isso é útil quando você deseja obter informações sobre um fluxo de mídia específico sem instanciar uma instância do MediaPlayer.
-seo-title: Carregar um recurso de mídia usando MediaPlayerItemLoader
 title: Carregar um recurso de mídia usando MediaPlayerItemLoader
-uuid: a7ec8f58-7357-4757-a402-e879dd6caec8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 0%
+source-wordcount: '168'
+ht-degree: 1%
 
 ---
 
 
-# Carregue um recurso de mídia usando MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}
+# Carregar um recurso de mídia usando MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}
 
 Outra maneira de resolver um recurso de mídia é com MediaPlayerItemLoader. Isso é útil quando você deseja obter informações sobre um fluxo de mídia específico sem instanciar uma instância do MediaPlayer.
 
-Por meio da classe `MediaPlayerItemLoader`, é possível trocar um recurso de mídia pelo `MediaPlayerItem` correspondente sem anexar uma visualização a uma instância `MediaPlayer`, o que resultaria na alocação dos recursos de hardware de decodificação de vídeo. O processo de obtenção da instância `MediaPlayerItem` é assíncrono.
+Por meio da classe `MediaPlayerItemLoader`, é possível trocar um recurso de mídia pelo `MediaPlayerItem` correspondente sem anexar uma exibição a uma instância `MediaPlayer`, o que resultaria na alocação dos recursos de hardware de decodificação de vídeo. O processo de obter a instância `MediaPlayerItem` é assíncrono.
 
-1. Implemente ouvintes de evento para estes eventos `MediaPlayerItemLoader`:
+1. Implemente ouvintes de eventos para estes eventos `MediaPlayerItemLoader`:
 
    * `MediaPlayerItemLoaderEvent.ERROR` evento
 
-      O TVSDK usa isso para informar ao aplicativo que ocorreu um erro. O TVSDK fornece uma propriedade de erro que contém informações de diagnóstico.
+      O TVSDK usa essa opção para informar ao aplicativo que ocorreu um erro. O TVSDK fornece uma propriedade de erro que contém informações de diagnóstico.
 
 1. Registre esta instância no `MediaPlayerItemLoader`.
 1. Chame `DefaultMediaPlayerItemLoader.load`, transmitindo uma instância de um objeto `MediaResource`.
