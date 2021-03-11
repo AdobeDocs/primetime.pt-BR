@@ -1,13 +1,10 @@
 ---
-description: Em algumas implementações do Analytics, o aplicativo cliente pode desejar fornecer uma posição diferente do indicador de reprodução da posição reportada pelo valor LocalTime do TVSDK do navegador.
-seo-description: Em algumas implementações do Analytics, o aplicativo cliente pode desejar fornecer uma posição diferente do indicador de reprodução da posição reportada pelo valor LocalTime do TVSDK do navegador.
-seo-title: Implementar atualizações de tempo personalizadas
-title: Implementar atualizações de tempo personalizadas
-uuid: 26a0592c-a47b-4d65-b984-5e51533dcddc
+description: Em algumas implementações de análise, o aplicativo cliente pode desejar fornecer uma posição de indicador de reprodução diferente da posição relatada pelo valor LocalTime do TVSDK do navegador.
+title: Implementar atualizações de hora personalizadas
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Implementar atualizações de hora personalizadas{#implement-custom-time-updates}
 
-Em algumas implementações do Analytics, o aplicativo cliente pode desejar fornecer uma posição diferente do indicador de reprodução da posição reportada pelo valor LocalTime do TVSDK do navegador.
+Em algumas implementações de análise, o aplicativo cliente pode desejar fornecer uma posição de indicador de reprodução diferente da posição relatada pelo valor LocalTime do TVSDK do navegador.
 
-Por exemplo, durante uma reprodução de fluxo linear, cada indicador de reprodução do programa pode ser fornecido em relação ao tempo do start.
+Por exemplo, durante uma reprodução de fluxo linear, o indicador de reprodução de cada programa pode ser fornecido de acordo com a hora de início.
 
 >[!TIP]
 >
@@ -33,5 +30,5 @@ vaMetadata.currentTimeUpdateBlock = function() {
 
 >[!IMPORTANT]
 >
->Os valores neste trecho de código são apenas amostras. Você precisa usar valores diferentes para a posição personalizada do indicador de reprodução.
+>Os valores neste trecho de código são apenas amostras. Você precisa usar valores diferentes para a posição do indicador de reprodução personalizado.
 
