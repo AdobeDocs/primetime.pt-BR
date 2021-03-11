@@ -1,13 +1,10 @@
 ---
-description: É possível controlar a visibilidade das legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida. Se você alterar qual faixa é atual, a configuração de visibilidade permanecerá a mesma.
-seo-description: É possível controlar a visibilidade das legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida. Se você alterar qual faixa é atual, a configuração de visibilidade permanecerá a mesma.
-seo-title: Controlar a visibilidade da legenda
-title: Controlar a visibilidade da legenda
-uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
+description: Você pode controlar a visibilidade de legendas ocultas. Quando a visibilidade está ativada, a faixa selecionada no momento é exibida. Se você alterar qual rastreamento é atual, a configuração de visibilidade permanecerá a mesma.
+title: Controle a visibilidade da legenda oculta
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -15,15 +12,15 @@ ht-degree: 0%
 
 # Controlar visibilidade de legenda fechada{#control-closed-caption-visibility}
 
-É possível controlar a visibilidade das legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida. Se você alterar qual faixa é atual, a configuração de visibilidade permanecerá a mesma.
+Você pode controlar a visibilidade de legendas ocultas. Quando a visibilidade está ativada, a faixa selecionada no momento é exibida. Se você alterar qual rastreamento é atual, a configuração de visibilidade permanecerá a mesma.
 
 >[!TIP]
 >
->Se o texto da legenda fechada for exibido quando o player entrar no modo de busca, o texto não será mais exibido depois que a busca for concluída. Em vez disso, após alguns segundos, o TVSDK exibe o próximo texto de legenda fechada no vídeo após a posição de busca final.
+>Se o texto da legenda fechada for exibido quando o reprodutor entrar no modo de busca, o texto não será mais exibido após a conclusão da busca. Em vez disso, após alguns segundos, o TVSDK exibe o próximo texto da legenda fechada no vídeo após a posição final da busca.
 
 >[!NOTE]
 >
->Os valores de visibilidade para legendas fechadas são definidos em `ClosedCaptionsVisibility`.
+>Os valores de visibilidade para legendas ocultas são definidos em `ClosedCaptionsVisibility`.
 >
 >
 ```
@@ -31,14 +28,14 @@ ht-degree: 0%
 >public static const VISIBLE:String = visible;
 >```
 
-1. Aguarde até que `MediaPlayer` tenha pelo menos o status PREPARADO (consulte [Aguarde um estado válido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
-1. Para obter a configuração de visibilidade atual de legendas fechadas, use o método getter em `MediaPlayer`, que retorna um valor de visibilidade.
+1. Aguarde até que `MediaPlayer` tenha pelo menos o status PREPARED (consulte [Aguarde um estado válido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Para obter a configuração de visibilidade atual de legendas ocultas, use o método getter em `MediaPlayer`, que retorna um valor de visibilidade.
 
    ```
    public function get ccVisibility():String
    ```
 
-1. Para alterar a visibilidade de legendas fechadas, use o método setter, transmitindo um valor de visibilidade de `ClosedCaptionsVisibility`.
+1. Para alterar a visibilidade de legendas ocultas, use o método setter, transmitindo um valor de visibilidade de `ClosedCaptionsVisibility`.
 
    Por exemplo:
 
@@ -55,14 +52,14 @@ ht-degree: 0%
                    prompt="CC"/>
    ```
 
-1. Defina uma matriz vinculável de faixas de legenda fechadas.
+1. Defina uma matriz vinculável de faixas de legendas ocultas.
 
    ```
    [Bindable] private var _ccTracks:ArrayCollection =  
      new ArrayCollection(); // active tracks 
    ```
 
-1. Configure os ouvintes.
+1. Configure ouvintes.
 
    ```
    player.addEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
