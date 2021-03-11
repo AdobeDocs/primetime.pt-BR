@@ -1,31 +1,28 @@
 ---
-description: O TVSDK baixa os segmentos do anúncio e os renderiza na tela do dispositivo.
-seo-description: O TVSDK baixa os segmentos do anúncio e os renderiza na tela do dispositivo.
-seo-title: Fase de reprodução do anúncio
+description: O TVSDK baixa os segmentos de publicidade e os renderiza na tela do dispositivo.
 title: Fase de reprodução do anúncio
-uuid: 1bbcea08-3475-4a64-9f89-c455d5dd828e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
 
-# Fase de reprodução do anúncio{#ad-playback-phase}
+# Fase de reprodução de anúncio{#ad-playback-phase}
 
-O TVSDK baixa os segmentos do anúncio e os renderiza na tela do dispositivo.
+O TVSDK baixa os segmentos de publicidade e os renderiza na tela do dispositivo.
 
-Nesse ponto, o TVSDK resolveu os anúncios, os posicionou na linha do tempo e tenta renderizar o conteúdo na tela.
+Nesse momento, o TVSDK resolveu os anúncios, os posicionou na linha do tempo e tenta renderizar o conteúdo na tela.
 
-As seguintes classes principais de erros podem ocorrer nesta fase:
+As principais classes de erros a seguir podem ocorrer nesta fase:
 
 * Erros ao conectar ao servidor host
 * Erros ao baixar o arquivo manifest
-* Erros ao baixar segmentos de mídia
+* Erros ao baixar os segmentos de mídia
 
-Para todas as três classes de erro, o TVSDK encaminhou eventos para seu aplicativo, incluindo:
+Para todas as três classes de erro, o TVSDK encaminha eventos acionados para seu aplicativo, incluindo:
 
 * Eventos de notificação acionados quando ocorre um failover.
 * Eventos de notificação quando o perfil é alterado devido ao algoritmo de failover.
@@ -33,4 +30,4 @@ Para todas as três classes de erro, o TVSDK encaminhou eventos para seu aplicat
 
    Seu aplicativo precisa tomar a ação apropriada.
 
-Independentemente de ocorrerem erros, o TVSDK chama onAdBreakComplete para cada `onAdBreakStart` e `onAdComplete` para cada `onAdStart`. No entanto, se os segmentos não puderem ser baixados, pode haver lacunas na linha do tempo. Quando as lacunas forem grandes o suficiente, os valores na posição do indicador de reprodução e o progresso do anúncio relatado podem exibir descontinuidades.
+Se ocorrerem erros ou não, o TVSDK chama onAdBreakComplete para cada `onAdBreakStart` e `onAdComplete` para cada `onAdStart`. No entanto, se os segmentos não puderem ser baixados, pode haver lacunas na linha do tempo. Quando as lacunas são grandes o suficiente, os valores na posição do indicador de reprodução e o progresso do anúncio relatado podem exibir descontinuidades.
