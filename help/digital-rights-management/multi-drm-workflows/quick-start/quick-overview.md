@@ -1,13 +1,10 @@
 ---
-description: Entre em contato com seu representante de Adobe para obter certificados e para configurar uma conta administrativa no ExpressPlay. Depois que suas contas Adobe e ExpressPlay forem configuradas, você poderá começar a implementar e testar workflows para diferentes soluções de DRM.
-seo-description: Entre em contato com seu representante de Adobe para obter certificados e para configurar uma conta administrativa no ExpressPlay. Depois que suas contas Adobe e ExpressPlay forem configuradas, você poderá começar a implementar e testar workflows para diferentes soluções de DRM.
-seo-title: Visão geral do start rápido da Creative Cloud DRM
-title: Visão geral do start rápido da Creative Cloud DRM
-uuid: 57397454-042b-4f11-a1b2-8e7f6ab041d4
+description: Entre em contato com o representante do Adobe para obter certificados e configurar uma conta administrativa no ExpressPlay. Depois que suas contas Adobe e ExpressPlay forem configuradas, você poderá começar a implementar e testar workflows para diferentes soluções de DRM.
+title: Visão geral de início rápido da nuvem DRM do Primetime
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
@@ -15,6 +12,6 @@ ht-degree: 0%
 
 # Visão geral {#primetime-drm-cloud-quick-start-overview}
 
-Entre em contato com seu representante de Adobe para obter certificados e para configurar uma conta administrativa no ExpressPlay. Depois que suas contas Adobe e ExpressPlay forem configuradas, você poderá começar a implementar e testar workflows para diferentes soluções de DRM.
+Entre em contato com o representante do Adobe para obter certificados e configurar uma conta administrativa no ExpressPlay. Depois que suas contas Adobe e ExpressPlay forem configuradas, você poderá começar a implementar e testar workflows para diferentes soluções de DRM.
 
-Essas etapas de start rápido ajudam você no processo de configuração do Multi-DRM; da aquisição dos certificados e chaves necessários, da obtenção de uma conta de administrador no ExpressPlay, dos testes de empacotamento, licenciamento e reprodução do conteúdo protegido.
+Essas etapas de início rápido o ajudarão durante o processo de configuração de vários DRM; desde adquirir os certificados e chaves necessários, até obter uma conta de administrador no ExpressPlay, até testar o empacotamento, o licenciamento e a reprodução do conteúdo protegido.
