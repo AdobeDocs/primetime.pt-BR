@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral da topologia de rede
 title: Visão geral da topologia de rede
-uuid: b8b072dc-8dc0-46ba-bb01-1e9b58af2681
+description: Visão geral da topologia de rede
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Visão geral {#network-topology-overview}
 
-Após implantar o Adobe Primetime DRM com êxito, é necessário manter a segurança do servidor de produção Primetime DRM.
+Depois de implantar com êxito o DRM da Adobe Primetime, é necessário manter a segurança do servidor de produção do DRM do Primetime.
 
 >[!NOTE]
 >
->O Primetime DRM era anteriormente conhecido como Adobe Access e, antes disso, Flash Access.
+>O DRM do Primetime era anteriormente conhecido como Adobe Access e, antes disso, Flash Access.
 
-Você pode usar um *proxy reverso* para garantir que diferentes conjuntos de URLs para aplicativos Web DRM Primetime estejam disponíveis para usuários externos e internos. *O* proxy reverso é mais seguro do que permitir que os usuários se conectem diretamente ao servidor de aplicativos no qual o Primetime DRM é executado, e essa configuração executa todas as solicitações HTTP para o servidor de aplicativos que executa o Primetime DRM. Os usuários podem acessar somente o proxy reverso e podem tentar somente as conexões de URL suportadas pelo proxy reverso.
+Você pode usar um *proxy reverso* para garantir que diferentes conjuntos de URLs para aplicativos Web DRM do Primetime estejam disponíveis para usuários externos e internos. *O* proxy reverso é mais seguro do que permitir que os usuários se conectem diretamente ao servidor de aplicativos em que o DRM do Primetime é executado, e essa configuração executa todas as solicitações HTTP para o servidor de aplicativos que executa o DRM do Primetime. Os usuários podem acessar somente o proxy reverso e podem tentar apenas as conexões de URL compatíveis com o proxy reverso.
 
 <!--<a id="fig_8083A8C794B646CD87985EC891B60663"></a>-->
 
