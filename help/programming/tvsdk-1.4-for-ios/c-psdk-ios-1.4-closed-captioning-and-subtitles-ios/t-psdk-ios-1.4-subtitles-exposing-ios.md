@@ -1,13 +1,10 @@
 ---
-description: O TVSDK notifica o cliente do player sobre a disponibilidade de AVAsset's disponíveisMediaCharacteristicsWithMediaSelectionOptions internas usando a notificação PTMediaPlayerMediaSelectionOptionsAvailableNotification.
-seo-description: O TVSDK notifica o cliente do player sobre a disponibilidade de AVAsset's disponíveisMediaCharacteristicsWithMediaSelectionOptions internas usando a notificação PTMediaPlayerMediaSelectionOptionsAvailableNotification.
-seo-title: Expor legendas
+description: O TVSDK notifica o cliente do reprodutor sobre a disponibilidade de AVAsset's availableMediaCharacteristicsWithMediaSelectionOptions internas usando a notificação PTMediaPlayerMediaSelectionOptionsAvailableNotification.
 title: Expor legendas
-uuid: 657ab9c7-b205-4d13-81a7-51bc8e7d5ee2
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Expor legendas {#expose-subtitles}
 
-O TVSDK notifica o cliente do player sobre a disponibilidade de AVAsset&#39;s disponíveisMediaCharacteristicsWithMediaSelectionOptions internas usando a notificação PTMediaPlayerMediaSelectionOptionsAvailableNotification.
+O TVSDK notifica o cliente do reprodutor sobre a disponibilidade de AVAsset&#39;s availableMediaCharacteristicsWithMediaSelectionOptions internas usando a notificação PTMediaPlayerMediaSelectionOptionsAvailableNotification.
 
-Você pode acessar as legendas disponíveis por meio das `PTMediaPlayerItem` propriedades `subtitlesOptions`.
+Você pode acessar as legendas disponíveis por meio do `PTMediaPlayerItem` `subtitlesOptions` da propriedade.
 
 Para expor legendas:
 
@@ -29,8 +26,8 @@ Para expor legendas:
      name:PTMediaPlayerMediaSelectionOptionsAvailableNotification object:self.player];
    ```
 
-   Quando seu cliente recebe essa notificação, as legendas estão prontas em `PTMediaPlayerItem`.
-1. Implemente o método `onMediaPlayerItemMediaSelectionOptionsAvailable` semelhante ao exemplo a seguir:
+   Quando o cliente recebe essa notificação, as legendas estão prontas no `PTMediaPlayerItem`.
+1. Implemente o método `onMediaPlayerItemMediaSelectionOptionsAvailable` semelhante ao seguinte exemplo:
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -39,4 +36,4 @@ Para expor legendas:
    }
    ```
 
-   Para obter informações sobre faixas de áudio alternativas, consulte [Áudio alternativo](../alternate-audio/c-psdk-ios-1.4-alternate-audio.md).
+   Para obter informações sobre trilhas de áudio alternativas, consulte [Áudio alternativo](../alternate-audio/c-psdk-ios-1.4-alternate-audio.md).
