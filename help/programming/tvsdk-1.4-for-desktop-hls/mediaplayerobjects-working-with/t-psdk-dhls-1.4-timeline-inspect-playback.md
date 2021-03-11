@@ -1,13 +1,10 @@
 ---
-description: Você pode obter uma descrição da linha do tempo associada ao item atualmente selecionado que está sendo reproduzido pelo TVSDK. Isso é mais útil quando seu aplicativo exibe um controle de barra de depuração personalizado no qual as seções de conteúdo que correspondem ao conteúdo do anúncio são identificadas.
-seo-description: Você pode obter uma descrição da linha do tempo associada ao item atualmente selecionado que está sendo reproduzido pelo TVSDK. Isso é mais útil quando seu aplicativo exibe um controle de barra de depuração personalizado no qual as seções de conteúdo que correspondem ao conteúdo do anúncio são identificadas.
-seo-title: Inspect na linha do tempo da reprodução
-title: Inspect na linha do tempo da reprodução
-uuid: 2f903493-2d88-4af2-ac71-36300b49735b
+description: Você pode obter uma descrição da linha do tempo associada ao item selecionado no momento que está sendo reproduzido pelo TVSDK. Isso é mais útil quando seu aplicativo exibe um controle de barra de depuração personalizada no qual as seções de conteúdo que correspondem ao conteúdo do anúncio são identificadas.
+title: Inspect a linha do tempo da reprodução
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -15,16 +12,16 @@ ht-degree: 0%
 
 # Inspect a linha do tempo de reprodução{#inspect-the-playback-timeline}
 
-Você pode obter uma descrição da linha do tempo associada ao item atualmente selecionado que está sendo reproduzido pelo TVSDK. Isso é mais útil quando seu aplicativo exibe um controle de barra de depuração personalizado no qual as seções de conteúdo que correspondem ao conteúdo do anúncio são identificadas.
+Você pode obter uma descrição da linha do tempo associada ao item selecionado no momento que está sendo reproduzido pelo TVSDK. Isso é mais útil quando seu aplicativo exibe um controle de barra de depuração personalizada no qual as seções de conteúdo que correspondem ao conteúdo do anúncio são identificadas.
 
-Este é um exemplo de implementação, como visto na seguinte captura de tela.
+Veja um exemplo de implementação como visto na seguinte captura de tela.
 <!--<a id="fig_6D9FB3764F3947A38B8E7726187BD461"></a>-->
 
 ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
 
-1. Acesse o objeto `Timeline` em `MediaPlayer` usando o método `get`.
+1. Acesse o objeto `Timeline` no `MediaPlayer` usando o método `get`.
 
-   A classe `Timeline` encapsula as informações relacionadas ao conteúdo da linha do tempo que está associado ao item de mídia que está carregado atualmente pela instância `MediaPlayer`. A classe `Timeline` fornece acesso a uma visualização somente leitura da linha do tempo subjacente. A classe `Timeline` fornece um método getter para obter todos os objetos `TimelineMarker` colocados.
+   A classe `Timeline` encapsula as informações relacionadas ao conteúdo da linha do tempo associado ao item de mídia que está carregado atualmente pela instância `MediaPlayer`. A classe `Timeline` fornece acesso a uma exibição somente leitura da linha do tempo subjacente. A classe `Timeline` fornece um método getter para obter todos os objetos `TimelineMarker` colocados.
 
 1. Itere pela lista de `TimelineMarkers` e use as informações retornadas para implementar sua linha do tempo.
 
