@@ -1,13 +1,10 @@
 ---
-description: Em algumas implementações do Analytics, o aplicativo cliente pode desejar fornecer uma posição diferente do indicador de reprodução da posição reportada pelo valor localTime do TVSDK. Por exemplo, durante uma reprodução de fluxo linear, cada indicador de reprodução do programa pode ser fornecido em relação ao tempo do start.
-seo-description: Em algumas implementações do Analytics, o aplicativo cliente pode desejar fornecer uma posição diferente do indicador de reprodução da posição reportada pelo valor localTime do TVSDK. Por exemplo, durante uma reprodução de fluxo linear, cada indicador de reprodução do programa pode ser fornecido em relação ao tempo do start.
-seo-title: Implementar atualizações de tempo personalizadas
-title: Implementar atualizações de tempo personalizadas
-uuid: 7f5d46e5-eab6-4bdc-b015-ae27ddb609ce
+description: Em algumas implementações de análise, o aplicativo cliente pode desejar fornecer uma posição de indicador de reprodução diferente da posição relatada pelo valor localTime do TVSDK. Por exemplo, durante uma reprodução de fluxo linear, o indicador de reprodução de cada programa pode ser fornecido de acordo com a hora de início.
+title: Implementar atualizações de hora personalizadas
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Implementar atualizações de hora personalizadas {#implement-custom-time-updates}
 
-Em algumas implementações do Analytics, o aplicativo cliente pode desejar fornecer uma posição diferente do indicador de reprodução da posição reportada pelo valor localTime do TVSDK. Por exemplo, durante uma reprodução de fluxo linear, cada indicador de reprodução do programa pode ser fornecido em relação ao tempo do start.
+Em algumas implementações de análise, o aplicativo cliente pode desejar fornecer uma posição de indicador de reprodução diferente da posição relatada pelo valor localTime do TVSDK. Por exemplo, durante uma reprodução de fluxo linear, o indicador de reprodução de cada programa pode ser fornecido de acordo com a hora de início.
 
 >[!TIP]
 >
@@ -36,4 +33,4 @@ vaMetadata.setCurrentTimeUpdateBlock(new VideoAnalyticsMetadata.CurrentTimeUpdat
 
 >[!IMPORTANT]
 >
->Os valores neste trecho de código são apenas amostras. Você precisa usar valores diferentes para a posição personalizada do indicador de reprodução.
+>Os valores neste trecho de código são apenas amostras. Você precisa usar valores diferentes para a posição do indicador de reprodução personalizado.
