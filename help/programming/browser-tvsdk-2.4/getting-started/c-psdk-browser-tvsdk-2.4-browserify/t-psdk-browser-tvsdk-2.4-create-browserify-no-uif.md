@@ -1,36 +1,33 @@
 ---
-description: Use o arquivo da biblioteca Browserify fornecido pelo TVSDK do navegador no seu aplicativo para criar um player compatível com a Navegação.
-seo-description: Use o arquivo da biblioteca Browserify fornecido pelo TVSDK do navegador no seu aplicativo para criar um player compatível com a Navegação.
-seo-title: Crie um player compatível com a Navegação sem a Estrutura da interface do usuário
-title: Crie um player compatível com a Navegação sem a Estrutura da interface do usuário
-uuid: c4315bc8-c75d-4dd9-8680-946c1197be1e
+description: Use o arquivo da biblioteca Browserify fornecido pelo Browser TVSDK no seu aplicativo para criar um player compatível com o Browserify.
+title: Crie um reprodutor compatível com o Browserify sem a Estrutura da Interface do Usuário
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
 
-# Crie um player compatível com o Browserify sem a UI-Framework{#create-a-browserify-compatible-player-without-the-ui-framework}
+# Crie um reprodutor compatível com o Browserify sem a Estrutura da Interface do Usuário{#create-a-browserify-compatible-player-without-the-ui-framework}
 
-Use o arquivo da biblioteca Browserify fornecido pelo TVSDK do navegador no seu aplicativo para criar um player compatível com a Navegação.
+Use o arquivo da biblioteca Browserify fornecido pelo Browser TVSDK no seu aplicativo para criar um player compatível com o Browserify.
 
-O tópico [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) lista o conjunto de bibliotecas TVSDK do navegador que você normalmente inclui ao criar um player de vídeo básico. Para fazer isso, basta adicionar `script` tags com atributos `src` apontando para as bibliotecas.
+O tópico [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) lista o conjunto de bibliotecas TVSDK do navegador que você normalmente inclui ao criar um reprodutor de vídeo básico. Para fazer isso, basta adicionar `script` tags com atributos `src` apontando para as bibliotecas.
 
-O processo é um pouco diferente para criar um player compatível com o Browserify. Para isso, use o comando `require` para incluir o arquivo [!DNL AdobePSDK.module.js] (fornecido pelo TVSDK do navegador) no aplicativo. Esse arquivo agrupa os arquivos básicos da biblioteca do player em sua ordem de dependência adequada e retorna a namespace `AdobePSDK` usada para implementar recursos para o player.
+O processo é um pouco diferente para criar um reprodutor compatível com o Browserify. Para isso, use o comando `require` para incluir o arquivo [!DNL AdobePSDK.module.js] (fornecido pelo TVSDK do navegador) no aplicativo. Esse arquivo agrupa os arquivos básicos da biblioteca do reprodutor na ordem adequada de dependência e retorna o namespace `AdobePSDK` usado para implementar recursos no reprodutor.
 
-O TVSDK do navegador fornece a seguinte amostra do aplicativo Browserify e dos arquivos de compilação no pacote de versão:
+O TVSDK do navegador fornece a seguinte amostra do aplicativo Browserify e dos arquivos de build no pacote de lançamento:
 
 * [!DNL [...]/samples/browserify/reference/build/Gruntfile.js]
 * [!DNL [...]/samples/browserify/reference/build/package.json]
 * [!DNL [...]/samples/browserify/reference/examples/sample.html]
 * [!DNL [...]/samples/browserify/reference/examples/sample.js]
 
-Para criar um player de vídeo compatível com a Navegação:
+Para criar um reprodutor de vídeo compatível com o Browserify:
 
-1. Exigir o arquivo de biblioteca compatível com Browserify que retorna a namespace `AdobePSDK`:
+1. Requer o arquivo de biblioteca compatível com o Browserify que retorna o namespace `AdobePSDK`:
 
    ```
    var AdobePSDK = require('./AdobePSDK.module.js'); 
@@ -40,7 +37,7 @@ Para criar um player de vídeo compatível com a Navegação:
    […]
    ```
 
-1. Crie seu player conforme descrito em [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md).
+1. Crie seu reprodutor conforme descrito em [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md).
 
-   A Etapa 1 desta tarefa substitui a etapa nas instruções básicas do player, na qual você cria as bibliotecas básicas individuais do player no arquivo do aplicativo.
+   A Etapa 1 desta tarefa substitui a etapa nas instruções básicas do reprodutor, em que você cria as bibliotecas básicas individuais do reprodutor no arquivo do aplicativo.
 Agora é possível agrupar os arquivos do aplicativo usando o Browserify.
