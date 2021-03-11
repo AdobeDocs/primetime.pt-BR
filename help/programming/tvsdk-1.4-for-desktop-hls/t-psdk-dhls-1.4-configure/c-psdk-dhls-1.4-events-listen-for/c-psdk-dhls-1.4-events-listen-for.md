@@ -1,13 +1,10 @@
 ---
-description: Eventos do TVSDK indicam o estado do player, os erros que ocorrem, a conclusão de ações solicitadas, como o início da reprodução de um vídeo ou ações que ocorrem implicitamente, como a conclusão de um anúncio.
-seo-description: Eventos do TVSDK indicam o estado do player, os erros que ocorrem, a conclusão de ações solicitadas, como o início da reprodução de um vídeo ou ações que ocorrem implicitamente, como a conclusão de um anúncio.
-seo-title: Ouça eventos do Primetime Player
-title: Ouça eventos do Primetime Player
-uuid: e72782bf-9d26-4285-85e4-fd4d803c1bbe
+description: Os eventos do TVSDK indicam o estado do reprodutor, os erros que ocorrem, a conclusão de ações solicitadas, como o início da reprodução de um vídeo ou ações que ocorrem implicitamente, como a conclusão de um anúncio.
+title: Analise os eventos do Player do Primetime
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -15,17 +12,17 @@ ht-degree: 0%
 
 # Visão geral {#listen-for-primetime-player-events-overview}
 
-Eventos do TVSDK indicam o estado do player, os erros que ocorrem, a conclusão de ações solicitadas, como o início da reprodução de um vídeo ou ações que ocorrem implicitamente, como a conclusão de um anúncio.
+Os eventos do TVSDK indicam o estado do reprodutor, os erros que ocorrem, a conclusão de ações solicitadas, como o início da reprodução de um vídeo ou ações que ocorrem implicitamente, como a conclusão de um anúncio.
 
-Como seu aplicativo precisa responder a muitos desses eventos, é necessário implementar rotinas de manipulação de eventos e registrar essas rotinas no TVSDK. As rotinas chamam os métodos TVSDK relevantes para responder adequadamente.
+Como seu aplicativo precisa responder a muitos desses eventos, é necessário implementar rotinas de entrega de eventos e registrar essas rotinas com TVSDK. As rotinas chamam os métodos TVSDK relevantes para responder adequadamente.
 
 Estas são algumas informações adicionais sobre eventos:
 
-* A natureza em tempo real da reprodução de vídeo requer atividade assíncrona (não bloqueada) para muitas operações TVSDK.
-* O TVSDK suporta um player de vídeo controlado por evento.
+* A natureza em tempo real da reprodução de vídeo requer uma atividade assíncrona (não de bloqueio) para muitas operações TVSDK.
+* O TVSDK é compatível com um reprodutor de vídeo controlado por evento.
 
-   Fornece eventos que correspondem a todas as etapas importantes do processo de reprodução. Você registra esses eventos no mecanismo de evento da sua plataforma e cria manipuladores de eventos que serão chamados quando esses eventos ocorrerem. *`Event Handlers`* também são conhecidos como rotinas de retorno de chamada ou ouvintes de evento. O TVSDK fornece uma gama completa de métodos que podem ser usados pelos manipuladores de eventos.
-* O aplicativo geralmente inicia operações não bloqueadas, como solicitar a reprodução de um start de vídeo.
+   Ele fornece eventos que correspondem a todas as etapas importantes no processo de reprodução. Você registra esses eventos no mecanismo de evento da plataforma e cria manipuladores de eventos que serão chamados quando esses eventos ocorrerem. *`Event Handlers`* também são conhecidos como rotinas de retorno de chamada ou ouvintes de eventos. O TVSDK fornece uma gama completa de métodos que podem ser usados pelos manipuladores de eventos.
+* O aplicativo geralmente inicia operações que não são de bloqueio, como solicitar que um vídeo comece a ser reproduzido.
 
-   O TVSDK se comunica de forma assíncrona com seu aplicativo enviando eventos, como quando os start de vídeo são reproduzidos e um evento quando o vídeo é concluído. Outros eventos podem indicar mudanças de status no player e condições de erro. Seus manipuladores de evento executam as ações apropriadas.
+   O TVSDK se comunica de forma assíncrona com seu aplicativo ao despachar eventos, como quando o vídeo começa a ser reproduzido e um evento quando o vídeo termina. Outros eventos podem indicar alterações de status no reprodutor e condições de erro. Seus manipuladores de evento tomam as ações apropriadas.
 
