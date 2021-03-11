@@ -1,59 +1,56 @@
 ---
-description: Você pode configurar seu player para ler as estatísticas de reprodução e dispositivo do QoSProvider sempre que necessário.
-seo-description: Você pode configurar seu player para ler as estatísticas de reprodução e dispositivo do QoSProvider sempre que necessário.
-seo-title: Exibir estatísticas de reprodução e dispositivo de QoS
+description: Você pode configurar seu reprodutor para ler as estatísticas de reprodução e dispositivo do QoSProvider sempre que necessário.
 title: Exibir estatísticas de reprodução e dispositivo de QoS
-uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
-source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
 
-# Exibir a reprodução QoS e as estatísticas de dispositivo {#display-qos-playback-and-device-statistics}
+# Exibir a reprodução de QoS e as estatísticas do dispositivo {#display-qos-playback-and-device-statistics}
 
-Você pode configurar seu player para ler as estatísticas de reprodução e dispositivo do QoSProvider sempre que necessário.
+Você pode configurar seu reprodutor para ler as estatísticas de reprodução e dispositivo do QoSProvider sempre que necessário.
 
 A classe `QoSProvider` fornece várias estatísticas, incluindo a taxa de quadros, a taxa de bits do perfil, o tempo total gasto no buffering, o número de tentativas de buffering, o tempo necessário para obter o primeiro byte do primeiro fragmento de vídeo, o tempo necessário para renderizar o primeiro quadro, a duração do buffer no momento e o tempo do buffer.
 
-A implementação de referência fornece uma classe `QoSManager` na qual você pode ativar a exibição da sobreposição QoS. Você também pode ativar a visibilidade de QoS na interface do usuário de Configurações:
+A implementação de referência fornece uma classe `QoSManager` onde você pode ativar a exibição da sobreposição de QoS. Você também pode ativar a visibilidade do QoS na interface do usuário das Configurações:
 
 ![](assets/qos-configuration.jpg)
 
-O `QoSManager` acompanha as estatísticas de QoS obtendo informações do dispositivo, anexando-as ao player de mídia e atualizando-as com as informações mais recentes de QoS.
+O `QoSManager` rastreia as estatísticas de QoS obtendo informações do dispositivo, anexando ao reprodutor de mídia e atualizando com as informações de QoS mais recentes.
 
-**Ativar ou desativar o relatórios de estatísticas de QoS**
+**Ativar ou desativar o relatório de estatísticas de QoS**
 
-1. Crie um QosManager ou ative o relatórios QoS usando o ManagerFactory.
+1. Crie um QosManager ou ative o relatório de QoS usando o ManagerFactory.
 
    * Para criar um QosManager:
       * Este aplicativo precisa usar o recurso de fluxo de trabalho de publicidade
 
    QoSManager qosManager = new QosManagerOn();
 
-   * Para usar um ManagerFactory para ativar a exibição de estatísticas de QoS:
+   * Para usar um ManagerFactory para ativar a exibição das estatísticas de QoS:
 
    qosManager = ManagerFactory.getQosManager(
    <b>true</b>, config, mediaPlayer);
 
    >[!NOTE]
    >
-   >Alterar o booliano para `false` desativa o relatórios QoS.
+   >Alterar o booleano para `false` desativa os relatórios de QoS.
 
-2. Adicionar ouvintes de evento:
+2. Adicionar ouvintes de eventos:
 
    `qosManager.addEventListener(qosManagerEventListener);`
 
-3. Crie o provedor QoS e anexe-o ao contexto de atividade do player:
+3. Crie o provedor QoS e o anexe ao contexto da atividade do reprodutor:
 
    `qosManager.createQOSProvider(getActivity());`
 
    >[!NOTE]
    >
-   >Quando a atividade do player for destruída, certifique-se de chamar [qosManager.structQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) para limpar o provedor QOS, desconectando-o do player de mídia.
+   >Quando a atividade do reprodutor for destruída, certifique-se de chamar [qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) para limpar o provedor QOS desconectando-o do reprodutor de mídia.
 
 **Documentação da API relacionada**
 
