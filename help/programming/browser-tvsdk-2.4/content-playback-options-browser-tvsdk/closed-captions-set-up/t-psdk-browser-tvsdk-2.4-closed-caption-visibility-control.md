@@ -1,13 +1,10 @@
 ---
-description: É possível controlar a visibilidade das legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida.
-seo-description: É possível controlar a visibilidade das legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida.
-seo-title: Controlar a visibilidade da legenda
-title: Controlar a visibilidade da legenda
-uuid: b161a729-73f3-4019-a95e-013b42779842
+description: Você pode controlar a visibilidade de legendas ocultas. Quando a visibilidade está ativada, a faixa selecionada no momento é exibida.
+title: Controle a visibilidade da legenda oculta
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
@@ -15,17 +12,17 @@ ht-degree: 0%
 
 # Controlar visibilidade de legenda fechada{#control-closed-caption-visibility}
 
-É possível controlar a visibilidade das legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida.
+Você pode controlar a visibilidade de legendas ocultas. Quando a visibilidade está ativada, a faixa selecionada no momento é exibida.
 
 >[!TIP]
 >
->Se você alterar qual faixa é atual, a configuração de visibilidade permanecerá a mesma.
+>Se você alterar qual rastreamento é atual, a configuração de visibilidade permanecerá a mesma.
 
-Se o texto da legenda fechada for exibido quando o player entrar no modo de busca, o texto não será mais exibido depois que a busca for concluída. Em vez disso, após alguns segundos, o TVSDK do navegador exibe o próximo texto de legenda fechada no vídeo após a posição de busca final.
+Se o texto da legenda fechada for exibido quando o reprodutor entrar no modo de busca, o texto não será mais exibido após a conclusão da busca. Em vez disso, após alguns segundos, o TVSDK do navegador exibe o próximo texto da legenda fechada no vídeo após a posição final da busca.
 
 >[!TIP]
 >
->Os valores de visibilidade para legendas fechadas são controlados com `MediaPlayer.VISIBLE` e `MediaPlayer.INVISIBLE`.
+>Os valores de visibilidade de legendas ocultas são controlados com `MediaPlayer.VISIBLE` e `MediaPlayer.INVISIBLE`.
 
-1. Use a propriedade `MediaPlayer.ccVisibility` para acessar a configuração de visibilidade atual das legendas fechadas.
+1. Use a propriedade `MediaPlayer.ccVisibility` para acessar a configuração de visibilidade atual das legendas ocultas.
 
