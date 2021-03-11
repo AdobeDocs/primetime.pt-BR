@@ -1,27 +1,24 @@
 ---
-description: Usar MediaPlayerItemLoader ajuda a obter informações sobre um fluxo de mídia sem instanciar uma instância do MediaPlayer. Isso é especialmente útil em fluxos pré-buffering para que a reprodução possa começar sem demora.
-seo-description: Usar MediaPlayerItemLoader ajuda a obter informações sobre um fluxo de mídia sem instanciar uma instância do MediaPlayer. Isso é especialmente útil em fluxos pré-buffering para que a reprodução possa começar sem demora.
-seo-title: Carregar um recurso de mídia usando MediaPlayerItemLoader
+description: O uso de MediaPlayerItemLoader ajuda a obter informações sobre um fluxo de mídia sem instanciar uma instância do MediaPlayer. Isso é útil principalmente em fluxos pré-buffering, para que a reprodução possa começar sem atraso.
 title: Carregar um recurso de mídia usando MediaPlayerItemLoader
-uuid: 43ca2470-1fd2-4f66-94fe-a12ed17b52d7
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
 
-# Carregue um recurso de mídia usando MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
+# Carregar um recurso de mídia usando MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
 
-Usar MediaPlayerItemLoader ajuda a obter informações sobre um fluxo de mídia sem instanciar uma instância do MediaPlayer. Isso é especialmente útil em fluxos pré-buffering para que a reprodução possa começar sem demora.
+O uso de MediaPlayerItemLoader ajuda a obter informações sobre um fluxo de mídia sem instanciar uma instância do MediaPlayer. Isso é útil principalmente em fluxos pré-buffering, para que a reprodução possa começar sem atraso.
 
-A classe `MediaPlayerItemLoader` ajuda a trocar um recurso de mídia pelo `MediaPlayerItem` atual sem anexar uma visualização a uma instância `MediaPlayer`, que alocaria recursos de hardware de decodificação de vídeo. Etapas adicionais são necessárias para o conteúdo protegido por DRM, mas este manual não as descreve.
+A classe `MediaPlayerItemLoader` ajuda a trocar um recurso de mídia pelo `MediaPlayerItem` atual sem anexar uma exibição a uma instância `MediaPlayer`, que alocaria recursos de hardware de decodificação de vídeo. Etapas adicionais são necessárias para conteúdo protegido por DRM, mas este manual não as descreve.
 
 >[!IMPORTANT]
 >
->O TVSDK não suporta um único `QoSProvider` para trabalhar com `itemLoader` e `MediaPlayer`. Se seu aplicativo usar o Instant On, o aplicativo precisará manter duas `QoS` instâncias e gerenciar ambas para obter as informações. Consulte [instant-on](../../content-playback-options/buffering-configuration/c-psdk-android-2.7-instant-on.md) para obter mais informações.
+>O TVSDK não oferece suporte a um único `QoSProvider` para funcionar com `itemLoader` e `MediaPlayer`. Se o aplicativo usar o Instant On, o aplicativo precisará manter duas instâncias `QoS` e gerenciar ambas as instâncias para as informações. Consulte [instant-on](../../content-playback-options/buffering-configuration/c-psdk-android-2.7-instant-on.md) para obter mais informações.
 
 1. Crie uma instância de `MediaPlayerItemLoader`.
 
@@ -80,14 +77,14 @@ A classe `MediaPlayerItemLoader` ajuda a trocar um recurso de mídia pelo `Media
    }
    ```
 
-   Na chamada de retorno `onLoadComplete()`, execute um dos seguintes procedimentos:
+   Na chamada de retorno `onLoadComplete()`, siga um destes procedimentos:
 
-   * Certifique-se de que tudo o que possa afetar o buffering, por exemplo, selecionar WebVTT ou faixas de áudio, esteja completo e chame `prepareBuffer()` para aproveitar as vantagens do instantâneo.
+   * Certifique-se de que qualquer coisa que possa afetar o buffering, por exemplo, selecionar a WebVTT ou as faixas de áudio, esteja completo e chame `prepareBuffer()` para aproveitar as vantagens instantâneas.
    * Anexe o item à instância `MediaPlayer` usando `replaceCurrentItem()`.
 
    Se você chamar `prepareBuffer()`, você receberá o evento BUFFER_PREPARED em seu manipulador `onBufferPrepared` quando a preparação for concluída.
 
-1. Chame `load` na instância `MediaPlayerItemLoader` e passe o recurso a ser carregado e, opcionalmente, a ID de conteúdo e uma instância `MediaPlayerItemConfig`.
+1. Chame `load` na instância `MediaPlayerItemLoader` e passe o recurso a ser carregado, além de uma ID de conteúdo e uma instância `MediaPlayerItemConfig` opcionalmente.
 
    ```java
    loader = createLoader(); 
@@ -95,16 +92,16 @@ A classe `MediaPlayerItemLoader` ajuda a trocar um recurso de mídia pelo `Media
    loader.load(res, 233, getConfig());
    ```
 
-1. Para fazer o buffer a partir de um ponto diferente do início do fluxo, chame `prepareBuffer()` com a posição (em milissegundos) na qual o buffering do start será executado.
-1. Use os métodos `replaceCurrentItem()` e `play()` de `MediaPlayer` para start a ser reproduzido a partir desse ponto.
-1. Aguarde o status ocioso e chame `replaceCurrentItem`.
-1. Toque o item.
+1. Para fazer o buffer a partir de um ponto diferente do início do fluxo, chame `prepareBuffer()` com a posição (em milissegundos) em que o buffering será iniciado.
+1. Use os métodos `replaceCurrentItem()` e `play()` de `MediaPlayer` para começar a reproduzir a partir desse ponto.
+1. Aguarde o status de inatividade e chame `replaceCurrentItem`.
+1. Reproduzir o item.
 
    * Se o item for carregado, mas não armazenado em buffer:
 
       1. Aguarde o status inicializado.
       1. Chame `prepareToPlay()`.
-      1. Aguarde o status PREPARADO.
+      1. Aguarde o status PREPARED.
       1. Chame `play()`.
    * Se o item estiver em buffer:
 
