@@ -1,13 +1,10 @@
 ---
-description: Um objeto MediaPlayer encapsula o comportamento e a funcionalidade de um player de mídia.
-seo-description: Um objeto MediaPlayer encapsula o comportamento e a funcionalidade de um player de mídia.
-seo-title: Configurar o MediaPlayer
+description: Um objeto MediaPlayer encapsula o comportamento e a funcionalidade de um reprodutor de mídia.
 title: Configurar o MediaPlayer
-uuid: 2279e388-6fbc-49a2-8560-218d3d31e1d6
 translation-type: tm+mt
-source-git-commit: af9b865bc1627a97bf8957b5460ff9b46052a7dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Configurar o MediaPlayer{#set-up-the-mediaplayer}
 
-Um objeto MediaPlayer encapsula o comportamento e a funcionalidade de um player de mídia.
+Um objeto MediaPlayer encapsula o comportamento e a funcionalidade de um reprodutor de mídia.
 
 1. Instancie um `MediaPlayer` usando o seguinte:
 
@@ -29,7 +26,7 @@ Um objeto MediaPlayer encapsula o comportamento e a funcionalidade de um player 
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   em que `container` é o elemento `div` do público alvo que contém seu `HTMLMediaElement`.
+   onde `container` é o elemento `div` de destino que contém seu `HTMLMediaElement`.
 
    Por exemplo, em uma página HTML:
 
@@ -43,7 +40,7 @@ Um objeto MediaPlayer encapsula o comportamento e a funcionalidade de um player 
    </div>
    ```
 
-   Ligue para:
+   Chame:
 
    ```js
    var view = new  
@@ -53,13 +50,13 @@ Um objeto MediaPlayer encapsula o comportamento e a funcionalidade de um player 
          document.getElementById("videoDiv"));  
    ```
 
-1. Anexe a instância `MediaPlayerView` à instância `MediaPlayer`:
+1. Anexe sua instância `MediaPlayerView` à instância `MediaPlayer`:
 
    ```js
    player.view = view;
    ```
 
-1. Anexe o elemento `div` dos controles personalizados à sua instância do MediaPlayer.
+1. Anexe o elemento de controles personalizados `div` à instância do MediaPlayer.
 
    Por exemplo, em HTML:
 
@@ -71,7 +68,7 @@ Um objeto MediaPlayer encapsula o comportamento e a funcionalidade de um player 
    </div>
    ```
 
-   Ligue para:
+   Chame:
 
    ```js
    if (typeof player.getView() !== 'undefined') { 
