@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral - Uso das implementações de referência
 title: Visão geral - Uso das implementações de referência
-uuid: 4009b6d1-b315-4117-8c26-c2f6ee0cefc2
+description: Visão geral - Uso das implementações de referência
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 O produto Adobe Access vem com uma implementação de referência para os seguintes componentes:
 
-* Ferramentas de linha de comando
+* Ferramentas da linha de comando
 * Servidor de licenças e empacotador de pastas assistido
-* Aplicativo AIR do Gerenciador de Flashes Access
+* Aplicativo AIR do Flash Access Manager
 
 >[!NOTE]
 >
->Você deve implantar a Adobe Access Server para o Protected Streaming, a implementação de referência ou seu próprio servidor de licenças.
+>Você deve implantar o Adobe Access Server for Protected Streaming, a implementação de referência ou seu próprio servidor de licenças.
