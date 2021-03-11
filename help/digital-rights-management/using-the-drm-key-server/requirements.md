@@ -1,9 +1,9 @@
 ---
-seo-title: Requisitos para o uso do servidor de chave DRM Primetime
-title: Requisitos para o uso do servidor de chave DRM Primetime
-uuid: 769f9e10-7a3e-4a38-b30d-18181b666bb4
+title: Requisitos para usar o servidor de chaves DRM do Primetime
+description: Requisitos para usar o servidor de chaves DRM do Primetime
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Introdução {#introduction}
 
-O Primetime DRM Key Server é um servidor de chaves de vários locatários para o delivery de chaves Remote iOS e / ou Xbox 360. Se o Delivery de chave remota estiver ativado em uma política para iOS, um servidor de chave DRM Primetime deverá ser implantado para permitir a reprodução de conteúdo em clientes iOS. O Primetime DRM Key Server é sempre necessário para o Xbox 360.
+O Primetime DRM Key Server é um servidor de chaves de vários locatários para entrega remota de chaves iOS e/ou Xbox 360. Se a Entrega de Chave Remota estiver ativada em uma política para iOS, um Servidor de Chave DRM Primetime deverá ser implantado para habilitar a reprodução de conteúdo em clientes iOS. O servidor de chaves DRM do Primetime é sempre necessário para o Xbox 360.
 
-## Requisitos para usar o Primetime DRM Key Server {#requirements-for-using-primetime-drm-key-server}
+## Requisitos para usar o servidor de chaves DRM do Primetime {#requirements-for-using-primetime-drm-key-server}
 
 Os requisitos mínimos para usar o Primetime DRM Key Server são:
 
-* [Java JRE 1.6 ](https://www.oracle.com/technetwork/java/javase/downloads/index.html) ou posterior. (Para usar o HSM no Windows de 64 bits, é necessário o JRE 8)
+* [Java JRE 1.6](https://www.oracle.com/technetwork/java/javase/downloads/index.html) ou posterior. (Para usar o HSM no Windows 64 bits, é necessário JRE 8)
 
    >[!NOTE]
    >
