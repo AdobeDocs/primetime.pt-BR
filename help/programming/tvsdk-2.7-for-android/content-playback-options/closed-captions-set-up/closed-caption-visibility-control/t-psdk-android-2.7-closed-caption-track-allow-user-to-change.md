@@ -1,13 +1,10 @@
 ---
 description: Este procedimento é um exemplo de como criar um botão que permite ao usuário selecionar um rastreamento de legenda fechada.
-seo-description: Este procedimento é um exemplo de como criar um botão que permite ao usuário selecionar um rastreamento de legenda fechada.
-seo-title: Permitir que os usuários alterem o rastreamento de legenda
 title: Permitir que os usuários alterem o rastreamento de legenda
-uuid: 043dc492-1dd4-4b7f-8541-d60a1d3d7c4a
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Este procedimento é um exemplo de como criar um botão que permite ao usuário selecionar um rastreamento de legenda fechada.
 
-1. Crie um botão para alterar o rastreamento de legenda fechada.
+1. Crie um botão para alterar a faixa de legenda fechada.
 
    ```xml
    <Button 
@@ -31,9 +28,9 @@ Este procedimento é um exemplo de como criar um botão que permite ao usuário 
      android:text="CC" /> 
    ```
 
-1. Converta a lista de faixas de legenda fechadas disponíveis em uma matriz de string.
+1. Converta a lista de faixas de legenda ocultas disponíveis em uma matriz de sequências de caracteres.
 
-   As faixas de legenda fechada que têm atividade, ou seja, canais para os quais o TVSDK descobriu dados, são marcadas de acordo.
+   As faixas de legenda fechada que têm atividade, ou seja, canais para os quais o TVSDK descobriu dados, são marcadas adequadamente.
 
    ```java
    /** 
@@ -61,7 +58,7 @@ Este procedimento é um exemplo de como criar um botão que permite ao usuário 
    } 
    ```
 
-1. Quando o usuário clica no botão, exibe uma caixa de diálogo que lista todas as faixas padrão de legenda fechada.
+1. Quando o usuário clica no botão , exibe uma caixa de diálogo que lista todas as faixas padrão de legenda fechada.
 
    ```java
    public void selectClosedCaptioningClick(View view) { 
