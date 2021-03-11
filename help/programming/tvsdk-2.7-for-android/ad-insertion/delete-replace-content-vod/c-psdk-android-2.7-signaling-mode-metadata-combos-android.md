@@ -1,21 +1,18 @@
 ---
-description: Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes modos de sinalização de anúncio e combinações de metadados de anúncio. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
-seo-description: Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes modos de sinalização de anúncio e combinações de metadados de anúncio. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
-seo-title: Efeito na inserção e exclusão de anúncios no modo de sinalização de anúncios e combinações de metadados de anúncios
-title: Efeito na inserção e exclusão de anúncios no modo de sinalização de anúncios e combinações de metadados de anúncios
-uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
+description: Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes combinações de metadados de anúncio e modo de sinalização de anúncios. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
+title: Efeito na inserção e exclusão de anúncios do modo de sinalização de anúncios e combinações de metadados de anúncios
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
 
 
-# Efeito na inserção e exclusão de anúncios no modo de sinalização de anúncios e combinações de metadados de anúncios {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Efeito na inserção e exclusão de anúncios do modo de sinalização de anúncios e combinações de metadados de anúncio {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
-Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes modos de sinalização de anúncio e combinações de metadados de anúncio. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
+Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes combinações de metadados de anúncio e modo de sinalização de anúncios. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
 
 >[!TIP]
 >
@@ -26,10 +23,10 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
 <table id="table_6044AA1ACFA244FA814EA2D0766C6D12"> 
  <thead> 
   <tr> 
-   <th class="entry"> Modo de sinalização de anúncios </th> 
+   <th class="entry"> Modo de sinalização do anúncio </th> 
    <th class="entry"> Metadados de anúncio </th> 
-   <th class="entry"> Resolvedores criados </th> 
-   <th class="entry"><span class="codeph"> </span> PlacementInformationScreated </th> 
+   <th class="entry"> Resolvedores Criados </th> 
+   <th class="entry"><span class="codeph"> </span> InserementInformation - Rastreado </th> 
    <th class="entry"> Comportamento resultante </th> 
   </tr> 
  </thead>
@@ -64,7 +61,7 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Publicidades inseridas </td> 
+   <td> Anúncios inseridos </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -88,7 +85,7 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
    <td> Intervalos marcados, nenhum anúncio inserido </td> 
   </tr> 
   <tr> 
-   <td colname="1"> <p><b>Casos de Manifesto</b> </p> </td> 
+   <td colname="1"> <p><b>Casos de manifesto</b> </p> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -99,7 +96,7 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.PRE_ROLL, Mode.INSERT)</span> </td> 
-   <td> Publicidades inseridas </td> 
+   <td> Anúncios inseridos </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -110,7 +107,7 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
      <li id="li_F39A69EFA7ED45C18978A2C462AF7641"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </li> 
      <li id="li_8CCDA3B1C63F4BC396F28F443D8C42F8"><span class="codeph"> PlacementInfo (Type.PRE_ROLL, Mode.INSERT)</span> </li> 
     </ul> </td> 
-   <td> Intervalos excluídos, anúncios inseridos </td> 
+   <td> Intervalos excluídos, publicidades inseridas </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -208,14 +205,14 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
    <td> Excluir, Auditude </td> 
    <td> Excluir, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Intervalos excluídos, anúncios inseridos </td> 
+   <td> Intervalos excluídos, publicidades inseridas </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Publicidades inseridas </td> 
+   <td> Anúncios inseridos </td> 
   </tr> 
   <tr> 
    <td></td> 
