@@ -1,9 +1,9 @@
 ---
-seo-title: Calculadora de hash SWF
 title: Calculadora de hash SWF
-uuid: c1823208-92d9-47c5-b550-f9cc370b543d
+description: Calculadora de hash SWF
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Calculadora de hash SWF{#swf-hash-calculator}
 
-O utilitário calculador de hash SWF calculou o resumo de um aplicativo SWF localizado em um arquivo. Para executar o hasher, execute o comando:
+O utilitário Calculadora de Hash SWF calculou o resumo de um aplicativo SWF localizado em um arquivo. Para executar o hash, execute o comando:
 
 ```
 Hasher.bat filename.swf
