@@ -1,13 +1,10 @@
 ---
-description: Quando o TVSDK do navegador detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar a tag e expô-la como um objeto TimedMetadata.
-seo-description: Quando o TVSDK do navegador detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar a tag e expô-la como um objeto TimedMetadata.
-seo-title: Classe de metadados cronometrados
+description: Quando o TVSDK do Navegador detecta uma tag subscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar a tag e expô-la como um objeto TimedMetadata .
 title: Classe de metadados cronometrados
-uuid: 3f276618-5f61-4b41-bd2d-78e7f32178d9
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Classe de metadados cronometrada{#timed-metadata-class}
 
-Quando o TVSDK do navegador detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar a tag e expô-la como um objeto TimedMetadata.
+Quando o TVSDK do Navegador detecta uma tag subscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar a tag e expô-la como um objeto TimedMetadata .
 
 A classe `TimedMetadata` fornece os seguintes elementos:
 
@@ -40,22 +37,22 @@ A classe `TimedMetadata` fornece os seguintes elementos:
   <tr> 
    <td colname="col1"> <p>time </p> </td> 
    <td colname="col02"> <p>Número </p> </td> 
-   <td colname="col2"> <p>A posição de hora local (milissegundos) relativa ao start do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. </p> </td> 
+   <td colname="col2"> <p>A posição de hora local (milissegundos) relativa ao início do conteúdo principal em que esses metadados cronometrados estão presentes no fluxo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>id </p> </td> 
    <td colname="col02"> <p>String </p> </td> 
-   <td colname="col2"> <p>O identificador exclusivo dos metadados cronometrados. </p> <p>Geralmente é extraído do atributo de ID da tag/sinalização, se houver. Caso contrário, é um valor aleatório exclusivo. </p> </td> 
+   <td colname="col2"> <p>O identificador exclusivo dos metadados cronometrados. </p> <p>Geralmente é extraído do atributo de ID da sinalização/tag, se presente. Caso contrário, será um valor aleatório exclusivo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>name </p> </td> 
    <td colname="col02"> <p>Número </p> </td> 
-   <td colname="col2"> <p>O nome dos metadados cronometrados. </p> <p>Se o tipo for TAG, o valor representa o nome da marca/indicação. Se o tipo for ID3, o valor será nulo. </p> </td> 
+   <td colname="col2"> <p>O nome dos metadados cronometrados. </p> <p>Se o tipo for TAG, o valor representará o nome da sinalização/tag. Se o tipo for ID3, o valor será nulo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>conteúdo </p> </td> 
    <td colname="col02"> <p>String </p> </td> 
-   <td colname="col2"> <p>O conteúdo bruto dos metadados cronometrados. </p> <p>Se o tipo for TAG, o valor representará a lista do atributo inteiro da dica/tag. Se a ID do tipo ID3, o valor será nulo. </p> </td> 
+   <td colname="col2"> <p>O conteúdo bruto dos metadados cronometrados. </p> <p>Se o tipo for TAG, o valor representa a lista de atributos inteira da sinalização/tag. Se a ID3 do tipo, o valor será nulo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>metadados </p> </td> 
