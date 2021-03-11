@@ -1,13 +1,10 @@
 ---
-description: Você pode usar o Adobe Offline Packager para preparar o conteúdo para qualquer uma das soluções DRM suportadas pelo Primeioud DRM, com ExpressPlay.
-seo-description: Você pode usar o Adobe Offline Packager para preparar o conteúdo para qualquer uma das soluções DRM suportadas pelo Primeioud DRM, com ExpressPlay.
-seo-title: Primetime Packager / Cloud DRM / TVSDK
+description: Você pode usar o Adobe Offline packager para preparar o conteúdo para qualquer solução DRM compatível com Primetime DRM, fornecida pela ExpressPlay.
 title: Primetime Packager / Cloud DRM / TVSDK
-uuid: e54a0e4d-c8ea-46d4-b1b0-bed8a680f8f5
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -15,29 +12,29 @@ ht-degree: 0%
 
 # Primetime Packager / Cloud DRM / TVSDK {#primetime-packager-cloud-drm-tvsdk}
 
-Você pode usar o Adobe Offline Packager para preparar o conteúdo para qualquer uma das soluções DRM suportadas pelo Primeioud DRM, com ExpressPlay.
+Você pode usar o Adobe Offline packager para preparar o conteúdo para qualquer solução DRM compatível com Primetime DRM, fornecida pela ExpressPlay.
 
-Este conjunto de instruções presume que você já tenha configurado uma conta de administrador do ExpressPlay: [start Rápido da Nuvem DRM Primetime](../../../multi-drm-workflows/quick-start/quick-overview.md).
-1. Escolha a infraestrutura a ser usada para empacotar seu conteúdo. O Primetime Packager oferece suporte a pacotes de conteúdo baseados em linha de comando e configuração para uso com os DRMs FairPlay, Widevine e PlayReady. Os seguintes formatos e criptografia são suportados atualmente no TVSDK (com mais no pipeline):
+Esse conjunto de instruções pressupõe que você já tenha configurado uma conta de administrador do ExpressPlay: [Início rápido do Primetime DRM Cloud](../../../multi-drm-workflows/quick-start/quick-overview.md).
+1. Escolha a infraestrutura a ser usada para empacotar seu conteúdo. O Primetime Packager é compatível com o empacotamento de conteúdo baseado em linha de comando e configuração para uso com os DRMs FairPlay, Widevine e PlayReady. Os seguintes formatos e criptografia são compatíveis no TVSDK (com mais no pipeline):
 
-   * DASH (CENC) / PlayReady, Widevine - para HTML5
-   * HLS / FairPlay, Access - para iOS
+   * DASH (CENC) / PlayReady, Widevine - Para HTML5
+   * HLS / FairPlay, Acesso - Para iOS
 
 1. Escolha um KMS (Key Management System):
 
-   * Usar o KMS do ExpressPlay ( [Armazenamento de chave do ExpressPlay](https://www.expressplay.com/developer/key-storage/)); este sistema gerencia suas chaves de conteúdo por meio da RESTful API do ExpressPlay.
+   * Use o KMS do ExpressPlay ( [Armazenamento de chaves do ExpressPlay](https://www.expressplay.com/developer/key-storage/)); esse sistema gerencia suas chaves de conteúdo por meio da RESTful API do ExpressPlay.
 
       ou...
 
-   * Configure seu próprio KMS. Crie um banco de dados de chaves de conteúdo, selecionável por ID de conteúdo.
+   * Configure seu próprio KMS. Crie um banco de dados de chaves de conteúdo, selecionável pela ID de conteúdo.
 
       Em ambos os casos, o KMS gerencia um suprimento de chaves de conteúdo, com cada chave com uma ID de conteúdo associada.
 
-1. Empacote seu conteúdo. Com o Primetime Packager, é possível disponibilizar um conteúdo para uma solução DRM específica ou para várias soluções DRM.
+1. Compacte seu conteúdo. Com o Primetime Packager, você pode empacotar um conteúdo para uma solução DRM específica ou para várias soluções DRM.
 
-   Os seguintes comandos de amostra mostram alguns exemplos de conteúdo de empacotamento para diferentes soluções de DRM:
+   Os seguintes comandos de exemplo mostram alguns exemplos de conteúdo de empacotamento para diferentes soluções de DRM:
 
-   * [Widevine com Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19)  (gera arquivo MPD):
+   * [Widevine com o Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19)  (gera arquivo MPD):
 
       ```
       java -jar OfflinePackager.jar \ 
@@ -79,15 +76,15 @@ Este conjunto de instruções presume que você já tenha configurado uma conta 
 
        O servidor storefront precisa lidar com as seguintes operações:
    
-   1. Seleção de conteúdo pelo cliente. Essa implementação precisa incluir um terminal para que os clientes solicitem um token de conteúdo para uma ID de conteúdo específica.
+   1. Seleção de cliente do conteúdo. Essa implementação precisa incluir um terminal para que os clientes solicitem um token de conteúdo para uma ID de conteúdo específica.
    1. Direito ao cliente
-   1. Solicitações de token de licença (ExpressPlay) do cliente ( [solicitação de token de licença do ExpressPlay / referência de resposta](../../../multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md))
+   1. Solicitações de token de licença (ExpressPlay) do cliente ( [Solicitação de token de licença do ExpressPlay / referência de resposta](../../../multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md))
 
 1. Crie seu cliente.
 
-       O cliente deve incluir uma chamada para seu servidor storefront. O Adobe recomenda que o cliente chame o storefront depois que o usuário selecionar algum conteúdo e depois que o usuário for autenticado. Em seguida, passe o token retornado do ExpressPlay para o player para uso em solicitações de licença. As introduções para implementar o componente DRM dos seus players estão aqui:
+       O cliente deve incluir uma chamada para o servidor da loja. O Adobe recomenda que o cliente chame a loja depois que o usuário selecionar algum conteúdo e depois que o usuário for autenticado. Em seguida, passe o token retornado do ExpressPlay para o seu player para usar em solicitações de licença. As introduções para implementar o componente DRM de seus players estão aqui:
    
    * [TVSDK do navegador para HTML5](https://help.adobe.com/en_US/primetime/psdk/browser_tvsdk/index.html#PSDKs-reference-DRM_interface_overview)
    * [iOS](../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
 
-1. Com o token de licença em mãos, o cliente agora pode derivar o URL da solicitação do token e fazer a solicitação de licença para o ExpressPlay e, em seguida, reproduzir o conteúdo selecionado para o usuário.
+1. Com o token de licença em mãos, o cliente agora pode derivar o URL da solicitação do token e fazer a solicitação de licença para ExpressPlay e, em seguida, reproduzir o conteúdo selecionado para o usuário.
