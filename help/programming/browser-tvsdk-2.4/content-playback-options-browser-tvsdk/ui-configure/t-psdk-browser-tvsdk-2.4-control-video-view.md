@@ -1,13 +1,10 @@
 ---
-description: É possível controlar a posição e o tamanho da visualização de vídeo usando o objeto MediaPlayerView.
-seo-description: É possível controlar a posição e o tamanho da visualização de vídeo usando o objeto MediaPlayerView.
-seo-title: Controlar a posição e o tamanho da visualização de vídeo
-title: Controlar a posição e o tamanho da visualização de vídeo
-uuid: d09dbc18-1ec0-4336-bf3f-7ff6c265c443
+description: É possível controlar a posição e o tamanho da exibição de vídeo usando o objeto MediaPlayerView .
+title: Controlar a posição e o tamanho da exibição de vídeo
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Controlar a posição e o tamanho da visualização de vídeo{#control-the-position-and-size-of-the-video-view}
 
-É possível controlar a posição e o tamanho da visualização de vídeo usando o objeto MediaPlayerView.
+É possível controlar a posição e o tamanho da exibição de vídeo usando o objeto MediaPlayerView .
 
-Por padrão, o TVSDK do navegador tenta manter a proporção da visualização de vídeo sempre que o tamanho ou a posição do vídeo mudam devido a uma alteração feita pelo aplicativo, um switch de perfil, uma mudança de conteúdo e assim por diante.
+Por padrão, o TVSDK do navegador tenta manter a proporção da exibição de vídeo sempre que o tamanho ou a posição do vídeo mudam devido a uma alteração feita pelo aplicativo, um switch de perfil, um switch de conteúdo e assim por diante.
 
-Você pode substituir o comportamento padrão de proporção especificando uma *política de escala* diferente. Especifique a política de escala usando a propriedade `MediaPlayerView` do objeto `scalePolicy`. A política de escala padrão de `MediaPlayerView` é definida com uma instância da classe `MaintainAspectRatioScalePolicy`. Para redefinir a política de escala, substitua a instância padrão de `MaintainAspectRatioScalePolicy` em `MediaPlayerView.scalePolicy` por sua própria política.
+Você pode substituir o comportamento da taxa de proporção padrão especificando uma *política de escala* diferente. Especifique a política de escala usando a propriedade `MediaPlayerView` do objeto `scalePolicy`. A política de escala padrão de `MediaPlayerView` é definida com uma instância da classe `MaintainAspectRatioScalePolicy`. Para redefinir a política de escala, substitua a instância padrão de `MaintainAspectRatioScalePolicy` em `MediaPlayerView.scalePolicy` por sua própria política.
 
 >[!IMPORTANT]
 >
@@ -27,11 +24,11 @@ Você pode substituir o comportamento padrão de proporção especificando uma *
 
 ## Cenários de fallback sem Flash {#non-flash-fallback-scenarios}
 
-Em cenários de fallback que não sejam de Flash, para que a política de dimensionamento funcione corretamente, o elemento div de vídeo fornecido no construtor `View` deve retornar valores diferentes de zero para `offsetWidth` e `offsetHeight`. Para dar um exemplo de função incorreta, às vezes quando a largura e a altura dos elementos div de vídeo não estão definidos explicitamente em css, o construtor `View` retorna zero para `offsetWidth` ou `offsetHeight`.
+Em cenários de fallback que não sejam de Flash, para que a política de escala funcione corretamente, o elemento div do vídeo fornecido no construtor `View` deve retornar valores diferentes de zero para `offsetWidth` e `offsetHeight`. Para dar um exemplo de função incorreta, às vezes, quando a largura e a altura dos elementos div do vídeo não são definidas explicitamente em css, o construtor `View` retorna zero para `offsetWidth` ou `offsetHeight`.
 
 >[!NOTE]
 >
->O CustomScalePolicy tem suporte limitado para alguns navegadores, como IE, Edge e Safari 9. Para esses navegadores, a proporção de aspecto nativa do vídeo não pode ser alterada. No entanto, a posição e as dimensões do vídeo serão aplicadas de acordo com a política de escala.
+>O CustomScalePolicy tem suporte limitado para alguns navegadores, principalmente IE, Edge e Safari 9. Para esses navegadores, a proporção de aspecto nativa do vídeo não pode ser alterada. No entanto, a posição e as dimensões do vídeo serão aplicadas de acordo com a política de escala.
 
 1. Implemente a interface `MediaPlayerViewScalePolicy` para criar sua própria política de escala.
 
@@ -67,7 +64,7 @@ Em cenários de fallback que não sejam de Flash, para que a política de dimens
    };
    ```
 
-1. Atribua sua implementação à propriedade `MediaPlayerView`.
+1. Atribua sua implementação à propriedade `MediaPlayerView` .
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(videoDiv); 
