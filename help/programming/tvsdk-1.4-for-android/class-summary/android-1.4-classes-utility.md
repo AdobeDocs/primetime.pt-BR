@@ -1,13 +1,10 @@
 ---
 description: Essas classes fornecem maneiras de processar vários tipos de informações.
-seo-description: Essas classes fornecem maneiras de processar vários tipos de informações.
-seo-title: Classes de utilitário
 title: Classes de utilitário
-uuid: 060d5587-c1ef-4b58-9cad-49826201a79f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ Pacote: [com.adobe.mediacore.utils](https://help.adobe.com/en_US/primetime/api/p
 
 | Nome da classe | Descrição |
 |---|---|
-| [DateUtils](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/DateUtils.html) | Métodos para processar datas. |
-| [NumberUtils](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/NumberUtils.html) | Métodos de ajuda relacionados a números. |
-| [StringUtils](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/StringUtils.html) | Métodos de ajuda relacionados a strings. |
+| [DateUtils](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/DateUtils.html) | Métodos de processamento de datas. |
+| [NumberUtils](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/NumberUtils.html) | Métodos de ajuda relacionados aos números. |
+| [StringUtils](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/StringUtils.html) | Métodos de ajuda relacionados às cadeias de caracteres. |
 | [TimeRange](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/TimeRange.html) | Métodos para criar e interpretar intervalos de tempo. |
