@@ -1,26 +1,23 @@
 ---
-description: O áudio de ligação tardia usa o PTMediaPlayer para reproduzir um vídeo especificado em uma lista de reprodução HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
-seo-description: O áudio de ligação tardia usa o PTMediaPlayer para reproduzir um vídeo especificado em uma lista de reprodução HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
-seo-title: Acessar faixas de áudio alternativas
-title: Acessar faixas de áudio alternativas
-uuid: 2915a74f-5ec3-457e-890d-5c79be39f37a
+description: O áudio de ligação tardia utiliza o PTMediaPlayer para reproduzir um vídeo especificado numa lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
+title: Acessar trilhas de áudio alternativas
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
 
-# Acessar faixas de áudio alternativas {#access-alternate-audio-tracks}
+# Acessar trilhas de áudio alternativas {#access-alternate-audio-tracks}
 
-O áudio de ligação tardia usa o PTMediaPlayer para reproduzir um vídeo especificado em uma lista de reprodução HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
+O áudio de ligação tardia utiliza o PTMediaPlayer para reproduzir um vídeo especificado numa lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
 
 1. Aguarde até que o MediaPlayer esteja pelo menos no status `PTMediaPlayerStatusReady`.
-1. Ouça este evento:
+1. Analise este evento:
 
-   notificação `PTMediaPlayerItemMediaSelectionOptionsAvailable`: A lista inicial das faixas de áudio está disponível.
+   notificação `PTMediaPlayerItemMediaSelectionOptionsAvailable`: A lista inicial de faixas de áudio está disponível.
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self 
