@@ -1,9 +1,9 @@
 ---
-seo-title: Instale as ferramentas de linha de comando
-title: Instale as ferramentas de linha de comando
-uuid: 42fe7d55-7b8e-4f44-8714-ddae6c086d6a
+title: Instalar as ferramentas de linha de comando
+description: Instalar as ferramentas de linha de comando
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -17,10 +17,10 @@ ht-degree: 0%
 
    [!DNL .../Command Line Tools/] conteúdo:
 
-   * [!DNL flashaccesstools.properties] - O arquivo de configuração padrão para as ferramentas de linha de comando.
-   * [!DNL libs/] - Contém as ferramentas de linha de comando arquivos JAR
-   * [!DNL samples/] - Contém o script de construção ant (  [!DNL build-samples.xml]) e os arquivos de origem Java.
+   * [!DNL flashaccesstools.properties] - O arquivo de configuração padrão das ferramentas de linha de comando.
+   * [!DNL libs/] - Contém os arquivos JAR das ferramentas de linha de comando
+   * [!DNL samples/] - Contém o script de compilação de ant (  [!DNL build-samples.xml]) e os arquivos de origem Java.
 
       >[!NOTE]
       >
-      >Os arquivos de origem Java demonstram como usar as APIs SDK do Primetime DRM. Para criar e executar as amostras, execute o script [!DNL build-samples.xml] Ant em [!DNL samples/].
+      >Os arquivos de origem Java demonstram como usar as APIs do SDK de DRM do Primetime. Para criar e executar as amostras, execute o script [!DNL build-samples.xml] Ant em [!DNL samples/].
