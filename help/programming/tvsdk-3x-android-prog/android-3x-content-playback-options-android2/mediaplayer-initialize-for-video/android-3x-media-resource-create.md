@@ -1,13 +1,10 @@
 ---
 description: A classe MediaResource representa o conteúdo a ser carregado pela instância MediaPlayer.
-seo-description: A classe MediaResource representa o conteúdo a ser carregado pela instância MediaPlayer.
-seo-title: Criar um recurso de mídia
 title: Criar um recurso de mídia
-uuid: 9ae86c04-7bbe-43fb-9f57-1d9fa2fa73d0
 translation-type: tm+mt
-source-git-commit: bdeab54aeb083f1fc8d27db1fd94bf89d74429da
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Criar um recurso de mídia {#create-a-media-resource}
 
-Para cada novo conteúdo de vídeo, inicialize uma instância MediaResource com informações sobre o conteúdo de vídeo e carregue o recurso de mídia.
+Para cada novo conteúdo de vídeo, inicialize uma instância MediaResource com informações sobre o conteúdo do vídeo e carregue o recurso de mídia.
 
 A classe MediaResource representa o conteúdo a ser carregado pela instância MediaPlayer.
 
-1. Crie um `MediaResource` transmitindo informações sobre a mídia para o construtor `MediaResource`.
+1. Crie um `MediaResource` transmitindo informações sobre a mídia ao construtor `MediaResource`.
 
    O construtor `MediaResource` requer os seguintes parâmetros:
 
@@ -37,16 +34,16 @@ A classe MediaResource representa o conteúdo a ser carregado pela instância Me
    </tr> 
    <tr> 
       <td colname="col1"> <span class="codeph"> type  </span> </td> 
-      <td colname="col2"> Um dos seguintes membros da enumeração <span class="codeph"> MediaResource.Type </span>, correspondente ao tipo de arquivo indicado: 
+      <td colname="col2"> Um dos seguintes membros do enum <span class="codeph"> MediaResource.Type </span>, correspondente ao tipo de arquivo indicado: 
       <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
       <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS  </span> - M3U8 </li> 
-      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF  </span> - formato de arquivo de mídia base ISO (MP4) </li> 
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH  </span> - Descrição da apresentação da mídia MPEG-DASH (MPD) </li> 
+      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF  </span> - Formato de arquivo de mídia base ISO (MP4) </li> 
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH  </span> - Descrição de apresentação de mídia MPEG-DASH (MPD) </li> 
       </ul> </td> 
    </tr> 
    <tr> 
       <td colname="col1"> <span class="codeph"> metadados  </span> </td> 
-      <td colname="col2"> Uma instância da classe <span class="codeph"> Metadados </span> (uma estrutura semelhante a um dicionário), que pode conter informações adicionais sobre o conteúdo que está prestes a ser carregado, como conteúdo alternativo ou de anúncio para colocar dentro do conteúdo principal. Se estiver usando publicidade, configure <span class="codeph"> AuditudeSettings </span> antes de usar este construtor <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> Metadados de inserção de anúncio </a>. </td> 
+      <td colname="col2"> Uma instância da classe <span class="codeph"> Metadados </span> (uma estrutura semelhante a um dicionário), que pode conter informações adicionais sobre o conteúdo que está prestes a ser carregado, como conteúdo alternativo ou de anúncio para colocar no conteúdo principal. Se estiver usando publicidade, configure <span class="codeph"> AuditudeSettings </span> antes de usar este construtor <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> Metadados de inserção de anúncio </a>. </td> 
    </tr> 
    </tbody> 
    </table>
@@ -55,7 +52,7 @@ A classe MediaResource representa o conteúdo a ser carregado pela instância Me
    >
    >O TVSDK suporta reprodução somente para tipos específicos de conteúdo. Se você tentar carregar qualquer outro tipo de conteúdo, o TVSDK enviará um evento de erro.
    >
-   >Para conteúdo de VOD (Video-on-demand) MP4, o TVSDK não oferece suporte para reprodução de truques, streaming de taxa de bits adaptável (ABR), inserção de anúncios, legendas fechadas ou DRM.
+   >Para conteúdo MP4 de vídeo sob demanda (VOD), o TVSDK não é compatível com reprodução de truques, streaming de taxa de bits adaptável (ABR), inserção de anúncios, legendas ocultas ou DRM.
 
    O código a seguir cria uma instância `MediaResource`:        >
 
@@ -67,7 +64,7 @@ A classe MediaResource representa o conteúdo a ser carregado pela instância Me
      metadata); 
    ```
 
-   A qualquer momento após essa etapa, você pode usar acessadores `MediaResource` (getters) para examinar o tipo, URL e metadados do recurso.
+   A qualquer momento após essa etapa, você pode usar acessadores `MediaResource` (getters) para examinar o tipo de recurso, o URL e os metadados.
 
 1. Carregue o recurso de mídia usando uma das seguintes opções:
 
