@@ -1,13 +1,11 @@
 ---
-description: nulo
-seo-description: nulo
-seo-title: Uso de DRMContentData para pré-carregar licenças
 title: Uso de DRMContentData para pré-carregar licenças
-uuid: 5cedd077-0613-4677-8fb0-81237d7ac61a
+description: Uso de DRMContentData para pré-carregar licenças
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
@@ -15,18 +13,18 @@ ht-degree: 0%
 
 # Uso de DRMContentData para pré-carregar licenças{#using-drmcontentdata-to-pre-load-licenses}
 
-As etapas a seguir descrevem o fluxo de trabalho para o pré-carregamento da licença de um arquivo de mídia protegido usando um objeto `DRMContentData`.
+As etapas a seguir descrevem o fluxo de trabalho para pré-carregar a licença de um arquivo de mídia protegido usando um objeto `DRMContentData`.
 
 1. Obtenha os metadados binários de DRM para o conteúdo empacotado.
 
-   Se estiver usando o Primetime DRM Java Reference Implementations Packager, esse arquivo de metadados será gerado automaticamente com uma extensão [!DNL .metadata]. Você pode, por exemplo, baixar esses metadados usando a classe `URLLoader`. Se estiver usando conteúdo HLS ou HDS, os metadados serão referenciados no arquivo de manifesto de conteúdo ( [!DNL .m3u8] ou [!DNL .f4m]) ou incluídos *no* arquivo de manifesto como uma string codificada em Base64 (que deve ser decodificada em Base64 antes do consumo).
+   Se estiver usando o Primetime DRM Java Reference Implementations Packager, esse arquivo de metadados será gerado automaticamente com uma extensão [!DNL .metadata]. Você pode, por exemplo, baixar esses metadados usando a classe `URLLoader` . Se estiver usando conteúdo HLS ou HDS, os metadados serão referenciados no arquivo de manifesto de conteúdo ( [!DNL .m3u8] ou [!DNL .f4m]) ou incluídos *dentro de* o arquivo de manifesto como uma string codificada em Base64 (que deve ser decodificada em Base64 antes do consumo).
 1. Crie um objeto `DRMContentData`, transmitindo os metadados para a função do construtor:
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );
    ```
 
-1. O restante das etapas são idênticas ao fluxo de trabalho descrito em *Detalhes do processo de proteção de conteúdo*.
+1. O restante das etapas é idêntico ao workflow descrito em *Detalhes do processo de proteção de conteúdo*.
 
 <!--<a id="example_EBEDA8E10F6344CABA4DE31DC342B8F8"></a>-->
 
