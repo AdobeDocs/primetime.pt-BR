@@ -1,32 +1,29 @@
 ---
-description: Esta tabela mostra informações detalhadas sobre notificações de tipo WARN.
-seo-description: Esta tabela mostra informações detalhadas sobre notificações de tipo WARN.
-seo-title: Códigos de notificação de AVISO
+description: Esta tabela fornece informações detalhadas sobre notificações do tipo AVISO.
 title: Códigos de notificação de AVISO
-uuid: 136b5a65-b842-40fd-8ddd-efe01d73c388
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 3%
+source-wordcount: '366'
+ht-degree: 4%
 
 ---
 
 
 # Códigos de notificação de AVISO{#warning-notification-codes}
 
-Esta tabela mostra informações detalhadas sobre notificações de tipo WARN.
+Esta tabela fornece informações detalhadas sobre notificações do tipo AVISO.
 
 <!--<a id="section_F25366B6703040E3ADA993C113618F01"></a>-->
 
-A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso que falhou ao baixar. Algumas notificações contêm metadados para especificar se o problema ocorreu no conteúdo de vídeo principal, no conteúdo de áudio alternativo ou em um anúncio.
+A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso que falhou no download. Algumas notificações contêm metadados para especificar se o problema ocorreu no conteúdo de vídeo principal, no conteúdo de áudio alternativo ou em um anúncio.
 
 <table frame="all" colsep="1" rowsep="1" id="table_C24772DF203B4DB2ACE6B475698C4C58"> 
  <thead> 
   <tr rowsep="1"> 
    <th colname="1" class="entry"> Código </th> 
    <th colname="2" class="entry"> Nome </th> 
-   <th colname="3" class="entry"> InnerNotification </th> 
+   <th colname="3" class="entry"> NotificaçãoInterna </th> 
    <th colname="4" class="entry"> Chaves de metadados </th> 
    <th colname="5" class="entry"> Comentários </th> 
   </tr> 
@@ -40,15 +37,15 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 201002</span> </td> 
+   <td colname="1"><span class="codeph"> 20102</span> </td> 
    <td colname="2"><span class="codeph"> AD_ASSET_FAILED_TO_LOAD</span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> AD_ASSET, INTERNAL_ERROR</span> </td> 
    <td colname="5"> <p>Ocorreu um erro ao tentar carregar um anúncio criativo. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 201003</span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_ RETURNED_NO_ADS</span> </td> 
+   <td colname="1"><span class="codeph"> 20103</span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_RETURNED_NO_ADS</span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> INTERNAL_ERROR, AD_ID,DESCRIÇÃO</span> </td> 
    <td colname="5"> <p>Falha na resolução do anúncio devido a um URL VAST inválido ou porque nenhum anúncio foi retornado do invólucro VAST. </p> </td> 
@@ -62,10 +59,10 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 204000  </span> </td> 
-   <td colname="2"><span class="codeph"> ANTECEDENTE_MANIFEST_AVISO</span> </td> 
+   <td colname="2"><span class="codeph"> AVISO_MANIFEST_DE_FUNDO</span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_ WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
-   <td colname="5"> <p> Erro no download do manifesto em segundo plano. Qualquer problema ao atualizar o manifesto em segundo plano é despachado como um aviso TVSDK e não faz com que a reprodução pare. </p> </td> 
+   <td colname="5"> <p> Erro no download do manifesto em segundo plano. Qualquer problema ao atualizar o manifesto em segundo plano é enviado como um aviso TVSDK e não faz com que a reprodução pare. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 204001  </span> </td> 
@@ -93,7 +90,7 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
    <td colname="2"><span class="codeph"> INVALID_TIME_ RANGES  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> DESCRIÇÃO  </span> </td> 
-   <td colname="5"> <p> Um ou mais intervalos de tempo são inválidos e serão ignorados ou modificados. </p> <p> DESCRIÇÃO é uma string que contém a descrição dos intervalos inválidos. </p> </td> 
+   <td colname="5"> <p> Um ou mais intervalos de tempo são inválidos e serão ignorados ou modificados. </p> <p> DESCRIPTION é uma string que contém a descrição dos intervalos inválidos. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Específico do iOS</b> </td> 
@@ -121,7 +118,7 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
    <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING  </span> </td> 
    <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
-   <td colname="5"> <p>O anúncio não contém fluxo somente de áudio </p> </td> 
+   <td colname="5"> <p>Anúncio não contém apenas fluxo de áudio </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270003  </span> </td> 
@@ -139,10 +136,10 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270006  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_AVISO  </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_WARNING  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> DESCRIÇÃO  </span> </td> 
-   <td colname="5"> <p>Aviso: Consulte a descrição do aviso do SiteCatalyst. </p> </td> 
+   <td colname="5"> <p>Aviso: Consulte descrição de aviso do sitecatalyst . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270007  </span> </td> 
@@ -171,4 +168,4 @@ A maioria dos avisos contém metadados relevantes, por exemplo, o URL do recurso
 
 >[!NOTE]
 >
->adID e fonte (URL) podem ser recuperados pelo PTAdAsset nos metadados de notificação com a chave `AD_ASSET`.
+>O adID e a fonte (URL) podem ser recuperados por meio do PTAdAsset nos metadados de notificação com a chave `AD_ASSET` .
