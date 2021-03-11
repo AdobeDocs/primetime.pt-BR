@@ -1,13 +1,10 @@
 ---
-description: O player pode ouvir vários eventos que indicam o estado do player.
-seo-description: O player pode ouvir vários eventos que indicam o estado do player.
-seo-title: Configurar notificações
+description: O reprodutor pode acompanhar um intervalo de eventos que indicam o estado do reprodutor.
 title: Configurar notificações
-uuid: 77cc5b45-f91f-4b71-9a67-5d17cda81da3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Configurar notificações{#set-up-notifications}
 
-O player pode ouvir vários eventos que indicam o estado do player.
+O reprodutor pode acompanhar um intervalo de eventos que indicam o estado do reprodutor.
 
-Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.player` no exemplo a seguir representa a instância `PTMediaPlayer`. O exemplo a seguir implementa o método `addObservers` mostrado nas instruções de configuração de PTMediaPlayer e inclui a maioria das notificações:
+Supondo que `PTMediaPlayer` seja uma propriedade do reprodutor do cliente, `self.player` no exemplo a seguir representa a instância `PTMediaPlayer`. O exemplo a seguir implementa o método `addObservers` mostrado nas instruções de configuração de PTMediaPlayer e inclui a maioria das notificações:
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMediaPlayerStatusChange:)  
@@ -48,7 +45,7 @@ Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.pl
 
 ## Notificações do iOS {#section_65D9B2DBF5574313BD3218AB02242BBB}
 
-`ThePTMediaPlayerNotifications` lista as notificações que o TVSDK envia para o player.
+`ThePTMediaPlayerNotifications` lista as notificações que o TVSDK despacha para seu reprodutor.
 
 <table frame="all" colsep="1" rowsep="1" id="table_ios_notifications"> 
  <tbody> 
@@ -58,11 +55,11 @@ Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.pl
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakCompletedNotification  </span> </td> 
-   <td colname="2"> Uma pausa de anúncio terminou. </td> 
+   <td colname="2"> Um ad break terminou. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakStartedNotification  </span> </td> 
-   <td colname="2"> Uma pausa de anúncio começou. </td> 
+   <td colname="2"> Um ad break foi iniciado. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerAdClickNotification  </span> </td> 
@@ -90,7 +87,7 @@ Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.pl
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingStartedNotification  </span> </td> 
-   <td colname="2"> O player de mídia entra em um estado de buffering. </td> 
+   <td colname="2"> O reprodutor de mídia entra em um estado de buffering. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTAudioTrackChangeCompleted  </span> </td> 
@@ -98,7 +95,7 @@ Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.pl
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTAudioTrackChangeStarted  </span> </td> 
-   <td colname="2"> Uma alteração na faixa de áudio da mídia que está sendo reproduzida no momento é iniciada. </td> 
+   <td colname="2"> Uma alteração na faixa de áudio da mídia que está sendo reproduzida é iniciada. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerItemChangedNotification  </span> </td> 
@@ -110,15 +107,15 @@ Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.pl
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerMediaSelectionOptionsAvailableNotification  </span> </td> 
-   <td colname="2"> Há novas legendas e faixas de áudio alternativas ( <span class="codeph"> PTMediaSelectionOption </span>). </td> 
+   <td colname="2"> Existem novas legendas e trilhas de áudio alternativas ( <span class="codeph"> PTMediaSelectionOption </span>). </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerNewNotificationEntryAddedNotification  </span> </td> 
-   <td colname="2"> Um novo <span class="codeph"> PTNotificação </span> foi adicionado ao <span class="codeph"> PTNotifiedHistoryItem </span> atual <span class="codeph"> PTMediaPlayerItem </span>, isto é, quando um evento de notificação é adicionado ao histórico de notificações. </td> 
+   <td colname="2"> Um novo <span class="codeph"> PTNotification </span> foi adicionado ao <span class="codeph"> PTNotificationHistoryItem </span> do <span class="codeph"> PTMediaPlayerItem </span> atual, isto é, quando um evento de notificação é adicionado ao histórico de notificação. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerPlayCompletedNotification  </span> </td> 
-   <td colname="2"> A reprodução de mídia terminou. </td> 
+   <td colname="2"> A reprodução da mídia terminou. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerSeekCompletedNotification  </span> </td> 
@@ -130,7 +127,7 @@ Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.pl
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerSeekStartedNotification  </span> </td> 
-   <td colname="2"> Buscar está começando. </td> 
+   <td colname="2"> Busca está começando. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerPlayStartedNotification  </span> </td> 
@@ -138,7 +135,7 @@ Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.pl
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerStatusNotification  </span> </td> 
-   <td colname="2"> O status do player foi alterado. Os possíveis valores de status são: 
+   <td colname="2"> O status do reprodutor foi alterado. Os possíveis valores de status são: 
     <ul id="ul_DDBE8CAD5D5A46D2AAA6B98F0754A881"> 
      <li id="li_48F9AD580BCB4BB8A5C2DFED0DF9970F"> <p> <span class="codeph"> PTMediaPlayerStatusCreated  </span> </p> </li> 
      <li id="li_EDFB0765CF14422A95C9119DA3394163"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing  </span> </p> </li> 
@@ -153,28 +150,28 @@ Presumindo que `PTMediaPlayer` é uma propriedade do player do cliente, `self.pl
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerTimeChangeNotification  </span> </td> 
-   <td colname="2"> A hora atual da reprodução mudou. </td> 
+   <td colname="2"> A hora atual da reprodução foi alterada. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerTimelineChangedNotification  </span> </td> 
-   <td colname="2"> A linha do tempo atual do player mudou. </td> 
+   <td colname="2"> A linha do tempo atual do reprodutor foi alterada. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" colsep="1" rowsep="1"> <span class="codeph"> PTTimedMetadataChangedNotification  </span> </td> 
-   <td colname="2"> O TVSDK encontrou a primeira ocorrência de uma tag assinada. </td> 
+   <td colname="2"> O TVSDK encontrou a primeira ocorrência de uma tag subscrita. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification  </span> </td> 
-   <td colname="2"> <p>Uma tag subscrita é identificada no manifesto em segundo plano e uma nova instância <span class="codeph"> PTTimedMetadata </span> é preparada a partir dela. </p> </td> 
+   <td colname="2"> <p>Uma tag subscrita é identificada no manifesto de fundo e uma nova instância <span class="codeph"> PTTimedMetadata </span> é preparada a partir dela. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Manipuladores de amostra para notificações {#section_D729C2403A234DD09596829D26882ADC}
+## Manipuladores de exemplo para notificações {#section_D729C2403A234DD09596829D26882ADC}
 
-Os trechos de código a seguir ilustram algumas das maneiras pelas quais você pode usar as notificações.
+Os trechos de código a seguir ilustram algumas das maneiras de usar as notificações.
 
-Procure a instância `PTAdBreak` usando `PTMediaPlayerAdBreakKey`:
+Busque a instância `PTAdBreak` usando `PTMediaPlayerAdBreakKey`:
 
 ```
  - (void) onMediaPlayerAdBreakStarted:(NSNotification *) notification { 
@@ -197,7 +194,7 @@ Defina `subtitlesOptions` e `audioOptions`:
 } 
 ```
 
-Procure a instância `PTAd` usando `PTMediaPlayerAdKey`:
+Busque a instância `PTAd` usando `PTMediaPlayerAdKey`:
 
 ```
  - (void) onMediaPlayerAdPlayStarted:(NSNotification \*)  notification { 
