@@ -1,13 +1,10 @@
 ---
 description: Esta versão inclui players e oferece suporte a uma grande variedade de navegadores.
-seo-description: Esta versão inclui players e oferece suporte a uma grande variedade de navegadores.
-seo-title: Requisitos
 title: Requisitos
-uuid: 9726b083-f52a-410c-8ab4-47b4913d5172
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Visão geral {#requirements-overview}
 
-O TVSDK do navegador requer propriedades específicas para conteúdo de mídia, conteúdo manifesto e versões de software.
+O TVSDK do navegador requer propriedades específicas para conteúdo de mídia, conteúdo de manifesto e versões de software.
 
-A versão TVSDK do navegador inclui os seguintes players:
+A versão do TVSDK do navegador inclui os seguintes players:
 
-* `Primetime.js` para HLS em desktop e dispositivo móvel
+* `Primetime.js` para HLS em desktop e dispositivos móveis
 
 Os players incluem as seguintes APIs de referência:
 
@@ -29,7 +26,7 @@ Os players incluem as seguintes APIs de referência:
 
 **Plataformas certificadas:**
 
-* **Configurações de desktop**
+* **Configurações da área de trabalho**
 
    * Microsoft Windows 7:
 
