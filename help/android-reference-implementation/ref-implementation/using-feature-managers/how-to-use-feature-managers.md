@@ -1,9 +1,9 @@
 ---
-seo-title: Como usar os gerentes de recursos
 title: Como usar os gerentes de recursos
-uuid: 29027635-e9ff-48c3-8d89-de1ed9889ec0
+description: Como usar os gerentes de recursos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
@@ -11,10 +11,10 @@ ht-degree: 0%
 ---
 
 
-# Como usar gerenciadores de recursos {#how-to-use-feature-managers}
+# Como usar gerentes de recursos {#how-to-use-feature-managers}
 
-Há duas maneiras de usar os gerenciadores de recursos para ativar, desativar e configurar os recursos:
+Há duas maneiras de usar os gerentes de recursos para ativar, desativar e configurar os recursos:
 
-* Você pode criar e configurar um gerenciador de recursos transmitindo informações de configuração de um arquivo de configuração para o player de mídia.
+* Você pode criar e configurar um gerenciador de recursos ao passar informações de configuração de um arquivo de configuração para o reprodutor de mídia.
 * Você pode ativar e desativar recursos sem passar pelo código usando a fábrica do gerenciador.
 
