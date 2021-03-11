@@ -1,13 +1,10 @@
 ---
-description: O TVSDK fornece informações para que você possa agir em anúncios de click-through. À medida que você cria a interface do usuário do player, é necessário decidir como responder quando um usuário clica em um anúncio clicável.
-seo-description: O TVSDK fornece informações para que você possa agir em anúncios de click-through. À medida que você cria a interface do usuário do player, é necessário decidir como responder quando um usuário clica em um anúncio clicável.
-seo-title: Anúncios clicáveis
+description: O TVSDK fornece informações para que você possa agir com anúncios de click-through. À medida que você cria a interface do usuário do player, deve decidir como responder quando um usuário clica em um anúncio clicável.
 title: Anúncios clicáveis
-uuid: a8fbd553-aff5-4854-a78c-f5d57675a504
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
@@ -15,6 +12,6 @@ ht-degree: 0%
 
 # Visão geral {#clickable-ads-overview}
 
-O TVSDK fornece informações para que você possa agir em anúncios de click-through. À medida que você cria a interface do usuário do player, é necessário decidir como responder quando um usuário clica em um anúncio clicável.
+O TVSDK fornece informações para que você possa agir com anúncios de click-through. À medida que você cria a interface do usuário do player, deve decidir como responder quando um usuário clica em um anúncio clicável.
 
 Para TVSDK para Android, somente anúncios lineares podem ser clicados.
