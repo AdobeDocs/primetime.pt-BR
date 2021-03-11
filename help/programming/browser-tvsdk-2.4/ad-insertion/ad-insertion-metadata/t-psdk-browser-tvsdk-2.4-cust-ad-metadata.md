@@ -1,13 +1,10 @@
 ---
-description: Você pode personalizar os metadados de inserção de anúncio.
-seo-description: Você pode personalizar os metadados de inserção de anúncio.
-seo-title: Personalizar metadados de inserção de anúncio
+description: Você pode personalizar os metadados de inserção de anúncios.
 title: Personalizar metadados de inserção de anúncio
-uuid: 047470d3-45bd-48be-82ce-4e9d9fe6ea10
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '103'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Personalizar metadados de inserção de anúncio{#customize-ad-insertion-metadata}
 
-Você pode personalizar os metadados de inserção de anúncio.
+Você pode personalizar os metadados de inserção de anúncios.
 
-1. Defina um tempo limite nos metadados de publicidade para oportunidades não resolvidas.
+1. Defina um tempo limite em metadados de anúncio para oportunidades não resolvidas.
 
    O valor padrão para esse tempo limite é de 20 segundos.
 1. Para alterar o valor para 10 segundos, insira o seguinte:
@@ -26,7 +23,7 @@ Você pode personalizar os metadados de inserção de anúncio.
    auditudeSettings.timeout = 10000; //this value is specified in milliseconds
    ```
 
-   A propriedade `timeout` é definida na classe `AdvertisingMetadata`, e esse tempo limite pode ser definido para qualquer configuração de anúncio personalizada derivada da classe `AdvertisingMetadata`. Por exemplo, se os usuários definirem configurações personalizadas para um resolvedor FreeWheel, eles poderão definir um tempo limite padrão usando essa configuração.
+   A propriedade `timeout` é definida na classe `AdvertisingMetadata` e esse tempo limite pode ser definido para qualquer configuração de anúncio personalizada derivada da classe `AdvertisingMetadata`. Por exemplo, se os usuários definirem configurações personalizadas para um resolvedor do FreeWheel, eles poderão definir um tempo limite padrão usando essa configuração.
 
 1. Crie `MediaPlayerItemConfig` com as configurações de anúncio na etapa 2.
 
