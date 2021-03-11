@@ -1,27 +1,24 @@
 ---
-description: Você pode ativar o rastreamento de anúncio do cliente adicionando os parâmetros de versão do modo de rastreamento e do modo de rastreamento à solicitação de URL do Bootstrap.
-seo-description: Você pode ativar o rastreamento de anúncio do cliente adicionando os parâmetros de versão do modo de rastreamento e do modo de rastreamento à solicitação de URL do Bootstrap.
-seo-title: Ativar o rastreamento de anúncios do cliente
-title: Ativar o rastreamento de anúncios do cliente
-uuid: 0a825756-1d9a-43c5-bc22-9b366f39fdbb
+description: Você pode ativar o rastreamento de anúncios do lado do cliente adicionando os parâmetros de versão pttrackingmode e pttracking à solicitação de URL do Bootstrap.
+title: Ativar o rastreamento de anúncios do lado do cliente
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
-ht-degree: 1%
+source-wordcount: '88'
+ht-degree: 2%
 
 ---
 
 
-# Ativar o rastreamento de anúncios do cliente {#enable-client-side-ad-tracking}
+# Ativar o rastreamento de anúncios do lado do cliente {#enable-client-side-ad-tracking}
 
-Você pode ativar o rastreamento de anúncios do cliente adicionando os parâmetros `pttrackingmode` e `pttrackingversion` à solicitação de URL do Bootstrap.
+Você pode ativar o rastreamento de anúncios do lado do cliente adicionando os parâmetros `pttrackingmode` e `pttrackingversion` à solicitação de URL do Bootstrap.
 
-Com o rastreamento de anúncio do cliente ativado, você também pode recuperar metadados de rastreamento de anúncio usando o URL da API de rastreamento. Para obter mais detalhes, consulte [Parâmetros de Query](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-ms-interface.md).
+Com o rastreamento de anúncios do lado do cliente ativado, você também pode recuperar metadados de rastreamento de anúncios usando o URL da API de rastreamento. Para obter mais detalhes, consulte [Parâmetros de consulta](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-ms-interface.md).
 
-Para executar o rastreamento de anúncio do cliente, use o URL da API de rastreamento.
+Para executar o rastreamento de anúncios do lado do cliente, use o URL da API de rastreamento.
 
-1. Adicione os seguintes parâmetros de query ao URL de solicitação do servidor manifest:
+1. Adicione os seguintes parâmetros de consulta ao URL de solicitação do servidor de manifesto:
 
    * `pttrackingmode=simple`
    * `pttrackingversion={format version}`
