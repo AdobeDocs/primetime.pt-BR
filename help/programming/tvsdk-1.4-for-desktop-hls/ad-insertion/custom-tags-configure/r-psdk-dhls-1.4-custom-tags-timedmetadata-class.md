@@ -1,13 +1,10 @@
 ---
-description: Quando o TVSDK detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar a tag e expô-la na forma de um objeto TimedMetadata.
-seo-description: Quando o TVSDK detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar a tag e expô-la na forma de um objeto TimedMetadata.
-seo-title: Classe de metadados cronometrados
+description: Quando o TVSDK detecta uma tag inscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar a tag e expô-la na forma de um objeto TimedMetadata .
 title: Classe de metadados cronometrados
-uuid: 827a3bcf-a584-4032-aa19-4fc7730778cc
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Classe de metadados cronometrada{#timed-metadata-class}
 
-Quando o TVSDK detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar a tag e expô-la na forma de um objeto TimedMetadata.
+Quando o TVSDK detecta uma tag inscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar a tag e expô-la na forma de um objeto TimedMetadata .
 
 A classe fornece os seguintes elementos:
 
@@ -31,12 +28,12 @@ A classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"><span class="codeph"> conteúdo</span> </td> 
    <td colname="col02"> String </td> 
-   <td colname="col2"> O conteúdo bruto dos metadados cronometrados. Se o tipo for TAG, o valor representará a lista do atributo inteiro da dica/tag. Se o tipo id ID3 for nulo. </td> 
+   <td colname="col2"> O conteúdo bruto dos metadados cronometrados. Se o tipo for TAG, o valor representa a lista de atributos inteira da sinalização/tag. Se a ID3 do tipo for nula. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> id</span> </td> 
    <td colname="col02"> String </td> 
-   <td colname="col2"> Identificador exclusivo dos metadados cronometrados. Normalmente, esse valor é extraído do atributo da ID da tag/cue. Caso contrário, um valor aleatório exclusivo será fornecido. </td> 
+   <td colname="col2"> Identificador exclusivo dos metadados cronometrados. Normalmente, esse valor é extraído do atributo ID da sinalização/tag. Caso contrário, um valor aleatório exclusivo será fornecido. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> metadados</span> </td> 
@@ -46,12 +43,12 @@ A classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"><span class="codeph"> name</span> </td> 
    <td colname="col02"> String </td> 
-   <td colname="col2">O nome dos metadados cronometrados. Se o tipo for <span class="codeph"> TAG</span>, o valor representará o nome da marca/indicação. Se o tipo for <span class="codeph"> ID3</span>, será nulo. </td> 
+   <td colname="col2">O nome dos metadados cronometrados. Se o tipo for <span class="codeph"> TAG</span>, o valor representará o nome da sinalização/tag. Se o tipo for <span class="codeph"> ID3</span>, será nulo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> time</span> </td> 
    <td colname="col02"> Número </td> 
-   <td colname="col2"> A posição de tempo, em milissegundos, em relação ao start do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. </td> 
+   <td colname="col2"> A posição de tempo, em milissegundos, em relação ao início do conteúdo principal em que esses metadados cronometrados estão presentes no fluxo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> type</span> </td> 
@@ -81,16 +78,16 @@ Lembre-se do seguinte:
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
    >```
 
-* Se a extração falhar devido a um formato de tag personalizado, a propriedade metadata ficará vazia e seu aplicativo deverá extrair as informações reais. Nenhum erro é emitido nesse caso.
+* Se a extração falhar devido a um formato de tag personalizado, a propriedade de metadados estará vazia e seu aplicativo deverá extrair as informações reais. Nenhum erro é lançado nesse caso.
 
 | Elemento | Descrição |
 |---|---|
 | `TAG, ID3 ID3, TAG` | Tipos possíveis para os metadados cronometrados. |
 | `public function TimedMetadata(type:String, time:Number, id:String, name:String, content:String, metadata:Metadata)` | Construtor padrão (tempo é o tempo de fluxo local). |
 | `content:String` | O conteúdo bruto da tag de origem desses metadados cronometrados. |
-| `time:Number` | A posição de tempo, relativa ao start do conteúdo principal, em que esses metadados foram inseridos no fluxo. |
+| `time:Number` | A posição de tempo, em relação ao início do conteúdo principal, em que esses metadados foram inseridos no fluxo. |
 | `metadata:Metadata` | Os metadados inseridos no fluxo. |
 | `type:String` | Retorna o tipo de metadados cronometrados. |
 | `id:String` | Retorna a ID extraída dos atributos de sinalização/tag. Caso contrário, um valor aleatório exclusivo será fornecido. |
-| `name:String` | Retorna o nome da indicação, que geralmente é o nome da tag HLS. |
+| `name:String` | Retorna o nome da dica, que geralmente é o nome da tag HLS. |
 
