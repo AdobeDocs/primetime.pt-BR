@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral
 title: Visão geral
-uuid: 578e749f-ee11-4682-9159-95a17982f3c4
+description: Visão geral
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
@@ -15,5 +15,5 @@ ht-degree: 0%
 
 O servidor de licença de implementação de referência demonstra duas variações na lógica comercial do registro de domínio:
 
-* **Baseado**  em identidade - cada usuário autenticado tem um domínio e um número específico de dispositivos que podem ingressar no domínio.
-* **Anônimo**  - um grande número de dispositivos pertence a um domínio, e a autenticação pode não ser necessária.
+* **Baseado em identidade**  - cada usuário autenticado tem um domínio e um número específico de dispositivos que podem ingressar no domínio.
+* **Anônimo**  - Um grande número de dispositivos pertence a um domínio, e a autenticação pode não ser necessária.
