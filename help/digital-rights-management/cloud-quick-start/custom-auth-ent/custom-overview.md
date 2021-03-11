@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral de autenticação/autorização personalizada (opcional)
-title: Visão geral de autenticação/autorização personalizada (opcional)
-uuid: 8b5e38a5-562c-4781-ac40-4b3d6cdd97fe
+title: Visão geral de autenticação/direito personalizado (opcional)
+description: Visão geral de autenticação/direito personalizado (opcional)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -11,16 +11,16 @@ ht-degree: 0%
 ---
 
 
-# Visão geral de autenticação/autorização personalizada (opcional){#custom-authentication-entitlement-overview-optional}
+# Visão geral de autenticação/direito personalizado (opcional){#custom-authentication-entitlement-overview-optional}
 
-O Primetime Cloud DRM pode ser configurado para acessar seu próprio serviço de autenticação/autorização de back-end para determinar:
+O DRM da Primetime Cloud pode ser configurado para entrar em contato com seu próprio serviço de Autenticação/Direitos de Back-end para determinar:
 
 * Este usuário tem permissão para adquirir uma licença?
 * Que direitos/restrições devem ser incluídos na licença?
 
-O DRM da Primetime Cloud inclui uma implementação de referência de um serviço de autenticação/direito back-end. Para fins de demonstração, este servidor está emitindo respostas &quot;permitir&quot; para solicitações BEES. Consulte [!DNL BEESServlet.java] para modificar o comportamento do servidor.
+O DRM da Primetime Cloud inclui uma implementação de referência de um serviço de autenticação/direito de back-end. Para fins de demonstração, este servidor está emitindo respostas de &quot;permissão&quot; para solicitações BEES. Consulte [!DNL BEESServlet.java] para modificar o comportamento do servidor.
 
 >[!NOTE]
 >
->Anteriormente, este era um produto separado chamado *Back End Entitlement Server* (BEES), portanto, as referências ao BEES em todo este documento e nos arquivos de origem.
+>Anteriormente, esse era um produto separado chamado *Back End Entitlement Server* (BEES), portanto, as referências ao BEES em todo este documento e nos arquivos de origem.
 
