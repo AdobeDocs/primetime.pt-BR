@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral do Gerenciador de Listas de Atualização de Política
-title: Visão geral do Gerenciador de Listas de Atualização de Política
-uuid: d030e159-02f5-4a28-b7e8-2cf5fd58b9f1
+title: Visão geral do Gerenciador de lista de atualização de políticas
+description: Visão geral do Gerenciador de lista de atualização de políticas
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -11,6 +11,6 @@ ht-degree: 0%
 ---
 
 
-# Visão geral do Gerenciador de Listas de Atualização de Política {#policy-update-list-manager-overview}
+# Visão geral do Gerenciador de lista de atualização de política {#policy-update-list-manager-overview}
 
-Antes de usar o Policy Update Lista Manager, verifique se você atende aos requisitos listados em Requisitos e se o arquivo de configuração contém as informações necessárias (consulte Arquivo de configuração em *Usando as Implementações de referência de acesso a Adobe*).
+Antes de usar o Gerenciador de lista de atualização de política, verifique se você atende aos requisitos listados nos Requisitos e se o arquivo de configuração contém as informações necessárias (consulte Arquivo de configuração em *Usando as implementações de referência de acesso ao Adobe*).
