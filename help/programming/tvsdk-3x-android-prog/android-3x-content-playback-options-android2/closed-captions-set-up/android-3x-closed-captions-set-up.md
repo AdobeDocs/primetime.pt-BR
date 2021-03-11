@@ -1,13 +1,10 @@
 ---
-description: A legendagem fechada exibe a parte de áudio de um vídeo como texto na tela quando o som está inaudível ou quando o visualizador está com dificuldade de audição.
-seo-description: A legendagem fechada exibe a parte de áudio de um vídeo como texto na tela quando o som está inaudível ou quando o visualizador está com dificuldade de audição.
-seo-title: Trabalhar com legendas ocultas
+description: As legendas ocultas exibem a parte de áudio de um vídeo como texto na tela quando o som é inaudível ou o visualizador não consegue ouvir.
 title: Trabalhar com legendas ocultas
-uuid: d7860de4-2881-4817-a4cc-5e7ab557a1db
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -15,21 +12,21 @@ ht-degree: 0%
 
 # Visão geral {#work-with-closed-captions-overview}
 
-A legendagem fechada exibe a parte de áudio de um vídeo como texto na tela quando o som está inaudível ou quando o visualizador está com dificuldade de audição.
+As legendas ocultas exibem a parte de áudio de um vídeo como texto na tela quando o som é inaudível ou o visualizador não consegue ouvir.
 
-As legendas ocultas normalmente estão no mesmo idioma do áudio e também exibem os sons de fundo como texto, mas as legendas normalmente estão em um idioma diferente e não incluem os sons de fundo.
+As legendas ocultas normalmente estão no mesmo idioma do áudio e também exibem os sons de fundo como texto, mas as legendas normalmente estão em um idioma diferente e não incluem sons de fundo.
 
-O TVSDK suporta a renderização destes formatos:
+O TVSDK suporta a renderização desses formatos:
 
-* Legenda 608 e 708, quando fornecida como parte do fluxo de transporte de vídeo por HLS como pacotes de dados em streams de vídeo MPEG-2.
+* Legendas ocultas 608 e 708, quando fornecidas como parte do fluxo de transporte de vídeo por HLS como pacotes de dados em fluxos de vídeo MPEG-2.
 * Arquivos de legenda WebVTT, que são referenciados dos arquivos de manifesto M3U8, conforme definido nas especificações HLS.
 
-   Esses arquivos estão automaticamente disponíveis como faixas de legenda no player do Primetime.
+   Esses arquivos são disponibilizados automaticamente como faixas de legenda fechada no player do Primetime.
 
 Você pode fazer o seguinte:
 
-* Selecione uma faixa de legenda disponível para ser a faixa atual e escute eventos que indicam outras faixas disponíveis.
-* Ative ou desative as legendas fechadas (visível) usando a interface `MediaPlayer`.
-* Selecione opções de estilização que ditam como as legendas fechadas são renderizadas pelo mecanismo de vídeo subjacente.
+* Selecione um rastreamento de legenda disponível para ser o rastreamento atual e acompanhar eventos que indicam faixas adicionais disponíveis.
+* Ative ou desative as legendas ocultas (visível) usando a interface `MediaPlayer`.
+* Selecione as opções de estilo que determinam como as legendas ocultas são renderizadas pelo mecanismo de vídeo subjacente.
 
-   Use a interface `MediaPlayerItem` para selecionar formatos, como a cor da fonte ou da fonte.
+   Use a interface `MediaPlayerItem` para selecionar formatos, como a fonte ou a cor da fonte.
