@@ -1,21 +1,18 @@
 ---
-description: Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes modos de sinalização de anúncio e combinações de metadados de anúncio. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
-seo-description: Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes modos de sinalização de anúncio e combinações de metadados de anúncio. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
-seo-title: Efeito na inserção e exclusão de anúncios no modo de sinalização de anúncios e combinações de metadados de anúncios
-title: Efeito na inserção e exclusão de anúncios no modo de sinalização de anúncios e combinações de metadados de anúncios
-uuid: c2ae8148-889d-46ae-848a-5f45d993a0e2
+description: Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes combinações de metadados de anúncio e modo de sinalização de anúncios. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
+title: Efeito na inserção e exclusão de anúncios do modo de sinalização de anúncios e combinações de metadados de anúncios
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
 
 
-# Efeito na inserção e exclusão de anúncios do modo de sinalização de anúncios e combinações de metadados de anúncios{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Efeito na inserção e exclusão de anúncios do modo de sinalização de anúncios e combinações de metadados de anúncio{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
-Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes modos de sinalização de anúncio e combinações de metadados de anúncio. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
+Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando diferentes combinações de metadados de anúncio e modo de sinalização de anúncios. Combinações diferentes de modo de sinalização e metadados resultam em comportamentos diferentes.
 
 >[!NOTE]
 >
@@ -26,10 +23,10 @@ Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando
 <table>  
  <thead> 
   <tr> 
-   <th class="entry"> Modo de sinalização de anúncios </th> 
+   <th class="entry"> Modo de sinalização do anúncio </th> 
    <th class="entry"> Metadados de anúncio </th> 
-   <th class="entry"> Resolvedores criados </th> 
-   <th class="entry"><span class="codeph"> </span> PlacementInformationScreated </th> 
+   <th class="entry"> Resolvedores Criados </th> 
+   <th class="entry"><span class="codeph"> </span> InserementInformation - Rastreado </th> 
    <th class="entry"> Comportamento resultante </th> 
   </tr> 
  </thead>
@@ -64,7 +61,7 @@ Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Publicidades inseridas </td> 
+   <td> Anúncios inseridos </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -88,7 +85,7 @@ Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando
    <td> Intervalos marcados, nenhum anúncio inserido </td> 
   </tr> 
   <tr> 
-   <td> <b>Casos de Manifesto</b> </td> 
+   <td> <b>Casos de manifesto</b> </td> 
    <td> </td> 
    <td> </td> 
    <td> </td> 
@@ -99,7 +96,7 @@ Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.PRE_ROLL, Mode.INSERT)</span> </td> 
-   <td> Publicidades inseridas </td> 
+   <td> Anúncios inseridos </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -110,7 +107,7 @@ Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando
      <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </li> 
      <li><span class="codeph"> PlacementInfo (Type.PRE_ROLL, Mode.INSERT)</span> </li> 
     </ul> </td> 
-   <td> Intervalos excluídos, anúncios inseridos </td> 
+   <td> Intervalos excluídos, publicidades inseridas </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -208,14 +205,14 @@ Você pode marcar, excluir e substituir intervalos de tempo em fluxos VOD usando
    <td> Excluir, Auditude </td> 
    <td> Excluir, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Intervalos excluídos, anúncios inseridos </td> 
+   <td> Intervalos excluídos, publicidades inseridas </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Publicidades inseridas </td> 
+   <td> Anúncios inseridos </td> 
   </tr> 
   <tr> 
    <td></td> 
