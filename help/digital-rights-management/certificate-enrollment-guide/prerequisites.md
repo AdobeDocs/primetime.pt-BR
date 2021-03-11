@@ -1,9 +1,9 @@
 ---
-seo-title: Pré-requisitos
 title: Pré-requisitos
-uuid: 59a51ef8-ab54-4254-a160-2a8103a920b2
+description: Pré-requisitos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Pré-requisitos {#prerequisites}
 
-Para usar o site de Inscrição de Certificado para solicitar certificados, é necessário saber o seguinte:
+Para usar o site Inscrição de Certificados para solicitar certificados, você precisa saber o seguinte:
 
 * Como a infraestrutura de chave pública (PKI) funciona
 * Como gerar pares de chaves e proteger suas chaves privadas
