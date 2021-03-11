@@ -1,9 +1,9 @@
 ---
-seo-title: Vários direitos de reprodução
 title: Vários direitos de reprodução
-uuid: 90f898bf-ffa2-44f0-a01a-0af8868500ee
+description: Vários direitos de reprodução
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Vários direitos de reprodução {#multiple-play-rights}
 
-Você pode especificar o parâmetro de vários direitos de reprodução para regras de uso diferentes que você aplica a plataformas ou aplicativos diferentes.
+Você pode especificar o parâmetro de vários direitos de reprodução para diferentes regras de uso que você aplica a plataformas ou aplicativos diferentes.
 
-Exemplo de caso de uso: Usando vários direitos de reprodução, você pode criar uma política de DRM Primetime para especificar que a Proteção de saída é necessária na plataforma Microsoft® Windows®. Entretanto, ele é opcional nas plataformas Apple® Macintosh® e Linux®.
+Exemplo de caso de uso: Usando vários direitos de reprodução, você pode criar uma política de DRM do Primetime para especificar que a Proteção de Saída é necessária na plataforma Microsoft® Windows®. No entanto, é opcional nas plataformas Apple® Macintosh® e Linux®.
