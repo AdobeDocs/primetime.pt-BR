@@ -1,21 +1,18 @@
 ---
-description: Essas classes fornecem informações que ajudam a determinar o desempenho do player.
-seo-description: Essas classes fornecem informações que ajudam a determinar o desempenho do player.
-seo-title: Classes de QoS
+description: Essas classes fornecem informações que ajudam a determinar o desempenho do reprodutor.
 title: Classes de QoS
-uuid: c1192474-d183-4995-87ef-839699844b48
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
 
-# Classes QoS {#qos-classes}
+# Classes de QoS {#qos-classes}
 
-Essas classes fornecem informações que ajudam a determinar o desempenho do player.
+Essas classes fornecem informações que ajudam a determinar o desempenho do reprodutor.
 
 Pacote: [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/package-detail.html) Pacote: [com.adobe.mediacore.qos.metrics](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/metrics/package-detail.html)
 
@@ -29,7 +26,7 @@ Pacote: [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psd
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/metrics/BufferingMetrics.html" format="html" scope="external"> BufferingMetrics</a></span> </td> 
-   <td colname="2"> Fornece informações sobre quanto tempo o player permaneceu durante o buffering e a frequência com que um evento de buffering ocorreu. </td> 
+   <td colname="2"> Fornece informações sobre quanto tempo o reprodutor gastou durante o buffering e com que frequência um evento de buffering ocorreu. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/DeviceInformation.html" format="html" scope="external"> DeviceInformation</a></span> </td> 
@@ -40,41 +37,41 @@ Pacote: [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psd
      <li id="li_30D38320C2A3440E92C0A477FFFBF9A0">Nome do modelo do dispositivo </li> 
      <li id="li_2D15164B987E405685B96A900EBF041D">Nome do fabricante do dispositivo </li> 
      <li id="li_B78485CB9580444DB9694404706BA191">UUID do dispositivo </li> 
-     <li id="li_841EA77499B44F0692192F9DE1A798E4">Largura/altura do ecrã do dispositivo </li> 
+     <li id="li_841EA77499B44F0692192F9DE1A798E4">Largura/altura da tela do dispositivo </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/LoadInformation.html" format="html" scope="external"> LoadInformation</a></span> </td> 
-   <td colname="2"> Contém várias informações de QoS sobre o carregamento de vários recursos (arquivos, manifesto ou lista de reprodução, fragmentos/segmentos, trilhas e assim por diante). </td> 
+   <td colname="2"> Contém várias informações de QoS sobre o carregamento de vários recursos (arquivos, manifesto ou lista de reprodução, fragmentos/segmentos, rastreamentos e assim por diante). </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/LoadInformationType.html" format="html" scope="external"> LoadInformationType</a></span> </td> 
-   <td colname="2"> classe de lista discriminada que lista valores possíveis para a propriedade type de objetos LoadInformation. </td> 
+   <td colname="2"> Classe Enumeration que lista os valores possíveis para a propriedade type de objetos LoadInformation. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/PlaybackInformation.html" format="html" scope="external"> ReproduçãoInformações</a></span> </td> 
-   <td colname="2"> Fornece informações sobre o desempenho da reprodução. Isso inclui a taxa de quadros, a taxa de bits do perfil, o tempo total gasto no buffering, o número de tentativas de buffering, o tempo necessário para obter o primeiro byte do primeiro fragmento de vídeo, o tempo necessário para renderizar o primeiro quadro, a duração do buffer atual e o tempo do buffer. </td> 
+   <td colname="2"> Fornece informações sobre o desempenho da reprodução. Isso inclui a taxa de quadros, a taxa de bits do perfil, o tempo total gasto no buffering, o número de tentativas de buffering, o tempo necessário para obter o primeiro byte do primeiro fragmento de vídeo, o tempo necessário para renderizar o primeiro quadro, o comprimento do buffer atual e o tempo do buffer. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackLoadMetrics</a></span> </td> 
-   <td colname="2"> Fornece informações sobre quanto tempo a mídia demorou para ser carregada, quanto tempo o player levou para renderizar o primeiro quadro ou, no caso de um erro, para falhar. </td> 
+   <td colname="2"> Fornece informações sobre quanto tempo levou para a mídia ser carregada, quanto levou para o reprodutor renderizar o primeiro quadro ou, no caso de um erro, falhar. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/metrics/PlaybackMetrics.html" format="html" scope="external"> PlaybackMetrics</a></span> </td> 
-   <td colname="2"> Fornece informações sobre como a reprodução está se comportando. Isso inclui a taxa de quadros, a taxa de bits, a duração do buffer e assim por diante. </td> 
+   <td colname="2"> Fornece informações sobre como a reprodução está se comportando. Isso inclui a taxa de quadros, a taxa de bits, o comprimento do buffer e assim por diante. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/metrics/PlaybackSessionMetrics.html" format="html" scope="external"> PlaybackSessionMetrics</a></span> </td> 
-   <td colname="2"> Fornece informações sobre quantos segundos o player gastou durante a reprodução e quanto tempo o vídeo esteve realmente na tela. </td> 
+   <td colname="2"> Fornece informações sobre quantos segundos o reprodutor passou durante a reprodução e quanto tempo o vídeo estava realmente na tela. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/QOSProvider.html" format="html" scope="external"> QOSProvider</a></span> </td> 
    <td colname="2">
     <pre>
-      Fornece métricas de QoS essenciais para a reprodução e o dispositivo.
+      Fornece métricas de QoS essenciais para reprodução e dispositivo.
     </pre>
     <pre>
-      Classe do provedor de informações QOS.
+      Classe do provedor de informações de QOS.
     </pre> </td> 
   </tr> 
  </tbody> 
