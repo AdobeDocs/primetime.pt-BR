@@ -1,9 +1,9 @@
 ---
-seo-title: TVSDK 1.4 para Guia do programador do Android
 title: TVSDK 1.4 para Guia do programador do Android
-uuid: 1f359716-28e7-465f-bb7b-22392fc8548d
+description: TVSDK 1.4 para Guia do programador do Android
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '15'
 ht-degree: 0%
@@ -11,5 +11,5 @@ ht-degree: 0%
 ---
 
 
-# TVSDK 1.4 para Guia do programador do Android{#tvsdk-for-android-programmer-s-guide}
+# TVSDK 1.4 para Guia do Programador Android{#tvsdk-for-android-programmer-s-guide}
 
