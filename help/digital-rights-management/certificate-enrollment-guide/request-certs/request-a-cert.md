@@ -1,9 +1,9 @@
 ---
-seo-title: Solicitar um certificado (Solicitante)
 title: Solicitar um certificado (Solicitante)
-uuid: f0d7f65d-681d-430f-b67b-3bdceb4b6d37
+description: Solicitar um certificado (Solicitante)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Solicitar um certificado (Solicitante){#request-a-certificate-requester}
 
-1. Efetue logon no site de Inscrição de Certificado.
+1. Efetue logon no site Inscrição de certificados.
 
    O usuário que solicita um certificado deve ser um Solicitante.
 
@@ -21,12 +21,12 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >Essa opção não é exibida para as versões do SDK de avaliação e avaliação. Essas versões do SDK usam um certificado.
+   >Essa opção não é exibida nas versões do SDK de Avaliação e Avaliação. Essas versões do SDK usam um certificado.
 
-1. Execute um dos procedimentos a seguir:
+1. Siga um destes procedimentos:
 
-   * Carregue o arquivo CSR.
-   * Copie as informações de CSR do CSR e cole-as no formulário.
+   * Faça upload do arquivo CSR.
+   * Copie as informações de CSR da CSR e cole-as no formulário.
 
       >[!NOTE]
       >
@@ -34,5 +34,5 @@ ht-degree: 0%
 
 1. Clique no botão **[!UICONTROL Submit Request]**.
 
-   Um email é enviado para a conta e para os administradores secundários para revisão. O Requerente é Cc&#39;d.
+   Um email é enviado para a Conta e para os Administradores secundários para análise. O Requerente é Cc&#39;d.
 
