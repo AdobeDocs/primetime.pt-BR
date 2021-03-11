@@ -1,13 +1,10 @@
 ---
-description: Esta tabela fornece informações detalhadas sobre INFO. digite notificações.
-seo-description: Esta tabela fornece informações detalhadas sobre INFO. digite notificações.
-seo-title: Códigos de notificação INFO
+description: Esta tabela fornece informações detalhadas sobre INFO. notificações do tipo .
 title: Códigos de notificação INFO
-uuid: 2b9f9328-4e09-44b7-8ea5-237c46e65e73
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '490'
 ht-degree: 4%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 4%
 
 # Códigos de notificação INFO{#info-notification-codes}
 
-Esta tabela fornece informações detalhadas sobre INFO. digite notificações.
+Esta tabela fornece informações detalhadas sobre INFO. notificações do tipo .
 
 <!--<a id="section_ED4302E363AE48CBA2C3E0B71AE612D8"></a>-->
 
-A maioria das notificações informativas contém metadados relevantes, por exemplo, o URL do recurso que falhou ao baixar. Algumas notificações contêm metadados para especificar se o problema ocorreu no conteúdo de vídeo principal, no conteúdo de áudio alternativo ou em um anúncio.
+A maioria das notificações informativas contém metadados relevantes, por exemplo, o URL do recurso que falhou no download. Algumas notificações contêm metadados para especificar se o problema ocorreu no conteúdo de vídeo principal, no conteúdo de áudio alternativo ou em um anúncio.
 
 <table frame="all" colsep="1" rowsep="1" id="table_503463046E764A87B10EB5D8B294EB23"> 
  <thead> 
@@ -79,7 +76,7 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE  </span> </td> 
    <td colname="3"> <p>Qualquer notificação de ERRO. </p> </td> 
    <td colname="4"><span class="codeph"> ESTADO  </span> </td> 
-   <td colname="5"> O estado do player mudou. Quando o estado for ERROR (ERRO), a notificação interna será o objeto de notificação de erro que disparou o switch para o estado ERROR (ERRO). </td> 
+   <td colname="5"> O estado do reprodutor foi alterado. Quando o estado é ERRO, a notificação interna é o objeto de notificação de erro que disparou o switch para o estado ERROR. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300006  </span> </td> 
@@ -93,14 +90,14 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="2"><span class="codeph"> LOAD_INFO_AVAILABLE  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <span class="codeph"> FRAGMENT_</span> <span class="codeph"> URLFRAGMENT_</span> <span class="codeph"> SIZEFRAGMENT_DOWNLOAD_</span> <span class="codeph"> DURATIONPERIOD_INDEX</span> </td> 
-   <td colname="5"> Fornece informações relacionadas ao modo como os segmentos de vídeo estão sendo baixados. </td> 
+   <td colname="5"> Fornece informações relacionadas à maneira como os segmentos de vídeo estão sendo baixados. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300101  </span> </td> 
    <td colname="2"><span class="codeph"> VIDEO_SIZE_CHANGED  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <span class="codeph"> ALTURA</span> <p><span class="codeph"> LARGURA</span> </p> </td> 
-   <td colname="5"> O tamanho da janela de reprodução do vídeo mudou. </td> 
+   <td colname="5"> O tamanho da janela de reprodução de vídeo foi alterado. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Taxas de bits adaptáveis (ABR)</b> </td> 
@@ -135,21 +132,21 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="2"><span class="codeph"> AD_BREAK_PLACEMENT_COMPLETE  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <span class="codeph"> PROPOSTA_AD_</span> <span class="codeph"> BREAKACCEPT_AD_BREAK</span> </td> 
-   <td colname="5"> Uma pausa de anúncio proposta foi aceita por <code>primetime-sdk-name</code> e colocada (na totalidade ou apenas parcialmente) na linha do tempo de reprodução. </td> 
+   <td colname="5"> Um ad break proposto foi aceito por <code>primetime-sdk-name</code> e colocado (em sua totalidade ou apenas parcialmente) na linha do tempo de reprodução. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303002  </span> </td> 
    <td colname="2"><span class="codeph"> AD_BREAK_START  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> AD_BREAK  </span> </td> 
-   <td colname="5"> A reprodução de uma pausa de anúncio específica foi iniciada. </td> 
+   <td colname="5"> A reprodução de um ad break específico foi iniciada. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303003  </span> </td> 
    <td colname="2"><span class="codeph"> AD_BREAK_COMPLETE  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> AD_BREAK  </span> </td> 
-   <td colname="5"> A reprodução de uma pausa de anúncio específica foi concluída. </td> 
+   <td colname="5"> A reprodução de um intervalo de anúncio específico foi concluída. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303004  </span> </td> 
@@ -170,28 +167,28 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="2"><span class="codeph"> AD_PROGRESS  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> AD</span> </p> <span class="codeph"> PROGRESSO</span> </td> 
-   <td colname="5"> A reprodução de um anúncio específico atingiu uma certa porcentagem desse anúncio específico. </td> 
+   <td colname="5"> A reprodução de um determinado anúncio atingiu uma porcentagem específica desse anúncio. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303007  </span> </td> 
    <td colname="2"><span class="codeph"> TIMED_METADATA_ADD  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
-   <td colname="4"> <span class="codeph"> TIPO</span> <p><span class="codeph"> ID</span> </p> <span class="codeph"> NOME</span> <p><span class="codeph"> HORA</span> </p> </td> 
-   <td colname="5"> Um novo metadados cronometrados foi detectado no manifesto. </td> 
+   <td colname="4"> <span class="codeph"> TIPO</span> <p><span class="codeph"> ID</span> </p> <span class="codeph"> NOME</span> <p><span class="codeph"> TEMPO</span> </p> </td> 
+   <td colname="5"> Um novo metadados cronometrados foi descoberto no manifesto. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303008  </span> </td> 
    <td colname="2"><span class="codeph"> AD_CLICK  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> AD</span> </p> <span class="codeph"> AD_CLICK</span> </td> 
-   <td colname="5"> Retorna informações sobre um anúncio clicado pelo usuário. </td> 
+   <td colname="5"> Retorna informações sobre uma publicidade em que o usuário clicou. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303009</span> </td> 
    <td colname="2"><span class="codeph"> AD_BREAK_SKIPPED</span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> AD</span> </p> <span class="codeph"> AD_CLICK</span> </td> 
-   <td colname="5"> Uma pausa de anúncio foi ignorada. </td> 
+   <td colname="5"> Um ad break foi ignorado. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname=""><b>Áudio de ligação tardia (LBA)</b> </td> 
@@ -205,7 +202,7 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"><span class="codeph"> TRACK_ID  </span><span class="codeph"> CURRENT_MEDIA_TIME  </span> </td> 
-   <td colname="5"> A faixa de áudio foi alterada. </td> 
+   <td colname="5"> A faixa de áudio mudou. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>DRM</b> </td> 
@@ -233,7 +230,7 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="2"><span class="codeph"> GENERIC_INFO  </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
-   <td colname="5"> <p>Marca um evento de informações genérico. Não emitido pela TVSDK. É apenas um marcador para o final do intervalo de códigos numéricos correspondente aos eventos informativos TVSDK. </p> </td> 
+   <td colname="5"> <p>Marca um evento de informação genérica. Na verdade, não foi emitido pelo TVSDK. É apenas um marcador para o final do intervalo de códigos numéricos correspondente a eventos informativos TVSDK. </p> </td> 
   </tr> 
  </tbody> 
 </table>
