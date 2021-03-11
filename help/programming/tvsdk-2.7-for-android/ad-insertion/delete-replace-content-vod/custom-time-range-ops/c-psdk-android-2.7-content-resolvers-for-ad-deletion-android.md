@@ -1,19 +1,16 @@
 ---
 description: Você pode usar vários resolvedores de conteúdo para lidar com diferentes operações de linha do tempo.
-seo-description: Você pode usar vários resolvedores de conteúdo para lidar com diferentes operações de linha do tempo.
-seo-title: Resolvedores de conteúdo para exclusão de anúncios/substituição
-title: Resolvedores de conteúdo para exclusão de anúncios/substituição
-uuid: ed168c52-ab7b-4fe6-8775-eb18018dc249
+title: Resolvedores de conteúdo para exclusão / substituição de anúncios
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
 
-# Resolvedores de conteúdo para exclusão de anúncio / substituição {#content-resolvers-for-ad-deletion-replacement}
+# Resolvedores de conteúdo para exclusão / substituição de anúncios {#content-resolvers-for-ad-deletion-replacement}
 
 Você pode usar vários resolvedores de conteúdo para lidar com diferentes operações de linha do tempo.
 
