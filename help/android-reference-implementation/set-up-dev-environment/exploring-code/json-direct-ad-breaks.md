@@ -1,13 +1,10 @@
 ---
-seo-title: Objeto JSON para quebras de anúncio direto
-title: Objeto JSON para quebras de anúncio direto
-uuid: ffb901f4-0a8b-40fe-b6ba-5ffebc324cf2
-description: Detalhes do objeto JSON quando o valor do tipo é direto e quebras
-seo-description: Detalhes do objeto JSON quando o valor do tipo é direto e quebras
+title: Objeto JSON para quebras diretas de anúncios
+description: Detalha o objeto JSON quando o valor do tipo é direto e quebra
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Objeto JSON para quebras de anúncio direto{#json-object-for-direct-ad-breaks}
 
-O bloco de código a seguir define os detalhes do objeto JSON quando o valor do tipo é quebras de anúncio diretas.
+O bloco de código a seguir define os detalhes do objeto JSON quando o valor do tipo é ad breaks diretos.
 
-O `MetadataNode` retornado por `IFeedItemAdapter:getStreamMetadata()` contém uma entrada com a chave do tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` e o valor de uma representação de cadeia de caracteres do valor detalhado do objeto JSON abaixo.
+O `MetadataNode` retornado por `IFeedItemAdapter:getStreamMetadata()` contém uma entrada com chave do tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` e o valor de uma representação de string do valor de objeto JSON de detalhes abaixo.
 
 ```
 “metadata”: { 
@@ -54,11 +51,11 @@ O `MetadataNode` retornado por `IFeedItemAdapter:getStreamMetadata()` contém um
 | Propriedade | Descrição |
 |---|---|
 | `tag` | Uma string que mapeia para o campo de tag em `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `time` | Indica a hora de start do intervalo do anúncio, mapeia para o campo de hora em `com.adobe.mediacore.timeline.advertising.AdBreak`. Um valor de 0 indica um anúncio precedente. |
-| `replace` | Indica a duração da substituição da quebra de anúncio, mapeia para o campo `replaceDuration` em `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `ad-list` | Uma lista de anúncios a serem reproduzidos durante um intervalo de anúncios fornecido, mapeia para o campo `List<Ad>` em `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `time` | Indica a hora de início do ad break, mapeia para o campo de hora em `com.adobe.mediacore.timeline.advertising.AdBreak`. Um valor de 0 indica um anúncio precedente. |
+| `replace` | Indica a duração da substituição do ad break, mapeia para o campo `replaceDuration` em `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `ad-list` | Uma lista de anúncios a serem reproduzidos durante o ad break fornecido mapeia para o campo `List<Ad>` em `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 
-O seguinte bloco de código define o objeto JSON para a matriz de lista de anúncios.
+O bloco de código a seguir define o objeto JSON para a matriz da lista de anúncios.
 
 ```
 "ad-list": [ 
@@ -77,7 +74,7 @@ O seguinte bloco de código define o objeto JSON para a matriz de lista de anún
 
 | Propriedade | Descrição |
 |---|---|
-| `url` | O URL para o conteúdo do anúncio é mapeado para o campo url em `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `url` | O URL para o conteúdo do anúncio mapeia para o campo de url em `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `duration` | A duração do anúncio é mapeada para o campo de duração em `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `tag` | Uma string de descrição. |
 
