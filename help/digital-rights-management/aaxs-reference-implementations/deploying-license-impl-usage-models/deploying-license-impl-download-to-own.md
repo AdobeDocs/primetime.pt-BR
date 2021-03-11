@@ -1,9 +1,9 @@
 ---
-seo-title: Download por conta própria
 title: Download por conta própria
-uuid: 4dd73299-722d-4b0d-ad3d-5d83e5377fd4
+description: Download por conta própria
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Download por conta própria {#download-to-own}
 
-Com o modelo de uso Baixar para o proprietário (DTO), um usuário pode baixar o conteúdo para uso online ou offline e recebe uma licença permanente para o conteúdo. Ao solicitar uma licença, o usuário deve autenticar para que o servidor possa verificar se o usuário adquiriu o conteúdo.
+Com o modelo de uso Download por conta própria (DTO), um usuário pode baixar o conteúdo para uso online ou offline e recebe uma licença permanente para o conteúdo. Ao solicitar uma licença, o usuário deve ser autenticado para que o servidor possa verificar se o usuário comprou o conteúdo.
