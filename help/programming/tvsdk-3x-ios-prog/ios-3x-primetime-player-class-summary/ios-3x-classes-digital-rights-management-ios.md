@@ -1,22 +1,19 @@
 ---
-description: Isso fornece informações sobre a atividade da Digital Rights Management (DRM).
-seo-description: Isso fornece informações sobre a atividade da Digital Rights Management (DRM).
-seo-title: Classes de Digital Rights Management
+description: Isso fornece informações sobre a atividade do Digital Rights Management (DRM).
 title: Classes de Digital Rights Management
-uuid: 6ed54e4b-47c7-4e49-8d11-00fc346b43f8
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '45'
 ht-degree: 0%
 
 ---
 
 
-# Classes de Digital Rights Management {#digital-rights-management-classes}
+# Digital Rights Management classes {#digital-rights-management-classes}
 
-Isso fornece informações sobre a atividade da Digital Rights Management (DRM).
+Isso fornece informações sobre a atividade do Digital Rights Management (DRM).
 
 | **Classe** | **Descrição** |
 |---|---|
-| [PTDRMMetadataInfo](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDRMMetadataInfo.html) | Representa uma instância específica de metadados DRM. |
+| [PTDRMMetadataInfo](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDRMMetadataInfo.html) | Representa uma instância específica de metadados de DRM. |
