@@ -1,13 +1,10 @@
 ---
-description: A classe ConfigProvider obtém a configuração do player de mídia. Você deve implementar a interface de configuração para que os gerentes de recursos possam ler as informações de configuração.
-seo-description: A classe ConfigProvider obtém a configuração do player de mídia. Você deve implementar a interface de configuração para que os gerentes de recursos possam ler as informações de configuração.
-seo-title: ConfigProvider
+description: A classe ConfigProvider obtém a configuração do reprodutor de mídia. Você deve implementar a interface de configuração para que os gerentes de recursos possam ler as informações de configuração.
 title: ConfigProvider
-uuid: 2467a617-6413-4b5d-9710-894cdc751b26
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
@@ -15,8 +12,8 @@ ht-degree: 0%
 
 # ConfigProvider {#configprovider}
 
-A classe ConfigProvider obtém a configuração do player de mídia. Você deve implementar a interface de configuração para que os gerentes de recursos possam ler as informações de configuração.
+A classe ConfigProvider obtém a configuração do reprodutor de mídia. Você deve implementar a interface de configuração para que os gerentes de recursos possam ler as informações de configuração.
 
-Use a classe [ConfigProvider](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html) para implementar as interfaces de configuração `ICCConfig`, `IAAConfig`, `IPlaybackConfig`, `IAdConfig` e `IQosConfig` para que os gerentes de recursos possam ler as configurações. Por exemplo, `ICCConfig` é a interface para a configuração `CCManager`. Os arquivos de configuração recebem os parâmetros de configuração do arquivo de configuração JSON.
+Você usa a classe [ConfigProvider](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html) para implementar as interfaces de configuração `ICCConfig`, `IAAConfig`, `IPlaybackConfig`, `IAdConfig` e `IQosConfig` para que os gerentes de recursos possam ler as configurações. Por exemplo, `ICCConfig` é a interface da configuração `CCManager`. Os arquivos de configuração recebem os parâmetros de configuração do arquivo de configuração JSON.
 
-O arquivo `ConfigProvider.java` é um exemplo da implementação do Adobe das interfaces de configuração. Ele lê as configurações de `SharedPreferences`, onde a configuração é armazenada. Você pode armazenar sua configuração de qualquer maneira que funcione para sua organização. A implementação da configuração fornece um invólucro para a sua fonte de configuração.
+O arquivo &lt;a0/ é um exemplo de implementação Adobe das interfaces de configuração. `ConfigProvider.java` Ele lê as configurações de `SharedPreferences`, onde a configuração é armazenada. Você pode armazenar sua configuração de qualquer maneira que funcione para sua organização. A implementação da configuração fornece um wrapper para sua fonte de configuração.
