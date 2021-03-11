@@ -1,9 +1,9 @@
 ---
-seo-title: Criar uma interface de usuário de autenticação
 title: Criar uma interface de usuário de autenticação
-uuid: 4744bac0-c36e-4b0a-b3fb-d81c7f2e7617
+description: Criar uma interface de usuário de autenticação
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 1. Crie uma interface de usuário para recuperar as credenciais de autenticação do usuário.
 
-   A seguir está um exemplo da Flex de uma interface de usuário simples para recuperar credenciais de usuário. Ele consiste em um objeto de painel que contém dois objetos `TextInput`, um para cada uma das credenciais de nome de usuário e senha. O painel também contém um botão que inicia o método `credentials()`.
+   Veja a seguir um exemplo de Flex de uma interface de usuário simples para recuperar credenciais de usuário. Ele consiste em um objeto de painel contendo dois objetos `TextInput`, um para cada uma das credenciais de nome de usuário e senha. O painel também contém um botão que inicia o método `credentials()`.
 
    ```xml
    <mx:Panel x="236.5"  
@@ -44,9 +44,9 @@ ht-degree: 0%
    </mx:Panel>  
    ```
 
-1. Grave o método `credentials()` para processar os valores de autenticação fornecidos pelo usuário.
+1. Escreva o método `credentials()` para processar os valores de autenticação fornecidos pelo usuário.
 
-   O método `credentials()` é um método definido pelo usuário que transmite os valores de nome de usuário e senha para o método `setDRMAuthenticationCredentials()`. Depois que os valores são passados, o método `credentials()` redefine os valores dos objetos `TextInput`.
+   O método `credentials()` é um método definido pelo usuário que passa os valores de nome de usuário e senha para o método `setDRMAuthenticationCredentials()`. Depois que os valores são passados, o método `credentials()` redefine os valores dos objetos `TextInput`.
 
    ```
    <mx:Script> 
@@ -59,7 +59,7 @@ ht-degree: 0%
    </mx:Script> 
    ```
 
-   Uma maneira de implementar esse tipo de interface simples é incluir o painel como parte de um novo estado. O novo estado é originário do estado base quando o objeto `DRMAuthenticateEvent` é lançado. O exemplo a seguir contém um objeto `VideoDisplay` com um atributo de origem que aponta para um arquivo de vídeo protegido. Nesse caso, o método `credentials()` é modificado para que ele também retorne o aplicativo ao estado base. Esse método faz isso após transmitir as credenciais do usuário e redefinir os valores do objeto TextInput.
+   Uma maneira de implementar esse tipo de interface simples é incluir o painel como parte de um novo estado. O novo estado se origina do estado base quando o objeto `DRMAuthenticateEvent` é lançado. O exemplo a seguir contém um objeto `VideoDisplay` com um atributo de origem que aponta para um arquivo de vídeo protegido. Nesse caso, o método `credentials()` é modificado para que também retorne o aplicativo ao estado base. Esse método faz isso após transmitir as credenciais do usuário e redefinir os valores do objeto TextInput.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 
