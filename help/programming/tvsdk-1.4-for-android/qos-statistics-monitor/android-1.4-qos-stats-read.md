@@ -1,19 +1,16 @@
 ---
 description: Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe QOSProvider.
-seo-description: Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe QOSProvider.
-seo-title: Leia as estatísticas de reprodução, buffering e dispositivo do QOS
-title: Leia as estatísticas de reprodução, buffering e dispositivo do QOS
-uuid: 19228a50-3721-4dc1-89b6-97458518e272
+title: Ler a reprodução do QOS, o buffering e as estatísticas do dispositivo
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '138'
 ht-degree: 1%
 
 ---
 
 
-# Leia as estatísticas de reprodução, buffering e dispositivo do QOS{#read-qos-playback-buffering-and-device-statistics}
+# Ler a reprodução do QOS, o buffering e as estatísticas do dispositivo{#read-qos-playback-buffering-and-device-statistics}
 
 Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe QOSProvider.
 
@@ -21,10 +18,10 @@ A classe `QOSProvider` fornece várias estatísticas, incluindo informações so
 
 Ele também fornece informações sobre o dispositivo, como fabricante, modelo, sistema operacional, versão do SDK, ID do dispositivo do fabricante e tamanho/densidade da tela.
 
-1. Instanciar um player de mídia.
-1. Crie um objeto `QOSProvider` e anexe-o ao player de mídia.
+1. Instancie um reprodutor de mídia.
+1. Crie um objeto `QOSProvider` e o anexe ao reprodutor de mídia.
 
-   O construtor `QOSProvider` usa um contexto de player para que possa recuperar informações específicas do dispositivo.
+   O construtor `QOSProvider` assume um contexto de reprodutor para que possa recuperar informações específicas do dispositivo.
 
    ```java
    // Create Media Player. 
@@ -34,7 +31,7 @@ Ele também fornece informações sobre o dispositivo, como fabricante, modelo, 
 
 1. (Opcional) Leia as estatísticas de reprodução.
 
-   Uma solução para ler as estatísticas de reprodução é ter um timer, que periodicamente obtém os novos valores de QoS do `QOSProvider`. Por exemplo:
+   Uma solução para ler as estatísticas de reprodução é ter um temporizador que busca periodicamente os novos valores de QoS do `QOSProvider`. Por exemplo:
 
    ```java
    _playbackClock = new Clock(PLAYBACK_CLOCK, 1000); // every 1 second 
