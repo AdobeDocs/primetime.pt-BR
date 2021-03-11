@@ -1,13 +1,10 @@
 ---
 description: O arquivo de configuração flashaccess-global.xml inclui configurações que se aplicam a todos os locatários do servidor de licenças.
-seo-description: O arquivo de configuração flashaccess-global.xml inclui configurações que se aplicam a todos os locatários do servidor de licenças.
-seo-title: Arquivo de configuração global
 title: Arquivo de configuração global
-uuid: 294d6cff-be07-4b4b-8aa6-943044a1c56f
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -23,10 +20,10 @@ Consulte o diretório [!DNL configs] para obter um exemplo de um arquivo de conf
 
 O arquivo de configuração global inclui:
 
-* Cache — Controla o cache de arquivos de configuração na memória.
+* Armazenamento em cache — Controla o armazenamento em cache de arquivos de configuração na memória.
 
-   Consulte *Atualizando arquivos de configuração* para obter informações sobre as configurações de cache.
-* Registro — Especifica o nível de registro e a frequência de rolagem dos arquivos de registro.
-* Senha HSM — Necessário somente se um HSM for usado para armazenar credenciais de servidor.
+   Consulte *Atualizando arquivos de configuração* para obter informações sobre as configurações de armazenamento em cache.
+* Registro — Especifica o nível de registro e a frequência com que os arquivos de log são rolados.
+* Senha do HSM — Obrigatório somente se um HSM for usado para armazenar credenciais do servidor.
 
-Consulte os comentários no arquivo de configuração global de exemplo localizado em Primetime DRM `<DVD>`\Adobe Primetime DRM Server for Protected Streaming\configs para obter mais detalhes.
+Consulte os comentários no arquivo de configuração global de exemplo localizado no Primetime DRM `<DVD>`\Adobe Primetime DRM Server for Protected Streaming\configs para obter mais detalhes.
