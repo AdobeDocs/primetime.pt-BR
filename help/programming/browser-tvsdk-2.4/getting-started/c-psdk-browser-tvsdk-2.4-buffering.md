@@ -1,21 +1,18 @@
 ---
-description: Você pode configurar visuais para notificar ao usuário que o conteúdo está sendo armazenado em buffer.
-seo-description: Você pode configurar visuais para notificar ao usuário que o conteúdo está sendo armazenado em buffer.
-seo-title: Buffering
+description: Você pode configurar visuais para notificar o usuário que o conteúdo está em buffer.
 title: Buffering
-uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 2%
+source-wordcount: '56'
+ht-degree: 3%
 
 ---
 
 
 # Buffering{#buffering}
 
-Você pode configurar visuais para notificar ao usuário que o conteúdo está sendo armazenado em buffer.
+Você pode configurar visuais para notificar o usuário que o conteúdo está em buffer.
 
 Analise os eventos `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` e `AdobePSDK.PSDKEventType.BUFFERING_END`. Por exemplo:
 
@@ -33,7 +30,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_END,
                         });
 ```
 
-A Estrutura da interface do usuário fornece a implementação padrão do comportamento de sobreposição de buffering, que pode ser estendida como mostrado abaixo:
+A Estrutura da interface do usuário fornece a implementação padrão do comportamento da sobreposição de buffer, que pode ser estendida conforme mostrado abaixo:
 
 ```js
 // Using UI Framework 
@@ -52,7 +49,7 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-Veja a aparência do DOM do resultado:
+Veja como o DOM do resultado se parece com:
 
 ```
 <div id=" videoDiv" class="ptp-root-element"> 
