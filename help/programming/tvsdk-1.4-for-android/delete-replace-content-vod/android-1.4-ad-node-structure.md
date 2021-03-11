@@ -1,13 +1,11 @@
 ---
-description: nulo
-seo-description: nulo
-seo-title: Estrutura do nó de publicidade com intervalo de tempo
-title: Estrutura do nó de publicidade com intervalo de tempo
-uuid: 48368b1c-1571-4e4a-8490-734e1d84a82b
+title: Estrutura de nós de publicidade com intervalos de tempo
+description: Estrutura de nós de publicidade com intervalos de tempo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '17'
+source-wordcount: '15'
 ht-degree: 0%
 
 ---
