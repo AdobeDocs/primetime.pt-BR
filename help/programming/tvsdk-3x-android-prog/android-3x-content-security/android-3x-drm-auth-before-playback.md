@@ -1,13 +1,10 @@
 ---
-description: Quando os metadados DRM de um vídeo estiverem separados do fluxo de mídia, você deverá autenticar antes de iniciar a reprodução.
-seo-description: Quando os metadados DRM de um vídeo estiverem separados do fluxo de mídia, você deverá autenticar antes de iniciar a reprodução.
-seo-title: Autenticação DRM antes da reprodução
+description: Quando os metadados de DRM de um vídeo estão separados do fluxo de mídia, você deve autenticar antes de iniciar a reprodução.
 title: Autenticação DRM antes da reprodução
-uuid: be319b04-a506-4278-8275-db32cd3f18aa
 translation-type: tm+mt
-source-git-commit: e300238be5a2bddc7c6b9bd26682dcb4401959b1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '339'
 ht-degree: 1%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 1%
 
 # Autenticação DRM antes da reprodução {#drm-authentication-before-playback}
 
-Quando os metadados DRM de um vídeo estiverem separados do fluxo de mídia, você deverá autenticar antes de iniciar a reprodução.
+Quando os metadados de DRM de um vídeo estão separados do fluxo de mídia, você deve autenticar antes de iniciar a reprodução.
 
 Um ativo de vídeo pode ter um arquivo de metadados DRM associado, por exemplo:
 
@@ -24,11 +21,11 @@ Um ativo de vídeo pode ter um arquivo de metadados DRM associado, por exemplo:
 
 Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo do arquivo de metadados DRM, analisá-lo e verificar se a autenticação DRM é necessária.
 
-1. Use `loadDRMMetadata` para carregar o conteúdo do URL de metadados e analisar os bytes baixados em `DRMMetadata`.
+1. Use `loadDRMMetadata` para carregar o conteúdo do URL de metadados e analisar os bytes baixados em um `DRMMetadata`.
 
    >[!TIP]
    >
-   >Este método é assíncrono e cria seu próprio thread.
+   >Esse método é assíncrono e cria seu próprio thread.
 
    ```java
    public static void loadDRMMetadata( 
@@ -45,11 +42,11 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
                                       new DRMLoadMetadataListener());
    ```
 
-1. Notifique o usuário de que essa operação é assíncrona. Convém informá-lo.
+1. Notifique o usuário que essa operação é assíncrona. Convém informar o usuário sobre isso.
 
-   Se os usuários não souberem que a operação é assíncrona, talvez eles se perguntem por que a reprodução ainda não foi iniciada. Por exemplo, você pode mostrar uma roda giratória enquanto os metadados DRM estão sendo baixados e analisados.
+   Se os usuários não souberem que a operação é assíncrona, poderão se perguntar por que a reprodução ainda não foi iniciada. Você pode, por exemplo, mostrar uma roda giratória enquanto os metadados de DRM estão sendo baixados e analisados.
 
-1. Implemente os retornos de chamada em `DRMLoadMetadataListener`.
+1. Implemente os retornos de chamada no `DRMLoadMetadataListener`.
 
    O `loadDRMMetadata` chama esses manipuladores de evento.
 
@@ -68,13 +65,13 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
    } 
    ```
 
-   Estes são detalhes adicionais sobre os manipuladores:
+   Aqui estão detalhes adicionais sobre os manipuladores:
 
    * `onLoadMetadataUrlStart` detecta quando o carregamento do URL de metadados começou.
-   * `onLoadMetadataUrlComplete` detecta quando o URL de metadados terminou de ser carregado.
+   * `onLoadMetadataUrlComplete` O detecta quando o URL de metadados terminou de ser carregado.
    * `onLoadMetadataUrlError` indica que os metadados não foram carregados.
 
-1. Depois que o carregamento estiver concluído, inspecione o objeto `DRMMetadata` para determinar se a autenticação DRM é necessária.
+1. Após concluir o carregamento, inspecione o objeto `DRMMetadata` para determinar se a autenticação de DRM é necessária.
 
    ```java
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
@@ -155,9 +152,9 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
       }); 
       ```
 
-1. Use um ouvinte de evento para verificar o status da autenticação.
+1. Use um ouvinte de evento para verificar o status de autenticação.
 
-   Esse processo implica a comunicação em rede, então essa é também uma operação assíncrona.
+   Esse processo implica a comunicação da rede, então essa também é uma operação assíncrona.
 
    ```java
    public interface DRMAuthenticationListener { 
@@ -193,7 +190,7 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
    } 
    ```
 
-1. Se a autenticação for bem-sucedida, start a reprodução.
-1. Se a autenticação não for bem-sucedida, notifique o usuário e não start a reprodução.
+1. Se a autenticação for bem-sucedida, inicie a reprodução.
+1. Se a autenticação não for bem-sucedida, notifique o usuário e não inicie a reprodução.
 
-   Seu aplicativo deve lidar com quaisquer erros de autenticação. Falha ao autenticar antes da reprodução coloca o TVSDK em um estado de erro e a reprodução para. Seu aplicativo deve resolver o problema, redefinir o player e recarregar o recurso.
+   Seu aplicativo deve lidar com erros de autenticação. Falha na autenticação antes da reprodução do coloca o TVSDK em um estado de erro e a reprodução é interrompida. Seu aplicativo deve resolver o problema, redefinir o reprodutor e recarregar o recurso.
