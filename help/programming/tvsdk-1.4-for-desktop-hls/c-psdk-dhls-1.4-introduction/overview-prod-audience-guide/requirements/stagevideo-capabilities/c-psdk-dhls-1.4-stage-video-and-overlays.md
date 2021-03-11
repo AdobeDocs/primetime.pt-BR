@@ -1,13 +1,10 @@
 ---
-description: Você pode usar sobreposições HTML com StageVideo para exibir elementos de interface no plano de vídeo de lista de exibição do Flash. Esse plano está acima do plano StageVideo, portanto, o StageVideo sempre é exibido atrás de qualquer elemento de lista de exibição do Flash.
-seo-description: Você pode usar sobreposições HTML com StageVideo para exibir elementos de interface no plano de vídeo de lista de exibição do Flash. Esse plano está acima do plano StageVideo, portanto, o StageVideo sempre é exibido atrás de qualquer elemento de lista de exibição do Flash.
-seo-title: Sobreposições de StageVideo e HTML
+description: Você pode usar sobreposições HTML com StageVideo para exibir elementos da interface do usuário no plano de vídeo da lista de exibição do Flash. Esse plano está acima do plano StageVideo, de modo que StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição de Flash.
 title: Sobreposições de StageVideo e HTML
-uuid: 84e862ab-4c35-47a2-9c4e-f792d3ef5363
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -15,27 +12,27 @@ ht-degree: 0%
 
 # Sobreposições de StageVideo e HTML{#stagevideo-and-html-overlays}
 
-Você pode usar sobreposições HTML com StageVideo para exibir elementos de interface no plano de vídeo de lista de exibição do Flash. Esse plano está acima do plano StageVideo, portanto, o StageVideo sempre é exibido atrás de qualquer elemento de lista de exibição do Flash.
+Você pode usar sobreposições HTML com StageVideo para exibir elementos da interface do usuário no plano de vídeo da lista de exibição do Flash. Esse plano está acima do plano StageVideo, de modo que StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição de Flash.
 
-As sobreposições HTML são elementos da interface que você pode exibir no plano de exibição do Flash no vídeo que é renderizado por `StageVideo` em seu próprio plano. Antes do Flash 15, não era possível usar sobreposições HTML quando a aceleração de hardware não estava disponível. A partir do Flash 15, as sobreposições HTML são exibidas quando `StageVideo` retorna à renderização do software.
+As sobreposições HTML são elementos da interface do usuário que podem ser exibidos no plano de exibição do Flash no vídeo renderizado por `StageVideo` em seu próprio plano. Antes do Flash 15, não era possível usar as sobreposições HTML quando a aceleração de hardware não estava disponível. A partir do Flash 15, as sobreposições HTML são exibidas quando `StageVideo` retorna à renderização do software.
 
 >[!IMPORTANT]
 >
->Dependendo das capacidades do seu sistema, o desempenho pode diminuir para um grau maior ou menor quando você usa sobreposições HTML.
+>Dependendo dos recursos de seu sistema, o desempenho pode degradar-se em maior ou menor grau quando você usa sobreposições HTML.
 
 Considere as seguintes informações:
 
 * No Flash Player 15:
 
-   * Você pode usar sobreposições HTML se a aceleração por hardware estiver disponível.
-   * Para usar sobreposições HTML, defina `wmode` como `opaque`.
+   * Você pode usar sobreposições HTML se a aceleração de hardware estiver disponível.
+   * Para usar as sobreposições HTML, defina `wmode` como `opaque`.
 
 * No Flash Player 14:
 
-   * Quando a aceleração de hardware estiver disponível, `StageVideo` estará abaixo da lista de exibição do Flash, para que você possa usar sobreposições HTML.
+   * Quando a aceleração de hardware estiver disponível, `StageVideo` fica abaixo da lista de exibição do Flash, para que você possa usar as sobreposições de HTML.
    * Quando a aceleração de hardware não está disponível, o vídeo é renderizado sobre todos os outros elementos no navegador, o que impede o uso de sobreposições HTML.
 
-Estes são os requisitos mínimos do navegador para usar sobreposições HTML com `StageVideo`:
+Estes são os requisitos mínimos do navegador para usar as sobreposições HTML com `StageVideo`:
 
 * Firefox versão 4 e posterior
 * Safari versão 4 e posterior
