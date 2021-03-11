@@ -1,9 +1,9 @@
 ---
-seo-title: Atualização de uma política DRM com a API Java
-title: Atualização de uma política DRM com a API Java
-uuid: ec21351c-900e-48f5-845a-c0b430c210d7
+title: Atualização de uma política de DRM com a API Java
+description: Atualização de uma política de DRM com a API Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -11,18 +11,18 @@ ht-degree: 0%
 ---
 
 
-# Atualização de uma política DRM com a API Java {#updating-a-drm-policy-with-the-java-api}
+# Atualização de uma política de DRM com a API Java {#updating-a-drm-policy-with-the-java-api}
 
 Para atualizar uma política de DRM com a API Java:
 
-1. Configure seu ambiente de desenvolvimento e inclua no seu projeto todos os arquivos JAR listados em [Configurando o ambiente de desenvolvimento](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Configure seu ambiente de desenvolvimento e inclua em seu projeto todos os arquivos JAR listados em [Setting up the development environment](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 1. Crie uma instância de DRM `Policy` e leia a política de DRM de um arquivo ou banco de dados.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Atualize o objeto DRM `Policy` definindo suas propriedades, como nome e regras de uso.
+1. Atualize o objeto DRM `Policy` definindo suas propriedades, como o nome e as regras de uso.
 
    ```java
    // Change the DRM policy name.  
@@ -61,4 +61,4 @@ Para atualizar uma política de DRM com a API Java:
    out.close();
    ```
 
-Consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` no diretório Reference Implementation Command Line Tools [!DNL samples] para obter a origem desse código de amostra.
+Consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` no diretório Ferramentas de linha de comando de implementação de referência [!DNL samples] para obter a origem deste código de amostra.
