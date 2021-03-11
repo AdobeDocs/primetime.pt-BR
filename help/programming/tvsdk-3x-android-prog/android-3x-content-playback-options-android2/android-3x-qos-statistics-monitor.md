@@ -1,13 +1,10 @@
 ---
-description: A Qualidade de serviço (QoS) fornece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
-seo-description: A Qualidade de serviço (QoS) fornece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
-seo-title: Estatísticas da qualidade dos serviços
-title: Estatísticas da qualidade dos serviços
-uuid: 3d66ed44-9d4a-4162-962f-e238575ff2dd
+description: A Qualidade do serviço (QoS) fornece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+title: Estatísticas de qualidade dos serviços
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -15,17 +12,17 @@ ht-degree: 0%
 
 # Estatísticas de qualidade do serviço {#quality-of-service-statistics}
 
-A Qualidade de serviço (QoS) fornece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+A Qualidade do serviço (QoS) fornece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
 
 O TVSDK também fornece informações sobre os seguintes recursos baixados:
 
-* Arquivos de lista de reprodução/manifesto
+* Arquivos Playlist/manifest
 * Fragmentos de arquivo
 * Rastreamento de informações para arquivos
 
-## Rastrear no nível do fragmento usando informações de carga {#section_4439D91E8EDC45588EF1D7BE25697350}
+## Rastrear no nível do fragmento usando informações de carregamento {#section_4439D91E8EDC45588EF1D7BE25697350}
 
-Você pode ler informações de qualidade de serviço (QoS) sobre recursos baixados, como fragmentos e rastreamentos, da classe `LoadInformation`.
+Você pode ler informações de qualidade do serviço (QoS) sobre os recursos baixados, como fragmentos e rastreamentos, da classe `LoadInformation`.
 
 1. Implemente e registre o ouvinte do evento `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`.
 1. Chame `event.getLoadInformation()` para ler os dados relevantes do parâmetro `event` passado para o retorno de chamada.
@@ -34,16 +31,16 @@ Você pode ler informações de qualidade de serviço (QoS) sobre recursos baixa
    >
    >Para obter mais informações sobre `LoadInformation`, consulte [3.0 para documentos da API do Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.0/index.html).
 
-## Leia as estatísticas de reprodução, buffering e dispositivo do QOS {#section_D21722600F324E67A9F06234D338B243}
+## Ler a reprodução do QOS, o buffering e as estatísticas do dispositivo {#section_D21722600F324E67A9F06234D338B243}
 
 Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe `QOSProvider`.
 
 A classe `QOSProvider` fornece várias estatísticas, incluindo informações sobre buffering, taxas de bits, taxas de quadros, dados de tempo e assim por diante. Ele também fornece informações sobre o dispositivo, como fabricante, modelo, sistema operacional, versão do SDK, ID do dispositivo do fabricante e tamanho/densidade da tela.
 
-1. Instanciar um player de mídia.
-1. Crie um objeto `QOSProvider` e anexe-o ao player de mídia.
+1. Instancie um reprodutor de mídia.
+1. Crie um objeto `QOSProvider` e o anexe ao reprodutor de mídia.
 
-   O construtor `QOSProvider` usa um contexto de player para que possa recuperar informações específicas do dispositivo.
+   O construtor `QOSProvider` assume um contexto de reprodutor para que possa recuperar informações específicas do dispositivo.
 
    ```java
    // Create Media Player. 
@@ -53,7 +50,7 @@ A classe `QOSProvider` fornece várias estatísticas, incluindo informações so
 
 1. (Opcional) Leia as estatísticas de reprodução.
 
-   Uma solução para ler as estatísticas de reprodução é ter um timer, que periodicamente obtém os novos valores de QoS do `QOSProvider`.
+   Uma solução para ler as estatísticas de reprodução é ter um temporizador que busca periodicamente os novos valores de QoS do `QOSProvider`.
 
    Por exemplo:
 
