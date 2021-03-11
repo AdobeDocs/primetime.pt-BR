@@ -1,13 +1,10 @@
 ---
-description: Essas classes fornecem metadados para publicidade, namespaces e rastreamento.
-seo-description: Essas classes fornecem metadados para publicidade, namespaces e rastreamento.
-seo-title: Classes de metadados
+description: Essas classes fornecem metadados para anúncios, namespaces e rastreamento.
 title: Classes de metadados
-uuid: e3884825-132c-4c5c-bc58-00c2967d9fa8
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -15,14 +12,14 @@ ht-degree: 0%
 
 # Classes de metadados {#metadata-classes}
 
-Essas classes fornecem metadados para publicidade, namespaces e rastreamento.
+Essas classes fornecem metadados para anúncios, namespaces e rastreamento.
 
 Pacote: [com.adobe.mediacore.metadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/package-detail.html)
 
 | Nome | Descrição |
 |---|---|
-| [AdSignalingMode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AdSignalingMode.html) | classe lista discriminada expondo os modos de sinalização suportados na Frase. |
-| [AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AuditudeSettings.html) | Classe que se estende `Metadata` especificamente para Frase. Fornece propriedades a serem configuradas para resolver anúncios de frases para um determinado item de mídia. Você deve definir todas as propriedades necessárias, incluindo a ID da zona, a ID da mídia e o URL do servidor de publicidade, para configurar o player para resolver anúncios com êxito. |
+| [AdSignalingMode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AdSignalingMode.html) | Classe de enumeração que expõe os modos de sinalização aceitos na Frase. |
+| [AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AuditudeSettings.html) | Classe que estende `Metadata` especificamente para Frase. Fornece propriedades a serem configuradas para resolver Anúncios de frases para um determinado item de mídia. Você deve definir todas as propriedades necessárias, incluindo ID de zona, ID de mídia e URL do servidor de publicidade, para configurar o reprodutor para resolver anúncios com êxito. |
 | [ByteArrayMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/ByteArrayMetadata.html) | Obsoleto. Use `Metadata`. |
 | [DefaultMetadataKeys](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/DefaultMetadataKeys.html) | Classe. |
 | [Metadados](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/Metadata.html) | Define a interface genérica para configurar todos os metadados disponíveis para o player e objetos adicionais. |
