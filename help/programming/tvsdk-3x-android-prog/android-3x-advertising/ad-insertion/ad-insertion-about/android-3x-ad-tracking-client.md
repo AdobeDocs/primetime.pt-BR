@@ -1,20 +1,17 @@
 ---
 description: O TVSDK rastreia automaticamente anúncios para transmissão VOD e transmissão ao vivo/linear.
-seo-description: O TVSDK rastreia automaticamente anúncios para transmissão VOD e transmissão ao vivo/linear.
-seo-title: Rastrear anúncio do cliente
 title: Rastrear anúncio do cliente
-uuid: 1c239ddf-3414-49b9-83ae-dcfcb0c4e283
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '61'
+source-wordcount: '48'
 ht-degree: 0%
 
 ---
 
 
-# Rastrear anúncio do cliente {#track-client-ad}
+# Rastrear anúncio de cliente {#track-client-ad}
 
 O TVSDK rastreia automaticamente anúncios para transmissão VOD e transmissão ao vivo/linear.
 
-As notificações são usadas para informar seu aplicativo sobre o progresso de um anúncio, incluindo informações sobre quando um anúncio começa e quando termina.
+As notificações são usadas para informar seu aplicativo sobre o progresso de um anúncio, incluindo informações sobre quando ele começa e quando termina.
