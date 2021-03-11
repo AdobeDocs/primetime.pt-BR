@@ -1,13 +1,10 @@
 ---
-description: 'O Adobe Access Server for Protected Streaming requer dois tipos de arquivos de configuração: um arquivo de configuração global (flashaccess-global.xml) e um arquivo de configuração de locatário para cada locatário (flashaccess-locatário.xml).'
-seo-description: 'O Adobe Access Server for Protected Streaming requer dois tipos de arquivos de configuração: um arquivo de configuração global (flashaccess-global.xml) e um arquivo de configuração de locatário para cada locatário (flashaccess-locatário.xml).'
-seo-title: Estrutura do Diretório de Configuração
+description: 'O Adobe Access Server for Protected Streaming requer dois tipos de arquivos de configuração: um arquivo de configuração global (flashaccess-global.xml) e um arquivo de configuração de locatário para cada locatário (flashaccess-tenant.xml).'
 title: Estrutura do Diretório de Configuração
-uuid: c6cfc734-6b7c-4502-9bdb-c7aaca156e0e
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Arquivos de configuração do servidor de licenças e Estrutura do Diretório de Configuração {#configuration-directory-structure}
 
-O Adobe Access Server for Protected Streaming requer dois tipos de arquivos de configuração: um arquivo de configuração global (flashaccess-global.xml) e um arquivo de configuração de locatário para cada locatário (flashaccess-locatário.xml).
+O Adobe Access Server for Protected Streaming requer dois tipos de arquivos de configuração: um arquivo de configuração global (flashaccess-global.xml) e um arquivo de configuração de locatário para cada locatário (flashaccess-tenant.xml).
 
 Após editar os arquivos de configuração, o Adobe recomenda usar os utilitários fornecidos com o Adobe Access Server for Protected Streaming para verificar se os arquivos estão bem formados. Para obter mais informações, consulte &quot;[Validador de Configuração](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)&quot;.
 
-Para evitar disponibilizar senhas em texto nítido nos arquivos de configuração, todas as senhas especificadas nos arquivos de configuração global e locatário devem ser criptografadas. Para obter mais informações sobre como criptografar senhas, consulte &quot;[Scrambler de senha](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)&quot;.
+Para evitar disponibilizar senhas em texto claro nos arquivos de configuração, todas as senhas especificadas nos arquivos de configuração global e do locatário devem ser criptografadas. Para obter mais informações sobre criptografia de senhas, consulte &quot;[Scrambler de senha](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)&quot;.
 
 Os diretórios de configuração têm a seguinte estrutura:
 
