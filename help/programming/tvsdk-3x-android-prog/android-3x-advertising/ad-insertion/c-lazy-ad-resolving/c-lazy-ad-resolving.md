@@ -1,14 +1,11 @@
 ---
-description: A resolução e o carregamento do anúncio podem causar um atraso inaceitável para um usuário que espera a reprodução para o start. Os recursos de Carregamento de anúncio com preguiça e Resolução de anúncios com preguiça podem reduzir esse atraso na inicialização. A resolução de anúncios ociosos mudou significativamente na versão 3.0. No carregamento de Anúncio com preguiça anterior à 3.0, a resolução do anúncio foi dividida em duas etapas, resolvendo apenas os anúncios anteriores ao status PREPARADO e mid-rolls e post-rolls após o status PREPARADO. Isso foi alterado e as quebras de anúncio agora são resolvidas em um intervalo especificado antes da posição do intervalo do anúncio.
-keywords: Lazy;Ad resolving;Ad loading
-seo-description: A resolução e o carregamento do anúncio podem causar um atraso inaceitável para um usuário que espera a reprodução para o start. Os recursos de Carregamento de anúncio com preguiça e Resolução de anúncios com preguiça podem reduzir esse atraso na inicialização. A resolução de anúncios ociosos mudou significativamente na versão 3.0. No carregamento de Anúncio com preguiça anterior à 3.0, a resolução do anúncio foi dividida em duas etapas, resolvendo apenas os anúncios anteriores ao status PREPARADO e mid-rolls e post-rolls após o status PREPARADO. Isso foi alterado e as quebras de anúncio agora são resolvidas em um intervalo especificado antes da posição do intervalo do anúncio.
-seo-title: Resolução de anúncios just-in-time
-title: Resolução de anúncios just-in-time
-uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
+description: A resolução e o carregamento de anúncios podem causar um atraso inaceitável para um usuário que aguarda o início da reprodução. Os recursos de Carregamento de anúncio lento e Resolução de anúncios lento podem reduzir esse atraso de inicialização. A resolução de anúncios ociosos mudou significativamente na versão 3.0. No carregamento de Anúncio lento anterior ao 3.0, a resolução do anúncio foi dividida em duas etapas, resolvendo apenas anúncios precedentes antes do status PREPARADO, e os cilindros médios e posteriores após o status PREPARADO. Isso foi alterado e os ad breaks agora são resolvidos em um intervalo especificado antes da posição do ad break.
+keywords: Preguiçoso;Resolução de anúncio;Carregamento de anúncio
+title: Solução de anúncios em tempo real
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -16,48 +13,48 @@ ht-degree: 0%
 
 # Visão geral {#just-in-time-ad-resolving-overview}
 
-A resolução e o carregamento do anúncio podem causar um atraso inaceitável para um usuário que espera a reprodução para o start. Os recursos de Carregamento de anúncio com preguiça e Resolução de anúncios com preguiça podem reduzir esse atraso na inicialização. A resolução de anúncios ociosos mudou significativamente na versão 3.0. No carregamento de Anúncio com preguiça anterior à 3.0, a resolução do anúncio foi dividida em duas etapas, resolvendo apenas os anúncios anteriores ao status PREPARADO e mid-rolls e post-rolls após o status PREPARADO. Isso foi alterado e as quebras de anúncio agora são resolvidas em um intervalo especificado antes da posição do intervalo do anúncio.
+A resolução e o carregamento de anúncios podem causar um atraso inaceitável para um usuário que aguarda o início da reprodução. Os recursos de Carregamento de anúncio lento e Resolução de anúncios lento podem reduzir esse atraso de inicialização. A resolução de anúncios ociosos mudou significativamente na versão 3.0. No carregamento de Anúncio lento anterior ao 3.0, a resolução do anúncio foi dividida em duas etapas, resolvendo apenas anúncios precedentes antes do status PREPARADO, e os cilindros médios e posteriores após o status PREPARADO. Isso foi alterado e os ad breaks agora são resolvidos em um intervalo especificado antes da posição do ad break.
 
 * Processo básico de resolução e carregamento de anúncios:
 
    1. O TVSDK baixa um manifesto (lista de reprodução) e *resolve* todos os anúncios.
    1. O TVSDK *carrega* todos os anúncios e os coloca na linha do tempo.
-   1. O TVSDK move o player para o status PREPARADO e a reprodução do conteúdo é iniciada.
+   1. O TVSDK move o reprodutor para o status PREPARADO, e a reprodução do conteúdo é iniciada.
 
-   O player usa os URLs no manifesto para obter o conteúdo do anúncio (criativos), garante que o conteúdo do anúncio esteja em um formato que o TVSDK possa reproduzir e o TVSDK coloca os anúncios na linha do tempo. Esse processo básico de resolver e carregar publicidades pode causar um atraso inaceitavelmente longo para um usuário que está aguardando para reproduzir seu conteúdo, especialmente se o manifesto contiver vários URLs de publicidade.
+   O reprodutor usa os URLs no manifesto para obter o conteúdo do anúncio (criações), garante que o conteúdo do anúncio esteja em um formato que TVSDK possa reproduzir e TVSDK coloca os anúncios na linha do tempo. Esse processo básico de resolver e carregar anúncios pode causar um atraso inaceitavelmente longo para um usuário esperando para reproduzir seu conteúdo, especialmente se o manifesto contiver vários URLs de anúncio.
 
-* *Carregamento* de anúncio com preguiça:
+* *Carregamento* de anúncio lento:
 
    1. O TVSDK baixa uma lista de reprodução e *resolve* todos os anúncios.
-   1. O TVSDK *carrega* anúncios precedentes, move o player até o status PREPARADO e a reprodução do conteúdo é iniciada.
+   1. O TVSDK *carrega* anúncios precedentes, move o reprodutor para o status PREPARADO e a reprodução do conteúdo é iniciada.
    1. O TVSDK *carrega* os anúncios restantes e os coloca na linha do tempo quando a reprodução ocorre.
 
-   Esse recurso melhora o processo básico colocando o player no status PREPARADO antes que todos os anúncios sejam carregados.
+   Esse recurso melhora o processo básico ao colocar o reprodutor no status PREPARED antes que todos os anúncios sejam carregados.
 
 * *Resolução* de anúncios ociosos:
 
-   1. O TVSDK baixa a lista de reprodução.
-   1. O TVSDK resolve e carrega qualquer anúncio precedente, move o player até o status PREPARADO e a reprodução do conteúdo é iniciada.
-   1. O TVSDK resolve e cada uma das quebras de anúncio restantes individualmente com base no seguinte cálculo:
+   1. TVSDK baixa a lista de reprodução.
+   1. O TVSDK resolve e carrega qualquer anúncio precedente, move o reprodutor para o status PREPARADO e a reprodução do conteúdo é iniciada.
+   1. O TVSDK resolve e cada um dos anúncios restantes é dividido individualmente com base no seguinte cálculo:
 
       `AdvertisingMetadata::getDelayAdLoadingTolerance() + PlayBufferTime::playBufferTime + the value defined in EXT-X-TARGETDURATION`
 
-      Por padrão, para conteúdo com duração de 6 segundos, será de 5,0 + 30,0 + 6,0 segundos (41 segundos)
+      Por padrão, para conteúdo com 6 segundos de duração do Target, será de 5,0 + 30,0 + 6,0 segundos (41 segundos)
 
-   1. Se ocorrer uma quebra de anúncio dentro de 10 segundos após a posição do start, ela será resolvida junto com os anúncios precedentes antes do status PREPARADO.
+   1. Se um ad break ocorrer dentro de 10 segundos da posição inicial, ele será resolvido junto com anúncios precedentes antes do status PREPARED.
 
 >[!IMPORTANT]
 >
->**Fatores a serem considerados com a Resolução de anúncios ociosos:**
+>**Fatores a serem considerados com a resolução de anúncios ociosos:**
 >
->* A resolução de anúncios lenta só é suportada para fluxos VOD somente com modos SERVER_MAP e MANIFEST_CUES.
->* Por padrão, a Resolução de anúncios ociosos não está ativada. Se estiver desativado, todos os anúncios serão resolvidos em fluxos VOD antes dos start de reprodução.
->* A resolução de anúncios ociosos é incompatível com o recurso Ativado instantaneamente. Para obter mais informações sobre o Instant On (Ativado instantaneamente), consulte Instant On (Ativado instantaneamente).
->* Com a Resolução de anúncios ociosos, ao mesmo tempo em que procura um intervalo de um anúncio, o intervalo mais próximo à posição de busca será resolvido durante a busca.
->* Com a Resolução de anúncios ociosos, se houver várias interrupções de anúncios ao mesmo tempo (VMAP), elas serão resolvidas ao mesmo tempo.
->* Não é recomendável reduzir o valor de *setDelayAdLoadingTolerance() *abaixo do valor padrão (5 segundos). Isso pode fazer com que o player &quot;amorteca&quot; desnecessariamente.
+>* A resolução de anúncios preguiçosa só é compatível com fluxos VOD somente com modos SERVER_MAP e MANIFEST_CUES.
+>* A resolução de anúncios ociosos não está ativada por padrão. Se estiver desativado, todos os anúncios serão resolvidos em fluxos VOD antes do início da reprodução.
+>* A resolução de anúncios ociosos é incompatível com o recurso Instant On . Para obter mais informações sobre o Instant On, consulte Instant On.
+>* Com a resolução de anúncios preguiçosa, enquanto busca um avanço em um ad break, o ad break mais próximo para a posição da busca será resolvido durante a busca.
+>* Com a resolução de anúncios lento, se houver várias quebras de anúncios ao mesmo tempo (VMAP), elas serão resolvidas ao mesmo tempo.
+>* Não é recomendável reduzir o valor de *setDelayAdLoadingTolerance() *abaixo do valor padrão (5 segundos). Isso pode fazer com que o reprodutor &quot;armazene em buffer&quot; desnecessariamente.
 >* A resolução de anúncios ociosos não afeta os anúncios precedentes.
->* Atualmente, a Resolução de anúncios ociosos é compatível com o Auditude-Plugin. É recomendável não definir *setDelayAdLoading* como true se você estiver usando um resolvedor personalizado.
+>* Atualmente, a resolução de anúncios lento é compatível com o Plug-in Auditude. É recomendável não definir *setDelayAdLoading* como true se estiver usando um resolvedor personalizado.
 
 >
 
