@@ -1,13 +1,10 @@
 ---
-description: Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia que pode ser exibida na barra de busca.
-seo-description: Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia que pode ser exibida na barra de busca.
-seo-title: Exibir a duração, o tempo atual e o tempo restante do vídeo
+description: Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia que você pode exibir na barra de busca.
 title: Exibir a duração, o tempo atual e o tempo restante do vídeo
-uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 0%
 
 # Exibir a duração, o tempo atual e o tempo restante do vídeo{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia que pode ser exibida na barra de busca.
+Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia que você pode exibir na barra de busca.
 
-1. Aguarde o player estar no estado PREPARADO.
-1. Recupere a hora atual do indicador de reprodução usando o atributo `MediaPlayer.currentTime`.
+1. Aguarde até que o reprodutor esteja pelo menos no estado PREPARADO.
+1. Recupere o tempo atual do indicador de reprodução usando o atributo `MediaPlayer.currentTime`.
 
-   Este atributo retorna a posição atual do indicador de reprodução na linha do tempo virtual em milissegundos. O tempo é calculado em relação ao fluxo resolvido, que pode conter várias instâncias de conteúdo alternativo, como várias publicidades ou quebras de anúncio divididas no fluxo principal. Para fluxos ao vivo/lineares, o tempo retornado está sempre no intervalo da janela de reprodução.
+   Esse atributo retorna a posição atual do indicador de reprodução na linha do tempo virtual, em milissegundos. O tempo é calculado em relação ao fluxo resolvido, que pode conter várias instâncias de conteúdo alternativo, como vários anúncios ou quebras de anúncios segmentados no fluxo principal. Para fluxos ao vivo/lineares, o tempo retornado está sempre no intervalo da janela de reprodução.
 
    ```js
    MediaPlayer.currentTime
@@ -29,17 +26,17 @@ Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia
 1. Recupere o intervalo de reprodução do fluxo e determine a duração.
    1. Use a propriedade `mediaPlayer.playbackRange` para obter o intervalo de tempo da linha do tempo virtual.
 
-   1. Para determinar a duração, subtraia o start do final do intervalo.
+   1. Para determinar a duração, subtraia o início do final do intervalo.
 
       Isso inclui a duração do conteúdo adicional inserido no fluxo (anúncios).
 
-      Para VOD, o intervalo sempre começa com zero e o valor final é igual à soma da duração do conteúdo principal e da duração do conteúdo adicional inserido no fluxo (anúncios).
+      Para VOD, o intervalo sempre começa com zero e o valor final é igual à soma da duração do conteúdo principal e das durações do conteúdo adicional inserido no fluxo (anúncios).
 
-      Para um ativo linear/ativo, o intervalo representa o intervalo da janela de reprodução e esse intervalo muda durante a reprodução.
+      Para um ativo linear/ao vivo, o intervalo representa o intervalo da janela de reprodução e esse intervalo muda durante a reprodução.
 
-1. Use os métodos disponíveis nos elementos TVSDK do MediaPlayer e do navegador para configurar os parâmetros da barra de busca.
+1. Use os métodos disponíveis nos elementos MediaPlayer e Browser TVSDK para configurar os parâmetros da barra de busca.
 
-   Por exemplo, há um layout possível para exibir a barra de busca em HTML.
+   Por exemplo, aqui está um layout possível para exibir a barra de busca em HTML.
 
    ```
    <div class="seekbar" id="seekbar"> 
@@ -151,7 +148,7 @@ Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia
    } 
    ```
 
-1. Escute `AdobePSDK.TimeChangeEvent` e atualize a barra de pesquisa de acordo.
+1. Escute `AdobePSDK.TimeChangeEvent` e atualize a barra de busca de acordo.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIME_CHANGED, onTimeChange); 
@@ -175,7 +172,7 @@ Você pode usar o TVSDK do navegador para recuperar informações sobre a mídia
        } 
    ```
 
-   Este exemplo cria um objeto de barra de pesquisa para atualizar a barra de pesquisa:
+   Este exemplo cria um objeto de barra de busca para atualizar a barra de busca:
 
    ```js
    /** 
