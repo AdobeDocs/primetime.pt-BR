@@ -1,13 +1,10 @@
 ---
-description: O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD e live/linear.
-seo-description: O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD e live/linear.
-seo-title: Metadados do Primetime e do servidor
-title: Metadados do Primetime e do servidor
-uuid: 61e224dd-551a-438f-8560-e64915087fef
+description: O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD e live/lineares.
+title: Metadados do servidor e do Primetime
 translation-type: tm+mt
-source-git-commit: 9d60bff4035963572e49fa49effa576ca854f799
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -15,18 +12,18 @@ ht-degree: 0%
 
 # Visão geral {#primetime-ad-server-metadata-overview}
 
-O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD e live/linear.
+O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD e live/lineares.
 
 ## Pré-requisito
 
-Antes de incluir publicidade no conteúdo de vídeo, forneça as seguintes informações de metadados:
+Antes de incluir publicidade no seu conteúdo de vídeo, forneça as seguintes informações de metadados:
 
 * Um `mediaID`, que identifica o conteúdo específico a ser reproduzido.
 * Seu `zoneID`, que identifica sua empresa ou site.
 * O domínio do servidor de publicidade, que especifica o domínio do servidor de publicidade atribuído.
 * Outros parâmetros de definição de metas.
 
-## Configurar os metadados do Primetime e do servidor {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Configurar metadados do servidor de anúncio do Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
 
 Seu aplicativo deve fornecer ao TVSDK as informações `PTAuditudeMetadata` necessárias para se conectar ao servidor de publicidade.
 
