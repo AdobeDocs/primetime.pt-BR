@@ -1,21 +1,18 @@
 ---
-description: Você pode configurar um local no aplicativo para executar a manipulação de erros em resposta ao estado ERROR.
-seo-description: Você pode configurar um local no aplicativo para executar a manipulação de erros em resposta ao estado ERROR.
-seo-title: Configurar a manipulação de erros
-title: Configurar a manipulação de erros
-uuid: 9e650ea7-86cb-4489-a3fd-80cd2ccef41f
+description: Você pode configurar um local no aplicativo para executar o tratamento de erros em resposta ao estado ERROR.
+title: Configurar tratamento de erros
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 2%
+source-wordcount: '122'
+ht-degree: 3%
 
 ---
 
 
-# Configurar a manipulação de erros{#set-up-error-handling}
+# Configurar tratamento de erros{#set-up-error-handling}
 
-Você pode configurar um local no aplicativo para executar a manipulação de erros em resposta ao estado ERROR.
+Você pode configurar um local no aplicativo para executar o tratamento de erros em resposta ao estado ERROR.
 
 1. Adicione um ouvinte de evento para `AdobePSDK.MediaPlayerStatusChangeEvent`.
 
