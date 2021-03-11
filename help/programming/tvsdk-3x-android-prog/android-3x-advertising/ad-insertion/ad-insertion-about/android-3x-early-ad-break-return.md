@@ -1,26 +1,23 @@
 ---
-description: Para a inserção de um anúncio ao vivo, talvez seja necessário sair de uma quebra de anúncio antes que todos os anúncios na quebra sejam reproduzidos até a conclusão.
-seo-description: Para a inserção de um anúncio ao vivo, talvez seja necessário sair de uma quebra de anúncio antes que todos os anúncios na quebra sejam reproduzidos até a conclusão.
-seo-title: Implementar um retorno antecipado de anúncios
-title: Implementar um retorno antecipado de anúncios
-uuid: 0e77414e-86f5-4979-9caa-eaf2f39144a2
+description: Para a inserção de um anúncio em stream ao vivo, talvez seja necessário sair de um ad break antes que todos os anúncios no break sejam reproduzidos até o fim.
+title: Implementar um retorno de ad break antecipado
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 1%
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
 
-# Implementar um retorno antecipado de intervalo de anúncios {#implement-an-early-ad-break-return}
+# Implementar um retorno antecipado de ad break {#implement-an-early-ad-break-return}
 
-Para a inserção de um anúncio ao vivo, talvez seja necessário sair de uma quebra de anúncio antes que todos os anúncios na quebra sejam reproduzidos até a conclusão.
+Para a inserção de um anúncio em stream ao vivo, talvez seja necessário sair de um ad break antes que todos os anúncios no break sejam reproduzidos até o fim.
 
-Por exemplo, a duração do intervalo do anúncio em determinados eventos esportivos pode não ser conhecida antes dos start de pausa. O TVSDK fornece uma duração padrão, mas se o jogo for retomado antes que a pausa termine, a pausa do anúncio deverá ser encerrada. Outro exemplo é um sinal de emergência durante uma pausa de anúncio em uma transmissão ao vivo.
+Por exemplo, a duração do ad break em determinados eventos esportivos pode não ser conhecida antes do início do break. O TVSDK fornece uma duração padrão, mas se o jogo for retomado antes da conclusão da quebra, o ad break deverá ser encerrado. Outro exemplo é um sinal de emergência durante um ad break em um stream ao vivo.
 
-1. Inscreva-se em `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` e `#EXT-X-CUE`, que são a divisão saída/divisão nos marcadores.
-Para obter mais informações sobre como separar marcadores de anúncios, consulte [Geradores de oportunidade e resolvedores de conteúdo](../../ad-insertion/content-resolver/android-3x-content-resolver.md).
+1. Assine `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` e `#EXT-X-CUE`, que são a divisão/divisão nos marcadores.
+Para obter mais informações sobre como separar marcadores de anúncios/in, consulte [Geradores de oportunidades e resolvedores de conteúdo](../../ad-insertion/content-resolver/android-3x-content-resolver.md).
 1. Use um `ContentFactory` personalizado.
 1. Em `retrieveGenerators`, use o `SpliceInPlacementOpportunityGenerator`.
 
@@ -36,7 +33,7 @@ Para obter mais informações sobre como separar marcadores de anúncios, consul
 
    Para obter mais informações sobre como usar um `ContentFactory` personalizado, consulte a etapa 1 em [Implementar um gerador de oportunidade personalizado](../../ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md).
 
-1. Na mesma `ContentFactory` personalizada, implemente `retrieveResolvers` e inclua `AuditudeResolver` e `SpliceInCustomResolver`.
+1. No mesmo `ContentFactory` personalizado, implemente `retrieveResolvers` e inclua `AuditudeResolver` e `SpliceInCustomResolver`.
 
    Por exemplo:
 
