@@ -1,29 +1,26 @@
 ---
-description: A lista de reprodução de um vídeo pode especificar um número ilimitado de trilhas de áudio alternativas para o conteúdo de vídeo principal. Por exemplo, você pode querer adicionar idiomas diferentes ao seu conteúdo de vídeo ou permitir que o usuário alterne entre trilhas diferentes em seu dispositivo enquanto o conteúdo estiver sendo reproduzido.
-seo-description: A lista de reprodução de um vídeo pode especificar um número ilimitado de trilhas de áudio alternativas para o conteúdo de vídeo principal. Por exemplo, você pode querer adicionar idiomas diferentes ao seu conteúdo de vídeo ou permitir que o usuário alterne entre trilhas diferentes em seu dispositivo enquanto o conteúdo estiver sendo reproduzido.
-seo-title: Faixas de áudio alternativas na lista de reprodução
-title: Faixas de áudio alternativas na lista de reprodução
-uuid: e134cc46-5cd3-4c3c-a6ef-5ae54a2108ce
+description: A lista de reprodução de um vídeo pode especificar um número ilimitado de faixas de áudio alternativas para o conteúdo do vídeo principal. Por exemplo, você pode adicionar idiomas diferentes ao seu conteúdo de vídeo ou permitir que o usuário alterne entre trilhas diferentes em seu dispositivo enquanto o conteúdo está sendo reproduzido.
+title: Trilhas de áudio alternativas na lista de reprodução
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 
-# Faixas de áudio alternativas na lista de reprodução {#alternate-audio-tracks-in-the-playlist}
+# Trilhas de áudio alternativas na lista de reprodução {#alternate-audio-tracks-in-the-playlist}
 
-A lista de reprodução de um vídeo pode especificar um número ilimitado de trilhas de áudio alternativas para o conteúdo de vídeo principal. Por exemplo, você pode querer adicionar idiomas diferentes ao seu conteúdo de vídeo ou permitir que o usuário alterne entre trilhas diferentes em seu dispositivo enquanto o conteúdo estiver sendo reproduzido.
+A lista de reprodução de um vídeo pode especificar um número ilimitado de faixas de áudio alternativas para o conteúdo do vídeo principal. Por exemplo, você pode adicionar idiomas diferentes ao seu conteúdo de vídeo ou permitir que o usuário alterne entre trilhas diferentes em seu dispositivo enquanto o conteúdo está sendo reproduzido.
 
-As faixas de áudio alternativas permitem que os usuários alternem entre várias faixas de idioma para fluxos de vídeo HTTP (ao vivo/linear e VOD) e você não precisa modificar, duplicado ou reempacotar o vídeo para cada faixa de áudio. É possível fornecer várias faixas de idioma para um ativo de vídeo antes ou depois da embalagem inicial do ativo.
+As faixas de áudio alternativas permitem que os usuários alternem entre várias faixas de idioma para fluxos de vídeo HTTP (ao vivo/linear e VOD) e você não precisa modificar, duplicar ou reempacotar o vídeo para cada faixa de áudio. Você pode fornecer várias faixas de idioma para um ativo de vídeo antes ou depois da embalagem inicial do ativo.
 
 >[!IMPORTANT]
 >
 >Para que o áudio alternativo seja misturado com a faixa de vídeo da mídia principal, os carimbos de data e hora da faixa alternativa devem corresponder aos carimbos de data e hora do áudio na faixa principal.
 
-A faixa de áudio principal está incluída na coleção de faixas de áudio com o rótulo `default`. Os metadados para os fluxos de áudio alternativos estão incluídos na lista de reprodução das tags `#EXT-X-MEDIA` com `TYPE=AUDIO`.
+A faixa de áudio principal está incluída na coleção de faixas de áudio com o rótulo `default`. Os metadados para os fluxos de áudio alternativos estão incluídos na lista de reprodução nas tags `#EXT-X-MEDIA` com `TYPE=AUDIO`.
 
 Por exemplo, um manifesto M3U8 que especifica vários fluxos de áudio alternativos pode ser semelhante a:
 
