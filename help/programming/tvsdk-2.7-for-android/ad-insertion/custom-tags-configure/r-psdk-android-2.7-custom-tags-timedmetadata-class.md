@@ -1,13 +1,10 @@
 ---
-description: Quando o TVSDK detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar e expor a tag na forma de um objeto TimedMetadata.
-seo-description: Quando o TVSDK detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar e expor a tag na forma de um objeto TimedMetadata.
-seo-title: Classe de metadados cronometrados
+description: Quando o TVSDK detecta uma tag subscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar e expor a tag na forma de um objeto TimedMetadata .
 title: Classe de metadados cronometrados
-uuid: 45bd0d9f-3641-4041-905a-a36658c8c9ce
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Classe de metadados cronometrada {#timed-metadata-class}
 
-Quando o TVSDK detecta uma tag assinada na lista de reprodução/manifesto, o player tenta automaticamente processar e expor a tag na forma de um objeto TimedMetadata.
+Quando o TVSDK detecta uma tag subscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar e expor a tag na forma de um objeto TimedMetadata .
 
 A classe fornece os seguintes elementos:
 
@@ -31,7 +28,7 @@ A classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>Identificador exclusivo dos metadados cronometrados. </p> <p>Normalmente, esse valor é extraído do atributo da ID da tag/cue. Caso contrário, um valor aleatório exclusivo será fornecido. Use <span class="codeph"> getId </span>. </p> </td> 
+   <td colname="col2"> <p>Identificador exclusivo dos metadados cronometrados. </p> <p>Normalmente, esse valor é extraído do atributo ID da sinalização/tag. Caso contrário, um valor aleatório exclusivo será fornecido. Use <span class="codeph"> getId </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> metadados  </span> </td> 
@@ -41,12 +38,12 @@ A classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
    <td colname="col02"> String </td> 
-   <td colname="col2"> <p>O nome dos metadados cronometrados. Se o tipo for <span class="codeph"> TAG </span>, o valor representará o nome da marca/indicação. Se o tipo for <span class="codeph"> ID3 </span>, será nulo. Use <span class="codeph"> getName </span>. </p> </td> 
+   <td colname="col2"> <p>O nome dos metadados cronometrados. Se o tipo for <span class="codeph"> TAG </span>, o valor representará o nome da sinalização/tag. Se o tipo for <span class="codeph"> ID3 </span>, será nulo. Use <span class="codeph"> getName </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> time  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>A posição de tempo, em milissegundos, em relação ao start do conteúdo principal no qual os metadados cronometrados estão presentes no fluxo. Use <span class="codeph"> getTime </span>. </p> </td> 
+   <td colname="col2"> <p>A posição de tempo, em milissegundos, em relação ao início do conteúdo principal em que esses metadados cronometrados estão presentes no fluxo. Use <span class="codeph"> getTime </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> type  </span> </td> 
@@ -76,7 +73,7 @@ Lembre-se do seguinte:
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
    >```
 
-* Se a extração falhar devido a um formato de tag personalizado, a propriedade metadata ficará vazia e seu aplicativo deverá extrair as informações reais. Nesse caso, nenhum erro é emitido.
+* Se a extração falhar devido a um formato de tag personalizado, a propriedade de metadados estará vazia e seu aplicativo deverá extrair as informações reais. Nesse caso, nenhum erro é lançado.
 
 <table id="table_1BAE98BF23F641A3A5709EBE37B327F6"> 
  <thead> 
@@ -87,19 +84,19 @@ Lembre-se do seguinte:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public enum Type {TAG, ID3}  </span> </td> 
+   <td colname="col1"> <span class="codeph"> Tipo de enumeração pública {TAG, ID3}  </span> </td> 
    <td colname="col2"> <p>Tipos possíveis para os metadados cronometrados. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public TimedMetadata(tipo, longo tempo, longa ID, nome da cadeia de caracteres, metadados de metadados);  </span> </td> 
+   <td colname="col1"> <span class="codeph"> public TimedMetadata(tipo, longo tempo, id longa, nome da string, metadados de metadados);  </span> </td> 
    <td colname="col2"> <p>Construtor padrão (tempo é o tempo de fluxo local). </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public long getTime();  </span> </td> 
-   <td colname="col2"> <p>A posição de tempo, relativa ao start do conteúdo principal, em que esses metadados foram inseridos no fluxo. </p> </td> 
+   <td colname="col1"> <span class="codeph"> público long getTime();  </span> </td> 
+   <td colname="col2"> <p>A posição de tempo, em relação ao início do conteúdo principal, em que esses metadados foram inseridos no fluxo. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public Metadata getMetadata();  </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadados públicos getMetadata();  </span> </td> 
    <td colname="col2"> <p>Os metadados inseridos no fluxo. </p> </td> 
   </tr> 
   <tr> 
@@ -112,7 +109,7 @@ Lembre-se do seguinte:
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public String getName();  </span> </td> 
-   <td colname="col2"> <p>Retorna o nome da indicação, que geralmente é o nome da tag HLS. </p> </td> 
+   <td colname="col2"> <p>Retorna o nome da dica, que geralmente é o nome da tag HLS. </p> </td> 
   </tr> 
  </tbody> 
 </table>
