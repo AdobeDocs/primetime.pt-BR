@@ -1,9 +1,9 @@
 ---
-seo-title: Vários direitos de reprodução
 title: Vários direitos de reprodução
-uuid: 3386be38-4640-424a-9cb2-b95b2ab52c66
+description: Vários direitos de reprodução
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%
@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Permite que diferentes regras de uso sejam especificadas para diferentes plataformas ou aplicativos.
 
-Exemplo de caso de uso: Ao usar vários direitos de reprodução, você pode criar uma política para especificar que a Proteção de saída é obrigatória na plataforma Microsoft® Windows® e é opcional nas plataformas Apple® Macintosh® e Linux®.
+Exemplo de caso de uso: Usando vários direitos de reprodução, você pode criar uma política para especificar que a Proteção de Saída é necessária na plataforma Microsoft® Windows® e é opcional nas plataformas Apple® Macintosh® e Linux®.
