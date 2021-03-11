@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral do utilitário da ID do editor do AIR
-title: Visão geral do utilitário da ID do editor do AIR
-uuid: 31aecc0e-ad9b-43ad-ba58-77d2c999f4a4
+title: Visão geral do utilitário AIR Publisher ID
+description: Visão geral do utilitário AIR Publisher ID
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
@@ -11,10 +11,10 @@ ht-degree: 0%
 ---
 
 
-# Visão geral do utilitário de ID do editor do AIR {#air-publisher-id-utility-overview}
+# Visão geral do utilitário AIR Publisher ID {#air-publisher-id-utility-overview}
 
-Como parte do processo de criação de um arquivo AIR, a AIR Developer Tool (ADT) gera uma Publisher ID. Este é um identificador exclusivo do certificado usado para criar o arquivo AIR. Se você reutilizar o mesmo certificado para vários aplicativos AIR, eles terão a mesma Publisher ID. O utilitário AIR Publisher ID é usado para calcular a Publisher ID para um aplicativo AIR. As versões do AIR após 1.5.2 não gravam a Publisher ID gerada em um arquivo, portanto, é necessário usar essa ferramenta para determinar a Publisher ID se você estiver usando uma lista de permissões de aplicativo do AIR.
+Como parte do processo de criação de um arquivo do AIR, a Ferramenta de desenvolvedor do AIR (ADT) gera uma Publisher ID. Este é um identificador exclusivo do certificado usado para criar o arquivo do AIR. Se você reutilizar o mesmo certificado para vários aplicativos AIR, eles terão a mesma Publisher ID. O utilitário AIR Publisher ID é usado para calcular a Publisher ID para um aplicativo AIR. As versões do AIR após 1.5.2 não gravam a Publisher ID gerada em um arquivo, portanto, é necessário usar essa ferramenta para determinar a Publisher ID se você estiver usando uma lista de permissões de aplicativo do AIR.
 
 >[!NOTE]
 >
->A Publisher ID, usada para a imposição de lista de permissões do AIR, não é a mesma ID do Publisher especificada pelo editor do aplicativo no arquivo [!DNL application.xml] do aplicativo.
+>A Publisher ID, usada para a imposição da lista de permissões do AIR, não é a mesma que a Publisher ID especificada pelo publicador do aplicativo no arquivo [!DNL application.xml] do aplicativo.
