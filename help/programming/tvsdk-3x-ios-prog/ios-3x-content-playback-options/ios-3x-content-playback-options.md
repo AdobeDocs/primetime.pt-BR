@@ -1,9 +1,9 @@
 ---
-seo-title: Opções de reprodução de conteúdo
-title: Opções de reprodução de conteúdo
-uuid: f45807f7-6e52-4d54-9a83-4310367cbe6f
+title: Opções de reprodução do conteúdo
+description: Opções de reprodução do conteúdo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '9'
 ht-degree: 0%
