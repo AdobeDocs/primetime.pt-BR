@@ -1,13 +1,10 @@
 ---
 description: Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
-seo-description: Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
-seo-title: Implementar um resolvedor de conteúdo personalizado
 title: Implementar um resolvedor de conteúdo personalizado
-uuid: 88627fdc-3b68-4a9f-847e-a490ea8e3034
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '241'
 ht-degree: 1%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 1%
 
 Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
 
-Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedores de conteúdo registrados procurando por uma que seja capaz de resolver essa oportunidade. O primeiro que retornar verdadeiro é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar quando o processo foi concluído.
+Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedores de conteúdo registrados que procuram uma que seja capaz de resolver essa oportunidade. O primeiro que retorna true é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar quando o processo foi concluído.
 
 1. Crie uma instância `AdvertisingFactory` personalizada e substitua `createContentResolver`.
 
@@ -66,8 +63,8 @@ Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedor
                   advertisingMetadata);
    ```
 
-1. Crie uma classe personalizada de resolvedor de anúncios que estende a classe `ContentResolver`.
-   1. No resolvedor de publicidade personalizado, substitua esta função protegida:
+1. Crie uma classe personalizada do resolvedor de anúncios que estende a classe `ContentResolver`.
+   1. No resolvedor de anúncios personalizado, substitua essa função protegida:
 
       ```java
       void doResolveAds(Metadata metadata,  
@@ -109,7 +106,7 @@ Quando o TVSDK detecta uma nova oportunidade, ele repete por meio dos resolvedor
 
 <!--<a id="example_4F0D7692A92E480A835D6FDBEDBE75E7"></a>-->
 
-Este exemplo de resolvedor de publicidade personalizado faz uma solicitação HTTP para o servidor de publicidade e recebe uma resposta JSON.
+Este exemplo de resolvedor de anúncios personalizado faz uma solicitação HTTP para o servidor de anúncios e recebe uma resposta JSON.
 
 ```java
 public class CustomAdResolver extends ContentResolver { 
@@ -128,7 +125,7 @@ public class CustomAdResolver extends ContentResolver {
 }
 ```
 
-Amostra de resposta de servidor de anúncio JSON para um fluxo ao vivo:
+Exemplo de resposta do servidor de anúncio JSON para um fluxo ao vivo:
 
 ```
 {     
@@ -165,7 +162,7 @@ Amostra de resposta de servidor de anúncio JSON para um fluxo ao vivo:
 } 
 ```
 
-Amostra de resposta de servidor de anúncio JSON para VOD:
+Exemplo de resposta do servidor de anúncio JSON para VOD:
 
 ```
 {     
