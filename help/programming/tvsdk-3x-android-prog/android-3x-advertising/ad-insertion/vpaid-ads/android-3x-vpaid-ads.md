@@ -1,13 +1,10 @@
 ---
-description: A definição de interface de serviço de anúncios (VPAID) 2.0 do player de vídeo fornece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores obtenham anúncios de melhor público alvo, acompanhem impressões de anúncios e monetizem conteúdo de vídeo.
-seo-description: A definição de interface de serviço de anúncios (VPAID) 2.0 do player de vídeo fornece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores obtenham anúncios de melhor público alvo, acompanhem impressões de anúncios e monetizem conteúdo de vídeo.
-seo-title: Suporte a anúncios VPAID 2.0
-title: Suporte a anúncios VPAID 2.0
-uuid: e45e91d2-2aef-4d69-ac80-228d23e8fd7b
+description: A definição de interface de veiculação de anúncios (VPAID) 2.0 do reprodutor de vídeo oferece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores direcionem melhor anúncios, rastreiem impressões de anúncios e monetizem conteúdo de vídeo.
+title: Suporte a anúncio VPAID 2.0
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Visão geral {#vpaid-ad-support-overview}
 
-A definição de interface de serviço de anúncios (VPAID) 2.0 do player de vídeo fornece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores obtenham anúncios de melhor público alvo, acompanhem impressões de anúncios e monetizem conteúdo de vídeo.
+A definição de interface de veiculação de anúncios (VPAID) 2.0 do reprodutor de vídeo oferece uma interface comum para reproduzir anúncios de vídeo. Ele fornece uma experiência de mídia avançada para usuários e permite que editores direcionem melhor anúncios, rastreiem impressões de anúncios e monetizem conteúdo de vídeo.
 
-Os seguintes recursos são suportados:
+Os seguintes recursos são compatíveis:
 
 * Versão 2.0 da especificação VPAID
 
@@ -25,30 +22,30 @@ Os seguintes recursos são suportados:
 * Anúncios VPAID lineares com conteúdo de vídeo sob demanda (VOD)
 * Anúncios VPAID do JavaScript
 
-   Os anúncios VPAID devem ter como base JavaScript e a resposta do anúncio deve identificar o tipo de mídia do anúncio VPAID como `application/javascript`.
+   Os anúncios VPAID devem ser baseados em JavaScript e a resposta do anúncio deve identificar o tipo de mídia do anúncio VPAID como `application/javascript`.
 
-Os seguintes recursos não são suportados:
+Os seguintes recursos não são compatíveis:
 
 * Versão 1.0 da especificação VPAID
-* Anúncios captáveis
-* Anúncios não lineares, como anúncios sobrepostos, anúncios companheiros dinâmicos, anúncios minimizáveis, anúncios que podem ser recolhidos e anúncios expansíveis
+* Anúncios evitáveis
+* Anúncios não lineares, como sobreposições, anúncios companheiros dinâmicos, anúncios minimizáveis, anúncios que podem ser recolhidos e anúncios expansíveis
 * Pré-carregamento de anúncios VPAID
-* Anúncios VPAID em conteúdo ativo
+* Anúncios VPAID em conteúdo ao vivo
 * Anúncios VPAID do Flash
 
 ## API
 
-Os seguintes elementos de API suportam anúncios VPAID 2.0:
+Os seguintes elementos de API são compatíveis com anúncios VPAID 2.0:
 
-* O método `getCustomAdView` de `MediaPlayer` retorna um objeto `CustomAdView`, representando a visualização da Web que renderiza o anúncio VPAID (consulte [Referências de API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)).
+* O método `getCustomAdView` de `MediaPlayer` retorna um objeto `CustomAdView`, representando a exibição da Web que renderiza o anúncio VPAID (consulte [Referências de API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)).
 
-* `MediaPlayer.setCustomAdTimeout(int milliseconds)` define o tempo limite no processo de carregamento VPAID. O valor de tempo limite padrão é de 10 segundos.
+* `MediaPlayer.setCustomAdTimeout(int milliseconds)` define o tempo limite no processo de carregamento VPAID. O valor padrão do tempo limite é de 10 segundos.
 
-Enquanto o anúncio VPAID está sendo reproduzido:
+Enquanto o anúncio VPAID é reproduzido:
 
-* O anúncio VPAID é exibido em uma container de visualização acima da visualização do player, de modo que o código que depende de toques dos usuários na visualização do player não funciona.
-* Chama `pause` e `play` na instância do player para pausar e retomar o anúncio VPAID.
+* O anúncio VPAID é exibido em um contêiner de exibição acima da exibição do reprodutor, de modo que o código que depende de toques dos usuários na exibição do reprodutor não funciona.
+* Chama `pause` e `play` na instância do reprodutor para e retoma o anúncio VPAID.
 
 * Anúncios VPAID não têm uma duração predefinida, pois o anúncio pode ser interativo.
 
-   A duração do anúncio e a duração total da quebra do anúncio especificados na resposta do servidor de anúncios podem não ser precisas.
+   A duração do anúncio e a duração total do ad break especificados na resposta do servidor de anúncios podem não ser precisas.
