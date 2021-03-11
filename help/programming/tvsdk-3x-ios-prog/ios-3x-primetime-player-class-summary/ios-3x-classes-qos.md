@@ -1,21 +1,18 @@
 ---
-description: Essas classes fornecem informações que ajudam a determinar o desempenho do player.
-seo-description: Essas classes fornecem informações que ajudam a determinar o desempenho do player.
-seo-title: Classes de QoS
+description: Essas classes fornecem informações que ajudam a determinar o desempenho do reprodutor.
 title: Classes de QoS
-uuid: f145b744-6385-40df-aaee-ae9430d85895
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
 
 
-# Classes QoS {#qos-classes}
+# Classes de QoS {#qos-classes}
 
-Essas classes fornecem informações que ajudam a determinar o desempenho do player.
+Essas classes fornecem informações que ajudam a determinar o desempenho do reprodutor.
 
 <table frame="all" colsep="1" rowsep="1" id="table_2893EFF9755149159A4F94E781C76B6E"> 
  <thead> 
@@ -34,21 +31,21 @@ Essas classes fornecem informações que ajudam a determinar o desempenho do pla
      <li id="li_30D38320C2A3440E92C0A477FFFBF9A0">Nome do modelo do dispositivo </li> 
      <li id="li_2D15164B987E405685B96A900EBF041D">Nome do fabricante do dispositivo </li> 
      <li id="li_B78485CB9580444DB9694404706BA191">UUID do dispositivo </li> 
-     <li id="li_841EA77499B44F0692192F9DE1A798E4">Largura/altura do ecrã do dispositivo </li> 
+     <li id="li_841EA77499B44F0692192F9DE1A798E4">Largura/altura da tela do dispositivo </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlaybackInformation.html" format="html" scope="external"> PTPlaybackInformation</a> </td> 
-   <td colname="2"> Fornece informações sobre o desempenho da reprodução. Isso inclui a taxa de quadros, a taxa de bits do perfil, o tempo total gasto no buffering, o número de tentativas de buffering, o tempo necessário para obter o primeiro byte do primeiro fragmento de vídeo, o tempo necessário para renderizar o primeiro quadro, a duração do buffer atual e o tempo do buffer. </td> 
+   <td colname="2"> Fornece informações sobre o desempenho da reprodução. Isso inclui a taxa de quadros, a taxa de bits do perfil, o tempo total gasto no buffering, o número de tentativas de buffering, o tempo necessário para obter o primeiro byte do primeiro fragmento de vídeo, o tempo necessário para renderizar o primeiro quadro, o comprimento do buffer atual e o tempo do buffer. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoSProvider</a> </td> 
    <td colname="2">
     <pre>
-      Fornece métricas de QoS essenciais para a reprodução e o dispositivo.
+      Fornece métricas de QoS essenciais para reprodução e dispositivo.
     </pre>
     <pre>
-      Classe do provedor de informações QOS.
+      Classe do provedor de informações de QOS.
     </pre> </td> 
   </tr> 
  </tbody> 
