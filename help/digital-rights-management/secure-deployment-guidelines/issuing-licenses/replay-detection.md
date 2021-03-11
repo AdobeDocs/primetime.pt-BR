@@ -1,13 +1,10 @@
 ---
 description: A proteção de repetição impede que um invasor reproduza uma mensagem de solicitação de licença e possivelmente causa um ataque de negação de serviço (DoS) contra o cliente.
-seo-description: A proteção de repetição impede que um invasor reproduza uma mensagem de solicitação de licença e possivelmente causa um ataque de negação de serviço (DoS) contra o cliente.
-seo-title: Proteção contra repetição
 title: Proteção contra repetição
-uuid: 93749dd3-a42c-4866-ac54-1b20d6683c42
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
