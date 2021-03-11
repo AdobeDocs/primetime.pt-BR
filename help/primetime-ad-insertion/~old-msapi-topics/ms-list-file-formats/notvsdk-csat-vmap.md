@@ -1,13 +1,10 @@
 ---
-description: Se o cliente solicitar informações de rastreamento, o servidor manifest enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro do query pttrackingversion
-seo-description: Se o cliente solicitar informações de rastreamento, o servidor manifest enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro do query pttrackingversion
-seo-title: Formato VMAP para URLs de rastreamento
-title: Formato VMAP para URLs de rastreamento
-uuid: e3173fad-caa2-49cb-9a65-631573812e52
+description: Se o cliente solicitar informações de rastreamento, o servidor de manifesto enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro de consulta pttrackingversion
+title: Formato VMAP para rastrear URLs
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Formato VMAP para rastrear URLs {#vmap-format-for-tracking-urls}
 
-Se o cliente solicitar informações de rastreamento, o servidor manifest enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro do query `pttrackingversion`
+Se o cliente solicitar informações de rastreamento, o servidor de manifesto enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro de consulta `pttrackingversion`
 
 ## Formato VMAP único {#vmap}
 
-O arquivo VMAP que o servidor manifest envia se `pttrackingversion=vmap` tiver o formato do exemplo a seguir, que vem de um bloco VMAP típico. Foi encurtada para evitar repetições desnecessárias, de modo a que a estrutura seja mais clara. Uma reticulação (três pontos, separados por espaços) indica informações omitidas em alguns URLs e entre alguns blocos de código. URLs não encurtados são exibidos em várias linhas, embora sejam exibidos em uma única linha no arquivo VMAP.
+O arquivo VMAP que o servidor de manifesto envia se `pttrackingversion=vmap` tiver o formato do exemplo a seguir, que vem de um bloco VMAP típico. Foi encurtado para evitar repetições desnecessárias, de modo a que a estrutura fique mais clara. Uma elipse (três pontos, separados por espaços) indica informações omitidas em alguns URLs e entre alguns blocos de código. Os URLs não encurtados aparecem em várias linhas, embora apareçam em uma única linha no arquivo VMAP.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
