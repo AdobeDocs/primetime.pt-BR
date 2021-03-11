@@ -1,13 +1,10 @@
 ---
-description: Você pode concluir workflows específicos de Digital Rights Management (DRM).
-seo-description: Você pode concluir workflows específicos de Digital Rights Management (DRM).
-seo-title: Digital Rights Management
+description: Você pode concluir fluxos de trabalho específicos do Digital Rights Management (DRM).
 title: Digital Rights Management
-uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
-source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Digital Rights Management {#digital-rights-management}
 
-Você pode concluir workflows específicos de Digital Rights Management (DRM).
+Você pode concluir fluxos de trabalho específicos do Digital Rights Management (DRM).
 
-Você pode ouvir o evento `AdobePSDK.DRMMetadataInfoEvent` para lidar com workflows DRM:
+Você pode ouvir o evento `AdobePSDK.DRMMetadataInfoEvent` para lidar com workflows de DRM:
 
 ```js
 ... 
@@ -27,7 +24,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 
 ## Adicionar Digital Rights Management {#add-digital-rights-management}
 
-1. Adicione `DRMMetadataInfoAvailableEvent` para obter o `DRMMetadata`.
+1. Adicione o `DRMMetadataInfoAvailableEvent` para obter o `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
