@@ -1,29 +1,27 @@
 ---
-description: nulo
-seo-description: nulo
-seo-title: Determinando se o Servidor de Licença de Implementação de Referência está sendo executado corretamente
-title: Determinando se o Servidor de Licença de Implementação de Referência está sendo executado corretamente
-uuid: 84d32c94-7594-464e-a883-5338b52de2bf
+title: Como determinar se o Servidor de Licenças de Implementação de Referência está em execução corretamente
+description: Como determinar se o Servidor de Licenças de Implementação de Referência está em execução corretamente
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
 
-# Determinando se o Servidor de Licenças de Implementação de Referência está sendo executado corretamente {#determining-if-reference-implementation-license-server-is-running-properly}
+# Determinando se o Servidor de Licenças de Implementação de Referência está em execução corretamente {#determining-if-reference-implementation-license-server-is-running-properly}
 
-Existem várias maneiras de determinar se o servidor foi iniciado corretamente. A visualização dos registros [!DNL catalina.log] pode não ser suficiente, uma vez que o servidor de licenças registra nos seus próprios ficheiros de registro. Siga as etapas abaixo para garantir que a implementação de referência tenha sido iniciada corretamente.
+Há várias maneiras de determinar se o servidor foi iniciado corretamente. A visualização dos registros [!DNL catalina.log] pode não ser suficiente, pois o servidor de licenças faz logon em seus próprios arquivos de log. Siga as etapas abaixo para garantir que sua implementação de referência tenha sido iniciada corretamente.
 
-* Verifique seu arquivo [!DNL AdobeFlashAccess.log]. É aqui que a Implementação de referência grava informações de log. O local desse arquivo de log é indicado pelo arquivo [!DNL log4j.xml] e pode ser modificado para apontar para qualquer local desejado. Por padrão, o arquivo de log será enviado para o diretório de trabalho onde você executou o catalina.
+* Verifique o arquivo [!DNL AdobeFlashAccess.log]. É aqui que a Implementação de referência grava informações de log. O local desse arquivo de log é indicado pelo seu arquivo [!DNL log4j.xml] e pode ser modificado para apontar para qualquer local desejado. Por padrão, o arquivo de log será enviado para o diretório de trabalho onde você executou o catalina.
 
 * Navegue até o seguinte URL: `https:///flashaccess/license/v4<your server:server port>`. Você deve ver o texto &quot;O License Server está configurado corretamente&quot;.
 
-Outra maneira de testar se o servidor está sendo executado corretamente é empacotar um conteúdo de teste, configurar um player de vídeo de amostra e reproduzi-lo. O procedimento a seguir descreve esse processo:
+Outra maneira de testar se o servidor está executando corretamente é empacotar um conteúdo de teste, configurar um player de vídeo de amostra e reproduzi-lo. O procedimento a seguir descreve esse processo:
 
-1. Navegue até a pasta [!DNL \Reference Implementation\Command Line Tools]. Para obter informações sobre como instalar as ferramentas de linha de comando, consulte [Instalar as ferramentas de linha de comando](../aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md#installing-the-command-line-tools).
+1. Navegue até a pasta [!DNL \Reference Implementation\Command Line Tools]. Para obter informações sobre como instalar as ferramentas de linha de comando, consulte [Instalando as ferramentas de linha de comando](../aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md#installing-the-command-line-tools).
 
 1. Crie uma política anônima simples usando o seguinte comando:
 
@@ -33,9 +31,9 @@ Outra maneira de testar se o servidor está sendo executado corretamente é empa
 
    Para obter mais informações sobre como criar políticas usando o Gerenciador de Políticas, consulte [Uso da linha de comando](../aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md).
 
-1. Defina a propriedade `encrypt.license.serverurl` no arquivo [!DNL flashaccesstools.properties] como a URL do servidor de licenças (por exemplo, `https:// localhost:8080/`). O arquivo [!DNL flashaccesstools.properties] está localizado na pasta [!DNL \Reference Implementation\Command Line Tools].
+1. Defina a propriedade `encrypt.license.serverurl` no arquivo [!DNL flashaccesstools.properties] para o URL do servidor de licença (por exemplo, `https:// localhost:8080/`). O arquivo [!DNL flashaccesstools.properties] está localizado na pasta [!DNL \Reference Implementation\Command Line Tools].
 
-1. Empacote um conteúdo usando o seguinte comando:
+1. Comprima um conteúdo usando o seguinte comando:
 
    ```java
        java -jar libs\AdobePackager.jar  
@@ -54,7 +52,7 @@ Outra maneira de testar se o servidor está sendo executado corretamente é empa
 1. Abra o navegador da Web e navegue até o seguinte URL:
 
    `https:// localhost:8080/SVP/player.html`
-1. Navegue até o seguinte URL e clique no botão Reproduzir:
+1. Navegue até o seguinte URL e clique no botão Reproduzir :
 
    `https:// localhost:8080/Content/<your_encrypted_FLV>`
-1. Se o vídeo não for reproduzido, verifique se algum código de erro foi gravado no painel de registro do Amostra do player de vídeo ou no arquivo `AdobeFlashAccess.log`. O local do arquivo de log `AdobeFlashAccess.log` é indicado pelo arquivo log4j.xml e pode ser modificado para apontar para qualquer local desejado. Por padrão, o arquivo de log é gravado no diretório de trabalho onde você executou o catalina.
+1. Se o vídeo não for reproduzido, verifique se algum código de erro foi gravado no painel de registro do reprodutor de vídeo de amostra ou no arquivo `AdobeFlashAccess.log`. O local do arquivo de log `AdobeFlashAccess.log` é indicado pelo arquivo log4j.xml e pode ser modificado para apontar para qualquer local desejado. Por padrão, o arquivo de log é gravado no diretório de trabalho onde você executou o catalina.
