@@ -1,9 +1,9 @@
 ---
-seo-title: Visão geral
 title: Visão geral
-uuid: 5487d1d3-7eb8-410d-a4b1-cde3e94c00a1
+description: Visão geral
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Embeder de licença DRM {#license-embedder}
+# Embedor da licença DRM {#license-embedder}
 
-Use [!DNL AdobeLicenseEmbedder.jar] para incorporar licenças pré-geradas ao conteúdo protegido pelo Media Packager.
+Use [!DNL AdobeLicenseEmbedder.jar] para incorporar licenças pré-geradas no conteúdo que o Media Packager protege.
 
-## Uso da linha de comando do Embeder de licença {#license-embedder-command-line-usage}
+## Uso da linha de comando do Embeder da licença {#license-embedder-command-line-usage}
 
 ```
 java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
@@ -26,7 +26,7 @@ java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
 
    Se você especificar um diretório, o arquivo será salvo no diretório de destino. O nome do arquivo de origem também se torna o nome do arquivo salvo no diretório de destino.
 
-A tabela a seguir descreve as opções de linha de comando que você pode especificar:
+A tabela a seguir descreve as opções de linha de comando que podem ser especificadas:
 
 **Quadro 7: Opções**
 
@@ -39,20 +39,20 @@ A tabela a seguir descreve as opções de linha de comando que você pode especi
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l nome do arquivo  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename  </span> </td> 
    <td colname="2" class="- topic/entry "> Nome do arquivo que inclui a licença que você deseja incorporar. Você pode especificar várias opções <span class="codeph"> -l </span> para incorporar várias licenças. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m nome do arquivo de metadados  </span> </td> 
    <td colname="2" class="- topic/entry "> Especifica os metadados de conteúdo para os quais você pode gerar uma licença. Essa opção é necessária para gerar uma licença. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt  </span> </td> 
-   <td colname="2" class="- topic/entry "> Não pergunte se o arquivo de destino deve ser substituído. Se o arquivo de destino já existir e <span class="codeph"> -o </span> não tiver sido aplicado, ocorrerá um erro. </td> 
+   <td colname="2" class="- topic/entry "> Não pergunte se o arquivo de destino deve ser substituído. Se o arquivo de destino já existir e o <span class="codeph"> -o </span> não tiver sido aplicado, ocorrerá um erro. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
-   <td colname="2" class="- topic/entry "> Se o arquivo de destino já existir, você poderá substituí-lo sem ser solicitado. </td> 
+   <td colname="2" class="- topic/entry "> Se o arquivo de destino já existir, é possível substituí-lo sem ser solicitado. </td> 
   </tr> 
  </tbody> 
 </table>
