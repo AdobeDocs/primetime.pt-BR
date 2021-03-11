@@ -1,13 +1,10 @@
 ---
-description: Você pode criar um player compatível com a Navegação usando arquivos JS fornecidos pelo TVSDK do navegador.
-seo-description: Você pode criar um player compatível com a Navegação usando arquivos JS fornecidos pelo TVSDK do navegador.
-seo-title: Player compatível com a navegação
-title: Player compatível com a navegação
-uuid: 1832c826-d5d0-41b0-852f-286c8e4fa0f3
+description: Você pode criar um reprodutor compatível com o Browserify usando arquivos JS fornecidos pelo Browser TVSDK.
+title: Reprodutor compatível com o Browserify
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Visão geral {#browserify-compatible-player-overview}
 
-Você pode criar um player compatível com a Navegação usando arquivos JS fornecidos pelo TVSDK do navegador.
+Você pode criar um reprodutor compatível com o Browserify usando arquivos JS fornecidos pelo Browser TVSDK.
 
-O TVSDK do navegador fornece dois arquivos JS compatíveis com o Browserify. Um é para uso com o módulo AdobePSDK; isso é para o desenvolvimento de aplicativos sem a estrutura da interface do usuário. O outro é para uso com o módulo UI-Framework; ele retorna a namespace PTP que você usa para gravar aplicativos usando a UI-Framework.
+O TVSDK do navegador fornece dois arquivos JS compatíveis com o Browserify. Um é para uso com o módulo AdobePSDK; isso é para o desenvolvimento de aplicativos sem a estrutura da interface do usuário. O outro é para uso com o módulo de estrutura da interface do usuário; ele retorna o namespace PTP usado para escrever aplicativos usando a Estrutura da interface do usuário.
 
 Para começar a usar o Browserify, execute os seguintes comandos de configuração para criar arquivos [!DNL final.js] (o arquivo do pacote Browserify) dentro dos diretórios [!DNL example] em [!DNL samples/browerify/reference] e [!DNL samples/browerify/ui-framework]:
 
