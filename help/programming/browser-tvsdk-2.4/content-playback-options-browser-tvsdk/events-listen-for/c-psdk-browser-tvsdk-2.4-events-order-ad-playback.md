@@ -1,13 +1,10 @@
 ---
-description: Quando a reprodução inclui publicidade, o TVSDK do navegador envia eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
-seo-description: Quando a reprodução inclui publicidade, o TVSDK do navegador envia eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
-seo-title: Ordem dos eventos publicitários
+description: Quando a reprodução inclui publicidade, o TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 title: Ordem dos eventos publicitários
-uuid: 9787e6ac-5e52-4d7d-8fc7-f7609633707c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
@@ -15,14 +12,14 @@ ht-degree: 0%
 
 # Ordem dos eventos de publicidade{#order-of-advertising-events}
 
-Quando a reprodução inclui publicidade, o TVSDK do navegador envia eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
+Quando a reprodução inclui publicidade, o TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 
 <!--<a id="section_69E3CCBC57BB48399799876E83908348"></a>-->
 
-Ao reproduzir publicidades, a ordem dos eventos é:
+Ao reproduzir anúncios, a ordem dos eventos é:
 
 * `AdobePSDK.PSDKEventType.AD_BREAK_STARTED`
-* Os seguintes anúncios são enviados para cada anúncio no intervalo de anúncios:
+* Os itens a seguir são despachados para cada anúncio no ad break:
 
    * `AdobePSDK.PSDKEventType.AD_STARTED`
    * `AdobePSDK.PSDKEventType.AD_PROGRESS` (várias vezes durante a reprodução de um anúncio)
