@@ -1,78 +1,74 @@
 ---
-title: TVSDK 1.4 a 2.5 para Android (Java)
-seo-title: TVSDK 1.4 a 2.5 para Android (Java)
-description: O TVSDK 2.5 oferta vários benefícios em relação à versão 1.4 em termos de desempenho, segurança, melhores integrações e muito mais.
-seo-description: O TVSDK 2.5 oferta vários benefícios em relação à versão 1.4 em termos de desempenho, segurança, melhores integrações e muito mais.
-uuid: aaab7aec-cb5b-4840-82e8-7112a8d98a8a
+title: TVSDK 1.4 para 2.5 para Android (Java)
+description: O TVSDK 2.5 oferece vários benefícios em relação à versão 1.4 em termos de desempenho, segurança, melhores integrações e muito mais.
 contentOwner: vishgupt
 products: SG_PRIMETIME
 topic-tags: migration
-discoiquuid: 8d9136bf-b3ae-450c-bd8a-0bb246527886
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2323'
 ht-degree: 0%
 
 ---
 
 
-# TVSDK 1.4 a 2.5 para Android (Java) {#tvsdk-to-for-android-java}
+# TVSDK 1.4 para 2.5 para Android (Java) {#tvsdk-to-for-android-java}
 
-O TVSDK 2.5 oferta vários benefícios em relação à versão 1.4 em termos de desempenho, segurança, melhores integrações e muito mais.
+O TVSDK 2.5 oferece vários benefícios em relação à versão 1.4 em termos de desempenho, segurança, melhores integrações e muito mais.
 
-O TVSDK resolve os maiores desafios, no dispositivo que mais importa. Android continua a dominância global, com mais de 86% de participação no mercado. A migração para TVSDK no Android otimizará o desempenho da reprodução para melhorar a participação do usuário e acelerar o tempo de comercialização com suporte para novos formatos de conteúdo.
+O TVSDK resolve os maiores desafios no dispositivo que mais importa. Android continua sendo o domínio global, com mais de 86% de mercado. A migração para TVSDK no Android otimizará o desempenho da reprodução para melhorar a participação do usuário e acelerar o tempo de comercialização com suporte para novos formatos de conteúdo.
 
-## Benefícios da migração para o TVSDK v2.5 {#benefits-of-migrating-to-tvsdk-v}
+## Benefícios da migração para TVSDK v2.5 {#benefits-of-migrating-to-tvsdk-v}
 
-O TVSDK 2.5 oferta vários benefícios em relação à versão 1.4 em termos de desempenho, segurança, melhores integrações e muito mais. Leia para conhecer rapidamente os benefícios da migração para esta nova versão.
+O TVSDK 2.5 oferece vários benefícios em relação à versão 1.4 em termos de desempenho, segurança, melhores integrações e muito mais. Leia para conhecer rapidamente os benefícios da migração para essa nova versão.
 
-De acordo com um estudo de benchmarking de terceiros, a v2.5 proporciona uma redução de 5 vezes no tempo de inicialização e de 3,8 vezes na redução de quadros ignorados em relação à média do setor.
+De acordo com um estudo de avaliação de desempenho de terceiros, a v2.5 oferece uma redução de 5 vezes no tempo de inicialização e 3,8 vezes em quadros ignorados, em relação à média do setor.
 
 | Recursos de desempenho | Descrição |
 |--- |--- |
-| Instant-on para VOD e Live | Pré-carregue os segmentos iniciais para reprodução imediata para fluxos VOD e transmissão ao vivo-linear ao mudar o canal, para uma experiência semelhante à TV. |
-| Carregamento de anúncio ocioso | Reprodução de start assim que a pré-rolagem ou o conteúdo estiver disponível e, ao mesmo tempo, resolver anúncios intermediários em um thread paralelo. |
-| Conexões de rede persistentes | Aumento da eficiência e diminuição da latência do código de rede para obter um desempenho de reprodução mais rápido. |
-| Lógica de ABR aprimorada | A nova lógica ABR baseia-se no comprimento do buffer, na taxa de alteração do comprimento do buffer e na largura de banda medida. Isso garante que o ABR escolha a taxa de bits correta quando a largura de banda flutuar e também otimiza o número de vezes que a alternância de taxa de bits realmente acontece monitorando a taxa na qual o comprimento do buffer muda. |
-| Download de segmento parcial | Reprodução de start assim que quadros suficientes de um segmento estiverem disponíveis para renderização de vídeo confiável no lado do cliente. |
+| Instant-on para VOD e Live | Pré-carregue os segmentos iniciais do ts para reprodução imediata de VOD e fluxos lineares ao vivo ao trocar canais, para obter uma experiência semelhante à TV. |
+| Carregamento lento de anúncio | Inicia a reprodução assim que o conteúdo ou precedente estiver disponível, resolvendo os anúncios intermediários em um encadeamento paralelo. |
+| Conexões de rede persistentes | Aumento na eficiência e diminuição da latência do código de rede para obter um desempenho de reprodução mais rápido. |
+| Lógica de ABR aprimorada | A nova lógica ABR é baseada no comprimento do buffer, na taxa de alteração do comprimento do buffer e na largura de banda medida. Isso garante que o ABR escolha a taxa de bits correta quando a largura de banda flutuar e também otimiza o número de vezes em que a mudança da taxa de bits realmente acontece, monitorando a taxa em que o comprimento do buffer muda. |
+| Download de segmento parcial | Inicia a reprodução assim que quadros suficientes de um segmento estiverem disponíveis para renderizar o vídeo de forma confiável no lado do cliente. |
 | Downloads paralelos | O TVSDK baixa segmentos de áudio e vídeo em paralelo para conteúdo descompilado para otimizar o desempenho da reprodução. |
 
-Os recursos de reprodução melhoram o envolvimento do consumidor ao fornecer a experiência da transmissão linear em formato digital. Além disso, ajuda a aproveitar o DRM nativo, como a Widevine, para reprodução em HD.
+Os recursos de reprodução melhoram a participação do consumidor ao fornecer a experiência de transmissão linear em formato digital. Além disso, ajuda você a aproveitar o DRM nativo, como a Widevine, para reprodução em alta definição.
 
-| Recursos de reprodução | Descrição |
+| Recursos da reprodução | Descrição |
 |--- |--- |
 | Reprodução MP4 | Os clipes curtos de MP4 não precisam ser transcodificados novamente para reprodução no TVSDK. |
-| Reprodução de conteúdo VOD DASH | Casos de uso de reprodução VOD Básica DASH são suportados. |
-| Tocar com facilidade com ABR | Suporte para avanço rápido e retrocesso no HLS usando quadros-chave em taxas baixas e I-Frames em velocidades mais rápidas. Suporte ABR para todos os quadros suportados. |
+| Reprodução de conteúdo VOD do DASH | Os casos de uso básicos de reprodução de VOD do DASH são compatíveis. |
+| Jogador Suave com ABR | Suporte para avançar rapidamente e retroceder no HLS usando quadros-chave em taxas baixas e I-Frames em velocidades mais rápidas. Suporte ABR para todos os quadros suportados. |
 
-Os recursos são importantes para atender às restrições de estúdio, como a reprodução HD em vez de DRM nativo.
-
-| Recursos | Descrição |
-|--- |--- |
-| Proteção de saída baseada em resolução | a reprodução pode ser restrita somente a determinadas resoluções permitidas pelos requisitos do DRM. Disponível somente por meio do Primetime DRM. |
-| Suporte a widevine | Suportado com fluxos VOD DASH para ativar casos de uso de DRM nativos. |
-
-O aprimoramento de faturamento direto elimina a necessidade de criar relatórios manuais para faturamento todos os meses. O VHL 2.0 permite um tempo mais rápido de comercialização com integração pré-compilação e melhor precisão no rastreamento.
+Os recursos são importantes para atender às restrições do estúdio, como a reprodução de alta definição sobre o DRM nativo.
 
 | Recursos | Descrição |
 |--- |--- |
-| Integração perfeita | Suporte para a avaliação da capacidade de visualização de anúncios do Moat. |
-| VHL 2.0 | A mais recente integração da biblioteca de pulsações de vídeo otimizada para coleta automática de dados de uso para Adobe Analytics. |
-| Suporte a Failover | Estratégias adicionais implementadas para continuar a reprodução ininterrupta, apesar de falhas de servidores host, arquivos de lista de reprodução e segmentos. |
-| Integração de Faturamento Direto | Envia métricas de faturamento para o backend da Adobe Analytics, certificado pela Adobe Primetime para fluxos usados pelo cliente. |
+| Proteção de Saída Baseada em Resolução | a reprodução pode ser restrita a apenas determinadas resoluções permitidas por requisitos de DRM. Disponível somente por meio do DRM do Primetime. |
+| Suporte à viúva | Suportado com fluxos VOD DASH para ativar casos de uso de DRM nativo. |
+
+O aprimoramento do faturamento direto elimina a necessidade de criar relatórios manuais para faturamento mensal. O VHL 2.0 permite um tempo mais rápido de comercialização com integração pré-compilação e melhor precisão no rastreamento.
+
+| Recursos | Descrição |
+|--- |--- |
+| Integração de moat | Suporte para medição da visualização de anúncios do Mat. |
+| VHL 2.0 | A integração mais recente da biblioteca de pulsações de vídeo otimizada para coleta automática de dados de uso do Adobe Analytics. |
+| Suporte a Failover | Estratégias adicionais implementadas para continuar a reprodução ininterrupta, apesar das falhas de servidores de host, arquivos de lista de reprodução e segmentos. |
+| Integração de Faturamento Direto | Envia métricas de faturamento para o back-end do Adobe Analytics, certificado pelo Adobe Primetime para fluxos usados pelo cliente. |
 
 >[!NOTE]
 >
->Todos os recursos do TVSDK v1.4 são suportados na v2.5, exceto o suporte a Multi-CDN.
+>Todos os recursos do TVSDK v1.4 são compatíveis com v2.5, exceto o suporte a Multi-CDN.
 
 ## Visão geral do processo de migração {#overview-of-the-migration-process}
 
-A migração suave do TVSDK 1.4 para o 2.5 implica mudar para as bibliotecas da versão 2.5, recompilar e, em seguida, usar esse documento para ajudar a depurar quaisquer problemas que ocorram.
+A migração suave do TVSDK 1.4 para o 2.5 implica mudar para as bibliotecas da versão 2.5, recompilar e usar este documento para ajudar a depurar qualquer problema que ocorra.
 
-As bibliotecas do TVSDK v1.4 não funcionam com e coexistem com as bibliotecas v2.5. Você deve usar as bibliotecas v2.5 com o TVSDK 2.5 e migrar seus aplicativos e integrações para atualizar para o TVSDK 2.5. Este documento descreve como e o que deve ser alterado no código do aplicativo e como resolver erros durante a recompilação.
+As bibliotecas TVSDK v1.4 não funcionam com as bibliotecas v2.5 e coexistem com elas. Você deve usar as bibliotecas v2.5 com TVSDK 2.5 e migrar seus aplicativos e integrações para atualizar para TVSDK 2.5. Este documento descreve como e o que alterar no código do aplicativo e como corrigir erros durante a recompilação.
 
-O arquivo psdk.jar usa bibliotecas de terceiros para suportar diferentes recursos. Para evitar a remoção das bibliotecas, inclua o seguinte no arquivo `proguard.cfg`:
+O arquivo psdk.jar usa bibliotecas de terceiros para oferecer suporte a diferentes recursos. Para evitar a remoção das bibliotecas, inclua o seguinte no arquivo `proguard.cfg`:
 
 ```java
 # Adobe TVSDK keep classes
@@ -88,30 +84,30 @@ No arquivo `build.gradle`, é necessário incluir a diretiva de compilação par
 compile files('libs/VideoHeartbeat.jar')
 ```
 
-Várias alterações secundárias não são abordadas neste documento. Para as alterações menores na API, consulte [TVSDK 2.5 para API Java do Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.5/index.html). A referência da API C++ correspondente tem descrições detalhadas. Para obter a documentação da API C++ análoga, consulte [TVSDK 2.5 para API C++ do Android](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.5/index.html).
+Várias alterações secundárias não são abordadas neste documento. Para obter as pequenas alterações na API, consulte [TVSDK 2.5 para API do Android Java](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.5/index.html). A referência da API C++ correspondente tem descrições detalhadas. Para obter a documentação de API C++ análoga, consulte [TVSDK 2.5 para API C++ do Android](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.5/index.html).
 
 Vários exemplos de uso da API são abordados na implementação de referência distribuída com o TVSDK.
 
-## Alterações de API no TVSDK v2.5 {#api-changes-in-tvsdk-v}
+## Alterações na API no TVSDK v2.5 {#api-changes-in-tvsdk-v}
 
-As novas APIs, obsoletas e modificadas estão documentadas abaixo.
+As APIs novas, obsoletas e modificadas estão documentadas abaixo.
 
 | TVSDK v1.4 | TVSDK v2.5 | Descrição |
 |--- |--- |--- |
 | importe com.adobe.ave.drm.DRMAcquireLicenseSettings | importar com.adobe.mediacore.drm.DRMAcquireLicenseSettings; | Todos os nomes de classe na API TVSDK 2.5 começam com o prefixo com.adobe.mediacore. Este é apenas um exemplo. |
 | MediaPlayerException, IllegalStateException ou IllegalArgumentException | MediaPlayerException | Na versão 2.5, as APIs geram somente MediaPlayerException. |
-| MediaPlayer.PlayerState (MediaPlayer.Evento.PLAYBACK) | MediaPlayerStatus (MediaPlayerEvent.STATUS_CHANGED) | Na v2.5, MediaPlayer.PlayerState foi renomeado para um enum MediaPlayerStatus separado. |
-| DefaultMediaPlayer.create (getActivity().getApplicationContext()) | MediaPlayer mediaPlayer = new MediaPlayer(getActivity(). getApplicationContext(); | Os métodos estáticos usados para criar objetos são substituídos por construtores públicos. |
+| MediaPlayer.PlayerState (MediaPlayer.Event.PLAYBACK) | MediaPlayerStatus (MediaPlayerEvent.STATUS_CHANGED) | Na v2.5, MediaPlayer.PlayerState foi renomeado para um enum MediaPlayerStatus separado. |
+| DefaultMediaPlayer.create (getActivity().getApplicationContext()) | MediaPlayer mediaPlayer = new MediaPlayer(getActivity(). getApplicationContext()); | Os métodos estáticos usados para criar objetos são substituídos por construtores públicos. |
 | MediaPlayer.seekToLocalTime() | MediaPlayer.seekToLocal() | O método MediaPlayer.searchToLocalTime() agora é chamado de MediaPlayer.searchToLocal(). |
 | closedCaptionsTrack.isActive() |  | Não disponível |
-| MetadataNode | Metadados | Na v2.5, a classe Metadata substitui o uso da classe MetadataNode v1.4. |
-| DefaultMetadataKeys | MetadataKeys | DefaultMetadataKeys da v1.4 estão em MetadataKeys v2.5 enum. |
+| MetadataNode | Metadados | Na v2.5, a classe Metadata substitui o uso da classe v1.4 MetadataNode . |
+| DefaultMetadataKeys | MetadataKeys | DefaultMetadataKeys da v1.4 estão em v2.5 enum MetadataKeys. |
 | AdvertisingFactory | ContentFactory | O AdvertisingFactory da v1.4 é renomeado para ContentFactory na v2.5 |
-| PlacementOpportunityDetector | OpportunityGenerator | Os detectores são substituídos por Geradores. |
-| mediaPlayer.getView().notificationClick(); | mediaPlayer.notificationClick(); | O método NotificationClick() de MediaPlayerView foi movido para a classe MediaPlayer. |
-| public ABRControlParameters(ABRPolicy abrPolicy, int nInitialBitRate, int nMinBitRate, int nMaxBitRate) | public ABRControlParameters(int nInitialBitRate, int nMinBitRate, int nMaxBitRate, ABRPolicy abrPolicy, int nMinTrickPlayBitRate, int nMaxTrickPlayBitRate, int nMaxTrickPlayBandwidth Uso, duplo dMaxPlayoutRate) |  |
+| PlacementOpportunityDetector | OportunityGenerator | Os detectores são substituídos por Geradores. |
+| mediaPlayer.getView().notifyClick(); | mediaPlayer.notifyClick(); | O método notifyClick() de MediaPlayerView foi movido para a classe MediaPlayer. |
+| ABRControlParameters(ABRPolicy abrPolicy, int nInitialBitRate, int nMinBitRate, int nMaxBitRate) público | ABRControlParameters(int nInitialBitRate, int nMinBitRate, int nMaxBitRate, ABRPolicy abrPolicy, int nMinTrickPlayBitRate, int nMaxTrickPlayBitRate, int nMaxTrickPlayBandwidth Uso, duplo dMaxPlayoutRate) |  |
 | playbackInformation.getTimeToFirstFrame() |  | Não disponível |
-|  | playbackInformation.get PerceivingBandwidth() | TVSDK v2.5 QOSProvider tem uma nova propriedade para determinar a largura de banda percebida durante uma sessão de streaming. |
+|  | playbackInformation.get PerceivedBandwidth() | O QOSProvider do TVSDK v2.5 tem uma nova propriedade para determinar a largura de banda percebida durante uma sessão de transmissão. |
 
 ### Classes removidas {#removed-classes}
 
@@ -126,13 +122,13 @@ As classes a seguir são removidas e não têm equivalentes.
 * `LogFactory`
 * `NullLogger`
 
-As últimas seis classes estão disponíveis como classes de utilitários na implementação de referência.
+As seis últimas classes estão disponíveis como classes de utilitário na implementação de referência.
 
-## Alterações na namespace {#namespace-changes}
+## Alterações no namespace {#namespace-changes}
 
-A API TVSDK 2.5 consolida o namespace.
+A API TVSDK 2.5 consolida os namespaces.
 
-Todos os nomes de classe na API TVSDK 2.5 começam com o prefixo com.adobe.mediacore. Alguns nomes de classe no start da API TVSDK 1.4 com com.adobe.ave. As classes 2.5 correspondentes mudam com.adobe.ave para com.adobe.mediacore. Por exemplo, observe as alterações nas seguintes linhas de código para 1.4 e 2.5:
+Todos os nomes de classe na API TVSDK 2.5 começam com o prefixo com.adobe.mediacore. Alguns nomes de classe na API TVSDK 1.4 começam com.adobe.ave. As classes 2.5 correspondentes mudam com.adobe.ave para com.adobe.mediacore. Por exemplo, observe as alterações nas seguintes linhas de código para 1.4 e 2.5:
 
 ```java
 // TVSDK 1.4
@@ -146,10 +142,10 @@ import com.adobe.mediacore.drm.DRMAcquireLicenseSettings; import com.adobe.media
 import com.adobe.mediacore.drm.DRMManager; import com.adobe.mediacore.drm.DRMMetadata;
 ```
 
-## Alterações na manipulação de eventos {#changes-in-event-handling}
+## Alterações no tratamento de eventos {#changes-in-event-handling}
 
 Para registrar eventos nesta versão, passe o manipulador para `addEventListener`. A lista de eventos foi substancialmente revista da versão 1.4 para a 2.5.\
-Por exemplo, veja como registrar um manipulador de eventos para `MediaPlayerEvent.STATUS_CHANGED:`
+Por exemplo, aqui está como registrar um manipulador de eventos para `MediaPlayerEvent.STATUS_CHANGED:`
 
 ```java
 mPlayer.addEventListener(MediaPlayerEvent.STATUS_CHANGED,
@@ -161,7 +157,7 @@ public void onStatusChanged(MediaPlayerStatusChangeEvent event) {
 });
 ```
 
-Foi assim que o evento foi registrado em 1.4:
+Foi assim que o evento foi registrado na 1.4:
 
 ```java
 mPlayer.addEventListener(MediaPlayer.Event.PLAYBACK, new MediaPlayer.PlaybackEventListener() {
@@ -235,15 +231,15 @@ Os seguintes códigos de evento são novos na versão 2.5:
 | TAMANHO_DISPONÍVEL | TAMANHO_ALTERADO |
 | LOAD_INFO | LOAD_INFORMATION_AVAILABLE |
 
-## O MediaPlayer altera {#mediaplayer-changes}
+## Alterações do MediaPlayer {#mediaplayer-changes}
 
 Uma nova maneira de construir `MediaPlayer` e alterar alguns métodos.
 
 **Alterações na classe MediaPlayer**
 
-Estas são as alterações feitas na classe `MediaPlayer`:
+Aqui estão as alterações na classe `MediaPlayer` :
 
-* A enumeração `MediaPlayerStatus` substitui `MediaPlayer.PlayerState`. Por exemplo:
+* O enum `MediaPlayerStatus` substitui `MediaPlayer.PlayerState`. Por exemplo:
 
 ```java
 //TVSDK v1.4
@@ -292,8 +288,8 @@ public void adClick() { mediaPlayer.notifyClick();
 }
 ```
 
-* O método anterior `MediaPlayer.MediaPlayer.getNotificationHistory()` foi removido e não foi substituído.
-* O anterior `MediaPlayer.replaceCurrentItem()` é dividido em dois métodos: `replaceCurrentResource()`, que utiliza uma instância de `MediaResource` e `replaceCurrentItem()`, que utiliza uma instância de `MediaPlayerItem`. Por exemplo:
+* O antigo método `MediaPlayer.MediaPlayer.getNotificationHistory()` foi removido e não foi substituído.
+* O antigo `MediaPlayer.replaceCurrentItem()` é dividido em dois métodos: `replaceCurrentResource()`, que toma uma instância de `MediaResource` e `replaceCurrentItem()`, que toma uma instância de `MediaPlayerItem`. Por exemplo:
 
 ```java
 //TVSDK v1.4
@@ -337,9 +333,9 @@ itemLoader.load(playerResource); itemLoader.prepareBuffer();
 mediaPlayer.replaceCurrentItem(itemLoader.getItem());
 ```
 
-Você pode usar isso para alternar entre instâncias pré-inicializadas do MediaPlayer, como no caso de blecautes.
+Você pode usar essa opção para alternar entre instâncias pré-inicializadas do MediaPlayer, como no caso de blecautes.
 
-**Os construtores substituem os métodos estáticos create()**
+**Construtores substituem métodos de criação() estáticos**
 
 Você pode usar construtores no TVSDK v2.5, em vez de usar os métodos `create()` do TVSDK v1.4. Todas as classes com nomes começando com Padrão, como `DefaultMediaPlayer`, `DefaultNetworkConfig`, `DefaultContentFactory`, não estão disponíveis na v2.5.
 
@@ -349,7 +345,7 @@ Em alguns casos, a API TVSDK v1.4 usa o seguinte padrão para criar classes:
 1. Forneça uma classe padrão (por exemplo, `DefaultMediaPlayer`).
 1. Forneça um método `create()` na classe padrão para fornecer uma classe que implemente a interface.
 
-No TVSDK v2.5, essas interfaces são classes concretas e você cria instâncias dessas classes usando os respectivos construtores. Os seguintes trechos de código ilustram esta diferença:
+No TVSDK v2.5, essas interfaces são classes concretas e você cria instâncias dessas classes usando os respectivos construtores. Os seguintes fragmentos de código ilustram essa diferença:
 
 ```java
 //TVSDK v1.4
@@ -366,10 +362,10 @@ new MediaPlayer(getActivity().getApplicationContext()); return mediaPlayer;
 }
 ```
 
-Outras classes que não seguem este padrão, mas usam os métodos `create()` no 1.4 incluem:
+Outras classes que não seguem esse padrão, mas usam os métodos `create()` no 1.4 incluem:
 
 * MediaResource\
-   Isso antes usava `MediaResource.createFromUrl()`. Agora, use o construtor, que utiliza um URL, um tipo de recurso e metadados. Por exemplo:
+   Isso era usado anteriormente `MediaResource.createFromUrl()`. Agora use o construtor , que utiliza URL, tipo de recurso e metadados. Por exemplo:
 
 ```java
 //TVSDK v1.4
@@ -386,18 +382,18 @@ try { mediaPlayer.replaceCurrentResource(playerResource,_mediaPlayerItemConfig);
 }
 ```
 
-* Anúncio
+* Publicidade
 * AdAsset
 * AdBreak
 
-Algumas classes (por exemplo, `ContentFactory`) são classes abstratas sem implementação padrão disponível publicamente (por exemplo, `DefaultContentFactory`). Nesses casos, é possível fornecer uma implementação padrão por meio de uma função de conveniência, por exemplo: `mediaPlayerItemConfig.getDefaultContentFactory()`
+Algumas classes (por exemplo, `ContentFactory`) são classes abstratas sem implementação padrão disponível publicamente (por exemplo, `DefaultContentFactory`). Nesses casos, você pode fornecer uma implementação padrão por meio de uma função de conveniência, por exemplo: `mediaPlayerItemConfig.getDefaultContentFactory()`
 
 **Alterações nas legendas ocultas**
 
-As seguintes alterações afetam as classes relacionadas ao posicionamento de legenda:
+As seguintes alterações afetam as classes relacionadas às legendas ocultas:
 
-* Ao recuperar as faixas de legenda fechada, `MediaPlayerItem.getClosedCaptionTracks()` retorna somente as faixas ativas.
-* `ClosedCaptionTrack` não tem mais um  `isActive()` método.
+* Ao recuperar faixas de legenda fechadas, `MediaPlayerItem.getClosedCaptionTracks()` retorna somente faixas ativas.
+* `ClosedCaptionTrack` O não tem mais um  `isActive()` método.
 
 ```java
 //TVSDK v1.4
@@ -449,24 +445,24 @@ Há várias alterações relacionadas a anúncios na versão 2.5.
 
 **Alterações no comportamento da publicidade**
 
-O comportamento padrão da reprodução do anúncio quando um usuário realiza uma busca além de um pod de anúncio muda ligeiramente na v2.5. Se o intervalo do anúncio não for observado, o anúncio será reproduzido depois de uma busca posterior. Quando o aplicativo estiver usando a política de publicidade padrão, a pausa do anúncio será removida após a conclusão da reprodução. Usando o TVSDK v2.5, se um usuário buscar por trás de um pod de anúncio na linha do tempo e o intervalo do anúncio não for observado, nenhum anúncio será reproduzido.
+O comportamento padrão da reprodução do anúncio quando um usuário realiza uma busca além de um pod de anúncio muda ligeiramente na v2.5. Se o ad break não for assistido, o anúncio será reproduzido depois de uma busca em frente. Quando o aplicativo está usando a política de anúncios padrão, o ad break é removido após a conclusão da reprodução. Com o TVSDK v2.5, se um usuário buscar um pod de anúncio na linha do tempo e o ad break não for assistido, nenhum anúncio será reproduzido.
 
-No entanto, no TVSDK v1.4, por padrão, um anúncio é reproduzido no caso de uma busca para trás. Por exemplo, se você buscar para trás entre a terceira e a quarta pausa do anúncio, o comportamento padrão do TVSDK v1.4 é reproduzir a terceira pausa do anúncio.
+No entanto, no TVSDK v1.4, por padrão, um anúncio é reproduzido no caso de uma busca regressiva. Por exemplo, se você procurar para trás entre o terceiro e o quarto ad break, o comportamento padrão do TVSDK v1.4 é reproduzir o terceiro ad break.
 
 **Alteração das regras de publicidade**
 
-As regras de publicidade são especificadas usando um arquivo JSON. O formato do arquivo JSON permanece o mesmo em ambas as versões do TVSDK. No entanto, no TVSDK v2.5, o arquivo JSON das regras do anúncio deve ser hospedado em um local acessível por meio de um URL HTTP. O aplicativo pode usar uma instância de AuditudeSettings.
+As regras de publicidade são especificadas usando um arquivo JSON. O formato do arquivo JSON permanece o mesmo em ambas as versões do TVSDK. No entanto, no TVSDK v2.5, o arquivo JSON de regras de publicidade deve ser hospedado em um local acessível por meio de um URL HTTP. O aplicativo pode usar uma instância de AuditudeSettings.
 
 ```java
 //TVSDK v2.5
 AuditudeSettings result = new AuditudeSettings(); result.setCRSRulesJsonURL(<http url of AdobeTVSDKConfig.json>);
 ```
 
-No TVSDK versão 1.4, esse arquivo é colocado abaixo da pasta assets no aplicativo e o TVSDK carrega o arquivo.
+No TVSDK versão 1.4, esse arquivo é colocado abaixo da pasta de ativos no aplicativo e o TVSDK carrega o arquivo.
 
 **Renomeação de fábrica de anúncios**
 
-`AdvertisingFactory` agora é nomeado  `ContentFactory`. Com `ContentFactory` você pode criar workflows de publicidade personalizados substituindo alguns de seus métodos. Use return null para manter os comportamentos padrão, como a seguir:
+`AdvertisingFactory` agora é nomeado  `ContentFactory`. Com `ContentFactory` você pode criar fluxos de trabalho de publicidade personalizados substituindo alguns de seus métodos. Use return null para manter os comportamentos padrão, como no seguinte:
 
 ```java
 //TVSDK v2.5
@@ -486,17 +482,17 @@ public List<CustomAdHandler> retrieveCustomAdPlaybackHandlers(MediaPlayerItem it
 };
 ```
 
-**Quebras de tamanho zero do anúncio**
+**Quebras de linha do anúncio**
 
-O TVSDK 2.5 insere quebras de tamanho zero de anúncio como espaços reservados quando o servidor de publicidade não retorna nenhum anúncio.
+O TVSDK 2.5 insere quebras de tamanho zero e quebras de lugar quando o servidor de publicidade não retorna nenhum anúncio.
 
-As quebras de tamanho zero de anúncio podem ser determinadas pela detecção da contagem de anúncios como zero na quebra de anúncio, usando o evento onAdBreakStarted e o aplicativo deve lidar com essas quebras de anúncio de acordo.
+Os ad breaks de comprimento zero podem ser determinados pela detecção da contagem de anúncios igual a zero no ad break usando o evento onAdBreakStarted e o aplicativo deve lidar com esses ad breaks de acordo.
 
 **Alterações de metadados**
 
-A classe Metadata fornece uma substituição mais capaz para a antiga classe MetadataNode.
+A classe Metadata fornece uma substituição mais capaz para a antiga classe MetadataNode .
 
-* A classe Metadata pode armazenar sequências de caracteres, matrizes de bytes e outros objetos Metadados:
+* A classe Metadata pode armazenar cadeias de caracteres, matrizes de bytes e outros objetos Metadados:
 
 ```java
 TVSDK v1.4
@@ -523,7 +519,7 @@ return adSettings;
 }
 ```
 
-* A enumeração `MetadataKeys` substitui `DefaultMetadataKeys`. Nem todas as chaves em `DefaultMetadataKeys` estão presentes na nova versão.
+* O enum `MetadataKeys` substitui `DefaultMetadataKeys`. Nem todas as chaves em `DefaultMetadataKeys` estão presentes na nova versão.
 
 ```java
 //TVSDK v1.4
@@ -596,7 +592,7 @@ NetworkConfiguration mediaNetworkConfiguration = mediaItemConfig.getNetworkConfi
 
 **Alterações na análise de TimedMetadata**
 
-A análise de `TimedMetadata` foi alterada em 2.5 em relação aos tipos de dados para a análise da tag ID3.
+A análise de `TimedMetadata` foi alterada em 2.5 em relação aos tipos de dados para análise da tag ID3.
 
 ```java
 //TVSDK v1.4
@@ -672,16 +668,16 @@ As seguintes alterações adicionais estão disponíveis na versão 2.5:
 * `AdPolicySelector` é uma interface, não uma classe. Implemente todos os seus métodos.
 * `AdPolicyInfo` agora contém uma lista de  `AdBreakTimelineItem`, não  `AdBreakPlacement`.
 
-* O nome da API da classe abstrata `ContentResolver` foi alterado.
-* `PlacementOpportunityDetector` não está mais disponível. Em vez disso, estenda a classe `OpportunityGenerator` abstrata. A implementação de referência fornece um exemplo disso.
+* O nome da API de `ContentResolver` classe abstrata é alterado.
+* `PlacementOpportunityDetector` não está mais disponível. Em vez disso, estenda a classe abstrata `OpportunityGenerator`. A implementação de referência fornece um exemplo disso.
 
-* Os parâmetros do construtor `AdBreakPlacement` são os mesmos, mas em uma ordem diferente. Para obter uma amostra da implementação, consulte a implementação do Reprodutor de referência fornecida com o produto.
+* Os parâmetros do construtor `AdBreakPlacement` são os mesmos, mas em uma ordem diferente. Para obter um exemplo de implementação, consulte a implementação do Reprodutor de referência fornecida com o produto .
 
 ## Alterações no DRM {#changes-in-drm}
 
-A maioria das alterações nesta versão está na camada DRM. A tabela a seguir mostra as alterações adicionais entre as versões 1.4 e 2.5:
+A maioria das alterações nessa versão está na camada DRM. A tabela a seguir mostra alterações adicionais entre as versões 1.4 e 2.5:
 
-| Método DRMManager | Retorno de chamada bem-sucedido no 1.4 | Retorno de chamada de erro em 1.4 | Listener no 2.5 |
+| Método DRMManager | Retorno de chamada bem-sucedido no 1.4 | Retorno de chamada de erro no 1.4 | Ouvinte no 2.5 |
 |--- |--- |--- |--- |
 | acquisitionLicense | DRMLicenseAcquiredCallback | DRMOperationErrorCallback | DRMAcquireLicenseListener |
 | acquisitionPreviewLicense | DRMLicenseAcquiredCallback | DRMOperationErrorCallback | DRMAcquireLicenseListener |
@@ -832,13 +828,13 @@ public void onAuthenticationComplete(byte[] authenticationToken) { PMPDemoApp.lo
 };
 ```
 
-A instância estática `DRMManager` que estava disponível em 1.4 após a criação da mediaplayer está disponível depois que o ouvinte de eventos `onDRMMetadataInfo` é acionado.
+A instância `DRMManager` estática que estava disponível na versão 1.4 após a criação da camada de mídia agora está disponível depois que o ouvinte de evento `onDRMMetadataInfo` é acionado.
 
-## Alterações relacionadas à taxa de bits adaptável (ABR) {#adaptive-bitrate-abr-related-changes}
+## Alterações relacionadas à Taxa de bits adaptável (ABR) {#adaptive-bitrate-abr-related-changes}
 
 **Alterações nas constantes**
 
-Muitas constantes mudaram o tipo de `String` para `int`. Por exemplo: `MediaResourceType`, `ABRControlParameters` e `MediaPlayerStatusChangeEvent`.
+Muitas constantes alteraram o tipo de `String` para `int`. Por exemplo: `MediaResourceType`, `ABRControlParameters` e `MediaPlayerStatusChangeEvent`.
 
 ```java
 //TVSDK v1.4
@@ -897,7 +893,7 @@ _mediaPlayer.setABRControlParameters(abrBuilder.toABRControlParameters());
 
 **Alterações no construtor ABRControlParameters**
 
-Alguns parâmetros foram adicionados, alguns renomeados e outros movidos. A seguir estão a assinatura do construtor na v1.4 e a nova assinatura na versão 2.5:
+Alguns parâmetros foram adicionados, alguns renomeados e outros movidos. Veja a seguir a assinatura do construtor na v1.4 e a nova assinatura em 2.5:
 
 ```java
 //TVSDK v1.4
@@ -913,13 +909,13 @@ int nMinTrickPlayBitRate, int nMaxTrickPlayBitRate,
 int nMaxTrickPlayBandwidthUsage, double dMaxPlayoutRate)
 ```
 
-## Eventos de erro e manuseio de {#error-events-and-handling}
+## Eventos de erro e tratamento de {#error-events-and-handling}
 
-**Alterações na manipulação de erros**
+**Alterações no tratamento de erros**
 
-A classe `MediaError` foi substituída pela classe `Notification`. A única diferença entre as classes `MediaError` e `Notification` é que estas não contêm um atributo de descrição. Os códigos de erro TVSDK 1.4 com valores 101xxx, 102xxx,104xxx,106xxx,107xxx,109xxx não existem no TVSDK 2.5. Para obter os códigos de reprodução no TVSDK 2.5, consulte [Erro nativo- valores de reprodução de vídeo](assets/psdk_android_2.5.pdf).
+A classe `MediaError` foi substituída pela classe `Notification`. A única diferença entre as classes `MediaError` e `Notification` é que a última não contém um atributo de descrição. Os códigos de erro TVSDK 1.4 com valores 101xxx, 102xxx, 104xxx, 106xxx, 107xxx, 109xxx não existem em TVSDK 2.5. Para os códigos de reprodução em TVSDK 2.5, consulte [Erro nativo - valores de reprodução de vídeo a1/>.](assets/psdk_android_2.5.pdf)
 
-Veja a seguir exemplos de manipulação de erros no TVSDK 1.4 e 2.5:
+A seguir estão exemplos de tratamento de erros no TVSDK 1.4 e 2.5:
 
 ```java
 //TVSDK v1.4
@@ -961,7 +957,7 @@ default:
 };
 ```
 
-Todos os erros recuperáveis são tratados como avisos e são tratados usando `NotificationEventListener` no TVSDK 2.5. Os avisos são exibidos como notificações com o ouvinte `onOperationFailed` no manipulador do QOS no TVSDK 1.4, onde, como no TVSDK 2.5, a Notificação é um evento separado. O aviso manipulado nos pontos 1.4 e 2.5 é o seguinte:
+Todos os erros recuperáveis são tratados como avisos e são tratados usando o `NotificationEventListener` no TVSDK 2.5. Os avisos aparecem como notificações com o `onOperationFailed` Ouvinte no manipulador de QOS no TVSDK 1.4, onde, como no TVSDK 2.5, a Notificação é um evento separado. O aviso tratado nos pontos 1.4 e 2.5 é o seguinte:
 
 ```java
 //TVSDK v1.4
@@ -1043,13 +1039,13 @@ showToast(sb.toString()); PMPDemoApp.logger.d(LOG_TAG, sb.toString());
 
 **Novas exceções**
 
-Embora o TVSDK v1.4 tenha usado uma combinação de nulos, retornos de erros e uma variedade de exceções ( `MediaPlayerException`, `IllegalStateException` e `IllegalArgumentException`), o TVSDK v2.5 `generatesMediaPlayerException` para todos os erros.
+Embora o TVSDK v1.4 tenha usado uma combinação de nulos, retornos de erro e uma variedade de exceções ( `MediaPlayerException`, `IllegalStateException` e `IllegalArgumentException`), TVSDK v2.5 `generatesMediaPlayerException` para todos os erros.
 
 >[!NOTE]
 >
->Para obter detalhes sobre um MediaPlayerException, você pode usar `getErrorCode()`.
+>Para obter detalhes sobre uma MediaPlayerException, use `getErrorCode()`.
 
-Um exemplo da alteração é:
+Um exemplo da alteração é abaixo:
 
 ```java
 //TVSDK v1.4
@@ -1069,12 +1065,12 @@ mediaPlayer.setBufferControlParameters(getBufferParamsFromSettings());
 }
 ```
 
-## Alterações nos parâmetros do QOS {#changes-to-qos-parameters}
+## Alterações nos parâmetros de QOS {#changes-to-qos-parameters}
 
 Há pequenas alterações nas propriedades do objeto QOSProvider:
 
 * O `TimeToFirstFrame` não está disponível no TVSDK 2.5.
-* O TVSDK 2.5 QOSProvider tem uma nova propriedade para determinar a largura de banda percebida durante uma sessão de streaming.
+* O TVSDK 2.5 QOSProvider tem uma nova propriedade para determinar a largura de banda percebida durante uma sessão de transmissão.
 
 ```java
 //TVSDK v1.4
@@ -1095,9 +1091,9 @@ setQosItem("Time to prepare", (int) playbackInformation.getTimeToPrepare());
 setQosItem("Perceived Bandwidth", (int) playbackInformation.getPerceivedBandwidth());
 ```
 
-* O `QOSEventListener::onOperationFailed()` não existe mais no TVSDK 2.5. Os avisos que costumavam aparecer neste ouvinte de eventos agora aparecerão no ouvinte de eventos `NotificationEventListener::onNotification()`.
+* O `QOSEventListener::onOperationFailed()` não existe mais no TVSDK 2.5. Os avisos que costumavam aparecer neste ouvinte de evento agora aparecerão no ouvinte de evento `NotificationEventListener::onNotification()`.
 
-* Os `QOSProvider event listeners onBufferStart()`, `onBufferComplete()`, `onSeekStart()`, `onSeekComplete()` e `onLoadInfo()` são ouvintes de eventos individuais que estão vinculados a uma instância mediaPlayer.
+* Os `QOSProvider event listeners onBufferStart()`, `onBufferComplete()`, `onSeekStart()`, `onSeekComplete()` e `onLoadInfo()` são ouvintes de eventos individuais vinculados a uma instância mediaPlayer.
 
 ```java
 //TVSDK v1.4
@@ -1235,4 +1231,4 @@ LOG_TAG + "::LoadInformationEventListener#onLoadInfomation()", "Url: " + loadInf
 
 ## Recursos úteis {#helpful-resources}
 
-* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte da Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
+* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte do Adobe Primetime](https://helpx.adobe.com/support/primetime.html) .
