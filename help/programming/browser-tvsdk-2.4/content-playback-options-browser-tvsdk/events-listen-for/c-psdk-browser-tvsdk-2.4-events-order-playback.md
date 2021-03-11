@@ -1,13 +1,10 @@
 ---
-description: O TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
-seo-description: O TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
-seo-title: Ordem dos eventos de reprodução
+description: O TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 title: Ordem dos eventos de reprodução
-uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Ordem dos eventos de reprodução{#order-of-playback-events}
 
-O TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O player pode implementar ações com base em eventos na sequência esperada.
+O TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 
 <!--<a id="section_D247A5873A854A079EFA6AC2E80AB894"></a>-->
 
@@ -23,14 +20,14 @@ Os exemplos a seguir mostram a ordem de alguns eventos que incluem eventos de re
 
 * Ao carregar com êxito um recurso de mídia por meio de `replaceCurrentResource`, a ordem dos eventos é:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` com  `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Ao preparar a reprodução por `MediaPlayer.prepareToPlay`, a ordem dos eventos é:
+* Ao preparar para reprodução por meio de `MediaPlayer.prepareToPlay`, a ordem dos eventos é:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` com  `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
