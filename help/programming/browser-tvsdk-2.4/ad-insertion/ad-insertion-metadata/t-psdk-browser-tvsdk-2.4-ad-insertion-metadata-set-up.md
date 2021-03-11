@@ -1,13 +1,10 @@
 ---
 description: Use a classe auxiliar AuditudeSettings para configurar os metadados de decisão de anúncio do Adobe Primetime.
-seo-description: Use a classe auxiliar AuditudeSettings para configurar os metadados de decisão de anúncio do Adobe Primetime.
-seo-title: Configurar metadados de inserção de anúncio
 title: Configurar metadados de inserção de anúncio
-uuid: fc37e0ae-6acf-4a78-a468-f7b5b123b45e
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ Use a classe auxiliar AuditudeSettings para configurar os metadados de decisão 
 
 >[!TIP]
 >
->A decisão do anúncio do Adobe Primetime era anteriormente conhecida como Auditude.
+>O Adobe Primetime ad decisioning era anteriormente conhecido como Auditude .
 
 1. Crie a instância `AuditudeSettings`.
 
@@ -27,7 +24,7 @@ Use a classe auxiliar AuditudeSettings para configurar os metadados de decisão 
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. Defina a ID de mídia de decisão de publicidade da Adobe Primetime, zoneID, domínio e os parâmetros de definição de metas opcionais.
+1. Defina a ID de mídia de decisão do anúncio do Adobe Primetime, a zoneID, o domínio e os parâmetros de definição de metas opcionais.
 
    ```js
    auditudeSettings.domain = "yourdomain"; 
@@ -35,7 +32,7 @@ Use a classe auxiliar AuditudeSettings para configurar os metadados de decisão 
    auditudeSettings.zoneId = "zoneid";
    ```
 
-1. Crie uma instância `MediaResource` usando o URL de fluxo de mídia e os metadados de publicidade criados anteriormente.
+1. Crie uma instância `MediaResource` usando o URL de fluxo de mídia e os metadados de anúncio criados anteriormente.
 
    ```js
    mediaResource = new AdobePSDK.MediaResource ( 
@@ -46,15 +43,15 @@ Use a classe auxiliar AuditudeSettings para configurar os metadados de decisão 
 
 1. Carregue o objeto `MediaResource` pelo método `MediaPlayer.replaceCurrentResource(resource)`.
 
-   O `MediaPlayer` start o carregamento e o processamento do manifesto de fluxo de mídia.
+   O `MediaPlayer` inicia o carregamento e o processamento do manifesto de fluxo de mídia.
 
-1. Quando `MediaPlayer` transição para o status INITIALIZED, obtenha as características de fluxo de mídia na forma de uma instância `MediaPlayerItem` por meio do atributo `MediaPlayer.CurrentItem`.
-1. (Opcional) Query a instância `MediaPlayerItem` para ver se o fluxo está ao vivo, independentemente de ter faixas de áudio alternativas.
+1. Quando o `MediaPlayer` for transferido para o status INITIALIZED , obtenha as características do fluxo de mídia no formato de uma instância `MediaPlayerItem` por meio do atributo `MediaPlayer.CurrentItem`.
+1. (Opcional) Consulte a instância `MediaPlayerItem` para ver se o fluxo está ao vivo, independentemente de ter trilhas de áudio alternativas.
 
-   Estas informações podem ajudá-lo a preparar a interface para a reprodução. Por exemplo, se você sabe que existem duas faixas de áudio, é possível incluir um controle de interface que alterne entre essas faixas.
+   Essas informações podem ajudar você a preparar a interface do usuário para a reprodução. Por exemplo, se você sabe que há duas faixas de áudio, é possível incluir um controle de interface do usuário que alterne entre essas faixas.
 
-1. Chame `MediaPlayer.prepareToPlay` para start do fluxo de trabalho de publicidade.
+1. Chame `MediaPlayer.prepareToPlay` para iniciar o fluxo de trabalho de publicidade.
 
-   Depois que as publicidades forem resolvidas e colocadas na linha do tempo, a `  MediaPlayer ` transição para o estado PREPARADO.
-1. Chame `MediaPlayer.play` para start da reprodução.
-O TVSDK do navegador agora inclui anúncios quando sua mídia é reproduzida.
+   Depois que os anúncios tiverem sido resolvidos e colocados na linha do tempo, o `  MediaPlayer ` será transferido para o estado PREPARADO.
+1. Chame `MediaPlayer.play` para iniciar a reprodução.
+O TVSDK do navegador agora inclui anúncios quando a mídia é reproduzida.
