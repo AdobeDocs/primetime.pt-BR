@@ -1,17 +1,16 @@
 ---
-uuid: a03d9753-0133-4d37-8136-cad6c78645e4
-translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '0'
+translation-type: tm+mt
+source-wordcount: '26'
 ht-degree: 0%
 
 ---
 
 
-# nulo {#no-title}
+# null {#no-title}
 
-Armazenamento da chave de criptografia de conteúdo IDTa ID do Armazenamento da chave de criptografia de conteúdo (CEKSID) é uma ID para recuperar uma chave de criptografia de conteúdo de um sistema de gerenciamento de chave.
+Armazenamento de chave de criptografia de conteúdo IDTa Content Encryption Key Storage ID (CEKSID) é uma ID para recuperar uma chave de criptografia de conteúdo de um sistema de gerenciamento de chaves.
 
 ```
 :    
