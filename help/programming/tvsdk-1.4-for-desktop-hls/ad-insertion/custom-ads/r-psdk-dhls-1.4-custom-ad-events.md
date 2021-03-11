@@ -1,13 +1,10 @@
 ---
-description: O player do TVSDK despacha eventos para exibir o status de carregamento de anúncio personalizado ou para ignorar um anúncio que está demorando muito para carregar ou que apresenta erros. Esses eventos são definidos em eventos.CustomAdEvents.
-seo-description: O player do TVSDK despacha eventos para exibir o status de carregamento de anúncio personalizado ou para ignorar um anúncio que está demorando muito para carregar ou que apresenta erros. Esses eventos são definidos em eventos.CustomAdEvents.
-seo-title: Eventos de anúncio personalizados
+description: O reprodutor TVSDK despacha eventos para exibir status de carregamento de anúncio personalizado ou para ignorar um anúncio que está demorando muito para carregar ou que tem erros. Esses eventos são definidos em events.CustomAdEvents.
 title: Eventos de anúncio personalizados
-uuid: 78e2ccf4-5943-4c60-84be-623182d9a300
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Eventos de anúncio personalizados{#custom-ad-events}
 
-O player do TVSDK despacha eventos para exibir o status de carregamento de anúncio personalizado ou para ignorar um anúncio que está demorando muito para carregar ou que apresenta erros. Esses eventos são definidos em eventos.CustomAdEvents.
+O reprodutor TVSDK despacha eventos para exibir status de carregamento de anúncio personalizado ou para ignorar um anúncio que está demorando muito para carregar ou que tem erros. Esses eventos são definidos em events.CustomAdEvents.
 
 <table id="table_718700E0F0B042F882ED131F79E01D4E"> 
  <thead> 
@@ -50,12 +47,12 @@ O player do TVSDK despacha eventos para exibir o status de carregamento de anún
    <td colname="col2"> O anúncio personalizado continuou sendo reproduzido após uma pausa. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdPlaying  </span> </td> 
+   <td colname="col1"> <span class="codeph"> Reprodução do anúncio  </span> </td> 
    <td colname="col2"> O anúncio personalizado está sendo reproduzido. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> AdProgress  </span> </td> 
-   <td colname="col2"> <p>O player de publicidade personalizado notifica o player TVSDK sobre o progresso do anúncio personalizado. &amp;nbsp; </p> <p>As <span class="codeph"> currentTime </span> e <span class="codeph"> totalTime </span> do anúncio são transmitidas com este evento. </p> </td> 
+   <td colname="col2"> <p>O reprodutor de anúncio personalizado notifica o reprodutor TVSDK sobre o progresso do anúncio personalizado. &amp;nbsp; </p> <p>O <span class="codeph"> currentTime </span> e <span class="codeph"> totalTime </span> do anúncio são passados com esse evento. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AdStarted </td> 
@@ -63,7 +60,7 @@ O player do TVSDK despacha eventos para exibir o status de carregamento de anún
   </tr> 
   <tr> 
    <td colname="col1"> AdStopped </td> 
-   <td colname="col2"> A reprodução do anúncio personalizado terminou. </td> 
+   <td colname="col2"> O anúncio personalizado terminou de ser reproduzido. </td> 
   </tr> 
  </tbody> 
 </table>
