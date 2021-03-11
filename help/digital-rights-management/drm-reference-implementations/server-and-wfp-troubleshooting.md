@@ -1,13 +1,11 @@
 ---
-description: nulo
-seo-description: nulo
-seo-title: Solução de problemas
 title: Solução de problemas
-uuid: 06b86067-1ff6-4b4e-922f-7f968260ba19
+description: Solução de problemas
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '98'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 # Solução de problemas{#troubleshooting}
 
-Veja a seguir alguns problemas e soluções que você pode encontrar durante a implantação.
+A seguir estão alguns problemas e soluções que você pode encontrar durante a implantação.
 
 * Se a seguinte mensagem de erro for exibida:
 
@@ -32,7 +30,7 @@ Veja a seguir alguns problemas e soluções que você pode encontrar durante a i
    "Unable to load credential from file.pfx -- possibly wrong password."
    ```
 
-   Verifique se você especificou a senha criptografada correta no arquivo PFX.
+   Certifique-se de ter especificado a senha criptografada correta no arquivo PFX.
 
 * Se a seguinte mensagem de erro for exibida:
 
@@ -40,5 +38,5 @@ Veja a seguir alguns problemas e soluções que você pode encontrar durante a i
    "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   Certifique-se de usar a classe de script de senha *fornecida com a Implementação de referência*. Este utilitário de arranhador é diferente daquele fornecido com o Adobe Primetime DRM Server para Protected Streaming.
+   Certifique-se de usar a classe do arranhador de senha *que foi fornecida com a Implementação de Referência*. Este utilitário de software de rabisco é diferente daquele que foi fornecido com o Adobe Primetime DRM Server for Protected Streaming.
 
