@@ -1,13 +1,10 @@
 ---
-description: Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessão, acesso à porta e assim por diante.
-seo-description: Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessão, acesso à porta e assim por diante.
-seo-title: Trabalhar com cookies
+description: Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessões, acesso à porta e assim por diante.
 title: Trabalhar com cookies
-uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 0%
 
 # Trabalhar com cookies{#work-with-cookies}
 
-Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessão, acesso à porta e assim por diante.
+Você pode usar o TVSDK para enviar dados arbitrários em cabeçalhos de cookies para gerenciamento de sessões, acesso à porta e assim por diante.
 
 Este é um exemplo com algum tipo de autenticação ao fazer solicitações ao servidor de chaves:
 
-1. Seu cliente entra em seu site em um navegador e seu login mostra que ele tem permissão para visualização de conteúdo.
-1. Seu aplicativo gera um token de autenticação, com base no que é esperado pelo servidor de licenças. Passe esse valor para TVSDK.
+1. O cliente entra no site em um navegador e o logon mostra que tem permissão para visualizar o conteúdo.
+1. Seu aplicativo gera um token de autenticação, com base no esperado pelo servidor de licença. Passe esse valor para TVSDK.
 1. O TVSDK define esse valor no cabeçalho do cookie.
 1. Quando o TVSDK faz uma solicitação ao servidor de chaves para obter uma chave para descriptografar o conteúdo, essa solicitação contém o valor de autenticação no cabeçalho do cookie, de modo que o servidor de chaves saiba que a solicitação é válida.
 
@@ -52,7 +49,7 @@ Para trabalhar com cookies:
 
 1. Forneça os metadados da etapa anterior ao criar um `MediaResource`.
 
-   Por exemplo, se você usar o método `createFromURL`, insira as seguintes informações:
+   Por exemplo, se você usar o método `createFromURL` , insira as seguintes informações:
 
    ```
    var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
