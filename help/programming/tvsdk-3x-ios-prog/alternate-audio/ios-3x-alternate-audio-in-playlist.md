@@ -1,34 +1,31 @@
 ---
-description: O áudio alternativo ou tardio permite alternar entre as faixas de áudio disponíveis para uma faixa de vídeo. Dessa forma, os usuários podem selecionar um rastreamento de idioma quando o vídeo for reproduzido.
-seo-description: O áudio alternativo ou tardio permite alternar entre as faixas de áudio disponíveis para uma faixa de vídeo. Dessa forma, os usuários podem selecionar um rastreamento de idioma quando o vídeo for reproduzido.
-seo-title: Faixas de áudio alternativas na lista de reprodução
-title: Faixas de áudio alternativas na lista de reprodução
-uuid: 6241d3e4-6e07-44fb-bc0e-5d49d1a76824
+description: O áudio alternativo ou com vínculo posterior permite alternar entre as faixas de áudio disponíveis para uma faixa de vídeo. Dessa forma, os usuários podem selecionar um rastreamento de idioma quando o vídeo for reproduzido.
+title: Trilhas de áudio alternativas na lista de reprodução
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
 
-# Faixas de áudio alternativas na lista de reprodução {#section_BC8C1C74A5A24A8CA68C1E7E721EE742}
+# Trilhas de áudio alternativas na lista de reprodução {#section_BC8C1C74A5A24A8CA68C1E7E721EE742}
 
-A lista de reprodução de um vídeo pode especificar um número ilimitado de trilhas de áudio alternativas para o conteúdo de vídeo principal. Por exemplo, você pode querer adicionar idiomas diferentes ao seu conteúdo de vídeo ou permitir que o usuário alterne entre trilhas diferentes em seu dispositivo enquanto o conteúdo estiver sendo reproduzido.
+A lista de reprodução de um vídeo pode especificar um número ilimitado de faixas de áudio alternativas para o conteúdo do vídeo principal. Por exemplo, você pode adicionar idiomas diferentes ao seu conteúdo de vídeo ou permitir que o usuário alterne entre trilhas diferentes em seu dispositivo enquanto o conteúdo está sendo reproduzido.
 
-As faixas de áudio alternativas, ou o áudio de ligação tardia, permitem que os usuários alternem entre várias faixas de idioma para fluxos de vídeo HTTP (ao vivo/linear e VOD) e você não precisa modificar, duplicado ou reempacotar o vídeo para cada faixa de áudio. É possível fornecer várias faixas de idioma para um ativo de vídeo antes ou depois da embalagem inicial do ativo.
+As trilhas de áudio alternativas ou o áudio de vinculação tardia permitem que os usuários alternem entre várias faixas de idioma para fluxos de vídeo HTTP (ao vivo/linear e VOD) e você não precisa modificar, duplicar ou reempacotar o vídeo para cada faixa de áudio. Você pode fornecer várias faixas de idioma para um ativo de vídeo antes ou depois da embalagem inicial do ativo.
 
 >[!TIP]
 >
 >Para que o áudio alternativo seja misturado com a faixa de vídeo da mídia principal, os carimbos de data e hora da faixa alternativa devem corresponder aos carimbos de data e hora do áudio na faixa principal.
 
-Os seguintes requisitos se aplicam se você usar faixas de áudio alternativas e incorporar anúncios:
+Os seguintes requisitos se aplicam se você usar faixas de áudio alternativas e incorporar publicidade:
 
-* Se o conteúdo principal tiver trilhas de áudio alternativas, as publicidades deverão ter pelo menos um fluxo somente de áudio.
+* Se o conteúdo principal tiver trilhas de áudio alternativas, os anúncios devem ter pelo menos um fluxo somente de áudio.
 * A duração de cada segmento do fluxo somente de áudio de um anúncio deve ser igual à duração do segmento do fluxo de vídeo de um anúncio.
 
-A faixa de áudio principal está incluída na coleção de faixas de áudio com o rótulo `default`. Os metadados para os fluxos de áudio alternativos estão incluídos na lista de reprodução das tags `#EXT-X-MEDIA` com `TYPE=AUDIO`.
+A faixa de áudio principal está incluída na coleção de faixas de áudio com o rótulo `default`. Os metadados para os fluxos de áudio alternativos estão incluídos na lista de reprodução nas tags `#EXT-X-MEDIA` com `TYPE=AUDIO`.
 
 Por exemplo, um manifesto M3U8 que especifica vários fluxos de áudio alternativos pode ser semelhante a:
 
