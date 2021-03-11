@@ -1,13 +1,10 @@
 ---
-description: O TVSDK despacha eventos de metadados cronometrados e gera metadados sempre que tags padrão ou personalizadas são encontradas ou quando uma lista de reprodução muda em um manifesto. Os eventos são despachados na ordem em que aparecem no manifesto.
-seo-description: O TVSDK despacha eventos de metadados cronometrados e gera metadados sempre que tags padrão ou personalizadas são encontradas ou quando uma lista de reprodução muda em um manifesto. Os eventos são despachados na ordem em que aparecem no manifesto.
-seo-title: Eventos de metadados cronometrados
+description: O TVSDK despacha eventos de metadados cronometrados e gera metadados cronometrados sempre que tags padrão ou personalizadas são encontradas ou quando uma lista de reprodução é alterada em um manifesto. Os eventos são despachados na ordem em que aparecem no manifesto.
 title: Eventos de metadados cronometrados
-uuid: 69c43701-6ffa-45fe-a104-fe81391222e7
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
@@ -15,10 +12,10 @@ ht-degree: 0%
 
 # Eventos de metadados cronometrados{#timed-metadata-events}
 
-O TVSDK despacha eventos de metadados cronometrados e gera metadados sempre que tags padrão ou personalizadas são encontradas ou quando uma lista de reprodução muda em um manifesto. Os eventos são despachados na ordem em que aparecem no manifesto.
+O TVSDK despacha eventos de metadados cronometrados e gera metadados cronometrados sempre que tags padrão ou personalizadas são encontradas ou quando uma lista de reprodução é alterada em um manifesto. Os eventos são despachados na ordem em que aparecem no manifesto.
 
-Seu player implementa ações com base nos seguintes eventos:
+O reprodutor implementa ações com base nos seguintes eventos:
 
-* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: Despachado quando metadados cronometrados ID3 eram processados.
+* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: Despachado quando metadados cronometrados de ID3 eram processados.
 * `TimedMetadataEvent.TIMED_METADATA_SKIPPED`: Despachado quando os metadados cronometrados eram processados e nenhuma oportunidade era detectada.
 
