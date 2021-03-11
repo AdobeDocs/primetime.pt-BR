@@ -1,9 +1,9 @@
 ---
-seo-title: Arquivos de registro
-title: Arquivos de registro
-uuid: 90450f27-ed2f-4b67-953b-0546910deebf
+title: Arquivos de log
+description: Arquivos de log
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Arquivos de registro{#log-files}
+# Arquivos de log{#log-files}
 
 Os arquivos de log gerados pelo aplicativo Adobe Access Server for Protected Streaming estarão localizados no diretório especificado por *LicenseServer.LogRoot*.
 
