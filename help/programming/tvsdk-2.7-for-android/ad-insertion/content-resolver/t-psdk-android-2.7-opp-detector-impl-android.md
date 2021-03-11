@@ -1,14 +1,11 @@
 ---
 description: Você pode implementar seus próprios geradores de oportunidades implementando a classe OpportunityGenerator.
-seo-description: Você pode implementar seus próprios geradores de oportunidades implementando a classe OpportunityGenerator.
-seo-title: Implementar um gerador de oportunidade personalizado
 title: Implementar um gerador de oportunidade personalizado
-uuid: 93d8253f-10f9-4950-a273-28975cb69caa
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 3%
+source-wordcount: '100'
+ht-degree: 4%
 
 ---
 
@@ -33,7 +30,7 @@ Você pode implementar seus próprios geradores de oportunidades implementando a
    }
    ```
 
-1. Registre `ContentFactory` em `MediaPlayer`.
+1. Registre o `ContentFactory` no `MediaPlayer`.
 
    Por exemplo:
 
@@ -50,7 +47,7 @@ Você pode implementar seus próprios geradores de oportunidades implementando a
    itemLoader.load(resource, id, config);
    ```
 
-1. Crie uma classe de gerador de oportunidade personalizada que implemente a classe `OpportunityGenerator`.
+1. Crie uma classe personalizada de gerador de oportunidade que implemente a classe `OpportunityGenerator`.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
@@ -93,7 +90,7 @@ Você pode implementar seus próprios geradores de oportunidades implementando a
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
-Este é um exemplo de detector de oportunidade de disposição personalizado:
+Este é um exemplo de detector de oportunidade de posicionamento personalizado:
 
 ```java
 public class MyOpportunityGenerator implements OpportunityGenerator {
