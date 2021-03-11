@@ -1,9 +1,9 @@
 ---
-seo-title: Pré-requisitos
 title: Pré-requisitos
-uuid: 5c85ce72-28a9-45d8-b951-46a697e362ea
+description: Pré-requisitos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 # Pré-requisitos {#prerequisites}
 
-Antes de empacotar o conteúdo, é necessário um certificado Primetime DRM Packager. Ela deve ser solicitada por meio do Processo de inscrição do certificado DRM Primetime. Somente um certificado do empacotador é necessário (sem o License Server ou o Transport). Indique no e-mail de Solicitação de certificado que a solicitação é para um certificado ser usado com o serviço DRM.
+Antes de empacotar conteúdo, é necessário um certificado Primetime DRM Packager. Ele deve ser solicitado por meio do Processo de Registro de Certificado DRM Primetime. Somente um certificado do empacotador é necessário (sem License Server ou Transport). Indique no email Solicitação de certificado que a solicitação é um certificado para uso com o serviço de DRM.
 
 [Guia de inscrição de certificados](../../digital-rights-management/certificate-enrollment-guide/about-certs.md)
 
-Há dois níveis de certificados de embalagem - PRODUÇÃO e ENSAIO. O conteúdo que é empacotado usando certificados de AVALIAÇÃO é somente para uso de desenvolvimento e não será reproduzido após o certificado expirar. Todas as licenças emitidas para o conteúdo da VERSÃO DE AVALIAÇÃO terão uma data máxima de expiração de política codificada igual à data de expiração do certificado (se não estiver definida na política de DRM).
+Existem dois níveis de certificados de embalagem - PRODUÇÃO e ENSAIO. O conteúdo que é empacotado usando certificados de AVALIAÇÃO é somente para uso de desenvolvimento e não será reproduzido após a expiração do certificado. Todas as licenças emitidas para o conteúdo da AVALIAÇÃO terão uma data de expiração máxima da política codificada igual à data de expiração do certificado (se não estiver definida na política de DRM).
