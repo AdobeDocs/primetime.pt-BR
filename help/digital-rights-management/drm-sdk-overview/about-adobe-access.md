@@ -1,13 +1,10 @@
 ---
-description: O Primetime DRM permite que os proprietários e distribuidores de conteúdo controlem como e onde seu conteúdo pode ser distribuído e experimentado, fornecendo proteção completa durante todo o ciclo de vida do conteúdo. Ele criptografa arquivos de vídeo, que podem ser transmitidos ou baixados nas plataformas Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e aplica modelos comerciais, como o aluguel de vídeo online. Os consumidores podem desfrutar de conteúdos de alta qualidade quando lhes for mais conveniente, quer estejam online ou offline. O DRM Primetime oferta as principais vantagens que os proprietários e distribuidores de conteúdo podem usar para fornecer rapidamente novos serviços que os diferenciam da concorrência.
-seo-description: O Primetime DRM permite que os proprietários e distribuidores de conteúdo controlem como e onde seu conteúdo pode ser distribuído e experimentado, fornecendo proteção completa durante todo o ciclo de vida do conteúdo. Ele criptografa arquivos de vídeo, que podem ser transmitidos ou baixados nas plataformas Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e aplica modelos comerciais, como o aluguel de vídeo online. Os consumidores podem desfrutar de conteúdos de alta qualidade quando lhes for mais conveniente, quer estejam online ou offline. O DRM Primetime oferta as principais vantagens que os proprietários e distribuidores de conteúdo podem usar para fornecer rapidamente novos serviços que os diferenciam da concorrência.
-seo-title: Sobre o Adobe Primetime DRM
+description: O Primetime DRM permite que os proprietários e distribuidores de conteúdo controlem como e onde seu conteúdo pode ser distribuído e experimentado, fornecendo proteção completa durante todo o ciclo de vida do conteúdo. Ele criptografa arquivos de vídeo, que podem ser transmitidos ou baixados para plataformas Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e aplica modelos comerciais como o aluguel online de vídeo. Os consumidores podem desfrutar de conteúdo de alta qualidade, quer estejam online ou offline. O DRM Primetime oferece vantagens importantes que os proprietários e distribuidores de conteúdo podem usar para fornecer rapidamente novos serviços que os diferenciam da concorrência.
 title: Sobre o Adobe Primetime DRM
-uuid: 4c445ccb-0a8e-490f-b840-8654fcaa106c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
@@ -15,14 +12,14 @@ ht-degree: 0%
 
 # Sobre o Adobe Primetime DRM{#about-adobe-primetime-drm}
 
-O Primetime DRM permite que os proprietários e distribuidores de conteúdo controlem como e onde seu conteúdo pode ser distribuído e experimentado, fornecendo proteção completa durante todo o ciclo de vida do conteúdo. Ele criptografa arquivos de vídeo, que podem ser transmitidos ou baixados nas plataformas Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e aplica modelos comerciais, como o aluguel de vídeo online. Os consumidores podem desfrutar de conteúdos de alta qualidade quando lhes for mais conveniente, quer estejam online ou offline. O DRM Primetime oferta as principais vantagens que os proprietários e distribuidores de conteúdo podem usar para fornecer rapidamente novos serviços que os diferenciam da concorrência.
+O Primetime DRM permite que os proprietários e distribuidores de conteúdo controlem como e onde seu conteúdo pode ser distribuído e experimentado, fornecendo proteção completa durante todo o ciclo de vida do conteúdo. Ele criptografa arquivos de vídeo, que podem ser transmitidos ou baixados para plataformas Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e aplica modelos comerciais como o aluguel online de vídeo. Os consumidores podem desfrutar de conteúdo de alta qualidade, quer estejam online ou offline. O DRM Primetime oferece vantagens importantes que os proprietários e distribuidores de conteúdo podem usar para fornecer rapidamente novos serviços que os diferenciam da concorrência.
 
-Essa solução entre plataformas pode ser integrada aos sistemas de cobrança e autenticação existentes, permitindo que os proprietários e distribuidores de conteúdo mantenham o controle do conteúdo de áudio e vídeo, independentemente da sua distribuição. O Primetime DRM ajuda a proteger e monetizar o conteúdo com confiança e proporciona a flexibilidade para gerenciar como e onde o conteúdo protegido é acessado.
+Essa solução entre plataformas pode ser integrada aos sistemas de faturamento e autenticação existentes, permitindo que os proprietários e distribuidores de conteúdo mantenham o controle do conteúdo de áudio e vídeo, independentemente de sua distribuição. O DRM do Primetime ajuda a proteger e monetizar o conteúdo com confiança e fornece a flexibilidade para gerenciar como e onde o conteúdo protegido é vivido.
 
 O Primetime DRM oferece vários benefícios para diferentes tipos de clientes:
 
-* Para proprietários e distribuidores de conteúdo - alcance mais amplo para ativos de mídia, e uma forma de recuperar custos de produção, protegendo esses ativos contra o uso indevido.
-* Para distribuidores de conteúdo - a capacidade de distribuir rapidamente conteúdo e recuperar custos de produção por meio de compensação direta (paga pelo usuário) ou indireta (paga pelo anunciante).
-* Para consumidores - a flexibilidade para desfrutar de conteúdo premium com uma experiência de visualização avançada, intuitiva, não intrusiva, conveniente e envolvente.
-* Para desenvolvedores - a capacidade de automatizar os recursos do Primetime DRM, incluindo autorização e autenticação, no ambiente existente de um distribuidor de conteúdo.
+* Para proprietários e distribuidores de conteúdo - Alcance mais amplo para ativos de mídia, e uma maneira de recuperar custos de produção, enquanto protege esses ativos contra uso indevido.
+* Para distribuidores de conteúdo - A capacidade de distribuir conteúdo rapidamente e recuperar custos de produção por meio de compensação direta (paga pelo usuário) ou indireta (paga pelo anunciante).
+* Para os consumidores - a flexibilidade para desfrutar de conteúdo premium com uma experiência de visualização avançada intuitiva, não intrusiva, conveniente e envolvente.
+* Para desenvolvedores - a capacidade de automatizar os recursos de DRM do Primetime, incluindo a autorização e a autenticação, no ambiente existente de um distribuidor de conteúdo.
 
