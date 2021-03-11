@@ -1,9 +1,9 @@
 ---
-seo-title: Ativar áudio de fundo
 title: Ativar áudio de fundo
-uuid: 1e7319f5-ee16-47bd-bfd5-d3dcfe69bf4b
+description: Ativar áudio de fundo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Ativar áudio de fundo {#enable-background-audio}
 
-Para habilitar a reprodução de áudio quando o aplicativo estiver em segundo plano, o aplicativo deve chamar `enableAudioPlaybackInBackground` a API do MediaPlayer com true como argumento quando o player estiver no estado PREPARADO.
+Para ativar a reprodução de áudio quando o aplicativo estiver em segundo plano, o aplicativo deve chamar a API `enableAudioPlaybackInBackground` do MediaPlayer com o argumento true quando o player estiver no estado PREPARED.
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-O aplicativo deve pausar a reprodução quando perde o foco de áudio durante eventos como responder ao telefone, etc. O trecho de código a seguir demonstra como implementar o `OnAudioFocusChangeListener`:
+O aplicativo deve pausar a reprodução quando perder o foco de áudio durante eventos como responder ao telefone, etc. O seguinte fragmento de código demonstra como implementar o `OnAudioFocusChangeListener`:
 
 ```
 /** 
