@@ -1,13 +1,10 @@
 ---
-description: No AdobeTVSDKConfig.json, é possível especificar regras padrão, bem como regras para zonas específicas.
-seo-description: No AdobeTVSDKConfig.json, é possível especificar regras padrão, bem como regras para zonas específicas.
-seo-title: Exemplo de regras de seleção criativa
+description: No AdobeTVSDKConfig.json, você pode especificar regras padrão, bem como regras para zonas específicas.
 title: Exemplo de regras de seleção criativa
-uuid: 0a079544-20c1-4e08-a7e3-7617e72da43a
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Exemplo de regras de seleção criativa {#sample-creative-selection-rules}
 
-No AdobeTVSDKConfig.json, é possível especificar regras padrão, bem como regras para zonas específicas.
+No AdobeTVSDKConfig.json, você pode especificar regras padrão, bem como regras para zonas específicas.
 
 ## Exemplo de regras padrão {#section_xy4_3fx_hz}
 
-A seguir está um exemplo de um arquivo [!DNL AdobeTVSDKConfig.json] que define somente as regras padrão:
+Este é um exemplo de um arquivo [!DNL AdobeTVSDKConfig.json] que define somente as regras padrão:
 
 ```
 {
@@ -69,7 +66,7 @@ A seguir está um exemplo de um arquivo [!DNL AdobeTVSDKConfig.json] que define 
 
 ## Exemplo de regras padrão com regras de zona adicionais {#section_ocv_3fx_hz}
 
-A seguir está um exemplo de um arquivo [!DNL AdobeTVSDKConfig.json] que define as regras padrão, além de regras adicionais para uma ID de zona específica (neste caso, zone **&quot;1234&quot;**):
+A seguir encontra-se um exemplo de um arquivo [!DNL AdobeTVSDKConfig.json] que define regras padrão, além de regras adicionais para uma ID de zona específica (neste caso, zona **&quot;1234&quot;**):
 
 ```
 {
