@@ -1,20 +1,19 @@
 ---
 title: Notas de versão do Primetime
-seo-title: Notas de versão do Adobe Primetime
-description: 'null'
-seo-description: 'null'
+description: Notas de versão do Primetime
+copied-description: true
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 31%
+source-wordcount: '342'
+ht-degree: 32%
 
 ---
 
 
 # Notas de versão do Primetime
 
-Bem-vindo às Notas de versão do Adobe Primetime. Os documentos listados na navegação à esquerda fornecem informações específicas da versão, requisitos do sistema, limitações, problemas corrigidos e problemas conhecidos.
+Bem-vindo às Notas de versão da Adobe Primetime. Os documentos listados na navegação à esquerda fornecem informações específicas da versão, requisitos do sistema, limitações, problemas corrigidos e problemas conhecidos.
 
 ## Melhorias e correções no PTAI 21.2.2
 
@@ -54,6 +53,6 @@ Consulte para obter mais informações sobre a versão lançada atual para [iOS]
 
 * [Autenticação do Primetime](https://tve.helpdocsonline.com/home)
 
-* [Fóruns de DRM do Adobe Primetime](https://forums.adobe.com/community/adobe_access)
+* [Fóruns de DRM da Adobe Primetime](https://forums.adobe.com/community/adobe_access)
 
 * [Recursos do desenvolvedor do Adobe Primetime](https://www.adobe.com/devnet/primetime.html)
