@@ -1,20 +1,17 @@
 ---
-description: Você pode usar a API do Primetime Player para personalizar o comportamento do player.
-seo-description: Você pode usar a API do Primetime Player para personalizar o comportamento do player.
-seo-title: Resumo das classes do player Primetime
-title: Resumo das classes do player Primetime
-uuid: ca245d58-43a7-412a-93ac-a90d664b0eb9
+description: Você pode usar a API do Player do Primetime para personalizar o comportamento do reprodutor.
+title: Resumo das classes do player do Primetime
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '63'
 ht-degree: 0%
 
 ---
 
 
-# Resumo das classes do player Primetime {#primetime-player-classes-summary}
+# Resumo das classes do player do Primetime {#primetime-player-classes-summary}
 
-Você pode usar a API do Primetime Player para personalizar o comportamento do player.
+Você pode usar a API do Player do Primetime para personalizar o comportamento do reprodutor.
 
-Para ver a documentação completa da API para o TVSDK do navegador, acesse [Referências da API do Adobe Primetime](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
+Para ver a documentação completa da API do Browser TVSDK, vá para [Adobe Primetime API References](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
