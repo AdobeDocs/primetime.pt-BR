@@ -1,13 +1,10 @@
 ---
-description: Antes de usar a maioria dos métodos do player TVSDK, o player deve estar em um status válido.
-seo-description: Antes de usar a maioria dos métodos do player TVSDK, o player deve estar em um status válido.
-seo-title: Aguardar um estado válido
+description: Antes de usar a maioria dos métodos do reprodutor TVSDK, o reprodutor deve estar em um status válido.
 title: Aguardar um estado válido
-uuid: ad9df366-c443-4e6b-a7ab-658d5691eb94
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
@@ -15,8 +12,8 @@ ht-degree: 0%
 
 # Aguarde um estado válido {#wait-for-a-valid-state}
 
-Antes de usar a maioria dos métodos do player TVSDK, o player deve estar em um status válido.
+Antes de usar a maioria dos métodos do reprodutor TVSDK, o reprodutor deve estar em um status válido.
 
-O player se move por vários status. Aguardar o status correto do player garante que o recurso de mídia tenha sido carregado com êxito. Se o player não tiver pelo menos o status necessário, muitos métodos do player lançarão `IllegalStateException`.
+O reprodutor passa por vários status. Aguardar o status correto do reprodutor garante que ele tenha sido carregado com êxito. Se o reprodutor não tiver pelo menos o status necessário, muitos métodos do reprodutor exibirão `IllegalStateException`.
 
 O status necessário geralmente é `PTMediaPlayerStatusReady`.
