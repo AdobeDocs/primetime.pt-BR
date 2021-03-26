@@ -2,7 +2,7 @@
 title: Anúncios de Ad Insertion Adobe Primetime
 description: Anúncios sobre lançamentos de recursos recentes e outras notícias relacionadas sobre o Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Redução de erros de anúncios programáticos por meio de tempos limite de resolução de anúncios
 
-Publicado em 1° de dezembro de 2000
+Publicado em 1 de dezembro de 2020
 
 O Adobe tem como foco ajudar nossos clientes do Ad Insertion Primetime a maximizar a monetização de seu inventário de anúncios. Prestamos especial atenção à redução da complexidade de atender à demanda programática, que representa mais de três quartos dos gastos com vídeo eMarketer dos EUA. A venda programática permite que os editores maximizem a demanda de seu inventário de anúncios, levando a maiores taxas de preenchimento e rendimento. Mas também aumenta a exposição a erros de anúncio, como respostas VAST malformadas, erros HTTP e outros que podem levar à perda de receita e/ou a experiências ruins do visualizador.
 
