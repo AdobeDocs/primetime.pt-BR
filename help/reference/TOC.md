@@ -1,12 +1,11 @@
 ---
-cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Documentação de referência do Primetime
 user-guide-description: Fornece informações detalhadas sobre as funções do TVSDK, estruturas de dados e outras construções de programação.
 user-guide-url: /content/en/primetime/reference/api-references.html
 translation-type: tm+mt
-source-git-commit: 53014028cf1a9cb48f93781cbbb4aec3e2bcc523
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '20'
 ht-degree: 75%
