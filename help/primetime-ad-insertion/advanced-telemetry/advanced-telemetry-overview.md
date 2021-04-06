@@ -1,15 +1,16 @@
 ---
 title: Telemetria avançada
-description: null
+description: Telemetria avançada
+copied-description: true
+exl-id: 3a030dc8-c3e5-4bf5-9d69-58cfa880bf6a
 translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '68'
 ht-degree: 0%
 
 ---
 
-
 # Telemetria avançada {#advanced-telemetry}
 
-Os clientes têm a capacidade de usar o Primetime Ad Insertion para capturar eventos e métricas relacionadas a anúncios e sessões para descobrir as principais causas de erros de conteúdo e anúncios para obter insights sobre o desempenho de vídeos e anúncios.  As solicitações de anúncio podem ser capturadas no nível de solicitação bruta, permitindo que os operadores depurem tags VAST ou VMAP específicas provenientes diretamente dos provedores.
+Os clientes têm a capacidade de usar o Primetime Ad Insertion para capturar métricas e eventos relacionados a anúncios e sessões para descobrir as principais causas de erros de conteúdo e anúncios para obter insights sobre o desempenho de vídeos e anúncios.  As solicitações de anúncios podem ser capturadas no nível bruto da solicitação, dando aos operadores a capacidade de depurar tags VAST ou VMAP específicas provenientes diretamente de provedores.
