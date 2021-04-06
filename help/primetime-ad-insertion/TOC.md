@@ -3,9 +3,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Ajuda do Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+source-git-commit: 9cf1312024ee755e0c99213899c89c015731b66f
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '176'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 + [Ad Insertion Adobe Primetime](home.md)
 + Anúncios de Ad Insertion do Primetime{#announcements}
    + [Anúncios](announcements/overview.md)
-   + [Notas de versão](/help/release-notes/ptai-21x-release-notes.md)
+   + [Notas de versão](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-21x-release-notes.html)
 + Introdução ao Primetime Ad Insertion{#get-started}
    + [Visão geral](getting-started/get-started-overview.md)
    + [Preparar-se para utilizar o Primetime Ad Insertion](getting-started/setup-ptai.md)
@@ -28,7 +28,7 @@ ht-degree: 4%
 + Transcodificação just-in-time{#just-in-time-transcoding}
    + [Visão geral](just-in-time-transcoding/jit-transcoding-overview.md)
    + [Transcodificação e normalização](just-in-time-transcoding/transcoding-and-normalization.md)
-   + [Entrega e armazenamento](just-in-time-transcoding/delivery-and-storage.md)
+   + [Entrega e armazenamento](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
    + [API de pré-transcodificação](just-in-time-transcoding/pre-transcoding-api.md)
    + [Suporte para injeção de ID3](just-in-time-transcoding/id3-injection-support.md)
 + Recursos avançados{#advanced-features}
