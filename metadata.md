@@ -1,6 +1,6 @@
 ---
 cloud: Experience Cloud
-type: Documentação
+type: Documentation
 product: adobe primetime
 solution: Primetime
 git-repo: https://git.corp.adobe.com/AdobeDocs/primetime.pt-BR
