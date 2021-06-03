@@ -2,9 +2,9 @@
 title: Notas de versão do PTAI 21.5.1
 description: As notas de versão da PTAI descrevem as novidades ou alterações, os problemas resolvidos e conhecidos no Primetime Ad Insertion no ano de 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 02e43df4d9b58b4b1ed8fdbc086771bbf3380c0f
+source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -15,20 +15,22 @@ As notas de versão do Primetime Ad Insertion 21.x.x descrevem as novidades ou a
 
 ## Novidades do PTAI 21.5.1
 
-Quando:  Quarta-feira, 26 de maio de 2021, das 3:30 às 06:30, horário do leste do país
+Quando:  Quarta-feira, 26 de maio de 2021, das 3:30 às 06:30 Hora do Leste
 
 * Adição de suporte para o tipo de segmentação obsoleta 0x01 (UPID) para formatos de sinalização baseados em SCTE.
+
 * Nova telemetria adicionada para alterações futuras do painel.
 
 ## Aprimoramentos e correções nas versões anteriores
 
 ### Versão 21.4.1
 
-**Quando:** quinta-feira, 22 de abril de 2021, das 2:00 AM às 5:00 AM ORIENTAL
+**Quando:** quinta-feira, 22 de abril de 2021, das 2:00 AM às 5:00 Hora do leste
 
 **Alterações**
 
 * A limitação de solicitação de sessão será ativada para proteção contra possíveis ataques de DDOS. As sessões serão limitadas a 10 solicitações por segundo, com um limite de 100 solicitações em fila. Não prevemos qualquer impacto nos jogadores que se comportam de acordo com as especificações de HLS/DASH.
+
 * Outras melhorias de manutenção e segurança
 
 ### Versão 21.2.2
