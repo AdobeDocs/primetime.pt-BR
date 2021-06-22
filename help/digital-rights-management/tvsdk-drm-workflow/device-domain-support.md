@@ -1,14 +1,13 @@
 ---
 description: Normalmente, todas as licenças de DRM do Primetime, no momento da criação, estão vinculadas a um dispositivo exclusivo. Esse vínculo impede que os usuários compartilhem licenças em diferentes dispositivos sem autorização. Além do vínculo por dispositivo, o DRM do Primetime fornece a capacidade de vincular licenças a um domínio do dispositivo ou a um grupo de dispositivos.
 title: Reproduzir conteúdo criptografado usando o suporte de domínio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
+source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
-
 
 # Suporte ao domínio do dispositivo {#device-domain-support}
 
@@ -32,6 +31,6 @@ Para reproduzir conteúdo criptografado usando o Primetime DRM , execute as segu
    1. Chamar `DRMManager.addToDeviceGroup()`
 1. Obtenha a licença do conteúdo executando uma das seguintes tarefas:
    1. Use o método `DRMManager.loadVoucher()`.
-   1. Obtenha a licença de um dispositivo diferente registrado no mesmo grupo de dispositivos e forneça a licença para ` DRMManager` por meio do método `DRMManager.storeVoucher()`.
+   1. Obtenha a licença de um dispositivo diferente registrado no mesmo grupo de dispositivos e forneça a licença para `DRMManager` por meio do método `DRMManager.storeVoucher()`.
 1. Reproduzir o conteúdo criptografado usando o método `Primetime.play()`.
 Para exportar a licença para o conteúdo, qualquer um dos dispositivos pode fornecer os bytes brutos da licença usando o método `DRMVoucher.toByteArray()` após obter a licença do servidor de licenças DRM do Primetime. Os provedores de conteúdo normalmente limitam o número de dispositivos em um grupo de dispositivos. Se o limite for atingido, talvez seja necessário chamar o método `DRMManager.removeFromDeviceGroup()` em um dispositivo não utilizado antes de registrar o dispositivo atual.
