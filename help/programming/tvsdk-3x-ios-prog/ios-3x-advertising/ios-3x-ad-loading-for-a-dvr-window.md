@@ -24,7 +24,7 @@ Quando um usuário começa a visualizar o conteúdo no início de um fluxo de DV
 
 Para controlar o carregamento de anúncio de uma janela DVR:
 
-    Para carregar todos os anúncios para todo o fluxo, defina a propriedade `PTAdMetadata.enableDVRAds&#39; como &#39;YES&#39;.
+    Para carregar todos os anúncios para todo o fluxo, defina a propriedade &grave;PTAdMetadata.enableDVRAds&#39; como &#39;YES&#39;.
 
 >[!NOTE]
 >
