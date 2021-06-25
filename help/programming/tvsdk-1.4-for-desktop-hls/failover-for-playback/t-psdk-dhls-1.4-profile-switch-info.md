@@ -52,7 +52,7 @@ Quando o reprodutor de mídia alterna seu perfil atual para um novo perfil, voc�
     </tbody>
 </table>
 
-    Estes são alguns exemplos de strings retornadas &quot;description`:
+    Estes são alguns exemplos de strings retornadas &quot;description&grave;:
     
      &quot;
      &quot;Bitrate:=up;Motivo::=Adaptação de Rede;&quot;
