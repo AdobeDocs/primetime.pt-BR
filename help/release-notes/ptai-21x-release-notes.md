@@ -1,27 +1,56 @@
 ---
-title: Notas de versão do PTAI 21.5.1
+title: Notas de versão do PTAI 21.8.1
 description: As notas de versão da PTAI descrevem as novidades ou alterações, os problemas resolvidos e conhecidos no Primetime Ad Insertion no ano de 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
-# Notas de versão do Primetime Ad Insertion 21.5.1
+# Notas de versão do Primetime Ad Insertion 21.8.1
 
-As notas de versão do Primetime Ad Insertion 21.x.x descrevem as novidades ou alterações, os problemas resolvidos e os problemas conhecidos no Primetime Ad Insertion em 2021.
+As notas de versão do Primetime Ad Insertion 21.x.x descrevem as novidades ou alterações, os problemas resolvidos e os problemas conhecidos no Primetime Ad Insertion em 2021
 
-## Novidades do PTAI 21.5.1
+<!---
+Primetime Ad Insertion 21.9.1
+When: Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM EASTERN
+
+
+
+
+
+
+
+
+
+What:  Primetime Ad Insertion 21.9.1
+
+When:  Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM Eastern Time
+
+Changes:
+
+* Updates to infrastructure components behind PTAI’s mediation and reporting components (Primetime Ads GUI)
+-->
+
+## Novidades do PTAI 21.8.1
+
+Quando: Terça-feira, 24 de agosto de 2021, das 2:00 AM às 05:00 Hora do leste
+
+* Adição de suporte para fluxos DASH Live/ Linear (VOD já tem suporte).
+
+## Aprimoramentos e correções nas versões anteriores
+
+### Versão 21.5.1
 
 Quando:  Quarta-feira, 26 de maio de 2021, das 3:30 às 06:30 Hora do Leste
+
+**Alterações**
 
 * Adição de suporte para o tipo de segmentação obsoleta 0x01 (UPID) para formatos de sinalização baseados em SCTE.
 
 * Nova telemetria adicionada para alterações futuras do painel.
-
-## Aprimoramentos e correções nas versões anteriores
 
 ### Versão 21.4.1
 
