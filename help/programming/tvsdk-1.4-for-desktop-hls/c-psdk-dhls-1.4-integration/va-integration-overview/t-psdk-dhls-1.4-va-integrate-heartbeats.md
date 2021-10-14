@@ -1,14 +1,13 @@
 ---
 description: Você pode configurar o player para rastrear e analisar o uso do vídeo.
 title: Inicializar e configurar análises de vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 58d560d1-f668-4e1d-a817-b2e02008fdbe
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
-
 
 # Inicializar e configurar análises de vídeo{#initialize-and-configure-video-analytics}
 
@@ -27,7 +26,7 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
   </tr> 
   <tr> 
    <td colname="col1"> Ponto de extremidade do servidor de rastreamento do Video Analytics </td> 
-   <td colname="col2"> O URL do ponto de extremidade da coleção de back-end da análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  O URL do servidor de rastreamento do visitante é o mesmo do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o Serviço de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementar o Serviço de ID </a>. </p> </td> 
+   <td colname="col2"> O URL do ponto de extremidade da coleção de back-end da análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  O URL do servidor de rastreamento do visitante é o mesmo do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o Serviço de ID de visitante, consulte <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementar o Serviço de ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nome da conta </td> 
@@ -182,4 +181,3 @@ Para configurar o rastreamento de vídeo no player:
       >[!TIP]
       >
       >Essa API é opcional e não é necessária para o rastreamento de vídeo VOD.
-

@@ -1,20 +1,19 @@
 ---
-title: TVSDK 3.13 para Notas de versão do Android
-description: TVSDK 3.13 para Notas de versão do Android descreve o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK Android 3.13
+title: TVSDK 3.14 para Notas de versão do Android
+description: TVSDK 3.14 para Notas de versão do Android descreve o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK Android 3.14
 products: SG_PRIMETIME
 topic-tags: release-notes
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
+source-git-commit: 988bcf8cbc0175e15bcc899a6f6954cc31c5e127
 workflow-type: tm+mt
-source-wordcount: '5443'
+source-wordcount: '5480'
 ht-degree: 0%
 
 ---
 
+# TVSDK 3.14 para Notas de versão do Android {#tvsdk-for-android-release-notes}
 
-# TVSDK 3.13 para Notas de versão do Android {#tvsdk-for-android-release-notes}
-
-TVSDK 3.13 para Notas de versão do Android descreve o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK Android 3.13.
+TVSDK 3.14 para Notas de versão do Android descreve o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK Android 3.14.
 
 O reprodutor de referência Android está incluído com o Android TVSDK no diretório samples/ de sua distribuição. O arquivo README.md associado explica como criar o reprodutor de referência.
 
@@ -30,17 +29,21 @@ O TVSDK para Android oferece muitas melhorias de desempenho em relação às ver
 
 O conjunto abrangente de recursos suportados e não suportados é apresentado na seção [Matriz de recursos](#feature-matrix) das notas de versão.
 
-## Android TVSDK 3.13
+## Android TVSDK 3.14
+
+Essa versão corrige o problema em que o aplicativo falha quando o nó [!UICONTROL CDATA] está vazio para qualquer um dos elementos [!UICONTROL ClickTracking], [!UICONTROL CustomClick] ou [!UICONTROL CompanionClickTracking] na resposta VAST.
+
+### Novos recursos e melhorias nas versões anteriores
+
+**Android TVSDK 3.13**
 
 O fluxo de DRM widevine congela ou mostra quadros pretos no switch ABR em dispositivos FireTV, incluindo os dispositivos Pendant da Fire TV de terceira geração e Fire TV Cube de 1ª e 2ª geração.
 
 Para resolver o problema, defina a API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` para os dispositivos Fire TV especificados antes de iniciar a reprodução. O valor padrão é false.
 
-### Novos recursos e melhorias nas versões anteriores
+**Android TVSDK 3.12**
 
-## Android TVSDK 3.12
-
-A versão de gradle do aplicativo Primetime Reference foi atualizada para a versão 5.6.4.
+Atualização da versão de gradle do aplicativo Primetime Reference para a versão 5.6.4.
 
 Para configurar e executar o aplicativo de referência usando o Android Studio, siga as instruções do arquivo ReadMe disponível com TVSDK zip em `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`.
 
@@ -307,7 +310,7 @@ Quando o TVSDK abre uma conexão, ele solicita ao servidor uma conexão *keep-al
 
    * **Integração de moat -** Suporte para medição da visualização de anúncios do Mat.
 
-   * **Banners complementares -** Banners complementares são exibidos ao lado de um anúncio linear e, frequentemente, continuam sendo exibidos na exibição após o fim do anúncio. Esses banners podem ser do tipo html (um trecho HTML) ou do tipo iframe (um URL para uma página de iframe).
+   * **Banners complementares -** Banners complementares são exibidos ao lado de um anúncio linear e, frequentemente, continuam sendo exibidos na exibição após o fim do anúncio. Esses banners podem ser do tipo html (um trecho de HTML) ou do tipo iframe (um URL para uma página de iframe).
 
 * **Analytics**
 
@@ -423,13 +426,19 @@ Nas tabelas de recursos abaixo, um &quot;Y&quot; indica que o recurso é compat�
 
 Sempre que a resolução estiver associada a um problema reportado, uma referência do Zendesk será exibida, por exemplo, ZD#xxxxx.
 
-**Android TVSDK 3.12**
 
-Esta seção fornece um resumo do problema resolvido na versão TVSDK 3.12 do Android.
 
-* ZD#40584 - O aplicativo Primetime Reference não é criado com a versão de gradle mais recente.
+**Android TVSDK 3.14**
+
+Esta seção fornece um resumo do problema resolvido na versão TVSDK 3.14 do Android.
+
+* ZD#46903 - O aplicativo falha quando o nó [!UICONTROL CDATA] está vazio para qualquer um dos elementos [!UICONTROL ClickTracking], [!UICONTROL CustomClick] ou [!UICONTROL CompanionClickTracking] na resposta [!UICONTROL VAST].
 
 ### Solução de problemas nas versões anteriores
+
+**Android TVSDK 3.12**
+
+* ZD#40584 - O aplicativo Primetime Reference não é criado com a versão de gradle mais recente.
 
 **Android TVSDK 3.11**
 

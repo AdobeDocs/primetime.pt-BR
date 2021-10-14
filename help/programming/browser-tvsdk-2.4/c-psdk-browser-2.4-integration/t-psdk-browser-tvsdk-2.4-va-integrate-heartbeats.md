@@ -2,10 +2,9 @@
 description: Você pode configurar o player para rastrear e analisar o uso do vídeo.
 title: Inicializar e configurar análises de vídeo
 exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
-translation-type: tm+mt
-source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -26,7 +25,7 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
   </tr>
   <tr>
    <td colname="col1"> Ponto de extremidade do servidor de rastreamento do Video Analytics </td>
-   <td colname="col2"> O URL do ponto de extremidade da coleção de back-end da análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  O URL do servidor de rastreamento do visitante é o mesmo do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o Serviço de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementar o Serviço de ID </a>. </p> </td>
+   <td colname="col2"> O URL do ponto de extremidade da coleção de back-end da análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  O URL do servidor de rastreamento do visitante é o mesmo do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o Serviço de ID de visitante, consulte <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementar o Serviço de ID </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Nome da conta </td>
@@ -59,7 +58,7 @@ Para configurar o rastreamento de vídeo no player:
    * A única opção de configuração da biblioteca VisitorAPI é o URL do endpoint de back-end que fornece o identificador exclusivo para o usuário atual.
    * O URL do servidor de rastreamento do visitante é o mesmo do servidor de rastreamento do Analytics.
 
-      Para obter informações sobre como implementar o Serviço de ID de visitante, consulte [Implementação do Serviço de ID de visitante](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
+      Para obter informações sobre como implementar o Serviço de ID de visitante, consulte [Implementação do Serviço de ID de visitante](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
