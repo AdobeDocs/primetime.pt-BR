@@ -2,19 +2,19 @@
 title: Referências da API do Adobe Primetime
 description: As APIs ajudam a criar um aplicativo funcional ou uma integração rápida e fácil.
 topic-tags: API-references
-translation-type: tm+mt
-source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
+exl-id: 6862764e-c1d8-413a-a0c0-66b31eac8e53
+source-git-commit: bf9adba0bace7e1327446d936c4bfe27f66fb2ac
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
 
-
-# Referência da API do Adobe Primetime {#api-references}
+# Referências da API do Adobe Primetime {#api-references}
 
 + Ad Insertion dinâmico do Primetime {#server-side}
    + [Referência da API do Bootstrap](../primetime-ad-insertion/technical-reference/bootstrap-api.md)
+   + [Referência da API de relatório](../primetime-ad-insertion/assets/auditude-report-api.pdf)
 
 + TVSDK 3.12 {#tvsdk-312}
    + [TVSDK 3.12 para Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
@@ -48,7 +48,7 @@ ht-degree: 0%
    + [TVSDK 1.4 para Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)
    + [TVSDK 1.4 para iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/index.html)
 
-+ APIs de DRM {#drm-apis}
++ APIs DRM {#drm-apis}
    + [APIs do cliente DRM para Android](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/index.html)
    + [APIs do cliente DRM para iOS](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/index.html)
    + [APIs do servidor SDK DRM](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/)
