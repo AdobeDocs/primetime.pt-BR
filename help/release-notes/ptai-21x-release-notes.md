@@ -1,25 +1,31 @@
 ---
-title: Notas de versão do PTAI 21.10.1
+title: Notas de versão do PTAI 21.11.1
 description: As notas de versão da PTAI descrevem as novidades ou alterações, os problemas resolvidos e conhecidos no Primetime Ad Insertion no ano de 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 7d754e95d8a6c5d92382e3d20fe2c9096f2162ea
+source-git-commit: b58fea35be528c4c030eab39fde9dd642d90cb58
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
 
-# Notas de versão do Primetime Ad Insertion 21.10.1
+# Notas de versão do Primetime Ad Insertion 21.11.1
 
 As notas de versão do Primetime Ad Insertion 21.xx.x descrevem as novidades ou alterações, os problemas resolvidos e os problemas conhecidos no Primetime Ad Insertion em 2021.
 
-## Novidades do PTAI 21.10.1
+## Novidades do PTAI 21.11.1
 
-Quando:  Terça-feira, 12 de outubro de 2021, das 7h45 às 13h45, Hora do Leste
+Quando: terça-feira, 9 de novembro de 2021, das 1:30 às 04:30 Hora do leste
 
-* Essa versão é focada na consolidação de servidores, removendo servidores não relacionados à produção e servidores não úteis.
+* [!UICONTROL EXT-X-IMAGE-STREAM-INF] agora é configurável por zona.
 
 ## Aprimoramentos e correções nas versões anteriores
+
+### Versão 21.10.1
+
+Quando: Terça-feira, 12 de outubro de 2021, das 7h45 às 13h45, Hora do Leste
+
+* Servidores consolidados, servidores não relacionados à produção e não úteis removidos.
 
 ### Versão de manutenção do Primetime Ad Insertion
 
@@ -41,7 +47,7 @@ Quando: Terça-feira, 24 de agosto de 2021, das 2:00 AM às 05:00 Hora do leste
 
 ### Versão 21.5.1
 
-Quando:  Quarta-feira, 26 de maio de 2021, das 3:30 às 06:30 Hora do Leste
+Quando: Quarta-feira, 26 de maio de 2021, das 3:30 às 06:30 Hora do Leste
 
 **Alterações**
 
@@ -51,7 +57,7 @@ Quando:  Quarta-feira, 26 de maio de 2021, das 3:30 às 06:30 Hora do Leste
 
 ### Versão 21.4.1
 
-**Quando:** quinta-feira, 22 de abril de 2021, das 2:00 AM às 5:00 Hora do leste
+**Quando:** Quinta-feira, 22 de abril de 2021, das 2:00 AM às 5:00 Hora do Leste
 
 **Alterações**
 
@@ -61,7 +67,7 @@ Quando:  Quarta-feira, 26 de maio de 2021, das 3:30 às 06:30 Hora do Leste
 
 ### Versão 21.2.2
 
-**Quando:** terça-feira, 23 de fevereiro de 2021, das 1:00 AM às 04:00 Hora do leste
+**Quando:** Terça-feira, 23 de fevereiro de 2021, das 1:00 AM às 04:00 Hora do leste
 
 **Alterações**
 
@@ -69,7 +75,7 @@ Quando:  Quarta-feira, 26 de maio de 2021, das 3:30 às 06:30 Hora do Leste
 
 ### Versão 21.2.1
 
-**Quando:** quarta-feira, 3 de fevereiro de 2021, das 1:00 AM às 04:00 Hora do leste
+**Quando:** Quarta-feira, 3 de fevereiro de 2021, das 1:00 AM às 04:00 Hora do leste
 
 **Alterações**
 
@@ -85,7 +91,7 @@ Quando:  Quarta-feira, 26 de maio de 2021, das 3:30 às 06:30 Hora do Leste
 
 ### Versão 21.1.1
 
-**Quando:** quarta-feira, 13 de janeiro de 2021, das 01:00 às 04:00 Hora do leste
+**Quando:** Quarta-feira, 13 de janeiro de 2021, das 01:00 AM às 04:00 Hora do leste
 
 **Alterações**
 
