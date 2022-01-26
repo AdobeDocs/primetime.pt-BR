@@ -1,14 +1,13 @@
 ---
 description: Essas classes descrevem eventos que o TVSDK envia para o seu reprodutor de mídia em resposta a várias atividades.
 title: Classes de eventos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a349984a-5e47-4895-a56f-ef25eb372c79
+source-git-commit: 776d3d1668f063f1595bd3ecb53603171905014a
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
-
 
 # Classes de eventos {#events-classes}
 
@@ -22,7 +21,7 @@ Pacote: [com.adobe.mediacore.events](https://help.adobe.com/en_US/primetime/api/
 | [AdClickEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdClickEvent.html) | Classe. O usuário clicou em um anúncio. |
 | [AdPlaybackEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html) | Classe. O reprodutor reproduziu um anúncio. |
 | [BufferEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html) | Classe. O reprodutor iniciou ou parou o buffering. |
-| [CustomAdEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/CustomAdEvent.html) | Classe. O reprodutor exibe o status de carregamento do anúncio personalizado e pode ignorar anúncios que tenham erros ou que estejam demorando muito para serem carregados. |
+| [CustomAdEvent](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-1-4-for-desktop-hls/advertising/custom-ads/r-psdk-dhls-1.4-custom-ad-events.html?lang=en) | Classe. O reprodutor exibe o status de carregamento do anúncio personalizado e pode ignorar anúncios que tenham erros ou que estejam demorando muito para serem carregados. |
 | [DRMMetadataInfoEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/DRMMetadataInfoEvent.html) | Classe. Os novos metadados de DRM estão associados ao item atual. |
 | [LoadInformationEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/LoadInformationEvent.html) | Classe. As informações de download estão disponíveis para o fluxo de mídia atual que está sendo reproduzido. |
 | [MediaPlayerItemEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html) | Classe. Um item do reprodutor de mídia foi criado. |
