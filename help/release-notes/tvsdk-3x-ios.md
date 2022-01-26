@@ -2,7 +2,7 @@
 title: Notas de versão do TVSDK 3.13 para iOS
 description: As Notas de versão do TVSDK 3.13 para iOS descrevem as novidades ou alterações, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.13.
 exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: d2c8133f126db44b9c505dc0a21ba208fd6c01c8
+source-git-commit: 92defeee19a430c8b0b66696c527a6abe377f4b9
 workflow-type: tm+mt
 source-wordcount: '7587'
 ht-degree: 0%
@@ -1084,7 +1084,7 @@ Adição de uma notificação para detectar quando a reprodução parou.
 
 * (ZD #3193) Solicitação de uma API de alteração de perfil no TVSDK
 
-Atualizado `PTPlaybackInformation` para expor as`Bitrate. Updated `BITRATE_CHANGE` deve ser mais confiável em tempo e precisa para as taxas de bits reportadas do M3U8.
+Atualizado `PTPlaybackInformation` para expor a taxa de bits indicada atualizada. Atualizado `BITRATE_CHANGE` notificação para ser mais confiável em tempo e precisa para as taxas de bits relatadas no M3U8.
 
 * (ZD #3324) Problema de relatório de anúncios do Primetime quando não há mídia de anúncio no VMAP
 
