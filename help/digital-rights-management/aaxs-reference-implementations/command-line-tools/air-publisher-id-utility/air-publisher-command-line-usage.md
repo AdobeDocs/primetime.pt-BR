@@ -2,14 +2,13 @@
 title: Uso da linha de comando
 description: Uso da linha de comando
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 67056085-beb5-4f54-8962-369bc32d7907
+source-git-commit: 79cab347d0daa01549fbf8a9b37bf0a91c14648e
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
 
 ---
-
 
 # Uso da linha de comando {#command-line-usage}
 
@@ -28,11 +27,10 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* `signaturefile` especifica o caminho para o arquivo signature.xml do aplicativo AIR, localizado no  [!DNL META-INF] diretório de aplicativos
+* `signaturefile` especifica o caminho para o arquivo signature.xml do aplicativo AIR, localizado nos aplicativos [!DNL META-INF] diretory
 
 * `signingcert` especifica o certificado usado para assinar o aplicativo AIR
 
 >[!NOTE]
 >
->Para determinar a ID do editor de um aplicativo iOS, use a opção `-s` e especifique o certificado usado para assinar o aplicativo iOS. ***A Adobe Primetime é necessária para criar aplicativos iOS que possam reproduzir conteúdo*** protegido por acesso.
-
+>Para determinar a ID do publicador de um aplicativo do iOS, use a variável `-s` e especifique o certificado usado para assinar o aplicativo do iOS. ***O Adobe Primetime é necessário para criar aplicativos iOS que possam reproduzir conteúdo protegido pelo acesso***.
