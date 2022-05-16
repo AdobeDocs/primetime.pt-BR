@@ -1,14 +1,13 @@
 ---
 description: Você pode decidir se deseja resolver somente os anúncios que ocorrem após o ponto ativo atual do usuário ou também resolver os anúncios que ocorrem antes do ponto ativo atual.
 title: Carregar anúncio para uma janela DVR
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3e8542a8-0912-4023-904d-0fdb28411a9d
+source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
-
 
 # Carregar anúncio para uma janela DVR {#load-ad-for-a-dvr-window}
 
@@ -24,11 +23,11 @@ Quando um usuário começa a visualizar o conteúdo no início de um fluxo de DV
 
 Para controlar o carregamento de anúncio de uma janela DVR:
 
-    Para carregar todos os anúncios para todo o fluxo, defina a propriedade &grave;PTAdMetadata.enableDVRAds&#39; como &#39;YES&#39;.
+Para carregar todos os anúncios para o fluxo inteiro, defina a variável `PTAdMetadata.enableDVRAds` propriedade para `YES`.
 
 >[!NOTE]
 >
->O valor padrão é `NO`, e essa opção carrega anúncios somente do ponto ativo atual.
+>O valor padrão é `NO`e essa opção carrega anúncios somente do ponto ativo atual.
 
 Por exemplo:
 
