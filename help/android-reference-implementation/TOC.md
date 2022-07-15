@@ -3,11 +3,10 @@ product: primetime
 audience: end-user
 user-guide-title: Ajuda de implementação de referência do Primetime
 user-guide-description: Ajuda a entender o TVSDK e modificar os gerentes de recursos para personalizar o seu reprodutor pessoal.
-translation-type: tm+mt
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +17,7 @@ ht-degree: 7%
 + Implementação de referência do Primetime {#reference}
    + [Como usar a implementação de referência do Primetime](ref-implementation/how-to-use-ref-player.md)
    + [Estrutura de execução de referência](ref-implementation/ref-player-structure.md)
-   + Como usar gerentes de recursos {#feature-managers}
+   + Como usar os gerentes de recursos {#feature-managers}
       + [Como usar os gerentes de recursos](ref-implementation/using-feature-managers/how-to-use-feature-managers.md)
       + [Criando gerentes de recursos transmitindo informações de configuração ao MediaPlayer...](ref-implementation/using-feature-managers/creating-feature-managers.md)
       + [Ativar ou desativar recursos usando o ManagerFactory](ref-implementation/using-feature-managers/turning-features-on-off.md)
@@ -38,7 +37,7 @@ ht-degree: 7%
       + [Objeto JSON para marcadores de anúncio personalizados](set-up-dev-environment/exploring-code/json-custom-ad-markers.md)
       + [Objeto JSON para ID de recurso de direito](set-up-dev-environment/exploring-code/json-entitlement-resource-id.md)
       + [Exemplo de formato de feed JSON](set-up-dev-environment/exploring-code/example-json-feed-format.md)
-   + Implementar a reprodução de vídeo {#implement-video}
+   + Implementar a reprodução do vídeo {#implement-video}
       + [Operações essenciais de reprodução de vídeo](implement-video-playback/video-playback.md)
       + [Ativar a reprodução de vídeo](implement-video-playback/enable-video-playback.md)
       + [Proteção de conteúdo DRM](implement-video-playback/content-protection.md)
