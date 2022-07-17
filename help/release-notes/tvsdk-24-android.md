@@ -3,16 +3,15 @@ title: Notas de versão do TVSDK 2.4.1 para Android
 description: TVSDK 2.4.1 para Notas de versão do Android descreve os recursos novos e compatíveis e os problemas conhecidos e limitações no TVSDK Android 2.4.1.
 topic-tags: release-notes
 products: SG_PRIMETIME
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '1963'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
 
-
-# TVSDK 2.4.1 para Notas de versão do Android {#tvsdk-for-android-release-notes}
+# Notas de versão do TVSDK 2.4.1 para Android {#tvsdk-for-android-release-notes}
 
 TVSDK 2.4.1 para Notas de versão do Android descreve os recursos novos e compatíveis e os problemas conhecidos e limitações no TVSDK Android 2.4.1.
 
@@ -26,15 +25,15 @@ Aqui está a documentação:
 
 ・ Sistema de ajuda online TVSDK 2.4 para Ajuda do Android
 
-・ [Javadocs TVSDK 2.4 para API Java do Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/index.html)
+・ ・ [Javadocs TVSDK 2.4 para API Java do Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/index.html)
 
 Os Javadocs são a autoridade mais avançada, pois são gerados automaticamente diretamente do código fonte do TVSDK.
 
-・ [Documentação da API C++ TVSDK 2.4 para API C++ do Android](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
+・ ・ [Documentação da API C++ TVSDK 2.4 para API C++ do Android](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
 
 Cada classe Java tem uma classe C++ correspondente, e a documentação C++ contém mais material explicativo do que os Javadocs, portanto, consulte a documentação C++ para obter uma compreensão mais profunda da API Java.
 
-・ Guia de migração ([TVSDK 2.4 para Guia de migração do Android](../migration-guides/tvsdk-14-25-android.md))
+・ Guia de migração ([Guia de migração do TVSDK 2.4 para Android](../migration-guides/tvsdk-14-25-android.md))
 
 Este guia explica o que você precisa modificar para migrar um aplicativo com base em TVSDK 1.4 para um com base em TVSDK 2.4.
 
@@ -48,12 +47,12 @@ Estes são os principais novos recursos da versão 2.4.1:
 
 * Recursos da versão 4 do HLS
 
-   * **Reprodução de vídeo**  (reproduzir, pausar, buscar) com controle de player para fluxos ao vivo, lineares e VOD.
+   * **Reprodução de vídeo** (reproduzir, pausar, buscar) com controle de player para fluxos ao vivo, linear e VOD.
    * **Legendas ocultas.** O TVSDK pode exibir legendas ocultas 608/708 com uma seleção de fontes, tamanhos de fonte, cores e plano de fundo. Ele também pode oferecer suporte a vídeos com legendas de roll-up e alternar entre faixas de idioma, se estiverem disponíveis.
-   * **Os** modelos Trick play avançam e recuam para fluxos HLS que usam I-Frames. Todos os controles de reprodução de vídeo funcionam no conteúdo. O movimento lento (para a frente) está disponível para o modo de reprodução de vídeo externo com taxas entre 0 e 1.
-   * **A ABR (Adaptive bitrate)** permite que o reprodutor selecione dinamicamente qual das várias versões do mesmo fluxo de conteúdo deve ser reproduzido, com base na rede e em outras condições. Você pode definir parâmetros dinamicamente ou no arquivo de manifesto para selecionar entre políticas de seleção agressivas, moderadas e conservadoras.
-   * **Os** intervalos de bytes permitem que um único arquivo TS contenha vários segmentos TS.
-   * **A** representação de áudio alternativa permite que o reprodutor alterne entre as faixas de áudio disponíveis.
+   * **Modo de reprodução de truque** O suporta avanço rápido e retrocesso para fluxos HLS que usam I-Frames. Todos os controles de reprodução de vídeo funcionam no conteúdo. O movimento lento (para a frente) está disponível para o modo de reprodução de vídeo externo com taxas entre 0 e 1.
+   * **Taxa de bits adaptável (ABR)** permite que o reprodutor selecione dinamicamente qual das várias versões do mesmo fluxo de conteúdo deve ser reproduzido, com base na rede e em outras condições. Você pode definir parâmetros dinamicamente ou no arquivo de manifesto para selecionar entre políticas de seleção agressivas, moderadas e conservadoras.
+   * **Intervalos de bytes** permitir que um único arquivo TS contenha vários segmentos TS.
+   * **Representações de áudio alternativas** habilite o reprodutor a alternar entre as faixas de áudio disponíveis.
    * **Suporte para ID3.** O TVSDK pode reproduzir fluxos de áudio e vídeo HLS que contêm metadados de áudio ID3, como nome do artista, título e álbum.
    * **Failover. **O TVSDK usa estratégias para continuar a reprodução ininterrupta, apesar das falhas de servidores de host, arquivos de lista de reprodução e segmentos.
    * **Passagem de áudio multicanal (DD+).** O TVSDK pode transmitir dados de áudio Dolby Digital Plus (E-AC3) para o hardware de suporte.
@@ -69,26 +68,26 @@ Estes são os principais novos recursos da versão 2.4.1:
       * Rotação IV
 
 * **Reprodução AES 128.** O TVSDK pode reproduzir conteúdo HLS padrão de criptografia avançada (AES) com tamanho de chave de 128 bits.
-* **O HLS protegido (PHLS)** fornece um conjunto limitado de políticas de DRM pré-criadas, um subconjunto do que o Adobe Access fornece, para habilitar o DRM leve sobre o HLS para fluxos dinâmicos e VOD.
+* **HLS protegido (PHLS)** O fornece um conjunto limitado de políticas de DRM pré-criadas, um subconjunto do que o Adobe Access fornece, para habilitar o DRM leve sobre HLS para fluxos dinâmicos e de VOD.
 
 * Conteúdo de publicidade/alternativo e recursos de monetização
 
    * **Rastreamento de anúncios inseridos no servidor.** O TVSDK pode rastrear anúncios inseridos pelo serviço de inserção de anúncios da Adobe Cloud. Ele suporta anúncios lineares nos formatos VAST2, VAST3 e VMAP para fluxos VOD e live/lineares.
-   * **Tags HLS personalizadas.** O TVSDK usa sua  `MediaPlayerConfig` classe para habilitar a notificação do aplicativo do reprodutor quando tags HLS personalizadas são exibidas no fluxo.
+   * **Tags HLS personalizadas.** O TVSDK usa `MediaPlayerConfig` classe para habilitar a notificação do aplicativo do player quando tags HLS personalizadas forem exibidas no fluxo.
    * **Inserção de anúncio no lado do cliente.** A biblioteca Auditude e inserção funciona com servidores da Adobe Auditude para resolver anúncios para inserção dinamicamente em conteúdo ativo, linear e VOD, em posições precedentes, intermediárias ou posteriores.
-   * **Resolvedores de anúncios personalizados.** As  `ContentResolver, OpportunityGenerator,` interfaces  `MediaPlayerClientFactory` e permitem implementar um resolvedor de conteúdo de anúncio/alternativo personalizado e registrar um detector de oportunidade personalizado para trabalhar com TVSDK. As classes `TestAdResolver` e `AuditudeResolver` fornecem exemplos de C++ da implementação de um resolvedor de conteúdo. Você pode encontrar um exemplo de Javascript em `samples/jspsdk/testapp/psdk.js`.
-   * **Comportamento consistente do anúncio.** Use a  `AdPolicySelector` interface para permitir um comportamento consistente em todos os players para operações como busca e truques de reprodução quando anúncios estão presentes no conteúdo. Se você não implementar o seu próprio, o TVSDK usará `DefaultAdPolicySelector`.
+   * **Resolvedores de anúncios personalizados.** O `ContentResolver, OpportunityGenerator,` e `MediaPlayerClientFactory` as interfaces permitem implementar um resolvedor de conteúdo de anúncio/alternativo personalizado e registrar um detector de oportunidade personalizado para trabalhar com o TVSDK. O `TestAdResolver` e `AuditudeResolver` As classes fornecem exemplos de C++ da implementação de um resolvedor de conteúdo. Você pode encontrar um exemplo de Javascript em `samples/jspsdk/testapp/psdk.js`.
+   * **Comportamento consistente do anúncio.** Use o `AdPolicySelector` para permitir um comportamento consistente em todos os players para operações como busca e truques de reprodução quando anúncios estão presentes no conteúdo. Se você não implementar o seu próprio, o TVSDK usará `DefaultAdPolicySelector`.
    * **Remova/substitua anúncios C3.** Use a API TVSDK apropriada para remover intervalos de conteúdo personalizados e inserir dinamicamente novos anúncios sem trabalho de preparação adicional. Isso é útil quando o conteúdo ao vivo/linear é transmitido e imediatamente disponibilizado sob demanda sem limpeza.
 
 Estes são os principais novos recursos da versão 2.4:
 
-* **Instantâneo para VOD e** liveQuando você ativa instantaneamente, o TVSDK inicializa e armazena mídia em buffer antes do início da reprodução. Como você pode iniciar várias instâncias `MediaPlayerItemLoader` simultaneamente em segundo plano, é possível fazer o buffer de vários fluxos. Quando um usuário altera o canal e o fluxo é armazenado em buffer corretamente, a reprodução no novo canal é iniciada imediatamente. O TVSDK 2.4 também é compatível com o Instant On para fluxos ao vivo. Os fluxos ao vivo são rearmazenados em buffer quando a janela ao vivo se move.
+* **Instantâneo para VOD e ao vivo** Quando você ativa o instantâneo, o TVSDK inicializa e armazena em buffer a mídia antes do início da reprodução. Porque você pode iniciar vários `MediaPlayerItemLoader` instâncias simultaneamente em segundo plano, é possível fazer o buffer de vários fluxos. Quando um usuário altera o canal e o fluxo é armazenado em buffer corretamente, a reprodução no novo canal é iniciada imediatamente. O TVSDK 2.4 também é compatível com o Instant On para fluxos ao vivo. Os fluxos ao vivo são rearmazenados em buffer quando a janela ao vivo se move.
 
 * **Melhorias de desempenho **A nova arquitetura TVSDK 2.4 traz várias melhorias de desempenho:
 
-   * **Subsegmentação**  - O TVSDK reduz ainda mais o tamanho de cada fragmento para iniciar a reprodução o mais rápido possível.
-   * **Downloads de anúncios paralelos**  - O TVSDK busca previamente anúncios em paralelo à reprodução do conteúdo antes de clicar no ad break, permitindo uma reprodução contínua de anúncios e conteúdo.
-   * **Resolução de anúncio ociosa**  - com esse recurso, não esperamos a resolução de anúncios não pré-implantados antes de iniciar a reprodução, diminuindo assim o tempo de inicialização. As APIs como busca e trick-play ainda não são permitidas até que todos os anúncios sejam resolvidos.
+   * **Subsegmentação** - O TVSDK reduz ainda mais o tamanho de cada fragmento para iniciar a reprodução o mais rápido possível.
+   * **Downloads de anúncios paralelos** - O TVSDK busca previamente anúncios em paralelo à reprodução do conteúdo antes de clicar nas quebras de anúncio, permitindo uma reprodução contínua de anúncios e conteúdo.
+   * **Resolução de anúncio preguiçosa** - Com esse recurso, não esperamos a resolução de anúncios não pré-realizáveis antes de iniciar a reprodução, diminuindo assim o tempo de inicialização. As APIs como busca e trick-play ainda não são permitidas até que todos os anúncios sejam resolvidos.
 
 * **Reprodução de conteúdo MP4**
 
@@ -122,7 +121,7 @@ A nova lógica ABR é baseada no comprimento do buffer, na taxa de alteração d
 
 O TVSDK coleta automaticamente métricas, de acordo com o contrato de vendas do cliente, para gerar relatórios de uso periódicos necessários para fins de faturamento. Em cada evento de início de fluxo, o TVSDK usa a API de inserção de dados do Adobe Analytics para enviar métricas de faturamento, como tipo de conteúdo, sinalizadores ativados para inserção de anúncio e sinalizadores habilitados para drm - com base na duração do fluxo faturável - para o conjunto de relatórios pertencente ao Adobe Analytics Primetime. Isso não interfere ou é incluído nos próprios conjuntos de relatórios ou chamadas de servidor do Adobe Analytics do cliente. Mediante solicitação, esse relatório de uso de faturamento é enviado periodicamente aos clientes. Esta é a primeira fase do recurso de faturamento que suporta somente cobrança de uso. Ele pode ser configurado com base no contrato de vendas usando as APIs descritas na documentação.
 
-## Recursos compatíveis {#supported-features}
+## Recursos suportados {#supported-features}
 
 O TVSDK para Android 2.4 é compatível com diversos recursos que podem ser implementados para adicionar funcionalidade aos seus aplicativos de vídeo.
 
@@ -222,7 +221,7 @@ O TVSDK para Android 2.4 é compatível com diversos recursos que podem ser impl
    <td>Ö (apenas VOD)</td> 
   </tr>
   <tr>
-   <td>Depuração de miniaturas (Iframe e JPEG)</td> 
+   <td>Depuração em miniatura (Iframe e JPEG)</td> 
    <td>VOD + Ao vivo</td> 
    <td>Não suportado</td> 
    <td>Não suportado</td> 
@@ -360,7 +359,7 @@ O TVSDK para Android 2.4 é compatível com diversos recursos que podem ser impl
  </tbody>
 </table>
 
-## Recursos de proteção de conteúdo {#content-protection-features}
+## Recursos da proteção de conteúdo {#content-protection-features}
 
 | **Recurso** | **Tipo de conteúdo** | **HLS** | **PASH** |
 |---|---|---|---|
@@ -372,7 +371,7 @@ O TVSDK para Android 2.4 é compatível com diversos recursos que podem ser impl
 | Rotação de licença | VOD + Ao vivo | Somente DRM do Primetime | Não suportado |
 | Rotação da Chave | VOD + Ao vivo | Somente DRM do Primetime | Não suportado |
 
-### Recursos de integração {#integration-features}
+### Recursos da integração {#integration-features}
 
 | **Recurso** | **Tipo de conteúdo** | **HLS** | **PASH** |
 |---|---|---|---|
@@ -399,7 +398,7 @@ Essa versão do TVSDK apresenta os seguintes problemas:
 * A configuração da legenda de fechamento para idiomas CJK não funciona.
 * O vídeo pode sair do modo de truque automaticamente entre VOD e live.
 * VHL - chamadas de pulsação incorretas são enviadas quando iniciamos um conteúdo de um deslocamento.
-* Quando anúncios VPAID são reproduzidos, as chamadas de pulsação de VHL para event:type:play ad estão ausentes.
+* Quando anúncios VPAID são reproduzidos, as chamadas de pulsação VHL são para o evento:type:o anúncio de reprodução está ausente.
 * O anúncio precedente é reproduzido mesmo quando o SKIP adBreakPolicy é escolhido.
 * Depois de entrar no player de estado completo, retorna ao estado Reprodução com SKIP adBreakPolicy para anúncios pós-rolagem.
 
@@ -407,4 +406,4 @@ Sem vídeo, não há dimensão do visor e sem uma dimensão do visor, não é po
 
 ## Recursos úteis {#helpful-resources}
 
-* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte do Adobe Primetime](https://helpx.adobe.com/support/primetime.html) .
+* Consulte a documentação completa de ajuda em [Aprendizagem e suporte do Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) página.

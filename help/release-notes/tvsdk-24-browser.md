@@ -4,14 +4,13 @@ description: As Notas de versão do Browser TVSDK 2.4 descrevem os recursos novo
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 83fdf530-5cbb-41d9-ab2a-28e117f04488
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
 source-wordcount: '6812'
 ht-degree: 0%
 
 ---
-
 
 # Notas de versão do Browser TVSDK 2.4 {#browser-tvsdk-release-notes}
 
@@ -29,13 +28,13 @@ O Browser TVSDK 2.4 fornece APIs JavaScript para criar aplicativos de vídeo bas
 
 Esta versão inclui as seguintes informações:
 
-・ [Documentação da API TVSDK do navegador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+・ ・ [Documentação da API TVSDK do navegador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
-・ [Guia de programação TVSDK do navegador](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf).
+・ ・ [Guia de programação TVSDK do navegador](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf).
 
-・ [TVSDK para 1.4 DHLS para Browser TVSDK 2.4 Migration Guide](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
+・ ・ [TVSDK para DHLS 1.4 para Guia de migração do Browser TVSDK 2.4](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
-・ [Convertendo do Browser TVSDK 2.4.6 para a versão 2.4.7](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html).
+・ ・ [Conversão do Browser TVSDK 2.4.6 para a versão 2.4.7](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html).
 
 ・ Uma implementação de referência, que está incluída na build.
 
@@ -53,7 +52,7 @@ A seguinte adição está disponível como parte da Atualização do Browser TVS
 
 * A implementação da API de volume do AdobePSDK.MediaPlayer foi alterada para permitir a reprodução automática no iOS quando a reprodução está sem áudio.
 
-・ Uma nova API, `auditudeSettings.ignoreVPAIDAds`, é adicionada para permitir ignorar anúncios VPAID recebidos do servidor Auditude. A API não funciona para o Fallback do Flash.
+・ Uma nova API, `auditudeSettings.ignoreVPAIDAds`, é adicionado para permitir ignorar anúncios VPAID recebidos do servidor Auditude. A API não funciona para o Fallback do Flash.
 
 **Versão 2.4.11**
 
@@ -61,15 +60,15 @@ Os seguintes aprimoramentos e adições estão disponíveis como parte da versã
 
 ・ O failover do segmento HLS Live é compatível com os modos de fallback MSE e Flash.
 
-・ O suporte para `AuditudeSettings.creativeRepackagingDomain` API também está disponível para MSE. Anteriormente, era compatível somente com o modo de fallback de Flash.
+・ Suporte para `AuditudeSettings.creativeRepackagingDomain` A API também está disponível para o MSE. Anteriormente, era compatível somente com o modo de fallback de Flash.
 
-・ A versão contém correções para problemas críticos de clientes. Consulte *Problemas corrigidos* em uma lista.
+・ A versão contém correções para problemas críticos de clientes. Consulte *Problemas corrigidos* uma lista.
 
 **Versão 2.4.10**
 
 Os seguintes aprimoramentos e adições estão disponíveis como parte da versão 2.4.10 do Browser TVSDK:
 
-・ O TVSDK fornece enableLogging() para ativar ou desativar o registro. Consulte a [documentação da API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)para obter detalhes sobre o uso.
+・ O TVSDK fornece enableLogging() para ativar ou desativar o registro. Consulte a [Documentação da API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)para uso.
 
 ・ O TVSDK não oferece mais suporte a Capítulos padrão ao usar o Adobe Analytics. Defina e gerencie capítulos usando seu aplicativo.
 
@@ -95,9 +94,9 @@ Classe AdobePSDK.ForceHttpsAdConfiguration.
 
 **Novo na atualização 2.4.8 (Build 6002)**
 
-Esta atualização contém correções para problemas críticos de clientes. Consulte *Problemas corrigidos* para obter a lista.
+Esta atualização contém correções para problemas críticos de clientes. Consulte *Problemas corrigidos*, para a lista.
 
-**Versão 2.4.9**
+**Versão 2.4.8**
 
 Os seguintes aprimoramentos e adições estão disponíveis como parte da versão 2.4.8 do Browser TVSDK:
 
@@ -125,7 +124,7 @@ Nesta ferramenta, você pode selecionar várias configurações, clicar em **Tes
 
 ・ Adição da API MediaPlayerItemConfig à estrutura da interface do usuário
 
-Vários recursos, incluindo advertisingMetadata, advertisingFactory, adSignalingMode, networkConfiguration, customRangeMetadata, useHardwareDecoder, subscribeTags, adTags, thumbnailScrubber, billingMetricsConfiguration, podem ser configurados por meio de MediaPlayerItemConfig. Para obter mais informações, consulte a documentação AdobePSDK.MediaPlayerItemConfig na [API TVSDK do navegador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [documentação](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+Vários recursos, incluindo advertisingMetadata, advertisingFactory, adSignalingMode, networkConfiguration, customRangeMetadata, useHardwareDecoder, subscribeTags, adTags, thumbnailScrubber, billingMetricsConfiguration, podem ser configurados por meio de MediaPlayerItemConfig. Para obter mais informações, consulte a documentação AdobePSDK.MediaPlayerItemConfig no [API TVSDK do navegador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* [documentação](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
 Na Estrutura da interface do usuário, a maneira de passar as configurações de rede pela configuração do reprodutor foi modificada.
 
@@ -161,11 +160,11 @@ Na Estrutura da interface do usuário, a maneira de passar as configurações de
 
 As configurações de DRM e o Rastreamento do Analytics podem ser ativados por meio da Estrutura da interface do usuário.
 
-* Adição da API `AdobePSDK.embedSWFinFullScreenDiv`
+* Adição de `AdobePSDK.embedSWFinFullScreenDiv` API
 
 Essa nova API fornece flexibilidade ao aplicativo do player para selecionar a div na qual ele pode incorporar o arquivo FlashFallback.swf.
 
-* Substituída a `getVersion`API da classe `AdobePSDK.MediaPlayer` pela classe `AdobePSDK.Version` para informações relacionadas à versão do TVSDK. Para obter detalhes, consulte `AdobePSDK.Version` API [aqui](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
+* Substituído `getVersion`API de `AdobePSDK.MediaPlayer` classe com `AdobePSDK.Version` classe para informações relacionadas à versão do TVSDK. Para obter detalhes, consulte `AdobePSDK.Version` API [here](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
 
 **Versão 2.4.6**
 
@@ -189,7 +188,7 @@ Os seguintes recursos são novos na versão 2.4.5:
 
 * **Reproduções e anúncios completos do evento**
 
-   Os fluxos de Reprodução de evento completo (FER) do HLS agora são compatíveis com a resolução do anúncio e os comportamentos do anúncio. Para ativar esse suporte, defina o modo de sinalização de anúncio como `MANIFEST_CUES` ao criar o objeto `MediaPlayerItemConfig`.
+   Os fluxos de Reprodução de evento completo (FER) do HLS agora são compatíveis com a resolução do anúncio e os comportamentos do anúncio. Para ativar esse suporte, defina o modo de sinalização de anúncio como `MANIFEST_CUES` ao criar o `MediaPlayerItemConfig` objeto.
 
 * **Suporte a ScalePolicy MediaplayerView**
 
@@ -201,7 +200,7 @@ Os seguintes recursos são novos na versão 2.4.5:
 
 * **Aplicação seletiva do`withCredentials`**
 
-Quando `withCredentials` é definido como true, o cabeçalho `Access-Control-Allow-Origin` não pode ser definido como um curinga. Dependendo da resposta do servidor, o TVSDK do navegador definirá seletivamente o atributo `withCredentials`. Para obter mais informações sobre esse suporte, consulte [Documentos da API TVSDK do navegador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+When `withCredentials` está definido como verdadeiro, a variável `Access-Control-Allow-Origin` não é possível definir o cabeçalho como curinga. Dependendo da resposta do servidor, o TVSDK do navegador definirá seletivamente a variável `withCredentials` atributo. Para obter mais informações sobre esse suporte, consulte [Documentos da API do TVSDK do navegador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
 **Versão 2.4.4**
 
@@ -233,11 +232,11 @@ Os seguintes recursos foram novos na versão 2.4.2:
 
 * **Paridade da API**
 
-Para obter uma lista completa da paridade da API, consulte o [TVSDK para 1.4 DHLS para Browser TVSDK 2.4 Migration Guide](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
+Para obter uma lista completa da paridade da API, consulte [TVSDK para DHLS 1.4 para Guia de migração do Browser TVSDK 2.4](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
 * **Suporte para AES de exemplo**
 
-   Esta versão adiciona suporte para reprodução de conteúdo criptografado AES de exemplo no fallback de MSE e Flash. O requisito de hospedar conteúdo AES sobre a origem segura no Google Chrome foi removido.
+   Esta versão adiciona suporte para reprodução de conteúdo criptografado AES de exemplo no fallback de MSE e Flash. O requisito para hospedar conteúdo AES sobre a origem segura no Google Chrome foi removido.
 
 * **Suporte para contêineres AAC**
 
@@ -450,7 +449,7 @@ Esta é uma lista dos recursos suportados e não suportados para esta versão:
 
 Para obter mais informações sobre o suporte a recursos HLS ou DASH, consulte abaixo.
 
-## Matriz de recursos HLS {#hls-feature-matrix}
+## Matriz de recursos do HLS {#hls-feature-matrix}
 
 Esta é a matriz de recursos para os recursos HLS no Browser TVSDK.
 
@@ -891,23 +890,23 @@ Os seguintes recursos são compatíveis:
 
 Esta é a matriz de recursos para os recursos DASH no Browser TVSDK.
 
-・ *Recursos de reprodução principal DASH*
+・ ・ *Recursos de reprodução principal DASH*
 
-・ *Recursos avançados de reprodução DASH*
+・ ・ *Recursos de reprodução avançada DASH*
 
-・ *Recursos de proteção de conteúdo DASH*
+・ ・ *Recursos de proteção de conteúdo DASH*
 
-・ *Recursos de inserção de anúncio principal do DASH*
+・ ・ *Recursos de inserção de anúncio principal do DASH*
 
-・ *DASH Recursos avançados de inserção de anúncios*
+・ ・ *Recursos avançados de inserção de anúncios do DASH*
 
-・ *Integrações DASH*
+・ ・ *Integrações de DASH*
 
 >[!NOTE]
 >
 >Nas tabelas de matriz de recursos abaixo, um Y significa que o recurso é suportado na versão atual.
 
-### Recursos DASH {#dash-features}
+### Recursos do DASH {#dash-features}
 
 Os seguintes recursos são compatíveis:
 
@@ -1235,13 +1234,13 @@ Os seguintes recursos são compatíveis:
 
 Os seguintes problemas foram corrigidos na Atualização 2.4.12 do Browser TVSDK (Build 204):
 
-・ **21647**- O TVSDK deve permitir a reprodução automática de vídeo em dispositivos iOS quando o áudio estiver sem áudio.
+・ ・ **21647**- O TVSDK deve permitir a reprodução automática de vídeo em dispositivos iOS quando o áudio estiver sem áudio.
 
-・ **21465**- O Acesso ao Sistema de Chave de Erro Negado é recebido ao reproduzir um fluxo DASH protegido por DRM após a reprodução de um fluxo DASH Live.
+・ ・ **21465**- Error Key System Access Denied (Acesso negado ao sistema de chave de erro é recebido ao reproduzir um fluxo DASH protegido por DRM depois que um fluxo DASH Live é reproduzido.
 
-・ **21442**- Habilite a reprodução automática de conteúdo na Web iOS, depois que o anúncio de pré-lançamento for reproduzido com um gesto de usuário.
+・ ・ **21442**- Ative a reprodução automática de conteúdo no iOS Web, após a reprodução do anúncio de pré-lançamento com um gesto de usuário.
 
-・ **21240**- API fornecida para filtrar anúncios VPAID analisados a partir de Auditude/VMAP.
+・ ・ **21240**- API fornecida para filtrar anúncios VPAID analisados do Auditude/VMAP.
 
 **Problemas corrigidos na versão 2.4.11**
 
@@ -1249,23 +1248,23 @@ Os seguintes problemas foram corrigidos no Browser TVSDK versão 2.4.11:
 
 **Recursos da reprodução principal:**
 
-・ **19192**: O TVSDK agora implementa TextFormat:bottomInset e TextFormat:safeArea. Devido a esses aprimoramentos, as legendas ocultas podem ser reposicionadas se a barra de controle for exibida na tela.
+・ ・ **19192**: O TVSDK agora implementa TextFormat:bottomInset e TextFormat:safeArea. Devido a esses aprimoramentos, as legendas ocultas podem ser reposicionadas se a barra de controle for exibida na tela.
 
-・ **21009**: As legendas ocultas persistem na tela em caso de descontinuidade até que novas legendas sejam exibidas.
+・ ・ **21009**: As legendas ocultas persistem na tela em caso de descontinuidade até que novas legendas sejam exibidas.
 
-・ **21141**: A busca de retorno é rejeitada devido a uma condição de corrida durante a anexação do segmento.
+・ ・ **21141**: A busca de retorno é rejeitada devido a uma condição de corrida durante a anexação do segmento.
 
-・ **21142**: Disponibilizar intervalos de reprodução pesquisáveis quando o reprodutor estiver no estado INICIALIZADO. Devido a essas alterações, a sessão de início na posição agora é suportada.
+・ ・ **21142**: Disponibilizar intervalos de reprodução pesquisáveis quando o reprodutor estiver no estado INICIALIZADO. Devido a essas alterações, a sessão de início na posição agora é suportada.
 
-・ **21363**: As legendas ocultas 608/708 estão fora de sincronia após a inserção do anúncio para os fluxos DASH.
+・ ・ **21363**: As legendas ocultas 608/708 estão fora de sincronia após a inserção do anúncio para os fluxos DASH.
 
 **Recursos de inserção de anúncio:**
 
-・ **21179**: Problemas relacionados ao mid-roll (pausas longas, quadros pretos) com conteúdo VOD agora são resolvidos definindo corretamente a propriedade ad.primaryAsset.adParameters .
+・ ・ **21179**: Problemas relacionados ao mid-roll (pausas longas, quadros pretos) com conteúdo VOD agora são resolvidos definindo corretamente a propriedade ad.primaryAsset.adParameters .
 
-・ **21257**: O arquivo MP4 com a maior taxa de bits é selecionado para transcodificação se MP4 não for um tipo MIME válido e o recurso de reempacotamento criativo estiver ativado.
+・ ・ **21257**: O arquivo MP4 com a maior taxa de bits é selecionado para transcodificação se MP4 não for um tipo MIME válido e o recurso de reempacotamento criativo estiver ativado.
 
-・ **21361**: O TVSDK agora passa o sistema de anúncios e a ID criativa da resposta do VAST como parâmetros de consulta na solicitação do pacote criativo para oferecer suporte a regras de normalização adicionais.
+・ ・ **21361**: O TVSDK agora passa o sistema de anúncios e a ID criativa da resposta do VAST como parâmetros de consulta na solicitação do pacote criativo para oferecer suporte a regras de normalização adicionais.
 
 **Problemas corrigidos na versão 2.4.10**
 
@@ -1273,19 +1272,19 @@ Os seguintes problemas foram corrigidos no Browser TVSDK versão 2.4.10:
 
 **Recursos da reprodução principal:**
 
-・ **21060**: Erro de codec inválido lançado com fluxos HLS que contêm descontinuidade e as caixas BMFF ISO são executadas até o fim do fluxo.
+・ ・ **21060**: Erro de codec inválido lançado com fluxos HLS que contêm descontinuidade e as caixas BMFF ISO são executadas até o fim do fluxo.
 
-・ **21045**: A reprodução automática não funciona no iOS após a conclusão da primeira reprodução de vídeo em uma lista de reprodução.
+・ ・ **21045**: A reprodução automática não funciona no iOS após a conclusão da primeira reprodução de vídeo em uma lista de reprodução.
 
-・ **20975**: A taxa de quadros é retornada como NaN pelo provedor de QoS no navegador Chrome.
+・ ・ **20975**: A taxa de quadros é retornada como NaN pelo provedor de QoS no navegador Chrome.
 
-・ **20823**: Erro de codec não suportado lançado ao encontrar segmentos sem dados.
+・ ・ **20823**: Erro de codec não suportado lançado ao encontrar segmentos sem dados.
 
-・ **20769**: O SDK agora inicia com a taxa de bits atual em busca, em vez de alternar imediatamente com base na política ABR.
+・ ・ **20769**: O SDK agora inicia com a taxa de bits atual em busca, em vez de alternar imediatamente com base na política ABR.
 
-・ **20031**: Quando no modo retrato do IE11 (Windows 8.1), a tela de vídeo fica pequena. Recurso de proteção de conteúdo:
+・ ・ **20031**: Quando no modo retrato do IE11 (Windows 8.1), a tela de vídeo fica pequena. Recurso de proteção de conteúdo:
 
-・ **19316**: Ignorar segmentos que falham na descriptografia no caso de fluxos AES-128 HLS.
+・ ・ **19316**: Ignorar segmentos que falham na descriptografia no caso de fluxos AES-128 HLS.
 
 **Problemas corrigidos na versão 2.4.9**
 
@@ -1293,133 +1292,133 @@ Os seguintes problemas foram corrigidos no Browser TVSDK versão 2.4.9:
 
 **Recursos da reprodução principal:**
 
-・ **13407**: Os fluxos DASH podem ser interrompidos se o Firefox parar de enviar o evento &quot;ontimeupdate&quot; durante a reprodução.
+・ ・ **13407**: Os fluxos DASH podem ser interrompidos se o Firefox parar de enviar o evento &quot;ontimeupdate&quot; durante a reprodução.
 
-・ **16380**: Durante a reprodução do conteúdo de vídeo de áudio muxed, de segmentos com horários de início não correspondentes via MSE, o Erro de sincronização de áudio entre representações é acumulado em switches ABR, resultando em Erro (problema de Chromium #663686).
+・ ・ **16380**: Durante a reprodução do conteúdo de vídeo de áudio muxed, de segmentos com horários de início não correspondentes via MSE, o Erro de sincronização de áudio entre representações é acumulado em switches ABR, resultando em Erro (problema de Chromium #663686).
 
-・ **17985**: Ao reproduzir um fluxo ISO-BMFF específico no navegador Firefox, a reprodução fica travada (problema do Firefox nº 1342913). Isso é corrigido desde o Firefox v53.
+・ ・ **17985**: Ao reproduzir um fluxo ISO-BMFF específico no navegador Firefox, a reprodução fica travada (problema do Firefox nº 1342913). Isso é corrigido desde o Firefox v53.
 
-・ **19141**: ReferenceError não captado (em promessa): largura não está definida.
+・ ・ **1914**: ReferenceError não captado (em promessa): largura não está definida.
 
-・ **18997, 19299**: Problema de cintilação de vídeo no limite do segmento. Isso ocorria, pois o SDK não calculava o deslocamento de tempo de Composição da última amostra corretamente.
+・ ・ **1897, 19299**: Problema de cintilação de vídeo no limite do segmento. Isso ocorria, pois o SDK não calculava o deslocamento de tempo de Composição da última amostra corretamente.
 
-・ **19780**: A reprodução não é iniciada para conteúdo HLS e anúncio HLS no Firefox v53 (problema do Firefox nº 354653).
+・ ・ **19780**: A reprodução não é iniciada para conteúdo HLS e anúncio HLS no Firefox v53 (problema do Firefox nº 354653).
 
-・ **20046**: A Data e Hora do Programa é recebida como chave em vez de valor quando recebida como objeto de metadados cronometrados.
+・ ・ **20046**: A Data e Hora do Programa é recebida como chave em vez de valor quando recebida como objeto de metadados cronometrados.
 
-・ **20047**: useDefaultResizeHandler gera um erro com o fallback do Flash.
+・ ・ **2004**: useDefaultResizeHandler gera um erro com o fallback do Flash.
 
-・ **20179**: Fallback do Flash não funciona com Flash Player v25.0.0.171.
+・ ・ **2017**: Fallback do Flash não funciona com Flash Player v25.0.0.171.
 
-・ **20293**: O Firefox interrompe os dados de buffering para determinados fluxos de HLS, levando à paralisação.
+・ ・ **20293**: O Firefox interrompe os dados de buffering para determinados fluxos de HLS, levando à paralisação.
 
-・ **20626**: O reprodutor gera um erro de decodificação de mídia no Chrome devido ao tratamento incorreto de amostras de vídeo com duração zero.
+・ ・ **20626**: O reprodutor gera um erro de decodificação de mídia no Chrome devido ao tratamento incorreto de amostras de vídeo com duração zero.
 
-・ **20078**: A reprodução é interrompida no erro de navegador &#39;QuotaExcedido&#39;.
+・ ・ **20078**: A reprodução é interrompida no erro de navegador &#39;QuotaExcedido&#39;.
 
-・ **18639**: No HLS Live stream 608 CC, o texto às vezes aparece como ortografia incorreta.
+・ ・ **18639**: No HLS Live stream 608 CC, o texto às vezes aparece como ortografia incorreta.
 
-・ **20028**: O parâmetro de tamanho ClosedCaptions não altera o tamanho da fonte.
+・ ・ **20028**: O parâmetro de tamanho ClosedCaptions não altera o tamanho da fonte.
 
-・ **20613**: As caixas de legendas ocultas se sobrepõem umas às outras, tornando-as ilegíveis.
+・ ・ **20613**: As caixas de legendas ocultas se sobrepõem umas às outras, tornando-as ilegíveis.
 
 **Recursos do Ad Insertion principal (CSAI):**
 
-・ **20043**: Impressão de anúncio ausente e chamadas de rastreamento de anúncios com vários anúncios e redirecionamentos de terceiros.
+・ ・ **20043**: Impressão de anúncio ausente e chamadas de rastreamento de anúncios com vários anúncios e redirecionamentos de terceiros.
 
-・ **20044**: Ao usar o reempacotamento criativo, todos os anúncios no ad break precisam ser reempacotados com êxito, caso contrário, o ad break é completamente descartado.
+・ ・ **2004**: Ao usar o reempacotamento criativo, todos os anúncios no ad break precisam ser reempacotados com êxito, caso contrário, o ad break é completamente descartado.
 
-・ **20097**: A reprodução do anúncio é ignorada e o conteúdo principal é retomado imediatamente, em vez de aguardar o tempo limite de 20 segundos se o manifesto do anúncio não estiver disponível.
+・ ・ **20097**: A reprodução do anúncio é ignorada e o conteúdo principal é retomado imediatamente, em vez de aguardar o tempo limite de 20 segundos se o manifesto do anúncio não estiver disponível.
 
 **Problemas corrigidos na atualização da versão 2.4.8 (Build 6002)**
 
 Os seguintes problemas foram corrigidos na Atualização do Browser TVSDK versão 2.4.8 (Build 6002):
 
-・ **14126:** A reprodução pode parar no Firefox (problema nº 1316024) devido a uma lacuna interna no buffer de origem MSE. Tente buscar para retomar a reprodução
+・ ・ **14126:** A reprodução pode ser interrompida no Firefox (edição nº 1316024) devido a uma lacuna interna no buffer de origem MSE. Tente buscar para retomar a reprodução
 
-・ **19608:** Correção para honrar o valor de deslocamento de tempo da resposta Auditude VMAP.
+・ ・ **19608:** Correção para honrar o valor de deslocamento de tempo da resposta do VMAP do Auditude.
 
-・ **19635:** Corrige a Parada de Vídeo no Internet Explorer 11 no Windows 10.
+・ ・ **19635:** Corrige a paralisação de vídeo no Internet Explorer 11 no Windows 10.
 
-・ **19761:** Correções para problemas ABR com HLS.
+・ ・ **19761:** Correções para problemas de ABR com HLS.
 
-・ **19780:** Corrige a reprodução do anúncio com o conteúdo HLS que foi quebrado no Mozilla Firefox v53.
+・ ・ **19780:** Corrige a reprodução do anúncio com conteúdo HLS que foi quebrado no Mozilla Firefox v53.
 
-・ **1987 e 1974:** Os problemas corrigem a inconsistência na seleção da taxa de bits após uma operação de busca. Agora, a seleção da taxa de bits na busca é o valor mais baixo da taxa de bits atual e da taxa de bits na inicialização.
+・ ・ **1987 e 1974:** Os problemas corrigem a inconsistência na seleção da taxa de bits após uma operação de busca. Agora, a seleção da taxa de bits na busca é o valor mais baixo da taxa de bits atual e da taxa de bits na inicialização.
 
-・ **19881:** A reprodução travada e a sobreposição de buffering aparece por um tempo infinito após a busca ser executada por 3 a 4 vezes.
+・ ・ **19881:** A reprodução travada e a sobreposição de buffering aparece por tempo infinito após a busca ser executada por 3 a 4 vezes.
 
-・ **19884:** Confirmar a conformidade com os requisitos do Chrome 59 Beta Verified Media Path (VMP). O bTVSDK foi capaz de reproduzir o conteúdo de DRM da Widevine com o Chrome 59 Beta.
+・ ・ **19884:** Confirme a conformidade com os requisitos do Chrome 59 Beta Verified Media Path (VMP). O bTVSDK foi capaz de reproduzir o conteúdo de DRM da Widevine com o Chrome 59 Beta.
 
-・ **19916:** A reprodução de DRM em UI-Framework foi interrompida. Agora, chama acquisitionLicense mesmo se não houver uma política nos metadados.
+・ ・ **19916:** A reprodução de DRM na estrutura da interface do usuário foi interrompida. Agora, chama acquisitionLicense mesmo se não houver uma política nos metadados.
 
 **Problemas corrigidos na versão 2.4.8**
 
 Os seguintes problemas foram corrigidos na versão 2.4.8 do Browser TVSDK:
 
-・ **10075**: Ao buscar antes da linha do tempo, o evento de conclusão de reprodução não foi recebido no Firefox e no Chrome e o evento de busca não foi recebido no Firefox.
+・ ・ **10075**: Ao buscar antes da linha do tempo, o evento de conclusão de reprodução não foi recebido no Firefox e no Chrome e o evento de busca não foi recebido no Firefox.
 
-・ **15775**: Reproduzir evento concluído não recebido no Windows 8.1 Internet Explorer.
+・ ・ **15775**: Reproduzir evento concluído não recebido no Windows 8.1 Internet Explorer.
 
-・ **17306**: Para fluxos SSAI, a reprodução é compatível. O rastreamento de anúncios compilados não é suportado.
+・ ・ **17306**: Para fluxos SSAI, a reprodução é compatível. O rastreamento de anúncios compilados não é suportado.
 
-・ **19142**: Às vezes, o retrocesso faz com que o reprodutor de vídeo permaneça no estado de buffer para sempre.
+・ ・ **19142**: Às vezes, o retrocesso faz com que o reprodutor de vídeo permaneça no estado de buffer para sempre.
 
-・ **19218**: Os marcadores de anúncios não estão disponíveis por meio da estrutura da interface do usuário.
+・ ・ **19218**: Os marcadores de anúncios não estão disponíveis por meio da estrutura da interface do usuário.
 
-・ **19219**: A reprodução de anúncios só não funciona pela estrutura da interface do usuário.
+・ ・ **19.219**: A reprodução de anúncios só não funciona pela estrutura da interface do usuário.
 
-・ **1922**: A chave AES-128 é solicitada uma vez para uma lista de reprodução e as solicitações subsequentes são atendidas a partir do cache. Anteriormente, era solicitado para cada segmento.
+・ ・ **1922**: A chave AES-128 é solicitada uma vez para uma lista de reprodução e as solicitações subsequentes são atendidas a partir do cache. Anteriormente, era solicitado para cada segmento.
 
-・ **19597**: &quot;TypeError não captado: Não é possível ler a propriedade &quot;log&quot; de indefinido&quot; foi vista com compilações de canário do Chrome.
+・ ・ **19597**: &quot;TypeError não captado: Não é possível ler a propriedade &quot;log&quot; de indefinido&quot; foi vista com compilações de canário do Chrome.
 
-・ **19605**: adRequestDomain não estava disponível no modo Fallback de Flash.
+・ ・ **19605**: adRequestDomain não estava disponível no modo Fallback de Flash.
 
-・ **19608**: Anúncios VMAP não estavam sendo inseridos para fluxos HLS ao vivo. O SDK agora considera os marcadores de sinalização e não depende dos valores de deslocamento de tempo nas respostas do VMAP.
+・ ・ **19608**: Anúncios VMAP não estavam sendo inseridos para fluxos HLS ao vivo. O SDK agora considera os marcadores de sinalização e não depende dos valores de deslocamento de tempo nas respostas do VMAP.
 
-・ **19637**: Somente a reprodução de anúncios resulta em erro de script no fim do anúncio.
+・ ・ **19637**: Somente a reprodução de anúncios resulta em erro de script no fim do anúncio.
 
-・ **19732**: As solicitações da lista de reprodução do CRS falhavam com o erro 404. As solicitações 1401 e 1403 do Browser TVSDK foram atualizadas para resolver isso.
+・ ・ **19732**: As solicitações da lista de reprodução do CRS falhavam com o erro 404. As solicitações 1401 e 1403 do Browser TVSDK foram atualizadas para resolver isso.
 
-・ **19762**: acquisitionLicense costumava ser chamado antes de setAuthenticationToken por causa do qual uma licença válida era retornada, independentemente da validade do token. Isso foi corrigido agora e o acquisitionLicense é chamado somente após a resposta de setAuthenticationToken.
+・ ・ **19762**: acquisitionLicense costumava ser chamado antes de setAuthenticationToken por causa do qual uma licença válida era retornada, independentemente da validade do token. Isso foi corrigido agora e o acquisitionLicense é chamado somente após a resposta de setAuthenticationToken.
 
 **Problemas corrigidos na versão 2.4.7**
 
 Os seguintes problemas foram corrigidos na versão 2.4.7:
 
-・ **8397**: Os fluxos ao vivo do HLS gerados pelo Adobe Medium Server podem não ser reproduzidos se os segmentos não começarem com um quadro Chave.
+・ ・ **8397**: Os fluxos ao vivo do HLS gerados pelo Adobe Medium Server podem não ser reproduzidos se os segmentos não começarem com um quadro Chave.
 
-・ **13606**: Vários problemas relacionados à Busca foram corrigidos para o fluxo de HLS no navegador Chrome.
+・ ・ **13606**: Vários problemas relacionados à Busca foram corrigidos para o fluxo de HLS no navegador Chrome.
 
-・ **14807**: No navegador Chrome, se a busca ou pausa for acionada imediatamente após play(), a reprodução pode parar com o erro DOMException: A solicitação play() foi interrompida por uma chamada ...(Chromium número 593273).
+・ ・ **14807**: No navegador Chrome, se a busca ou pausa for acionada imediatamente após play(), a reprodução pode parar com o erro DOMException: A solicitação play() foi interrompida por uma chamada ...(Chromium número 593273).
 
-・ **19085**: Os parâmetros do MediaPlayer, como volume, abrControlParameters e ccStyle, não são definidos como Padrões na redefinição do reprodutor.
+・ ・ **19085**: Os parâmetros do MediaPlayer, como volume, abrControlParameters e ccStyle, não são definidos como Padrões na redefinição do reprodutor.
 
 **Problemas corrigidos na versão 2.4.6**
 
 O seguinte problema foi corrigido na versão 2.4.6:
 
-・ **18093**: TimedMetadata para a tag ao lado da tag subscrita é retornado quando você usa a versão 24 do Flash Player no modo Fallback do Flash.
+・ ・ **18093**: TimedMetadata para a tag ao lado da tag subscrita é retornado quando você usa a versão 24 do Flash Player no modo Fallback do Flash.
 
 **Problemas corrigidos na versão 2.4.4**
 
 Os seguintes problemas foram corrigidos na versão 2.4.4:
 
-・ **8711**: Com o MSE, as legendas 608/708 são justificadas por padrão.
+・ ・ **8711**: Com o MSE, as legendas 608/708 são justificadas por padrão.
 
-・ **13934**: As configurações ABR para anúncios não são aplicáveis ao reproduzir com fluxos ao vivo do HLS.
+・ ・ **13934**: As configurações ABR para anúncios não são aplicáveis ao reproduzir com fluxos ao vivo do HLS.
 
-・ **14079**: A longevidade de fluxos HLS ao vivo com uma janela de DVR baixa pode falhar, pois a reprodução pode ficar para trás devido a problemas de latência de rede. Clique no ponto ativo para retomar a reprodução.
+・ ・ **14079**: A longevidade de fluxos HLS ao vivo com uma janela de DVR baixa pode falhar, pois a reprodução pode ficar para trás devido a problemas de latência de rede. Clique no ponto ativo para retomar a reprodução.
 
-・ **15037**: As amostras fornecidas com a estrutura da interface do usuário do reprodutor não funcionam no Microsoft Internet Explorer 10 no Windows 7.
+・ ・ **15037**: As amostras fornecidas com a estrutura da interface do usuário do reprodutor não funcionam no Microsoft Internet Explorer 10 no Windows 7.
 
-・ **15913**: Para fluxos VOD de HLS, no Chrome, o fluxo não será reproduzido se a resposta do manifesto não for 304 modificada. Isso é corrigido desde o Chrome v55 (Chromium issue 633696).
+・ ・ **15913**: Para fluxos VOD de HLS, no Chrome, o fluxo não será reproduzido se a resposta do manifesto não for 304 modificada. Isso é corrigido desde o Chrome v55 (Chromium issue 633696).
 
-・ **16103**: No Android Chrome, em condições de pouca largura de banda, a reprodução pode parar com o TypeError não captado: Não é possível ler a propriedade &#39;programDateTime&#39; do erro indefinido.
+・ ・ **16103**: No Android Chrome, em condições de pouca largura de banda, a reprodução pode parar com o TypeError não captado: Não é possível ler a propriedade &#39;programDateTime&#39; do erro indefinido.
 
-・ **16265**: Para fluxos VOD e ao vivo do HLS, a busca por descontinuidades não funciona.
+・ ・ **16265**: Para fluxos VOD e ao vivo do HLS, a busca por descontinuidades não funciona.
 
-・ **16709**: Retomar o fluxo ao vivo do HLS com PDT e o marcador de descontinuidade podem levar o reprodutor a ficar preso no buffer.
+・ ・ **16709**: Retomar o fluxo ao vivo do HLS com PDT e o marcador de descontinuidade podem levar o reprodutor a ficar preso no buffer.
 
 ## Problemas conhecidos e limitações {#known-issues-and-limitations}
 
@@ -1441,9 +1440,9 @@ As limitações e os problemas conhecidos no TVSDK do navegador são mencionados
    <td>VOD + Ao vivo</td> 
    <td>Reprodução geral (Reproduzir, Pausar, Buscar)</td> 
    <td><p>・ Não há suporte para formatos de mídia diferentes de HLS.</p> <p>8799: O fallback do Flash não cuida de conteúdo misto e, portanto, é necessário garantir que Conteúdo, Publicidade e outros URLs não levem a conteúdo misto (conteúdo seguro e inseguro juntos).</p> <p>19271: A reprodução de várias visualizações por meio da estrutura da interface do usuário não é compatível com o modo de fallback de Flash.</p> <p>・ O fallback do Flash não funciona no Microsoft Internet Explorer 8 e 9 no Windows 7, pois essas versões não são compatíveis com o SDK.</p> <p>20262: O fallback do Flash adiciona parâmetros personalizados à lista de informações de direcionamento. Além disso, a ordem de prioridade dos parâmetros personalizados é diferente no caso de Flash e MSE.</p> <p>・ 20653:O fallback do Flash TVSDK do navegador não funciona no Win10 com a Atualização de criadores.</p> <p>・ O Fallback do Flash funciona com o Flash Player versão 23 e posterior.</p> <p>・ 20087 - Chrome 59 Beta com</p> <p>Flash 25.0.0.171</p> <p>Beta(padrão), a reprodução de HLS não está funcionando no modo de Fallback do Flash. Está funcionando bem em Canário.</p> </td> 
-   <td><p>12563: Os Dash Streams com codec de áudio mp4a.40.02 não são reproduzidos no Firefox devido à sequência de codec de áudio não suportada no MPD. O Codec de áudio mp4a.40.2 é compatível.</p> <p>15029: Ao alternar entre vídeos no multiView na Estrutura da interface do usuário, o botão Reproduzir/pausar não é atualizado adequadamente.</p> <p>・ 16034:No IE do Windows 8.1, chamar reset() leva a um erro de tipo MIME desconhecido. Recarregue a mídia para retomar a reprodução.</p> <p>18235: Certos problemas de busca são observados com fluxos de vod DASH com anúncios.</p> <p>18727: A API de erro não é compatível com o MSE</p> <p>18750: Os eventos de Alteração de status podem estar fora de ordem em alguns casos para a estrutura do SDK e da interface do usuário e, na Estrutura da interface do usuário, os eventos de IDLE e Inicialização do StatusChange podem estar ausentes para os ouvintes de eventos adicionados após o carregamento do recurso.</p> <p>18889: Se MediaPlayer estiver em estado ERROR, o objeto view não será retornado.</p> <p>19039: Se o AdobePSDK. MediaPlayer. searchToLocal() é usado com um valor maior que EOF, então a reprodução começa do início no caso de MSE.</p> <p>19049: Nenhum estado de erro relatado para o Flash Player no Chrome, IE, Firefox quando o vídeo é bloqueado durante a reprodução.</p> <p>17205: A reprodução de vídeo é interrompida durante a reprodução de um fluxo sem mudo por algumas horas enquanto o áudio continua sendo reproduzido (problema Chromium# 664033).</p> <p>12308: Fluxos DASH com a composição_ time_offset especificada podem ter timeStampOffset aplicado a ele no navegador Chrome, levando ao tempo de decodificação negativo e, portanto, ao erro MEDIA_ERR_ SRC_NOT_ SUPPORTED (problema Chromium #398141).</p> <p>14126: A reprodução pode ser interrompida no Firefox (número de edição 1316024) devido a uma lacuna interna no buffer de origem MSE. Tente buscar para retomar a reprodução.</p> <p>19115: O MS Edge e o IE 11 (Win 8.1 e 10) não definem a Origem como nula no redirecionamento do CORS e ainda falham porque o cabeçalho não é nulo, resultando em erro de reprodução.</p> <p>・ 19861:Problema com o comportamento de anexação no buffer de origem para mídia já reproduzida. O Chrome rejeita o fragmento anexado, incluindo moov, causando erro de decodificação subsequente. (Problema de crômio nº 735335)</p> <p>19921: A reprodução é interrompida para determinado conteúdo HLS, mesmo com seu buffer bem-sucedido (problema de Chromium #713540)</p> <p>2044:A busca do fim do intervalo em buffer no IE e no Edge pode fazer com que a reprodução seja interrompida.</p> <p>20511: Às vezes, a busca de rejeição pode ser observada para fluxos HLS com ou sem anúncios.</p> <p>20743: No Windows 10 Chrome, o fluxo do HLS Live é reproduzido por alguns segundos antes da reprodução do MP4 precedente.</p> <p>21043: A dimensão Vídeo pode não estar correta no carregamento inicial devido à falta de metadados.</p> <p>21115: O gesto do usuário do Android é necessário para iniciar a reprodução se o anúncio precedente estiver disponível para vídeos em uma lista de reprodução.</p> <p>・ HLS Live não suporta a sobreposição do carimbo de data/hora.</p> <p>・ Não há suporte para áudio AAC-SSR.</p> <p>Os codecs de áudio AC3 e AC3 aprimorado não são compatíveis.</p> <p>・ Para fluxos com descontinuidade de carimbo de data e hora, mas sem marcadores de descontinuidade</p> <p>・ A reprodução pode ter falhas e busca incorreta devido a saltos.</p> <p>・ A duração do conteúdo e a duração da reprodução podem não corresponder.</p> <p>・ As descontinuidades entre representações e representações devem corresponder a outros tipos de sensatez pode levar a problemas de sincronização e paralisação.</p> <p>・ As legendas e a WebVTT podem não aparecer perto do fim do fluxo.</p> <p>・ As alterações no codec de áudio não são suportadas em saltos de carimbo de data e hora.</p> <p>・ A inserção de anúncio não é suportada.</p> <p>・ O modo de truque avançado pode levar ao loop de reprodução no Win 8.1 IE 11 (problema MS nº 12446268).</p> <p>TRAÇO:</p> <p>・ Para fluxos ao vivo - o perfil ao vivo com tipo dinâmico é suportado.</p> <p>・ Para fluxos VoD - o perfil dinâmico com tipo estático é suportado.</p> <p>Para fluxos de VoD - o perfil sob demanda não é certificado para fluxos de trabalho de anúncios.</p> </td> 
+   <td><p>12563: Os Dash Streams com codec de áudio mp4a.40.02 não são reproduzidos no Firefox devido à sequência de codec de áudio não suportada no MPD. O Codec de áudio mp4a.40.2 é compatível.</p> <p>15029: Ao alternar entre vídeos no multiView na Estrutura da interface do usuário, o botão Reproduzir/pausar não é atualizado adequadamente.</p> <p>・ 16034:No IE do Windows 8.1, chamar reset() leva a um erro de tipo MIME desconhecido. Recarregue a mídia para retomar a reprodução.</p> <p>18235: Certos problemas de busca são observados com fluxos de vod DASH com anúncios.</p> <p>18727: A API de erro não é compatível com o MSE</p> <p>18750: Os eventos de Alteração de status podem estar fora de ordem em alguns casos para a estrutura do SDK e da interface do usuário e, na Estrutura da interface do usuário, os eventos de IDLE e Inicialização do StatusChange podem estar ausentes para os ouvintes de eventos adicionados após o carregamento do recurso.</p> <p>18889: Se MediaPlayer estiver em estado ERROR, o objeto view não será retornado.</p> <p>19039: Se o AdobePSDK. MediaPlayer. searchToLocal() é usado com um valor maior que EOF, então a reprodução começa do início no caso de MSE.</p> <p>19049: Nenhum estado de erro relatado para o Flash Player no Chrome, IE, Firefox quando o vídeo é bloqueado durante a reprodução.</p> <p>17205: A reprodução de vídeo é interrompida ao reproduzir fluxo sem mudo por algumas horas enquanto o áudio continua a ser reproduzido (problema Chromium# 664033).</p> <p>12308: Fluxos DASH com a composição_ time_offset especificada podem ter timeStampOffset aplicado a ele no navegador Chrome, levando ao tempo de decodificação negativo e, portanto, ao erro MEDIA_ERR_ SRC_NOT_ SUPPORTED (problema Chromium #398141).</p> <p>14126: A reprodução pode ser interrompida no Firefox (número de edição 1316024) devido a uma lacuna interna no buffer de origem MSE. Tente buscar para retomar a reprodução.</p> <p>19115: O MS Edge e o IE 11 (Win 8.1 e 10) não definem a Origem como nula no redirecionamento do CORS e ainda falham porque o cabeçalho não é nulo, resultando em erro de reprodução.</p> <p>・ 19861:Problema com o comportamento de anexação no buffer de origem para mídia já reproduzida. O Chrome rejeita o fragmento anexado, incluindo moov, causando erro de decodificação subsequente. (Problema de crômio nº 735335)</p> <p>19921: A reprodução é interrompida para determinado conteúdo HLS, mesmo com seu buffer bem-sucedido (problema de Chromium #713540)</p> <p>2044:A busca do fim do intervalo em buffer no IE e no Edge pode fazer com que a reprodução seja interrompida.</p> <p>20511: Às vezes, a busca de rejeição pode ser observada para fluxos HLS com ou sem anúncios.</p> <p>20743: No Windows 10 Chrome, o fluxo do HLS Live é reproduzido por alguns segundos antes da reprodução do MP4 precedente.</p> <p>21043: A dimensão Vídeo pode não estar correta no carregamento inicial devido à falta de metadados.</p> <p>21115: O gesto do usuário do Android é necessário para iniciar a reprodução se o anúncio precedente estiver disponível para vídeos em uma lista de reprodução.</p> <p>・ HLS Live não suporta a sobreposição do carimbo de data/hora.</p> <p>・ Não há suporte para áudio AAC-SSR.</p> <p>Os codecs de áudio AC3 e AC3 aprimorado não são compatíveis.</p> <p>・ Para fluxos com descontinuidade de carimbo de data e hora, mas sem marcadores de descontinuidade</p> <p>・ A reprodução pode ter falhas e busca incorreta devido a saltos.</p> <p>・ A duração do conteúdo e a duração da reprodução podem não corresponder.</p> <p>・ As descontinuidades entre representações e representações devem corresponder a outros tipos de sensatez pode levar a problemas de sincronização e paralisação.</p> <p>・ As legendas e a WebVTT podem não aparecer perto do fim do fluxo.</p> <p>・ As alterações no codec de áudio não são suportadas em saltos de carimbo de data e hora.</p> <p>・ A inserção de anúncio não é suportada.</p> <p>・ O modo de truque avançado pode levar ao loop de reprodução no Win 8.1 IE 11 (problema MS nº 12446268).</p> <p>TRAÇO:</p> <p>・ Para fluxos ao vivo - o perfil ao vivo com tipo dinâmico é suportado.</p> <p>・ Para fluxos VoD - o perfil dinâmico com tipo estático é suportado.</p> <p>Para fluxos de VoD - o perfil sob demanda não é certificado para fluxos de trabalho de anúncios.</p> </td> 
    <td><p>・ Os fluxos DASH Live e DASH Video on Demand não são suportados.</p> <p>・ A reprodução de vídeo PIP(Picture in Picture) não é compatível com o iOS no modo de tela cheia.</p> <p>Na extensão Safari (Tag de vídeo), menos manifesto sem ter o cabeçalho de tipo de conteúdo correto não funciona.</p> </td> 
-   <td><p>・ O applicationID no aplicativo do remetente precisa ser o mesmo gerado no registro do URL do Destinatário como um aplicativo do Destinatário personalizado.</p> <p>・ O reprodutor de referência é certificado para workflows DASH. A estrutura da interface do usuário não está certificada.</p> <p>Para obter a lista de codecs de mídia compatíveis, consulte <a href="https://developers.google.com/cast/docs/media"><em>aqui</em></a>.</p> </td> 
+   <td><p>・ O applicationID no aplicativo do remetente precisa ser o mesmo gerado no registro do URL do Destinatário como um aplicativo do Destinatário personalizado.</p> <p>・ O reprodutor de referência é certificado para workflows DASH. A estrutura da interface do usuário não está certificada.</p> <p>Para obter a lista de codecs de mídia compatíveis, consulte <a href="https://developers.google.com/cast/docs/media"><em>here</em></a>.</p> </td> 
   </tr> 
   <tr> 
    <td>FER VOD</td> 
@@ -1569,7 +1568,7 @@ As limitações e os problemas conhecidos no TVSDK do navegador são mencionados
    <td>Análise do ID3</td> 
    <td>20346: O byte de codificação de texto de quadros ID3 também deve ser retornado pelo SDK.</td> 
    <td><p>As tags ID3 disponíveis em fluxos de transporte de dados de áudio (ADTS) são ignoradas pelo SDK.</p> <p>12378: Os metadados cronometrados de ID3 são analisados em momentos diferentes no Flash e no navegador com suporte a MSE e, portanto, o comportamento de exibição na linha do tempo do reprodutor de referência também é diferente.</p> <p>19247: A análise de ID3 não é compatível com a estrutura da interface do usuário.</p> </td> 
-   <td><p>20323: A tag PRIV ID3 usada para sinalizar o carimbo de data e hora da primeira amostra de segmento aac não é analisada pelo Safari (problema do Safari nº 32422733)</p> <p>20350: Em certos dispositivos (incluindo MAC OS X 10.1, iPad10), o Safari não fornece o evento de alteração de sinalização quando em modo de truque e, portanto, os quadros ID3 não são recebidos. (Problema do Safari #32450526)</p> </td> 
+   <td><p>20323: A tag PRIV ID3 usada para sinalizar o carimbo de data e hora da primeira amostra de segmento aac não é analisada pelo Safari (problema do Safari nº 32422733)</p> <p>20350: Em determinados dispositivos (incluindo o MAC OS X 10.1, iPad10), o Safari não fornece evento de alteração de sinalização quando em modo de truque e, portanto, os quadros ID3 não são recebidos. (Problema do Safari #32450526)</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
@@ -1630,7 +1629,7 @@ As limitações e os problemas conhecidos no TVSDK do navegador são mencionados
    <td>VOD + Ao vivo</td> 
    <td>Pré/média/publicação</td> 
    <td> </td> 
-   <td><p>・ Os anúncios precedentes com conteúdo HLS ao vivo são reproduzidos no modo de reprodução dupla.</p> <p>・ Anúncios DASH com conteúdo HLS e anúncios HLS com conteúdo DASH não são compatíveis.</p> <p>19002: No reprodutor HTML5 com MSE adBreak. insertionType não retorna o valor correto para descrever o tipo de inserção correto, ou seja, o cliente foi inserido e ou o servidor foi inserido.</p> <p>7794: Em dispositivos móveis (iOS, Android com Chrome 33 ou navegador inferior ou nativo) onde a barra de controle padrão é visível no modo de tela cheia, a barra de busca e os botões para frente rápidos estão disponíveis quando a Reprodução de anúncios.</p> <p>11048: Alternar de anúncio para conteúdo HLS Live não é suave no caso de Extensões de fonte de mídia.</p> <p>16083: No Android 4.4 Chrome v52, às vezes o anúncio do HLS com conteúdo HLS pode levar a um erro de decodificação de pipeline após a reprodução paralisada.</p> <p>16097: Os erros encontrados durante o Ad break não são tratados, pode fazer com que o fluxo principal pare a reprodução.</p> <p>18095: Anúncios MP4 não são compatíveis com conteúdo HLS ao vivo.</p> <p>19120: Várias buscas em anúncios HLS com conteúdo HLS podem fazer com que o fluxo pare a reprodução.</p> <p>19131: A sobreposição de buffer pode aparecer ao alternar do ad break precedente para o conteúdo.</p> <p>20296: No caso de fluxos ao vivo do HLS, a busca de volta na janela DVR seguida pela busca em rolos intermediários resolvidos pode levar à paralisação da reprodução.</p> <p>・ 20298:HLS Live streams com rolls intermediários paralisam o momento em que o lançamento é iniciado e se move para fora da janela DVR.</p> <p>20317: Os fluxos ao vivo do HLS podem ser interrompidos ao alternar para o próximo anúncio ou de anúncio para conteúdo, caso o ad break contenha mais de um anúncio.</p> 
+   <td><p>・ Os anúncios precedentes com conteúdo HLS ao vivo são reproduzidos no modo de reprodução dupla.</p> <p>・ Anúncios DASH com conteúdo HLS e anúncios HLS com conteúdo DASH não são compatíveis.</p> <p>19002: No HTML5 Player com MSE adBreak. insertionType não retorna o valor correto para descrever o tipo de inserção correto, ou seja, o cliente foi inserido e ou o servidor foi inserido.</p> <p>7794: Em dispositivos móveis (iOS, Android com Chrome 33 ou navegador inferior ou nativo) onde a barra de controle padrão é visível no modo de tela cheia, a barra de busca e os botões para frente rápidos estão disponíveis quando a Reprodução de anúncios.</p> <p>11048: Alternar de anúncio para conteúdo HLS Live não é suave no caso de Extensões de fonte de mídia.</p> <p>16083: No Android 4.4 Chrome v52, às vezes o anúncio do HLS com conteúdo HLS pode levar a um erro de decodificação de pipeline após a reprodução paralisada.</p> <p>16097: Os erros encontrados durante o Ad break não são tratados, pode fazer com que o fluxo principal pare a reprodução.</p> <p>18095: Anúncios MP4 não são compatíveis com conteúdo HLS ao vivo.</p> <p>19120: Várias buscas em anúncios HLS com conteúdo HLS podem fazer com que o fluxo pare a reprodução.</p> <p>19131: A sobreposição de buffer pode aparecer ao alternar do ad break precedente para o conteúdo.</p> <p>20296: No caso de fluxos ao vivo do HLS, a busca de volta na janela DVR seguida pela busca em rolos intermediários resolvidos pode levar à paralisação da reprodução.</p> <p>・ 20298:HLS Live streams com rolls intermediários paralisam o momento em que o lançamento é iniciado e se move para fora da janela DVR.</p> <p>20317: Os fluxos ao vivo do HLS podem ser interrompidos ao alternar para o próximo anúncio ou de anúncio para conteúdo, caso o ad break contenha mais de um anúncio.</p> 
     <ul> 
      <li>Os anúncios na janela do DVR de fluxos do HLS Live não são resolvidos.</li> 
     </ul> </td> 
@@ -1712,7 +1711,7 @@ As limitações e os problemas conhecidos no TVSDK do navegador são mencionados
    <td> </td> 
    <td>VPAID 2.0</td> 
    <td> </td> 
-   <td><p>・ Comportamentos de anúncio não são compatíveis com anúncios VPAID.</p> <p>15032: Anúncios VPAID em combinação com anúncios MP4 ou HLS em um ad break não são compatíveis.</p> <p>19001: No Android e no iOS, quando o anúncio VPAID é reproduzido com MP4 como o conteúdo principal, as trilhas de áudio duplas são audíveis, um do conteúdo principal e um do anúncio.</p> <p>20762: Anúncios VPAID não são compatíveis com o Picture in Picture (PIP).</p> <p>21172: O evento Reproduzir concluído não é recebido para conteúdo VOD HLS com anúncios VPAID.</p> <p>21173: onAdBreakCompleteEvent não é recebido para conteúdo de VOD HLS e anúncios VPAID pós-roll.</p> </td> 
+   <td><p>・ Comportamentos de anúncio não são compatíveis com anúncios VPAID.</p> <p>15032: Anúncios VPAID em combinação com anúncios MP4 ou HLS em um ad break não são compatíveis.</p> <p>19001: No Android e no iOS, quando o anúncio VPAID é reproduzido com MP4 como o conteúdo principal, as trilhas duplas de áudio são audíveis, um do conteúdo principal e um do anúncio.</p> <p>20762: Anúncios VPAID não são compatíveis com o Picture in Picture (PIP).</p> <p>21172: O evento Reproduzir concluído não é recebido para conteúdo VOD HLS com anúncios VPAID.</p> <p>21173: onAdBreakCompleteEvent não é recebido para conteúdo de VOD HLS e anúncios VPAID pós-roll.</p> </td> 
    <td>O reprodutor alterna entre o modo normal e o modo de tela cheia ao alternar entre VPAID e conteúdo principal.</td> 
    <td> </td> 
    <td> </td> 
@@ -1728,4 +1727,4 @@ As limitações e os problemas conhecidos no TVSDK do navegador são mencionados
 
 ## Recursos úteis {#helpful-resources}
 
-* Consulte a documentação de ajuda completa na página [Aprendizagem e suporte do Adobe Primetime](https://helpx.adobe.com/support/primetime.html) .
+* Consulte a documentação completa de ajuda em [Aprendizagem e suporte do Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) página.

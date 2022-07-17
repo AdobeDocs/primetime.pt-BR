@@ -4,9 +4,9 @@ description: TVSDK 3.15 para Notas de versão do Android descreve o que é novo 
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
-source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '5540'
+source-wordcount: '5516'
 ht-degree: 0%
 
 ---
@@ -192,7 +192,7 @@ O TVSDK agora cancela o download do segmento em andamento, se necessário, e alt
 
 **Versão 2.5.5**
 
-* **Inserção parcial de intervalo de anúncio**
+* **Inserção parcial de ad-break**
 
    Experiência semelhante à da TV de participar do meio de um anúncio sem acionar o rastreamento do anúncio parcialmente assistido.\
    Exemplo: O usuário junta-se ao meio (em 40 segundos) de um ad break de 90 segundos que consiste em três anúncios de 30 segundos. Isso é de 10 segundos no segundo anúncio no intervalo.
@@ -638,7 +638,7 @@ WebViewDebbuging está definido como Falso por padrão. Para habilitar a depura�
 * Zendesk#31485 - DrmManager em 2.5
 
    Houve algum problema em Criar DrmManager por meio do novo DrmManager (Contexto). Implementação da classe DRMService que fornecia o DRMManager.
-* Fluxo de resolução Zendesk#32794- 1080P não reproduzido no Android
+* Fluxo de resolução Zendesk#32794-1080P não reproduzido no Android
 
    alteramos os métodos SizeAvailableEvent e Previous, getHeight() e getWidth() de SizeAvailableEvent em 2.5, usados para retornar a altura e a largura do quadro, retornado pelo formato de mídia. Agora retorna a altura de saída e a largura de saída respectivamente retornadas pelo decodificador.
 * O Flash Player do Zendesk #19359 falha devido à posição do atributo #EXT-X-FAXS-CM no manifesto de nível de conjunto.
@@ -772,8 +772,8 @@ Essa versão do TVSDK apresenta os seguintes problemas:
 
 ## Recursos úteis {#helpful-resources}
 
-* [Requisitos do sistema](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-requirements.html)
-* [TVSDK 3.10 para Guia do programador do Android](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
+* [Requisitos do sistema](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md)
+* [TVSDK 3.10 para Guia do programador do Android](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-prod-audience-guide.md)
 * [TVSDK Android Javadoc para referência de API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
 * [Documento da API do Android C++ TVSDK](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) - Cada classe Java tem uma classe C++ correspondente, e a documentação C++ contém mais material explicativo do que os Javadocs, portanto, consulte a documentação C++ para obter uma compreensão mais profunda da API Java.
 * [Guia de migração do TVSDK 1.4 para 2.5 para Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)

@@ -4,9 +4,9 @@ description: Notas de versão do TVSDK 2.7 para Android™ descrevem as novidade
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '4070'
+source-wordcount: '4037'
 ht-degree: 0%
 
 ---
@@ -425,10 +425,10 @@ Essa versão do TVSDK apresenta os seguintes problemas:
 
 ## Recursos úteis {#helpful-resources}
 
-* [Requisitos do sistema](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-requirements.html?lang=en)
-* [Guia do programador TVSDK 2.7 para Android™](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-overview-prod-audience-guide.html?lang=en)
+* [Requisitos do sistema](/help/programming/tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md)
+* [Guia do programador TVSDK 2.7 para Android™](/help/programming/tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-prod-audience-guide.md)
 * [TVSDK Android™ Javadoc para referência de API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html)
 * [Documento da API TVSDK Android™ C++](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html) - Cada classe Java™ tem uma classe C++ correspondente e a documentação C++ contém mais material explicativo do que os documentos Java™, portanto, consulte a documentação C++ para obter uma compreensão mais profunda da API Java™.
-* [TVSDK 1.4 para 2.5 para Guia de migração do Android™ (Java™)](https://experienceleague.adobe.com/docs/primetime/migration/tvsdk-14-25-android.html?lang=en)
+* [TVSDK 1.4 para 2.5 para Guia de migração do Android™ (Java™)](/help/migration-guides/tvsdk-14-25-android.md)
 * Para lidar com cenários de ativação/desativação da tela, consulte a seção `Application_Changes_for_Screen_On_Off.pdf` arquivo incluído na build.
 * Consulte a documentação completa de ajuda em [Aprendizagem e suporte do Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) página.

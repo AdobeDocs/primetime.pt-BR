@@ -2,9 +2,9 @@
 title: Notas de versão do TVSDK 3.13 para iOS
 description: As Notas de versão do TVSDK 3.13 para iOS descrevem as novidades ou alterações, os problemas resolvidos e conhecidos e os problemas do dispositivo no TVSDK iOS 3.13.
 exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: 92defeee19a430c8b0b66696c527a6abe377f4b9
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '7587'
+source-wordcount: '7575'
 ht-degree: 0%
 
 ---
@@ -377,7 +377,7 @@ Correção de solicitações duplicadas feitas para URLs de manifesto durante a 
 
 **Versão 3.0**
 
-* **Bilhete35311** - O status do reprodutor não fica PAUSADO durante uma interrupção de chamada telefônica Adicionado manipulador de interrupção para impedir que o reprodutor interrompa. Na interrupção, o status do reprodutor é PAUSED e, em seguida, retomada a reprodução ao clicar no botão Reproduzir.
+* **Bilhete35311** - O status do reprodutor não fica PAUSADO durante uma interrupção de chamada telefônica Adicionado manipulador de interrupção para impedir que o reprodutor interrompa. Ao interromper, o status do reprodutor fica PAUSADO e, em seguida, retoma a reprodução ao clicar no botão Reproduzir.
 
 * **Bilhete36685** - Ativos em tempo real - Incompatibilidade de tempo com o progresso do tempo de reprodução e tempo do marcador SCTE O tempo correto é calculado para os marcadores SCTE que estão à frente do ponto em tempo real.
 
@@ -1205,6 +1205,6 @@ Observação: Em determinadas versões do iOS, o sistema operacional não carreg
 
 ## Recursos úteis {#helpful-resources}
 
-* [TVSDK 3.4 para Guia do programador do iOS](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-3x-ios-prog/introduction/ios-3x-overview.html?lang=en)
+* [TVSDK 3.4 para Guia do programador do iOS](/help/programming/tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)
 * [Referência da API do TVSDK iOS 3.4](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v34/index.html)
 * Consulte a documentação completa de ajuda em [Aprendizagem e suporte do Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) página.
