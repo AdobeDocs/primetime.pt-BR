@@ -2,9 +2,9 @@
 title: Painel Account IQ
 description: O Painel ajuda a identificar as instâncias de compartilhamento de senha ao analisar uma grande variedade de dados do assinante.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
+source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,9 @@ O Painel resume e agrega dados em uma coleção de gráficos e relatórios criad
 
 ![painel do IQ da conta](assets/dashboard-capture.png)
 
+
+*Figura: O painel*
+
 ## Pontuação média de compartilhamento - agregada para o segmento atual {#aggregated-sharing}
 
 O painel Pontuação de compartilhamento agregada fornece uma leitura de linha superior resumindo a quantidade e o impacto do compartilhamento em termos de contas e volume de streaming.
@@ -23,9 +26,12 @@ Os valores ajudam você a entender a magnitude do compartilhamento de credenciai
 
 ![](assets/aggregate-sharing-score.png)
 
+
+*Figura: Painel de pontuação de compartilhamento médio - agregado para o segmento atual*
+
 ![](assets/aggregate-sharing-score.svg)
 
-As três métricas a seguir são componentes da Pontuação de compartilhamento agregada.
+As três métricas a seguir são componentes da Pontuação média de compartilhamento.
 
 ### Nível de compartilhamento {#sharing-level}
 
@@ -34,6 +40,9 @@ O medidor de nível de compartilhamento mostra a porcentagem de todas as contas 
 Um valor calculado com base na média da probabilidade de compartilhamento calculada para cada conta no conjunto de MVPDs selecionados que foram transmitidos de um dos canais de programador selecionados durante o intervalo de tempo selecionado.
 
 ![](assets/sharing-level.png)
+
+
+*Figura: Nível de compartilhamento*
 
 O indicador de Tendência mostra a mudança de porcentagem no valor da métrica em em relação ao período anterior.
 
@@ -45,6 +54,9 @@ Você também pode ver o indicador de Tendência, que descreve um aumento ou que
 
 ![](assets/usage-4mshared-accounts.png)
 
+
+*Figura: Uso de contas compartilhadas*
+
 ### Pontuação de compartilhamento geral {#overall-sharing-score}
 
 A pontuação de compartilhamento geral é composta de pontuações de compartilhamento, incluindo &quot;Nível de compartilhamento&quot; e &quot;Uso z de contas compartilhadas&quot;.
@@ -52,6 +64,9 @@ A pontuação de compartilhamento geral é composta de pontuações de compartil
 Ele fornece um valor para refletir o impacto relativo do compartilhamento em comparação com o setor. O objetivo é semelhante ao de uma pontuação de crédito, resumindo a situação com um único número. Mas, neste caso, quanto maior o número, maior o dano potencial.
 
 ![](assets/overall-sharing-score.png)
+
+
+*Figura: Pontuação de compartilhamento geral*
 
 <!--### MVPDs in segment {#mvpd-in-segment}
 
@@ -69,11 +84,17 @@ Esta tabela fornece uma exibição comparativa das diferentes Pontuações de Co
 
 ![](assets/top-mvpds.png)
 
+
+*Figura: Principais MVPDs no segmento por pontuação geral*
+
 ### Compartilhamento de pontuação por canais e MVPDs {#sharin-score-by-channels-and-mvpds}
 
 Esta tabela fornece uma exibição comparativa das pontuações de compartilhamento dos canais selecionados para os MVPDs no segmento atual.
 
 ![](assets/sharing-scores-by-channels-mvpds.png)
+
+
+*Figura: Compartilhamento de pontuações por canais e MVPDs*
 
 ### Probabilidade de compartilhamento de contas {#accounts-sharing-probability}
 
@@ -86,8 +107,15 @@ Este gráfico divide-se em intervalos de probabilidade de compartilhamento de qu
 
 ![](assets/dashboard-ac-sharing-prob.png)
 
+
+*Figura: Números e porcentagens de contas de assinantes em diferentes intervalos de probabilidade de compartilhamento*
+
 ### Número de contas e utilização por nível de probabilidade de compartilhamento {#number-of-accounts-usage-sharing-probability}
 
 Esse painel fornece uma exibição tabular de contas particionadas em intervalos de probabilidade de compartilhamento de quintis de muito baixo (0-20%) a muito alto (80=100%) com o uso associado de cada quintil a partir de contas compartilhadas.
 
 ![](assets/no-acc-usage-prob-level.png)
+
+
+*Figura: Número de contas, tendências e usos que caíram em vários intervalos de probabilidade*
+
