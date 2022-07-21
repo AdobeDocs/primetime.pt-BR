@@ -1,13 +1,13 @@
 ---
 title: Painel Account IQ
-description: 'O Painel ajuda a identificar as instâncias de compartilhamento de senha ao analisar uma grande variedade de dados do assinante.  '
-source-git-commit: f6f1769d86a98d3a545bf986e41e9ba2252a36ff
+description: O Painel ajuda a identificar as instâncias de compartilhamento de senha ao analisar uma grande variedade de dados do assinante.
+exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
+source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
-
 
 # O painel {#dashboard}
 
@@ -15,13 +15,15 @@ O Painel resume e agrega dados em uma coleção de gráficos e relatórios criad
 
 ![painel do IQ da conta](assets/dashboard-capture.png)
 
-## Pontuação de compartilhamento agregada {#aggregated-sharing}
+## Pontuação média de compartilhamento - agregada para o segmento atual {#aggregated-sharing}
 
 O painel Pontuação de compartilhamento agregada fornece uma leitura de linha superior resumindo a quantidade e o impacto do compartilhamento em termos de contas e volume de streaming.
 
 Os valores ajudam você a entender a magnitude do compartilhamento de credenciais pelos assinantes, fornecendo uma medida da necessidade de agir de acordo com ela.
 
 ![](assets/aggregate-sharing-score.png)
+
+![](assets/aggregate-sharing-score.svg)
 
 As três métricas a seguir são componentes da Pontuação de compartilhamento agregada.
 
