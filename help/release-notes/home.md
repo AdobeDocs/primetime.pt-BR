@@ -3,9 +3,9 @@ title: Notas de versão do Primetime
 description: Notas de versão do Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
+source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '298'
 ht-degree: 37%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 37%
 
 Bem-vindo às Notas de versão da Adobe Primetime. Os documentos listados na navegação à esquerda fornecem informações específicas da versão, requisitos do sistema, limitações, problemas corrigidos e problemas conhecidos.
 
-## Melhorias e correções no PTAI 22.6.2
+## Melhorias e correções no PTAI 2.7.1
 
-Essa versão do está focada em melhorias no registro de desempenho de anúncios com mais detalhes sobre perdas avultadas e outras origens de armazenamento de dados de rede para CRS.
+Essa versão do está focada em melhorias no registro de desempenho do anúncio com a introdução de métricas relacionadas ao valor para fluxos de trabalho DASH.
 
 ## Correções no TVSDK 3.15 Android
 
