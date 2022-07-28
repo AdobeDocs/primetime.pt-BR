@@ -3,12 +3,11 @@ cloud: Experience Cloud
 type: Documentation
 product: adobe primetime
 solution: Primetime
-git-repo: https://git.corp.adobe.com/AdobeDocs/primetime.pt-BR
+git-repo: https://github.com/AdobeDocs/primetime.pt-BR
 index: y
-translation-type: tm+mt
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
