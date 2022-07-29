@@ -1,19 +1,21 @@
 ---
 title: API de relatórios
 description: API de relatório de Auditude
-source-git-commit: 7f958c83a4dd481221feb4a266440b920ac7d195
+exl-id: 50eb4869-3765-4591-8c41-794b29d50044
+source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1042'
 ht-degree: 1%
 
 ---
-
 
 # API de relatórios {#report-api}
 
 A interface do usuário gerenciou funções para clientes e para a equipe de ativação (Adobe). Os clientes podem acessar o portal e, em seguida, criar e editar suas configurações. Eles também podem ver os relatórios de suas impressões de anúncios na interface do usuário.
 
 As APIs funcionam nos bastidores para facilitar a comunicação dos clientes e administradores com a infraestrutura de back-end.
+
+Para explorar a [!DNL Primetime Ad Insertion] APIs consulte [Pontos de extremidade da API do Ad Insertion na interface do usuário redimensionada](https://adconfigservice-va6.cloud.adobe.io/swagger-ui/index.html#/).
 
 ## Ponto de extremidade da API {#report-api-endpoint}
 
