@@ -7,7 +7,7 @@ git-repo: https://github.com/AdobeDocs/primetime.pt-BR
 index: y
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
