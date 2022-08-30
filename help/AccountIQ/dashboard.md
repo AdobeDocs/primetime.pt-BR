@@ -2,7 +2,7 @@
 title: Painel Account IQ
 description: O Painel ajuda a identificar as instâncias de compartilhamento de senha ao analisar uma grande variedade de dados do assinante.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 7706d5fcafdcfb9c0d4cc69936681c6223b0739d
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -12,10 +12,6 @@ ht-degree: 0%
 # O painel {#dashboard}
 
 O Painel resume e agrega dados em uma coleção de gráficos e relatórios criada para fornecer uma visão geral de alto nível do escopo e impacto do compartilhamento de conta. Ele fornece uma única página contendo os principais relatórios e métricas do QI da conta.
-
-<table><tr><th>
-
-+++Painel para programadores
 
 ![painel do IQ da conta](assets/dashboard-capture.png)
 
@@ -121,29 +117,7 @@ Este painel fornece uma exibição tabular de contas particionadas em intervalos
 
 *Figura: Número de contas, tendências e usos que caíram em vários intervalos de probabilidade*
 
-+++
 
-</th><th>
-
-+++Painel para MVPDs O painel para usuários de MVPD é um pouco diferente dos usuários do programador.
-
-![](assets/dashboard-mvpd.png)
-
-
-*Figura: Painel do MVPD*
-
-## Principais programadores no segmento por pontuação de compartilhamento geral {#}
-
-![](assets/top-programmers-panel.png)
-
-
-*Figura: Painel que mostra os principais programadores em um segmento*
-+++
-
-</th>
-</tr>
-
-</table>
 
 <!--
 +++Dashboard for programmers

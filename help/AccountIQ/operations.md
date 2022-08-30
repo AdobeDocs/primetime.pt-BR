@@ -2,9 +2,9 @@
 title: Operações no QI da conta
 description: As operações no Account IQ envolvem a execução de ações para realizar automações e operações em massa em contas de assinantes e acompanhar seus efeitos.
 exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Você pode analisar os impactos de uma operação ao visualizar seu relatório. 
 
 1. Selecione o nome da operação na página principal de Operações.
 
-   O relatório é exibido na forma de um gráfico de barras empilhadas.
+   O relatório é exibido no formato de um gráfico de coluna empilhada.
 
    ![](assets/operation-impact-report.png)
 
