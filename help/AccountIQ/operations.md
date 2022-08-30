@@ -1,13 +1,13 @@
 ---
 title: Operações no QI da conta
 description: As operações no Account IQ envolvem a execução de ações para realizar automações e operações em massa em contas de assinantes e acompanhar seus efeitos.
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
+source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
-
 
 # Operações {#operations-tab-next-steps}
 
@@ -55,19 +55,30 @@ Você pode analisar os impactos de uma operação ao visualizar seu relatório. 
 
 1. Selecione o nome da operação na página principal de Operações.
 
-   O relatório é exibido no formato de um gráfico de barras empilhadas.
+   O relatório é exibido na forma de um gráfico de barras empilhadas.
 
    ![](assets/operation-impact-report.png)
 
    *Figura: Relatório de operações para visualizar os impactos das operações*
 
-   O eixo x representa o período de avaliação e o eixo y representa uma variável para medir o impacto da operação.
+   O eixo X representa o período de avaliação e o eixo y descreve o impacto da operação (em termos de número de contas num segmento durante o período de avaliação). Cada barra é dividida em três partes.
 
-   Por exemplo, na imagem acima, a variável no eixo y é o número de contas. Ao examinar o gráfico, você pode comparar o número de contas que estão no segmento de operações com o número de contas que estão fora do segmento de operações em um determinado momento (como a segunda semana do período de avaliação de operações). Portanto, você pode analisar como, durante o período de avaliação, o número de contas varia dentro e fora do segmento da operação.
+   * Uma parte representa o número de contas que ainda atendem aos critérios do segmento de operação.
 
-   Portanto, se sua operação era enviar emails de aviso para contas suspeitas, e as contas em operações eram aquelas com probabilidade de compartilhamento superior a 90 e usando mais de 5 dispositivos para transmitir conteúdo, então no início do período de avaliação as contas no segmento são mais de 7 milhões. Este número é alterado durante o período de avaliação, tal como indicado no gráfico, indicando assim o impacto do funcionamento. Com base na avaliação, você pode tomar medidas corretivas em relação a contas suspeitas, ou continuar a operação, ou ajustar sua estratégia para melhores resultados para reduzir o compartilhamento de credenciais.
+   * Outra parte representa o número de contas ativas para o período que estavam originalmente no segmento, mas não atendem mais aos critérios do segmento de operação.
 
-2. Para fechar o relatório e voltar à página principal de Operações, selecione **Operações** opção em **Ações** na navegação à esquerda.
+   * A terceira parte representa as contas que não estavam ativas nesse período.
+   >[!NOTE]
+   >
+   >A Primeira barra representa o número de contas que atendem às condições do segmento de operação no início do período de avaliação.
+
+   Com o tempo, o gráfico mostra o efeito de sua ação (por meio da operação), indicando o número de contas que alteraram seu comportamento em relação aos critérios originais (por exemplo, ter probabilidade de compartilhamento superior a 90 e usar mais de 5 dispositivos) ou ficaram inativas.
+
+<!--For example, in the above image the variable on the y-axis is number of accounts. Looking at the graph you can compare the number of accounts that are in the operations' segment versus the number of accounts that are outside the operations segment at a particular time (such as week 2nd of the operations evaluation period). Therefore, you can analyze how over the evaluation period do number of accounts vary within the operation segment and outside the segment.
+
+So, if your operation was to send out warning emails to suspecting accounts, and accounts in operations segment were those with sharing probability more than 90 and using more than 5 devices to stream content, then in the beginning of the evaluation period accounts in segment are more than 17 thousand. This number changes over the evaluation period as shown in the graph, thereby indicating the impact of operation. Based on the evaluation, you can take remedial measures on suspecting accounts, or continue with the operation, or adjust your strategy for better outcomes to curb credential sharing.-->
+
+1. Para fechar o relatório e voltar à página principal de Operações, selecione **Operações** opção em **Ações** na navegação à esquerda.
 
 <!--
 
