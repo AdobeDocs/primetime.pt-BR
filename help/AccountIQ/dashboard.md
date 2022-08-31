@@ -2,9 +2,9 @@
 title: Painel Account IQ
 description: O Painel ajuda a identificar as instâncias de compartilhamento de senha ao analisar uma grande variedade de dados do assinante.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: a015cf059c599c043f03b981eed640fbdbffc27b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/mvpds-in-segment.png)-->
 
-### Pontuações de compartilhamento em todo o setor para MVPDs {#top-mvpds}
+## Pontuações de compartilhamento em todo o setor para MVPDs {#top-mvpds}
 
 Esta tabela fornece uma exibição comparativa das diferentes Pontuações de Compartilhamento Agregado para os MVPDs no segmento.
 
@@ -85,7 +85,7 @@ Esta tabela fornece uma exibição comparativa das diferentes Pontuações de Co
 
 *Figura: Principais MVPDs no segmento por pontuação geral*
 
-### Compartilhamento de pontuação por canais e MVPDs {#sharin-score-by-channels-and-mvpds}
+## Compartilhamento de pontuação por canais e MVPDs {#sharin-score-by-channels-and-mvpds}
 
 Esta tabela fornece uma exibição comparativa das pontuações de compartilhamento dos canais selecionados para os MVPDs no segmento atual.
 
@@ -94,7 +94,7 @@ Esta tabela fornece uma exibição comparativa das pontuações de compartilhame
 
 *Figura: Compartilhamento de pontuações por canais e MVPDs*
 
-### Probabilidade de compartilhamento de contas {#accounts-sharing-probability}
+## Probabilidade de compartilhamento de contas {#accounts-sharing-probability}
 
 Este gráfico divide-se em intervalos de probabilidade de compartilhamento de quintis de muito baixo (0-20%) a muito alto (80=100%).
 
@@ -108,7 +108,7 @@ Este gráfico divide-se em intervalos de probabilidade de compartilhamento de qu
 
 *Figura: Números e porcentagens de contas de assinantes em diferentes intervalos de probabilidade de compartilhamento*
 
-### Número de contas e utilização por nível de probabilidade de compartilhamento {#number-of-accounts-usage-sharing-probability}
+## Número de contas e utilização por nível de probabilidade de compartilhamento {#number-of-accounts-usage-sharing-probability}
 
 Este painel fornece uma exibição tabular de contas particionadas em intervalos de probabilidade de compartilhamento de quintis de muito baixo (0-20%) a muito alto (80-100%) com o uso associado de cada quintil a partir de contas compartilhadas.
 
