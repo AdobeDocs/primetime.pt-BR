@@ -1,27 +1,45 @@
 ---
-title: Notas de versão do PTAI 2.7.1
+title: Notas de versão do PTAI 2.9.2
 description: As notas de versão da PTAI descrevem as novidades ou alterações, os problemas resolvidos e conhecidos no Primetime Ad Insertion no ano de 2022.
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
 
-# Notas de versão do Primetime Ad Insertion 2.7.1
+# Notas de versão do Primetime Ad Insertion 2.9.2
 
 As notas de versão do Primetime Ad Insertion 22.xx.x descrevem as novidades ou alterações, os problemas resolvidos e os problemas conhecidos no Primetime Ad Insertion em 2022.
 
-## Novidades do PTAI 22.7.1
+## Novidades do PTAI 22.9.2
 
-Quando: Quarta-feira, 20 de julho de 2022, das 3:00 às 6:00 Hora do Leste
+**Quando:** Quarta-feira, 7 de setembro de 2022, das 3:00 às 6:00 Hora do Leste
+
+* Aprimoramentos aos dados de telemetria de desempenho do anúncio no Primetime Ad Insertion para incluir dados adicionais de chamada de anúncio e registro de disponibilidade.
+
+## Aprimoramentos e correções nas versões anteriores
+
+### Versão PTAI 2.9.1
+
+**Quando:** terça-feira, 6 de setembro de 2022, das 3:00 às 6:00 Hora do leste
+
+**Alterações:**
+
+* Aprimoramentos na autenticação de back-end do Content Repackaging Service (CRS).
+
+* Atualizações dos gráficos de telemetria do Content Repackaging Service (CRS) na interface do usuário do Primetime Ad Insertion.
+
+### Versão 2.7.1
+
+**Quando:** Quarta-feira, 20 de julho de 2022, das 3:00 às 6:00 Hora do Leste
+
+**Alterações:**
 
 * Melhorias no registro de desempenho de anúncios, com a introdução de métricas relacionadas a valores para fluxos de trabalho DASH.
 
 * Migração de banco de dados.
-
-## Aprimoramentos e correções nas versões anteriores
 
 ### Versão 2.6.2
 
