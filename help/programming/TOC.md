@@ -4,7 +4,7 @@ user-guide-title: Ajuda da programação do Primetime
 user-guide-description: Com ele, você aprende a desenvolver aplicativos e reprodutores de vídeo usando Java em dispositivos Android e em dispositivos Objective-C em iOS.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '4342'
 ht-degree: 0%
 
 ---
