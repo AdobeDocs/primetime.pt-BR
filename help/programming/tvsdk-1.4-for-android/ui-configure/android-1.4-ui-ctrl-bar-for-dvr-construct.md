@@ -1,14 +1,13 @@
 ---
 description: É possível implementar uma barra de controle com suporte a DVR para VOD e transmissão ao vivo. O suporte a DVR inclui o conceito de uma janela pesquisável e o ponto ativo do cliente.
 title: Construa uma barra de controle aprimorada para DVR
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a812f2d5-f1ee-4df6-9cc7-e39f55ec26f1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
-
 
 # Construa uma barra de controle aprimorada para DVR{#construct-a-control-bar-enhanced-for-dvr}
 
@@ -25,7 +24,7 @@ ht-degree: 0%
 
 <!--<a id="fig_37A39A28BA714BA5A2C461357ED5BD41"></a>-->
 
-![](assets/dvr-window.PNG){width=&quot;684&quot;}
+![](assets/dvr-window.PNG){width="684"}
 
 1. Para implementar uma barra de controle com suporte DVR, siga as etapas para exibir uma barra de movimentação, com algumas pequenas diferenças:
 
@@ -45,7 +44,7 @@ ht-degree: 0%
       }
       ```
 
-      Você também pode optar por buscar o ponto ativo do cliente usando a constante `MediaPlayer.LIVE_POINT`.
+      Você também pode optar por buscar o ponto ativo do cliente usando a variável `MediaPlayer.LIVE_POINT` constante.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
