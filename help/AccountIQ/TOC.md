@@ -2,10 +2,10 @@
 product: adobe primetime
 audience: end-user
 user-guide-description: O Primetime Account IQ ajuda a fornecer informações sobre os componentes do Account IQ e orienta você pelas jornadas do usuário para usar os vários componentes.
-source-git-commit: 6ae9c8651a47e2f458d69c078ba1f314a0227c00
+source-git-commit: 24838ba51683b04894149ae55bcabfb7bf2e8095
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 20%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -25,14 +25,21 @@ ht-degree: 20%
       + [Operações](/help/AccountIQ/operations.md)
 + Instruções {#use-aiq}
    + [Definir um segmento e um período](/help/AccountIQ/howto-select-segment-timeframe.md)
-   + Exibir relatórios de compartilhamento de conta {#view-account-sharing-reports}
-      + [Relatórios para um MVPD específico](/help/AccountIQ/reports-for-specific-mvpds.md)
-      + [Relatórios para os 10 MVPDs principais](/help/AccountIQ/top-10-mvpd-reports.md)
-      + [Relatórios para vários MVPDs](viewrep-multiple-mvpd-channel.md)
-      + [Modo de isolamento e comportamento de compartilhamento](/help/AccountIQ/isolation-mode.md)
-   + [Exportar MVPD e relatórios de canal](/help/AccountIQ/export-segment-metrics.md)
+   + Exportar relatórios {#export-reports}
+      + [Programador - Exportar relatórios](/help/AccountIQ/export-segment-metrics-progr.md)
+      + [MVPD - Exportar relatórios](/help/AccountIQ/export-segment-metrics-mvpd.md)
    + [Exportar contas de compartilhamento alto](/help/AccountIQ/export-acc-information.md)
    + [Criar uma operação em um segmento de usuário](/help/AccountIQ/operation-affecting-user-segment.md)
+   + Exibir relatórios de compartilhamento de conta {#view-account-sharing-reports}
+      + Programador - exibir relatórios de compartilhamento de conta {#view-programmer-reports}
+         + [Relatórios para um MVPD específico](/help/AccountIQ/reports-for-specific-mvpds.md)
+         + [Relatórios para os 10 MVPDs principais](/help/AccountIQ/top-10-mvpd-reports.md)
+         + [Relatórios para vários MVPDs](viewrep-multiple-mvpd.md)
+         + [Modo de isolamento e comportamento de compartilhamento](/help/AccountIQ/isolation-mode.md)
+      + MVPD - exibir relatórios de compartilhamento de conta {#view-mvpd-reports}
+         + [Relatórios para um programador ou canal específico](/help/AccountIQ/reports-for-specific-programmers.md)
+         + [Relatórios para os 10 principais programadores](/help/AccountIQ/top-10-programmer-reports.md)
+         + [Relatórios para vários programadores e canais](viewrep-multiple-programmer.md)
 + [Práticas recomendadas](/help/AccountIQ/best-practices.md)
 + [Limitações](/help/AccountIQ/limitations.md)
 + [Solução de problemas](/help/AccountIQ/troubleshoot.md)

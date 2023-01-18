@@ -1,19 +1,19 @@
 ---
 title: Perguntas frequentes sobre o Account IQ
 description: Respostas às perguntas frequentes sobre o cliente.
-source-git-commit: df6577182a4211b95c2002f949cdfb894126dc32
+exl-id: d6e11fc9-0d14-46d8-9a85-f1006ac81fb1
+source-git-commit: 4eb5ba53fb3e0a0c314695fcd30cf15c7242b53c
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Perguntas frequentes {#faqs}
 
 1. Para quem foi projetado o Account IQ?
 
-   **Responda.** O Account IQ foi projetado para atender programadores, MVPDs e serviços D2C, no entanto, há pequenas diferenças entre essas duas versões. Há limitações e restrições sobre quais dados podem ser mostrados para cada grupo.
+   **Responda.** O Account IQ foi projetado para atender programadores, MVPDs e serviços D2C, no entanto, há pequenas diferenças entre essas versões. Há limitações e restrições sobre quais dados podem ser mostrados para cada grupo.
 
 1. Até que ponto os dados vão?
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
    **Responda.** A funcionalidade para filtrar as contas de teste não está disponível nesta versão, mas o recurso estará disponível em uma versão futura.
 
-1. Posso ver o compartilhamento de conta para cada um dos meus canais?
+1. Posso ver o compartilhamento de conta para cada um dos meus canais? <!--shall we separate out this question for the persona of programmer?-->
 
    **Responda.** Sim, você pode ver o compartilhamento de contas para canais individuais, um grupo de canais ou redes inteiras (por exemplo, programadores).
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 1. Qual é a eficácia do Monitoramento de simultaneidade no mitigação do compartilhamento no setor?
 
-   **Responda.** O Account IQ e o Concurrency Monitoring detectam diferentes modos de compartilhamento e são complementares. O CM é excelente para evitar o compartilhamento que ocorre simultaneamente. Portanto, é mais eficaz durante a visualização em tempo real ou em eventos ao vivo, como esportes. Por outro lado, o Account IQ observa um amplo conjunto de dados históricos e, portanto, detecta o compartilhamento que não é necessariamente simultâneo. Esses dois serviços podem ser combinados para uma solução ainda mais eficaz.
+   **Responda.** O Account IQ e o Concurrency Monitoring (CM) detectam diferentes modos de compartilhamento e são complementares. O CM é excelente para evitar o compartilhamento que ocorre simultaneamente. Portanto, é mais eficaz durante a visualização em tempo real ou em eventos ao vivo, como esportes. Por outro lado, o Account IQ observa um amplo conjunto de dados históricos e, portanto, detecta o compartilhamento que não é necessariamente simultâneo. Esses dois serviços podem ser combinados para uma solução ainda mais eficaz.
 
 1. Podemos identificar contas específicas?
 
@@ -57,12 +57,12 @@ ht-degree: 0%
 
 1. Como posso usar os insights fornecidos pelo Account IQ?
 
-   **Responda.** Compreender a escala e a natureza do compartilhamento é o primeiro passo de nossas práticas recomendadas. A medida é tomar ações direcionadas com contas específicas, como aumentar ou limitar fluxos. A recomendação completa é começar pequeno, medir os resultados da ação e refinar e dimensionar o processo.
+   **Responda.** Entender a escala e a natureza do compartilhamento é o primeiro passo de nossas práticas recomendadas. A medida é tomar ações direcionadas com contas específicas, como aumentar ou limitar fluxos. A recomendação completa é começar pequeno, medir os resultados da ação e refinar e dimensionar o processo.
 
-1. Precisamos de trabalhar com grupos de tecnologia interna e parceiros de distribuição para implementar medidas como o MCM inteligente?
+1. Precisamos trabalhar com grupos internos de tecnologia e parceiros de distribuição para implementar medidas como o Smart CM (Monitoramento de simultaneidade)?
 
-   **Responda.** Não necessariamente, o Suporte Adobe Primetime pode funcionar com o para criar suas próprias regras CM com base no AIQ dos dados.
+   **Responda.** Não necessariamente. O suporte do Adobe Primetime pode funcionar para criar suas próprias regras CM com base nos dados do AIQ.
 
 1. Posso ver a tendência dos segmentos ao longo do tempo?
 
-   **Responda.** Sim, os gráficos de impacto da operação rastreiam e exibem as características de um segmento alvo durante a vida útil da operação.
+   **Responda.** Sim. As operações afetam gráficos de impacto, rastreiam e exibem características de um segmento alvo ao longo da vida da operação.

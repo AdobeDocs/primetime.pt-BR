@@ -1,28 +1,29 @@
 ---
 title: Como usar métricas de QI da conta para um MVPD específico
-description: 'Como usar e entender os relatórios de QI da conta.  '
-source-git-commit: a23de698b073d271df9b04494ff59f5d5a194c9d
+description: Como usar e entender os relatórios de QI da conta.
+exl-id: ada9a80a-b31b-4bdc-838c-dcd94a0a6c59
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Exibir relatórios de compartilhamento de conta para um MVPD específico <!--and programmer--> {#report-sp-mvpd}
 
-# Exibir relatórios de compartilhamento de conta: para um MVPD específico <!--and programmer--> {#report-sp-mvpd}
-
-Se você estiver conectado ao aplicativo Account IQ como um canal [programador](/help/AccountIQ/product-concepts.md#programmer-def), é possível exibir relatórios de compartilhamento dos visualizadores de canal para o [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) eles se subscreveram.
+Se você estiver conectado ao aplicativo Account IQ como um [programador](/help/AccountIQ/product-concepts.md#programmer-def), você poderá visualizar relatórios de compartilhamento em seus canais para [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) assinantes.
 
 Para exibir relatórios no Account IQ, depois de fazer logon com êxito no aplicativo como programador:
 
-1. Defina o segmento do assinante para análise e exibição de relatórios usando as etapas em [Como definir segmentos](/help/AccountIQ/howto-select-segment-timeframe.md).
+1. Selecione o MVPD específico conforme você define seu segmento de assinante para análise e visualização de relatórios usando as etapas em [Como definir segmentos](/help/AccountIQ/howto-select-segment-timeframe.md).
+
 
    >[!NOTE]
    >
-   >Você pode selecionar um, dois ou vários MVPDs, ou até mesmo a seleção padrão dos 10 MVPDs principais (compartilhando pontuação, uso ou contas).
+   >É possível selecionar um, dois ou vários canais ou até mesmo a seleção padrão dos 10 canais principais (compartilhando pontuação, uso ou contas).
    >
    >
-   >No entanto, é possível selecionar [no máximo 10 MVPDs](/help/AccountIQ/limitations.md) no seletor MVPD na [painel de segmento e período](/help/AccountIQ/segments-timeframe.md).
+   >No entanto, é possível selecionar [no máximo 10 canais](/help/AccountIQ/limitations.md) no seletor de canais na [painel de segmento e período](/help/AccountIQ/segments-timeframe.md).
 
 1. Selecione uma página de relatórios desejada no painel de navegação esquerdo:
 
@@ -40,19 +41,5 @@ Para exibir relatórios no Account IQ, depois de fazer logon com êxito no aplic
 
    ![](assets/specific-mvpd-dashboard.png)
 
-Cada uma dessas páginas refletirá a atividade.
+Cada uma dessas páginas refletirá a atividade do segmento selecionado.
 
-<!--## If you are logged in as an MVPD {#report-sp-programmer}
-
-To view reports in Account IQ, once you have successfully logged in to the application as an MVPD:
-
-1. Select the desired programmer channel(s) from from the **Channels in segment** drop-down option.
-
-   ![select channels](assets/programmer-selection.png)
-
- 1. From the **Granularity and time frame** option, select the time interval to view reports. You can aggregate the time intervals week-wise or month-wise.
-
-1. Select a desired reports page from the left navigation-[General Usage](/help/AccountIQ/general-usage-reports.md), [Shared Accounts](/help/AccountIQ/shared-acc-reports.md), [Usage Patterns](/help/AccountIQ/usage-patterns.md), or even [Dashboard](/help/AccountIQ/dashboard.md) (dashboard gives a glimpse of the selected graphs from different reports pages).
-
-![reports for specific programmer](assets/report-forspecific-programmer.png)
--->

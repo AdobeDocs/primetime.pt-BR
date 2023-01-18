@@ -1,17 +1,17 @@
 ---
 title: Exportar informações para contas com pontuação de compartilhamento alta
 description: Exportar informações para contas com pontuação de compartilhamento alta.
-source-git-commit: 17a44bde5cf320f519cc537d37df0fe823cf51a6
+exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-
 # Exportar informações para contas com pontuação de compartilhamento alta {#export-account-info-high-score}
 
-O Account IQ oferece a opção de exportar detalhes de compartilhamento de conta para as 1000 contas de assinante principais com base em suas [compartilhando probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Os dados no arquivo CSV exportado são classificados na ordem decrescente das probabilidades de compartilhamento das contas do assinante - dos MVPDs selecionados na variável [segmento](/help/AccountIQ/product-concepts.md#segment-def)para um [período especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
+O Account IQ oferece a opção de exportar detalhes de compartilhamento de conta para as 1000 contas de assinante principais com base em suas [compartilhando probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Os dados no arquivo CSV exportado são classificados na ordem decrescente das probabilidades de compartilhamento das contas do assinante na [segmento](/help/AccountIQ/product-concepts.md#segment-def)para um [período especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 A opção para exportar as informações de compartilhamento de conta está disponível em [Relatórios de uso geral](/help/AccountIQ/general-usage-reports.md) e [Relatórios de contas compartilhadas](/help/AccountIQ/shared-acc-reports.md) páginas.
 
@@ -23,13 +23,7 @@ A opção para exportar as informações de compartilhamento de conta está disp
 
 Para exportar as informações de compartilhamento de conta dos assinantes:
 
-1. Especifique um segmento no seletor de segmentos. Para selecionar um segmento:
-
-   1. Selecione os MVPDs desejados de **MVPDs no segmento** opção.
-
-   1. Selecione os Canais desejados em **Canais no segmento** opção.
-
-   1. Selecione um período de tempo de **Granularidade e período** para exibir relatórios para isso.
+1. Defina um segmento desejado seguindo as etapas em [Como definir segmentos e selecionar período](/help/AccountIQ/howto-select-segment-timeframe.md) para avaliação de [segmento e período](/help/AccountIQ/segments-timeframe.md) painel.
 
 1. Selecione o **Exportar as 1000 contas principais** opção para exportar as informações da conta para 1000 assinantes com maior probabilidade de compartilhamento.
 
@@ -105,13 +99,13 @@ O número de vezes que os usuários fizeram logon durante o período, usando ess
 
 Número de vezes que um MVPD autorizou um fluxo ou concedeu acesso (ao conteúdo) a essa conta.
 
->[!NOTE]
->
->O **# AuthZ OK** está relacionada ao **Nº de Solicitações de Reprodução**; é menor que a variável **Nº de Solicitações de Reprodução** porque o Adobe armazena em cache as autorizações fornecidas para os MVPDs normalmente durante 24 horas.
-
 **Nº de Solicitações de Reprodução**
 
 O número real de fluxos durante o período de tempo.
+
+>[!NOTE]
+>
+>**# AuthZ OK** normalmente é menor que **Nº de Solicitações de Reprodução** porque o Adobe armazena em cache as autorizações provenientes de MVPDs por até 24 horas. Esta coluna não está disponível para MVPDs.
 
 **# Canais**
 
@@ -129,7 +123,7 @@ Os números nesta coluna são identificadores que mapeiam para um dos 14 padrõe
 
 *Tabela: Identificadores de padrão de uso no mapeamento CSV exportado com padrões de uso*
 
-| ID | 1 | 2 | 3 | 4 | 5 e 8 | 6 | 7 | 9 | 10 e 11 | 12º | 13º | 14. |
+| ID | 1 | 2 | 3 | 4 | 5 e 8 | 6 | 7 | 9 | 10 e 11 | 12 | 13 | 14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Padrões de uso | Usuário regular | Viajante ou viajante | Família Grande | Família e amigos próximos | Compartilhamento em grupo social | Grande grupo de amigos | Streaming simultâneo | Compartilhamento da comunidade | Comportamento incerto | Pequena família | Segunda casa | Uso anormal |
 

@@ -1,13 +1,13 @@
 ---
 title: Relatórios de uso geral
 description: Relatórios de uso geral
-source-git-commit: 683b5a5c1dc8dde3f546bbf4b7a09406bc018d78
+exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
+source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Relatórios de uso geral {#general-usage-reports}
 
@@ -41,7 +41,26 @@ Todos os relatórios se baseiam no segmento atual selecionado usando [Segmentos 
 
 Os gráficos de linha aqui fornecem uma visão das alterações em valores AuthN OK, AuthZ OK, Reproduzir solicitações e Assinantes únicos ao longo do tempo em um intervalo de tempo selecionado para o segmento definido.
 
-![](assets/line-graph-gu.png)
++++Programador- **AuthN OK / AuthZ OK / Play Requests / Unique Subscribers**
+
+![](assets/progr-line-graph-gu.png)
+
+
+*Figura: AuthN OK / AuthZ OK / Play Requests / Unique Subscribers for programmer user*
+
+
++++
+
+
++++MVPD- **AuthN OK / AuthZ OK / Assinantes únicos**
+
+![](assets/mvpd-line-graph-gu.png)
+
+
+*Figura: AuthN OK / AuthZ OK / Assinantes únicos para usuário MVPD*
+
+
++++
 
 O eixo x apresenta as unidades dentro do período atual e o eixo y representa as métricas básicas de atividade do assinante durante esse período. Os gráficos de linha permitem comparar os seguintes valores para assinantes de MVPDs e canais selecionados no painel de seleção de segmentos:
 
@@ -57,13 +76,18 @@ O eixo x apresenta as unidades dentro do período atual e o eixo y representa as
 
    Reproduzir solicitações é o número de Solicitações. Para obter mais informações e definições, consulte [Conceitos do produto: Reproduzir solicitações](/help/AccountIQ/product-concepts.md#play-requests-def)
 
+   >[!NOTE]
+   >
+   >O gráfico de linha de solicitações de reprodução não está disponível para usuários do MVPD.
+
+
 * **Assinantes únicos**
 
    Assinantes únicos são o número de assinantes únicos bem-sucedidos. Para obter mais informações e definições, consulte [Conceitos do produto: Assinantes únicos](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
    >[!NOTE]
    >
-   >O número total de assinantes únicos também inclui o número de dispositivos exclusivos se o uso de Adobe TempPass (ou seja, visualização livre) por um programador fizer parte do segmento.
+   >O número total de assinantes únicos também inclui o número de dispositivos exclusivos se o uso de Adobe TempPass (que é uma visualização gratuita) por um programador fizer parte do segmento.
 
 ## Visão Geral do Instantâneo - Contas acima de limites {#snapshot-overview}
 
@@ -105,7 +129,7 @@ O gráfico mostra o seguinte:
 
 ## Dispositivos por semana (ou mês) por conta {#devices-week-account}
 
-O **gráfico de barras** O fornece insights do comportamento de uso em termos de como os assinantes de seus MVPDs estão usando seus dispositivos para acessar conteúdo do seu canal.
+O **gráfico de barras** O fornece insights do comportamento de uso em termos de como os assinantes estão usando seus dispositivos para acessar conteúdo.
 
 O eixo x representa o número de contas e o eixo y representa o número de dispositivos. Com base no limite definido para o número de dispositivos por conta, ele marca o número absoluto de contas de assinantes que consomem conteúdo de um número específico de dispositivos na duração de uma semana.
 
@@ -135,7 +159,7 @@ Resultados dessa métrica combinados com o número de [Dispositivos por semana (
 
 ![](assets/graph-loc-week-acc.png)
 
-Depois de definir um segmento (selecionando MVPDs e canais) e definir o limite para o número de locais, é possível identificar no gráfico:
+Depois de definir um segmento e definir o limite para o número de locais, é possível identificar no gráfico:
 
 * Número (e porcentagem) de assinantes que estão consumindo conteúdo de (um específico) x número de locais em uma semana.
 
@@ -179,5 +203,5 @@ O gráfico de barras Exibição histórica ajuda você a comparar as métricas d
 
 >[!MORELIKETHIS]
 >
->* Saiba como exportar relatórios para os 1000 principais assinantes de MVPDs selecionados usando filtros no Relatório de uso geral usando [Exportar as 1000 contas principais](/help/AccountIQ/export-acc-information.md) opção.
+>* Saiba como exportar relatórios para os 1000 principais assinantes no segmento selecionado usando filtros no Relatório de uso geral usando [Exportar as 1000 contas principais](/help/AccountIQ/export-acc-information.md) opção.
 

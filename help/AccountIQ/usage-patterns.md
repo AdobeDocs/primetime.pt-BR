@@ -1,23 +1,23 @@
 ---
 title: Padrões de uso
 description: Exibir o comportamento de compartilhamento de conta para diferentes tipologias de usuário.
-source-git-commit: dd9b8edfd00bb97d01c6478ae0be6944e7e57535
+exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
+source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
 # Padrões de uso {#usage-patterns}
 
-O Account IQ classifica usuários de contas de assinantes em várias categorias em termos de comportamento social, como viajantes ou passageiros, famílias grandes e compartilhamento de comunidade. O **Padrões de uso** A página mostra várias análises e relatórios diferentes para essas tipologias do usuário. Por exemplo, **Distribuição de padrões de uso - Usuários no segmento em comparação ao setor** compara o comportamento de uso do segmento atual com o do setor inteiro.
+O Account IQ classifica usuários de contas de assinantes em várias categorias em termos de comportamento social, como viajantes ou passageiros, famílias grandes e compartilhamento de comunidade. O **Padrões de uso** A página mostra várias análises e relatórios diferentes para essas tipologias do usuário. Por exemplo, **Distribuição de padrões de uso - Usuários em segmentos vs total** compara o comportamento de uso do segmento atual com o do setor inteiro.
 
 Como as outras páginas no aplicativo, a análise e os relatórios aqui são baseados no segmento atual, conforme definido na variável [painel de segmentos](/help/AccountIQ/segments-timeframe.md).
 
 ## Distribuição de padrões de uso {#usage-pattern-dis}
 
-O gráfico de barras em **Distribuição de padrões de uso - Usuários no segmento em comparação ao setor** O descreve o número e a porcentagem de assinantes para cada comportamento social ou padrão de uso. Além de comparar cada padrão de uso no segmento atual com o setor inteiro, ele também os compara a um segmento que contém todos os seus canais.
+O gráfico de barras em **Distribuição de padrões de uso - Usuários em segmentos vs total** O descreve o número e a porcentagem de assinantes para cada comportamento social ou padrão de uso. Além de comparar cada padrão de uso no segmento atual com o setor inteiro, ele também os compara a um segmento que contém todos os seus canais.
 
 ![](assets/segment-users-industry.png)
 
@@ -39,8 +39,20 @@ Por exemplo, na imagem acima:
 
 * E 15,7% (24.073.311) do total de solicitações de reprodução (153.076.350) são feitas por usuários regulares.
 
-## Distribuição de padrão de uso para MVPDs {#usage-pattern-dis-mvpd}
+## Distribuição de padrão de uso por parceiro de segmento {#usage-pattern-dis-mvpd}
 
-O **Distribuição de padrão de uso para MVPDs** tabela fornece uma comparação da distribuição de padrões de uso para os MVPDs no segmento atual.
++++Programador- Distribuição de padrão de uso para o total de segmentos e parceiros de segmento
+
+O **Distribuição de padrão de uso** tabela fornece uma comparação da distribuição de padrões de uso para os MVPDs no segmento atual.
 
 ![](assets/usage-patterns-mvpdwise.png)
+
++++
+
++++MVPD - Distribuição de padrão de uso para o total de segmentos e parceiros de segmento
+
+O **Distribuição de padrão de uso** tabela fornece uma comparação da distribuição de padrões de uso para os canais do programador no segmento atual.
+
+![](assets/usage-patterns-programmerwise.png)
+
++++

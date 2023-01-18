@@ -2,9 +2,9 @@
 title: Definir um segmento e um período
 description: Definir um segmento e um período
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -80,10 +80,6 @@ Além de alterar sua seleção no **MVPDs no segmento** e **Canais no segmento**
 * Selecionar o **Remover** ícone (![ícone remover](assets/remove-icon.png)) nos nomes desses MVPDs e canais selecionados, exibidos abaixo do seletor de segmentos.
 
 * Você também pode usar **Limpar seleção** para remover todos os MVPDs ou canais selecionados anteriormente.
-
-![](assets/segment-panel-selection1.png)
-
-*Figura: MVPDs e canais selecionados no painel de segmento e período*
 
 ![](assets/segment-panel-selection.png)
 
