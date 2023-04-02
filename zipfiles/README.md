@@ -1,10 +1,13 @@
 ---
-source-git-commit: 1093480a994ee30969f3bca9b9740097bb9b41d0
+source-git-commit: 9844742419f1ddd6904cbad39bb0271abc822cf6
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '55'
 ht-degree: 0%
 
 ---
+
+# Sobre a pasta zipfiles {#about-zipfiles}
+
 Os arquivos e pastas desta pasta chamada zipfiles (https://git.corp.adobe.com/AdobeDocs/primetime.en/tree/main/zipfiles) são documentação das versões anteriores no formato XML, para as seguintes áreas:
 * DRM (Digital Rights Management)
 * TVSDK
