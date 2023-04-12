@@ -2,9 +2,9 @@
 title: Práticas recomendadas
 description: Leia para entender como usar melhor a ferramenta Account IQ.
 exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,6 @@ Para entender a natureza e o impacto do compartilhamento em sua empresa:
 ## Executar ação incremental direcionada {#incremental-targeted-action}
 
 Com um segmento de destino definido, execute uma ação. Começando pequeno com um segmento bem definido, você diminui o risco de consequências não intencionais e pode entender melhor o resultado. Não importa onde você esteja ao longo do caminho, você sempre pode refinar ou expandir o target da sua operação.
-
 Começar com o pequeno e o crescimento é uma abordagem prudente. Use segmentos identificados anteriormente e execute ações (como experimentos) com objetivos específicos.
 
 Use a ferramenta Operação para definir o segmento de destino e um período operacional. Isso permitirá rastrear os efeitos na próxima fase.

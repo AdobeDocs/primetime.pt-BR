@@ -2,18 +2,18 @@
 title: Limitações e problemas conhecidos
 description: Problemas conhecidos no produto.
 exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
 
 # Problemas conhecidos e limitações {#known-issues}
 
-O Adobe se esforça para oferecer funcionalidades robustas e experiências ininterruptas para o usuário por meio de suas ofertas. A versão atual (versão 1.1) do Account IQ fornece análises de uso e compartilhamento de assinatura a provedores de streaming com alto grau de confiança. No entanto, as seguintes limitações serão abordadas nas versões futuras do .
+O Adobe se esforça para oferecer funcionalidades robustas e experiências ininterruptas para o usuário por meio de suas ofertas. A versão atual (versão 1.0) do Account IQ fornece análises de uso e compartilhamento de assinatura a provedores de streaming com alto grau de confiança. No entanto, as seguintes limitações serão abordadas nas versões futuras do .
 
-* Ao definir coortes no painel ou nas páginas de relatórios, atualmente não há opção para adicionar métricas como **número de dispositivos** para refinar o segmento. Esse recurso estará disponível em breve.
+* Ao definir coortes no painel ou nas páginas de relatórios, atualmente não há opção para adicionar métricas como **número de dispositivos** para refinar o segmento. Esse recurso estará disponível em uma versão futura.
 
 * Ao estimar as pontuações de compartilhamento para contas individuais, o Account IQ adota uma abordagem conservadora que permite que as empresas atuem no compartilhamento com grande grau de confiança. No entanto, esta abordagem tende a subestimar a quantidade total de compartilhamento quando agregada em muitas contas.
 
@@ -29,7 +29,7 @@ O Adobe se esforça para oferecer funcionalidades robustas e experiências inint
 
 * As seções Avaliação de desempenho, Modelos de detecção, Segmentos, Snapshots e Regras na navegação à esquerda estão atualmente desativadas e estarão disponíveis em uma versão futura.
 
-* Ao criar [operações](/help/AccountIQ/operation-affecting-user-segment.md), você pode identificar apenas dois tipos de [Ações](/help/AccountIQ/operation-affecting-user-segment.md) a partir de agora — Regras de monitoramento de simultaneidade e Ações externas.
+* Ao criar [Operações](/help/AccountIQ/operation-affecting-user-segment.md), você pode identificar apenas dois tipos de [Ações](/help/AccountIQ/operation-affecting-user-segment.md) a partir de agora — Regras de monitoramento de simultaneidade e Ações externas.
 
 * Atualmente, as Operações só podem ser criadas e [agendado](/help/AccountIQ/operation-affecting-user-segment.md#action). As versões futuras permitirão pausá-las, retomá-las e gerenciá-las totalmente.
 

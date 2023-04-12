@@ -2,16 +2,16 @@
 title: Exportar informações para contas com pontuação de compartilhamento alta
 description: Exportar informações para contas com pontuação de compartilhamento alta.
 exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '728'
+ht-degree: 1%
 
 ---
 
 # Exportar informações para contas com pontuação de compartilhamento alta {#export-account-info-high-score}
 
-O Account IQ oferece a opção de exportar detalhes de compartilhamento de conta para as 1000 contas de assinante principais com base em suas [compartilhando probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Os dados no arquivo CSV exportado são classificados na ordem decrescente das probabilidades de compartilhamento das contas do assinante na [segmento](/help/AccountIQ/product-concepts.md#segment-def)para um [período especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
+O Account IQ oferece a opção de exportar detalhes de compartilhamento de conta para as 1000 contas de assinante principais com base em suas [compartilhando probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Os dados no arquivo CSV exportado são classificados na ordem decrescente das probabilidades de compartilhamento das contas do assinante - dos MVPDs selecionados na variável [segmento](/help/AccountIQ/product-concepts.md#segment-def)para um [período especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 A opção para exportar as informações de compartilhamento de conta está disponível em [Relatórios de uso geral](/help/AccountIQ/general-usage-reports.md) e [Relatórios de contas compartilhadas](/help/AccountIQ/shared-acc-reports.md) páginas.
 
@@ -99,13 +99,13 @@ O número de vezes que os usuários fizeram logon durante o período, usando ess
 
 Número de vezes que um MVPD autorizou um fluxo ou concedeu acesso (ao conteúdo) a essa conta.
 
+>[!NOTE]
+>
+>O **# AuthZ OK** está relacionada ao **Nº de Solicitações de Reprodução**; é menor que a variável **Nº de Solicitações de Reprodução** porque o Adobe armazena em cache as autorizações fornecidas para os MVPDs normalmente durante 24 horas.
+
 **Nº de Solicitações de Reprodução**
 
 O número real de fluxos durante o período de tempo.
-
->[!NOTE]
->
->**# AuthZ OK** normalmente é menor que **Nº de Solicitações de Reprodução** porque o Adobe armazena em cache as autorizações provenientes de MVPDs por até 24 horas. Esta coluna não está disponível para MVPDs.
 
 **# Canais**
 
@@ -127,7 +127,7 @@ Os números nesta coluna são identificadores que mapeiam para um dos 14 padrõe
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Padrões de uso | Usuário regular | Viajante ou viajante | Família Grande | Família e amigos próximos | Compartilhamento em grupo social | Grande grupo de amigos | Streaming simultâneo | Compartilhamento da comunidade | Comportamento incerto | Pequena família | Segunda casa | Uso anormal |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Probabilidade de compartilhamento**
 

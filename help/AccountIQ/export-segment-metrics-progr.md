@@ -1,9 +1,9 @@
 ---
 title: Exportar métricas para um programador e MVPDs selecionados em um segmento
 description: Exportar métricas para um programador e MVPDs selecionados em um segmento
-source-git-commit: 1cf035c2c40c66cf4ba5052c9229bc76a903865d
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
