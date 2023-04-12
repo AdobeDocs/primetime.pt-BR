@@ -2,10 +2,10 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Autenticação do Primetime
-user-guide-description: null
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+user-guide-description: A Autenticação do Primetime é uma solução de direito para TV em qualquer lugar, fornecendo uma estrutura modular para determinar se alguém que solicita acesso a um recurso tem direito a ele.
+source-git-commit: 9ce554b32564727488f85cef62abd5ce9c1c21f1
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
