@@ -1,20 +1,19 @@
 ---
-description: Você pode implementar seu próprio gerador de oportunidades estendendo a interface OpportunityGenerator.
-title: Implementar um gerador de oportunidade personalizado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode implementar seu próprio gerador de oportunidades estendendo a interface do Gerador de oportunidades.
+title: Implementar um gerador de oportunidades personalizado
+exl-id: 45f9ed89-94c4-4e74-b20a-4789a25bd9b3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
+# Implementar um gerador de oportunidades personalizado{#implement-a-custom-opportunity-generator}
 
-# Implementar um gerador de oportunidade personalizado{#implement-a-custom-opportunity-generator}
+Você pode implementar seu próprio gerador de oportunidades estendendo a interface do Gerador de oportunidades.
 
-Você pode implementar seu próprio gerador de oportunidades estendendo a interface OpportunityGenerator.
-
-1. Crie o gerador de oportunidade personalizado.
+1. Crie o gerador de oportunidades personalizado.
 
    Por exemplo:
 
@@ -44,7 +43,7 @@ Você pode implementar seu próprio gerador de oportunidades estendendo a interf
    }; 
    ```
 
-1. Crie a fábrica de conteúdo personalizado, que usa o gerador de oportunidade personalizado.
+1. Crie a fábrica de conteúdo personalizado, que usa o gerador de oportunidades personalizado.
 
    Por exemplo:
 
@@ -66,9 +65,9 @@ Você pode implementar seu próprio gerador de oportunidades estendendo a interf
    }; 
    ```
 
-1. Registre a fábrica de conteúdo personalizado do fluxo de mídia a ser reproduzido.
+1. Registre a fábrica de conteúdo personalizado para que o fluxo de mídia seja reproduzido.
 
-   No reprodutor da Estrutura de interface do usuário, você pode especificar a fábrica de conteúdo personalizado da seguinte maneira:
+   No Framework player da interface do usuário, você pode especificar a fábrica de conteúdo personalizado da seguinte maneira:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -83,4 +82,3 @@ Você pode implementar seu próprio gerador de oportunidades estendendo a interf
      } 
    }); 
    ```
-

@@ -1,59 +1,58 @@
 ---
 description: O arquivo de configuração flashaccess-tenant.xml inclui configurações que se aplicam a um locatário específico do servidor de licenças.
-title: Arquivo de configuração do locatário
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Arquivo de configuração do inquilino
+exl-id: 35ec521f-ba17-4a2d-8adb-82b2c6cbe33a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 0%
 
 ---
 
-
-# Arquivo de configuração de locatário{#tenant-configuration-file}
+# Arquivo de configuração do inquilino{#tenant-configuration-file}
 
 O arquivo de configuração flashaccess-tenant.xml inclui configurações que se aplicam a um locatário específico do servidor de licenças.
 
-Cada locatário suporta sua própria instância desse arquivo de configuração localizado em `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`. Consulte o diretório `configs/flashaccessserver/tenants/sampletenant` para obter um exemplo de arquivo de configuração de locatário.
+Cada locatário oferece suporte à própria instância desse arquivo de configuração localizado em `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`. Consulte a `configs/flashaccessserver/tenants/sampletenant` diretório para um exemplo de arquivo de configuração de locatário.
 
-Você pode especificar todos os caminhos de arquivo no arquivo de configuração do locatário como caminhos absolutos ou como caminhos relativos para o diretório de configuração do locatário (`<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`).
+Você pode especificar todos os caminhos de arquivo no arquivo de configuração do locatário como caminhos absolutos ou como caminhos relativos ao diretório de configuração do locatário (`<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`).
 
 O arquivo de configuração do locatário inclui:
 
-* *Credencial de Transporte*  — Especifica uma ou mais credenciais de transporte (certificado e chave privada) emitidas pelo Adobe. Pode ser especificado como um caminho para um arquivo [!DNL .pfx] e uma senha, ou um alias para uma credencial armazenada em um HSM. Várias dessas credenciais podem ser especificadas aqui, como caminhos de arquivo, aliases de chave ou ambos.
+* *Credencial de transporte* — Especifica uma ou mais credenciais de transporte (certificado e chave privada) emitidas pelo Adobe. Pode ser especificado como um caminho para um [!DNL .pfx] arquivo e uma senha ou um alias para uma credencial armazenada em um HSM. Várias dessas credenciais podem ser especificadas aqui, como caminhos de arquivo, aliases de chave ou ambos.
 
-   Consulte *Manipular atualizações de certificado* em *Usar o SDK de DRM do Adobe Primetime para proteger conteúdo* para obter mais informações sobre quando credenciais adicionais são necessárias.
+   Consulte *Lidar com atualizações de certificado* in *Utilização do SDK do Adobe Primetime DRM para proteção de conteúdo* para obter mais informações sobre quando credenciais adicionais são necessárias.
 
-* *Credencial do License Server*  — Especifica uma ou mais credenciais do servidor de licenças (certificado e chave privada) emitidas pelo Adobe. Você pode especificar as credenciais do servidor de licenças como um caminho para um arquivo [!DNL .pfx] e uma senha, ou um alias para uma credencial armazenada em um HSM. Várias dessas credenciais podem ser especificadas aqui, como caminhos de arquivo, aliases de chave ou ambos.
+* *Credencial do Servidor de Licença* — Especifica uma ou mais credenciais de servidor de licença (certificado e chave privada) emitidas pelo Adobe. Você pode especificar as credenciais do servidor de licenças como um caminho para um [!DNL .pfx] arquivo e uma senha ou um alias para uma credencial armazenada em um HSM. Várias dessas credenciais podem ser especificadas aqui, como caminhos de arquivo, aliases de chave ou ambos.
 
-   Consulte *Manipular atualizações de certificado* em *Usar o SDK de DRM do Adobe Primetime para proteger conteúdo* para obter mais informações sobre quando credenciais adicionais são necessárias.
+   Consulte *Lidar com atualizações de certificado* in *Utilização do SDK do Adobe Primetime DRM para proteção de conteúdo* para obter mais informações sobre quando credenciais adicionais são necessárias.
 
-* *Certificados do Servidor de Chave* — Especifica opcionalmente o certificado do Servidor de Licenças do Servidor de Chave emitido pelo Adobe. Você pode especificar o certificado do Servidor de Licenças do Servidor de Chave como um caminho para um arquivo [!DNL .cer] ou um alias para um certificado armazenado em um HSM. Essa opção deve ser especificada para emitir licenças para conteúdo empacotado com uma política de DRM que requer a entrega remota de chaves para dispositivos iOS.
+* *Certificados-chave do servidor* — Especifica opcionalmente o certificado de Servidor de chaves do License Server emitido pelo Adobe. Você pode especificar o certificado do Servidor de chaves como um caminho para um [!DNL .cer] arquivo ou um alias para um certificado armazenado em um HSM. Essa opção deve ser especificada para emitir licenças para conteúdo que é empacotado com uma política DRM que requer a entrega remota de chaves para dispositivos iOS.
 
-* *Autorizadores personalizados* — Especifica opcionalmente classes de autorizador personalizadas para chamar cada solicitação de licença. Se vários autorizadores forem especificados, eles serão chamados na ordem listada.
-* *Lista de Pacotes Autorizados* — Especifica, opcionalmente, certificados que identifiquem entidades autorizadas a empacotar conteúdo para este servidor de licenças. Se nenhum certificado do empacotador for especificado, o servidor emitirá licenças para o conteúdo que é empacotado por qualquer empacotador. Se o servidor receber uma solicitação de licença de um empacotador não autorizado, a solicitação será negada.
-* ** Versão mínima suportada do clienteConsulte Uso do SDK de DRM da Adobe Primetime para proteção de conteúdo.
+* *Autorizadores personalizados* — Especifica opcionalmente as classes de autorizador personalizadas a serem chamadas para cada solicitação de licença. Se vários autorizadores forem especificados, eles serão chamados na ordem listada.
+* *Lista de acondicionadores autorizados* — Especifica opcionalmente certificados que identificam entidades autorizadas a empacotar conteúdo para este servidor de licenças. Se nenhum certificado de empacotador for especificado, o servidor emitirá licenças para o conteúdo empacotado por qualquer empacotador. Se o servidor receber uma solicitação de licença de um empacotador não autorizado, a solicitação será negada.
+* *Versão mínima do cliente com suporte* Consulte Uso do SDK DRM do Adobe Primetime para proteção de conteúdo.
 
 * *Regras de uso*
 
-   * *Cache de Licenças*  — Especifica opcionalmente por quanto tempo você pode armazenar a licença no cliente. Por padrão, o armazenamento em cache de licenças está desativado. Se quiser ativar o armazenamento em cache de licenças por um período limitado, é necessário definir a data de término ou o número de segundos para os quais a licença deve ser armazenada (começando quando a licença for emitida). Definir o número de segundos como 0 desativa o armazenamento em cache de licenças.
+   * *Licença de cache* — Especifica opcionalmente por quanto tempo você pode armazenar a licença no cliente. Por padrão, o armazenamento em cache de licenças está desativado. Para habilitar o cache de licenças por um período limitado, é necessário definir a data final ou o número de segundos para o qual a licença deve ser armazenada (começando com a emissão). Definir o número de segundos como 0 desativa o cache de licenças.
 
       >[!NOTE]
       >
-      >Todas as licenças emitidas pelo Servidor para Transmissão Protegida incluem um período de expiração de 24 horas (86400 segundos). Esse valor se aplica implicitamente como um limite superior para qualquer data final ou duração definida para o armazenamento em cache de licenças, também com um valor máximo de 86400 segundos, mesmo que o schema imponha limites mais altos.
+      >Todas as licenças emitidas pelo Server for Protected Streaming incluem um período de expiração de 24 horas (86.400 segundos). Esse valor se aplica implicitamente como um limite superior a qualquer data final ou duração definida para o armazenamento em cache de licença, com um valor máximo de 86.400 segundos, mesmo que o esquema imponha limites mais altos.
 
-   * *Play Right* — É necessário especificar um mínimo de um direito. Se você especificar vários direitos, o cliente usará o primeiro direito que atender a todos os requisitos.
+   * *Reproduzir à direita* — É necessário especificar no mínimo um direito. Se você especificar vários direitos, o cliente usará o primeiro direito que atender a todos os requisitos.
 
-      * *Proteção de saída*  — Controla se a saída para dispositivos de renderização externos deve ser protegida.
-      * *Restrições*  de Aplicação AIR e SWF — lista de permissões opcional de aplicações SWF e AIR que possam reproduzir o conteúdo (por exemplo, apenas são permitidas as aplicações especificadas). As aplicações SWF são identificadas por um URL ou pelo resumo do SWF e o tempo máximo para permitir o download e a verificação do resumo.
+      * *Proteção de saída* — Controla se a saída para dispositivos de renderização externos deve ser protegida.
+      * *Restrições a aplicativos AIR e SWF* — lista de permissões opcional de aplicativos SWF e AIR que possam reproduzir o conteúdo (por exemplo, somente os aplicativos especificados são permitidos). Os aplicativos SWF são identificados por um URL ou pelo resumo do SWF e pelo tempo máximo para permitir o download e a verificação do resumo.
 
-         Consulte *Calculadora de hash SWF* para obter informações sobre como calcular o resumo SWF.
+         Consulte *Calculadora de hash SWF* para obter informações sobre como calcular o resumo de SWF.
 
-         Uma ID do editor e a ID opcional do aplicativo, a versão mínima e a versão máxima identificam aplicativos AIR e iOS. Se você não especificar restrições de aplicativo, qualquer aplicativo SWF ou AIR poderá reproduzir o conteúdo.
+         Uma ID de editor e uma ID de aplicativo opcional, a versão mínima e a versão máxima identificam os aplicativos AIR e iOS. Se você não especificar restrições de aplicativos, qualquer aplicativo SWF ou AIR poderá reproduzir o conteúdo.
 
-      * *DRM e restrições do módulo de tempo de execução*  — Especifica o nível mínimo de segurança necessário para o módulo DRM/Tempo de execução. Opcionalmente inclui uma lista de bloqueios de versões que não têm permissão para reproduzir o conteúdo. As versões do módulo são identificadas por atributos, como sistema operacional e/ou um número de versão.
+      * *Restrições de DRM e Módulo de Tempo de Execução* — Especifica o nível de segurança mínimo necessário para o módulo DRM/Runtime. Opcionalmente, inclui uma lista de bloqueios de versões que não têm permissão para reproduzir o conteúdo. As versões de módulos são identificadas por atributos, como sistema operacional e/ou um número de versão.
 
-         Restrições do módulo DRM e restrições do módulo de tempo de execução agora oferecem suporte aos seguintes atributos adicionais:
+         Restrições do Módulo DRM e Restrições do Módulo de Tempo de Execução agora oferecem suporte aos seguintes atributos adicionais:
 
          * `oemVendor`
          * `model`
@@ -63,9 +62,9 @@ O arquivo de configuração do locatário inclui:
 
          * `osVersion`
          * `version`
-      * *Requisitos de capacidade do dispositivo*  — especifica opcionalmente os recursos de hardware necessários para acessar o conteúdo.
-      * *Requisitos*  de detecção de quebra de maré — especifica opcionalmente que a reprodução não é permitida para dispositivos em que a quebra de maré é detectada.
+      * *Requisitos de capacidade do dispositivo* — especifica opcionalmente os recursos de hardware necessários para acessar o conteúdo.
+      * *Requisitos de detecção de jailbreak* — Especifica opcionalmente que a reprodução não é permitida em dispositivos nos quais o jailbreak é detectado.
 
 
 
-Consulte os comentários no arquivo de configuração do locatário de exemplo para obter mais detalhes.
+Consulte os comentários no arquivo de configuração de locatário de exemplo para obter mais detalhes.

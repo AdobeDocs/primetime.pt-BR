@@ -1,24 +1,23 @@
 ---
-description: Você pode inserir anúncios no VOD e conteúdo ao vivo/linear usando a interface do Adobe Primetime Ad Decisioning.
-title: Requisitos de publicidade
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: É possível inserir anúncios em VOD e conteúdo dinâmico/linear usando a interface de decisão de anúncios do Adobe Primetime.
+title: Exigências para publicidade
+exl-id: b162e5b0-9f6c-46de-85de-97cec009a9b7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
-
 # Tempo limite do anúncio {#ad-timeout}
 
-## Requisitos básicos do AV {#av-foundation-requirements}
+## Requisitos de base do AV {#av-foundation-requirements}
 
 No caso de conteúdo VOD, a compilação da lista de reprodução, que envolve o carregamento do manifesto do conteúdo principal, a resolução do anúncio e o carregamento do manifesto do anúncio, deve ser concluída em 35 segundos.
 
-No caso de conteúdo em tempo real, cada vez que a lista de reprodução é atualizada, a compilação da lista de reprodução deve ser concluída em 20 segundos
+No caso de conteúdo Live, cada vez que a lista de reprodução é atualizada, a compilação dela deve ser concluída em 20 segundos
 
-**APIs relevantes ao Tempo limite da AdResolution**
+**APIs relevantes para o Tempo limite de AdResolution**
 
 ```
 /** @name Properties */
@@ -29,7 +28,7 @@ No caso de conteúdo em tempo real, cada vez que a lista de reprodução é atua
 @property (notatomic, assign) double adResolutionTimeout;
 ```
 
-Você pode definir adResolutionTimeout definindo PTAdMetadata::adResolutionTimeout ao configurar os metadados do anúncio.
+É possível definir adResolutionTimeout definindo PTAdMetadata::adResolutionTimeout ao configurar os metadados de anúncios.
 
 ```
 // Create an instance of PTAuditudeMetadata and set its property
@@ -37,9 +36,9 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-Logo após, siga a seção : [Metadados do servidor de anúncio do Primetime](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+Em seguida, siga a seção: [Metadados do servidor de publicidade do Primetime](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
 
-**APIs relevantes ao Tempo limite AdManifest**
+**APIs relevantes ao tempo limite do AdManifest**
 
 ```
 /** @name Properties */
@@ -50,7 +49,7 @@ Logo após, siga a seção : [Metadados do servidor de anúncio do Primetime](/h
  @property (notatomic, assign) double adManifestTimeout; 
 ```
 
-Você pode definir adManifestTimeout definindo PTAdMetadata::adManifestTimeout ao configurar os metadados do anúncio.
+É possível definir adManifestTimeout definindo PTAdMetadata::adManifestTimeout ao configurar os metadados de anúncios.
 
 
 ```
@@ -59,4 +58,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-Logo após, siga a seção : [Metadados do servidor de anúncio do Primetime](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+Em seguida, siga a seção: [Metadados do servidor de publicidade do Primetime](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).

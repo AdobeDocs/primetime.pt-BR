@@ -1,30 +1,29 @@
 ---
 description: Para permitir que o resolvedor de anúncios funcione, os provedores de anúncios, como o Adobe Primetime ad decisioning, exigem valores de configuração para habilitar sua conexão com o provedor.
-title: Metadados de inserção do anúncio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Adicionar metadados de inserção
+exl-id: 839527db-fcf1-4657-9a56-af5b00171754
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral {#ad-nsertion-metadata-overview}
 
 Para permitir que o resolvedor de anúncios funcione, os provedores de anúncios, como o Adobe Primetime ad decisioning, exigem valores de configuração para habilitar sua conexão com o provedor.
 
-O TVSDK inclui a biblioteca de decisão do anúncio do Primetime. Para que seu conteúdo inclua publicidade do Primetime ad decisioningserver, seu aplicativo deve fornecer as seguintes informações `AuditudeSettings` necessárias:
+O TVSDK inclui a biblioteca de decisão de anúncios do Primetime. Para que o conteúdo inclua anúncios do servidor do Primetime ad decisioning, o aplicativo deve fornecer os seguintes itens necessários `AuditudeSettings` informações:
 
-* `mediaID`, que é um identificador exclusivo para a reprodução do vídeo.
+* `mediaID`, que é um identificador exclusivo para o vídeo a ser reproduzido.
 
-   O editor atribui a mediaID ao enviar o conteúdo de vídeo e as informações do anúncio para o servidor de decisão do anúncio do Adobe Primetime. Essa ID é usada pelo Primetime ad Decisioning para recuperar informações de publicidade relacionadas ao vídeo do servidor.
+   O editor atribui a mediaID ao enviar conteúdo de vídeo e informações de anúncio para o servidor do Adobe Primetime Ad Decisioning. Essa ID é usada pela decisão de anúncio do Primetime para recuperar informações de anúncio relacionadas ao vídeo do servidor.
 
-* (Opcional) `defaultMediaId`, que especifica os anúncios que são veiculados quando as seguintes condições são atendidas:
+* (Opcional) `defaultMediaId`, que especifica os anúncios veiculados quando as seguintes condições são atendidas:
 
-   * Sua solicitação para o servidor de publicidade é inválida ou o conteúdo está configurado incorretamente.
-   * A decisão do anúncio do Primetime está enfrentando atrasos na propagação de dados.
-   * Um dos processos de back-end de decisão do Primetime ad está com mau funcionamento ou não está disponível.
+   * Sua solicitação ao servidor de publicidade é inválida ou o conteúdo está configurado incorretamente.
+   * O Primetime e a decisão estão enfrentando atrasos na propagação dos dados.
+   * Um dos processos de back-end do Primetime e do Decisioning está com defeito ou indisponível.
 
    >[!TIP]
    >
@@ -32,6 +31,6 @@ O TVSDK inclui a biblioteca de decisão do anúncio do Primetime. Para que seu c
 
 * Seu `zoneID`, que é atribuído pelo Adobe, identifica sua empresa ou site.
 * O domínio do servidor de publicidade atribuído.
-* Outros parâmetros de definição de metas.
+* Outros parâmetros de direcionamento.
 
    Você pode incluir esses parâmetros dependendo das suas necessidades e das necessidades do provedor de anúncios.

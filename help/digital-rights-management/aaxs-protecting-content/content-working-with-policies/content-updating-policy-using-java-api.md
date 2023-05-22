@@ -1,28 +1,27 @@
 ---
-title: Atualização de uma política usando a API do Java
-description: Atualização de uma política usando a API do Java
+title: Atualização de uma política usando a API Java
+description: Atualização de uma política usando a API Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1b03f033-0d29-46cc-ae14-d6fef96fe970
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
 # Atualização de uma política usando a API Java {#updating-a-policy-using-the-java-api}
 
-Para atualizar uma política usando a API do Java, execute as seguintes etapas:
+Para atualizar uma política usando a API Java, execute as seguintes etapas:
 
-1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Setting up the development environment](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) no seu projeto.
-1. Crie uma instância `Policy` e leia a política a partir de um arquivo ou banco de dados.
+1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Configuração do ambiente de desenvolvimento](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) no seu projeto.
+1. Criar um `Policy` instância e ler na política de um arquivo ou banco de dados.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Atualize o objeto `Policy` definindo suas propriedades, como nome e regras de uso.
+1. Atualize o `Policy` definindo suas propriedades, como nome e regras de uso.
 
    ```java
      // Change the policy name.  
@@ -47,7 +46,7 @@ Para atualizar uma política usando a API do Java, execute as seguintes etapas:
      }
    ```
 
-1. Serialize o objeto `Policy` atualizado e armazene-o em um arquivo ou banco de dados.
+1. Serializar o atualizado `Policy` objeto e armazená-lo em um arquivo ou banco de dados.
 
    ```java
       // Serialize the policy.  
@@ -61,4 +60,4 @@ Para atualizar uma política usando a API do Java, execute as seguintes etapas:
       out.close(); 
    ```
 
-Para obter a fonte completa deste código de amostra, consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` no diretório &quot;samples&quot; de Ferramentas de Linha de Comando de Implementação de Referência.
+Para obter a fonte completa desse código de amostra, consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` no diretório &quot;samples&quot; de Ferramentas de linha de comando de implementação de referência.

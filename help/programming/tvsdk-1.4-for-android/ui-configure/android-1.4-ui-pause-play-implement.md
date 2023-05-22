@@ -1,20 +1,19 @@
 ---
-description: Você pode adicionar comportamento TVSDK para pausar e reproduzir botões.
+description: Você pode adicionar o comportamento TVSDK aos botões Pausar e Reproduzir.
 title: Reproduzir e pausar um vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 62e77f50-5133-4db5-bf10-fde7d28e959d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
-
 # Reproduzir e pausar um vídeo{#play-and-pause-a-video}
 
-Você pode adicionar comportamento TVSDK para pausar e reproduzir botões.
+Você pode adicionar o comportamento TVSDK aos botões Pausar e Reproduzir.
 
-1. Crie um botão pausar/reproduzir que faça o seguinte.
+1. Crie um botão Pausar/Reproduzir que faça o seguinte.
    1. Aguarde até que o reprodutor esteja pelo menos no estado PREPARADO.
    1. Para iniciar a reprodução, chame o método de reprodução TVSDK:
 
@@ -28,7 +27,6 @@ Você pode adicionar comportamento TVSDK para pausar e reproduzir botões.
       void pause() throws IllegalStateException;
       ```
 
-1. Use o retorno de chamada `MediaPlayer.PlaybackEventListener.onStateChanged` para verificar se há erros ou tomar outras ações apropriadas.
+1. Use o `MediaPlayer.PlaybackEventListener.onStateChanged` retorno de chamada para verificar se há erros ou executar outras ações apropriadas.
 
-   O TVSDK chama esse retorno de chamada quando o método pause ou play é chamado. O TVSDK transmite informações sobre a alteração de estado no retorno de chamada, incluindo o novo estado, como PAUSED ou PLAYING.
-
+   O TVSDK chama essa chamada de retorno quando o método pause ou play é chamado. O TVSDK transmite informações sobre a alteração de estado na chamada de retorno, incluindo o novo estado, como PAUSADO ou REPRODUZINDO.

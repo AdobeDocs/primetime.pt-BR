@@ -2,14 +2,13 @@
 title: Requisitos de software
 description: Requisitos de software
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: aa2ae6ac-7c2a-4cc3-a3a4-b7f92e478d23
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
 
 ---
-
 
 # Requisitos de software {#software-requirements}
 
@@ -18,10 +17,10 @@ ht-degree: 0%
 
 ## Entrega de código/Conteúdo do pacote{#code-delivery-package-contents}
 
-O pacote Adobe Primetime DRM On Premise Individualization Server contém o seguinte:
+O pacote Adobe Primetime DRM On Premises Individualization Server contém o seguinte:
 
-* [!DNL flashaccess.war] - O servidor de individualização
-* [!DNL flashaccess-kgs.war] - Servidor opcional de geração de chave
+* [!DNL flashaccess.war] - O servidor de personalização
+* [!DNL flashaccess-kgs.war] - O servidor de geração de chaves opcional
 * [!DNL /shared] - Contém:
 
    * [!DNL adobe-flashaccess-certs.jar]
@@ -33,21 +32,21 @@ O pacote Adobe Primetime DRM On Premise Individualization Server contém o segui
    * [!DNL jsafe.dll] (Windows)
 
 * [!DNL adobe-flashaccess-i15n-setup.jar] - Um utilitário para criptografar senhas de credenciais do servidor
-* [!DNL ROOT] - contém um  [!DNL crossdomain.xml] arquivo
+* [!DNL ROOT] - contém um [!DNL crossdomain.xml] arquivo
 
 * Arquivos de cache da ECI - Pré-baixados
-* [!DNL addIndivCert.py] - Um script para atualizar a raiz de confiança do License Server para suportar individualizações locais
-* [!DNL CreateMetadata.jar] - Um utilitário para criar metadados de DRM nas instalações
+* [!DNL addIndivCert.py] - Um script para atualizar a raiz de confiança de um License Server para dar suporte a individualizações no local
+* [!DNL CreateMetadata.jar] - Um utilitário para criar Metadados DRM no Local
 * [!DNL client_sample/] - Uma pasta com um trecho de código de cliente
-* Notas de versão - Para quaisquer adições de último minuto à documentação
+* Notas de versão - Para adições de última hora à documentação
 
-## Obter certificados do servidor de individualização{#obtain-individualization-server-certificates}
+## Obter Certificados do Servidor de Individualização{#obtain-individualization-server-certificates}
 
-Para usar o On Premise Individualization Server, primeiro você deve obter duas credenciais digitais (certificados):
+Para usar o On Premises Individualization Server, primeiro obtenha duas credenciais digitais (certificados):
 
-* *Credencial de Transporte de Individualização*  - emitida pelo Adobe
-* *Credencial da CA de individualização*  - emitida pela Symantec (VeriSign)
+* *Credencial de transporte de individualização* - emitido por Adobe
+* *Credencial da CA de individualização* - emitido pela Symantec (VeriSign)
 
-Para obter esses certificados, envie uma solicitação por meio do tíquete do Zendesk para: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
+Para obter esses certificados, envie uma solicitação por meio do ticket do Zendesk para: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
 
-Observe que essas credenciais estão além das credenciais necessárias para operar um Servidor de Licenças de DRM do Primetime.
+Observe que essas credenciais são adicionais às credenciais necessárias para operar um servidor de licença PRIMETIME DRM.

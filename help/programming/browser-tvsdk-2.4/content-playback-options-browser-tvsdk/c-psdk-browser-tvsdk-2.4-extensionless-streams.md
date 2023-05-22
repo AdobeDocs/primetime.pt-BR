@@ -1,28 +1,27 @@
 ---
-description: O TVSDK do navegador suporta atualmente a reprodução de fluxos em que manifestos e fragmentos não contêm extensões.
+description: Atualmente, o TVSDK do navegador é compatível com a reprodução de fluxos em que manifestos e fragmentos não contêm extensões.
 title: Fluxos sem extensão
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ef81bfd2-2bfa-4ff7-b826-fd80802b3c07
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
 
 ---
 
-
 # Fluxos sem extensão{#extensionless-streams}
 
-O TVSDK do navegador suporta atualmente a reprodução de fluxos em que manifestos e fragmentos não contêm extensões.
+Atualmente, o TVSDK do navegador é compatível com a reprodução de fluxos em que manifestos e fragmentos não contêm extensões.
 
 ## Nível do fragmento {#section_0E035129501D4A77BBC14192D8A53A86}
 
-O TVSDK do navegador analisa os primeiros bytes da resposta para detectar o tipo de conteúdo de fragmentos sem extensão. Se nenhum tipo de conteúdo válido for detectado, o TVSDK do navegador emitirá um erro.
+O TVSDK do navegador analisa os primeiros bytes da resposta para detectar o tipo de conteúdo de fragmentos sem extensão. Se nenhum tipo de conteúdo válido for detectado, o TVSDK do navegador exibirá um erro.
 
-## Nível de manifesto {#section_AAD9EBAC883D4CC3A0133A45B555EECF}
+## Nível do manifesto {#section_AAD9EBAC883D4CC3A0133A45B555EECF}
 
-O TVSDK do navegador usa o parâmetro `mediaResource.resourceType` passado no método `replaceCurrentResource` para detectar o tipo de conteúdo do URL de manifesto. Para obter mais informações, consulte a classe `AdobePSDK.MediaPlayer` .
+O TVSDK do navegador usa o `mediaResource.resourceType` parâmetro passado na variável `replaceCurrentResource` para detectar o tipo de conteúdo do URL do manifesto. Para obter mais informações, consulte `AdobePSDK.MediaPlayer` classe.
 
-No reprodutor da Estrutura da interface do usuário, é possível especificar o tipo de recurso no recurso de mídia da seguinte maneira:
+No reprodutor da estrutura da interface do usuário, você pode especificar o tipo de recurso no recurso de mídia da seguinte maneira:
 
 ```js
 var playerWrapper = ptp.videoPlayer('.videoDiv', { 
@@ -35,9 +34,8 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-Se `resourceType` não for fornecido, a Estrutura da interface do usuário determinará o tipo de recurso da extensão do URL do recurso, que será passado para o método `replaceCurrentResource`.
+Se `resourceType` não for fornecido, a Estrutura da interface determina o tipo de recurso da extensão de URL de recurso, que é então passada para `replaceCurrentResource` método.
 
 >[!TIP]
 >
->Para manifesto sem extensão, verifique se `resourceType` é sempre passado ao carregar um recurso na Estrutura da interface do usuário.
-
+>Para manifesto sem extensão, verifique se `resourceType` é sempre transmitido ao carregar um recurso na Estrutura da interface do usuário.

@@ -1,49 +1,48 @@
 ---
-title: Guia do SDK do Android
-description: Guia do SDK do Android
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Guia do Android SDK
+description: Guia do Android SDK
+exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 0%
 
 ---
 
-
-
-# Guia do SDK do Android {#android-sdk-cookbook}
+# Guia do Android SDK {#android-sdk-cookbook}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 </br>
 
 ## Introdução {#intro}
 
-Este documento descreve os workflows de direito que um aplicativo de nível superior do Programador pode implementar por meio das APIs expostas pela biblioteca Android AccessEnabler.
+Este documento descreve os workflows de direito que um aplicativo de nível superior do programador pode implementar por meio das APIs expostas pela biblioteca AccessEnabler do Android.
 
 
 A solução de direito de autenticação da Adobe Primetime para Android é dividida em dois domínios:
 
-- O domínio da interface do usuário: essa é a camada de aplicativo de nível superior que implementa a interface do usuário e usa os serviços fornecidos pela biblioteca AccessEnabler para fornecer acesso a conteúdo restrito.
+- O domínio da interface do usuário — essa é a camada de aplicativo de nível superior que implementa a interface do usuário e usa os serviços fornecidos pela biblioteca do AccessEnabler para fornecer acesso ao conteúdo restrito.
 - O domínio AccessEnabler - é aqui que os workflows de direito são implementados no formato de:
-   - Chamadas de rede feitas para servidores backend do Adobe
+   - Chamadas de rede feitas para servidores back-end do Adobe
    - Regras de lógica de negócios relacionadas aos workflows de autenticação e autorização
-   - Gerenciamento de vários recursos e processamento do estado do workflow (como o cache de tokens)
+   - Gerenciamento de vários recursos e processamento do estado do fluxo de trabalho (como o cache de token)
 
 O objetivo do domínio AccessEnabler é ocultar todas as complexidades dos workflows de direito e fornecer ao aplicativo de camada superior (por meio da biblioteca AccessEnabler) um conjunto de primitivos de direito simples com os quais você implementa os workflows de direito:
 
 1. Definir a identidade do solicitante
-1. Verificar e obter autenticação em relação a um determinado provedor de identidade
+1. Verificar e obter autenticação em relação a um provedor de identidade específico
 1. Verificar e obter autorização para um recurso específico
-1. Logout
+1. Sair
 
-A atividade de rede do AccessEnabler ocorre em um thread diferente para que o thread da interface do usuário nunca seja bloqueado. Como resultado, o canal de comunicação bidirecional entre os dois domínios de aplicativos deve seguir um padrão totalmente assíncrono:
+A atividade de rede do AccessEnabler ocorre em um thread diferente, de modo que o thread de interface do usuário nunca é bloqueado. Como resultado, o canal de comunicação bidirecional entre os dois domínios de aplicativos deve seguir um padrão totalmente assíncrono:
 
-- A camada do aplicativo da interface do usuário envia mensagens para o domínio AccessEnabler por meio das chamadas de API expostas pela biblioteca AccessEnabler .
-- O AccessEnabler responde à camada da interface do usuário por meio dos métodos de retorno de chamada incluídos no protocolo AccessEnabler, que a camada da interface do usuário registra na biblioteca AccessEnabler .
+- A camada de aplicativo da interface envia mensagens para o domínio AccessEnabler por meio das chamadas de API expostas pela biblioteca AccessEnabler.
+- O AccessEnabler responde à camada da interface do usuário por meio dos métodos de retorno de chamada incluídos no protocolo AccessEnabler que a camada da interface do usuário registra na biblioteca AccessEnabler.
 
-## Fluxos de direito {#entitlement}
+## Fluxos de Direitos {#entitlement}
 
 1. [Pré-requisitos](#prereqs)
 1. [Fluxo de inicialização](#startup_flow)
@@ -59,80 +58,80 @@ A atividade de rede do AccessEnabler ocorre em um thread diferente para que o th
 1. Crie suas funções de retorno de chamada:
    - [`setRequestorComplete()`](#$setRequestorComplete)
 
-      Disparado por `setRequestor()`, retorna bem-sucedido ou falha.  \
-      Sucesso indica que você pode continuar com chamadas de direito.
+      Acionado por `setRequestor()`, retorna sucesso ou falha.  \
+      Success indica que você pode continuar com chamadas de direito.
 
    - [displayProviderDialog(mvpds)](#$displayProviderDialog)
 
-      Disparado por `getAuthentication()` somente se o usuário não tiver selecionado um provedor (MVPD) e ainda não tiver sido autenticado.  \
-      O `mvpds` é uma matriz de provedores disponíveis para o usuário.
+      Acionado por `getAuthentication()` somente se o usuário não tiver selecionado um provedor (MVPD) e ainda não estiver autenticado.  \
+      A variável `mvpds` é uma matriz de provedores disponíveis para o usuário.
 
-   - [`setAuthenticationStatus(status, errorcode)`](#$setAuthNStatus)
+   - [&quot;setAuthenticationStatus(status, errorcode)&quot;](#$setAuthNStatus)
 
-      Disparado por `checkAuthentication()` sempre.\
-      Disparado por `getAuthentication()` somente se o usuário já estiver autenticado e tiver selecionado um provedor.
+      Acionado por `checkAuthentication()` sempre.\
+      Acionado por `getAuthentication()` somente se o usuário já estiver autenticado e tiver selecionado um provedor.
 
-      O status retornado é bem-sucedido ou falha, o código de erro descreve o tipo da falha.
+      O status retornado é sucesso ou falha, o código de erro descreve o tipo da falha.
 
    - [navigateToUrl(url)](#$navigateToUrl)
 
-      Disparado por `getAuthentication()` depois que o usuário seleciona um MVPD. O `url` fornece o local da página de logon do MVPD.
+      Acionado por `getAuthentication()` após o usuário selecionar um MVPD. A variável `url` fornece a localização da página de logon do MVPD.
 
-   - [`sendTrackingData(event, data)`](#$sendTrackingData)
+   - [&quot;sendTrackingData(event, data)&quot;](#$sendTrackingData)
 
-      Disparado por `checkAuthentication(), getAuthentication(), checkAuthorization(), getAuthorization(), setSelectedProvider()`.\
-      O `event` parâmetro indica qual evento de direito ocorreu; o `data` é uma lista de valores relacionados ao evento. 
+      Acionado por `checkAuthentication(), getAuthentication(), checkAuthorization(), getAuthorization(), setSelectedProvider()`.\
+      A variável `event` indica qual evento de direito ocorreu; a variável `data` parameter é uma lista de valores relacionados ao evento. 
 
-   - [`setToken(token, recurso)`](#$setToken)
+   - [`setToken(token, resource)`](#$setToken)
 
-      Disparado por `checkAuthorization()` e `getAuthorization()` após uma autorização bem-sucedida para visualizar um recurso.\
-      O `token` é o token de mídia de curta duração; o `resource` é o conteúdo que o usuário está autorizado a visualizar.
+      Acionado por `checkAuthorization()` e `getAuthorization()` após uma autorização bem-sucedida para visualizar um recurso.\
+      A variável `token` é o token de mídia de vida curta; a variável `resource` parâmetro é o conteúdo que o usuário está autorizado a visualizar.
 
-   - [`tokenRequestFailed(recurso, código, descrição)`](#$tokenRequestFailed)
+   - [&quot;tokenRequestFailed(resource, code, description)&quot;](#$tokenRequestFailed)
 
-      Disparado por `checkAuthorization()` e `getAuthorization()` após uma autorização infrutífera.\
-      O `resource` é o conteúdo que o usuário estava tentando visualizar; o `code` é o código de erro que indica o tipo de falha ocorrido; o `description` descreve o erro associado ao código de erro.
+      Acionado por `checkAuthorization()` e `getAuthorization()` após uma autorização malsucedida.\
+      A variável `resource` é o conteúdo que o usuário estava tentando visualizar; a variável `code` é o código de erro que indica que tipo de falha ocorreu; a variável `description` descreve o erro associado ao código de erro.
 
    - [`seletedProvider(mvpd)`](#$selectedProvider)
 
-      Disparado por `getSelectedProvider()`.\
-      O `mvpd` fornece informações sobre o provedor selecionado pelo usuário.
+      Acionado por `getSelectedProvider()`.\
+      A variável `mvpd` O parâmetro fornece informações sobre o provedor selecionado pelo usuário.
 
    - [`setMetadataStatus(metadados, chave, argumentos)`](#$setMetadataStatus)
 
-      Disparado por `getMetadata().`\
-      O `metadata` fornece os dados específicos solicitados; o `key` é a chave usada na variável `getMetadata()` pedido; e `arguments` é o mesmo dicionário passado para `getMetadata()`.
+      Acionado por `getMetadata().`\
+      A variável `metadata` fornece os dados específicos solicitados; a variável `key` é a chave usada na variável `getMetadata()` pedido; e a `arguments` é o mesmo dicionário que foi passado para `getMetadata()`.
 
-   - [&quot;preauthorizedResources(resources)`](#$preauthResources)
+   - [&quot;preauthorizedResources(resources)&quot;](#$preauthResources)
 
-      Disparado por `checkPreauthorizedResources()`.\
-      O `authorizedResources` apresenta os recursos que o usuário está autorizado a visualizar.\
+      Acionado por `checkPreauthorizedResources()`.\
+      A variável `authorizedResources` Este parâmetro apresenta os recursos que o usuário está autorizado a visualizar.\
        
 
 ![](assets/android-entitlement-flows.png)\
  
 
-### B. Fluxo de arranque {#startup_flow}
+### B. Fluxo de inicialização {#startup_flow}
 
 1. Inicie o aplicativo de nível superior.
-1. Iniciar autenticação da Adobe Primetime
+1. Iniciar autenticação do Adobe Primetime
 
-   a. Chame [`getInstance`](#$getInstance) para criar uma única instância do AccessEnabler de autenticação da Adobe Primetime.
+   a. Chame [`getInstance`](#$getInstance) para criar uma única instância do AccessEnabler de autenticação do Adobe Primetime.
 
-   - **Dependência:** Biblioteca nativa do Android de autenticação da Adobe Primetime (AccessEnabler)
+   - **Dependência:** Biblioteca Android nativa de autenticação da Adobe Primetime (AccessEnabler)
 
-   b. Chame` setRequestor()` Estabelecer a identificação do programador; passe no `requestorID` e (opcionalmente) uma matriz de endpoints de autenticação da Adobe Primetime.
+   b. Chame` setRequestor()` para estabelecer a identificação do Programador; passar no `requestorID` e (opcionalmente) uma matriz de endpoints de autenticação da Adobe Primetime.
 
-   - **Dependência:** RequestorID de autenticação válida do Adobe Primetime\
-      (Entre em contato com o Gerente de conta de autenticação da Adobe Primetime para fazer isso.)
+   - **Dependência:** RequestorID de autenticação Adobe Primetime válida\
+      (Trabalhe com seu Gerente de conta de autenticação da Adobe Primetime para organizar isso.)
 
    - **Acionadores:** retorno de chamada setRequestorComplete()
 
-   | OBSERVAÇÃO |  |
+   | NOTA |  |
    | --- | --- |  
-   | ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) | Nenhum pedido de direito pode ser concluído até que a identidade do solicitante seja totalmente estabelecida. Isso significa efetivamente que, enquanto setRequestor() ainda estiver em execução, todas as solicitações de direito subsequentes (por exemplo, `checkAuthentication()`) estiverem bloqueadas.<br><br>Você tem duas opções de implementação: Depois que as informações de identificação do solicitante forem enviadas para o servidor de backend, a camada do aplicativo da interface do usuário poderá escolher uma das duas abordagens a seguir:<br><br>1.  Aguarde o acionamento do `setRequestorComplete()` retorno de chamada (parte do delegado AccessEnabler).  Esta opção oferece a maior certeza de que `setRequestor()` concluído, portanto, é recomendado para a maioria das implementações.<br>2.  Continue sem esperar o acionamento da variável `setRequestorComplete()` retorno de chamada e início da emissão de solicitações de direito. Essas chamadas (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout) são enfileiradas pela biblioteca AccessEnabler, que fará as chamadas de rede reais após a `setRequestor(). `Ocasionalmente, essa opção pode ser interrompida se, por exemplo, a conexão de rede estiver instável. |
+   | ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) | Nenhuma solicitação de direito pode ser concluída até que a identidade do solicitante seja totalmente estabelecida. Isso significa que, enquanto setRequestor() ainda estiver em execução, todas as solicitações de direito subsequentes (por exemplo, `checkAuthentication()`) estiverem bloqueados.<br><br>Você tem duas opções de implementação: depois que as informações de identificação do solicitante são enviadas ao servidor de backend, a camada de aplicativo da interface do usuário pode escolher uma das duas abordagens a seguir:<br><br>1.  Aguarde o acionamento do `setRequestorComplete()` retorno de chamada (parte do delegado AccessEnabler).  Essa opção oferece a maior certeza de que `setRequestor()` concluído, portanto, é recomendado para a maioria das implementações.<br>2.  Continuar sem esperar o acionamento do `setRequestorComplete()` retorno de chamada e comece a emitir solicitações de direito. Essas chamadas (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout) são enfileiradas pela biblioteca AccessEnabler, que fará as chamadas de rede reais após o `setRequestor(). `Ocasionalmente, essa opção pode ser interrompida se, por exemplo, a conexão de rede estiver instável. |
 
-1. Chame [checkAuthentication()](#$checkAuthN) para verificar uma autenticação existente sem iniciar o fluxo de Autenticação completo.   Se esta chamada for bem-sucedida, você poderá prosseguir diretamente para o fluxo de Autorização.  Caso contrário, prossiga para o fluxo Autenticação .
+1. Chame [checkAuthentication()](#$checkAuthN) para verificar uma autenticação existente sem iniciar o fluxo de Autenticação completa.   Se essa chamada for bem-sucedida, você poderá prosseguir diretamente para o Fluxo de autorização.  Caso contrário, prossiga para o Fluxo de autenticação.
 
    - **Dependência:** Uma chamada bem-sucedida para `setRequestor()` (essa dependência também se aplica a todas as chamadas subsequentes).
 
@@ -142,27 +141,27 @@ A atividade de rede do AccessEnabler ocorre em um thread diferente para que o th
 
 ### C. Fluxo de autenticação {#authn_flow}
 
-1. Chame [`getAuthentication()`](#$getAuthN) para iniciar o fluxo de autenticação ou obter confirmação de que o usuário já está autenticado. \
+1. Chame [`getAuthentication()`](#$getAuthN) para iniciar o fluxo de autenticação ou obter a confirmação de que o usuário já está autenticado. \
    **Acionadores:**  
-   - O retorno de chamada setAuthenticationStatus() , se o usuário já estiver autenticado.  Nesse caso, prossiga diretamente para o [Fluxo de autorização](#authz_flow).
-   - O retorno de chamada displayProviderDialog() , se o usuário ainda não estiver autenticado.  
+   - O retorno de chamada setAuthenticationStatus(), se o usuário já estiver autenticado.  Nesse caso, prossiga diretamente para o [Fluxo de autorização](#authz_flow).
+   - O retorno de chamada displayProviderDialog(), se o usuário ainda não estiver autenticado.  
 
-1. Apresentar ao usuário a lista de provedores enviados para `displayProviderDialog()`.
+1. Apresentar ao usuário a lista de provedores enviada para `displayProviderDialog()`.
 
-1. Depois que o usuário selecionar um provedor, obtenha o URL do MVPD do usuário do `navigateToUrl()` retorno de chamada.  Abra um WebView e direcione esse controle do WebView para o URL.   
+1. Depois que o usuário selecionar um provedor, obtenha o URL do MVPD do usuário no `navigateToUrl()` retorno de chamada.  Abra um WebView e direcione esse controle do WebView para o URL.   
 
-1. Por meio do WebView instanciado na etapa anterior, o usuário acessa a página de logon do MVPD e insere credenciais de logon. Várias operações de redirecionamento ocorrem dentro do WebView.\
+1. Por meio do WebView instanciado na etapa anterior, o usuário acessa a página de login do MVPD e insere credenciais de login. Várias operações de redirecionamento ocorrem no WebView.\
     
 
-   **Observação:** Nesse ponto, o usuário tem a oportunidade de cancelar o fluxo de autenticação. Se isso ocorrer, a camada da interface do usuário será responsável por informar o AccessEnabler sobre esse evento, chamando `setSelectedProvider()` com `null` como parâmetro. Isso permite que o AccessEnabler limpe seu estado interno e redefina o fluxo de autenticação.
+   **Nota:** Nesse momento, o usuário tem a oportunidade de cancelar o fluxo de autenticação. Se isso ocorrer, a camada da interface do usuário será responsável por informar o AccessEnabler sobre esse evento, chamando `setSelectedProvider()` com `null` como parâmetro. Isso permite que o AccessEnabler limpe seu estado interno e redefina o Fluxo de autenticação.
 
-1. Após um logon bem-sucedido pelo usuário, a camada do aplicativo detecta o carregamento de um &quot;URL de redirecionamento personalizado&quot; (ou seja: [http://adobepass.android.app](http://adobepass.android.app/)). Este URL personalizado é, na verdade, um URL inválido que não se destina a ser carregado pelo WebView. É um sinal de que o Fluxo de Autenticação foi concluído e de que o WebView precisa ser fechado.
+1. Após um logon bem-sucedido do usuário, a camada do aplicativo detecta o carregamento de um &quot;URL de redirecionamento personalizado&quot; (ou seja: [http://adobepass.android.app](http://adobepass.android.app/)). Na verdade, esse URL personalizado é um URL inválido que não se destina ao carregamento do WebView. É um sinal de que o Fluxo de Autenticação foi concluído e que o WebView precisa ser fechado.
 
-1. Feche o controle WebView e chame `getAuthenticationToken()`, que instrui o AccessEnabler a recuperar o token de autenticação do servidor de back-end. 
+1. Fechar o controle WebView e chamar `getAuthenticationToken()`, que instrui o AccessEnabler a recuperar o token de autenticação do servidor back-end. 
 
-1. [Opcional] Chame [`checkPreauthorizedResources(resources)`](#$checkPreauth) para verificar quais recursos o usuário está autorizado a visualizar. O `resources` é uma matriz de recursos protegidos associada ao token de autenticação do usuário.\
-   **Acionadores:** `preAuthorizedResources()` callback\
-   **Ponto de execução:** Após o fluxo de autenticação concluído
+1. [Opcional] Chame [`checkPreauthorizedResources(resources)`](#$checkPreauth) para verificar quais recursos o usuário está autorizado a visualizar. A variável `resources` é uma matriz de recursos protegidos associada ao token de autenticação do usuário.\
+   **Acionadores:** `preAuthorizedResources()` retorno de chamada\
+   **Ponto de execução:** Após a conclusão do fluxo de autenticação
 
 1. Se a autenticação tiver sido bem-sucedida, prossiga para o Fluxo de autorização.
 
@@ -174,28 +173,28 @@ A atividade de rede do AccessEnabler ocorre em um thread diferente para que o th
 
    Dependência: ResourceID(s) válido(s) acordado(s) com o(s) MVPD(s).
 
-   **Observação:** ResourceIDs deve ser igual àquelas usadas em qualquer outro dispositivo ou plataforma e será o mesmo em MVPDs.
+   **Nota:** ResourceIDs devem ser os mesmos usados em quaisquer outros dispositivos ou plataformas e serão os mesmos em MVPDs.
 
 1. Validar autenticação e autorização.
 
-   - Se a variável `getAuthorization()` chamada bem-sucedida: O usuário tem tokens AuthN e AuthZ válidos (o usuário é autenticado e autorizado a assistir a mídia solicitada).
-   - If `getAuthorization()` falha: Examine a exceção lançada para determinar seu tipo (AuthN, AuthZ ou algo diferente):
+   - Se a variável `getAuthorization()` Chamada bem-sucedida: o usuário tem tokens AuthN e AuthZ válidos (o usuário é autenticado e autorizado a assistir à mídia solicitada).
+   - Se `getAuthorization()` failed: examine a exceção lançada para determinar seu tipo (AuthN, AuthZ ou algo mais):
       - Se foi um erro de autenticação (AuthN), reinicie o fluxo de autenticação.
-      - Se foi um erro de autorização (AuthZ), o usuário não está autorizado a assistir à mídia solicitada e algum tipo de mensagem de erro deve ser exibida para o usuário.
-      - Se houver algum outro tipo de erro (erro de conexão, erro de rede etc.) em seguida, exibir uma mensagem de erro apropriada para o usuário.
+      - Se foi um erro de autorização (AuthZ), o usuário não está autorizado a assistir à mídia solicitada, e algum tipo de mensagem de erro deve ser exibido para o usuário.
+      - Se houver algum outro tipo de erro (erro de conexão, erro de rede etc.) em seguida, exiba uma mensagem de erro apropriada para o usuário.
 
-1. Validar o token de mídia curta.\
-   Use a biblioteca do Verificador de token de mídia de autenticação do Adobe Primetime para verificar o token de mídia de curta duração retornado do `getAuthorization()` acima:
+1. Valide o token de mídia curta.\
+   Use a biblioteca Verificador de token de mídia de autenticação do Adobe Primetime para verificar o token de mídia de vida curta retornado do `getAuthorization()` chame acima:
 
-   - Se a validação tiver êxito: Reproduzir a mídia solicitada para o usuário.
+   - Se a validação for bem-sucedida: Reproduza a mídia solicitada para o usuário.
    - Se a validação falhar: O token AuthZ era inválido, a solicitação de mídia deve ser recusada e uma mensagem de erro deve ser exibida ao usuário.
 
 1. Retorne ao fluxo normal do aplicativo.
 
-### E. Visualizar fluxo de mídia {#media_flow}
+### E. Fluxo de mídia de visualização {#media_flow}
 
 1. O usuário seleciona a mídia a ser exibida.
-2.  A mídia está protegida?  O aplicativo verifica se a mídia selecionada está protegida:
+2.  A mídia está protegida?  Seu aplicativo verifica se a mídia selecionada está protegida:
    - Se a mídia selecionada estiver protegida, o aplicativo iniciará o [Fluxo de autorização](#authz_flow) acima.
    - Se a mídia selecionada não estiver protegida, reproduza a mídia para o usuário.
 
@@ -203,19 +202,19 @@ A atividade de rede do AccessEnabler ocorre em um thread diferente para que o th
 
 ### F. Fluxo de logout {#logout_flow}
 
-1. Chame [`logout()`](#$logout) para fazer logoff do usuário. \
-   O AccessEnabler limpa todos os valores e tokens em cache do MVPD atual para o solicitante atual e também para os solicitantes com Logon único. Após limpar o cache, o AccessEnabler faz uma chamada de servidor para limpar as sessões do lado do servidor.  Observe que, como a chamada do servidor pode resultar em um redirecionamento de SAML para IdP (isso permite a limpeza da sessão no lado do IdP), essa chamada deve seguir todos os redirecionamentos. Por esse motivo, essa chamada deve ser tratada dentro de um controle WebView.
+1. Chame [`logout()`](#$logout) para desconectar o usuário. \
+   O AccessEnabler apaga todos os valores e tokens em cache para o MVPD atual para o solicitante atual e também para os solicitantes com Logon único. Depois de limpar o cache, o AccessEnabler faz uma chamada de servidor para limpar as sessões do lado do servidor.  Como a chamada do servidor pode resultar em um redirecionamento SAML para o IdP (isso permite a limpeza da sessão no lado do IdP), essa chamada deve seguir todos os redirecionamentos. Por esse motivo, essa chamada deve ser tratada em um controle WebView.
 
-   a. Seguindo o mesmo padrão do workflow de autenticação, o domínio AccessEnabler faz uma solicitação para a camada do aplicativo da interface do usuário (por meio da`navigateToUrl()` retorno de chamada) para criar um controle WebView e instruir esse controle para carregar a URL do ponto de extremidade de logout no servidor de back-end.
+   a. Seguindo o mesmo padrão do workflow de autenticação, o domínio AccessEnabler faz uma solicitação à camada de aplicativo da interface do usuário (por meio da`navigateToUrl()` callback) para criar um controle WebView e instruir esse controle a carregar o URL do endpoint de logout no servidor backend.
 
-   b. Novamente, a interface do usuário deve monitorar a atividade do controle WebView e detectar o momento em que o controle, à medida que passa por vários redirecionamentos, carrega o URL personalizado do aplicativo (ou seja: [http://adobepass.android.app/](http://adobepass.android.app/)). Depois que esse evento ocorre, a camada do aplicativo da interface do usuário fecha o WebView e o processo de logout é concluído.
+   b. Novamente, a interface do usuário deve monitorar a atividade do controle WebView e detectar o momento em que o controle, à medida que passa por vários redirecionamentos, carrega o URL personalizado do aplicativo (ou seja: [http://adobepass.android.app/](http://adobepass.android.app/)). Depois que esse evento ocorrer, a camada de aplicativo da interface do usuário fechará o WebView e o processo de logout será concluído.
 
-   **Observação:** O fluxo de logout é diferente do fluxo de autenticação, pois o usuário não precisa interagir com o WebView de forma alguma. A camada do aplicativo da interface do usuário usa um WebView para garantir que todos os redirecionamentos estejam sendo seguidos. Assim, é possível (e recomendado) tornar o controle WebView invisível (ou seja, oculto) durante o processo de logout.
+   **Nota:** O fluxo de logout difere do fluxo de autenticação na medida em que o usuário não é obrigado a interagir com o WebView de nenhuma forma. A camada de aplicativo da interface do usuário usa uma WebView para verificar se todos os redirecionamentos estão sendo seguidos. Assim, é possível (e recomendado) tornar o controle do WebView invisível (ou seja, oculto) durante o processo de logout.
 
  
 
 ### Fluxos de usuário para logon com vários MVPDs e logout {#user_flows}
 
-[Aqui](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AndroidSSOUserFlows.pdf) você tem um documento descrevendo o comportamento ao usar vários MVPDs e o que está acontecendo quando o usuário faz logoff de um aplicativo.
+[Aqui](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AndroidSSOUserFlows.pdf) Você tem um documento que descreve o comportamento ao usar vários MVPDs e o que está acontecendo quando o usuário faz logoff de um aplicativo.
 
 O comportamento descrito está disponível ao usar o Android SDK versão >= 2.0.0.

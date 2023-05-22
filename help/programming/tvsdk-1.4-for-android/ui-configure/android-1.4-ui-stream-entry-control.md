@@ -1,22 +1,21 @@
 ---
-description: Por padrão, ao iniciar a reprodução, a mídia de VOD é iniciada em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
-title: Insira um fluxo em um horário específico
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Por padrão, ao iniciar a reprodução, a mídia de VOD inicia em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
+title: Inserir um fluxo em um horário específico
+exl-id: a16b6281-37d5-491c-a2d0-2090894c8a70
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Inserir um fluxo em um horário específico {#enter-a-stream-at-a-specific-time}
 
-# Insira um fluxo em um horário específico {#enter-a-stream-at-a-specific-time}
+Por padrão, ao iniciar a reprodução, a mídia de VOD inicia em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
 
-Por padrão, ao iniciar a reprodução, a mídia de VOD é iniciada em 0 (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
+1. Passar uma posição para `MediaPlayer.prepareToPlay`.
 
-1. Passe uma posição para `MediaPlayer.prepareToPlay`.
-
-   O TVSDK considera a posição fornecida como o ponto de partida para o ativo. Nenhuma operação de busca é necessária. Se a posição não estiver dentro do intervalo pesquisável, o TVSDK usará a posição padrão.
+   O TVSDK considera que essa posição é o ponto de partida para o ativo. Nenhuma operação de busca é necessária. Se a posição não estiver dentro do intervalo pesquisável, o TVSDK usará a posição padrão.
 
    Por exemplo:
 
@@ -35,4 +34,3 @@ Por padrão, ao iniciar a reprodução, a mídia de VOD é iniciada em 0 (MediaP
        } 
    } 
    ```
-

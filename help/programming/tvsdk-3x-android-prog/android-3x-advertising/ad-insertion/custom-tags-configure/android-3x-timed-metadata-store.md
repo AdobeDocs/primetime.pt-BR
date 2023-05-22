@@ -1,33 +1,32 @@
 ---
-description: O aplicativo deve usar os objetos TimedMetadata apropriados em momentos apropriados.
-title: Armazenar objetos de metadados cronometrados à medida que são despachados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Seu aplicativo deve usar os objetos TimedMetadata apropriados nos momentos apropriados.
+title: Armazenar objetos de metadados cronometrados à medida que são expedidos
+exl-id: 0a5cceee-d990-4bb2-ac85-da3ab47aa745
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
 
 ---
 
+# Armazenar objetos de metadados cronometrados à medida que são expedidos {#store-timed-metadata-objects-as-they-are-dispatched}
 
-# Armazenar objetos de metadados cronometrados à medida que são despachados {#store-timed-metadata-objects-as-they-are-dispatched}
+Seu aplicativo deve usar os objetos TimedMetadata apropriados nos momentos apropriados.
 
-O aplicativo deve usar os objetos TimedMetadata apropriados em momentos apropriados.
-
-Durante a análise de conteúdo, o que acontece antes da reprodução, o TVSDK identifica as tags assinadas e notifica seu aplicativo sobre essas tags.
+Durante a análise de conteúdo, que ocorre antes da reprodução, o TVSDK identifica tags assinadas e notifica o aplicativo sobre essas tags.
 
 >[!TIP]
 >
->O tempo associado a cada `TimedMetadata` é o horário local na linha do tempo da reprodução.
+>O tempo associado a cada `TimedMetadata` é a hora local na linha do tempo de reprodução.
 
 Para armazenar objetos de metadados cronometrados conforme são despachados:
 
 1. Rastreie o tempo de reprodução atual.
-1. Corresponda o tempo de reprodução atual aos objetos `TimedMetadata` despachados.
+1. Corresponder o tempo de reprodução atual ao distribuído `TimedMetadata` objetos.
 
-1. Use `TimedMetadata` onde a hora de início é igual à hora de reprodução local atual.
+1. Use o `TimedMetadata` em que a hora de início é igual à hora atual de reprodução local.
 
-   O exemplo a seguir mostra como salvar `TimedMetadata` objetos em um `ArrayList`.
+   O exemplo a seguir mostra como salvar `TimedMetadata` objetos em uma `ArrayList`.
 
    ```java
    private List<TimedMetadata> _timedMetadataList =  
@@ -41,4 +40,3 @@ Para armazenar objetos de metadados cronometrados conforme são despachados:
        ... 
    }
    ```
-

@@ -1,31 +1,29 @@
 ---
-description: O TVSDK do navegador pode detectar informações de reprodução alteradas em manifestos principais do m3u8 para transmissão ao vivo e atualizar as informações de reprodução enquanto o fluxo está sendo reproduzido. O TVSDK do navegador oferece suporte a um conjunto dinâmico de perfis de taxa de bits conforme os perfis são exibidos ou desaparecem do manifesto principal, incluindo taxas de bits de perfil não sobrepostas entre atualizações.
-title: Atualização de manifesto principal ao vivo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O TVSDK do navegador pode detectar informações de reprodução alteradas em manifestos m3u8 principais para transmissão ao vivo e atualizar as informações de reprodução enquanto o fluxo está sendo reproduzido. O TVSDK do navegador é compatível com um conjunto dinâmico de perfis de taxa de bits à medida que os perfis aparecem ou desaparecem do manifesto principal, incluindo taxas de bits de perfil não sobrepostas entre as atualizações.
+title: Atualização de manifesto principal em tempo real
+exl-id: 2f89131c-5204-465b-8757-b47e955f5894
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
+# Atualização de manifesto principal em tempo real{#live-master-manifest-update}
 
-# Atualização de manifesto principal ao vivo{#live-master-manifest-update}
-
-O TVSDK do navegador pode detectar informações de reprodução alteradas em manifestos principais do m3u8 para transmissão ao vivo e atualizar as informações de reprodução enquanto o fluxo está sendo reproduzido. O TVSDK do navegador oferece suporte a um conjunto dinâmico de perfis de taxa de bits conforme os perfis são exibidos ou desaparecem do manifesto principal, incluindo taxas de bits de perfil não sobrepostas entre atualizações.
+O TVSDK do navegador pode detectar informações de reprodução alteradas em manifestos m3u8 principais para transmissão ao vivo e atualizar as informações de reprodução enquanto o fluxo está sendo reproduzido. O TVSDK do navegador é compatível com um conjunto dinâmico de perfis de taxa de bits à medida que os perfis aparecem ou desaparecem do manifesto principal, incluindo taxas de bits de perfil não sobrepostas entre as atualizações.
 
 Os seguintes recursos são compatíveis:
 
-* Contagem de perfis (aumento ou diminuição)
-* Taxas de bits do perfil (sobreposição ou não sobreposição)
-* Perfis com URLs nos mesmos servidores (ou em servidores diferentes)
+* Contagem de perfis (aumentando ou diminuindo)
+* Taxas de bits de perfil (sobreposição ou não sobreposição)
+* Perfis com URLs nos mesmos servidores (ou diferentes)
 * Qualquer estrutura de failover
 
-Todas as condições a seguir devem ser atendidas:
+Todas as seguintes condições devem ser atendidas:
 
-* O fluxo está ao vivo.
-* Tanto a hora quanto a tag mudam.
+* O fluxo está ativo.
+* A hora e a tag mudam.
 * Todas as informações de representação permanecem as mesmas (exceto que os URLs podem variar).
-* As informações de acesso do DRM permanecem as mesmas.
-* Os segmentos são empacotados em torno do mesmo PTS e limites de quadros em um pequeno intervalo de erros.
-
+* As informações de acesso do DRM permanecem inalteradas.
+* Segmentos são empacotados ao redor do mesmo PTS e limites de quadro em um pequeno intervalo de erro.

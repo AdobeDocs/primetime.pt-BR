@@ -2,26 +2,25 @@
 title: Configurar um servidor de domínio
 description: Configurar um servidor de domínio
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: eeb0d39d-58a4-4414-9123-2cf1b27b73de
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
 
 ---
 
-
 # Configurar um servidor de domínio{#set-up-a-domain-server}
 
 Para configurar um servidor de domínio em uma instalação existente do servidor de licenças:
 
-1. No diretório [!DNL tomcat/lib], abra o arquivo [!DNL flashaccess-refimpl.properties].
-1. Na opção `Domain CA certificate`, preencha o certificado de autoridade de certificação de domínio.
+1. No [!DNL tomcat/lib] , abra o [!DNL flashaccess-refimpl.properties] arquivo.
+1. No `Domain CA certificate` opção, preencha o certificado de CA de domínio.
 
    Esse certificado é usado para aceitar os tokens de domínio.
-1. Na opção `Domain CA credential`, preencha os detalhes `Domain CA credential certificate (PFX)`.
+1. No `Domain CA credential` opção, conclua o `Domain CA credential certificate (PFX)` detalhes.
 
    Esse certificado é usado para assinar certificados de domínio e tokens.
-1. Especifique o valor de `DomainServerlURL`.
+1. Especifique o valor para `DomainServerlURL`.
 
-   Se esse valor for definido como `NULL`, a autenticação de domínio poderá ser bem-sucedida. No entanto, ao ingressar no domínio, um erro de domínio de associação pode ocorrer.
+   Se esse valor estiver definido como `NULL`, a autenticação do domínio poderá ser bem-sucedida. No entanto, ao ingressar no domínio, pode ocorrer um erro.

@@ -1,20 +1,19 @@
 ---
-description: Remover Intervalos de Tempo entre o início e o fim em localTime da linha do tempo.
-title: Excluir intervalos com o anúncio de decisão do Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Remova TimeRanges entre o início e o fim em localTime da linha do tempo.
+title: Excluir intervalos com anúncio de decisão de anúncio do Primetime
+exl-id: e097f92e-b4ce-4e33-9a71-213cf19188fb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
+# Excluir intervalos com anúncio de decisão de anúncio do Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-# Excluir intervalos com o anúncio de decisão do anúncio do Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
+Remova TimeRanges entre o início e o fim em localTime da linha do tempo.
 
-Remover Intervalos de Tempo entre o início e o fim em localTime da linha do tempo.
-
-Exclua intervalos com um anúncio de Frase.
+Exclua intervalos com um Anúncio de frase.
 
 ```
 {   
@@ -66,4 +65,3 @@ Exclua intervalos com um anúncio de Frase.
     "id": "vod_003"
 }
 ```
-

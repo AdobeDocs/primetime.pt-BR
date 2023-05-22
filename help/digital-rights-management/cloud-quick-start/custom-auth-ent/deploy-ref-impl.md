@@ -1,21 +1,20 @@
 ---
-title: Implantar a implementação de referência BEES
-description: Implantar a implementação de referência BEES
+title: Implantar a implementação de referência do BEES
+description: Implantar a implementação de referência do BEES
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 87f3f879-66b4-4b8c-a0c4-e15551f9b727
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 0%
 
 ---
 
-
 # Implantar a implementação de referência do BEES {#deploy-the-bees-reference-implementation}
 
 1. Configure seu servidor de aplicativos Tomcat. (Consulte a documentação do Tomcat.)
-1. Copie o arquivo `[!DNL bees.war]` na pasta [!DNL webapps/] do Tomcat.
-1. Envie uma solicitação para `https://localhost:8080/bees`.
+1. Copie o `[!DNL bees.war]` arquivo no do Tomcat [!DNL webapps/] pasta.
+1. Enviar uma solicitação para `https://localhost:8080/bees`.
 
-   Se você vir uma mensagem &quot;O BEES é operacional&quot;, a implantação é concluída com êxito.
-1. Ative o SSL no servidor.
+   Se aparecer a mensagem &quot;O BEES está operacional&quot;, a implantação foi concluída com sucesso.
+1. Habilite o SSL no servidor.

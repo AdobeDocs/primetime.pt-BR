@@ -2,21 +2,20 @@
 title: Próximas etapas
 description: Próximas etapas
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9a6ab5e7-7d72-43d3-bbe4-784d0b8ebcd5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
 
-
 # Próximas etapas {#next-steps}
 
 Você pode concluir as seguintes etapas opcionais:
-1. Melhore a robustez usando um HSM (Hardware Security Module, Módulo de segurança de hardware).
-1. Configure um Servidor de Licenças de Referência e modifique seu código-fonte para atender aos requisitos de sua empresa.
+1. Melhore a robustez usando um HSM (Hardware Security Module, módulo de segurança de hardware).
+1. Configure um Servidor de licenças de referência e modifique seu código-fonte para atender aos requisitos da sua empresa.
 
-   Para obter mais informações, consulte *Usando as Implementações de Referência de DRM do Adobe Primetime.*
+   Para obter mais informações, consulte *Uso das Implementações de referência do Adobe Primetime DRM.*
 1. Use um Flash Media Server (FMS) para transmissão de conteúdo.
-1. Use o Adobe Open Screen Media Framework para criar um player de vídeo habilitado para DRM do Primetime para obter uma experiência do usuário mais envolvente.
+1. Use o Adobe Open Screen Media Framework para criar um reprodutor de vídeo habilitado para DRM do Primetime e obter uma experiência do usuário mais envolvente.

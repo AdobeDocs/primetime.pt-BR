@@ -1,37 +1,34 @@
 ---
-title: Configurar o caminho e o caminho de classe
-description: Configurar o caminho e o caminho de classe
+title: Configurar o caminho e o classpath
+description: Configurar o caminho e o classpath
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e6e9f837-4e3d-43e1-971d-3fa0ccaeff39
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Configurar o caminho e o classpath{#configure-the-path-and-classpath}
 
-# Configurar o caminho e o caminho de classe{#configure-the-path-and-classpath}
+A variável [!DNL flashaccess.war] contém [!DNL jsafeWithNative.jar], que é a biblioteca Crypto-J. Este último requer uma biblioteca nativa adicional para executar operações de criptografia.
 
-O [!DNL flashaccess.war] contém [!DNL jsafeWithNative.jar], que é a biblioteca Crypto-J. O último requer uma biblioteca nativa adicional para executar operações de criptografia.
+1. Adicionar o nativo [!DNL jsafe] para o seu caminho.
 
-1. Adicione a biblioteca nativa [!DNL jsafe] ao seu caminho.
+   * **Linux / [!DNL libjsafe.so] -** O diretório que contém [!DNL libjsafe.so] deve estar no Caminho (as bibliotecas Crypto-J nativas também estão disponíveis para outras plataformas). Por exemplo, defina [!DNL libjsafe.so] em `LD_LIBRARY_PATH`.
 
-   * **Linux /  [!DNL libjsafe.so]  -** O diretório que contém  [!DNL libjsafe.so] deve estar no Caminho (as bibliotecas Crypto-J nativas também estão disponíveis para outras plataformas). Por exemplo, defina [!DNL libjsafe.so] em `LD_LIBRARY_PATH`.
+   * **Windows / [!DNL jsafe.dll] -** O equivalente no Windows para [!DNL libjsafe.so] é o apropriado [!DNL jsafe.dll].
+   Essas bibliotecas estão disponíveis no [!DNL thirdparty] pasta da biblioteca.
+1. Coloque um dos [!DNL adobe-flashaccess-certs] arquivos jar no classpath.
 
-   * **Windows /  [!DNL jsafe.dll]  -** A contrapartida no Windows para  [!DNL libjsafe.so] é a apropriada  [!DNL jsafe.dll].
-   Essas bibliotecas estão disponíveis para você na pasta [!DNL thirdparty] da biblioteca.
-1. Coloque um dos arquivos jar [!DNL adobe-flashaccess-certs] no classpath.
-
-       Este arquivo JAR não está incluído no arquivo WAR; você deve adicioná-lo explicitamente ao classpath.
+       Esse arquivo JAR não está incluído no arquivo WAR; você deve adicioná-lo explicitamente ao classpath.
    
    * Servidores de desenvolvimento - devem usar somente [!DNL adobe-flashaccess-certs-prerelease.jar].
-   * Servidores de produção - deve usar somente [!DNL adobe-flashaccess- certs.jar]
+   * Servidores de produção - devem usar somente [!DNL adobe-flashaccess- certs.jar]
 
-A distribuição inclui uma pasta [!DNL shared] que inclui o arquivo jar e um arquivo [!DNL AdobeInitial.properties] pré-configurado. O Adobe recomenda adicionar esses itens ao `common.loader` por meio do arquivo [!DNL catalina.properties]. Por exemplo:
+A distribuição inclui um [!DNL shared] pasta que inclui o arquivo jar e um arquivo pré-configurado [!DNL AdobeInitial.properties] arquivo. A Adobe recomenda adicionar esses itens à `common.loader` por meio da [!DNL catalina.properties] arquivo. Por exemplo:
 
 ```
 common.loader=<Any Pre-Existing Values>,${catalina.home}/shared/classes,${catalina.home}/shared/lib/*.jar
 ```
-
-

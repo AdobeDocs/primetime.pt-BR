@@ -1,7 +1,8 @@
 ---
 title: Exibir relatórios de compartilhamento de conta para vários programadores e canais
 description: Exibir relatórios de compartilhamento de conta para vários programadores e canais
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 8afa9e45-f0e3-43a3-970f-05a11adc0e42
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -10,23 +11,23 @@ ht-degree: 0%
 
 # Exibir relatórios de compartilhamento de conta para vários programadores e canais {#viewreport-multiple-programmer-channel}
 
-O Account IQ é uma ferramenta de análise robusta e escalável que permite visualizar, analisar e comparar as estatísticas de compartilhamento de contas de assinantes não apenas para um, dois ou três, mas para mais programadores em um determinado momento.
+O Account IQ é uma ferramenta de análise robusta e escalável que permite exibir, analisar e comparar contas de assinantes que compartilham estatísticas não apenas para uma, duas ou três, mas para mais programadores em um determinado momento.
 
 >[!NOTE]
 >
->No entanto, a partir de agora, você pode selecionar no máximo 10 canais individuais (ou programadores) no painel de segmento e período para exibir as estatísticas de compartilhamento de assinantes.
+>No entanto, a partir de agora, é possível selecionar no máximo 10 canais individuais (ou programadores) no painel Segmento e intervalo de tempo para exibir as estatísticas de compartilhamento do assinante.
 
 Para exibir estatísticas de compartilhamento de conta de assinante para vários canais:
 
-1. Defina um segmento desejado seguindo as etapas em [Como definir segmentos e selecionar período](/help/AccountIQ/howto-select-segment-timeframe.md) para avaliação de [painel de segmento e período](/help/AccountIQ/segments-timeframe.md).
+1. Defina um segmento desejado seguindo as etapas em [Como definir um segmento e selecionar o período](/help/AccountIQ/howto-select-segment-timeframe.md) para avaliação de [painel segmento e período](/help/AccountIQ/segments-timeframe.md).
 
-1. Selecione uma página de relatórios desejada no painel de navegação esquerdo:
+1. Selecione uma página de relatórios desejada na navegação à esquerda:
 
-* [Painel](/help/AccountIQ/dashboard.md) (o painel dá uma ideia dos gráficos selecionados de diferentes páginas de relatórios).
+* [Painel](/help/AccountIQ/dashboard.md) (o painel fornece uma visão geral dos gráficos selecionados das diferentes páginas de relatórios).
 
    ![](assets/mult-prog-dashboard.png)
 
-   *Figura: Relatório de painel para vários programadores*
+   *Figura: relatório do painel para vários programadores*
 
 * [Uso geral](/help/AccountIQ/general-usage-reports.md)
 

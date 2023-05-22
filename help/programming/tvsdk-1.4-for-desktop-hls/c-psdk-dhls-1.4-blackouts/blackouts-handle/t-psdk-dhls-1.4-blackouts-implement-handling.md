@@ -1,20 +1,19 @@
 ---
-description: O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
-title: Implementar o gerenciamento de blecaute
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O TVSDK fornece APIs e códigos de amostra para lidar com períodos de blecaute.
+title: Implementar tratamento de blecaute
+exl-id: c7252467-a075-4227-b7bc-db1112a96a2b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Implementar tratamento de blecaute{#implement-blackout-handling}
 
-# Implementar o tratamento de blecaute{#implement-blackout-handling}
+O TVSDK fornece APIs e códigos de amostra para lidar com períodos de blecaute.
 
-O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
-
-Para implementar a manipulação de blecaute, incluindo o fornecimento de conteúdo alternativo durante o blecaute:
+Para implementar o tratamento de blecaute, incluindo o fornecimento de conteúdo alternativo durante o blecaute:
 
 1. Configure seu aplicativo para detectar tags de blecaute em um manifesto de transmissão ao vivo.
 
@@ -42,7 +41,7 @@ Para implementar a manipulação de blecaute, incluindo o fornecimento de conte�
    }
    ```
 
-1. Implemente manipuladores de evento de metadados cronometrados para fluxos em primeiro e segundo plano.
+1. Implemente manipuladores de eventos de metadados cronometrados para fluxos em primeiro e segundo plano.
 
    Primeiro plano:
 
@@ -86,7 +85,7 @@ Para implementar a manipulação de blecaute, incluindo o fornecimento de conte�
    }
    ```
 
-1. Prepare o MediaPlayer para blecautes.
+1. Preparar o MediaPlayer para blecautes.
 
    ```
    public function prepareBlackoutRanges(timedMetadata:Vector.<TimedMetadata>):void { 
@@ -195,4 +194,3 @@ Para implementar a manipulação de blecaute, incluindo o fornecimento de conte�
        } 
    }
    ```
-

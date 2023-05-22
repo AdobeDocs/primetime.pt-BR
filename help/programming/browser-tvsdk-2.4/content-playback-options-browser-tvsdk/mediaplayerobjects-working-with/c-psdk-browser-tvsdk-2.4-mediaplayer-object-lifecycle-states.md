@@ -1,67 +1,66 @@
 ---
-description: A partir do momento em que a instância MediaPlayer é criada e terminada, essa instância é transferida de um estado para o seguinte.
+description: A partir do momento em que a ocorrência de MediaPlayer é criada até o momento em que é encerrada, essa ocorrência passa de um estado para o próximo.
 title: Ciclo de vida e estados do objeto MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 26cad982-ef85-42fb-aaa7-e5d494088766
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
 
 ---
 
-
 # Ciclo de vida e estados do objeto MediaPlayer{#life-cycle-and-states-of-the-mediaplayer-object}
 
-A partir do momento em que a instância MediaPlayer é criada e terminada, essa instância é transferida de um estado para o seguinte.
+A partir do momento em que a ocorrência de MediaPlayer é criada até o momento em que é encerrada, essa ocorrência passa de um estado para o próximo.
 
 Estes são os estados possíveis:
 
-* **IDLE**:  `MediaPlayerStatus.IDLE`
+* **OCIOSO**: `MediaPlayerStatus.IDLE`
 
-* **INICIALIZAÇÃO**:  `MediaPlayerStatus.INITIALIZING`
+* **INICIALIZANDO**: `MediaPlayerStatus.INITIALIZING`
 
-* **INICIALIZADO**:  `MediaPlayerStatus.INITIALIZED`
+* **INICIALIZADO**: `MediaPlayerStatus.INITIALIZED`
 
-* **PREPARANDO**:  `MediaPlayerStatus.PREPARING`
+* **PREPARANDO**: `MediaPlayerStatus.PREPARING`
 
-* **PREPARADO**:  `MediaPlayerStatus.PREPARED`
+* **PREPARADO**: `MediaPlayerStatus.PREPARED`
 
-* **REPRODUZINDO**:  `MediaPlayerStatus.PLAYING`
+* **REPRODUÇÃO**: `MediaPlayerStatus.PLAYING`
 
-* **PAUSADO**:  `MediaPlayerStatus.PAUSED`
+* **PAUSADO**: `MediaPlayerStatus.PAUSED`
 
-* **BUSCA**:  `MediaPlayerStatus.SEEKING`
+* **BUSCANDO**: `MediaPlayerStatus.SEEKING`
 
-* **CONCLUIR**:  `MediaPlayerStatus.COMPLETE`
+* **CONCLUÍDO**: `MediaPlayerStatus.COMPLETE`
 
-* **ERRO**:  `MediaPlayerStatus.ERROR`
+* **ERRO**: `MediaPlayerStatus.ERROR`
 
-* **LANÇADO**:  `MediaPlayerStatus.RELEASED`
+* **LANÇADO**: `MediaPlayerStatus.RELEASED`
 
 A lista completa de estados é definida em `MediaPlayerStatus`.
 
-Saber o estado do reprodutor é útil porque algumas operações são permitidas somente enquanto o reprodutor está em um estado específico. Por exemplo, `play` não pode ser chamado enquanto estiver no estado IDLE. Ele deve ser chamado depois de atingir o estado PREPARADO. O estado ERROR também altera o que pode acontecer em seguida.
+Conhecer o estado do reprodutor é útil porque algumas operações são permitidas somente enquanto o reprodutor está em um estado específico. Por exemplo, `play` não pode ser chamado enquanto estiver no estado IDLE. Ele deve ser chamado depois de atingir o estado PREPARADO. O estado ERROR também altera o que pode acontecer a seguir.
 
-Como um recurso de mídia é carregado e reproduzido, o reprodutor é transferido da seguinte maneira:
+À medida que um recurso de mídia é carregado e reproduzido, o reprodutor faz a transição da seguinte maneira:
 
 1. O estado inicial é IDLE.
-1. Seu aplicativo chama `MediaPlayer.replaceCurrentResource`, o que move o reprodutor para o estado INICIALIZANDO.
-1. Se o TVSDK do navegador carregar o recurso com êxito, o estado será alterado para INICIALIZADO.
-1. Seu aplicativo chama `MediaPlayer.prepareToPlay` e o estado muda para PREPARING.
+1. Suas chamadas de aplicativo `MediaPlayer.replaceCurrentResource`, que move o reprodutor para o estado INICIALIZANDO.
+1. Se o TVSDK do navegador carregar o recurso com êxito, o estado será alterado para INITIALIZED.
+1. Suas chamadas de aplicativo `MediaPlayer.prepareToPlay`, e o estado será alterado para PREPARANDO.
 1. O TVSDK do navegador prepara o fluxo de mídia e inicia a resolução do anúncio e a inserção do anúncio (se ativada).
 
-   Quando esta etapa é concluída, as publicidades são inseridas na linha do tempo ou o procedimento de anúncio falhou, e o estado do player muda para PREPARED.
-1. Conforme seu aplicativo reproduz e pausa a mídia, o estado se move entre REPRODUZIR e PAUSADO.
+   Quando essa etapa é concluída, os anúncios são inseridos na linha do tempo ou o procedimento de anúncio falha e o estado do player muda para PREPARED.
+1. Conforme o aplicativo é reproduzido e pausa a mídia, o estado se move entre REPRODUZINDO e PAUSADO.
 
    >[!TIP]
    >
-   >Ao reproduzir ou pausar, ao sair da reprodução, desligar o dispositivo ou alternar os aplicativos, o estado é alterado para SUSPENDIDO e os recursos são lançados. Para continuar, restaure o reprodutor de mídia.
+   >Durante a reprodução ou em pausa, quando você sai da reprodução, encerra o dispositivo ou troca de aplicativos, o estado muda para SUSPENSO e os recursos são liberados. Para continuar, restaure o reprodutor de mídia.
 
-1. Quando o reprodutor atinge o fim do fluxo, o estado torna-se COMPLETE.
-1. Quando seu aplicativo solta o reprodutor de mídia, o estado muda para LANÇADO.
+1. Quando o reprodutor atinge o final do fluxo, o estado se torna COMPLETE.
+1. Quando o aplicativo libera o reprodutor de mídia, o estado muda para LIBERADO.
 1. Se ocorrer um erro durante o processo, o estado será alterado para ERROR.
 
-Esta é uma ilustração do ciclo de vida de uma instância do MediaPlayer:
+Esta é uma ilustração do ciclo de vida de uma ocorrência de MediaPlayer:
 
 <!--<a id="fig_DD3DAE7507C549C8A4720A26DFCFFCCB"></a>-->
 
@@ -82,4 +81,3 @@ function onStateChanged(state) {
     } 
 } 
 ```
-

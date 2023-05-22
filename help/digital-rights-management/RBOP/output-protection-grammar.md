@@ -1,16 +1,15 @@
 ---
 description: Esta seção aborda a gramática da entrada de configuração, enfatizando opções de entrada válidas e inválidas e explicando como os campos opcionais omitidos são interpretados.
-title: RBOP Gramática
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Gramática RBOP
+exl-id: 311194ec-e59b-4145-b22b-6983e212fcab
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
-
-# RBOP Gramática {#rbop-grammar}
+# Gramática RBOP {#rbop-grammar}
 
 Esta seção aborda a gramática da entrada de configuração, enfatizando opções de entrada válidas e inválidas e explicando como os campos opcionais omitidos são interpretados.
 
@@ -26,15 +25,15 @@ AnotherRule ::=
     DifferentForm 
 ```
 
-## Aplicação das regras gramaticais {#section_A7216BD585FF4EB88737B643B36C2781}
+## Aplicação das regras de gramática {#section_A7216BD585FF4EB88737B643B36C2781}
 
 >[!NOTE]
 >
 >Para ajudar a melhorar a legibilidade da gramática, as seguintes propriedades não são refletidas na gramática, mas ainda são verdadeiras:
 
-1. A ordem dos pares definidos nos objetos não é fixa; assim, qualquer permuta dos pares é válida.
+1. A ordem dos pares definidos dentro dos objetos não é fixa; assim, qualquer permutação dos pares é válida.
 
-   Por exemplo, se definirmos um objeto como este:
+   Por exemplo, se definíssemos um objeto como este:
 
    ```
    {  
@@ -54,9 +53,9 @@ AnotherRule ::=
    }
    ```
 
-1. Para cada par dentro de um objeto, presume-se que apenas uma instância desse par exista em uma determinada instância de um determinado objeto.
+1. Para cada par dentro de um objeto, assume-se que apenas uma instância desse par existe dentro de uma determinada instância de um determinado objeto.
 
-   Por exemplo, se definirmos um objeto como este:
+   Por exemplo, se definíssemos um objeto como este:
 
    ```
    {  
@@ -66,7 +65,7 @@ AnotherRule ::=
    }
    ```
 
-   a instância a seguir seria inválida, pois há dois pares `foo` no mesmo objeto:
+   a seguinte instância seria inválida, pois há duas `foo` pares dentro do mesmo objeto:
 
    ```
    { 
@@ -98,13 +97,13 @@ AnotherRule ::=
 
    é válido, pois são instâncias independentes do mesmo objeto.
 
-1. Para definições em que uma ou mais de uma sequência de cadeias de caracteres podem ser escolhidas, trate as cadeias de caracteres como um conjunto, em que as entradas duplicadas são tratadas como uma única entrada. Por exemplo, `["foo", "bar", "foo", "baz"]` é equivalente a `["foo", "bar", "baz"]`
+1. Para definições em que uma ou mais de uma sequência de cadeias de caracteres podem ser escolhidas, trate as cadeias de caracteres como um conjunto, no qual as entradas duplicadas são tratadas como uma única entrada. Por exemplo, `["foo", "bar", "foo", "baz"]` equivale a `["foo", "bar", "baz"]`
 
 1. Para definir números, um espaço é usado entre as regras, (por exemplo, `Digit Digits`), mas esse espaço não deve ser usado ao aplicar a regra.
 
-   Por exemplo, se expressarmos o número *cento e vinte e três* de acordo com a regra NonZeroInteger, ele deverá ser expresso como `123` em vez de `1 2 3`, mesmo que a regra contenha um espaço entre NonZeroDigit e Digits.
+   Por exemplo, se expressarmos o número *cento e vinte e três* de acordo com a regra NonZeroInteger, deve ser expresso como `123` em vez de `1 2 3`, mesmo que a regra contenha um espaço entre NonZeroDigit e Digits.
 
-1. Algumas das regras permitem vários formulários. Nesses casos, os diferentes formulários são separados pelo caractere `'|'`.
+1. Algumas regras permitem vários formulários. Nesses casos, os diferentes formulários são separados `'|'` caractere.
 
    Por exemplo, esta regra:
 
@@ -112,7 +111,7 @@ AnotherRule ::=
    Foo ::= "A" | "B" | "C"
    ```
 
-   significa que uma instância de `Foo` pode ser substituída por &quot;A&quot;, &quot;B&quot; ou &quot;C&quot;. Não deve ser confundido com um formulário que abrange várias linhas; esse é um recurso que torna os formulários mais longos mais legíveis.
+   significa que uma instância de `Foo` pode ser substituído por &quot;A&quot;, &quot;B&quot; ou &quot;C&quot;. Isso não deve ser confundido com um formulário que abrange várias linhas; esse é um recurso para tornar os formulários mais longos mais legíveis.
 
 ## A Gramática {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
 
@@ -233,9 +232,9 @@ NonZeroDigit ::=
     | 9
 ```
 
-## Semântica: Configurações legais, mas inválidas {#section_709BE240FF0041D4A1B0A0A7544E4966}
+## Semântica: configurações legais, mas inválidas {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-O tópico *Exemplo de configuração de proteção de saída* apresentou uma configuração válida junto com seu significado semântico. A seção anterior no tópico *this* apresentava as regras gramaticais das configurações. Embora a gramática ajude a garantir o correto sintático, há configurações sintaticamente legais que não são semanticamente corretas (ou seja, não são lógicas). Esta seção apresenta configurações *sintaticamente* legais, mas *semântica* incorretas. Lembre-se de que os exemplos nesta seção foram reduzidos à estrutura mínima necessária para ilustrar o cenário em discussão.
+A variável *Exemplo de configuração de proteção de saída* O tópico apresentou uma configuração válida juntamente com seu significado semântico. A seção anterior no *este* tópico apresentou as regras de gramática para configurações. Embora a gramática ajude a garantir a correção sintática, há configurações sintaticamente legais que não são semanticamente corretas (ou seja, elas não são lógicas). Esta seção apresenta configurações que são *sintaticamente* legal, mas *semanticamente* incorreto. Lembre-se de que os exemplos desta seção foram reduzidos à estrutura mínima necessária para ilustrar o cenário em discussão.
 
 * É inválido definir várias restrições de pixel com a mesma contagem de pixels.
 
@@ -248,7 +247,7 @@ O tópico *Exemplo de configuração de proteção de saída* apresentou uma con
     }  
    ```
 
-* Uma contagem de pixels não deve exceder a resolução máxima de pixels especificada.
+* A contagem de pixels não deve exceder a resolução máxima de pixels especificada.
 
    ```
    { 

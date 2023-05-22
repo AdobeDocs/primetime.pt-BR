@@ -1,23 +1,23 @@
 ---
 title: Logout do MVPD
 description: Logout do MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: a2b57d02-9688-48e3-beff-1012cd361d0c
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
 
 ---
 
-
 # Logout do MVPD
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
-Os casos de uso de logout podem ser implementados por uma solicitação de logout do SAML enviada ao IdP ou por um endpoint de logout personalizado que está sendo chamado.  Os exemplos de solicitação e resposta abaixo fornecem amostras da implementação de logout do SAML.
+Os casos de uso de logout podem ser implementados por uma solicitação de logout SAML enviada ao IdP ou por um endpoint de logout personalizado que está sendo chamado.  Os exemplos de solicitação e resposta abaixo fornecem amostras da implementação de logout SAML.
 
-## Exemplo de solicitação de logoff {#sample-logout-request}
+## Exemplo de solicitação de logout {#sample-logout-request}
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>

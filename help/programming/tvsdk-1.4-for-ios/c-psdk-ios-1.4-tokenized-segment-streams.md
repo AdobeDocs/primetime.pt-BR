@@ -1,20 +1,19 @@
 ---
-description: Os fluxos HLS que são entregues por meio de uma Rede de entrega de conteúdo (CDN) às vezes podem usar tokens de autenticação nas solicitações de manifesto e segmento para verificação. Esses tokens podem ser fornecidos como parâmetros de URL ou como cabeçalhos de cookies.
+description: Os fluxos HLS entregues por meio de uma Rede de entrega de conteúdo (CDN) às vezes podem usar tokens de autenticação no manifesto e solicitações de segmento para verificação. Esses tokens podem ser fornecidos como parâmetros de URL ou como cabeçalhos de cookie.
 title: Fluxos de segmentos tokenizados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 20a3e8a2-2e9d-4c0d-abea-66edcbcf0003
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
+# Fluxos de segmentos tokenizados{#tokenized-segment-streams}
 
-# Fluxos de segmento tokenized{#tokenized-segment-streams}
+Os fluxos HLS entregues por meio de uma Rede de entrega de conteúdo (CDN) às vezes podem usar tokens de autenticação no manifesto e solicitações de segmento para verificação. Esses tokens podem ser fornecidos como parâmetros de URL ou como cabeçalhos de cookie.
 
-Os fluxos HLS que são entregues por meio de uma Rede de entrega de conteúdo (CDN) às vezes podem usar tokens de autenticação nas solicitações de manifesto e segmento para verificação. Esses tokens podem ser fornecidos como parâmetros de URL ou como cabeçalhos de cookies.
-
-Tokens fornecidos como cookies na resposta do manifesto principal (m3u8) não são compartilhados com as solicitações do segmento (ts) mesmo quando as solicitações do segmento são para o mesmo domínio. Para habilitar o compartilhamento desses cookies em uma solicitação de segmento, defina a seguinte propriedade na instância `PTMetadata` fornecida ao item do player: 
+Os tokens fornecidos como cookies na resposta do manifesto principal (m3u8) não são compartilhados com as solicitações de segmento (ts), mesmo quando as solicitações de segmento são para o mesmo domínio. Para habilitar o compartilhamento desses cookies em uma solicitação de segmento, defina a seguinte propriedade no campo `PTMetadata` instância fornecida para o item de reprodutor: 
 
 ```
 PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 
@@ -25,5 +24,4 @@ Uma solicitação adicional é feita ao manifesto principal (m3u8) antes que o f
 
 >[!IMPORTANT]
 >
->Este recurso de compartilhamento de cookies só é compatível com dispositivos que executam o iOS 8 ou superior.
-
+>Este recurso de compartilhamento de cookies só tem suporte em dispositivos que executam o iOS 8 ou superior.

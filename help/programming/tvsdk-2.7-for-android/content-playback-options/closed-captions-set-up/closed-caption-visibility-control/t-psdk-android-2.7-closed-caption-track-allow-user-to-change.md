@@ -1,20 +1,19 @@
 ---
-description: Este procedimento é um exemplo de como criar um botão que permite ao usuário selecionar um rastreamento de legenda fechada.
-title: Permitir que os usuários alterem o rastreamento de legenda
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Este procedimento é um exemplo de como criar um botão que permite ao usuário selecionar uma faixa de legendas ocultas.
+title: Permitir que os usuários alterem a faixa da legenda
+exl-id: b8c058ef-384c-4ad4-a289-dfd6bf3dfbdb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Permitir que os usuários alterem a faixa da legenda {#allow-users-to-change-the-caption-track}
 
-# Permitir que os usuários alterem o rastreamento de legenda {#allow-users-to-change-the-caption-track}
+Este procedimento é um exemplo de como criar um botão que permite ao usuário selecionar uma faixa de legendas ocultas.
 
-Este procedimento é um exemplo de como criar um botão que permite ao usuário selecionar um rastreamento de legenda fechada.
-
-1. Crie um botão para alterar a faixa de legenda fechada.
+1. Crie um botão para alterar a faixa de legendas ocultas.
 
    ```xml
    <Button 
@@ -28,9 +27,9 @@ Este procedimento é um exemplo de como criar um botão que permite ao usuário 
      android:text="CC" /> 
    ```
 
-1. Converta a lista de faixas de legenda ocultas disponíveis em uma matriz de sequências de caracteres.
+1. Converter a lista de faixas de legendas ocultas disponíveis em uma matriz de sequências de caracteres.
 
-   As faixas de legenda fechada que têm atividade, ou seja, canais para os quais o TVSDK descobriu dados, são marcadas adequadamente.
+   As faixas de legendas ocultas que têm atividade, ou seja, canais para os quais o TVSDK descobriu dados, são marcadas adequadamente.
 
    ```java
    /** 
@@ -58,7 +57,7 @@ Este procedimento é um exemplo de como criar um botão que permite ao usuário 
    } 
    ```
 
-1. Quando o usuário clica no botão , exibe uma caixa de diálogo que lista todas as faixas padrão de legenda fechada.
+1. Quando o usuário clicar no botão, exibir uma caixa de diálogo que lista todos os controles de legendas ocultas padrão.
 
    ```java
    public void selectClosedCaptioningClick(View view) { 
@@ -87,4 +86,3 @@ Este procedimento é um exemplo de como criar um botão que permite ao usuário 
        ab.show(); 
    } 
    ```
-

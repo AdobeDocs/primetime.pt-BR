@@ -1,14 +1,13 @@
 ---
 description: O TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 title: Ordem dos eventos de reprodução
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fd9dc0d5-0f39-4a6d-9d88-1fd49946fedf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
-
 
 # Ordem dos eventos de reprodução{#order-of-playback-events}
 
@@ -18,16 +17,16 @@ O TVSDK do navegador despacha eventos/notificações em sequências geralmente e
 
 Os exemplos a seguir mostram a ordem de alguns eventos que incluem eventos de reprodução.
 
-* Ao carregar com êxito um recurso de mídia por meio de `replaceCurrentResource`, a ordem dos eventos é:
+* Ao carregar um recurso de mídia com êxito por meio do `replaceCurrentResource`, a ordem dos eventos é:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` com  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` com `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Ao preparar para reprodução por meio de `MediaPlayer.prepareToPlay`, a ordem dos eventos é:
+* Ao se preparar para a reprodução por meio do `MediaPlayer.prepareToPlay`, a ordem dos eventos é:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` com  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` com `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
@@ -100,4 +99,3 @@ onStatusChange = function (event) {
     } 
 };
 ```
-

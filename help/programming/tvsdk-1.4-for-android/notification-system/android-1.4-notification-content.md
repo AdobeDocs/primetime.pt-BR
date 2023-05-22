@@ -1,36 +1,35 @@
 ---
 description: Os objetos MediaPlayerNotification fornecem informações sobre alterações no estado do player, avisos e erros. Erros que interrompem a reprodução do vídeo também causam uma alteração no estado do reprodutor.
-title: Conteúdo de notificação
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Conteúdo da notificação
+exl-id: b8298865-0389-4610-b495-b8735ef9cd56
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 0%
 
 ---
 
-
-# Conteúdo de notificação {#notification-content}
+# Conteúdo da notificação {#notification-content}
 
 Os objetos MediaPlayerNotification fornecem informações sobre alterações no estado do player, avisos e erros. Erros que interrompem a reprodução do vídeo também causam uma alteração no estado do reprodutor.
 
-Seu aplicativo pode recuperar a notificação e as informações de estado. Você também pode criar um sistema de registro para diagnósticos e validação usando as informações de notificação.
+Seu aplicativo pode recuperar as informações de notificação e estado. Você também pode criar um sistema de registro para diagnóstico e validação usando as informações de notificação.
 
-Você implementa ouvintes de eventos para capturar e responder aos eventos. Muitos eventos fornecem notificações de status `MediaPlayerNotification`.
+Você implementa ouvintes de eventos para capturar e responder a eventos. Muitos eventos fornecem `MediaPlayerNotification` notificações de status.
 
-`MediaPlayerNotification` fornece informações relacionadas ao status do reprodutor.
+`MediaPlayerNotification` O fornece informações relacionadas ao status do reprodutor.
 
-O TVSDK fornece uma lista cronológica de notificações `MediaPlayerNotification`. Cada notificação contém as seguintes informações:
+O TVSDK fornece uma lista cronológica de `MediaPlayerNotification` notificações. Cada notificação contém as seguintes informações:
 
 * Carimbo de data/hora
 * Metadados de diagnóstico que consistem nos seguintes elementos:
 
-   * `type`: INFO, AVISO ou ERRO.
-   * `code`: Uma representação numérica da notificação.
-   * `name`: Uma descrição legível da notificação, como SEEK_ERROR
-   * `metadata`: Pares de chave/valor que contêm informações relevantes sobre a notificação. Por exemplo, uma chave chamada `URL` fornece um valor que é um URL relacionado à notificação.
+   * `type`: INFORMAÇÕES, AVISO ou ERRO.
+   * `code`: uma representação numérica da notificação.
+   * `name`: uma descrição legível da notificação, como SEEK_ERROR
+   * `metadata`: Pares de chave/valor que contêm informações relevantes sobre a notificação. Por exemplo, uma chave chamada `URL` O fornece um valor que é um URL relacionado à notificação.
 
-   * `innerNotification`: Uma referência a outro  `MediaPlayerNotification` objeto que afeta diretamente essa notificação.
+   * `innerNotification`: Uma referência a outra `MediaPlayerNotification` objeto que afeta diretamente esta notificação.
 
 Você pode armazenar essas informações localmente para análise posterior ou enviá-las a um servidor remoto para registro e representação gráfica.
 
@@ -38,70 +37,70 @@ Você pode armazenar essas informações localmente para análise posterior ou e
 
 Você pode acompanhar as notificações e adicionar suas próprias notificações ao histórico de notificações.
 
-O núcleo do sistema de notificação do Player do Primetime é a classe `Notification`, que representa uma notificação independente.
+O núcleo do sistema de notificação do Primetime Player é o `Notification` classe, que representa uma notificação independente.
 
-A classe `NotificationHistory` fornece um mecanismo para acumular notificações. Ele armazena um log de objetos de notificação (NotificationHistoryItem) que representa uma coleção de Notificações.
+A variável `NotificationHistory` A classe fornece um mecanismo para acumular notificações. Ele armazena um log de objetos de notificação (NotificationHistoryItem) que representa uma coleção de Notificações.
 
 Para receber notificações:
 
-* Acompanhamento das notificações
+* Acompanhar notificações
 * Adicionar notificações ao histórico de notificações
 
 1. Analise as alterações de estado.
-1. Implemente o retorno de chamada `MediaPlayer.PlaybackEventListener.onStateChanged`.
-1. O TVSDK transmite dois parâmetros para o retorno de chamada:
+1. Implementar o `MediaPlayer.PlaybackEventListener.onStateChanged` retorno de chamada.
+1. O TVSDK passa dois parâmetros para o retorno de chamada:
 
    * O novo estado ( `MediaPlayer.PlayerState`)
-   * Um objeto `MediaPlayerNotification`
+   * A `MediaPlayerNotification` objeto
 
-## Adicionar registro e depuração em tempo real {#add-real-time-logging-and-debugging}
+## Adicionar depuração e registro em tempo real {#add-real-time-logging-and-debugging}
 
-Você pode usar notificações para implementar o logon em tempo real no aplicativo de vídeo.
+Você pode usar as notificações para implementar o registro em tempo real no aplicativo de vídeo.
 
-O sistema de notificação permite coletar informações de registro e depuração para diagnósticos e validação sem sobrecarregar o sistema.
+O sistema de notificação permite coletar informações de registro e depuração para diagnóstico e validação sem sobrecarregar o sistema.
 
 >[!IMPORTANT]
 >
->O back-end de logon não faz parte de uma configuração de produção e não é esperado que trabalhe com tráfego de alta carga. Se sua implementação não precisar ser absolutamente completa, considere a eficiência da transmissão de dados para evitar sobrecarga do sistema.
+>O back-end de registro não faz parte de uma configuração de produção e não é esperado que manipule o tráfego de carga alta. Se a implementação não precisar estar totalmente completa, considere a eficiência da transmissão de dados para evitar sobrecarga do sistema.
 
 Este é um exemplo de como recuperar notificações.
 
-1. Crie um thread de execução com base em temporizador para o aplicativo de vídeo que consulta periodicamente os dados coletados pelo sistema de notificação TVSDK.
+1. Crie um thread de execução baseado em cronômetro para seu aplicativo de vídeo que consulte periodicamente os dados coletados pelo sistema de notificação TVSDK.
 
-1. Se o intervalo do cronômetro for muito grande e o tamanho da lista de eventos for muito pequeno, a lista de eventos de notificação sofrerá sobrefluxo. Para evitar esse estouro, siga um destes procedimentos:
+1. Se o intervalo do cronômetro for muito grande e o tamanho da lista de eventos for muito pequeno, a lista de eventos de notificação estourará. Para evitar esse excesso, siga um destes procedimentos:
 
-   * Diminua o intervalo de tempo que direciona o thread que pesquisa novos eventos.
+   * Diminuir o intervalo de tempo que orienta o thread que pesquisa novos eventos.
    * Aumente o tamanho da lista de notificações.
 
 1. Serialize as entradas de evento de notificação mais recentes no formato JSON e envie as entradas para um servidor remoto para pós-processamento.
 
-   O servidor remoto poderia então exibir graficamente os dados fornecidos em tempo real.
-1. Para detectar a perda dos eventos de notificação, procure por lacunas na sequência dos valores do índice de eventos.
+   O servidor remoto poderia exibir graficamente os dados fornecidos em tempo real.
+1. Para detectar a perda de eventos de notificação, procure por lacunas na sequência de valores de índice de evento.
 
-   Cada evento de notificação tem um valor de índice que é incrementado automaticamente pela classe `session.NotificationHistory`.
+   Cada evento de notificação tem um valor de índice que é incrementado automaticamente pelo `session.NotificationHistory` classe.
 
 ## Tags ID3 {#id-tags}
 
-As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK detecta tags ID3 no nível de segmento do fluxo de transporte (TS) em fluxos de HLS e despacha um evento. O aplicativo pode extrair dados da tag .
+As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK detecta tags ID3 no nível de segmento de fluxo de transporte (TS) em fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag.
 
 >[!IMPORTANT]
 >
->O TVSDK reconhece os metadados ID3 (versão 2.3.0 ou 2.4.0) em fluxos de áudio (AAC) e vídeo (H.264), em qualquer uma de suas possíveis codificações (ASCII, UTF8, UTF16-BE ou UTF16-LE). Ele ignora as tags ID3 que não estão em uma das versões ou formatos reconhecidos. A codificação não especificada é tratada como UTF8.
+>O TVSDK reconhece metadados ID3 (versão 2.3.0 ou 2.4.0) em fluxos de áudio (AAC) e vídeo (H.264), em qualquer uma de suas possíveis codificações (ASCII, UTF8, UTF16-BE ou UTF16-LE). Ele ignora tags ID3 que não estão em uma das versões ou formatos reconhecidos. A codificação não especificada é tratada como UTF8.
 
-Quando o TVSDK detecta metadados ID3, ele emite uma notificação com os seguintes dados:
+Quando o TVSDK detecta metadados de ID3, ele emite uma notificação com os seguintes dados:
 
 * InfoCode = 303007
-* TYPE = ID3
-* NAME = não presente
+* TIPO = ID3
+* NAME = ausente
 * ID = 0
 
-1. Implemente um ouvinte de evento para `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` e registre-o no objeto `MediaPlayer` .
+1. Implementar um ouvinte de eventos para `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` e registre-o com o `MediaPlayer` objeto.
 
-   O TVSDK chama esse ouvinte quando detecta metadados ID3.
+   O TVSDK chama esse ouvinte quando detecta metadados de ID3.
 
    >[!NOTE]
    >
-   >As dicas de anúncio personalizadas usam o mesmo evento `onTimedMetadata` para indicar a detecção de uma nova tag. Isso não deve causar confusão porque as dicas de anúncio personalizadas são detectadas no nível de manifesto e as tags ID3 são incorporadas no fluxo. Para obter mais informações, consulte personalizar tags-configure .
+   >As dicas de anúncios personalizados usam o mesmo `onTimedMetadata` para indicar a detecção de uma nova tag. Isso não deve causar confusão, pois dicas de anúncios personalizados são detectadas no nível do manifesto e tags ID3 são incorporadas no fluxo. Para obter mais informações, consulte custom-tags-configure.
 
 1. Recupere os metadados.
 

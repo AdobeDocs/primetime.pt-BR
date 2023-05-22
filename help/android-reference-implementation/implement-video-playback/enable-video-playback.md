@@ -1,20 +1,19 @@
 ---
-description: Crie um PlaybackManager que manipule a configuração de fluxo e a operação de reprodução do HLS. Nenhuma outra configuração é necessária.
-title: Ativar a reprodução de vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Crie um PlaybackManager que controle a configuração de fluxo HLS e a operação de reprodução. Nenhuma outra configuração é necessária.
+title: Ativar reprodução de vídeo
+exl-id: b53f602b-5752-4471-9905-2e4351dfc8d3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
+# Ativar reprodução de vídeo {#enable-video-playback}
 
-# Ativar a reprodução de vídeo {#enable-video-playback}
+Crie um PlaybackManager que controle a configuração de fluxo HLS e a operação de reprodução. Nenhuma outra configuração é necessária.
 
-Crie um PlaybackManager que manipule a configuração de fluxo e a operação de reprodução do HLS. Nenhuma outra configuração é necessária.
-
-1. Crie o objeto do reprodutor de mídia, certificando-se de que o seguinte código existe em [!DNL PlayerFragment.java]:
+1. Crie o objeto do reprodutor de mídia verificando se o código a seguir existe no [!DNL PlayerFragment.java]:
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -24,32 +23,32 @@ Crie um PlaybackManager que manipule a configuração de fluxo e a operação de
 
    <!-- I've duplicated this information. It also exists in the PlayerFragment section, just before the Feature manager section. I figured that I should have it here as well, in case they jump directly to this section.-->
 
-1. Crie o gerenciador de reprodução por meio do `ManagerFactory`:
+1. Crie o gerenciador de reprodução por meio da `ManagerFactory`:
 
    ```java
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implemente `PlaybackManagerEventListener` no `PlayerFragment` para lidar com os eventos de reprodução:
+1. Implementar o `PlaybackManagerEventListener` no `PlayerFragment` para manipular os eventos de reprodução:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
      new PlaybackManagerEventListener() 
    ```
 
-1. Registre o ouvinte do evento no `PlayerFragment`:
+1. Registre o ouvinte de eventos no `PlayerFragment`:
 
    ```
    playbackManager.addEventListener(playbackManagerEventListener);
    ```
 
-1. Configurar o recurso de vídeo:
+1. Configure o recurso de vídeo:
 
    ```
    playbackManager.setupVideo(url, adsManager); 
    ```
 
-1. Configure as operações da barra de controle no `PlayerFragment`:
+1. Configurar as operações da barra de controle no `PlayerFragment`:
 
    ```
    controlBar.pressPlay() { 
@@ -59,7 +58,7 @@ Crie um PlaybackManager que manipule a configuração de fluxo e a operação de
 
 ## Documentação da API relacionada {#related-api-documentation}
 
-* [Gerenciador de reprodução de classe](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.html)
+* [PlaybackManager de Classe](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.html)
 * [PlaybackManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.PlaybackManagerEventListener.html)
 * [mediacore.utils.TimeRange](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/utils/TimeRange.html)
 * [mediacore.BufferControlParameters](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/BufferControlParameters.html)

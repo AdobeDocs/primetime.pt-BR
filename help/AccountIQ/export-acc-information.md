@@ -1,6 +1,6 @@
 ---
-title: Exportar informações para contas com pontuação de compartilhamento alta
-description: Exportar informações para contas com pontuação de compartilhamento alta.
+title: Exportar informações para contas com alta pontuação de compartilhamento
+description: Exportar informações para contas com alta pontuação de compartilhamento.
 exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
 source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
@@ -9,33 +9,33 @@ ht-degree: 1%
 
 ---
 
-# Exportar informações para contas com pontuação de compartilhamento alta {#export-account-info-high-score}
+# Exportar informações para contas com alta pontuação de compartilhamento {#export-account-info-high-score}
 
-O Account IQ oferece a opção de exportar detalhes de compartilhamento de conta para as 1000 contas de assinante principais com base em suas [compartilhando probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Os dados no arquivo CSV exportado são classificados na ordem decrescente das probabilidades de compartilhamento das contas do assinante - dos MVPDs selecionados na variável [segmento](/help/AccountIQ/product-concepts.md#segment-def)para um [período especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
+O Account IQ oferece a opção de exportar detalhes de compartilhamento de conta para 1000 contas de assinantes principais com base em suas [compartilhando probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Os dados no arquivo CSV exportado são classificados na ordem decrescente das probabilidades de compartilhamento das contas do assinante, dos MVPDs selecionados no [segmento](/help/AccountIQ/product-concepts.md#segment-def), por um [intervalo de tempo especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
 
-A opção para exportar as informações de compartilhamento de conta está disponível em [Relatórios de uso geral](/help/AccountIQ/general-usage-reports.md) e [Relatórios de contas compartilhadas](/help/AccountIQ/shared-acc-reports.md) páginas.
+A opção para exportar as informações de compartilhamento de conta está disponível em [Relatórios de uso geral](/help/AccountIQ/general-usage-reports.md) e [Relatórios de Contas Compartilhadas](/help/AccountIQ/shared-acc-reports.md) páginas.
 
 >[!NOTE]
 >
->Os números no arquivo CSV baixado são diferentes para as páginas de relatórios de Uso geral e Contas compartilhadas . Isso ocorre porque a página Relatórios de uso geral tem filtros adicionais para os programadores selecionarem Limite para número de dispositivos, IPs e CEPs. Portanto, os dados exportados dos relatórios de Uso geral são baseados no filtro de limite adicional aplicado.
+>Os números no arquivo CSV baixado são diferentes para as páginas de relatórios Uso geral e Contas compartilhadas. Isso ocorre porque a página Relatórios de uso geral tem filtros adicionais para os programadores selecionarem Limite para o número de dispositivos, IPs e códigos postais. Portanto, os dados exportados dos relatórios de Uso geral são baseados no filtro de limite adicional aplicado.
 
-![Opção Exportar em uso Geral](assets/export.png)
+![Opção Exportar em Uso geral](assets/export.png)
 
 Para exportar as informações de compartilhamento de conta dos assinantes:
 
-1. Defina um segmento desejado seguindo as etapas em [Como definir segmentos e selecionar período](/help/AccountIQ/howto-select-segment-timeframe.md) para avaliação de [segmento e período](/help/AccountIQ/segments-timeframe.md) painel.
+1. Defina um segmento desejado seguindo as etapas em [Como definir um segmento e selecionar o período](/help/AccountIQ/howto-select-segment-timeframe.md) para avaliação de [segmento e período](/help/AccountIQ/segments-timeframe.md) painel.
 
-1. Selecione o **Exportar as 1000 contas principais** opção para exportar as informações da conta para 1000 assinantes com maior probabilidade de compartilhamento.
+1. Selecione o **Exportar as 1000 contas principais** opção para exportar as informações da conta de 1000 assinantes com maior probabilidade de compartilhamento.
 
-Ao usar a opção de exportação, as estatísticas para 1000 contas com as maiores probabilidades de compartilhamento (para um período de tempo definido) são baixadas para a pasta Downloads da máquina local.
+Quando você usa a opção de exportação, as estatísticas de 1000 contas com as maiores probabilidades de compartilhamento (para um intervalo de tempo definido) são baixadas para a pasta Downloads da sua máquina local.
 
 >[!NOTE]
 >
->O arquivo CSV baixado pode ser aberto usando qualquer aplicativo que leia o arquivo CSV, por exemplo, Microsoft Excel.
+>O arquivo CSV baixado pode ser aberto usando qualquer aplicativo que leia o arquivo CSV, por exemplo, o Microsoft Excel.
 
-![dados exportados no formato csv](assets/exported-csv.png)
+![dados exportados em formato csv](assets/exported-csv.png)
 
-*Figura: Dados de conta compartilhada exportados no formato CSV*
+*Figura: dados da conta compartilhada exportados no formato CSV*
 
 ## Colunas no relatório exportado {#columns-in-export}
 
@@ -45,51 +45,51 @@ A semana ou o mês selecionado no **Granularidade e intervalo de tempo** no sele
 
 **MVPD**
 
-Se você for um usuário programador, a coluna mostra a qual MVPD a conta do assinante pertence.
+Se você for um usuário programador, a coluna mostrará a qual MVPD a conta do assinante pertence.
 
-**ID do assinante**
+**ID do Assinante**
 
-Conta específica de que estamos a falar em seguida.
+Conta específica da qual estamos falando em uma linha.
 
-**Número mínimo de dispositivos**
+**Nº Mínimo de Dispositivos**
 
-O número real de dispositivos (esse conteúdo de fluxo) é quase certamente maior do que o número mínimo de dispositivos, especificado para uma conta específica.
+O número real de dispositivos (esse conteúdo de fluxo) é quase certamente maior que o número mínimo de dispositivos, especificado para uma conta específica.
 
 >[!NOTE]
 >
->O número real de dispositivos (esse conteúdo de fluxo) é certamente maior que o Número mínimo de dispositivos, especificado para uma conta específica.
+>O número real de dispositivos (esse conteúdo de fluxo) é certamente maior que o número mínimo de dispositivos, especificado para uma conta específica.
 
-**Número mínimo de pessoas**
+**Nº Mínimo de Pessoas**
 
 O número mínimo absoluto de pessoas que eram conteúdo de transmissão ativo usando esses dispositivos.
 
 >[!NOTE]
 >
->O número real de pessoas (esse conteúdo de fluxo) é quase certamente muito maior do que o Número Mínimo de pessoas, especificado para uma conta específica.
+>O número real de pessoas (esse conteúdo de fluxo) é quase certamente muito maior do que o número mínimo de pessoas, especificado para uma determinada conta.
 
-**# IPs**
+**Nº de IPs**
 
-Número de endereços IP a partir dos quais o conteúdo é transmitido.
+Número de endereços IP dos quais o conteúdo é transmitido.
 
-**# Localizações**
+**Nº de Locais**
 
-Número de locais (com base no código postal) a partir dos quais o conteúdo é transmitido.
+Número de locais (com base no código postal) dos quais o conteúdo é transmitido.
 
-**# Cidades**
+**Nº de Cidades**
 
-Número de cidades onde o streaming aconteceu.
+Número de cidades onde ocorreu a transmissão.
 
 **# Estados**
 
 Número de estados em que o streaming ocorreu.
 
-**# Clusters**
+**Nº de Clusters**
 
-O número de distintos [clusters](/help/AccountIQ/product-concepts.md#cluster-def) onde o streaming aconteceu.
+O número de [clusters](/help/AccountIQ/product-concepts.md#cluster-def) onde ocorreu a transmissão.
 
 **Extensão geográfica (milhas)**
 
-A distância máxima entre os locais de transmissão associados à conta.
+A distância máxima entre os locais de streaming associados à conta.
 
 **# AuthN OK**
 
@@ -101,21 +101,21 @@ Número de vezes que um MVPD autorizou um fluxo ou concedeu acesso (ao conteúdo
 
 >[!NOTE]
 >
->O **# AuthZ OK** está relacionada ao **Nº de Solicitações de Reprodução**; é menor que a variável **Nº de Solicitações de Reprodução** porque o Adobe armazena em cache as autorizações fornecidas para os MVPDs normalmente durante 24 horas.
+>A variável **# AuthZ OK** está relacionado ao **Nº de Solicitações Play**; for menor que **Nº de Solicitações Play** porque o Adobe armazena em cache as autorizações que vêm para MVPDs normalmente por 24 horas.
 
-**Nº de Solicitações de Reprodução**
+**Nº de Solicitações Play**
 
-O número real de fluxos durante o período de tempo.
+O número real de fluxos durante o período.
 
 **# Canais**
 
-Número total de canais diferentes que a conta assistiu ao longo do período.
+Número total de canais diferentes que a conta assistiu durante o período.
 
 >[!NOTE]
 >
 >**# Canais** inclui os canais que não pertenciam necessariamente ao programador conectado.
 >
->Esse número para a conta foi exibido porque a conta assistiu ao canal, mas também acessou outros canais durante esse período.
+>Esse número da conta foi exibido porque a conta assistiu ao seu canal, mas também acessou outros canais durante esse período.
 
 **Padrão de uso**
 
@@ -125,14 +125,14 @@ Os números nesta coluna são identificadores que mapeiam para um dos 14 padrõe
 
 | ID | 1 | 2 | 3 | 4 | 5 e 8 | 6 | 7 | 9 | 10 e 11 | 12 | 13 | 14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Padrões de uso | Usuário regular | Viajante ou viajante | Família Grande | Família e amigos próximos | Compartilhamento em grupo social | Grande grupo de amigos | Streaming simultâneo | Compartilhamento da comunidade | Comportamento incerto | Pequena família | Segunda casa | Uso anormal |
+| Padrões de uso | Usuário normal | Viajante ou viajante | Família grande | Fechar família e amigos | Compartilhamento em grupo social | Grande grupo de amigos | Transmissão simultânea | Compartilhamento de comunidade | Comportamento incerto | Família pequena | Segunda página inicial | Uso anormal |
 
 {style="table-layout:auto"}
 
-**Probabilidade de compartilhamento**
+**Probabilidade de Compartilhamento**
 
-A probabilidade de compartilhamento é a probabilidade de a conta específica estar compartilhando suas credenciais.
+A probabilidade de compartilhamento é a probabilidade de que a conta específica esteja compartilhando suas credenciais.
 
 >[!NOTE]
 >
-> A média da probabilidade de compartilhamento de todas as contas (no segmento selecionado) é usada para calcular a variável [nível de compartilhamento](/help/AccountIQ/dashboard.md#sharing-level) do [Pontuação de compartilhamento agregada](/help/AccountIQ/dashboard.md#aggregated-sharing).
+> A média da probabilidade de compartilhamento de todas as contas (no segmento selecionado) é usada para calcular a [nível de compartilhamento](/help/AccountIQ/dashboard.md#sharing-level) do [Pontuação de compartilhamento agregada](/help/AccountIQ/dashboard.md#aggregated-sharing).

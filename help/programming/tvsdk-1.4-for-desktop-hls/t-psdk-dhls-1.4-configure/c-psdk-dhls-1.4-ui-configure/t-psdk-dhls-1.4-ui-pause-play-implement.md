@@ -1,21 +1,20 @@
 ---
-description: Você pode adicionar comportamento TVSDK para pausar e reproduzir botões.
+description: Você pode adicionar o comportamento TVSDK aos botões Pausar e Reproduzir.
 title: Reproduzir e pausar um vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c1c259a4-edb8-475b-96a2-7fa0903804c3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
 
 ---
 
-
 # Reproduzir e pausar um vídeo{#play-and-pause-a-video}
 
-Você pode adicionar comportamento TVSDK para pausar e reproduzir botões.
+Você pode adicionar o comportamento TVSDK aos botões Pausar e Reproduzir.
 
-1. Crie um botão pausar/reproduzir que faça o seguinte.
-   1. Aguarde até que o reprodutor esteja pelo menos no status PREPARED.
+1. Crie um botão Pausar/Reproduzir que faça o seguinte.
+   1. Aguarde até que o player tenha pelo menos o status PREPARADO.
    1. Para iniciar a reprodução, chame o método de reprodução TVSDK:
 
       ```
@@ -28,6 +27,6 @@ Você pode adicionar comportamento TVSDK para pausar e reproduzir botões.
       function pause():void;
       ```
 
-1. Use o retorno de chamada para o evento `MediaPlayerStatusChangeEvent.STATUS_CHANGED` para verificar se há erros ou para tomar outras ações apropriadas.
+1. Use o retorno de chamada para o `MediaPlayerStatusChangeEvent.STATUS_CHANGED` evento para verificar se há erros ou executar outras ações apropriadas.
 
-   O TVSDK chama esse retorno de chamada quando o método pause ou play é chamado. O TVSDK transmite informações sobre a alteração de status no retorno de chamada, incluindo o novo status, como PAUSED ou PLAYING.
+   O TVSDK chama essa chamada de retorno quando o método pause ou play é chamado. O TVSDK transmite informações sobre a alteração de status na chamada de retorno, incluindo o novo status, como PAUSADO ou REPRODUZINDO.

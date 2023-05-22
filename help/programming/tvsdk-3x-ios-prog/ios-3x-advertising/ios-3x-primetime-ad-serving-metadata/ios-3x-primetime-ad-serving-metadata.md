@@ -1,35 +1,34 @@
 ---
-description: O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD e live/lineares.
-title: Metadados do servidor e do Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O TVSDK é compatível com a resolução e inserção de anúncios para VOD e fluxos dinâmicos/lineares.
+title: Metadados do servidor de publicidade do Primetime
+exl-id: f27657ac-4037-45e5-a658-ad9a783dd990
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral {#primetime-ad-server-metadata-overview}
 
-O TVSDK oferece suporte à resolução e inserção de anúncios para fluxos VOD e live/lineares.
+O TVSDK é compatível com a resolução e inserção de anúncios para VOD e fluxos dinâmicos/lineares.
 
 ## Pré-requisito
 
-Antes de incluir publicidade no seu conteúdo de vídeo, forneça as seguintes informações de metadados:
+Antes de incluir publicidade no conteúdo de vídeo, forneça as seguintes informações de metadados:
 
-* Um `mediaID`, que identifica o conteúdo específico a ser reproduzido.
-* Seu `zoneID`, que identifica sua empresa ou site.
+* A `mediaID`, que identifica o conteúdo específico a ser reproduzido.
+* Seu `zoneID`, que identifica a empresa ou o site.
 * O domínio do servidor de publicidade, que especifica o domínio do servidor de publicidade atribuído.
-* Outros parâmetros de definição de metas.
+* Outros parâmetros de direcionamento.
 
-## Configurar metadados do servidor de anúncio do Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Configurar metadados do Primetime e do servidor {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Seu aplicativo deve fornecer ao TVSDK as informações `PTAuditudeMetadata` necessárias para se conectar ao servidor de publicidade.
+Seu aplicativo deve fornecer ao TVSDK os dados necessários `PTAuditudeMetadata` informações para se conectar ao servidor de publicidade.
 
 Para configurar os metadados do servidor de publicidade:
 
-1. Crie uma instância de [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) e defina suas propriedades.
+1. Criar uma instância de [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) e defina suas propriedades.
 
    ```
    PTAuditudeMetadata *adMetadata = [[PTAuditudeMetadata alloc] init];  
@@ -39,7 +38,7 @@ Para configurar os metadados do servidor de publicidade:
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Defina a instância `PTAuditudeMetadata` como metadados para os metadados `PTMediaPlayerItem` atuais usando `PTAdResolvingMetadataKey`.
+1. Defina o `PTAuditudeMetadata` instância como metadados para a atual `PTMediaPlayerItem` metadados usando `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 

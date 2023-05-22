@@ -1,49 +1,49 @@
 ---
 title: Apêndice B "Dicas de depuração"
 description: Apêndice B "Dicas de depuração"
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
-
 # Apêndice B: Dicas de depuração {#appendix-b-debugging-tips}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 
-## Limpando dados temporários {#clearing-temporary-data}
+## Limpando Dados Temporários {#clearing-temporary-data}
 
-A autenticação da Adobe Primetime armazena dados temporários, como cache do navegador, cache de LSOs e cookies. A limpeza de dados temporários é importante para garantir que você obtenha uma tabulação limpa ao testar.
+A autenticação do Adobe Primetime armazena dados temporários, como cache do navegador, cache de LSOs e cookies. Limpar dados temporários é importante para garantir que você fique limpo ao testar.
 
-- [Limpar o cache do navegador e os cookies](#clearing-the-browser-cache-and-cookies)
+- [Limpeza do cache do navegador e cookies](#clearing-the-browser-cache-and-cookies)
 - [Limpando cache de LSOs](#clearing-lsos-cache)\
     
 
-## Limpar o cache do navegador e os cookies {#clearing-the-browser-cache-and-cookies}
+## Limpeza do cache do navegador e cookies {#clearing-the-browser-cache-and-cookies}
 
-Ele é confiável no navegador, mas no Firefox: &quot;Ferramentas&quot; -\> &quot;Limpar Histórico Recente...&quot; -\> Em &quot;Intervalo de tempo para limpar:&quot; selecione &quot;Tudo&quot;; e em &quot;Detalhes&quot;: marque &quot;Cookies&quot; e &quot;Cache&quot; -\> Clique em &quot;Limpar agora&quot;.\
+É dependente do navegador, mas no Firefox: &quot;Ferramentas&quot; -\> &quot;Limpar histórico recente...&quot; -\> Em &quot;Intervalo de tempo a limpar:&quot; selecione &quot;Tudo&quot;; e em &quot;Detalhes&quot;: marque a opção &quot;Cookies&quot; e &quot;Cache&quot; -\> Clique em &quot;Limpar agora&quot;.\
  
 
 ## Limpando cache de LSOs {#clearing-lsos-cache}
 
 Acesse o [Ajuda do Flash Player](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
 
-Selecione o ```entitlement.\*``` (dependendo do que está sendo testado) e clique em &quot;Excluir site&quot;.\
+Selecione o ```entitlement.\*``` (dependendo do que for testado) e clique em &quot;Excluir site&quot;.\
  
 
 ## Ferramentas de depuração {#tools}
 
-Os engenheiros de autenticação da Adobe Primetime usam as seguintes ferramentas de depuração:
+Os engenheiros de autenticação do Adobe Primetime usam as seguintes ferramentas de depuração:
 
 - Firebug - <http://www.getfirebug.com/>
 - Flashbug (funciona com a versão de depuração do flash player) <https://addons.mozilla.org/en-US/firefox/addon/14465/>
-- Cabeçalhos http ao vivo - <https://addons.mozilla.org/en-US/firefox/addon/3829/>
-- Fiddler - <http://www.fiddler2.com/fiddler2/>
+- Cabeçalhos http em tempo real - <https://addons.mozilla.org/en-US/firefox/addon/3829/>
+- Violador - <http://www.fiddler2.com/fiddler2/>
 - Charles - <http://www.charlesproxy.com/>
 - Wireshark - <http://www.wireshark.org/>
 

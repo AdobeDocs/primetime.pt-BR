@@ -1,36 +1,35 @@
 ---
-description: Você pode ativar o FairPlay para Safari ao trabalhar com a Nuvem de DRM do Primetime, fornecida pelo ExpressPlay.
-title: Ativar o FairPlay para Safari HLS
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode ativar o FairPlay para Safari ao trabalhar com a Nuvem DRM do Primetime, ativada pelo ExpressPlay.
+title: Ativar FairPlay para Safari HLS
+exl-id: 761c7cb8-3068-44c9-8ceb-6411c509c0a7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
+# Ativar FairPlay para Safari HLS {#enable-fairplay-for-safari-hls}
 
-# Ativar o FairPlay para Safari HLS {#enable-fairplay-for-safari-hls}
-
-Você pode ativar o FairPlay para Safari ao trabalhar com a Nuvem de DRM do Primetime, fornecida pelo ExpressPlay.
+Você pode ativar o FairPlay para Safari ao trabalhar com a Nuvem DRM do Primetime, ativada pelo ExpressPlay.
 
 Certifique-se de ter o seguinte:
 
 * Um aplicativo de amostra funcional que pode reproduzir vídeo HLS.
 
-   O aplicativo de amostra deve ser capaz de reproduzir conteúdo protegido pelo FairPlay com o licenciamento manipulado por meio do Primetime DRM fornecido pela ExpressPlay.
-* Amostra de conteúdo HLS (um manifesto M3U8) empacotado com proteção FairPlay.
+   O aplicativo de amostra deve ser capaz de reproduzir conteúdo protegido por FairPlay com o licenciamento manipulado pelo DRM do Primetime viabilizado pelo ExpressPlay.
+* Exemplo de conteúdo HLS (um manifesto M3U8) empacotado com proteção FairPlay.
 
-Para utilizar todas as informações aqui, saiba mais sobre fluxos de trabalho de vários DRM, começando pela subseção [Servidor de referência: Exemplo de SEES (ExpressPlay Entitlement Server)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) no guia de workflows de vários DRM. Primeiro leia essa documentação sobre como configurar seu direito e servidor de chaves, e as informações abaixo serão muito mais úteis.
+Para usar todas as informações aqui, saiba mais sobre os fluxos de trabalho de vários DRMs começando com a subseção [Servidor de Referência: Exemplo de Servidor de Direitos ExpressPlay (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) no guia Fluxos de trabalho de vários DRM. Leia primeiro essa documentação sobre como configurar seu servidor de direitos e chaves, e as informações abaixo serão muito mais úteis.
 Você precisa dos seguintes itens:
 
-* Seu *Autenticador de cliente de produção* do ExpressPlay
-* A mesma Chave de conteúdo e `iv` com as quais o conteúdo foi empacotado.
-* A localização do seu certificado de chave pública do FairPlay.
+* Seu *produção* Autenticador do cliente da ExpressPlay
+* A mesma chave de conteúdo e `iv` com o qual seu conteúdo foi empacotado.
+* O local do certificado de chave pública FairPlay.
 
-Para modificar o aplicativo FairPlay / Safari:
+Para modificar o aplicativo FairPlay/Safari:
 
-1. Defina a localização do seu certificado de chave pública do FairPlay que foi usado na solicitação do servidor de licenças do FairPlay.
+1. Defina o local do certificado de chave pública FairPlay usado na solicitação do servidor de licença FairPlay.
 
    Por exemplo:
 
@@ -38,14 +37,14 @@ Para modificar o aplicativo FairPlay / Safari:
    var myServerCertificatePath = './my_fairplay.cer';
    ```
 
-1. Execute uma solicitação manual de licença do FairPlay *token* para o ExpressPlay obter um URL de token de licença.
+1. Executar uma licença FairPlay manual *token* solicitação ao ExpressPlay para obter um URL do token de licença.
 
        Você pode concluir essa etapa de uma das seguintes maneiras:
    
-   * Use seu próprio Autenticador de cliente de produção ExpressPlay.
-   * Use a mesma Chave de conteúdo e `iv` nesta solicitação que foi usada para empacotar o conteúdo que deseja reproduzir.
+   * Use seu próprio Autenticador de Cliente de Produção ExpressPlay.
+   * Usar a mesma Chave de conteúdo e `iv` nesta solicitação, que foi usada para empacotar o conteúdo que você deseja reproduzir.
 
-      Execute o seguinte comando do shell e substitua o autenticador de cliente do ExpressPlay para obter o URL do token de licença para o conteúdo de amostra:
+      Execute o seguinte comando no shell e substitua seu autenticador de cliente ExpressPlay para obter o URL do token de licença para o conteúdo de amostra:
 
       ```
       curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
@@ -71,11 +70,11 @@ Para modificar o aplicativo FairPlay / Safari:
         ExpressPlayToken=<base64-encoded ExpressPlay token>';
    ```
 
-1. Antes que seu aplicativo possa reproduzir conteúdo protegido, altere o esquema de URL para o conteúdo de `skd://` para `https://`.
+1. Antes que seu aplicativo possa reproduzir um conteúdo protegido, altere o esquema de URL do conteúdo de `skd://` para `https://`.
 
-   Você precisa adicionar essa alteração no esquema de URL do seu aplicativo, antes da chamada para o servidor de licença que permite a reprodução.
+   É necessário adicionar essa alteração de esquema de URL no aplicativo antes da chamada para o servidor de licença que permite a reprodução.
 
-   Os protocolos precisam ser alterados, pois a ID do conteúdo, que fornece acesso à Chave de conteúdo no Sistema de gerenciamento de chaves, é empacotada no manifesto M3U8 com o protocolo `skd://`. Quando o reprodutor está pronto para obter a licença para reproduzir o conteúdo protegido, ele precisa primeiro mudar os protocolos para se comunicar com o servidor de licenças ExpressPlay. No exemplo abaixo, `myServerProcessSPCPath` é modificado para conter o esquema de URL correto para a solicitação do servidor de licença:
+   Os protocolos precisam ser alterados porque a ID de Conteúdo, que fornece acesso à Chave de Conteúdo no Sistema de Gerenciamento de Chaves, está empacotada no manifesto M3U8 com a variável `skd://` protocolo. Quando o reprodutor estiver pronto para obter a licença para reproduzir o conteúdo protegido, ele precisará primeiro alternar os protocolos para se comunicar com o servidor de licenças ExpressPlay. No exemplo abaixo, a variável `myServerProcessSPCPath` foi modificado para conter o esquema de URL correto para a solicitação do servidor de licença:
 
    ```js
    extractContentId(initData) {  
@@ -88,4 +87,3 @@ Para modificar o aplicativo FairPlay / Safari:
        console.log("severProcessSPCPAth = " + serverProcessSPCPath); return link.hostname;  
    }
    ```
-

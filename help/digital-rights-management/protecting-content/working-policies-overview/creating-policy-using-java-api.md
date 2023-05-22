@@ -1,22 +1,21 @@
 ---
-title: Criação de uma política de DRM com a API Java
-description: Criação de uma política de DRM com a API Java
+title: Criação de uma política DRM com a API do Java
+description: Criação de uma política DRM com a API do Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fcae76c3-4e51-449d-b6d5-2138bf1c583e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
+# Criação de uma política DRM com a API do Java {#creating-a-drm-policy-with-the-java-api}
 
-# Criação de uma política de DRM com a API Java {#creating-a-drm-policy-with-the-java-api}
+Para criar uma política DRM com a API do Java:
 
-Para criar uma política de DRM com a API Java:
-
-1. Configure seu ambiente de desenvolvimento e inclua em seu projeto todos os arquivos JAR listados em [Configurar seu ambiente de desenvolvimento.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Crie um objeto `com.adobe.flashaccess.sdk.policy.Policy` e especifique suas propriedades, incluindo direitos, duração do armazenamento em cache de licenças e data final da política de DRM.
+1. Configure seu ambiente de desenvolvimento e inclua em seu projeto todos os arquivos JAR listados em [Configure seu ambiente de desenvolvimento.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Criar um `com.adobe.flashaccess.sdk.policy.Policy` e especifique suas propriedades, incluindo os direitos, a duração do armazenamento em cache da licença e a data final da política DRM.
 
    ```java
    // Create a new DRM policy object.  
@@ -51,7 +50,7 @@ Para criar uma política de DRM com a API Java:
    } 
    ```
 
-1. Serialize o objeto DRM `Policy` e armazene-o em um arquivo ou banco de dados.
+1. Serializar o DRM `Policy` objeto e armazená-lo em um arquivo ou banco de dados.
 
    ```java
    // Serialize the DRM policy  
@@ -65,4 +64,4 @@ Para criar uma política de DRM com a API Java:
    out.close(); 
    ```
 
-Consulte [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] no diretório Ferramentas de linha de comando de implementação de referência [!DNL samples] para obter a fonte completa deste código de amostra.
+Consulte [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] nas Ferramentas de linha de comando da Implementação de referência [!DNL samples] diretório para a origem completa deste código de amostra.

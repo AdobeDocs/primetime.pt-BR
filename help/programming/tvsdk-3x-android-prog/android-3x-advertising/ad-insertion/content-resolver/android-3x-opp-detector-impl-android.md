@@ -1,20 +1,19 @@
 ---
-description: Você pode implementar seus próprios geradores de oportunidades implementando a classe OpportunityGenerator.
-title: Implementar um gerador de oportunidade personalizado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode implementar seus próprios geradores de oportunidade implementando a classe OpportunityGenerator.
+title: Implementar um gerador de oportunidades personalizado
+exl-id: 215259bd-d8df-43df-9dba-a373559fd926
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
+# Implementar um gerador de oportunidades personalizado {#implement-a-custom-opportunity-generator}
 
-# Implementar um gerador de oportunidade personalizado {#implement-a-custom-opportunity-generator}
+Você pode implementar seus próprios geradores de oportunidade implementando a classe OpportunityGenerator.
 
-Você pode implementar seus próprios geradores de oportunidades implementando a classe OpportunityGenerator.
-
-1. Implemente seu `ContentFactory` personalizado implementando a interface `ContentFactory` e substituindo `retrieveGenerators`.
+1. Implementar o seu `ContentFactory` através da aplicação do `ContentFactory` interface e substituição `retrieveGenerators`.
 
    Por exemplo:
 
@@ -30,7 +29,7 @@ Você pode implementar seus próprios geradores de oportunidades implementando a
    }
    ```
 
-1. Registre o `ContentFactory` no `MediaPlayer`.
+1. Registre o `ContentFactory` para o `MediaPlayer`.
 
    Por exemplo:
 
@@ -47,14 +46,14 @@ Você pode implementar seus próprios geradores de oportunidades implementando a
    itemLoader.load(resource, id, config);
    ```
 
-1. Crie uma classe personalizada de gerador de oportunidade que implemente a classe `OpportunityGenerator`.
+1. Criar uma classe de gerador de oportunidades personalizada que implemente a `OpportunityGenerator` classe.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. No gerador de oportunidade personalizado, substitua `doConfigure`, `doUpdate` e `doCleanup`:
+   1. No gerador de oportunidades personalizado, substitua `doConfigure`, `doUpdate` e `doCleanup`:
 
       ```java
       @Override 

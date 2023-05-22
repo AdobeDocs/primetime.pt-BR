@@ -1,17 +1,16 @@
 ---
-title: Estrutura do Diretório de Configuração
-description: Estrutura do Diretório de Configuração
+title: Estrutura do diretório de configuração
+description: Estrutura do diretório de configuração
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e24d3df0-f723-4dad-84d5-984f3350353a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '16'
 ht-degree: 0%
 
 ---
 
-
-# Estrutura do Diretório de Configuração{#configuration-directory-structure}
+# Estrutura do diretório de configuração{#configuration-directory-structure}
 
 Os diretórios de configuração têm a seguinte estrutura:
 
@@ -38,4 +37,3 @@ Os diretórios de configuração têm a seguinte estrutura:
  </i class="+ topic> 
 </i class="+ topic>
 ```
-

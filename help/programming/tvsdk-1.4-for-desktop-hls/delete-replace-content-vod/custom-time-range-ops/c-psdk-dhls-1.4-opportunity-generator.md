@@ -1,17 +1,16 @@
 ---
-title: Gerador de oportunidades
-description: Gerador de oportunidades
+title: Gerador de oportunidade
+description: Gerador de oportunidade
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ee8d239f-7c52-44ea-a238-cc46d46cf128
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '6'
 ht-degree: 0%
 
 ---
 
-
-# Gerador de Oportunidade{#opportunity-generator}
+# Gerador de oportunidade{#opportunity-generator}
 
 ```
 if (resource.metadata != null) { 

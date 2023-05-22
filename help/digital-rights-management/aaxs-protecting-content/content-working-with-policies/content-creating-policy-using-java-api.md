@@ -2,21 +2,20 @@
 title: Criação de uma política usando a API do Java
 description: Criação de uma política usando a API do Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 60e26fd6-1b72-413c-a35b-b317389cd9ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
+# Criação de uma política usando a API do Java {#creating-a-policy-using-the-java-api}
 
-# Criação de uma política usando a API Java {#creating-a-policy-using-the-java-api}
+Para criar uma política usando a API Java, execute as seguintes etapas:
 
-Para criar uma política usando a API do Java, execute as seguintes etapas:
-
-1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Setting up the development environment](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) no seu projeto.
-1. Crie um objeto `com.adobe.flashaccess.sdk.policy.Policy` e especifique suas propriedades, como direitos, duração do armazenamento em cache de licenças e data final da política.
+1. Configure seu ambiente de desenvolvimento e inclua todos os arquivos JAR mencionados em [Configuração do ambiente de desenvolvimento](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) no seu projeto.
+1. Criar um `com.adobe.flashaccess.sdk.policy.Policy` e especifique suas propriedades, como direitos, duração do cache de licença e data final da política.
 
    ```java
      // Create a new Policy object.  
@@ -52,7 +51,7 @@ Para criar uma política usando a API do Java, execute as seguintes etapas:
      }
    ```
 
-1. Serialize o objeto `Policy` e o armazene em um arquivo ou banco de dados.
+1. Serializar o `Policy` objeto e armazená-lo em um arquivo ou banco de dados.
 
    ```java
      // Serialize the policy  
@@ -66,4 +65,4 @@ Para criar uma política usando a API do Java, execute as seguintes etapas:
      out.close();
    ```
 
-Para obter a fonte completa desse código de amostra, consulte *com.adobe.flashaccess.samples.policy.CreatePolicy* no diretório Ferramentas de Linha de Comando de Implementação de Referência &quot;[!DNL samples]&quot;.
+Para obter a fonte completa desse código de amostra, consulte *com.adobe.flashaccess.samples.policy.CreatePolicy* nas Ferramentas de linha de comando da Implementação de referência &quot; [!DNL samples]&quot;.

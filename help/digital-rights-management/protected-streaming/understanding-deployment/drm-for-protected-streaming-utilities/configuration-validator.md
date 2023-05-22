@@ -1,18 +1,17 @@
 ---
-description: O Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Validador de Configuração antes de iniciar o servidor. Esse utilitário pode detectar a maioria dos erros de configuração antecipadamente, antes que eles causem falhas durante o processamento da solicitação.
+description: A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Validador de configurações antes de iniciar o servidor. Esse utilitário pode detectar a maioria dos erros de configuração antecipadamente, antes que eles causem falhas durante o processamento da solicitação.
 title: Validador de configuração
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 41d0a926-4e12-442c-886e-5f12cf10eed8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
 
 ---
 
-
 # Validador de configuração{#configuration-validator}
 
-O Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Validador de Configuração antes de iniciar o servidor. Esse utilitário pode detectar a maioria dos erros de configuração antecipadamente, antes que eles causem falhas durante o processamento da solicitação.
+A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Validador de configurações antes de iniciar o servidor. Esse utilitário pode detectar a maioria dos erros de configuração antecipadamente, antes que eles causem falhas durante o processamento da solicitação.
 
 Para executar o validador, digite:
 
@@ -32,7 +31,7 @@ java -jar libs/flashaccess-validator.jar
 </i class="+ topic>
 ```
 
-Para cada um dos arquivos de configuração do servidor de licenças, o Validador pode executar a validação baseada em arquivo, o que garante que o arquivo XML esteja bem formado e em conformidade com o esquema do arquivo de configuração.
+Para cada um dos arquivos de configuração do servidor de licenças, o Validador pode executar a validação baseada em arquivos, o que garante que o arquivo XML esteja bem formado e esteja em conformidade com o esquema do arquivo de configuração.
 
 Para executar a validação baseada em arquivo no arquivo de configuração global, digite:
 
@@ -46,11 +45,11 @@ Para executar a validação baseada em arquivo no arquivo de configuração do l
 Validator --<file path>/flashaccess-tenant.xml --tenant
 ```
 
-O Validador também pode executar a validação baseada em implantação. Além de verificar a conformidade com o esquema, esse nível de validação também verifica se os valores especificados são válidos. Por exemplo, isso garante a existência de arquivos referenciados.
+O Validador também pode executar a validação baseada em implantação. Além de verificar a conformidade com o esquema, esse nível de validação também verifica se os valores especificados são válidos. Por exemplo, ela garante que os arquivos referenciados existam.
 
-A validação baseada na implantação pode ser executada nos seguintes níveis:
+A validação baseada em implantação pode ser executada nos seguintes níveis:
 
-* `Tenant` — Valida o arquivo de configuração e as credenciais de um locatário específico. Se quiser validar a configuração de `<tenant1>`, digite:
+* `Tenant` — Valida o arquivo de configuração e as credenciais para um locatário específico. Se desejar validar a configuração para `<tenant1>`, tipo:
 
    ```
        Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
@@ -61,4 +60,3 @@ A validação baseada na implantação pode ser executada nos seguintes níveis:
    ```
        Validator --<root-path-to-LicenseServer.ConfigRoot> -g
    ```
-

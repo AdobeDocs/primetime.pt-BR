@@ -1,22 +1,21 @@
 ---
-description: Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Mecanismo de Vídeo do Adobe (AVE).
+description: Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Mecanismo de vídeo de Adobe (AVE).
 title: Rastrear avisos do AVE no seu reprodutor
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 49118d7f-ed79-4d22-ba91-8929f97c7256
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Rastrear avisos do AVE no seu reprodutor{#track-ave-warnings-in-your-player}
 
-Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Mecanismo de Vídeo do Adobe (AVE).
+Usando o NotificationEvent, você pode rastrear avisos transmitidos pelo Mecanismo de vídeo de Adobe (AVE).
 
-O aplicativo do reprodutor pode rastrear avisos e erros de reprodução gerados pelo AVE, como eventos de failover ou de rede, que não interrompem a reprodução e não exigem necessariamente nenhuma ação do aplicativo. Embora alguns erros de AVE sejam tratados pelo TVSDK, `NotificationEvent` serve como um mecanismo de passagem geral para a camada do aplicativo para avisos de AVE. Depois de receber avisos do AVE, você pode optar por realizar alguma ação, como interromper ativamente a reprodução, ativar um plano de contingência, registrar mensagens e assim por diante.
+Seu aplicativo player pode rastrear avisos de reprodução e erros gerados pelo AVE, como eventos de failover ou de inatividade de rede que não interrompem a reprodução e não exigem necessariamente uma ação do aplicativo. Embora alguns erros do AVE sejam tratados pelo TVSDK, `NotificationEvent` O serve como um mecanismo de passagem geral para a camada do aplicativo para avisos AVE. Depois de receber avisos do AVE, você pode optar por realizar alguma ação, como interromper proativamente a reprodução, ativar um plano de contingência, registrar mensagens e assim por diante.
 
-Use os seguintes elementos da API para rastrear avisos do AVE no seu reprodutor:
+Use os seguintes elementos de API para rastrear avisos AVE no reprodutor:
 
 **NotificationCode**
 
@@ -76,7 +75,7 @@ public class NotificationEvent extends Event {
 }
 ```
 
-Adicione um ouvinte de evento ao player para capturar avisos do AVE.
+Adicione um ouvinte de eventos ao player para receber avisos AVE.
 
 Por exemplo:
 

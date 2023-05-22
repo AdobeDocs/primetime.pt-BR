@@ -1,32 +1,31 @@
 ---
 description: Para receber notificações sobre tags no manifesto, implemente o(s) ouvinte(s) de notificação apropriado(s).
 title: Adicionar ouvintes para notificações de metadados cronometrados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 259af856-797b-4a50-9add-f72132831ba1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
 # Adicionar ouvintes para notificações de metadados cronometrados {#add-listeners-for-timed-metadata-notifications}
 
 Para receber notificações sobre tags no manifesto, implemente o(s) ouvinte(s) de notificação apropriado(s).
 
-Você pode monitorar metadados cronometrados escutando os seguintes eventos, que notificam o aplicativo da atividade relacionada:
+Você pode monitorar metadados cronometrados ouvindo os seguintes eventos, que notificam seu aplicativo sobre atividades relacionadas:
 
-* `PTTimedMetadataChangedNotification`: Cada vez que uma tag assinada exclusiva é identificada durante a análise do conteúdo, o TVSDK prepara um novo  `PTTimedMetadata` objeto e despacha essa notificação.
+* `PTTimedMetadataChangedNotification`: Cada vez que uma tag única assinada é identificada durante a análise do conteúdo, o TVSDK prepara uma nova `PTTimedMetadata` e envia esta notificação.
 
-   O objeto contém o nome da tag da qual você se inscreveu, o horário local na reprodução em que essa tag será exibida e outros dados.
+   O objeto contém o nome da tag que você assinou, o horário local na reprodução em que essa tag aparecerá e outros dados.
 
-* `PTMediaPlayerTimeChangeNotification` : Para fluxos ao vivo/lineares onde o manifesto/lista de reprodução é atualizado periodicamente, tags personalizadas adicionais podem aparecer na lista de reprodução/manifesto atualizado, portanto,  `TimedMetadata` objetos adicionais podem ser adicionados à  `MediaPlayerItem.timedMetadata` propriedade.
+* `PTMediaPlayerTimeChangeNotification` : Para fluxos ao vivo/lineares nos quais o manifesto/lista de reprodução é atualizado periodicamente, tags personalizadas adicionais podem aparecer na lista de reprodução/manifesto atualizada, portanto, tags adicionais `TimedMetadata` objetos podem ser adicionados à `MediaPlayerItem.timedMetadata` propriedade.
 
-   Esse evento notifica seu aplicativo quando isso acontece.
+   Esse evento notifica seu aplicativo quando isso ocorre.
 
    Recupere os metadados cronometrados de uma das seguintes maneiras.
 
-   * Defina seu aplicativo para adicionar-se como um ouvinte à notificação `PTTimedMetadataChangedNotification` e busque o objeto usando `PTTimedMetadataKey`.
+   * Defina seu aplicativo para se adicionar como um ouvinte à variável `PTTimedMetadataChangedNotification` notificação e buscar o objeto usando `PTTimedMetadataKey`.
 
       ```
       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTimedMetadataChanged:)  
@@ -38,5 +37,4 @@ Você pode monitorar metadados cronometrados escutando os seguintes eventos, que
       }
       ```
 
-   * Acesse a propriedade `timedMetadataCollection` de `PTMediaPlayerItem`, que consiste em todos os objetos `PTTimedMetadata` que foram notificados até agora.
-
+   * Acesse o `timedMetadataCollection` propriedade de `PTMediaPlayerItem`, que consiste em todos os `PTTimedMetadata` objetos que foram notificados até o momento.

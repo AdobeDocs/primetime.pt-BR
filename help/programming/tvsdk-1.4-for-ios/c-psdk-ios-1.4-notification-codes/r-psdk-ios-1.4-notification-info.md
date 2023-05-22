@@ -1,14 +1,13 @@
 ---
 description: Esta tabela fornece informações detalhadas sobre notificações do tipo INFO.
 title: Códigos de notificação INFO
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 162c73c2-c077-4b50-b340-76938b15783a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 4%
 
 ---
-
 
 # Códigos de notificação INFO{#info-notification-codes}
 
@@ -35,39 +34,39 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300000  </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_START  </span> </td> 
+   <td colname="1"><span class="codeph"> 300000 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_START </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> Nenhum </td> 
-   <td colname="5"> A reprodução foi iniciada. </td> 
+   <td colname="5"> Reprodução iniciada. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300001  </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE  </span> </td> 
+   <td colname="1"><span class="codeph"> 300001 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> Nenhum </td> 
-   <td colname="5"> A reprodução foi concluída. </td> 
+   <td colname="5"> Reprodução concluída. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300002  </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_START  </span> </td> 
+   <td colname="1"><span class="codeph"> 300002 </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_START </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> <p> Nenhum </p> </td> 
    <td colname="5"> Uma operação de busca foi iniciada. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300003  </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_COMPLETE  </span> </td> 
+   <td colname="1"><span class="codeph"> 300003 </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_COMPLETE </span> </td> 
    <td colname="3"> Nenhum </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
    <td colname="5"> Uma operação de busca foi concluída. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300005  </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE  </span> </td> 
+   <td colname="1"><span class="codeph"> 300005 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
-   <td colname="5"> O estado do reprodutor foi alterado. Quando o estado é ERRO, a notificação interna é o objeto de notificação de erro que disparou o switch para o estado ERROR. </td> 
+   <td colname="5"> O estado do player foi alterado. Quando o estado é ERROR, a notificação interna é o objeto de notificação de erro que acionou a alternância para o estado ERROR. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Taxas de bits adaptáveis (ABR)</b> </td> 
@@ -77,10 +76,10 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 302000  </span> </td> 
-   <td colname="2"><span class="codeph"> BITRATE_CHANGE  </span> </td> 
+   <td colname="1"><span class="codeph"> 302000 </span> </td> 
+   <td colname="2"><span class="codeph"> BITRATE_CHANGE </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
-   <td colname="4"><span class="codeph"> TAXA DE BITS  </span> </td> 
+   <td colname="4"><span class="codeph"> TAXA DE BITS </span> </td> 
    <td colname="5"> A taxa de bits do vídeo mudou. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -91,11 +90,11 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 304000  </span> </td> 
-   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE  </span> </td> 
+   <td colname="1"><span class="codeph"> 304000 </span> </td> 
+   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
-   <td colname="5"> <p>A faixa de áudio mudou. </p> </td> 
+   <td colname="5"> <p>A faixa de áudio foi alterada. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Legendas</b> </td> 
@@ -105,12 +104,11 @@ A maioria das notificações informativas contém metadados relevantes, por exem
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 307000  </span> </td> 
-   <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE  </span> </td> 
+   <td colname="1"><span class="codeph"> 307000 </span> </td> 
+   <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE </span> </td> 
    <td colname="3"> <p>Nenhum </p> </td> 
    <td colname="4"> <p>Nenhum </p> </td> 
-   <td colname="5"> <p>O rastreamento de legendas mudou. </p> </td> 
+   <td colname="5"> <p>A faixa de legendas mudou. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

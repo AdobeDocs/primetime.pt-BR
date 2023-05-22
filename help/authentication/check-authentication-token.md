@@ -1,21 +1,21 @@
 ---
-title: Verificar Token de Autenticação
-description: Verificar Token de Autenticação
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Verificar token de autenticação
+description: Verificar token de autenticação
+exl-id: 9020f261-44d8-4bd5-b85b-a8667679f563
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
-
-# Verificar Token de Autenticação {#check-authentication-token}
+# Verificar token de autenticação {#check-authentication-token}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
-## Endpoints REST API {#clientless-endpoints}
+## Endpoints da REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -35,24 +35,24 @@ Indica se o dispositivo tem um token de autenticação não expirado.
 
 | Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/checkauthn | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante (Obrigatório)</br>2.  deviceId (Obrigatório)</br>3.  device_info/X-Device-Info (Obrigatório)</br>4.  _deviceType_ </br>5.  _deviceUser_ (Obsoleto)</br>6.  _appId_ (Obsoleto) | GET | XML ou JSON contendo detalhes do erro, se não tiver êxito. | 200 - Sucesso   </br>403 - Sem sucesso |
+| &lt;sp_fqdn>/api/v1/checkauthn | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante (obrigatório)</br>2.  deviceId (Obrigatório)</br>3.  device_info/X-Device-Info (Obrigatório)</br>4.  _deviceType_ </br>5.  _deviceUser_ (Obsoleto)</br>6.  _appId_ (Obsoleto) | GET | XML ou JSON que contém detalhes de erros, caso não seja bem-sucedido. | 200 - Sucesso   </br>403 - Sem Sucesso |
 
 {style="table-layout:auto"}
 
 
 | Parâmetro de entrada | Descrição |
 | --- | --- |
-| solicitante | O ID do solicitador do Programador para o qual esta operação é válida. |
-| deviceId | Os bytes da ID do dispositivo. |
-| device_info/</br></br>X-Device-Info | Informações do dispositivo de transmissão.</br></br>**Observação**: Isso PODE ser passado device_info como um parâmetro de URL, mas devido ao tamanho potencial desse parâmetro e às limitações no comprimento de um URL de GET, ele deve ser passado como X-Device-Info no cabeçalho http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)(/help/authentication/passing-client-information-device-connection-and-application.md)-->. |
-| _deviceType_ | O tipo de dispositivo (por exemplo, Roku, PC).</br></br>Se esse parâmetro for definido corretamente, o ESM oferece métricas que são [detalhado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) ao usar a opção sem cliente, para que diferentes tipos de análise possam ser executados para, por exemplo, Roku, AppleTV, Xbox etc.</br></br>Para obter detalhes, consulte [Benefícios do uso do parâmetro ClientType nas métricas de autenticação do Primetime ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Observação**: o device_info substituirá esse parâmetro. |
+| solicitante | O requestorId do Programador para o qual esta operação é válida. |
+| deviceId | Os bytes de id do dispositivo. |
+| device_info/</br></br>X-Device-Info | Informações do dispositivo de transmissão.</br></br>**Nota**: PODE ser passado para device_info como um parâmetro de URL, mas devido ao tamanho potencial desse parâmetro e às limitações no comprimento de um URL GET, ELE DEVE ser passado como X-Device-Info no cabeçalho http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)(/help/authentication/passing-client-information-device-connection-and-application.md)-->. |
+| _deviceType_ | O tipo de dispositivo (por exemplo, Roku, PC).</br></br>Se esse parâmetro estiver definido corretamente, o ESM oferecerá métricas que são [detalhado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) ao usar sem cliente, para que diferentes tipos de análise possam ser executados para, por exemplo, Roku, Apple TV, Xbox etc.</br></br>Para obter detalhes, consulte [Benefícios do uso do parâmetro deviceType sem cliente nas métricas de autenticação do Primetime ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Nota**: device_info substituirá esse parâmetro. |
 | _deviceUser_ | O identificador do usuário do dispositivo. |
-| _appId_ | A ID/nome do aplicativo.</br>**Observação**: o device_info substitui esse parâmetro. |
+| _appId_ | O id/nome do aplicativo.</br>**Nota**: device_info substitui esse parâmetro. |
 
 {style="table-layout:auto"}
 
 
-## Resposta (se não tiver êxito) {#response}
+## Resposta (se malsucedida) {#response}
 
 ```JSON
     <error>

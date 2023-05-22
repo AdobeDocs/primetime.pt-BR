@@ -1,33 +1,32 @@
 ---
-description: Você pode personalizar ou substituir comportamentos de publicidade.
+description: Você pode personalizar ou substituir comportamentos de anúncios.
 title: Configurar reprodução personalizada
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 28c28589-9e94-40de-b921-1bffc0392c29
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
-
 # Configurar reprodução personalizada{#set-up-customized-playback}
 
-Você pode personalizar ou substituir comportamentos de publicidade.
+Você pode personalizar ou substituir comportamentos de anúncios.
 
-Antes de personalizar ou substituir comportamentos de publicidade, registre a instância da política de publicidade com .
-Para personalizar os comportamentos do anúncio, siga um destes procedimentos:
+Antes de personalizar ou substituir comportamentos de anúncios, registre a instância da política de anúncios com .
+Para personalizar comportamentos de anúncios, siga um destes procedimentos:
 
-* Implemente a interface `AdPolicySelector` e todos os seus métodos.
+* Implementar o `AdPolicySelector` e todos os seus métodos.
 
-   Essa opção é recomendada se você precisar substituir **all** os comportamentos de publicidade padrão.
+   Essa opção é recomendada se você precisar substituir **all** os comportamentos de anúncio padrão.
 
-* Estenda a classe `DefaultAdPolicySelector` e forneça implementações somente para os comportamentos que exigem personalização.
+* Estenda o `DefaultAdPolicySelector` e fornecem implementações somente para os comportamentos que exigem personalização.
 
-   Essa opção é recomendada se você precisar substituir apenas **some** dos comportamentos padrão.
+   Essa opção é recomendada se você precisar substituir apenas o **alguns** dos comportamentos padrão.
 
 Para ambas as opções, conclua as seguintes tarefas:
 
-1. Implemente seu próprio seletor de política de anúncio personalizado.
+1. Implemente seu próprio seletor de políticas de anúncios personalizado.
 
    ```
    public class CustomAdPolicySelector implements AdPolicySelector { 
@@ -55,7 +54,7 @@ Para ambas as opções, conclua as seguintes tarefas:
    factory->retrieveAdPolicySelector(item, &defaultAdPolicySelector);
    ```
 
-1. Registre a nova fábrica de conteúdo que será usada pelo TVSDK no fluxo de trabalho de publicidade.
+1. Registre a nova fábrica de conteúdo a ser usada pelo TVSDK no fluxo de trabalho de publicidade.
 
    ```
    PSDKConfig.advertisingFactory = new CustomContentFactory();
@@ -63,4 +62,4 @@ Para ambas as opções, conclua as seguintes tarefas:
 
    >[!TIP]
    >
-   >Se a fábrica de conteúdo personalizado foi registrada para um fluxo específico por meio da classe `MediaPlayerItemConfig`, ela será apagada quando a instância `MediaPlayer` for desalocada. O aplicativo deve registrá-lo sempre que uma nova sessão de reprodução for criada.
+   >Se a fábrica de conteúdo personalizado foi registrada para um fluxo específico por meio da `MediaPlayerItemConfig` será limpa quando a variável `MediaPlayer` instância desalocada. Seu aplicativo deve registrá-la sempre que uma nova sessão de reprodução for criada.

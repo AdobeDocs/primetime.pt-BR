@@ -1,34 +1,33 @@
 ---
-description: Você pode salvar a posição atual da reprodução em um vídeo e retomar a reprodução na mesma posição em uma sessão futura.
-title: Salve a posição do vídeo e retome mais tarde
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode salvar a posição de reprodução atual em um vídeo e retomar a reprodução na mesma posição em uma sessão futura.
+title: Salvar a posição do vídeo e retomar mais tarde
+exl-id: 9f6dc256-ee82-476d-96d0-f34b55f9e1f4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
 
+# Salvar a posição do vídeo e retomar mais tarde {#save-the-video-position-and-resume-later}
 
-# Salve a posição do vídeo e retome mais tarde {#save-the-video-position-and-resume-later}
+Você pode salvar a posição de reprodução atual em um vídeo e retomar a reprodução na mesma posição em uma sessão futura.
 
-Você pode salvar a posição atual da reprodução em um vídeo e retomar a reprodução na mesma posição em uma sessão futura.
+Os anúncios inseridos dinamicamente diferem entre as sessões do usuário, portanto, salvar a posição **com** anúncios em spliced refere-se a uma posição diferente em uma sessão futura. O TVSDK fornece métodos para recuperar a posição de reprodução, ignorando anúncios empacotados.
 
-As publicidades inseridas dinamicamente diferem entre sessões de usuário, portanto, salvar a posição **com** publicidades em spliced refere-se a uma posição diferente em uma sessão futura. O TVSDK fornece métodos para recuperar a posição da reprodução ao ignorar anúncios em spliced.
-
-1. Quando o usuário sai de um vídeo, seu aplicativo recupera e salva a posição no vídeo.
+1. Quando o usuário sai de um vídeo, o aplicativo recupera e salva a posição no vídeo.
 
    >[!TIP]
    >
-   >As durações dos anúncios não são incluídas.
+   >A duração do anúncio não está incluída.
 
-   As quebras de anúncios podem variar em cada sessão devido aos padrões de anúncios, limite de frequência e assim por diante. O horário atual do vídeo em uma sessão pode ser diferente em uma sessão futura. Ao salvar uma posição no vídeo, o aplicativo recupera a hora local, que pode ser salva no dispositivo ou em um banco de dados no servidor.
+   Os ad breaks podem variar em cada sessão devido a padrões de anúncios, limite de frequência e assim por diante. A hora atual do vídeo em uma sessão pode ser diferente em uma sessão futura. Ao salvar uma posição no vídeo, o aplicativo recupera a hora local, que pode ser salva no dispositivo ou em um banco de dados no servidor.
 
-   Por exemplo, se o usuário estiver no 20º minuto do vídeo e essa posição incluir cinco minutos de anúncios, `getCurrentTime` retornará 1200 segundos, enquanto `getLocalTime` nessa posição retornará 900 segundos.
+   Por exemplo, se o usuário estiver no 20º minuto do vídeo e essa posição incluir cinco minutos de anúncios, `getCurrentTime` retornará 1200 segundos, enquanto `getLocalTime` nesta posição retornará 900 segundos.
 
    >[!IMPORTANT]
    >
-   >A hora local e a hora atual são as mesmas para fluxos ao vivo/lineares. Nesse caso, `convertToLocalTime` não tem efeito. Para VOD, o tempo local permanece inalterado enquanto os anúncios são exibidos.
+   >A hora local e a hora atual são as mesmas para fluxos ao vivo/lineares. Nesse caso, `convertToLocalTime` não tem efeito. Para VOD, a hora local permanece inalterada durante a reprodução dos anúncios.
 
    ```java
    // Save the user session when player activity stops 
@@ -48,7 +47,7 @@ As publicidades inseridas dinamicamente diferem entre sessões de usuário, port
        }
    ```
 
-1. Restaure a sessão do usuário quando a atividade do reprodutor for retomada.
+1. Restaure a sessão do usuário quando a atividade do player for retomada.
 
    ```java
    @Override 
@@ -72,15 +71,15 @@ As publicidades inseridas dinamicamente diferem entre sessões de usuário, port
 
 1. Para retomar o vídeo na mesma posição:
 
-   * Para retomar a reprodução do vídeo da posição que foi salva de uma sessão anterior, use `seekToLocalTime`.
+   * Para retomar a reprodução do vídeo a partir da posição salva em uma sessão anterior, use `seekToLocalTime`.
 
       >[!TIP]
       >
-      >Esse método é chamado somente com valores de hora locais. Se o método for chamado com os resultados de tempo atuais, ocorrerá um comportamento incorreto.
+      >Esse método é chamado somente com valores de hora locais. Se o método for chamado com os resultados da hora atual, ocorrerá um comportamento incorreto.
 
-   * Para procurar no horário atual, use `seek`.
+   * Para buscar o horário atual, use `seek`.
 
-1. Quando o aplicativo recebe o evento de alteração de status `onStatusChanged`, procure no horário local salvo.
+1. Quando o aplicativo recebe a variável `onStatusChanged` evento de alteração de status, procure a hora local salva.
 
    ```java
    private final MediaPlayer.PlaybackEventListener _playbackEventListener =  
@@ -99,8 +98,8 @@ As publicidades inseridas dinamicamente diferem entre sessões de usuário, port
    }
    ```
 
-1. Forneça os ad breaks conforme especificado na interface da política de anúncios.
-1. Implemente um seletor de política de anúncio personalizado estendendo o seletor de política de anúncio padrão.
-1. Forneça os ad breaks que devem ser apresentados ao usuário implementando `selectAdBreaksToPlay`.
+1. Forneça os ad breaks de acordo com as especificações da interface de política de anúncios.
+1. Implemente um seletor de política de anúncios personalizado estendendo o seletor de política de anúncios padrão.
+1. Fornecer os ad breaks que devem ser apresentados ao usuário implementando `selectAdBreaksToPlay`.
 
-   Esse método inclui um ad break precedente e o ad breaks intermediários antes da posição de hora local. Seu aplicativo pode decidir reproduzir um ad break precedente e retomar para o horário local especificado, reproduzir um ad break intermediário e retomar para o horário local especificado, ou não reproduzir ad breaks.
+   Esse método inclui um ad break precedente e ad breaks intermediários antes da posição da hora local. Seu aplicativo pode decidir reproduzir um ad break precedente e retomar o horário local especificado, reproduzir um ad break intermediário e retomar o horário local especificado ou não reproduzir ad breaks.

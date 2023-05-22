@@ -1,30 +1,29 @@
 ---
-description: A Qualidade do serviço (QoS) oferece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
-title: Estatísticas de qualidade dos serviços
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: A Qualidade do serviço (QoS) oferece uma visualização detalhada do desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+title: Estatísticas de qualidade do serviço
+exl-id: ab664d75-a24f-41d6-91d7-a26ad7baab9a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-
 # Estatísticas de qualidade do serviço {#quality-of-service-statistics}
 
-A Qualidade do serviço (QoS) oferece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+A Qualidade do serviço (QoS) oferece uma visualização detalhada do desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
 
 O TVSDK também fornece informações sobre os seguintes recursos baixados:
 
-* Arquivos Playlist/manifest
+* Arquivos de lista de reprodução/manifesto
 * Fragmentos de arquivo
-* Rastreamento de informações para arquivos
+* Informações de rastreamento para arquivos
 
 ## Rastrear no nível do fragmento usando informações de carregamento {#track-at-the-fragment-level-using-load-information}
 
-Você pode ler informações de qualidade de serviço (QoS) sobre recursos baixados, como fragmentos e rastreamentos, da classe LoadInformation.
+Você pode ler informações de qualidade de serviço (QoS) sobre recursos baixados, como fragmentos e rastreamentos, a partir da classe LoadInformation.
 
-1. Implemente o ouvinte de evento de retorno de chamada `onLoadInformationAvailable`.
+1. Implementar o `onLoadInformationAvailable` ouvinte de eventos de retorno de chamada.
 
    ```
    private function onLoadInformationAvailable(event:LoadInformationEvent):void { 
@@ -33,14 +32,14 @@ Você pode ler informações de qualidade de serviço (QoS) sobre recursos baixa
    }
    ```
 
-1. Registre o ouvinte de eventos, que o TVSDK chama sempre que um fragmento for baixado.
+1. Registre o ouvinte de eventos, que o TVSDK chama sempre que um fragmento é baixado.
 
    ```
    player.addEventListener(LoadInformationEvent.LOAD_INFORMATION_AVAILABLE,  
                                     onLoadInformationAvailable);
    ```
 
-1. Leia os dados de interesse do `LoadInformation` que são passados para o retorno de chamada.
+1. Leia os dados de interesse no `LoadInformation` que é passado para o retorno de chamada.
 
    <table id="table_75E61A2EB25E435DB631166A7FF64757"> 
    <thead> 
@@ -52,63 +51,63 @@ Você pode ler informações de qualidade de serviço (QoS) sobre recursos baixa
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
+      <td colname="col01"> <span class="codeph"> downloadDuration </span> </td> 
       <td colname="col1"> <p>Número </p> </td> 
-      <td colname="col2"> <p>A duração do download em milissegundos. </p> <p>O TVSDK não diferencia entre o tempo que o cliente levou para se conectar ao servidor e o tempo que levou para baixar o fragmento completo. Por exemplo, se um segmento de 10 MB levar 8 segundos para ser baixado, o TVSDK fornece essas informações, mas não informa que levou 4 segundos até o primeiro byte e outros 4 segundos para baixar o fragmento inteiro. </p> </td> 
+      <td colname="col2"> <p>A duração do download em milissegundos. </p> <p>O TVSDK não diferencia entre o tempo necessário para o cliente se conectar ao servidor e o tempo necessário para baixar o fragmento completo. Por exemplo, se um segmento de 10 MB levar 8 segundos para baixar, o TVSDK fornecerá essas informações, mas não informará que levou 4 segundos até o primeiro byte e outros 4 segundos para baixar o fragmento inteiro. </p> </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
       <td colname="col1"> <p>Número </p> </td> 
       <td colname="col2"> A duração da mídia dos fragmentos baixados em milissegundos. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> size  </span> </td> 
+      <td colname="col01"> <span class="codeph"> tamanho </span> </td> 
       <td colname="col1"> <p>Número </p> </td> 
       <td colname="col2"> O tamanho do recurso baixado em bytes. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackIndex  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
       <td colname="col1"> <p>int </p> </td> 
-      <td colname="col2"> O índice da via correspondente, se conhecido; caso contrário, 0. </td> 
+      <td colname="col2"> O índice da faixa correspondente, se conhecido; caso contrário, 0. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackName  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
       <td colname="col1"> <p>String </p> </td> 
-      <td colname="col2"> O nome da via correspondente, se conhecido; caso contrário, null. </td> 
+      <td colname="col2"> O nome da faixa correspondente, se for conhecido; caso contrário, é nulo. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackType  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
       <td colname="col1"> <p>String </p> </td> 
-      <td colname="col2"> O tipo da via correspondente, se conhecida; caso contrário, null. </td> 
+      <td colname="col2"> O tipo da faixa correspondente, se conhecida; caso contrário, é nulo. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> type  </span> </td> 
+      <td colname="col01"> <span class="codeph"> type </span> </td> 
       <td colname="col1"> <p>String </p> </td> 
-      <td colname="col2"> O que TVSDK baixou. Um dos seguintes: 
+      <td colname="col2"> O que o TVSDK baixou. Uma das seguintes opções: 
       <ul id="ul_FA02F42D109344F4866073908CA4E835"> 
-      <li id="li_0E2D3EBCAB58477FB5EA526C54FACFFB">MANIFEST - Uma lista de reprodução/manifesto </li> 
+      <li id="li_0E2D3EBCAB58477FB5EA526C54FACFFB">MANIFESTO - Uma lista de reprodução/manifesto </li> 
       <li id="li_D7894C2F0CB64C909C6398288EA5683A">FRAGMENTO - Um fragmento </li> 
-      <li id="li_4D4FEDB7704C411B80891B5028B0C20E">TRACK - Um fragmento associado a um rastreamento específico </li> 
+      <li id="li_4D4FEDB7704C411B80891B5028B0C20E">RASTREAR - Um fragmento associado a uma faixa específica </li> 
       </ul> Às vezes, pode não ser possível detectar o tipo do recurso. Se isso ocorrer, FILE será retornado. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> url  </span> </td> 
+      <td colname="col01"> <span class="codeph"> url </span> </td> 
       <td colname="col1"> <p>String </p> </td> 
       <td colname="col2"> O URL que aponta para o recurso baixado. </td> 
    </tr> 
    </tbody> 
    </table>
 
-## Ler a reprodução do QOS, o buffering e as estatísticas do dispositivo {#read-qos-playback-buffering-and-device-statistics}
+## Ler estatísticas de reprodução, buffering e dispositivo de QOS {#read-qos-playback-buffering-and-device-statistics}
 
-Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe QOSProvider.
+Você pode ler estatísticas de reprodução, buffering e dispositivo na classe QOSProvider.
 
-A classe `QOSProvider` fornece várias estatísticas, incluindo informações sobre buffering, taxas de bits, taxas de quadros, dados de tempo e assim por diante.
+A variável `QOSProvider` A classe fornece várias estatísticas, incluindo informações sobre buffering, taxas de bits, taxas de quadros, dados de tempo, etc.
 
-Ele também fornece informações sobre o dispositivo, como fabricante, modelo, sistema operacional, versão do SDK e tamanho/densidade da tela.
+Também fornece informações sobre o dispositivo, como fabricante, modelo, sistema operacional, versão do SDK e tamanho/densidade da tela.
 
-1. Instancie um reprodutor de mídia.
-1. Crie um objeto `QOSProvider` e o anexe ao reprodutor de mídia.
+1. Instanciar um reprodutor de mídia.
+1. Criar um `QOSProvider` e anexe-o ao reprodutor de mídia.
 
    ```
    // Create Media Player. 
@@ -118,7 +117,7 @@ Ele também fornece informações sobre o dispositivo, como fabricante, modelo, 
 
 1. (Opcional) Leia as estatísticas de reprodução.
 
-   Uma solução para ler as estatísticas de reprodução é ter um temporizador que busca periodicamente os novos valores de QoS do `QOSProvider`. Por exemplo:
+   Uma solução para ler as estatísticas de reprodução é ter um temporizador, que busca periodicamente os novos valores de QoS na `QOSProvider`. Por exemplo:
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  

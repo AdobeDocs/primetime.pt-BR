@@ -1,33 +1,32 @@
 ---
-description: O Instant-on pré-carrega partes da mídia em um ou mais canais. Depois que um usuário seleciona ou alterna canais, o conteúdo é iniciado antes, pois algum buffering já foi concluído.
-title: Instant-on
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O instantâneo pré-carrega partes da mídia em um ou mais canais. Depois que um usuário seleciona ou muda de canal, o conteúdo é iniciado mais cedo porque parte do buffering já foi concluído.
+title: Instantâneo
+exl-id: 3a1b2172-8036-40f1-86b6-8304ef771aa9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
+# Instantâneo{#instant-on}
 
-# Instant-on{#instant-on}
+O instantâneo pré-carrega partes da mídia em um ou mais canais. Depois que um usuário seleciona ou muda de canal, o conteúdo é iniciado mais cedo porque parte do buffering já foi concluído.
 
-O Instant-on pré-carrega partes da mídia em um ou mais canais. Depois que um usuário seleciona ou alterna canais, o conteúdo é iniciado antes, pois algum buffering já foi concluído.
-
-Quando o reprodutor estiver no status `PTMediaPlayerStatusReady` , chame `prepareToPlay` para pré-carregar e processar parte do conteúdo para reprodução posterior.
+Quando o reprodutor estiver na `PTMediaPlayerStatusReady` status, chamada `prepareToPlay` para pré-carregar e processar parte do conteúdo para reprodução posterior.
 
 >[!TIP]
 >
->Se você não chamar `prepareToPlay`, chamar `play` automaticamente chama `prepareToPlay` primeiro. O pré-carregamento e o processamento são concluídos no momento.
+>Se você não chamar `prepareToPlay`, chamando `play` chama automaticamente `prepareToPlay` primeiro. O pré-carregamento e o processamento estão concluídos neste momento.
 
-O TVSDK conclui algumas ou todas as seguintes tarefas para `prepareToPlay`:
+O TVSDK conclui algumas ou todas as tarefas a seguir para `prepareToPlay`:
 
-* Se a chave de metadados `kSyncCookiesWithAVAsset` estiver definida, o TVSDK fará uma solicitação para o arquivo M3U8 original para sincronizar cookies.
-* Carrega chaves de metadados de DRM.
+* Se a chave de metadados `kSyncCookiesWithAVAsset` for definido, o TVSDK fará uma solicitação ao arquivo M3U8 original para sincronizar cookies.
+* Carrega chaves de metadados DRM.
 * Cria e prepara algumas estruturas, elementos ou ativos necessários para reproduzir conteúdo.
 
 >[!TIP]
 >
->Os métodos `PTMediaPlayer` e `PTMediaPlayerItem` `prepareToPlay` são iguais. Para evitar criar uma instância `PTMediaPlayer` separada para cada ativo, use o método `PTMediaPlayerItem` .
+>A variável `PTMediaPlayer` e `PTMediaPlayerItem` `prepareToPlay` métodos são iguais. Para evitar a criação de um `PTMediaPlayer` para cada ativo, use o `PTMediaPlayerItem` método.
 
-O Instant-on ajuda a iniciar várias instâncias do reprodutor de mídia ou instâncias do carregador de itens do reprodutor de mídia, simultaneamente em fluxos de vídeo em segundo plano e em buffer em todas essas instâncias. Quando um usuário altera o canal e o fluxo é armazenado em buffer corretamente, chamar `play` no novo canal inicia a reprodução mais cedo.
+A ativação instantânea ajuda a iniciar várias instâncias do reprodutor de mídia, ou instâncias do carregador de itens do reprodutor de mídia, simultaneamente em segundo plano e fluxos de vídeo de buffer em todas essas instâncias. Quando um usuário altera o canal e o fluxo é armazenado em buffer corretamente, chamando `play` no novo canal inicia a reprodução mais cedo.

@@ -2,34 +2,33 @@
 title: Áudio alternativo
 description: Áudio alternativo
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a3b1c361-4120-42a2-b6fd-710f6244eafa
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-
 # Áudio alternativo {#alternate-audio}
 
-O áudio alternativo ou com vínculo posterior permite alternar entre as faixas de áudio disponíveis para uma faixa de vídeo. Dessa forma, os usuários podem selecionar um rastreamento de idioma quando o vídeo for reproduzido.
+Áudio alternativo ou de associação tardia permite alternar entre as faixas de áudio disponíveis para uma faixa de vídeo. Dessa forma, os usuários podem selecionar uma faixa de idioma quando o vídeo é reproduzido.
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Quando o TVSDK cria a instância `MediaPlayerItem` para o vídeo atual, ele cria um item `AudioTrack` para cada faixa de áudio disponível. O item contém uma propriedade `name`, uma string que normalmente contém uma descrição reconhecível pelo usuário do idioma dessa faixa. O item também contém informações sobre se esse rastreamento deve ser usado por padrão.
+Quando o TVSDK cria a variável `MediaPlayerItem` para o vídeo atual, ele cria uma `AudioTrack` para cada faixa de áudio disponível. O item contém um `name` propriedade, uma string que normalmente contém uma descrição reconhecível pelo usuário do idioma dessa faixa. O item também contém informações sobre o uso ou não dessa faixa por padrão.
 
-Quando for a hora de reproduzir o vídeo, você pode solicitar uma lista de faixas de áudio disponíveis, permitir que o usuário escolha uma e definir o vídeo para reproduzir com a faixa selecionada.
+Quando for a hora de reproduzir o vídeo, você pode solicitar uma lista de faixas de áudio disponíveis, permitir que o usuário escolha uma e definir o vídeo para ser reproduzido com a faixa selecionada.
 
-Embora seja raro, se uma faixa de áudio adicional se tornar disponível depois de criar o `MediaPlayerItem`, o TVSDK acionará um evento `MediaPlayerItem.AUDIO_UPDATED`.
+Embora seja raro, se uma faixa de áudio adicional ficar disponível após criar a `MediaPlayerItem`, o TVSDK aciona um `MediaPlayerItem.AUDIO_UPDATED` evento.
 
-## Adição de APIs {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
+## APIs adicionadas {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
-As seguintes APIs foram adicionadas para suportar áudio alternativo:
+As seguintes APIs foram adicionadas para oferecer suporte a áudio alternativo:
 
 **hasAlternateAudio**
 
-Se a mídia especificada tiver uma faixa de áudio alternativa, diferente do rastreamento padrão, essa função booleana retornará `true`. Se não houver uma faixa de áudio alternativa, a função retornará `false`.
+Se a mídia especificada tiver uma faixa de áudio alternativa, diferente da faixa padrão, essa função booleana retornará `true`. Se não houver faixa de áudio alternativa, a função retornará `false`.
 
 ```
 bool MediaPlayerItemImpl::hasAlternateAudio() const { 
@@ -39,7 +38,7 @@ bool MediaPlayerItemImpl::hasAlternateAudio() const {
 
 **getAudioTracks**
 
-Essa função retorna a lista de todas as faixas de áudio disponíveis em uma mídia especificada.
+Esta função retorna a lista de todas as faixas de áudio disponíveis atualmente em uma mídia especificada.
 
 ```
 virtual PSDKErrorCode getAudioTracks(PSDKImmutableArray<AudioTrack>*& out) const { 
@@ -52,9 +51,9 @@ virtual PSDKErrorCode getAudioTracks(PSDKImmutableArray<AudioTrack>*& out) const
 } 
 ```
 
-**getSeletedAudioTrack**
+**getSelectedAudioTrack**
 
-Essa função retorna a faixa de áudio alternativa selecionada no momento e as propriedades, como idioma. A seleção automática da faixa também pode ser extraída.
+Esta função retorna a faixa de áudio alternativa atualmente selecionada e as propriedades, como idioma. A seleção automática de faixa também pode ser extraída.
 
 ```
 PSDKErrorCode MediaPlayerItemImpl::getSelectedAudioTrack(AudioTrack &out) const { 
@@ -65,7 +64,7 @@ PSDKErrorCode MediaPlayerItemImpl::getSelectedAudioTrack(AudioTrack &out) const 
 
 **selectAudioTrack**
 
-Essa função seleciona uma faixa de áudio alternativa para reproduzir.
+Esta função seleciona uma faixa de áudio alternativa para reproduzir.
 
 ```
 PSDKErrorCode MediaPlayerItemImpl::selectAudioTrack(const AudioTrack &audioTrack) { 

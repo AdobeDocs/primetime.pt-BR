@@ -1,14 +1,13 @@
 ---
 description: Essas classes fornecem acesso às informações do sistema ou da rede.
 title: Classes de sistema
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9044ae0c-b3b7-405b-88ce-8871d179d9f6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
 
 ---
-
 
 # Classes de sistema{#system-classes}
 
@@ -18,5 +17,4 @@ Pacote: [com.adobe.mediacore.system](https://help.adobe.com/en_US/primetime/api/
 
 | Nome | Descrição |
 |---|---|
-| [NetworkConfiguration](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/system/NetworkConfiguration.html) | Classe que fornece acesso à configuração da rede do sistema. |
-
+| [NetworkConfiguration](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/system/NetworkConfiguration.html) | Classe que fornece acesso à configuração de rede do sistema. |

@@ -1,60 +1,59 @@
 ---
-description: Você pode redefinir, reutilizar ou liberar uma instância do MediaPlayer que não é mais necessária.
-title: Reutilizar ou remover uma instância do MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode redefinir, reutilizar ou liberar uma ocorrência do MediaPlayer que não é mais necessária.
+title: Reutilizar ou remover uma ocorrência de MediaPlayer
+exl-id: 1ee25dd0-95e6-472d-b80c-ef9d8461302d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
 
 ---
 
+# Reutilizar ou remover uma ocorrência de MediaPlayer {#reuse-or-remove-a-mediaplayer-instance}
 
-# Reutilizar ou remover uma instância do MediaPlayer {#reuse-or-remove-a-mediaplayer-instance}
+Você pode redefinir, reutilizar ou liberar uma ocorrência do MediaPlayer que não é mais necessária.
 
-Você pode redefinir, reutilizar ou liberar uma instância do MediaPlayer que não é mais necessária.
+## Redefinir ou reutilizar uma ocorrência de MediaPlayer {#section_E6A2446A2D0B4ACD9EA980685B2E57D9}
 
-## Redefina ou reutilize uma instância do MediaPlayer {#section_E6A2446A2D0B4ACD9EA980685B2E57D9}
+Ao redefinir um `MediaPlayer` instância, ele retornará ao seu status OCIOSO não inicializado, conforme definido na `MediaPlayerStatus`
 
-Quando você redefine uma instância `MediaPlayer`, ela é retornada ao status IDLE não inicializado, conforme definido em `MediaPlayerStatus`
+* Você deseja reutilizar um `MediaPlayer` instância, mas precisa carregar um novo `MediaResource` (conteúdo de vídeo) e substitua a instância anterior.
 
-* Você deseja reutilizar uma instância `MediaPlayer`, mas precisa carregar um novo `MediaResource` (conteúdo de vídeo) e substituir a instância anterior.
+   A redefinição permite reutilizar o `MediaPlayer` instância sem a sobrecarga de liberação de recursos, recriando o `MediaPlayer`e realocação de recursos.
 
-   A redefinição permite reutilizar a instância `MediaPlayer` sem a sobrecarga de liberar recursos, recriar o `MediaPlayer` e realocar recursos.
-
-* Quando `MediaPlayer` estiver em status ERROR e precisar ser apagado.
+* Quando a variável `MediaPlayer` está no status ERRO e precisa ser apagado.
 
    >[!IMPORTANT]
    >
-   >Esta é a única maneira de recuperar do status ERROR.
+   >Essa é a única maneira de se recuperar do status ERRO.
 
-   1. Chame `reset` para retornar a instância `MediaPlayer` ao status não inicializado:
+   1. Chame `reset` para retornar a `MediaPlayer` ao seu status não inicializado:
 
       ```java
       void reset() throws MediaPlayerException; 
       ```
 
-   1. Use `MediaPlayer.replaceCurrentResource()` para carregar outro `MediaResource`.
+   1. Uso `MediaPlayer.replaceCurrentResource()` para carregar outro `MediaResource`.
 
       >[!NOTE]
       >
-      >Para limpar um erro, carregue o mesmo `MediaResource`.
+      >Para eliminar um erro, carregue o mesmo `MediaResource`.
 
-   1. Ao receber o retorno de chamada `STATUS_CHANGED` do evento com o status `PREPARED` , inicie a reprodução.
+   1. Ao receber a `STATUS_CHANGED` retorno de chamada de evento com `PREPARED` status, iniciar a reprodução.
 
-## Liberar uma instância do MediaPlayer e recursos {#section_13A0914AFF784943ABC343F7EB249C4E}
+## Liberar uma instância e recursos do MediaPlayer {#section_13A0914AFF784943ABC343F7EB249C4E}
 
-Você deve liberar uma instância `MediaPlayer` e recursos quando não precisar mais do `MediaResource`.
+Você deve liberar um `MediaPlayer` instância e recursos quando não precisar mais da `MediaResource`.
 
-Quando você lança um objeto `MediaPlayer`, os recursos de hardware subjacentes associados a esse objeto `MediaPlayer` são desalocados.
+Quando você libera um `MediaPlayer` objeto, os recursos de hardware subjacentes associados a este `MediaPlayer` objeto são desalocados.
 
-Estes são alguns motivos para lançar um `MediaPlayer`:
+Aqui estão alguns motivos para lançar um `MediaPlayer`:
 
-* A retenção de recursos desnecessários pode afetar o desempenho.
-* Deixar um objeto `MediaPlayer` desnecessário instanciado pode levar ao consumo contínuo de bateria para dispositivos móveis.
-* Se várias instâncias do mesmo codec de vídeo não forem suportadas em um dispositivo, a falha de reprodução poderá ocorrer em outros aplicativos.
+* Manter recursos desnecessários pode afetar o desempenho.
+* Deixar um desnecessário `MediaPlayer` objeto instanciado pode levar ao consumo contínuo de bateria para dispositivos móveis.
+* Se várias instâncias do mesmo codec de vídeo não forem suportadas em um dispositivo, pode ocorrer uma falha de reprodução para outros aplicativos.
 
-* Solte o `MediaPlayer`.
+* Lançar o `MediaPlayer`.
 
    ```java
    void release() throws MediaPlayerException;
@@ -62,4 +61,4 @@ Estes são alguns motivos para lançar um `MediaPlayer`:
 
    >[!NOTE]
    >
-   >Depois que a instância `MediaPlayer` for lançada, não será mais possível usá-la. Se qualquer método da interface `MediaPlayer` for chamado depois de ser lançado, um `MediaPlayerException` será lançado.
+   >Depois que a variável `MediaPlayer` for lançada, você não poderá mais usá-la. Se qualquer método do `MediaPlayer` for chamada depois de ser lançada, uma `MediaPlayerException` é lançado.

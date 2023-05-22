@@ -1,20 +1,19 @@
 ---
-title: Geração de licenças
-description: Geração de licenças
+title: Gerando licenças
+description: Gerando licenças
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c47627b5-19de-41e5-8cb6-4084af714e09
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
 
 ---
 
-
 # Gerando licenças{#generating-licenses}
 
-Se você quiser emitir uma licença de folha para um usuário, o SDK deve descriptografar o CEK contido nos metadados do conteúdo e criptografá-lo novamente para a máquina que solicita uma licença. Para descriptografar o CEK, o servidor deve fornecer as informações necessárias para descriptografar a chave. Chame `ContentInfo.setKeyRetrievalInfo()` e forneça um objeto `AsymmetricKeyRetrieval`. Se os metadados incluírem várias políticas, o servidor deverá determinar qual política usar e chamar `LicenseRequestMessage.setSelectedPolicy()`. Em seguida, chame `LicenseRequestMessage.generateLicense()` para gerar a licença. Usando o objeto `License` retornado, você pode modificar a expiração ou os direitos na licença.
+Se você quiser emitir uma licença folha para um usuário, o SDK deverá descriptografar o CEK contido nos metadados de conteúdo e criptografá-lo novamente para o computador que solicita uma licença. Para descriptografar o CEK, o servidor deve fornecer as informações necessárias para descriptografar a chave. Chame `ContentInfo.setKeyRetrievalInfo()` e fornecer uma `AsymmetricKeyRetrieval` objeto. Se os metadados incluírem várias políticas, o servidor deverá determinar qual política usar e chamar `LicenseRequestMessage.setSelectedPolicy()`. Em seguida, chame `LicenseRequestMessage.generateLicense()` para gerar a licença. Usar o `License` que é retornado, você pode modificar a expiração ou os direitos na licença.
 
-Se um objeto `ExternalKeyRetrieval` for especificado no objeto `ContentInfo`, espera-se que o servidor de licenças use o CEK ID associado para recuperar o CEK apropriado inserido na licença.
+Se um `ExternalKeyRetrieval` objeto é especificado na variável `ContentInfo` , o servidor de licenças deverá usar a ID do CEK associada para recuperar o CEK apropriado inserido na licença.
 
-Consulte a [Visão geral externa do CEK do Adobe Primetime DRM](../../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md) para obter mais detalhes sobre como usar o workflow CEK externo.
+Consulte a [Visão geral do CEK externo do Adobe Primetime DRM](../../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md) para obter mais detalhes sobre como usar o workflow externo do CEK.

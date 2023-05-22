@@ -1,24 +1,23 @@
 ---
-description: Você pode usar TimedMetadata quando a hora de reprodução atual corresponde à hora de início.
+description: Você pode usar TimedMetadata quando a hora atual da reprodução corresponder à hora inicial.
 title: Usar metadados cronometrados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e41718e0-2b6c-4353-a365-2d84ad4ac815
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
 # Usar metadados cronometrados {#use-timed-metadata}
 
-Você pode usar TimedMetadata quando a hora de reprodução atual corresponde à hora de início.
+Você pode usar TimedMetadata quando a hora atual da reprodução corresponder à hora inicial.
 
-Para usar esses objetos `PTTimedMetadata` salvos durante a reprodução, use o dicionário salvo de [Armazenar objetos de metadados cronometrados, pois são despachados](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md).
+Para usar essas `PTTimedMetadata` objetos durante a reprodução, use o dicionário salvo de [Armazenar objetos de metadados cronometrados conforme são despachados](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md).
 
-1. Extraia e atualize o tempo de reprodução atual a partir dessa notificação e localize todos os objetos `PTTimedMetadata` com horários de início que correspondam ao tempo de reprodução atual.
+1. Extrair e atualizar o tempo de reprodução atual desta notificação e localizar todos os `PTTimedMetadata` objetos com horas de início que correspondem à hora de reprodução atual.
 
-   É possível usar esses objetos para concluir várias ações.
+   Você pode usar esses objetos para concluir várias ações.
 
    Por exemplo:
 
@@ -57,4 +56,4 @@ Para usar esses objetos `PTTimedMetadata` salvos durante a reprodução, use o d
    }
    ```
 
-1. Limpe periodicamente instâncias obsoletas `PTTimedMetadata` da lista para evitar que a memória cresça continuamente.
+1. Liberar periodicamente arquivos obsoletos `PTTimedMetadata` instâncias da lista para evitar que a memória cresça continuamente.

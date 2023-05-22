@@ -1,21 +1,21 @@
 ---
-title: Iniciar Autorização
-description: Iniciar Autorização
+title: Iniciar autorização
+description: Iniciar autorização
 exl-id: 2f8a5499-e94f-40dd-9fb0-aac8e080de66
 source-git-commit: 5e775238f0e894f887be4c188903bdb04524c57a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
 
-# Iniciar Autorização {#initiate-authorization}
+# Iniciar autorização {#initiate-authorization}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
-## Endpoints REST API {#clientless-endpoints}
+## Endpoints da REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -35,7 +35,7 @@ Obtém a resposta de autorização. 
 
 | Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authorized | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante (Obrigatório)</br>2.  deviceId (Obrigatório)</br>3.  recurso (Obrigatório)</br>4.  device_info/X-Device-Info (Obrigatório)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Obsoleto)</br>7.  _appId_ (Obsoleto)</br>8.  parâmetros adicionais (Opcional) | GET | XML ou JSON contendo detalhes de autorização ou detalhes do erro, se não tiver êxito. Veja as amostras abaixo. | 200 - Sucesso  </br>403 - Sem sucesso |
+| &lt;sp_fqdn>/api/v1/authorize | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante (obrigatório)</br>2.  deviceId (Obrigatório)</br>3.  recurso (Obrigatório)</br>4.  device_info/X-Device-Info (Obrigatório)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Obsoleto)</br>7.  _appId_ (Obsoleto)</br>8.  parâmetros extras (opcional) | GET | XML ou JSON que contém detalhes de autorização ou detalhes de erro, se malsucedido. Consulte os exemplos abaixo. | 200 - Sucesso  </br>403 - Sem Sucesso |
 
 {style="table-layout:auto"}
 
@@ -44,29 +44,29 @@ Obtém a resposta de autorização. 
 
 | Parâmetro de entrada | Descrição |
 | --- | --- |
-| solicitante | O ID do solicitador do Programador para o qual esta operação é válida. |
-| deviceId | Os bytes da ID do dispositivo. |
-| recurso | Uma string que contém um resourceId (ou fragmento MRSS), identifica o conteúdo solicitado por um usuário e é reconhecido pelos pontos finais de autorização MVPD. |
-| device_info/</br></br>X-Device-Info | Informações do dispositivo de transmissão.</br></br>**Observação**: Isso PODE ser passado device_info como um parâmetro de URL, mas devido ao tamanho potencial desse parâmetro e limitações no comprimento de um URL de GET, ele deve ser passado como X-Device-Info no cabeçalho http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | O tipo de dispositivo (por exemplo, Roku, PC).</br></br>Se esse parâmetro for definido corretamente, o ESM oferece métricas que são [detalhado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) ao usar a opção sem cliente, para que diferentes tipos de análise possam ser executados para, por exemplo, Roku, AppleTV, Xbox etc.</br></br>Consulte [Benefícios do parâmetro de tipo de dispositivo sem cliente nas métricas de transmissão ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Observação**: o device_info substituirá esse parâmetro. |
+| solicitante | O requestorId do Programador para o qual esta operação é válida. |
+| deviceId | Os bytes de id do dispositivo. |
+| recurso | Uma cadeia de caracteres que contém um resourceId (ou fragmento MRSS), identifica o conteúdo solicitado por um usuário e é reconhecida por pontos de extremidade de autorização MVPD. |
+| device_info/</br></br>X-Device-Info | Informações do dispositivo de transmissão.</br></br>**Nota**: isso PODE ser passado para device_info como um parâmetro de URL, mas devido ao tamanho potencial desse parâmetro e às limitações no comprimento de um URL do GET, ele DEVE ser passado como X-Device-Info no cabeçalho http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| _deviceType_ | O tipo de dispositivo (por exemplo, Roku, PC).</br></br>Se esse parâmetro estiver definido corretamente, o ESM oferecerá métricas que são [detalhado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) ao usar sem cliente, para que diferentes tipos de análise possam ser executados para, por exemplo, Roku, Apple TV, Xbox etc.</br></br>Consulte [Benefícios do parâmetro do tipo de dispositivo sem cliente nas métricas de passagem ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: device_info substituirá esse parâmetro. |
 | _deviceUser_ | O identificador do usuário do dispositivo. |
-| _appId_ | A ID/nome do aplicativo. </br></br>**Observação**: o device_info substitui esse parâmetro. |
-| parâmetros adicionais | A chamada também pode conter parâmetros opcionais que permitem outras funcionalidades como:</br></br>* generic_data - permite o uso de [TempPass Promocionais](/help/authentication/promotional-temp-pass.md)</br></br>Exemplo: `generic_data=("email":"email@domain.com")` |
+| _appId_ | O id/nome do aplicativo. </br></br>**Nota**: device_info substitui esse parâmetro. |
+| parâmetros extras | A chamada também pode conter parâmetros opcionais que habilitam outras funcionalidades como:</br></br>* generic_data - permite o uso de [TempPass Promocional](/help/authentication/promotional-temp-pass.md)</br></br>Exemplo: `generic_data=("email":"email@domain.com")` |
 
 {style="table-layout:auto"}
 
 >[!CAUTION]
 >
 >**Endereço IP do dispositivo de transmissão**</br>
->Para implementações de cliente para servidor, o Endereço IP do dispositivo de transmissão é enviado implicitamente com esta chamada.  Para implementações de servidor para servidor, em que a variável **regcode** A chamada é feita pelo Serviço do programador e não pelo Dispositivo de transmissão, o seguinte cabeçalho é necessário para passar o Endereço IP do Dispositivo de transmissão:</br></br>
+>Para implementações de Cliente para servidor, o Endereço IP do dispositivo de transmissão é implicitamente enviado com esta chamada.  Para implementações de servidor para servidor, em que a variável **regcode** A chamada é feita pelo Serviço do Programador e não pelo Dispositivo de Streaming, o seguinte cabeçalho é necessário para passar o Endereço IP do Dispositivo de Streaming:</br></br>
 >
 >
 ```
 >X-Forwarded-For : <streaming\_device\_ip>
 >```
 >
->em que `<streaming\_device\_ip>` é o endereço IP público do Dispositivo de transmissão.</br></br>
->Exemplo :</br>
+>onde `<streaming\_device\_ip>` é o endereço IP público do Dispositivo de Streaming.</br></br>
+>Exemplo:</br>
 >
 >
 ```
@@ -75,7 +75,7 @@ Obtém a resposta de autorização. 
 >```
 
 
-### Resposta de exemplo {#sample-response}
+### Exemplo de resposta {#sample-response}
 
 * **Caso 1: Sucesso**
 
@@ -88,7 +88,7 @@ Obtém a resposta de autorização. 
     &lt;authorization>
     &lt;expires>1348148289000&lt;/expires>
     &lt;mvpd>sampleMvpdId&lt;/mvpd>
-    &lt;requestor>sampleRequestorId&lt;/requestor>
+    &lt;requestor>sampleRequestId&lt;/requestor>
     &lt;resource>sampleResourceId&lt;/resource>
     &lt;/authorization>
     &quot;
@@ -108,7 +108,7 @@ Obtém a resposta de autorização. 
 
 >[!IMPORTANT]
 >
->Quando a resposta vem de um MVPD do Proxy, ele pode incluir um elemento adicional chamado `proxyMvpd`. 
+>Quando a resposta vem de um MVPD de proxy, ela pode incluir um elemento adicional chamado `proxyMvpd`. 
 
  
 

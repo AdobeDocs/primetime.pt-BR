@@ -1,24 +1,23 @@
 ---
-description: A interface PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto do reprodutor de mídia.
+description: A interface do PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto do reprodutor de mídia.
 title: Configurar o PTMediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cf8f46c8-c52a-4f44-b493-965ce1b50c68
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
-
 # Configurar o PTMediaPlayer {#set-up-the-ptmediaplayer}
 
-O TVSDK fornece ferramentas para criar um aplicativo de reprodutor de vídeo avançado (seu reprodutor Primetime), que pode ser integrado a outros componentes do Primetime.
+O TVSDK fornece ferramentas para criar um aplicativo de reprodutor de vídeo avançado (seu reprodutor do Primetime), que pode ser integrado a outros componentes do Primetime.
 
-Use as ferramentas da plataforma para criar um reprodutor e conectá-lo à exibição do reprodutor de mídia no TVSDK, que tem métodos para reproduzir e gerenciar vídeos. Por exemplo, o TVSDK fornece métodos de reprodução e pausa. Você pode criar botões da interface do usuário na sua plataforma e definir os botões para chamar esses métodos TVSDK.
+Use as ferramentas da plataforma para criar um reprodutor e conectá-lo à visualização do reprodutor de mídia no TVSDK, que tem métodos para reproduzir e gerenciar vídeos. Por exemplo, o TVSDK fornece métodos de reprodução e pausa. Você pode criar botões de interface do usuário na plataforma e definir os botões para chamar esses métodos TVSDK.
 
-A interface PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto do reprodutor de mídia.
+A interface do PTMediaPlayer encapsula a funcionalidade e o comportamento de um objeto do reprodutor de mídia.
 
-Para configurar seu `PTMediaPlayer`:
+Para configurar o seu `PTMediaPlayer`:
 
 1. Busque o URL da mídia na interface do usuário, por exemplo, em um campo de texto.
 
@@ -26,36 +25,36 @@ Para configurar seu `PTMediaPlayer`:
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
    ```
 
-1. Crie `PTMetadata`.
+1. Criar `PTMetadata`.
 
-   Suponha que seu método `createMetada` prepare metadados (consulte [Advertising](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
+   Suponha que seu método `createMetada` prepara metadados (consulte [Publicidade](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
 
    ```
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. Crie `PTMediaPlayerItem` usando sua instância `PTMetadata`.
+1. Criar `PTMediaPlayerItem` usando o seu `PTMetadata` instância.
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
           initWithUrl:url mediaId:yourMediaID metadata:metadata] autorelease];
    ```
 
-1. Adicione observadores a notificações que o TVSDK envia.
+1. Adicione observadores a notificações que o TVSDK despacha.
 
    ```
    [self addObservers]
    ```
 
-1. Crie `PTMediaPlayer` usando seu novo `PTMediaPlayerItem`.
+1. Criar `PTMediaPlayer` usar seu novo `PTMediaPlayerItem`.
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
    ```
 
-1. Defina as propriedades no player.
+1. Definir propriedades no reprodutor.
 
-   Estas são algumas das propriedades `PTMediaPlayer` disponíveis:
+   Aqui estão algumas das disponíveis `PTMediaPlayer` propriedades:
 
    ```
    player.autoPlay                    = YES;  
@@ -64,7 +63,7 @@ Para configurar seu `PTMediaPlayer`:
    player.allowsAirPlayVideo          = YES;
    ```
 
-1. Defina a propriedade view do reprodutor.
+1. Defina a propriedade de visualização do reprodutor.
 
    ```
    CGRect playerRect = self.adPlayerView.frame;  
@@ -77,7 +76,7 @@ Para configurar seu `PTMediaPlayer`:
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. Adicione a exibição do reprodutor na subexibição atual.
+1. Adicionar a visualização do reprodutor na subvisualização da visualização atual.
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
@@ -89,4 +88,3 @@ Para configurar seu `PTMediaPlayer`:
    ```
    [player play];
    ```
-

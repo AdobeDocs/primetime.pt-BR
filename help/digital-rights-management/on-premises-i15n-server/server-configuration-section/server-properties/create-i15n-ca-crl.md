@@ -1,37 +1,36 @@
 ---
-title: Criar CRL da CA de individualização
-description: Criar CRL da CA de individualização
+title: Criar CRL de CA de Individualização
+description: Criar CRL de CA de Individualização
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 72147209-1337-4aed-9e4e-210c905c55a4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
 
+# Criar CRL de CA de Individualização{#create-individualization-ca-crl}
 
-# Criar CRL da CA de individualização{#create-individualization-ca-crl}
-
-Este ponto de distribuição da Lista de Revogação de Certificado (CRL) é incluído em cada certificado de máquina emitido pelo servidor de individualização. Durante a validação do certificado da máquina no servidor de licenças, essa CRL será baixada do ponto de distribuição listado no certificado (ou lida do cache, se já tiver sido baixada) e verificada se o certificado não foi revogado.
+Este ponto de distribuição da Lista de Certificados Revogados (CRL) está incluído em cada certificado de máquina emitido pelo servidor de individualização. Durante a validação do certificado de máquina no servidor de licenças, essa CRL será baixada do ponto de distribuição listado no certificado (ou lida do cache, se já tiver sido baixada) e verificada para ter certeza de que o certificado não foi revogado.
 
 >[!NOTE]
 >
->Para definir o URL do ponto de distribuição da CRL, é necessário definir o campo [!DNL AdobeInitial.properties] `cert.machine.crldp` . Este ponto de distribuição é *not* verificado pelo DRM Primetime para obter a validade. Você deve verificar se este URL é válido. Erros resultantes de um URL inválido não serão aparentes até que erros de validação apareçam do servidor de licenças.
+>Para definir o URL do ponto de distribuição da CRL, será necessário definir o [!DNL AdobeInitial.properties] `cert.machine.crldp` campo. Este ponto de distribuição é *não* verificado pelo Primetime DRM quanto à validade. Você deve verificar se esse URL é válido. Erros resultantes de um URL inválido não se tornarão aparentes até que erros de validação apareçam no servidor de licenças.
 
-Os itens descritos abaixo são simplificados, exemplos de instruções para usar o OpenSSL para criar CRLs que seu servidor de licenças pode consumir. O Adobe recomenda que você execute essas etapas com segurança e ambiente, depois que uma credencial da CA de individualização de produção for obtida.
+As instruções de exemplo para usar o OpenSSL para criar CRLs que seu servidor de licenças pode consumir são simplificadas e descritas abaixo. A Adobe recomenda executar essas etapas de maneira segura e em um ambiente, depois que uma credencial de CA de individualização de produção for obtida.
 
-1. Altere o diretório de trabalho para o diretório [!DNL create_crl] incluído nesta distribuição.
-1. Copie sua CA de individualização [!DNL pfx] para o mesmo diretório [!DNL create_crl].
+1. Altere o diretório de trabalho para o [!DNL create_crl] diretório incluído nesta distribuição.
+1. Copiar sua Autoridade de Certificação de Individualização [!DNL pfx] para o mesmo [!DNL create_crl] diretório.
 
-   As etapas subsequentes pressupõem que o cfx da AC de individualização seja nomeado [!DNL i15n.pfx]. Ajuste conforme apropriado para sua configuração.
-1. Extraia a chave privada do arquivo CA de individualização [!DNL pfx].
+   As etapas subsequentes pressupõem que o pfx da CA de individualização seja nomeado como [!DNL i15n.pfx]. Ajuste conforme apropriado para sua configuração.
+1. Extrair a autoridade de certificação de individualização [!DNL pfx] chave privada do arquivo.
 
    ```
    openssl pkcs12 -ini15n.pfx -nocerts -out i15n_priv.pem
    ```
 
-1. Converta a chave privada para o formato [!DNL pksc8].
+1. Converter a chave privada em [!DNL pksc8] formato.
 
    ```
    openssl pkcs8 -topk8 -in i15n_priv.pem -inform pem -out i15n_pk8.pem -outform pem -nocrypt
@@ -44,9 +43,9 @@ Os itens descritos abaixo são simplificados, exemplos de instruções para usar
      -out onprem-individualization -ca.crl
    ```
 
-   Esse exemplo cria uma CRL com um período de validade padrão de 1 mês. Use as opções `-crldays` e `-crlhours` para substituir os valores padrão.
+   Este exemplo cria uma CRL com um período de validade padrão de 1 mês. Use o `-crldays` e `-crlhours` opções para substituir os valores padrão.
 
-   Gerar uma CRL usa o arquivo [!DNL index] e [!DNL crlnumber] apontados em seu [!DNL openssl.conf]. Por padrão, o local [!DNL demoCA] no diretório de trabalho é usado. Arquivos [!DNL index] e [!DNL crlnumber] de amostra estão incluídos no diretório [!DNL demoCA] fornecido.
+   A geração de uma CRL usa a variável [!DNL index] e [!DNL crlnumber] arquivo apontado em seu [!DNL openssl.conf]. Por padrão, a variável [!DNL demoCA] a localização no diretório de trabalho é usada. Amostra [!DNL index] e [!DNL crlnumber] os arquivos estão incluídos na variável [!DNL demoCA] diretório.
 
-1. Implante o arquivo CRL gerado na etapa anterior em um local adequado que possa ser acessado pelo servidor de licença (por exemplo: servidor de individualização [!DNL ROOT]).
-1. Reinicie o servidor de licença, assim que a CRL estiver em vigor.
+1. Implante o arquivo CRL gerado na etapa anterior em um local adequado que possa ser acessado pelo servidor de licenças (por exemplo: servidor de individualização [!DNL ROOT]).
+1. Reinicie o servidor de licenças quando a CRL estiver em vigor.

@@ -1,18 +1,17 @@
 ---
-description: Quando o TVSDK detecta uma tag subscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar a tag e expô-la na forma de um objeto PTTimedMetadata .
+description: Quando o TVSDK detecta uma tag inscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar a tag e expô-la no formato de um objeto PTTimedMetadata.
 title: Classe de metadados cronometrados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b619b019-cb6d-4c31-a7e2-7ebe2f44a4b0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
 
 ---
 
+# Classe de metadados cronometrados{#timed-metadata-class}
 
-# Classe de metadados cronometrada{#timed-metadata-class}
-
-Quando o TVSDK detecta uma tag subscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar a tag e expô-la na forma de um objeto PTTimedMetadata .
+Quando o TVSDK detecta uma tag inscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar a tag e expô-la no formato de um objeto PTTimedMetadata.
 
 A classe fornece os seguintes elementos:
 
@@ -28,25 +27,25 @@ A classe fornece os seguintes elementos:
   <tr> 
    <td colname="col1"> <span class="codeph"> metadataId</span> </td> 
    <td colname="col02"><span class="codeph"> NSString</span> </td> 
-   <td colname="col2"> Identificador exclusivo dos metadados cronometrados. Normalmente, esse valor é extraído do atributo ID da sinalização/tag. Caso contrário, um valor aleatório exclusivo será fornecido. </td> 
+   <td colname="col2"> Identificador exclusivo dos metadados cronometrados. Normalmente, esse valor é extraído do atributo de ID de indicação/tag. Caso contrário, um valor aleatório exclusivo será fornecido. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> name</span> </td> 
    <td colname="col02"><span class="codeph"> NSString</span></td> 
-   <td colname="col2"> O nome dos metadados cronometrados. Se o tipo for <span class="codeph"> TAG</span>, o valor representará o nome da sinalização/tag. Se o tipo for <span class="codeph"> ID3</span>, será nulo. </td> 
+   <td colname="col2"> O nome dos metadados temporizados. Se o tipo for <span class="codeph"> TAG</span>, o valor representa o nome da sinalização/tag. Se o tipo for <span class="codeph"> ID3</span>, é nulo. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> time</span> </td> 
+   <td colname="col1"><span class="codeph"> hora</span> </td> 
    <td colname="col02"><span class="codeph"> CMTime</span></td> 
-   <td colname="col2"> A posição de tempo, em milissegundos, em relação ao início do conteúdo principal em que esses metadados cronometrados estão presentes no fluxo. </td> 
+   <td colname="col2"> A posição de tempo, em milissegundos, relativa ao início do conteúdo principal em que esses metadados cronometrados estão presentes no fluxo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> type</span> </td> 
-   <td colname="col02"> <span class="codeph"> PTTimedMetadataType</span></td> 
+   <td colname="col02"> <span class="codeph"> TipodeMetadadosTempoPTT</span></td> 
    <td colname="col2">O tipo de metadados cronometrados. 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG - indica que os metadados cronometrados foram criados a partir de uma tag na lista de reprodução/manifesto. </li> 
-     <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 - indica que os metadados cronometrados foram criados a partir de uma tag ID3 no fluxo de mídia. </li> 
+     <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 - indica que os metadados cronometrados foram criados de uma tag ID3 no fluxo de mídia. </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -60,7 +59,7 @@ Lembre-se do seguinte:
 
    >[!TIP]
    >
-   >Dados complexos em tags personalizadas no manifesto, como strings com caracteres especiais, devem estar entre aspas. Por exemplo:
+   >Dados complexos em tags personalizadas no manifesto, como cadeias de caracteres com caracteres especiais, devem estar entre aspas. Por exemplo:
    >
    >
    ```
@@ -68,13 +67,12 @@ Lembre-se do seguinte:
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
    >```
 
-* Se a extração falhar devido a um formato de tag personalizado, a propriedade content sempre conterá os dados brutos da tag, que é a string após os dois pontos. Nenhum erro é lançado nesse caso.
+* Se a extração falhar devido a um formato de tag personalizado, a propriedade de conteúdo sempre conterá os dados brutos da tag, que são a sequência de caracteres após os dois pontos. Nenhum erro é lançado nesse caso.
 
 | Elemento | Descrição |
 |---|---|
-| TAG, ID3 | Tipos possíveis para os metadados cronometrados. |
-| `@property (nonatomic, assign) CMTime time` | A posição de tempo, em relação ao início do conteúdo principal, em que esses metadados foram inseridos no fluxo. |
+| TAG, ID3 | Possíveis tipos para os metadados cronometrados. |
+| `@property (nonatomic, assign) CMTime time` | A posição de tempo, relativa ao início do conteúdo principal, em que esses metadados foram inseridos no fluxo. |
 | `@property (nonatomic, assign) PTTimedMetadataType type` | Retorna o tipo de metadados cronometrados. |
-| `@property (nonatomic, retain) NSString *metadataId` | Retorna a ID extraída dos atributos de sinalização/tag. Caso contrário, um valor aleatório exclusivo será fornecido. |
-| `@property (nonatomic, retain) NSString *name` | Retorna o nome da dica, que geralmente é o nome da tag HLS. |
-
+| `@property (nonatomic, retain) NSString *metadataId` | Retorna a ID extraída dos atributos cue/tag. Caso contrário, um valor aleatório exclusivo será fornecido. |
+| `@property (nonatomic, retain) NSString *name` | Retorna o nome da indicação, que geralmente é o nome da tag HLS. |

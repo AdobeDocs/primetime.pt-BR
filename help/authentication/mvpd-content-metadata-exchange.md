@@ -1,49 +1,49 @@
 ---
 title: Troca de metadados de conteúdo MVPD
 description: Troca de metadados de conteúdo MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: d17e60dc-6c61-4ca2-bad8-1840c95261e0
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
 
 ---
 
-
 # Troca de metadados de conteúdo MVPD
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 ## Visão geral {#content-metadat-exchange-overview}
 
-Esta página descreve duas implementações padrão que a autenticação da Adobe Primetime usa para enviar dados estruturados para MVPDs na solicitação de Autorização.  Os dados estruturados representam o recurso (o Programador) que faz a solicitação e, possivelmente, dados adicionais, como a classificação de conteúdo.
+Esta página descreve duas implementações padrão que a autenticação do Adobe Primetime usa para enviar dados estruturados para MVPDs na solicitação de autorização.  Os dados estruturados representam o recurso (o Programador) que faz a solicitação e, possivelmente, dados adicionais, como classificação de conteúdo.
 
-No lado do Programador, a autenticação do Adobe Primetime suporta recursos de dados MRSS estruturados da seguinte maneira:
+No lado do Programador, a autenticação do Adobe Primetime oferece suporte a recursos de dados MRSS estruturados da seguinte maneira:
 
-1. O Programador envia o Recurso como uma string MRSS. A autenticação da Adobe Primetime não a codifica no lado do cliente para dispositivos da Web ou nativos. O MRSS é enviado como uma string regular para o servidor de autenticação da Adobe Primetime.
-1. No lado do servidor, o MRSS é validado em relação ao esquema predefinido (http://search.yahoo.com/mrss/).  Se a validação for aprovada, a autenticação do Adobe Primetime extrairá as informações dos campos MRSS, incluindo:
+1. O programador envia o recurso como uma sequência de caracteres MRSS. A autenticação do Adobe Primetime não a codifica no lado do cliente para dispositivos da Web ou nativos. O MRSS é enviado como uma sequência regular para o servidor de autenticação do Adobe Primetime.
+1. No lado do servidor, o MRSS é validado em relação ao esquema predefinido (http://search.yahoo.com/mrss/).  Se a validação for aprovada, a autenticação da Adobe Primetime extrairá as informações dos campos MRSS, incluindo:
    * título do canal
    * título do item
    * identificador de recurso
    * valor e tipo de classificação
-1. Os valores extraídos do MRSS são utilizados para criar o pedido de autorização passado para o MVPD.
+1. Os valores extraídos do MRSS são utilizados para criar a solicitação de autorização transmitida para o MVPD.
 
-A autenticação Adobe Primetime suporta duas abordagens para converter o MRSS em formatos suportados por MVPDs:
+A autenticação do Adobe Primetime é compatível com duas abordagens para traduzir o MRSS em formatos compatíveis com MVPDs:
 
-* **XACML**.  A primeira abordagem se alinha ao padrão OLCA.  Ele usa o XACML, no qual os valores de MRSS são extraídos para criar um XACMLResource com atributos que mapeiam para os elementos de MRSS.  Isso é então passado para o MVPD.
+* **XACML**.  A primeira abordagem se alinha à norma OLCA.  Ele usa XACML, no qual os valores de MRSS são extraídos para criar um XACMLResource com atributos que mapeiam para os elementos de MRSS.  Isso é passado para o MVPD.
 * **REST**.  A segunda abordagem é baseada em REST.  O MRSS é codificado em base64 e passado como um parâmetro de URL na chamada REST.
 
-Em ambas as abordagens, o MVPD processa o pedido de autorização incluindo os valores extraídos dentro do seu próprio fluxo lógico e devolvendo uma resposta de autorização.
+Em ambas as abordagens, o MVPD processa a solicitação de autorização incluindo os valores extraídos dentro de seu próprio fluxo lógico e retornando uma resposta de autorização.
 
 ## Detalhes da integração {#integration-details}
 
-* Recurso Estruturado XACML baseado em OLCA
-* Recurso Estruturado baseado em REST
+* Recurso Estruturado XACML com base em OLCA
+* Recursos estruturados baseados em REST
 
-### Recurso Estruturado XACML baseado em OLCA {#olca-based-xacml-struc-resource}
+### Recurso Estruturado XACML com base em OLCA {#olca-based-xacml-struc-resource}
 
-A maioria dos MVPDs orientados a cabo usam a abordagem baseada em XACML, mas ainda não oferecem suporte à abordagem de dados totalmente estruturados.  Outros MVPDs que suportam XACML tomam o Título do Canal e aceitam isso para o atributo ResourceID. O exemplo abaixo mostra a abordagem totalmente estruturada baseada em XACML. A equipe de autenticação da Adobe Primetime recomenda que, para MVPDs que usam XACML, mas ainda não oferecem suporte a recursos como controles dos pais, eles adaptem sua integração XACML ao seguinte exemplo:
+A maioria dos MVPDs orientados a cabo usa a abordagem baseada em XACML, mas ainda não oferece suporte à abordagem de dados estruturados completa.  Outros MVPDs que oferecem suporte a XACML pegam o Título do canal e aceitam isso para o atributo ResourceID. O exemplo abaixo mostra a abordagem baseada em XACML totalmente estruturada. A equipe de autenticação da Adobe Primetime recomenda que, para MVPDs que usam XACML, mas ainda não oferecem suporte a recursos como controles dos pais, eles adaptem sua integração XACML ao seguinte exemplo:
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -104,9 +104,9 @@ A maioria dos MVPDs orientados a cabo usam a abordagem baseada em XACML, mas ain
 //formatted for readability
 ```
 
-### Recurso Estruturado baseado em REST {#rest-based-struct-resource}
+### Recursos estruturados baseados em REST {#rest-based-struct-resource}
 
-Alguns MVPDs padronizaram o seguinte protocolo baseado em REST para autorização. Essa abordagem é tão completa quanto a abordagem XACML, mas fornece uma implementação de &quot;peso mais leve&quot;.
+Alguns MVPDs padronizaram o seguinte protocolo baseado em REST para autorização. Essa abordagem é tão repleta de recursos quanto a abordagem XACML, mas fornece uma implementação mais leve.
 
 `// The MRSS is base64 encoded by Adobe Primetime authentication, and passed in that format to the REST-based Authorization endpoint.`
 

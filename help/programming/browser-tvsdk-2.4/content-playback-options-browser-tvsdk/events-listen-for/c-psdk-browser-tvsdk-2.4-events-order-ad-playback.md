@@ -1,14 +1,13 @@
 ---
 description: Quando a reprodução inclui publicidade, o TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
-title: Ordem dos eventos publicitários
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Ordem dos eventos de publicidade
+exl-id: fcc40aa8-9364-40a8-b2f2-9327e24819af
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
-
 
 # Ordem dos eventos de publicidade{#order-of-advertising-events}
 
@@ -27,7 +26,7 @@ Ao reproduzir anúncios, a ordem dos eventos é:
 
 * `AdobePSDK.PSDKEventType.AD_BREAK_COMPLETED`
 
-O exemplo a seguir mostra uma progressão típica dos eventos de reprodução de anúncio:
+O exemplo a seguir mostra uma progressão típica de eventos de reprodução de anúncio:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.AD_BREAK_STARTED, onAdbreakStarted); 
@@ -36,4 +35,3 @@ player.addEventListener(AdobePSDK.PSDKEventType.AD_PROGRESS, onAdProgress);
 player.addEventListener(AdobePSDK.PSDKEventType.AD_COMPLETED, onAdCompleted); 
 player.addEventListener(AdobePSDK.PSDKEventType.AD_BREAK_COMPLETED, onAdbreakCompleted);
 ```
-

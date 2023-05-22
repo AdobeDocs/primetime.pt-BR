@@ -1,22 +1,21 @@
 ---
-description: As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK do navegador detecta tags ID3 no nível de segmento do fluxo de transporte (TS) em fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag .
+description: As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK do navegador detecta tags ID3 no nível de segmento de fluxo de transporte (TS) em fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag.
 title: Tags ID3
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 33510821-9de4-41fc-b404-bcf0b6ba86ff
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
-
 # Tags ID3{#id-tags}
 
-As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK do navegador detecta tags ID3 no nível de segmento do fluxo de transporte (TS) em fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag .
+As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK do navegador detecta tags ID3 no nível de segmento de fluxo de transporte (TS) em fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag.
 
-Quando um novo metadados ID3 é encontrado no fluxo HLS subjacente, o TVSDK do navegador aciona um evento `AdobePSDK.TimedMetadataEvent` .
+Quando um novo metadado de ID3 é encontrado no fluxo HLS subjacente, o TVSDK do navegador aciona um `AdobePSDK.TimedMetadataEvent` evento.
 
-O objeto `TimedMetadata` para ID3 tem as seguintes propriedades:
+A variável `TimedMetadata` O objeto para ID3 tem as seguintes propriedades:
 
 <table id="table_6C61886187FB44B4B9821E4B00200018"> 
  <thead> 
@@ -27,37 +26,37 @@ O objeto `TimedMetadata` para ID3 tem as seguintes propriedades:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> type  </span> </p> </td> 
-   <td colname="col2"> <p>Um tipo de objeto <span class="codeph"> TimedMetadata </span>. </p> <p>Para metadados ID3, o valor é <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> type </span> </p> </td> 
+   <td colname="col2"> <p>Um tipo de <span class="codeph"> TimedMetadata </span> objeto. </p> <p>Para metadados de ID3, o valor é <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> time  </span> </p> </td> 
-   <td colname="col2"> <p> A hora do reprodutor em que os metadados cronometrados foram detectados. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> hora </span> </p> </td> 
+   <td colname="col2"> <p> O horário do player em que esses metadados cronometrados foram detectados. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> id  </span> </p> </td> 
-   <td colname="col2"> <p>ID do objeto <span class="codeph"> TimedMetadata </span>. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> id </span> </p> </td> 
+   <td colname="col2"> <p>ID do <span class="codeph"> TimedMetadata </span> objeto. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> name </span> </p> </td> 
-   <td colname="col2"> <p>Nome do objeto <span class="codeph"> TimedMetadata </span>. Para metadados ID3, o valor é "ID3". </p> </td> 
+   <td colname="col2"> <p>Nome de <span class="codeph"> TimedMetadata </span> objeto. Para metadados de ID3, o valor é "ID3". </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> conteúdo  </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> conteúdo </span> </p> </td> 
    <td colname="col2"> <p>O conteúdo dos metadados cronometrados. Para tags ID3, esse valor representa a matriz de bytes serializada. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> metadados  </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> TimedMetadata  </span> processou informações, que é uma instância do  <span class="codeph"> AdobePSDK.Metadata  </span> onde os quadros ID3 são armazenados. </p> <p> <p>Observação:  Para a tag <span class="codeph"> de vídeo </span> do Safari, os dados de quadro específicos da tag ID3 são expostos na forma de objeto por meio de um objeto <span class="codeph"> AdobePSDK.Metadata </span> enquanto para outros navegadores, os dados de quadro da tag ID3 são expostos na forma de uma matriz de bytes por meio de <span class="codeph"> objeto AdobePSDK.Metadata </span>. </p> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> metadados </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> TimedMetadata </span> informações processadas, que é um exemplo de <span class="codeph"> AdobePSDK.Metadata </span> onde os quadros ID3 são armazenados. </p> <p> <p>Observação: para o Safari <span class="codeph"> vídeo </span> tag, os dados de quadro específicos da tag ID3 são expostos no formato de objeto por meio de uma <span class="codeph"> AdobePSDK.Metadata </span> enquanto para outros navegadores, os dados de quadro da tag ID3 são expostos na forma de uma matriz de bytes por meio de <span class="codeph"> AdobePSDK.Metadata </span> objeto. </p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 &#x200B;
 
-As várias tags ID3 armazenadas em `TimedMetadata` podem ser recuperadas pelo aplicativo das seguintes duas maneiras:
+As várias tags de ID3 armazenadas no `TimedMetadata` O pode ser recuperado pelo aplicativo das duas seguintes maneiras:
 
-* No ouvinte de evento AdobePSDK.PSDKEEventType.TIMED_METADATA_AVAILABLE.
+* No ouvinte de eventos AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE.
 
    ```
    var isSafari = function () { 
@@ -114,7 +113,7 @@ As várias tags ID3 armazenadas em `TimedMetadata` podem ser recuperadas pelo ap
    }); 
    ```
 
-* Uso da propriedade `MediaPlayerItem` de `timedMetadata`.
+* Usar o `MediaPlayerItem`do `timedMetadata` propriedade.
 
    ```
    var isSafari = function () { 
@@ -170,4 +169,3 @@ As várias tags ID3 armazenadas em `TimedMetadata` podem ser recuperadas pelo ap
        } 
    } 
    ```
-

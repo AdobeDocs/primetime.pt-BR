@@ -1,41 +1,40 @@
 ---
-description: Quando um usuário clica em um anúncio ou em um botão relacionado, o aplicativo deve responder. O TVSDK fornece informações sobre o URL de destino do clique.
-title: Responder cliques em anúncios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Quando um usuário clica em um anúncio ou em um botão relacionado, seu aplicativo deve responder. O TVSDK fornece informações sobre o URL de destino do clique.
+title: Responder a cliques nos anúncios
+exl-id: dc1f1ad7-2f11-4a6c-8459-e02cf8a2e0aa
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
 
 ---
 
+# Responder a cliques nos anúncios{#respond-to-clicks-on-ads}
 
-# Responder cliques em anúncios{#respond-to-clicks-on-ads}
+Quando um usuário clica em um anúncio ou em um botão relacionado, seu aplicativo deve responder. O TVSDK fornece informações sobre o URL de destino do clique.
 
-Quando um usuário clica em um anúncio ou em um botão relacionado, o aplicativo deve responder. O TVSDK fornece informações sobre o URL de destino do clique.
+1. Para configurar um ouvinte de eventos para o TVSDK e fornecer as informações de click-through, registre um `AdClickedEventListener.onAdClicked`.
 
-1. Para configurar um ouvinte de evento para TVSDK e fornecer as informações de click-through, registre um `AdClickedEventListener.onAdClicked`.
-
-   Quando um usuário clica em um anúncio ou em um botão relacionado, o TVSDK envia essa notificação, incluindo informações sobre o destino do clique.
+   Quando um usuário clica em um anúncio ou em um botão relacionado, o TVSDK despacha essa notificação, incluindo informações sobre o destino do clique.
 1. Monitore as interações do usuário em anúncios clicáveis.
-1. Quando o usuário toca ou clica no anúncio ou botão, para notificar o TVSDK, chame `notifyClick` no `MediaPlayerView`.
-1. Analise o evento `onAdClick(AdClickEvent event)` do TVSDK.
-1. Para recuperar o URL de click-through e informações relacionadas, use os métodos getter para a instância `AdClickEvent`.
-1. Pause o vídeo.
+1. Quando o usuário tocar ou clicar no anúncio ou botão, para notificar o TVSDK, chame `notifyClick` no `MediaPlayerView`.
+1. Ouça o `onAdClick(AdClickEvent event)` evento do TVSDK.
+1. Para recuperar o URL de click-through e informações relacionadas, use os métodos Getter para a variável `AdClickEvent` instância.
+1. Pausar o vídeo.
 
    Para obter mais informações sobre como pausar o vídeo, consulte [Pausar e retomar a reprodução.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
 1. Use as informações de click-through para exibir o URL de click-through do anúncio e as informações relacionadas.
 
        Você pode, por exemplo, exibir as informações de uma das seguintes maneiras:
    
-   * No seu aplicativo, abrindo o URL de click-through em um navegador.
+   * No aplicativo, abrindo o URL de click-through em um navegador.
 
-      Em plataformas de desktop, a área de reprodução do anúncio de vídeo é usada para invocar URLs de click-through nos cliques do usuário.
-   * Redirecionar usuários para o navegador da Web móvel externo.
+      Em plataformas de desktop, a área de reprodução de anúncio de vídeo é usada para chamar URLs de click-through nos cliques do usuário.
+   * Redirecione os usuários para seus navegadores web externos para dispositivos móveis.
 
-      Em dispositivos móveis, a área de reprodução do anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela cheia e assim por diante. Nesses dispositivos, uma exibição separada, como um botão patrocinador, é usada para iniciar o URL de click-through.
+      Em dispositivos móveis, a área de reprodução de anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela inteira e assim por diante. Nesses dispositivos, uma exibição separada, como um botão patrocinador, é usada para iniciar o URL de click-through.
 
-1. Feche a janela do navegador em que as informações de click-through são exibidas e retome a reprodução do vídeo.
+1. Feche a janela do navegador na qual as informações de click-through são exibidas e continue a reproduzir o vídeo.
 
 <!--<a id="example_2D93228E510D438C8AB5559897817A47"></a>-->
 
@@ -93,4 +92,3 @@ private AdClickedEventListener adClickedEventListener = new AdClickedEventListen
     } 
 }; 
 ```
-

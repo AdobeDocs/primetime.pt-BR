@@ -2,23 +2,21 @@
 title: Implantar os arquivos WAR
 description: Implantar os arquivos WAR
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9f491596-2a02-4a55-9baa-86407e389d20
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
-
 # Implantar os arquivos WAR{#deploy-the-war-files}
 
-1. Copie o arquivo WAR para o diretório [!DNL webapps] do Tomcat.
+1. Copie o arquivo WAR para o do Tomcat [!DNL webapps] diretório.
 
    * Servidor de individualização: [!DNL flashaccess.war]
-   * Servidor de geração de chave: [!DNL flashaccess-kgs.war]
+   * Servidor de Geração de Chave: [!DNL flashaccess-kgs.war]
 
-1. Copie a pasta [!DNL ROOT] do pacote fornecido pelo Adobe para o diretório [!DNL webapps].
+1. Copie o [!DNL ROOT] pasta do pacote fornecido pelo Adobe para o [!DNL webapps] diretório.
 
-   O servidor de individualização também precisa hospedar o arquivo [!DNL crossdomain.xml] . (A pasta [!DNL ROOT] contém o arquivo [!DNL crossdomain.xml]; [!DNL ROOT] deve estar em todas as maiúsculas.) O servidor de Geração de Chave não requer este arquivo.
-
+   O servidor de individualização também precisa hospedar o [!DNL crossdomain.xml] arquivo. (O [!DNL ROOT] a pasta contém o [!DNL crossdomain.xml] arquivo; [!DNL ROOT] deve estar em maiúsculas.) O servidor de Geração de Chaves não requer esse arquivo.

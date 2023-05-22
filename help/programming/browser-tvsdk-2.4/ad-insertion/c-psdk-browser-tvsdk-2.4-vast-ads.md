@@ -1,30 +1,29 @@
 ---
-description: Quando o TVSDK do navegador solicita um anúncio que não esteja no servidor de anúncios principal, o reprodutor precisa solicitar o anúncio do servidor secundário. O VAST (Video Ad Serving Template) define o padrão de comunicação entre servidores de anúncios e reprodutores de vídeo e é a resposta enviada pelo servidor de anúncio secundário quando o anúncio é solicitado.
+description: Quando o TVSDK do navegador solicita um anúncio que não está no servidor de anúncios principal, o reprodutor precisa solicitar o anúncio do servidor secundário. O Modelo de veiculação de anúncios de vídeo (VAST) define o padrão de comunicação entre servidores de publicidade e players de vídeo e é a resposta enviada pelo servidor de publicidade secundário quando o anúncio é solicitado.
 title: Anúncios VAST
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b0ebade5-b5da-413d-84f4-abebac579f45
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
-
 # Anúncios VAST {#vast-ads}
 
-Quando o TVSDK do navegador solicita um anúncio que não esteja no servidor de anúncios principal, o reprodutor precisa solicitar o anúncio do servidor secundário. O VAST (Video Ad Serving Template) define o padrão de comunicação entre servidores de anúncios e reprodutores de vídeo e é a resposta enviada pelo servidor de anúncio secundário quando o anúncio é solicitado.
+Quando o TVSDK do navegador solicita um anúncio que não está no servidor de anúncios principal, o reprodutor precisa solicitar o anúncio do servidor secundário. O Modelo de veiculação de anúncios de vídeo (VAST) define o padrão de comunicação entre servidores de publicidade e players de vídeo e é a resposta enviada pelo servidor de publicidade secundário quando o anúncio é solicitado.
 
-Para obter mais informações sobre VAST, consulte [Modelo de veiculação de anúncio de vídeo digital (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
+Para obter mais informações sobre o VAST, consulte [Modelo de veiculação de anúncio de vídeo digital (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
 O TVSDK do navegador é compatível com os seguintes elementos de anúncio VAST:
 
-## Anúncios em linha e do invólucro {#section_11B8A1A8F52F4F77981C6AAC02185087}
+## Anúncios em linha e em invólucro {#section_11B8A1A8F52F4F77981C6AAC02185087}
 
 Os seguintes elementos são compatíveis:
 
-* **`wrapper`** Quando o reprodutor precisa entrar em contato com um servidor de publicidade secundário para solicitar um anúncio, o elemento wrapper fornece as informações de redirecionamento. Um elemento wrapper pode apontar para vários wrappers que apontam para um anúncio VAST.
+* **`wrapper`** Quando o reprodutor precisa entrar em contato com um servidor de anúncios secundário para solicitar um anúncio, o elemento invólucro fornece as informações de redirecionamento. Um elemento de invólucro pode apontar para vários invólucros que apontam para um anúncio VAST.
 
-* **`inline`** Os seguintes elementos obrigatórios são suportados:
+* **`inline`** Os seguintes elementos obrigatórios são compatíveis:
 
 * `AdSystem`
 * `AdTitle`
@@ -36,15 +35,15 @@ Os seguintes elementos são compatíveis:
 * `Survey`
 * `Error`
 
-## Criações {#section_0121F948CB074E49A8132D202786CAA4}
+## Criativos {#section_0121F948CB074E49A8132D202786CAA4}
 
-Esse elemento é um arquivo que faz parte de um anúncio VAST e contém um elemento `creative` que pode suportar um anúncio linear, um anúncio não linear ou um anúncio complementar. No elemento `creative`, os elementos `id`, `sequence` e `adId` são compatíveis.
+Este elemento é um arquivo que faz parte de um anúncio VAST e contém um `creative` elemento que pode suportar um anúncio linear, um anúncio não linear ou um anúncio complementar. No `creative` elemento, a variável `id`, `sequence`, e `adId` Os elementos do são compatíveis.
 
-Estas são mais informações sobre os tipos de anúncios:
+Veja a seguir mais informações sobre os tipos de anúncios:
 
-* **** Anúncios linearesOs seguintes elementos são compatíveis:
+* **Anúncios lineares** Os seguintes elementos são compatíveis:
 
-   * `TrackingEvent`, que contém o  `Tracking` elemento .
+   * `TrackingEvent`, que contém a `Tracking` elemento.
       * `Duration`
       * `AdParameters`
       * `VideoClicks`, incluindo o seguinte:
@@ -59,15 +58,15 @@ Estas são mais informações sobre os tipos de anúncios:
 
          >[!TIP]
          >
-         >Neste elemento, os atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework` e `type` são suportados.
+         >Neste elemento, a variável `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`, e `type` atributos são compatíveis.
 
-* **** Anúncios não linearesOs seguintes elementos são compatíveis:
+* **Anúncios não lineares** Os seguintes elementos são compatíveis:
 
    * `Non-linear`
 
       >[!TIP]
       >
-      >Neste elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio` e `minSuggestedDuration` são suportados.
+      >Neste elemento, a variável `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`, e `minSuggestedDuration` atributos são compatíveis.
 
       * `StaticResource`
       * `IFrameResource`
@@ -75,13 +74,13 @@ Estas são mais informações sobre os tipos de anúncios:
       * `NonLinearClickThrough`
       * `AdParameters`
 
-* **** Anúncios complementaresOs seguintes elementos são compatíveis:
+* **Anúncios de companhia** Os seguintes elementos são compatíveis:
 
    * `Companion`
 
       >[!TIP]
       >
-      >Neste elemento, os atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth` e `expandedHeight` são suportados.
+      >Neste elemento, a variável `id`, `width`, `height`, `apiFramework`, `expandedWidth`, e `expandedHeight` atributos são compatíveis.
 
       * `StaticResource`
       * `IFrameResource`
@@ -92,6 +91,6 @@ Estas são mais informações sobre os tipos de anúncios:
 
 >[!TIP]
 >
->Somente as extensões específicas do Auditude são suportadas.
+>Somente as extensões específicas do Auditude são compatíveis.
 
 * `Extension`

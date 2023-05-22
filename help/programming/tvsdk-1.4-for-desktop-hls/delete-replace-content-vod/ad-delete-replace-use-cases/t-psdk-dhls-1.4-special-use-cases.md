@@ -2,18 +2,17 @@
 title: Casos de uso especiais
 description: Casos de uso especiais
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 33aad8cc-5939-4890-bc89-32d6bbf1fa4c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
-
 # Casos de uso especiais{#special-use-cases}
 
-O TVSDK favorece configurações de intervalo personalizadas em configurações de anúncios padrão. Por exemplo, se os intervalos MARK forem definidos, as configurações de inserção do anúncio serão ignoradas. Se os intervalos REPLACE forem definidos, o TVSDK usará automaticamente o modo de sinalização `CustomRanges`.
+O TVSDK favorece configurações de intervalo personalizadas em relação às configurações de anúncio padrão. Por exemplo, se os intervalos MARK estiverem definidos, as configurações de inserção do anúncio serão ignoradas. Se os intervalos REPLACE estiverem definidos, o TVSDK usará automaticamente a variável `CustomRanges` modo de sinalização.
 
 1. `ReplaceRange` sem duração de substituição
 
@@ -61,6 +60,6 @@ O TVSDK favorece configurações de intervalo personalizadas em configurações 
    }
    ```
 
-1. Intervalos MARK e DELETE com duração de substituição
+1. MARCAR e intervalos de DELETE com duração de substituição
 
-   A duração extra de substituição é ignorada.
+   A duração de substituição extra é ignorada.

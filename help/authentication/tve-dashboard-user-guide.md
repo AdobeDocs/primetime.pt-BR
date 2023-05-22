@@ -1,489 +1,489 @@
 ---
 title: Guia do usuário do Painel Primetime TVE
 description: Guia do usuário do Painel Primetime TVE
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '4386'
 ht-degree: 0%
 
 ---
 
-
 # Guia do usuário do Painel Primetime TVE {#tve-db-user-guide}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 ## Introdução {#tve-db-intro}
 
-[[!DNL Adobe] Painel TVE (Painel TVE)](https://console.auth.adobe.com/) é um painel de autoatendimento destinado a usuários que trabalham para empresas de mídia (Programadores) que têm um relacionamento comercial com a equipe de produtos Autenticação da Adobe Primetime.
+[[!DNL Adobe] Painel TVE (Painel TVE)](https://console.auth.adobe.com/) é um painel de autoatendimento destinado a usuários que trabalham para empresas de mídia (Programadores) que têm um relacionamento comercial com a equipe de produtos de autenticação da Adobe Primetime.
 
-Entre em contato com o Gerente técnico de contas (TAM) para obter acesso. Para obter acesso, você precisará de dois novos grupos de usuários configurados em sua organização da Adobe Marketing Cloud:
+Entre em contato com o gerente técnico de conta (TAM) para obter acesso. Para obter acesso, você precisará de dois novos grupos de usuários a serem configurados em sua organização da Adobe Marketing Cloud:
 
 * Leitura-gravação do painel TVE - os membros deste grupo têm direitos totais em todas as seções editáveis do painel
-* Painel TVE Somente Leitura - os membros deste grupo têm somente direitos de exibição em todo o painel
+* Painel TVE Somente Leitura - os membros deste grupo só têm direitos de visualização em todo o painel
 
 
-Antes de aprofundar esse guia do usuário, recomendamos que você verifique os seguintes recursos para ter uma boa compreensão dos fluxos e recursos fornecidos pela equipe de produtos de Autenticação Adobe Primetime e se familiarize com os termos usados no presente documento:
+Antes de aprofundar esse guia do usuário, recomendamos que você passe pelos seguintes recursos para ter uma boa compreensão dos fluxos e recursos fornecidos pela equipe de produtos de Autenticação do Adobe Primetime e se familiarizar com os termos usados no presente documento:
 
-* [Documento técnico TVE](/help/authentication/technical-paper.md)
+* [Documento técnico da TVE](/help/authentication/technical-paper.md)
 * [Guia de início rápido do programador](/help/authentication/programmer-kickstart-guide.md)
 * [Fluxo de direitos](/help/authentication/entitlement-flow.md)
 * [Glossário](/help/authentication/glossary.md)
 
 
-Continuando para as próximas seções deste guia do usuário, você descobrirá maneiras de administrar diferentes configurações para os Canais, Programadores ou as Integrações entre Canais e MVPDs (Distribuidores do Programa de Vídeo Multicanal) da sua empresa.
+Prosseguindo para as próximas seções deste guia do usuário, você descobrirá maneiras de administrar diferentes configurações para os Canais, Programadores ou as Integrações entre Canais e MVPDs (Distribuidores de Programas de Vídeo Multicanais) da sua empresa.
 
 >[!IMPORTANT]
->O Painel TVE oferece a opção de alternar entre um Espaço de trabalho básico e um Espaço de trabalho avançado. Você pode fazer isso alternando o ícone no canto superior direito. O Espaço de trabalho avançado é destinado aos usuários com conhecimento técnico substancial, bem como conhecimento avançado dos recursos oferecidos pela equipe de produtos de Autenticação da Adobe Primetime.
+>O TVE Dashboard oferece a opção de alternar entre um Espaço de Trabalho Básico e Avançado. Você pode fazer isso alternando o ícone no canto superior direito. O Espaço de trabalho avançado destina-se a usuários com conhecimento técnico substancial, bem como conhecimento avançado dos recursos oferecidos pela equipe de produtos de Autenticação do Adobe Primetime.
 
-![Espaços de trabalho do painel TVE](assets/tve-basic-advanced-workspace.png)
+![Espaços de trabalho do Painel TVE](assets/tve-basic-advanced-workspace.png)
 
-*Figura 1: O menu suspenso &quot;Básico / Espaço de trabalho avançado&quot; do Adobe Primetime TVE Dashboard*
+*Figura 1: A lista suspensa do painel do Adobe Primetime TVE &quot;Basic / Advanced Workspace&quot;*
 
 ## Ambientes {#authn-environments}
 
-Dependendo das tarefas que um usuário pode ser necessário realizar, ele pode precisar alternar entre os ambientes de Autenticação do Adobe Primetime. Para obter informações detalhadas sobre os ambientes de Autenticação Adobe Primetime, consulte o seguinte documento: [Compreensão dos ambientes de autenticação do Adobe Primetime](/help/authentication/understanding-the-adobe-environments.md).
+Dependendo das tarefas que um usuário pode ter de realizar, ele pode precisar alternar entre os ambientes de Autenticação do Adobe Primetime. Para obter informações detalhadas sobre os ambientes de autenticação do Adobe Primetime, consulte o seguinte documento: [Noções básicas sobre os ambientes de autenticação do Adobe Primetime](/help/authentication/understanding-the-adobe-environments.md).
 
-O Painel TVE fornece dois ambientes chamados Pré-requisitos (Pré-qualificação) e Versão, cada um com dois perfis nomeados como Armazenamento temporário e Produção, conforme mostrado abaixo:
+O Painel do TVE fornece dois ambientes chamados Pré-qualificação e Versão, cada um com dois perfis chamados Preparo e Produção, conforme mostrado abaixo:
 
-* [Preparação de Prequal](https://console-prequal.auth-staging.adobe.com/)
-* [Produção Prequal](https://console-prequal.auth.adobe.com/)
-* [Estágio da versão](https://console.auth-staging.adobe.com/)
-* [Versão de produção](https://console.auth.adobe.com/)
+* [Estágios desiguais](https://console-prequal.auth-staging.adobe.com/)
+* [Produção Pré-Igual](https://console-prequal.auth.adobe.com/)
+* [Estágios de lançamento](https://console.auth-staging.adobe.com/)
+* [Liberar produção](https://console.auth.adobe.com/)
 
-Para alternar entre ambientes, o usuário pode clicar no ambiente desejado representado pela entrada do elemento suspenso mostrado abaixo:
+Para alternar entre ambientes, o usuário pode clicar no ambiente desejado representado pela entrada do elemento suspenso representado abaixo:
 
-![Menu suspenso de ambientes do Painel TVE](assets/tve-dashboard-env.png)
+![Lista suspensa de ambientes do painel TVE](assets/tve-dashboard-env.png)
 
-*Figura 2: O menu suspenso de ambientes do Adobe Primetime TVE Dashboard*
-
->[!IMPORTANT]
->É muito importante observar que, ao fazer alterações administrativas na configuração de Autenticação da Adobe Primetime por meio do Painel TVE, recomendamos que você siga a sequência abaixo para garantir a funcionalidade adequada.
-
-Para fazer alterações administrativas na sua configuração de Autenticação do Adobe Primetime por meio do Painel TVE:
-
-* Execute as alterações em [Preparo da versão e validá-las](http://sp.auth-staging.adobe.com/apitest/api.html).
-* Execute as alterações em [Pré-produção e validá-las](http://sp.auth-staging.adobe.com/apitest/api.html).
-* Execute as alterações em [Liberar produção e validá-las](http://sp.auth-staging.adobe.com/apitest/api.html).
+*Figura 2: Lista suspensa de ambientes do painel do Adobe Primetime TVE*
 
 >[!IMPORTANT]
->Para que as alterações administrativas sejam ativadas, os usuários devem navegar até a seção &quot;Revisar e enviar alterações&quot; selecionando o botão, que será exibido na parte inferior esquerda da barra lateral, para revisar as alterações, adicionar uma descrição para as alterações recém-criadas e confirmar a atualização da configuração selecionando &quot;Enviar configuração&quot;.
+>É muito importante observar que, ao fazer alterações administrativas na configuração da Autenticação do Adobe Primetime por meio do Painel do TVE, recomendamos que você siga a sequência abaixo para garantir a funcionalidade adequada.
+
+Para fazer alterações administrativas na configuração da Autenticação Adobe Primetime por meio do Painel TVE:
+
+* Faça as alterações no [Liberar armazenamento temporário e validá-los](http://sp.auth-staging.adobe.com/apitest/api.html).
+* Faça as alterações no [Produção pré-igualada e validação](http://sp.auth-staging.adobe.com/apitest/api.html).
+* Faça as alterações no [Liberar produção e validá-las](http://sp.auth-staging.adobe.com/apitest/api.html).
+
+>[!IMPORTANT]
+>Para que as alterações administrativas sejam ativadas, os usuários devem navegar até a seção &quot;Revisar e enviar alterações&quot; selecionando o botão, que aparecerá na parte inferior esquerda da barra lateral. Para revisar as alterações, adicione uma descrição das alterações recém-criadas e confirme a atualização de configuração selecionando a &quot;Configuração de envio&quot;.
 
 ![Tve Dashboard revisar uma notificação por push](assets/tve-review-push-notifications.png)
 
-*Figura 3: A notificação de Revisar e enviar alterações do painel do Adobe Primetime TVE*
+*Figura 3: Notificação de revisão e alterações por push do painel do Adobe Primetime TVE*
 
 ## Seções {#sections}
 
-Os usuários que trabalham para empresas de mídia (Programadores) podem acessar as seguintes seções do Painel TVE na barra lateral:
+Os usuários que trabalham para empresas de mídia (programadores) podem acessar as seguintes seções do Painel TVE na barra lateral:
 
 * **Canais** - Contém configurações relacionadas a provedores de conteúdo
 * **Programadores** - Contém configurações relacionadas à organização principal agregando um ou vários **Canais**
 * **Integrações** - Contém configurações relacionadas à integração entre **Canais** e **MVPDs**
-* **MVPDs** - Contém configurações relacionadas ao **MVPDs**
+* **MVPDs** - Contém configurações relacionadas ao disponível **MVPDs**
 * **Relatórios** - Contém dados agregados para três tipos de relatórios: AuthN TTL, AuthZ TTL, SSO
-* **Log de alterações** - Contém as modificações mais recentes aplicadas à configuração do painel TVE
+* **Registro de alterações** - Contém as modificações mais recentes aplicadas à configuração do painel TVE
 
-![seções do painel TVE](assets/tve-dashboard-sections.png)
+![Seções do painel TVE](assets/tve-dashboard-sections.png)
 
-*Figura 4: As seções do painel Adobe Primetime TVE*
+*Figura 4: Seções do painel do Adobe Primetime TVE*
 
 ### Canais {#tve-db-channels-section}
 
-Esta seção permite visualizar e editar configurações para Canais disponíveis ou criar um novo. Clicar em um dos Canais disponíveis retornará uma tela com as seguintes guias:
+Esta seção permite visualizar e editar as configurações dos Canais disponíveis ou criar um novo. Clicar em um dos canais disponíveis retornará uma tela com as seguintes guias:
 
 * **Dados do canal**
-   * **Id Do Canal** - A ID exclusiva do Canal usada em nosso sistema, também chamada de &quot;ID do solicitante&quot;.
+   * **ID do canal** - A ID exclusiva do canal usada em nosso sistema, também chamada de &quot;ID do solicitante&quot;.
    * **Nome de exibição** - O nome comercial do Canal.
 * **Configurações gerais**
-   * **Configuração do Analytics** - Configurar eventos de autenticação do Adobe Primetime para serem encaminhados ao Adobe Analytics. Entre em contato com o Adobe para obter mais detalhes sobre como a ID do conjunto de relatórios (RSID) precisa ser configurada antes de habilitar esse recurso.
+   * **Configuração do Analytics** - Configurar os eventos de Autenticação do Adobe Primetime para serem encaminhados ao Adobe Analytics. Entre em contato com o Adobe para obter mais detalhes sobre como a ID do conjunto de relatórios (RSID) precisa ser configurada antes de habilitar esse recurso.
 * **Certificados**
 
-   Contém a lista dos certificados utilizados no fluxo de autenticação juntamente com a organização emissora, a data de emissão e a data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
+   Contém a lista de certificados utilizados no fluxo de autenticação juntamente com a organização emissora, a data de emissão e a data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
 * **Domínios**
 
-   Contém a lista de domínios a partir dos quais o Canal respectivo se comunicará com a Autenticação Adobe Primetime.
+   Contém a lista de domínios a partir dos quais o respectivo Canal se comunicará com a Autenticação Adobe Primetime.
 * **Integrações**
 
-   Contém a lista de integrações com MVPDs disponíveis, junto com o status de cada integração que pode ser habilitada ou não. A navegação para a página Integração está disponível ao clicar em uma entrada específica.
+   Contém a lista de integrações com os MVPDs disponíveis, juntamente com o status de cada integração que pode ser ativada ou não. Navegar para a página Integração está disponível ao clicar em uma entrada específica.
 * **Aplicativos registrados**
 
-   Contém a lista de registros de aplicativos. Para obter mais detalhes, consulte o documento [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
+   Contém a lista de registros de solicitações de emprego. Para obter mais detalhes, revise o documento [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
 
 * **Esquemas personalizados**
 
-   Contém a lista de esquemas personalizados. Para obter mais detalhes, consulte [Registro do aplicativo iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md)
+   Contém a lista de esquemas personalizados. Para obter mais detalhes, consulte [Registro de aplicativo iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md)
 
 
-#### Adicionar / excluir domínios {#add-delete-domains}
+#### Adicionar/Excluir domínios {#add-delete-domains}
 
-Para iniciar o processo de adição de um novo domínio para o canal selecionado, é necessário clicar no botão &quot;Adicionar novo domínio&quot; abaixo da lista Domínios. Isso criará uma nova entrada de domínio onde você pode especificar o nome do domínio. Se um domínio mais genérico já existir na lista de domínios, você não deve adicionar um novo subdomínio.
+Para iniciar o processo de adição de um novo domínio para o canal selecionado, você precisa clicar no botão &quot;Adicionar novo domínio&quot; abaixo da lista Domínios. Isso criará uma nova entrada de domínio onde você pode especificar o nome do domínio. Se um domínio mais genérico já existir na lista de domínios, você não deve adicionar um novo subdomínio.
 
 ![Adicionar um novo domínio a uma seção de canal selecionada](assets/add-domain-to-channel-sec.png)
 
-*Figura: Guia Domínios em canais*
+*Figura: Guia Domínios nos canais*
 
 ### Programadores {#tve-db-programmers-section}
 
 Esta seção permite visualizar e editar configurações para Programadores disponíveis ou criar um novo. Clicar em um dos programadores disponíveis retornará uma tela com as seguintes guias:
 
 * **Dados do programador**
-   * **Id Do Programador** - A ID exclusiva do Programador usada em nosso sistema.
-   * **Nome de exibição** - O nome comercial do programador.
-   * **Url do logotipo** - O endereço de recursos uniforme (URL) do logotipo comercial do Programador.
-   * **Visualização do logotipo** - A visualização do logotipo comercial do Programador, baixando-a do URL (Uniform Resource Locator) acima.
+   * **ID do programador** - O identificador exclusivo do programador usado em nosso sistema.
+   * **Nome de exibição** - O nome comercial do Programador.
+   * **URL do logotipo** - O logotipo comercial do programador localizador uniforme de recursos (URL).
+   * **Visualização do logotipo** - A pré-visualização do logotipo comercial do programador, baixando-o do Uniform Resource Locator (URL) acima.
 
 * **Certificados**
 
-   Contém a lista dos certificados utilizados no fluxo de autenticação juntamente com a organização emissora, a data de emissão e a data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
+   Contém a lista de certificados utilizados no fluxo de autenticação juntamente com a organização emissora, a data de emissão e a data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
 
 * **Canais**
 
-   Contém a lista de Canais pertencentes a este programador específico. A seção Navegar até Canais está disponível ao clicar em uma entrada específica.
+   Contém a lista de canais que pertencem a este programador específico. Navegar até a seção Canais está disponível ao clicar em uma entrada específica.
 
 * **Aplicativos registrados**
 
-   Contém a lista de registros de aplicativos. Para obter mais detalhes, consulte [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
+   Contém a lista de registros de solicitações de emprego. Para obter mais detalhes, consulte [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
 
 * **Esquemas personalizados**
 
-   Contém a lista de esquemas personalizados. Para obter mais detalhes, consulte [Registro do aplicativo iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
+   Contém a lista de esquemas personalizados. Para obter mais detalhes, consulte [Registro de aplicativo iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
 
 
 ### Integrações {#tve-db-integrations-sec}
 
-Esta seção permite visualizar e editar configurações para integrações entre Canais e MVPDs disponíveis ou criar um novo. Clicar em uma das integrações disponíveis retornará uma única página ao usar o Espaço de trabalho básico ou uma tela com as seguintes guias ao usar o Espaço de trabalho avançado:
+Esta seção permite visualizar e editar configurações para integrações entre Canais e MVPDs disponíveis ou criar uma nova. Clicar em uma das integrações disponíveis retornará uma única página ao usar o Espaço de trabalho básico ou uma tela com as seguintes guias ao usar o Espaço de trabalho avançado:
 
 * **Dados de integração**
-   * **ID de integração**- O resultado de anexar a id exclusiva dos MVPDs à id exclusiva do Canal separada pelo caractere &quot;_&quot;.
-   * **Nome de exibição do canal** - O nome comercial do Canal.
-   * **Id Do Canal** - A ID exclusiva do Canal usada em nosso sistema, também chamada de &quot;ID do solicitante&quot;.
-   * **Nome de exibição do MVPD** - O nome comercial do MVPD.
-   * **Id do MVPD** - A id exclusiva do MVPD usada em nosso sistema.
+   * **ID da integração**- O resultado do acréscimo da ID exclusiva do MVPDs à ID exclusiva do Canal separada pelo caractere &quot;_&quot;.
+   * **Nome para Exibição do Canal** - O nome comercial do Canal.
+   * **ID do canal** - A ID exclusiva do canal usada em nosso sistema, também chamada de &quot;ID do solicitante&quot;.
+   * **Nome para Exibição do MVPD** - O nome comercial do MVPD.
+   * **ID do MVPD** - O identificador exclusivo do MVPD usado em nosso sistema.
 * **Configurações gerais**
-   * **Chaves de metadados do usuário** - Configure as chaves de metadados disponíveis para a integração específica.
-   * **Configurações específicas da plataforma** - Configure configurações diferentes para uma plataforma específica (por exemplo, TTLs, SSO e IFrames).
+   * **Chaves de metadados do usuário** - Configurar chaves de metadados disponíveis para a integração específica.
+   * **Configurações específicas da plataforma** - Definir configurações diferentes para uma plataforma específica (por exemplo, TTLs, SSO e IFrames).
 
 * **Configurações de autenticação**
-   * Contém configurações relacionadas ao recurso de autenticação Adobe Primetime Authentication.
+   * Contém configurações relacionadas ao recurso de autenticação Autenticação do Adobe Primetime.
 * **Configurações de autorização**
-   * Contém configurações relacionadas ao recurso de autorização de Autenticação do Adobe Primetime.
-* **Configurações de Logout**
-   * Contém configurações relacionadas ao recurso de logout da Autenticação Adobe Primetime.
+   * Contém configurações relacionadas ao recurso de autorização Autenticação do Adobe Primetime.
+* **Configurações de saída**
+   * Contém configurações relacionadas ao recurso de logout de Autenticação do Adobe Primetime.
 
 #### Criar integração {#create-integration}
 
 Para criar uma nova integração, siga as etapas abaixo:
 
 * clique no botão &quot;Adicionar nova integração&quot;
-* pesquisar e selecionar um Canal
+* pesquisar e selecionar um canal
 * pesquisar e selecionar um MVPD
-* aguarde o painel TVE para calcular &quot;ID de integração&quot; e exibir os pontos de extremidade MVPD disponíveis
-* selecione endpoints de autenticação, autorização e logout ou use os valores padrão
+* aguarde o TVE Dashboard calcular a &quot;ID de Integração&quot; e exibir os pontos de extremidade MVPD disponíveis
+* selecione os endpoints de autenticação, autorização e logout ou use os valores padrão
 * clique no botão &quot;Criar integração&quot;
-* dependendo das configurações do MVPD, um pop-up pode aparecer e solicitar propriedades adicionais, que devem ter sido fornecidas pelo MVPD antecipadamente, caso contrário, ocorrerá um redirecionamento para a página de integração recém-criada
+* dependendo das configurações do MVPD, um pop-up pode ser exibido e solicitar propriedades adicionais, que devem ter sido fornecidas pelo MVPD anteriormente. Caso contrário, ocorrerá um redirecionamento para a página de integração recém-criada
 
 ![](assets/new-integration-window.png)
 
 
 
-*Figura 5. A janela Nova integração do painel Adobe Primetime TVE*
+*Figura 5. A janela Nova integração do painel do Adobe Primetime TVE*
 
 
 #### Atualizar integração {#update-integration}
 
-Para atualizar uma integração existente, clique na entrada da tabela para essa integração específica na seção Integrações ou na seção Canais , que contém uma guia Integrações .
+Para atualizar uma integração existente, clique na entrada da tabela dessa integração específica na seção Integrações ou na seção Canais, que contém uma guia Integrações.
 
-Ao usar o modo Básico do Workspace, esta seção permitirá ver e editar as configurações atualizadas com mais frequência, como TTLs (time-to-live) de token de autenticação e autorização, bem como as configurações do iFrame. Lembre-se de que as configurações TTL podem estar ausentes nas integrações com MVPDs que oferecem suporte ao TTL de persistência de token definido dinamicamente (consulte a entrada 1.19 de [Requisitos de integração do MVPD](/help/authentication/mvpd-integr-features.md)).
-
-
-
-Ao usar o modo Espaço de trabalho avançado, esta seção permitirá ver e editar configurações menos comuns.
+Ao usar o modo Espaço de trabalho básico, esta seção permitirá visualizar e editar as configurações mais atualizadas, como TTLs de token de autenticação e autorização (tempo de vida útil), bem como configurações de iFrame. Lembre-se de que as configurações de TTL podem estar ausentes nas integrações com MVPDs que oferecem suporte a TTL de persistência de token definido dinamicamente (consulte a entrada 1.19 de [Requisitos de integração do MVPD](/help/authentication/mvpd-integr-features.md)).
 
 
 
-No caso dos modos Básico e Espaço de trabalho avançado, essas configurações podem ser alteradas em um nível de plataforma (por exemplo, selecione um valor personalizado para o token TTL de autorização no Android, padrão em todas as outras plataformas).
+Ao usar o modo Espaço de trabalho avançado, esta seção permitirá visualizar e editar configurações menos comuns.
+
+
+
+No caso dos modos Básico e Avançado do Workspace, essas configurações podem ser alteradas no nível da plataforma (por exemplo, selecione um valor personalizado para o token de autorização TTL no Android, padrão em todas as outras plataformas).
 
 
 
 >[!IMPORTANT]
->É importante entender a cadeia de herança de configurações: MVPD -> Endpoint MVPD -> Integração -> Plataforma, onde Plataforma tem o valor mais específico e MVPD é o padrão mais genérico.
+>É importante entender as configurações da cadeia de herança: MVPD -> Ponto de extremidade MVPD -> Integração -> Plataforma, onde Plataforma tem o valor mais específico e MVPD o padrão mais genérico.
 
 ![](assets/inheritance-chain-component.png)
 
 
-*Figura 6. O componente da cadeia de herança da propriedade do Painel TVE do Adobe Primetime*
+*Figura 6. O componente da cadeia de herança do painel do Adobe Primetime TVE*
 
 
 #### Configurações específicas da plataforma {#platform-sp-settings}
 
-Essa subseção pode ser usada para substituir as configurações de plataformas específicas. As plataformas disponíveis são:
+Esta subseção pode ser usada para substituir as configurações de plataformas específicas. As plataformas disponíveis são:
 
-* **Todas as plataformas** - Defina os valores que serão aplicados a todas as plataformas, independentemente das implementações do Programador, caso não haja outros valores definidos para uma plataforma específica.
-* **Android** - Defina os valores que serão aplicados às implementações do Programador sobre o SDK do Android de Autenticação da Adobe Primetime.
-* **REST API sem cliente** - Defina os valores que serão aplicados às implementações do Programador sobre a API REST de autenticação do Adobe Primetime.
-* **Fire TV** - Defina os valores que serão aplicados às implementações do Programador sobre o SDK do Adobe Primetime Authentication FireTV.
-* **SDK do Flash** - Essa plataforma está obsoleta. **obsoleto**
-* **SDK do JavaScript** - Defina os valores que serão aplicados às implementações do Programador por meio do SDK JavaScript da Autenticação do Adobe Primetime.
-* **Roku** - Defina os valores que serão aplicados às implementações do Programador por meio da API REST de Autenticação do Adobe Primetime e que estão enviando &quot;Roku&quot; como o tipo de dispositivo. Isso tem precedência sobre os valores definidos para a plataforma REST API sem cliente no caso de dispositivos Roku.
-* **SDK nativo da Xbox** - Essa plataforma está obsoleta. **obsoleto**
-* **API REST do Xbox 360** - Defina os valores que serão aplicados às implementações do Programador por meio da API REST de Autenticação do Adobe Primetime e que estão enviando &quot;xbox&quot; como o tipo de dispositivo. Isso tem precedência sobre os valores definidos para a plataforma REST API sem cliente no caso de dispositivos Xbox 360.
-* **API REST da Xbox One** - Defina os valores que serão aplicados às implementações do Programador por meio da API REST de Autenticação do Adobe Primetime e que estão enviando &quot;xboxOne&quot; como o tipo de dispositivo. Isso tem precedência sobre os valores definidos para a plataforma REST Api sem cliente no caso de dispositivos XboxOne.
-* **iOS** - Defina os valores que serão aplicados às implementações do Programador sobre o SDK do iOS de Autenticação do Adobe Primetime.
-* **tvOS** - Defina os valores que serão aplicados às implementações do Programador por meio do SDK tvOS da Autenticação do Adobe Primetime.
+* **Todas as plataformas** - Defina valores que serão aplicados a todas as plataformas, independentemente das implementações do programador, caso não haja outros valores definidos para uma plataforma específica.
+* **Android** - Defina valores que serão aplicados às implementações do programador no SDK Android de autenticação da Adobe Primetime.
+* **API REST sem cliente** - Defina valores que serão aplicados às implementações do Programador por meio da API REST de autenticação da Adobe Primetime.
+* **Fire TV** - Defina valores que serão aplicados às implementações do Programador por meio do SDK FireTV de autenticação da Adobe Primetime.
+* **FLASH SDK** - Esta plataforma está obsoleta. **obsoleto**
+* **SDK do JavaScript** - Defina valores que serão aplicados às implementações do programador no SDK JavaScript de autenticação da Adobe Primetime.
+* **Roku** - Defina valores que serão aplicados às implementações do programador por meio da API REST de autenticação da Adobe Primetime e que enviam &quot;Roku&quot; como o tipo de dispositivo. No caso de dispositivos Roku, isso tem prioridade sobre os valores definidos para a plataforma da API REST sem cliente.
+* **SDK nativo do Xbox** - Esta plataforma está obsoleta. **obsoleto**
+* **API REST do Xbox 360** - Defina valores que serão aplicados às implementações do programador por meio da API REST de autenticação da Adobe Primetime e que enviam &quot;xbox&quot; como o tipo de dispositivo. No caso de dispositivos Xbox 360, isso tem prioridade sobre os valores definidos para a plataforma REST API sem cliente.
+* **API REST do Xbox One** - Defina valores que serão aplicados às implementações do programador por meio da API REST de autenticação da Adobe Primetime e que enviam &quot;xboxOne&quot; como o tipo de dispositivo. No caso de dispositivos XboxOne, esses valores têm prioridade sobre os valores definidos para a plataforma REST Api sem Cliente.
+* **iOS** - Defina valores que serão aplicados às implementações do programador no SDK iOS de autenticação da Adobe Primetime.
+* **tvOS** - Defina valores que serão aplicados às implementações do programador por meio do SDK tvOS de autenticação da Adobe Primetime.
 
 
 ![](assets/platform-sp-settings.png)
 
-*Figura 7. As configurações específicas da plataforma de painel do Adobe Primetime TVE*
+*Figura 7. As configurações específicas da plataforma do painel do Adobe Primetime TVE*
 
 
-#### Ativar logon único da plataforma {#enable-platform-sso}
+#### Habilitar logon único da plataforma {#enable-platform-sso}
 
-Siga as etapas abaixo para ativar/desativar o Logon único para uma integração e plataforma específicas:
+Siga as etapas abaixo para habilitar/desabilitar o Logon único para uma integração e plataforma específicas:
 
-* certifique-se de usar o modo Avançado do Workspace
+* verifique se você está usando o modo Advanced Workspace
 * navegue até a integração desejada
 * navegue até o **Configurações gerais** guia
-* selecione a plataforma desejada na qual deseja ativar ou desativar o Logon único
-* alterne a **Ativar logon único** sinalizador para o valor desejado (Sim / Não)
+* selecione a plataforma desejada na qual você deseja ativar ou desativar o Single Sign-On
+* alterne o **Habilitar Logon Único** sinalizar para o valor desejado (Sim / Não)
 
    >[!IMPORTANT]
-   >É importante notar que a variável **Ativar logon único** O sinalizador está disponível somente para plataformas iOS, tvOS, Roku e FireTV e somente para integrações com MVPDs que oferecem suporte ao Single Sign On para essas plataformas.
+   >É importante notar que a **Habilitar Logon Único** O sinalizador está disponível somente para plataformas iOS, tvOS, Roku e FireTV e somente para integrações com MVPDs compatíveis com Logon único para essas plataformas.
 
-* alterne a **Impor permissão da plataforma** sinalizador para o valor desejado (Sim / Não)
+* alterne o **Forçar a permissão da plataforma** sinalizar para o valor desejado (Sim / Não)
 
    >[!IMPORTANT]
-   >É importante notar que a variável **Impor permissão da plataforma** O sinalizador controla se a decisão do usuário de Permitir ou Negar acesso à plataforma para sua assinatura do Provedor de TV será imposta ou não. Considere o cenário ao **Ativar logon único** sinalizador é definido como &quot;Sim&quot;, **Impor permissão da plataforma** O sinalizador também é definido como &quot;Sim&quot; e o usuário opta por negar acesso à plataforma à sua assinatura do Provedor de TV, então o respectivo aplicativo (canal) não poderá usar o token de autenticação do Adobe Primetime obtido por outro aplicativo (canal).
+   >É importante notar que a **Forçar a permissão da plataforma** O sinalizador controla se a decisão do usuário de Permitir ou Negar acesso à plataforma para sua assinatura do Provedor de TV será ou não imposta. Considerar o cenário quando **Habilitar Logon Único** o sinalizador está definido como &quot;Sim&quot;, **Forçar a permissão da plataforma** O sinalizador também é definido como &quot;Sim&quot; e o usuário opta por Negar acesso à plataforma para sua assinatura do Provedor de TV. Em seguida, o respectivo aplicativo (canal) não poderá usar o token de autenticação do Adobe Primetime obtido por outro aplicativo (canal).
 
 
-#### Habilitar Autenticação Baseada em Casa {#enable-hba}
+#### Ativar autenticação baseada em casa {#enable-hba}
 
-Siga as etapas abaixo para ativar/desativar a Autenticação de Base para **OAuth2** MVPDs baseados:
+Siga as etapas abaixo para ativar/desativar a Autenticação Home-Base para **OAuth2** MVPDs baseados em:
 
-* certifique-se de usar o modo Avançado do Workspace
+* verifique se você está usando o modo Advanced Workspace
 * navegue até a integração desejada
 * navegue até **Configurações de autenticação** guia
-* navegue até **Regras dinâmicas de AuthN** subguia
-* alterne a **Tentar HBA** sinalizador para o valor desejado (Sim / Não)
+* navegue até **Regras Dinâmicas de Autenticação** subguia
+* alterne o **Tentativa de HBA** sinalizar para o valor desejado (Sim / Não)
 
 
 >[!IMPORTANT]
->Lembre-se de que o valor &quot;HBA AuthN TTL&quot; nunca deve ser substituído, caso contrário o fluxo de autorização poderá falhar inesperadamente.
+>Lembre-se de que o valor &quot;HBA AuthN TTL&quot; nunca deve ser substituído, caso contrário, o fluxo de autorização pode falhar inesperadamente.
 
-Entre em contato com o **tve-support@adobe.com** para obter informações sobre como habilitar a autenticação de base para MVPDs baseados em SAML.
+Entre em contato com **tve-support@adobe.com** para obter informações sobre como ativar a Autenticação Home-Base para MVPDs baseados em SAML.
 
 ### MVPDs {#tve-db-mvpds-sec}
 
-Esta seção permite visualizar configurações para MVPDs disponíveis. Clicar em um dos MVPDs disponíveis retornará uma tela com as seguintes guias:
+Esta seção permite exibir configurações para MVPDs disponíveis. Clicar em um dos MVPDs disponíveis retornará uma tela com as seguintes guias:
 
 * **Dados MVPD**
-   * **Id do MVPD** - A id exclusiva do MVPD usada em nosso sistema.
+   * **ID do MVPD** - O identificador exclusivo do MVPD usado em nosso sistema.
    * **Nome de exibição** - O nome comercial do MVPD que pode ser usado no seletor do usuário.
-   * **Url do logotipo** - O localizador uniforme de recursos (URL) do logotipo comercial do MVPD.
-   * **Visualização do logotipo** - A visualização do logotipo comercial do MVPD, baixando-a do localizador uniforme de recursos (URL) acima.
+   * **URL do logotipo** - O logotipo comercial do MVPD, o localizador uniforme de recursos (URL).
+   * **Visualização do logotipo** - A pré-visualização do logotipo comercial do MVPD, baixando-o do Uniform Resource Locator (URL) acima.
 * **Configurações gerais**
    * **Chaves de metadados do usuário**
       * Chaves de metadados disponíveis para o MVPD específico.
-   * **Propriedades de dados do cliente**
-      * **Autenticação/Agregador** - Se definido como &quot;Sim&quot;, então um novo token de autenticação será necessário para cada novo Canal que o usuário estiver tentando acessar.
-      * **AuthN Passivo Ativado** - Se o sinalizador Auth/Aggregator estiver definido como &quot;Sim&quot; e se AuthN passivo estiver definido como &quot;Sim&quot;, o processo de autenticação com outro Canal ocorrerá em segundo plano sem a necessidade de um redirecionamento completo do navegador e o seletor sendo mostrado.
+   * **Propriedades dos dados do cliente**
+      * **Autenticação / Agregador** - Se definido como &quot;Sim&quot;, um novo token de autenticação será necessário para cada novo Canal que o usuário está tentando acessar.
+      * **Autenticação passiva ativada** - Se o sinalizador Autenticação / Agregador estiver definido como &quot;Sim&quot; e se Autenticação Passiva Ativada estiver definido como &quot;Sim&quot;, o processo de autenticação com outro Canal ocorrerá em segundo plano, sem a necessidade de um redirecionamento completo do navegador e a exibição do seletor.
       * **Sessão de autenticação/navegador** - Se definido como &quot;Sim&quot;, o usuário será desconectado após fechar o navegador. Se definido como &quot;Não&quot;, o usuário poderá reiniciar o navegador e permanecer conectado.
-      * **IFrame obrigatório** - Se estiver definido como &quot;Sim&quot;, isso indica que a janela de logon do MVPD requer um iFrame. Os campos &quot;Largura do iFrame&quot; e &quot;Altura do iFrame&quot; representam o tamanho necessário para o iFrame carregar a página de logon do MVPD.
+      * **IFrame obrigatório** - Se definido como &quot;Sim&quot;, isso indica que a janela de logon do MVPD requer um iFrame. Os campos &quot;Largura do iFrame&quot; e &quot;Altura do iFrame&quot; representam o tamanho necessário para o iFrame carregar a página de logon do MVPD.
 * **Configurações de autenticação**
-   * **Selecionar Ponto Final**
-      * Este campo indica os pontos de extremidade de autenticação expostos pelo MVPD. O ponto de extremidade pode ser diferente de acordo com o protocolo de autenticação usado.
-   * **Configurações gerais do AuthN**
-      * Esta subguia exibe o protocolo de autenticação usado pelo MVPD e as informações relacionadas ao protocolo.
+   * **Selecionar Ponto de Extremidade**
+      * Esse campo indica os endpoints de autenticação expostos pelo MVPD. O endpoint pode diferir de acordo com o protocolo de autenticação usado.
+   * **Configurações gerais de AuthN**
+      * Esta subguia exibe o protocolo de autenticação usado pelo MVPD e informações relacionadas ao protocolo.
    * **Certificados AuthN**
-      * Esta subguia exibe os certificados que o MVPD usa no fluxo de autenticação junto à organização do emissor, data de emissão e data de expiração. Esses certificados servem como chaves privadas / públicas e são usados para fins de validação.
-   * **Regras dinâmicas de AuthN**
-      * Essa subguia exibe as regras que se aplicam ao processo de autenticação. Ao pressionar na Solicitação / Resposta / Token do diagrama, você pode ver como destacados os parâmetros aplicados a essa parte do fluxo de autenticação.
+      * Esta subguia exibe os certificados que o MVPD usa no fluxo de autenticação junto com sua organização emissora, data de emissão e data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
+   * **Regras Dinâmicas de Autenticação**
+      * Esta subguia exibe as regras que se aplicam ao processo de autenticação. Ao pressionar a opção Request / Response / Token do diagrama, você pode ver como destacados os parâmetros aplicados a essa parte do fluxo de autenticação.
 * **Configurações de autorização**
-   * **Selecionar Ponto Final**
-      * Este campo indica o terminal de autorização exposto pelo MVPD. O endpoint pode diferir dependendo do protocolo de autorização usado. Os protocolos de autorização disponíveis são SOAP, REST (para dispositivos sem cliente), SAML, XACML e OAUTH.
+   * **Selecionar Ponto de Extremidade**
+      * Esse campo indica o endpoint de autorização exposto pelo MVPD. O endpoint pode diferir dependendo do protocolo de autorização usado. Os protocolos de autorização disponíveis são SOAP, REST (para dispositivos sem cliente), SAML, XACML e OAUTH.
    * **Configurações gerais de AuthZ**
-      * Esta subguia exibe o protocolo de autorização usado pelo MVPD e as informações relacionadas ao protocolo.
-      * **Configuração de comprovação**
-         * Descreve o número de recursos que podem ser pré-autorizados por um MVPD em uma única chamada, o modelo PreFlight usado, bem como o limite de tempo limite. Ocasionalmente, o número de recursos pode ser diferente para uma determinada integração. Isso pode ser gerenciado editando o &quot;**Número máximo de recursos de comprovação**&quot;, disponível na guia Configurações gerais . Essa propriedade está disponível somente para uma determinada integração e, se configurada, será usada em vez do valor definido em Configurações de Autorização -> Configuração Pré-Voo -> Recursos Máximos Pré-Voo.
+      * Esta subguia exibe o protocolo de autorização usado pelo MVPD e informações relacionadas ao protocolo.
+      * **Configuração de simulação**
+         * Ele descreve o número de recursos que podem ser pré-autorizados por um MVPD em uma única chamada, o modelo PreFlight usado, bem como o limite de tempo limite. Ocasionalmente, o número de recursos pode ser diferente para uma determinada integração. Isso pode ser gerenciado ao editar o &quot;**Número máximo de recursos de comprovação**&quot;, disponível na guia Configurações gerais. Essa propriedade está disponível somente para uma determinada integração e, se definida, será usada em vez do valor definido em Configurações de autorização -> Configuração pré-voo -> Recursos máximos pré-voo.
       * **Proteção DOS**
-         * Descreve a proteção de recusa de serviço no ponto final de autorização do MVPD. Para obter uma descrição exata de cada campo, consulte as dicas de ferramentas ao passar o mouse sobre os campos de Proteção DOS.
-      * Se o MVPD for um **TempPass**, em seguida, o **Configurações gerais de AuthZ** também contém informações sobre a duração do TempPass.
-      * Se o MVPD for um **FlexibleTempPass**, em seguida, o **Configurações gerais de AuthZ** também contém informações sobre a duração do TempPass, o número máximo de recursos e o campo de identificação (consulte a imagem abaixo).
+         * Ele descreve a proteção de Negação de serviço no endpoint de autorização do MVPD. Para obter uma descrição exata de cada campo, consulte as dicas de ferramentas, passando o mouse sobre os campos de Proteção DOS.
+      * Se o MVPD for um **TempPass**, depois o **Configurações gerais de AuthZ** também contém informações sobre a duração do TempPass.
+      * Se o MVPD for um **TempPass Flexível**, depois o **Configurações gerais de AuthZ** também contém informações sobre a duração do TempPass, o número máximo de recursos e o campo de identificação (consulte a imagem abaixo).
    * **Certificados AuthZ**
-      * Esta subguia exibe os certificados que o MVPD usa no fluxo de autorização ao lado de sua organização emitente, data de emissão e data de expiração. Esses certificados servem como chaves privadas / públicas e são usados para fins de validação.
+      * Esta subguia exibe os certificados que o MVPD usa no fluxo de autorização juntamente com sua organização emissora, data de emissão e data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
    * **Regras dinâmicas de AuthZ**
-      * Essa subguia exibe as regras que se aplicam ao processo de autorização. Ao pressionar no **Solicitação / Resposta / Token**, você pode ver como destacados os parâmetros aplicados a essa parte do fluxo de autorização.
-* **Configurações de Logout**
-   * **Selecionar Ponto Final**
-      * Este campo indica o ponto de extremidade de logout exposto pelo MVPD. Os protocolos fornecidos podem ser SAML ou OAuth2.
+      * Esta subguia exibe as regras que se aplicam ao processo de autorização. Ao pressionar no menu do diagrama **Solicitação / Resposta / Token**, você poderá ver como destacados os parâmetros aplicados a essa parte do fluxo de autorização.
+* **Configurações de saída**
+   * **Selecionar Ponto de Extremidade**
+      * Esse campo indica o ponto de extremidade de logout exposto pelo MVPD. Os protocolos fornecidos podem ser SAML ou OAuth2.
       * **Configurações gerais de logout**
-         * Esta subguia exibe o protocolo de logout usado pelo MVPD e as informações relacionadas ao protocolo.
-         * **Exigir resposta de logout assinado** - Se definido como &quot;Sim&quot;, a resposta deve ser assinada por um certificado confiável.
-      * **Certificados de logout**
-         * Esta subguia exibe os certificados que o MVPD usa no fluxo de logout ao lado da organização do emissor, data de emissão e data de expiração. Esses certificados servem como chaves privadas / públicas e são usados para fins de validação.
-      * **Fazer logoff de regras dinâmicas**
-         * Essa subguia exibe as regras que se aplicam ao processo de logout. Ao pressionar no **Solicitação / Resposta / Token**, você pode ver como destacados os parâmetros aplicados a essa parte do fluxo de logout.
+         * Esta subguia exibe o protocolo de logout usado pelo MVPD e informações relacionadas ao protocolo.
+         * **Exigir resposta de logout assinada** - Se definido como &quot;Sim&quot;, a resposta deverá ser assinada por um certificado confiável.
+      * **Fazer logoff de certificados**
+         * Esta subguia exibe os certificados que o MVPD usa no fluxo de logout ao lado de sua organização emissora, data de emissão e data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
+      * **Fazer logoff das regras dinâmicas**
+         * Esta subguia exibe as regras que se aplicam ao processo de logout. Ao pressionar no menu do diagrama **Solicitação / Resposta / Token**, você poderá ver como realçados os parâmetros aplicados a essa parte do fluxo de logout.
 
 ### Relatórios {#tve-db-reports-sec}
 
-Para navegar até esta seção, clique em &quot;Relatórios&quot; no &quot;[Seções do painel](#sections)&quot;. Essa ação navegará para uma tela com 3 guias, que serão apresentadas em detalhes nas seguintes subseções: [Relatórios TTL AuthN](#authn-ttl-reports), [Relatórios de TTL AuthZ](#authz-ttl-reports), [Relatórios de SSO](#sso-reports).
+Para acessar esta seção, clique em &quot;Relatórios&quot; na &quot;[Seções do painel](#sections)&quot;. Isso navegará para uma tela com 3 guias, que serão apresentadas em detalhes nas seguintes subseções: [Relatórios AuthN TTL](#authn-ttl-reports), [Relatórios TTL AuthZ](#authz-ttl-reports), [Relatórios de SSO](#sso-reports).
 
-Esta seção permite visualizar e exportar dados agregados para vários tipos de relatórios para sua integração/integração de Canal/s com vários MVPDs em todas as plataformas.
+Esta seção permite visualizar e exportar dados agregados para vários tipos de relatórios para suas integrações de Canal/s com vários MVPDs em todas as plataformas.
 
 #### Plataformas {#report-platforms}
 
 Todos os relatórios agregam valores nas seguintes plataformas:
 
 **NAVEGADORES**
-Exibe valores que serão aplicados às implementações do Programador sobre o SDK JavaScript da Autenticação do Adobe Primetime.
+Exibe valores que serão aplicados às implementações do Programador no SDK JavaScript de autenticação da Adobe Primetime.
 
-**CELULAR: iOS**
-Exibe valores que serão aplicados às implementações do Programador sobre o SDK do iOS de Autenticação do Adobe Primetime.
+**DISPOSITIVO MÓVEL: IOS**
+Exibe valores que serão aplicados às implementações do Programador por meio do SDK iOS de autenticação da Adobe Primetime.
 
-**CELULAR: ANDROID**
-Exibe valores que serão aplicados às implementações do Programador sobre o SDK do Android de Autenticação da Adobe Primetime.
+**DISPOSITIVO MÓVEL: ANDROID**
+Exibe valores que serão aplicados às implementações do Programador por meio do SDK Android de autenticação da Adobe Primetime.
 
 **CELULAR: OUTROS**
-Exibe valores que serão aplicados às implementações do Programador sobre a API REST de Autenticação Adobe Primetime desenvolvida para dispositivos móveis.
+Exibe valores que serão aplicados às implementações do Programador por meio da API REST de autenticação da Adobe Primetime desenvolvida para dispositivos móveis.
 
 **TVCD: ROKU**
-Exibe valores que serão aplicados às implementações do Programador por meio da API REST de Autenticação do Adobe Primetime e que estão enviando &quot;Roku&quot; como o tipo de dispositivo.
+Exibe valores que serão aplicados às implementações do Programador por meio da API REST de autenticação da Adobe Primetime e que estão enviando &quot;Roku&quot; como o tipo de dispositivo.
 
 **TVCD: FIRETV**
-Exibe os valores que serão aplicados às implementações do Programador sobre o SDK do Adobe Primetime Authentication FireTV.
+Exibe valores que serão aplicados às implementações do Programador por meio do SDK FireTV de autenticação da Adobe Primetime.
 
 **TVCD: APPLETV**
-Exibe valores que serão aplicados às implementações do Programador sobre o SDK tvOS da Autenticação do Adobe Primetime.
+Exibe valores que serão aplicados às implementações do programador por meio do SDK tvOS de autenticação da Adobe Primetime.
 
 **TVCD: OUTROS**
-Exibe os valores que serão aplicados às implementações do Programador sobre a API REST de Autenticação Adobe Primetime desenvolvida para dispositivos conectados à TV.
+Exibe valores que serão aplicados às implementações do Programador por meio da API REST de Autenticação do Adobe Primetime desenvolvida para dispositivos conectados à TV.
 
-**PLATAFORMA: DESCONHECIDO**
-Exibe valores que serão aplicados às implementações do Programador para as quais os serviços de Autenticação da Adobe Primetime detectam um tipo de dispositivo desconhecido.
+**PLATAFORMA: DESCONHECIDA**
+Exibe valores que serão aplicados às implementações do Programador para as quais os serviços de Autenticação do Adobe Primetime detectam um tipo de dispositivo desconhecido.
 
-Analisar o mecanismo de [transmitindo informações do cliente](/help/authentication/passing-client-information-device-connection-and-application.md) para APIs REST ou SDKs de autenticação da Adobe Primetime para obter mais detalhes sobre como enviar o tipo de dispositivo desejado (por exemplo, &quot;Roku&quot;).
+Rever o mecanismo de [transmitindo informações do cliente](/help/authentication/passing-client-information-device-connection-and-application.md) para Adobe Primetime Authentication REST APIs ou SDKs para obter mais detalhes sobre como enviar o tipo de dispositivo desejado (por exemplo, &quot;Roku&quot;).
 
-Todos os relatórios agregam valores calculados com base na configuração específica de cada ambiente de Autenticação do Adobe Primetime. Portanto, você pode esperar diferentes dados de relatório ao alternar entre diferentes ambientes de painel TVE.
+Todos os relatórios agregam valores calculados com base na configuração específica de cada ambiente de autenticação do Adobe Primetime. Portanto, você pode esperar dados de relatório diferentes ao alternar entre diferentes ambientes do Painel de TVE.
 
-Revise o [Ambientes](#authn-environments) para obter mais detalhes relacionados aos ambientes disponíveis de Autenticação do Adobe Primetime .
+Revise o [Ambientes](#authn-environments) para obter mais detalhes relacionados aos ambientes disponíveis de Autenticação do Adobe Primetime.
 
 
-##### Selecionar Canais/MVPDs específicos {#selecting-specific-channels-mvpds}
+##### Seleção de Canais/MVPDs específicos {#selecting-specific-channels-mvpds}
 
-Todos os relatórios permitem usar filtros selecionando Canais específicos ou selecionando MVPDs específicos a serem incluídos nos relatórios resultantes.
+Todos os relatórios permitem usar filtros selecionando Canais específicos ou MVPDs específicos a serem incluídos nos relatórios resultantes.
 
-Para selecionar um ou vários canais, use o **lista suspensa** colocado depois do rótulo &quot;Canais selecionados para relatório&quot;. Veja a Figura 8./9./10. imagens abaixo.
+Para selecionar um ou vários canais, use o **lista suspensa** colocado depois do rótulo &quot;Canais selecionados para relatório&quot;. Consulte a Figura 8./9./10. imagens abaixo.
 
-Para selecionar um ou vários MVPDs, use a variável **lista suspensa** colocado depois do rótulo &quot;MVPDs seleted for report&quot;. Veja a Figura 8./9./10. imagens abaixo.
+Para selecionar um ou vários MVPD/s, use o **lista suspensa** colocado depois do rótulo &quot;MVPDs seleted for report&quot;. Consulte a Figura 8./9./10. imagens abaixo.
 
-Por padrão, os dados são agregados em todos os Canais da sua empresa (&quot;Todos os Canais&quot;) e MVPDs com os quais são integrados (&quot;Todos MVPDs&quot;).
+Por padrão, os dados são agregados em todos os Canais da empresa (&quot;Todos os canais&quot;) e os MVPDs com os quais estão integrados (&quot;Todos os MVPDs&quot;).
 
-Caso você opte por desmarcar &quot;Todos os canais&quot; ou &quot;Todos os MVPDs&quot; sem escolher opções específicas, a interface do usuário exibirá um espaço reservado &quot;Nenhum dado disponível&quot;.
+Caso opte por desmarcar &quot;Todos os canais&quot; ou &quot;Todos os MVPDs&quot; sem escolher opções específicas, a interface mostrará um espaço reservado &quot;Nenhum dado disponível&quot;.
 
 
 ##### Exportar relatório {#export-report}
 
 Todos os relatórios permitem exportar dados em um arquivo de formato CSV (Valores separados por vírgula).
 
-Para exportar dados, use o botão &quot;Exportar relatório&quot; posicionado no canto superior direito da janela. Veja a Figura 8./9./10. imagens abaixo.
+Para exportar dados, use o botão &quot;Exportar relatório&quot;, posicionado no canto superior direito da janela. Consulte a Figura 8./9./10. imagens abaixo.
 
-Um arquivo chamado **Report.csv** será baixado automaticamente no computador. Portanto, verifique se as configurações do seu navegador permitem o download de arquivos.
+Um arquivo chamado **Relatório.csv** serão baixados automaticamente no computador. Portanto, verifique se as configurações do seu navegador permitem o download de arquivos.
 
-O ícone de carregamento &quot;Exportar dados&quot; estará presente na tela, enquanto o arquivo Report.csv é calculado, o que pode assumir **até alguns minutos** dependendo do tamanho dos dados que você deseja exportar.
+O ícone de carregamento &quot;Exportar dados&quot; estará presente na tela enquanto o arquivo Report.csv é calculado, o que pode ocorrer **para alguns minutos** dependendo do tamanho dos dados que você deseja exportar.
 
-#### Relatórios TTL AuthN (#authn-ttl-reports)
+#### Relatórios AuthN TTL (#authn-ttl-reports)
 
-Este relatório exibe o Time-To-Live (TTL) do token de autenticação configurado para sua integração de Canal/s com vários MVPDs em todas as plataformas.
+Este relatório exibe o TTL (Time-To-Live) do token de autenticação configurado para sua integração com vários MVPDs em todas as plataformas.
 
-O token de autenticação Time-To-Live, também conhecido como **AuthN TTL**, é exibido em valores legíveis como: **dias, horas, minutos, segundos**.
+O tempo de vida do token de autenticação, que também é conhecido como **TTL AuthN**, é exibido em valores legíveis por humanos, como: **dias, horas, minutos, segundos**.
 
-Em termos de experiência do usuário, os relatórios de TTL do AuthN permitem inspecionar visualmente o tempo em que um usuário será autenticado, considerando um MVPD específico e uma plataforma específica.
+Em termos de experiência do usuário, os relatórios AuthN TTL permitem que você inspecione visualmente a quantidade de tempo que um usuário será autenticado considerando um MVPD específico e uma plataforma específica.
 
-Para navegar até esse tipo de relatório, clique na guia &quot;Relatórios de TTL do AuthN&quot; na seção &quot;Relatórios&quot;.
+Para navegar até este tipo de relatório, clique na guia &quot;AuthN TTL Reports&quot; na seção &quot;Reports&quot;.
 
-![Relatórios TTL AuthN](assets/authn-ttl-reports.png)
+![Relatórios AuthN TTL](assets/authn-ttl-reports.png)
 
-*Figura 8: A guia Relatório de AuthN TTL do painel do Adobe Primetime TVE*
+*Figura 8: Guia AuthN TTL Report do painel do Adobe Primetime TVE*
 
-A tabela Relatórios TTL do AuthN contém páginas e é rolável horizontal e verticalmente, dependendo do tamanho da tela.
+A tabela Relatórios AuthN TTL contém páginas e pode ser rolada horizontal e verticalmente, dependendo do tamanho da tela.
 
-Caso considere fazer uma alteração em um valor de TTL AuthN, revise a [Integrações](#tve-db-integrations-sec) seção.
-
->[!IMPORTANT]
->O &quot;**Definido por MVPD**&quot; espaço reservado é usado nos casos em que o MVPD será o que aplica o valor de TTL do AuthN e não a configuração de Autenticação do Adobe Primetime.
-
-
-#### Relatórios TTL de AuthZ {#authz-ttl-reports}
-
-Este relatório exibe o Time-To-Live (TTL) do token de autorização configurado para sua integração de Canal/s com vários MVPDs em todas as plataformas.
-
-O token de autorização Time-To-Live, também conhecido como **AuthZ TTL**, é exibido em valores legíveis como: **dias, horas, minutos, segundos**.
-
-Em termos de experiência do usuário, os relatórios TTL de AuthZ permitem inspecionar visualmente o tempo em que um usuário será autorizado, considerando um MVPD específico e uma plataforma específica.
-
-Para navegar até esse tipo de relatório, clique na guia &quot;Relatórios TTL de AuthZ&quot; na seção &quot;Relatórios&quot;.
-
-![Relatórios TTL de AuthZ](assets/authz-ttl-reports.png)
-
-*Figura 9. A guia Adobe Primetime TVE Dashboard AuthZ TTL Report*
-
-A tabela Relatórios TTL do AuthZ contém páginas e é rolável horizontal e verticalmente, dependendo do tamanho da tela.
-
-Se você considerar fazer uma alteração em um valor TTL de AuthZ, consulte a [Integrações](#tve-db-integrations-sec) seção.
+Caso considere fazer uma alteração em um valor AuthN TTL, revise o [Integrações](#tve-db-integrations-sec) seção.
 
 >[!IMPORTANT]
->O &quot;**Definido por MVPD**&quot; espaço reservado é usado nos casos em que o MVPD será o que aplica o valor de TTL do AuthZ e não a configuração de Autenticação do Adobe Primetime.
+>O &quot;**Definido por MVPD** O espaço reservado &quot; é usado nos casos em que o MVPD será o que impõe o valor AuthN TTL e não a configuração do Adobe Primetime Authentication.
+
+
+#### Relatórios TTL AuthZ {#authz-ttl-reports}
+
+Esse relatório exibe o TTL (Time-To-Live) do token de autorização configurado para sua integração com vários MVPDs em todas as plataformas.
+
+O token de autorização Time-To-Live, também conhecido como **TTL AuthZ**, é exibido em valores legíveis por humanos, como: **dias, horas, minutos, segundos**.
+
+Em termos de experiência do usuário, os relatórios AuthZ TTL permitem que você inspecione visualmente a quantidade de tempo que um usuário será autorizado considerando um MVPD específico e uma plataforma específica.
+
+Para navegar para este tipo de relatório, clique na guia &quot;AuthZ TTL Reports&quot; na seção &quot;Reports&quot;.
+
+![Relatórios TTL AuthZ](assets/authz-ttl-reports.png)
+
+*Figura 9. A guia Relatório TTL AuthZ do painel do Adobe Primetime TVE*
+
+A tabela Relatórios TTL AuthZ contém páginas e pode ser rolada horizontal e verticalmente, dependendo do tamanho da tela.
+
+Se você considerar fazer uma alteração em um valor TTL AuthZ, consulte a [Integrações](#tve-db-integrations-sec) seção.
+
+>[!IMPORTANT]
+>O &quot;**Definido por MVPD** O espaço reservado &quot; é usado nos casos em que o MVPD será o que impõe o valor TTL de AuthZ e não a configuração de Autenticação do Adobe Primetime.
 
 
 #### Relatórios de SSO {#sso-reports}
 
-Este relatório exibe o status de Logon Único (SSO) configurado para sua integração de Canal/s com vários MVPDs em todas as plataformas.
+Este relatório exibe o status do Single Sign-On (SSO) configurado para suas integrações de canal/s com vários MVPDs em todas as plataformas.
 
-O status de Logon único, também conhecido como **Status do SSO**, é exibido como um tristate com os seguintes valores possíveis: **SSO Desativado, SSO Ativado, SSO Incerto**.
+O status de Logon único, também conhecido como **Status do SSO**, é exibido como um tri-state com os seguintes valores possíveis: **SSO Desabilitado, SSO Habilitado, SSO Incerto**.
 
-Em termos de experiência do usuário, os relatórios de SSO permitem inspecionar visualmente a experiência de autenticação de usuário esperada, considerando um MVPD específico e uma plataforma específica.
+Em termos de experiência do usuário, os relatórios de SSO permitem inspecionar visualmente a experiência de SSO de autenticação do usuário esperada, considerando um MVPD específico e uma plataforma específica.
 
-Para navegar para esse tipo de relatório, clique no botão &quot;**Relatórios de SSO**&quot; na guia &quot;**Relatórios** seção &quot;.
-
-
-![Guia Relatórios SSO do painel TVE](assets/sso-reports.png)
+Para acessar esse tipo de relatório, clique no link &quot;**Relatórios de SSO** Guia &quot; na guia &quot;**Relatórios**&quot;.
 
 
-*Figura 10: A guia Relatórios SSO do painel Adobe Primetime TVE*
+![Guia de relatórios SSO do painel TVE](assets/sso-reports.png)
 
-A tabela Relatórios SSO contém páginas e é rolável horizontal e verticalmente dependendo do tamanho da tela.
 
-Caso considere fazer uma alteração em um status de SSO, revise a [Integrações](#tve-db-integrations-sec) seção.
+*Figura 10: Guia Relatórios SSO do painel do Adobe Primetime TVE*
+
+A tabela Relatórios de SSO contém páginas e pode ser rolada horizontal e verticalmente, dependendo do tamanho da tela.
+
+Caso considere fazer uma alteração em um status de SSO, revise o [Integrações](#tve-db-integrations-sec) seção.
 
 >[!IMPORTANT]
->&quot;**SSO Incerto**&quot; espaço reservado é usado nos casos em que o SSO é ativado e possível, mas as configurações da plataforma do usuário / decisões do usuário (por exemplo, a opção do navegador do usuário para bloquear cookies de terceiros, o usuário que opta por negar o acesso da plataforma à sua assinatura do Provedor de TV) ou as configurações do MVPD (por exemplo, o MVPD que solicita a autenticação em cada Canal) podem impedir que o SSO ocorra.
+>&quot;**SSO Incerto** O espaço reservado &quot; é usado nos casos em que o SSO está ativado e é possível, mas as configurações da plataforma do usuário/decisões do usuário (por exemplo, a opção do navegador do usuário de bloquear cookies de terceiros, a opção do usuário de negar acesso à plataforma para sua assinatura do Provedor de TV) ou as configurações de MVPD (por exemplo, o MVPD solicitando autenticação para cada Canal) podem impedir que o SSO ocorra.
 
 ### Log de alterações {#tve-db-changelog-sec}
 
-Esta seção exibe uma lista de todas as modificações enviadas pelo Painel TVE para o ambiente e a configuração de Autenticação do Adobe Primetime.
+Esta seção exibe uma lista de todas as modificações enviadas por meio do Painel TVE para o ambiente e a configuração de Autenticação do Adobe Primetime.
 
-Há colunas que indicam a data de push, o usuário que operou a modificação e o status do push.
+Há colunas que indicam a data do push, o usuário que operou a modificação e o status do push.
 
-Esta seção também permite a comparação de duas entradas da tabela para restringir as modificações específicas que você deseja inspecionar e até mesmo compartilhar a comparação como um item de email.
+Esta seção também permite a comparação de duas entradas da tabela para restringir as modificações específicas que você deseja inspecionar e até mesmo compartilhar a comparação como um item de e-mail.
 
 ### Feedback {#tve-db-feedback-sec}
 
-Esta seção permite que os usuários enviem comentários. Siga as etapas para fornecer feedback à equipe de produtos de Autenticação da Adobe Primetime:
+Esta seção permite que os usuários enviem comentários. Siga as etapas para fornecer feedback à equipe de produtos de autenticação da Adobe Primetime:
 
 * clique no botão &quot;Feedback&quot; no lado direito da tela
-* inserir o Assunto
-* digite a mensagem
-* se necessário, carregue uma captura de tela na mensagem clicando no botão &quot;Upload Screenshot&quot;
+* insira o assunto
+* insira a mensagem
+* se necessário, faça upload de uma captura de tela para a mensagem clicando no botão &quot;Fazer upload da captura de tela&quot;
 * clique no botão &quot;Enviar&quot;
 
 ![formulário de feedback do painel tve](assets/tve-dashboard-feedback.png)
 
-*Figura 11: A seção Feedback do painel TVE do Adobe Primetime*
+*Figura 11: Seção Feedback do painel do Adobe Primetime TVE*
 
-Para obter instruções sobre como capturar capturas de tela, visualize os links abaixo:
+Para obter instruções sobre como capturar capturas de tela, exiba os links abaixo:
 
 * [Como capturar capturas de tela no Windows](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b#1TC=windows-7)
 
@@ -499,17 +499,17 @@ Para obter instruções sobre como capturar capturas de tela, visualize os links
 *Figura: Aplicativo TVE no modo de manutenção*
 
 
-Caso o Painel TVE esteja no &quot;modo de manutenção&quot;, os usuários não poderão visualizar ou fazer novas alterações.
+Caso o painel TVE esteja no &quot;modo de manutenção&quot;, os usuários não poderão visualizar ou fazer novas alterações.
 
-Se isso ocorrer, será necessário aguardar a equipe de engenharia de Autenticação da Adobe Primetime para concluir o trabalho de manutenção no Painel TVE.
+Se isso ocorrer, será necessário aguardar a equipe de engenharia de Autenticação do Adobe Primetime concluir o trabalho de manutenção no Painel da TVE.
 
 ### Estado degradado {#degraded-state}
 
 ![Aplicativo TVE em estado degradado](assets/tve-degraded-state.png)
 
 
-*Figura: Aplicativo TVE em estado degradado*
+*Figura: aplicativo TVE em estado degradado*
 
-Caso o Painel TVE esteja em &quot;estado degradado&quot;, os usuários não terão recursos de pesquisa e classificação, mas os usuários poderão visualizar ou fazer novas alterações.
+Caso o painel TVE esteja em &quot;estado degradado&quot;, os usuários não terão recursos de pesquisa e classificação, mas eles poderão visualizar ou fazer novas alterações.
 
-Se isso ocorrer, será necessário aguardar a equipe de engenharia de Autenticação da Adobe Primetime para concluir o trabalho de manutenção no Painel TVE.
+Se isso ocorrer, será necessário aguardar a equipe de engenharia de Autenticação do Adobe Primetime concluir o trabalho de manutenção no Painel da TVE.

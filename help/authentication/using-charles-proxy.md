@@ -1,34 +1,34 @@
 ---
-title: Uso do proxy Charles
-description: Uso do proxy Charles
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Usando o Charles Proxy
+description: Usando o Charles Proxy
+exl-id: bb38543f-f6bc-4b5a-91b8-41bc51ee4c56
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
-
-# Uso do proxy Charles {#using-charles-proxy}
+# Usando o Charles Proxy {#using-charles-proxy}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 
 **Charles:** <http://charlesproxy.com>
 
  
-## Baixar, instalar e começar a usar o Charles Proxy {#download-install-and-get-stared-with-charles-proxy}
+## Download, instalação e introdução ao Charles Proxy {#download-install-and-get-stared-with-charles-proxy}
 
 - **Baixar** - <http://www.charlesproxy.com/download/>
 - **Instalar** - <http://www.charlesproxy.com/documentation/installation/>
 - **Introdução** - <http://www.charlesproxy.com/documentation/getting-started/>
 
  
-## Guias Estrutura x Sequência {#structure-vs-sequence-tabs}
+## Guias Estrutura vs Sequência {#structure-vs-sequence-tabs}
 
-Há duas maneiras diferentes de visualizar o tráfego:
+Há duas maneiras diferentes de exibir o tráfego:
 
 1. **Estrutura** - As solicitações são agrupadas por host
 1. **Sequência** - As solicitações são listadas na ordem em que são chamadas
@@ -45,20 +45,20 @@ Marque a caixa de seleção &quot;Ativar proxy SSL&quot; e adicione todos os loc
 
 
 
-- Proxies SSL - <http://www.charlesproxy.com/documentation/proxying/ssl-proxying/>
+- Proxying SSL - <http://www.charlesproxy.com/documentation/proxying/ssl-proxying/>
 - Certificados SSL - <http://www.charlesproxy.com/documentation/using-charles/ssl-certificates/>
-- Criação de proxy SSL em dispositivos móveis - Consulte abaixo.
+- Proxying SSL de dispositivos móveis - Consulte abaixo.
 
  
 ## Ignorar / Excluir hosts {#ignore-/-exclude-hosts}
 
-Se a saída se tornar muito desorganizada, é possível optar por ignorar ou excluir locais. Você pode ignorar ou excluir locais seguindo um destes procedimentos:
+Se a saída ficar muito desorganizada, você poderá optar por ignorar ou excluir locais. Você pode ignorar ou excluir locais seguindo um destes procedimentos:
 
 - Clique com o botão direito do mouse nas solicitações que deseja ignorar e selecione &quot;Ignorar&quot;
-- Adicionar manualmente as localizações a serem excluídas `\[ *Proxy -\> Recording Settings... -\> Exclude* \]`
+- Adicionar manualmente os locais dos quais excluir `\[ *Proxy -\> Recording Settings... -\> Exclude* \]`
 
  
-## Spoofing DNS {#dns-spoffing}
+## Falsificação de DNS {#dns-spoffing}
 
 `\[ *Tools -\> DNS Spoofing...* \]`
 
@@ -71,13 +71,13 @@ A falsificação de DNS é muito útil ao tentar redirecionar uma solicitação 
 <http://www.charlesproxy.com/documentation/tools/dns-spoofing/>
 
  
-## Mapear remoto {#map-remote}
+## Remota do mapa {#map-remote}
 
 `\[ *Tools -\> Map Remote...* \]`
 
  
 
-Com o mapa remoto, você pode redirecionar uma solicitação de &quot;entrada&quot; para um terminal diferente. O caso de uso mais comum para esse recurso é &quot;Mapear&quot; `AccessEnabler.swf` para `AccessEnablerDebug.swf:`
+Com o Map Remote, é possível redirecionar uma solicitação &quot;recebida&quot; para um endpoint diferente. O caso de uso mais comum desse recurso é o &quot;Mapeamento&quot; `AccessEnabler.swf` para `AccessEnablerDebug.swf:`
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemote.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemoteAdd.PNG)
 
@@ -89,11 +89,11 @@ Com o mapa remoto, você pode redirecionar uma solicitação de &quot;entrada&qu
 
 <http://www.charlesproxy.com/documentation/proxying/reverse-proxy/>
 
-## Celular {#mobile}
+## Dispositivo móvel {#mobile}
 
-### Usar o Charles em um dispositivo iOS (iPhone / iPad) {#use-charles-on-an-ios-device-(iphone-/-ipad)}
+### Usar o Charles em um dispositivo iOS (iPhone/iPad) {#use-charles-on-an-ios-device-(iphone-/-ipad)}
 
-#### Conexão SSL da iPhone {#ssl-connection-from-iphone}
+#### Conexão SSL do iPhone {#ssl-connection-from-iphone}
 
 Navegue até <http://charlesproxy.com/charles.crt> do seu dispositivo iOS.  Isso iniciará a caixa de diálogo de instalação do certificado:
 
@@ -107,9 +107,9 @@ Clique em `\[ *Install*... *Install*... *Done* \]` para concluir a instalaç
 
  
 
-#### Uso do Charles de um dispositivo iOS {#using-charles-from-an-ios-device}
+#### Uso do Charles em um dispositivo iOS {#using-charles-from-an-ios-device}
 
-No seu dispositivo iOS, selecione `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWORK)* \]`. Clique na pequena seta azul ao lado da rede, vá para HTTP Proxy e selecione &quot;Manual&quot;: 
+No dispositivo iOS, selecione `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWORK)* \]`. Clique na pequena seta azul ao lado da sua rede, vá para HTTP Proxy e selecione &quot;Manual&quot;: 
 
 
  </br>
@@ -118,14 +118,14 @@ No seu dispositivo iOS, selecione `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIF
 
 
  </br>
-Aqui você precisa especificar o IP e a porta da máquina em que você está executando o Charles. <span style="line-height: 1.6em;">Agora, se você abrir o Safari no dispositivo iOS e tentar abrir uma página da Web, deverá receber o seguinte pop-up na máquina que está executando o Charles:
+Aqui você precisa especificar o IP e a porta da máquina em que o Charles está sendo executado. <span style="line-height: 1.6em;">Se agora você abrir o Safari em seu dispositivo iOS e tentar abrir uma página da Web, você deve obter o seguinte pop-up na máquina que está executando o Charles:
  
  </br>
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy3.PNG)
 
 </br>
-Clique em "Permitir" para permitir que o dispositivo use o Charles para proxy em todas as solicitações.
+Clique em "Permitir" para permitir que o dispositivo use o Charles para fazer proxy de todas as suas solicitações.
 
 <http://www.charlesproxy.com/documentation/faqs/using-charles-from-an-iphone/>
 
@@ -134,7 +134,7 @@ Clique em "Permitir" para permitir que o dispositivo use o Charles para proxy em
 
 <http://stackoverflow.com/questions/933331/how-to-use-nsurlconnection-to-connect-with-ssl-for-an-untrusted-cert>
 
-#### Erro de autenticação do iOS - não é possível encontrar adobepass.ios.app
+#### Erro de autenticação do iOS - adobepass.ios.app não pode ser encontrado
 
 <https://tve.zendesk.com/entries/22135907-ios-authentication-error-adobepass-ios-app-cannot-be-found>
 
@@ -146,4 +146,4 @@ Clique em "Permitir" para permitir que o dispositivo use o Charles para proxy em
 <http://www.charlesproxy.com/documentation/configuration/browser-and-system-configuration>
 
 
-Navegue até [Charles proxy](http://charlesproxy.com/charles.crt) do seu dispositivo Android.
+Navegue até [Charles proxy](http://charlesproxy.com/charles.crt) do dispositivo Android.

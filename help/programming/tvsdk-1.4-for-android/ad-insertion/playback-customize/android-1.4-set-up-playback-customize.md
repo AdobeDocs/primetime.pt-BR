@@ -1,39 +1,37 @@
 ---
-description: Você pode personalizar ou substituir comportamentos de publicidade.
+description: Você pode personalizar ou substituir comportamentos de anúncios.
 title: Configurar reprodução personalizada
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: aaa4d1c2-c425-4a2e-8377-0a3072f3fb18
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Configurar reprodução personalizada {#cset-up-customized-playback}
 
-Você pode personalizar ou substituir o comportamento do anúncio, registrando a instância da política de anúncio com TVSDK.
+Você pode personalizar ou substituir o comportamento do anúncio registrando a instância da política de anúncios com o TVSDK.
 
-Para personalizar os comportamentos do anúncio, siga um destes procedimentos:
+Para personalizar comportamentos de anúncios, siga um destes procedimentos:
 
-* Implemente a interface `AdPolicySelector` e todos os seus métodos.
-Essa opção é recomendada se você precisar substituir todos os comportamentos de publicidade padrão.
+* Implementar o `AdPolicySelector` e todos os seus métodos.
+Essa opção é recomendada se você precisar substituir todos os comportamentos de anúncio padrão.
 
-* Estender a classe `DefaultAdPolicySelector` e fornecer implementações somente para os comportamentos que exigem
-personalização.
+* Estenda o `DefaultAdPolicySelector` e fornecem implementações somente para os comportamentos que exigem personalização.
 Essa opção é recomendada se você precisar substituir apenas alguns dos comportamentos padrão.
 
 Para ambas as opções, conclua as seguintes tarefas:
 
-Para personalizar os comportamentos do anúncio:
+Para personalizar comportamentos de anúncios:
 
 1. Implemente a interface AdPolicySelector e todos os seus métodos.
 
-1. Atribua a instância de política a ser usada pelo TVSDK por meio do setor de publicidade.
+1. Atribua a instância de política a ser usada pelo TVSDK por meio da fábrica de publicidade.
 
 >[!IMPORTANT]
 >
->As políticas de anúncio personalizadas registradas no início da reprodução são apagadas quando a instância MediaPlayer é >desalocada. O aplicativo deve registrar uma instância de política > seletor sempre que uma nova sessão de reprodução for criada.
+>As políticas de anúncios personalizados registradas no início da reprodução são apagadas quando a ocorrência do MediaPlayer é desalocada. Seu aplicativo deve registrar uma ocorrência de seletor de política sempre que uma nova sessão de reprodução é criada.
 
 Por exemplo:
 

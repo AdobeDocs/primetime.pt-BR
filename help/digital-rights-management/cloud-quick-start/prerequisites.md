@@ -2,19 +2,18 @@
 title: Pré-requisitos
 description: Pré-requisitos
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1b66f7fd-ea2f-4217-b327-910e90ab889d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
-
 # Pré-requisitos {#prerequisites}
 
-Antes de empacotar conteúdo, é necessário um certificado Primetime DRM Packager. Ele deve ser solicitado por meio do Processo de Registro de Certificado DRM Primetime. Somente um certificado do empacotador é necessário (sem License Server ou Transport). Indique no email Solicitação de certificado que a solicitação é um certificado para uso com o serviço de DRM.
+Antes de empacotar o conteúdo, é necessário um certificado do Empacotador de DRM do Primetime. Ela deve ser solicitada por meio do Processo de Registro de Certificado DRM do Primetime. Somente um certificado de empacotador é necessário (sem License Server ou Transporte). Indique no e-mail de solicitação de certificado que a solicitação é para um certificado a ser usado com o serviço DRM.
 
-[Guia de inscrição de certificados](../../digital-rights-management/certificate-enrollment-guide/about-certs.md)
+[Guia de Registro de Certificado](../../digital-rights-management/certificate-enrollment-guide/about-certs.md)
 
-Existem dois níveis de certificados de embalagem - PRODUÇÃO e ENSAIO. O conteúdo que é empacotado usando certificados de AVALIAÇÃO é somente para uso de desenvolvimento e não será reproduzido após a expiração do certificado. Todas as licenças emitidas para o conteúdo da AVALIAÇÃO terão uma data de expiração máxima da política codificada igual à data de expiração do certificado (se não estiver definida na política de DRM).
+Há dois níveis de certificados de empacotamento - PRODUÇÃO e AVALIAÇÃO. O conteúdo que é empacotado usando certificados de AVALIAÇÃO é somente para uso de desenvolvimento e não será reproduzido após a expiração do certificado. Todas as licenças emitidas para conteúdo de AVALIAÇÃO terão uma data de expiração máxima da política embutida em código igual à data de expiração do certificado (se não estiver definida na política DRM).

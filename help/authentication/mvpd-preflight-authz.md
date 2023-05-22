@@ -1,39 +1,39 @@
 ---
-title: Autorização de Comprovação de MVPD
-description: Autorização de Comprovação de MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Autorização de simulação do MVPD
+description: Autorização de simulação do MVPD
+exl-id: da2e7150-b6a8-42f3-9930-4bc846c7eee9
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
-
-# Autorização de Comprovação de MVPD
+# Autorização de simulação do MVPD
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 ## Introdução {#mvpd-preflight-authz-intro}
 
-&quot;Autorização de comprovação&quot; é uma verificação de autorização leve para vários recursos. Os programadores o usam principalmente para decorar suas interfaces de usuário (por exemplo, indicando o status de acesso com ícones de bloqueio e desbloqueio).
+A &quot;Autorização de comprovação&quot; é uma verificação de autorização simples para vários recursos. Os programadores o usam principalmente para decorar suas interfaces (por exemplo, indicando o status de acesso com ícones de bloqueio e desbloqueio).
 
-No momento, a autenticação do Adobe Primetime pode oferecer suporte à Autorização de comprovação de duas maneiras para MVPDs, seja por meio de atributos de resposta AuthN ou por meio de uma solicitação multicanal AuthZ.  Os seguintes cenários descrevem o custo/benefício das diferentes maneiras de implementar a autorização de comprovação:
+Atualmente, a autenticação do Adobe Primetime pode oferecer suporte à Autorização de comprovação de duas maneiras para MVPDs, por meio de atributos de resposta AuthN ou por meio de uma solicitação AuthZ multicanal.  Os cenários a seguir descrevem o custo/benefício das diferentes maneiras de implementar a autorização de comprovação:
 
-* **Cenário de Melhor Caso** - O MVPD fornece a lista de recursos pré-autorizados durante a fase de autorização (Multi-channel AuthZ).
-* **Cenário de pior cenário** - Se um MVPD não oferecer suporte a nenhuma forma de autorização de vários recursos, o servidor de autenticação da Adobe Primetime executará uma chamada de autorização para o MVPD para cada recurso na lista de recursos. Este cenário tem um impacto (proporcional ao número de recursos) no tempo de resposta da solicitação de autorização de comprovação. Ele pode aumentar a carga nos servidores Adobe e MVPD, causando problemas de desempenho. Além disso, ele gerará eventos de solicitações / respostas de autorização sem a necessidade real de uma reprodução.
+* **Cenário mais favorável** - O MVPD fornece a lista de recursos pré-autorizados durante a fase de autorização (Multi-channel AuthZ).
+* **Pior cenário** - Se um MVPD não suportar nenhuma forma de autorização de vários recursos, o servidor de autenticação do Adobe Primetime executará uma chamada de autorização para o MVPD para cada recurso na lista de recursos. Esse cenário tem um impacto (proporcional ao número de recursos) no tempo de resposta da solicitação de autorização de comprovação. Ele pode aumentar a carga nos servidores Adobe e MVPD, causando problemas de desempenho. Além disso, ele gerará eventos de solicitações/respostas de autorização sem a necessidade real de uma reprodução.
 * **Obsoleto** - O MVPD fornece a lista de recursos pré-autorizados durante a fase de autenticação, de modo que não haverá chamadas de rede necessárias, nem mesmo a solicitação de comprovação, já que a lista é armazenada em cache no cliente.
 
-Embora os MVPDs não tenham de suportar a autorização de comprovação, as seções a seguir descrevem alguns métodos de autorização de comprovação que a autenticação da Adobe Primetime pode suportar, antes de voltar ao pior cenário de caso acima.
+Embora os MVPDs não precisem oferecer suporte à autorização de comprovação, as seções a seguir descrevem alguns métodos de autorização de comprovação compatíveis com a autenticação do Adobe Primetime, antes de retornar ao cenário de pior caso acima.
 
-## Comprovação no AuthN {#preflight-authn}
+## Comprovação em AuthN {#preflight-authn}
 
-Este cenário de comprovação é Compatível com OLCA (Cableabs). A seção 7.5.2 da Especificação da Interface de Autenticação e Autorização 1.0, intitulada &quot;Instrução de Atributo Dentro da Asserção de Autenticação&quot;, descreve como uma resposta de autenticação SAML pode conter uma lista de recursos pré-autorizados. Se um IdP suportar isso, o servidor de autenticação da Adobe Primetime poderá gerar a lista de recursos predefinidos no momento da autenticação e armazená-la em cache no cliente junto com o Token de autenticação. Esse método também obtém o melhor cenário de caso, e nenhuma chamada de rede será executada quando o Programador chamar checkPreauthorizedResources(), pois tudo já está no cliente.
+Esse cenário de comprovação é compatível com OLCA (Cabeçalhos). A seção 7.5.2 da Especificação da Interface de Autenticação e Autorização 1.0, intitulada &quot;Declaração de Atributo na Asserção de Autenticação&quot;, descreve como uma resposta de autenticação SAML pode conter uma lista de recursos pré-autorizados. Se um IdP suportar isso, o servidor de autenticação da Adobe Primetime poderá gerar a lista de recursos previamente configurada no momento da autenticação e armazená-la em cache no cliente, juntamente com o token de autenticação. Este método também alcança o melhor cenário, e nenhuma chamada de rede será executada quando o Programador chamar checkPreauthorizedResources(), já que tudo já está no cliente.
 
-### Lista de recursos personalizados na instrução de atributos SAML {#custom-res-saml-attr}
+### Lista de Recursos Personalizados na Instrução de Atributo SAML {#custom-res-saml-attr}
 
-A resposta de autenticação SAML do IdP deve incluir uma AttributeStatement contendo nomes de recursos que o AdobePass deve autorizar.  Alguns MVPDs fornecem isso no seguinte formato:
+A resposta de autenticação SAML do IdP deve incluir uma AttributeStatement que contenha nomes de recursos que o AdobePass deve autorizar.  Alguns MVPDs fornecem isso no seguinte formato:
 
 ```XML
 <saml:AttributeStatement>
@@ -44,19 +44,19 @@ A resposta de autenticação SAML do IdP deve incluir uma AttributeStatement con
 </saml:AttributeStatement>
 ```
 
-A amostra acima apresenta uma lista contendo dois recursos pré-autorizados: &quot;MMOD&quot; e &quot;Olimpíadas 2012&quot;.
+A amostra acima apresenta uma lista contendo dois recursos pré-autorizados: &quot;MMOD&quot; e &quot;Olympic2012&quot;.
 
-Isso efetivamente atinge o melhor cenário de caso, e nenhuma chamada de rede será executada quando o Programador chamar checkPreauthorizedResources(), já que tudo já está no cliente.
+Isso efetivamente atinge o melhor cenário, e nenhuma chamada de rede será executada quando o Programador chamar checkPreauthorizedResources(), já que tudo já está no cliente.
 
-## Comprovação de vários canais no AuthZ {#preflight-multich-authz}
+## Comprovação de vários canais em AuthZ {#preflight-multich-authz}
 
-Essa implementação de comprovação também é compatível com OLCA (Cablelabs).  A Especificação da Interface de Autenticação e Autorização 1.0 (seções 7.5.3 e 7.5.4) descreve métodos para solicitar informações de Autorização de um MVPD usando Asserções SAML ou XACML. Essa é a maneira recomendada de consultar o status de autorização para MVPDs que não oferecem suporte a isso como parte do fluxo de autenticação. A autenticação da Adobe Primetime emite uma única chamada de rede para o MVPD para recuperar a lista de recursos autorizados.
+Essa implementação de comprovação também é compatível com OLCA (Cablelabs).  A Especificação da Interface de Autenticação e Autorização 1.0 (seções 7.5.3 e 7.5.4) descreve métodos para solicitar informações de Autorização de um MVPD usando Asserções SAML ou XACML. Essa é a maneira recomendada de consultar o status de autorização para MVPDs que não oferecem suporte a isso como parte do fluxo de autenticação. A autenticação do Adobe Primetime emite uma única chamada de rede para o MVPD para recuperar a lista de recursos autorizados.
 
 
-A autenticação da Adobe Primetime recebe a lista de recursos do aplicativo do Programador. A integração MVPD da autenticação da Adobe Primetime pode fazer uma chamada AuthZ incluindo todos esses recursos e, em seguida, analisar a resposta e extrair as várias decisões de permissão/negação.  O fluxo para a comprovação com o cenário AuthZ de vários canais funciona da seguinte maneira:
+A autenticação do Adobe Primetime recebe a lista de recursos do aplicativo do programador. A integração MVPD da autenticação do Adobe Primetime pode fazer uma chamada AuthZ incluindo todos esses recursos e, em seguida, analisar a resposta e extrair as várias decisões de permissão/negação.  O fluxo para a comprovação com o cenário AuthZ multicanal funciona da seguinte maneira:
 
-1. O aplicativo do Programador envia uma lista separada por vírgulas de recursos por meio da API do cliente de comprovação, por exemplo: &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
-1. A chamada de solicitação de pré-voo AuthZ do MVPD contém os vários recursos e tem a seguinte estrutura:
+1. O aplicativo do programador envia uma lista de recursos separada por vírgulas por meio da API do cliente de comprovação, por exemplo: &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
+1. A chamada de solicitação AuthZ de comprovação do MVPD contém os vários recursos e tem a seguinte estrutura:
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?><soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"> 
@@ -115,19 +115,19 @@ A autenticação da Adobe Primetime recebe a lista de recursos do aplicativo do 
 
 ## Autorização Personalizada Para Vários Recursos {#custom-authz}
 
-Alguns MVPDs têm endpoints de autorização que oferecem suporte à autorização para vários recursos em uma solicitação, mas não se enquadram no cenário descrito em Multi-channel AuthZ. Esses MVPDs específicos exigem trabalho personalizado.
+Alguns MVPDs têm endpoints de autorização que oferecem suporte à autorização para vários recursos em uma solicitação, mas não se enquadram no cenário descrito em AuthZ multicanal. Esses MVPDs específicos exigem trabalho personalizado.
 
-O Adobe também pode suportar autorização de vários canais sem alterações na implementação existente.  Essa abordagem precisa ser revista entre o Adobe e a equipe técnica do MVPD para garantir que funcione conforme esperado.
+O Adobe também pode suportar autorização de vários canais sem alterar a implementação existente.  Essa abordagem precisa ser revisada entre o Adobe e a equipe técnica do MVPD para garantir que funcione conforme esperado.
 
 ## MVPDs que oferecem suporte à autorização de comprovação {#mvpds-supp-preflight-authz}
 
-A tabela a seguir lista os MVPDs que oferecem suporte à Autorização de Comprovação, juntamente com o tipo de comprovação que eles suportam e as limitações conhecidas:
+A tabela a seguir lista os MVPDs compatíveis com a Autorização de comprovação, juntamente com o tipo de comprovação compatível e as limitações conhecidas:
 
 | Abordagem de comprovação | MVPD | Notas |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| AuthZ multicanal | Comcast Proxy AT&amp;T Clearleap Letter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
-| Lineup de canal em metadados do usuário | Suddenlink HTC | Todas as integrações diretas do Synacor também podem suportar essa abordagem. |
-| Bifurcar e unir | Todos os outros não listados acima | O número máximo padrão de recursos marcados = 5. |
+| AuthZ multicanal | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
+| Alinhamento de canais nos metadados do usuário | Suddenlink HTC | Todas as integrações diretas do Synacor também podem suportar esta abordagem. |
+| Bifurcação e Junção | Todos os outros não listados acima | O número máximo padrão de recursos verificados = 5. |
 
 <!--
 ![RelatedInformation]

@@ -1,28 +1,27 @@
 ---
-title: Baixe e configure o software de pré-requisito
-description: O processo de instalação é simples. Se você já tiver o JDK instalado em seu sistema, ignore esta etapa, mas saiba que seu JDK, Eclipse IDE e o SO precisam ser compatíveis.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Faça o download e configure os softwares de pré-requisito
+description: O processo de instalação é simples. Se você já tiver o JDK instalado no sistema, ignore esta etapa, mas esteja ciente de que o JDK, o Eclipse IDE e o SO precisam ser compatíveis.
+exl-id: c2884a55-4f5e-4da8-807d-633625d7fef9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
+# Faça o download e configure os softwares de pré-requisito {#download-and-configure-prerequisite-software}
 
-# Baixe e configure o software de pré-requisito {#download-and-configure-prerequisite-software}
+1. Baixar o JDK de [https://www.oracle.com/technetwork/java/javase/downloads/](https://www.oracle.com/technetwork/java/javase/downloads/).
 
-1. Baixe o JDK em [https://www.oracle.com/technetwork/java/javase/downloads/](https://www.oracle.com/technetwork/java/javase/downloads/).
-
-   O processo de instalação é simples. Se você já tiver o JDK instalado em seu sistema, ignore esta etapa, mas saiba que seu JDK, Eclipse IDE e o SO precisam ser compatíveis.
+   O processo de instalação é simples. Se você já tiver o JDK instalado no sistema, ignore esta etapa, mas esteja ciente de que o JDK, o Eclipse IDE e o SO precisam ser compatíveis.
 1. Baixe o Eclipse IDE para desenvolvedores Java em [https://www.eclipse.org/downloads](https://www.eclipse.org/downloads).
 
-   Depois de descompactar o pacote, você pode executar o Eclipse diretamente. Não há instalador.
-1. Baixe o pacote ADT do Android SDK em [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html).
+   Após descompactar o pacote, você pode executar o Eclipse diretamente. Não há instalador.
+1. Baixe o pacote ADT do SDK do Android em [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html).
 
-   Esse pacote inclui o Eclipse. Se você já tiver o Eclipse instalado em seu sistema, poderá baixar as Ferramentas do SDK para sua plataforma na seção [!UICONTROL Use An Existing IDE].
+   Esse pacote inclui o Eclipse. Se você já tiver o Eclipse instalado em seu sistema, poderá baixar as Ferramentas de SDK para sua plataforma na [!UICONTROL Use An Existing IDE] seção.
 
-   Descompacte e instale em um local que você lembrará. Você precisará fazer referência a isso em uma etapa posterior.
+   Descompacte e instale em um local que você se lembrará. Você precisará consultar isso em uma etapa posterior.
 1. Configure o Android SDK.
    1. Abra um terminal (no Mac OS X) ou um prompt de comando (no Windows).
    1. Navegue até o diretório onde você baixou/descompactou o Android SDK.
@@ -42,36 +41,34 @@ ht-degree: 0%
          android update sdk --no-ui
          ```
 
-         Esse processo leva algum tempo.
+         Esse processo leva um tempo.
 
-1. Configure o Eclipse.
+1. Configurar o Eclipse.
    1. Inicie o Eclipse.
 
-      No Windows, se o Eclipse não iniciar e o problema reportado for que o Eclipse não consegue localizar um arquivo Java necessário, tente o seguinte:
+      No Windows, se o Eclipse não iniciar e o problema relatado for que o Eclipse não pode encontrar um arquivo Java necessário, tente o seguinte:
 
-      * adicione `-vm C:\[path to your JDK bin]\javaw.exe` ao arquivo [!DNL eclipse.ini].
-   1. Selecione **[!UICONTROL Help]** > **[!UICONTROL Install New Software]** .
+      * adicionar `-vm C:\[path to your JDK bin]\javaw.exe` ao seu [!DNL eclipse.ini] arquivo.
+   1. Selecionar  **[!UICONTROL Help]** > **[!UICONTROL Install New Software]** .
    1. Clique em **[!UICONTROL Add...]**.
-   1. Insira `Android` para o nome.
-   1. Insira `https://dl-ssl.google.com/android/eclipse/` para o link **[!UICONTROL Work with]**.
+   1. Enter `Android` para o nome.
+   1. Enter `https://dl-ssl.google.com/android/eclipse/` para o **[!UICONTROL Work with]** link.
    1. Clique em **[!UICONTROL OK]**.
 
       Você deve ver uma caixa de diálogo semelhante a esta:
 
       ![](assets/available_software.jpg)
 
-   1. Selecione os pacotes resultantes (em Ferramentas do desenvolvedor e Plug-ins do NDK) e clique em **[!UICONTROL Next]**.
+   1. Selecione os pacotes resultantes (aqueles em Ferramentas do desenvolvedor e Plug-ins NDK) e clique em **[!UICONTROL Next]**.
 
       Isso baixa as Ferramentas de desenvolvimento do Android (ADT).
-   1. Depois que o download for concluído, reinicie o Eclipse.
+   1. Após concluir o download, reinicie o Eclipse.
 
-   O Android SDK agora está instalado. 1. Configure o Eclipse para encontrar o Android SDK e usá-lo como um recurso.
+   O Android SDK agora está instalado. 1. Configure o Eclipse para que ele possa encontrar o Android SDK e usá-lo como um recurso.
    1. Abra o Eclipse.
-   1. Selecione **[!UICONTROL Window]** > **[!UICONTROL Preferences]** no Windows;  **[!UICONTROL ADT]** > **[!UICONTROL Preferences]** no Mac OS X.
-   1. Selecione a guia **[!UICONTROL Android]**.
+   1. Selecionar  **[!UICONTROL Window]** > **[!UICONTROL Preferences]** no Windows;  **[!UICONTROL ADT]** > **[!UICONTROL Preferences]** no Mac OS X.
+   1. Selecione o **[!UICONTROL Android]** guia.
    1. Navegue até o local do Android SDK.
    1. Clique em **[!UICONTROL Apply]**.
 
       ![Resultado da etapa](assets/ss2.jpg)
-
-

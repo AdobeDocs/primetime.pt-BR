@@ -1,18 +1,17 @@
 ---
-description: Se você usar a configuração padrão, não há mais nada que você precise fazer para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do representante de Ativação do Adobe, use a classe BillingMetricsConfiguration para definir esses parâmetros antes de inicializar o reprodutor de mídia.
-title: Configurar métricas de faturamento
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Se você usar a configuração padrão, nada mais precisará ser feito para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do representante de Ativação de Adobe, use a classe BillingMetricsConfiguration para definir esses parâmetros antes de inicializar o reprodutor de mídia.
+title: Configurar métricas de cobrança
+exl-id: e3b97de6-8442-463f-b5b0-0dec34aa7735
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
+# Configurar métricas de cobrança {#configure-billing-metrics}
 
-# Configurar métricas de faturamento {#configure-billing-metrics}
-
-Se você usar a configuração padrão, não há mais nada que você precise fazer para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do representante de Ativação do Adobe, use a classe BillingMetricsConfiguration para definir esses parâmetros antes de inicializar o reprodutor de mídia.
+Se você usar a configuração padrão, nada mais precisará ser feito para habilitar ou configurar o faturamento. Se você obteve parâmetros de configuração diferentes do representante de Ativação de Adobe, use a classe BillingMetricsConfiguration para definir esses parâmetros antes de inicializar o reprodutor de mídia.
 
 >[!TIP]
 >
@@ -20,7 +19,7 @@ Se você usar a configuração padrão, não há mais nada que você precise faz
 
 >[!IMPORTANT]
 >
->A configuração definida permanece em vigor durante a vida útil do reprodutor de mídia. Depois de inicializar o reprodutor de mídia, não é possível alterar a configuração.
+>A configuração definida permanece em vigor durante a vida útil do reprodutor de mídia. Após inicializar o reprodutor de mídia, não é possível alterar a configuração.
 
 Para configurar métricas de faturamento:
 

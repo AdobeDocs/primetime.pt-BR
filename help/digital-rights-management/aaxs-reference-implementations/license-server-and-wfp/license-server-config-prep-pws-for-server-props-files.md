@@ -1,36 +1,35 @@
 ---
-title: Preparando senhas para os arquivos de propriedades do servidor
-description: Preparando senhas para os arquivos de propriedades do servidor
+title: Preparando senhas para os arquivos de propriedades do Servidor
+description: Preparando senhas para os arquivos de propriedades do Servidor
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 70f75640-7075-450a-8191-dc348bd269b8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
+# Preparando senhas para os arquivos de propriedades do Servidor {#preparing-passwords-for-the-server-properties-files}
 
-# Preparando senhas para os arquivos de propriedades do servidor {#preparing-passwords-for-the-server-properties-files}
-
-Para garantir a segurança da senha da credencial, uma ferramenta é fornecida para criptografar a senha antes de ela ser inserida no arquivo [!DNL flashaccess-refimpl.properties] ou [!DNL flashaccess-refimpl-packager.properties].
+Para garantir a segurança da senha da sua credencial, uma ferramenta é fornecida para criptografar a senha antes que ela seja inserida na [!DNL flashaccess-refimpl.properties] ou [!DNL flashaccess-refimpl-packager.properties] arquivo.
 
 Para executar a ferramenta usando o script ANT fornecido:
 
-* Vá para *`<Reference Implementation Server Path>`* [!DNL \refimpl]
+* Ir para *`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* Verifique se a propriedade `sdkdir` em [!DNL build-refimpl.xml] aponta para o diretório que contém o SDK do Adobe Access
+* Assegure a `sdkdir` propriedade no [!DNL build-refimpl.xml] aponta para o diretório que contém o SDK de acesso do Adobe
 * Execute o seguinte comando usando ANT:
 
    ```
        ant -f build-refimpl.xml
    ```
 
-* Quando solicitado, digite a senha da credencial
+* Quando solicitado, digite a senha da sua credencial
 
-Para executar a ferramenta usando o Java:
+Para executar a ferramenta usando Java:
 
-* Vá para *`<Reference Implementation Server Path>`*\ [!DNL scrambler]
+* Ir para *`<Reference Implementation Server Path>`*\ [!DNL scrambler]
 
 * No prompt de comando, digite o comando:
 
@@ -48,8 +47,8 @@ Para executar a ferramenta usando o Java:
        com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
    ```
 
-O utilitário gera a senha criptografada, que deve ser copiada para o arquivo .properties .
+O utilitário gera a senha criptografada, que você deve copiar para o arquivo .properties.
 
 >[!NOTE]
 >
->As senhas codificadas com o uso do utilitário de digitação de senha fornecido com a implementação de referência não funcionarão com o Adobe Access Server for Protected Streaming.
+>As senhas codificadas usando o utilitário de codificação de senhas fornecido com a implementação de referência não funcionarão com o Adobe Access Server para transmissão protegida.

@@ -1,42 +1,41 @@
 ---
-title: Recurso de comprovação, como ativar, solucionar problemas ou determinar o problema
-description: Recurso de comprovação, como ativar, solucionar problemas ou determinar o problema
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Recurso de comprovação, como ativar, solucionar ou determinar o problema
+description: Recurso de comprovação, como ativar, solucionar ou determinar o problema
+exl-id: 9e4ec343-371f-4116-915f-191e5f42cb47
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 0%
 
 ---
 
-
-# Recurso de comprovação: Como ativar, solucionar problemas ou determinar o problema {#preflight-feature}
+# Recurso de comprovação: como ativar, solucionar ou determinar o problema {#preflight-feature}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
-Houve uma alteração na maneira como a autenticação da Adobe Primetime calcula preAuthorizeResources. A API de pré-autorização tem uma nova implementação. Essa implementação substitui a solução antiga, que consiste em fazer várias chamadas de autorização somente.
-A interface externa da API de Pré-autorização permanece inalterada, nenhuma atualização é necessária no aplicativo do Programador.
+Houve uma mudança na maneira como a autenticação do Adobe Primetime computa preAuthorizeResources. A API de pré-autorização tem uma nova implementação. Essa implementação substitui a solução antiga, que consiste em fazer várias chamadas de autorização somente.
+A interface externa da API de pré-autorização não foi alterada. Nenhuma atualização é necessária no aplicativo do programador.
 
 Há três maneiras de calcular os recursos de Comprovação:
 
-* **Bifurcar e unir método ao MVPD**: isso envolve Adobe fazendo várias chamadas de autorização para o MVPD (o cliente ainda terá que fazer uma chamada de pré-voo).
-* **Linha de canal**: o MVPD expõe a linha de canal para o usuário conectado na resposta de autenticação SAML e o Adobe retorna os recursos autorizados com base nisso. A resposta authN SAML no marcador SAML deve expor essa lista.
-* **Autorização de vários canais**: a autenticação cliente e Adobe faz uma única chamada para o MVPD para um conjunto de recursos.
+* **Fork e método join para MVPD**: envolve a Adobe fazer várias chamadas de autorização para o MVPD (embora o cliente ainda tenha que fazer uma chamada de comprovação).
+* **Linha de canal**: o MVPD expõe a linha de canal para o usuário conectado na resposta de autenticação SAML e o Adobe retorna os recursos autorizados com base nisso. A resposta authN do SAML no rastreador SAML deve expor essa lista.
+* **Autorização multicanal**: a autenticação de cliente e Adobe faz uma única chamada ao MVPD para um conjunto de recursos.
 
-Independentemente do MVPD, o aplicativo Client fará uma única chamada para o endpoint Preflight (API checkPreauthorizedResources), transmitindo um conjunto de resourceIDs. Com base em uma das maneiras acima suportadas pelo MVPD, o Adobe retornará os resourceIDs pré-autorizados.
+Independentemente do MVPD, o aplicativo Cliente fará uma única chamada para o endpoint de Comprovação (checkPreauthorizedResources API), transmitindo um conjunto de resourceIDs. Com base em uma das maneiras suportadas pelo MVPD, o Adobe retornará as resourceIDs pré-autorizadas.
 
-Se a Comprovação for baseada no método de bifurcação e associação, o back-end da Autenticação do Adobe Primetime verificará um valor definido para as &quot;chamadas de pré-autorização máximas&quot; em sua configuração. Isso é configurado pelo Adobe.
+Se a Comprovação for baseada no método fork &amp; join, o back-end de Autenticação do Adobe Primetime verificará um valor definido para o &quot;máximo de chamadas de pré-autorização&quot; em sua configuração. Isso é configurado pelo Adobe.
 
-O valor padrão para a configuração &#39;max preauthorization calls&#39; é &#39;5&#39;, o que significa que no máximo apenas 5 recursos podem ser enviados em Preflight para a bifurcação e unir MVPDs. Passar mais de 5 recursos resultará em uma exceção e uma lista nula será retornada. Esse é o comportamento esperado. Podemos configurá-lo para qualquer valor se o MVPD não oferecer suporte à linhagem de canais ou à autorização de vários canais, mas somente após consultá-los como várias chamadas de bifurcação e autorização de associação aumentará seu tempo de carregamento.
+O valor padrão para a configuração &quot;máximo de chamadas de pré-autorização&quot; é &quot;5&quot;, o que significa que, no máximo, apenas 5 recursos podem ser enviados na Comprovação para os MVPDs fork &amp; join. Transmitir mais de 5 recursos resultará em uma exceção e uma lista nula será retornada. Esse é o comportamento esperado. Podemos configurá-lo com qualquer valor se o MVPD não for compatível com a programação de canais ou autorização de vários canais, mas somente depois de consultá-los, pois várias chamadas de autorização de bifurcação e junção aumentarão seus tempos de carregamento.
 
-Consequentemente, essas são coisas que devem ser procuradas ao ativar/solucionar problemas de Comprovação para um MVPD:
+Consequentemente, estes são os itens que devem ser procurados ao ativar/solucionar problemas de simulação de um MVPD:
 
-* O método que o MVPD suporta (bifurcação e associação, line-up de canal ou multicanal).
-* Se houver suporte para apenas bifurcação e associação, será necessário perguntar ao Programador quantas IDs de recurso ele estará enviando na chamada de Comprovação.
-* O MVPD precisa ser consultado e precisa saber o impacto de fazer um número &quot;n&quot; de bifurcações e chamadas de autorização de associação. Depois, o valor deve ser configurado na configuração se for maior que 5.
+* O método que o MVPD aceita (bifurcação e junção, linha de canal ou vários canais).
+* Se somente houver suporte para bifurcação e junção, o Programador precisará ser perguntado quantas resourceIDs ele enviará na chamada de Comprovação.
+* O MVPD precisa ser consultado e precisa saber o impacto de fazer um número &quot;n&quot; de chamadas de autorização de bifurcação e associação. Posteriormente, o valor deve ser configurado na configuração se for maior que 5.
 
 **Limitação**
 
-Observe que não obtemos nenhum resourceID da chamada de Comprovação para alguns MVPDs como AT&amp;T e TWC se qualquer um dos resourceIDs for uma ID falsa ou uma ID não reconhecida na lista de resourceIDs que eles enviam na chamada de comprovação, mesmo que tenhamos recursos válidos e autorizados também nessa lista.
-
+Observe que não obtemos nenhuma resourceID de volta da chamada de Comprovação para alguns MVPDs, como AT&amp;T e TWC, se qualquer uma das resourceIDs for uma ID falsa ou uma ID não reconhecida na lista de resourceIDs enviadas na chamada de comprovação, mesmo que também tenhamos recursos válidos e autorizados nessa lista.

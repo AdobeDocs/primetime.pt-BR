@@ -1,7 +1,6 @@
 ---
-description: As alterações a seguir no TVSDK são compatíveis com exclusão e substituição de anúncios.
-title: Exclusão de anúncios e alterações da API de substituição
-translation-type: tm+mt
+description: As seguintes alterações no TVSDK oferecem suporte à exclusão e substituição de anúncios.
+title: Alterações na exclusão de anúncios e na API de substituição
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '316'
@@ -10,42 +9,42 @@ ht-degree: 0%
 ---
 
 
-# A exclusão de anúncios e as alterações de substituição da API{#ad-deletion-and-replacement-api-changes}
+# Alterações na exclusão de anúncios e na API de substituição{#ad-deletion-and-replacement-api-changes}
 
-As alterações a seguir no TVSDK são compatíveis com exclusão e substituição de anúncios.
+As seguintes alterações no TVSDK oferecem suporte à exclusão e substituição de anúncios.
 
 **Novas APIs**
 
 * `PTTimeRangeCollection` é uma classe pública que define um conjunto predefinido de intervalos e um tipo:
 
    * `property PTTimeRangeCollectionType type` indica o tipo de intervalo de tempo.
-   * `property NSArray* ranges` é usada para definir os intervalos de tempo.
+   * `property NSArray* ranges` é usado para definir os intervalos de tempo.
 
-      O tipo esperado de objetos na matriz é `PTReplacementTimeRange` ou `CMTimeRange`.
+      Os tipos esperados de objetos na matriz são `PTReplacementTimeRange` ou `CMTimeRange`.
 
       >[!TIP]
       >
       >Todos os objetos da matriz devem ser do mesmo tipo.
 
-   * `PTTimeRangeCollectionType` é um enum que define o comportamento dos intervalos definidos no  `PTTimeRangeCollection`:
+   * `PTTimeRangeCollectionType` é um enum que define o comportamento dos intervalos definidos na variável `PTTimeRangeCollection`:
 
-      * `PTTimeRangeCollectionTypeMarkRanges`: O tipo dos intervalos é  *Mark*. Os intervalos são usados para marcar os intervalos no conteúdo como Anúncios.
+      * `PTTimeRangeCollectionTypeMarkRanges`: o tipo dos intervalos é *Marcar*. Os intervalos são usados para marcar os intervalos no conteúdo como Anúncios.
 
-      * `PTTimeRangeCollectionTypeDeleteRanges`: O tipo dos intervalos é Delete. Os intervalos definidos são removidos do conteúdo principal antes da inserção do anúncio.
-      * `PTTimeRangeCollectionTypeReplaceRanges`: O tipo dos intervalos é Replace. Os intervalos definidos são substituídos do principal por Anúncios (o modo de sinalização do anúncio é definido como `PTAdSignalingModeCustomTimeRanges`).
+      * `PTTimeRangeCollectionTypeDeleteRanges`: o tipo dos intervalos é Excluir. Os intervalos definidos são removidos do conteúdo principal antes da inserção do anúncio.
+      * `PTTimeRangeCollectionTypeReplaceRanges`: o tipo dos intervalos é Substituir. Os intervalos definidos são substituídos a partir do principal por Anúncios (O modo de sinalização de anúncio está definido como `PTAdSignalingModeCustomTimeRanges`).
 
-* `PTReplacementTimeRange` - Nova classe pública que define um único intervalo de  `PTTimeRangeCollection`:
+* `PTReplacementTimeRange` - Nova classe pública que define um único intervalo do `PTTimeRangeCollection`:
 
    * `property CMTimeRange range` - Define o início e a duração do intervalo.
-   * `property long replacementDuration` - Se o tipo de  `TimeRangeCollection` for  `PTTimeRangeCollectionTypeReplaceRanges`,  `replacementDuration` será usado para criar uma oportunidade de disposição (inserção de anúncio) com uma duração de  `replacementDuration`. Se `replacementDuration` não estiver definido, o servidor de publicidade determinará a duração e o número de anúncios para essa oportunidade de posicionamento.
+   * `property long replacementDuration` - Se o tipo de `TimeRangeCollection` é `PTTimeRangeCollectionTypeReplaceRanges`, o `replacementDuration` é usado para criar uma oportunidade de posicionamento (inserção de anúncio) com uma duração de `replacementDuration`. Se a variável `replacementDuration` não estiver definido, o servidor de publicidade determinará a duração e o número de anúncios para essa oportunidade de posicionamento.
 
 * `PTAdSignalingMode`:
 
-   * `PTAdSignalingModeCustomTimeRanges` - Adição de um novo tipo de  `PTAdSignalingMode`. Esse modo é usado em conjunto com o `PTTimeRangeCollection` com o tipo `PTTimeRangeCollectionReplace` para inserção de anúncio com base nos intervalos de substituição.
+   * `PTAdSignalingModeCustomTimeRanges` - Adição de um novo tipo de `PTAdSignalingMode`. Esse modo é usado em conjunto com o `PTTimeRangeCollection` com tipo `PTTimeRangeCollectionReplace` para inserção de anúncio com base nos intervalos de substituição.
 
 * `PTAdMetadata`:
 
-   * `property PTTimeRangeCollection* timeRangeCollection` - Para definir os intervalos de tempo usados nos intervalos marcar/excluir/substituir no conteúdo da reprodução.
+   * `property PTTimeRangeCollection* timeRangeCollection` - Para definir os intervalos de tempo usados nos intervalos de marcação/exclusão/substituição no conteúdo de reprodução.
 
 * Logs de aviso:
 
@@ -63,5 +62,5 @@ As alterações a seguir no TVSDK são compatíveis com exclusão e substituiç�
 
 * `PTAdMetadata`:
 
-   * `property NSArray* externalAdRanges` - Essa propriedade era usada anteriormente para definir intervalos C3 para marcação. Agora está obsoleto, pois esses intervalos são definidos por `PTTimeRangeCollection`.
+   * `property NSArray* externalAdRanges` - Esta propriedade foi usada anteriormente para definir intervalos C3 para marcação. Agora está obsoleto, pois esses intervalos são definidos via `PTTimeRangeCollection`.
 

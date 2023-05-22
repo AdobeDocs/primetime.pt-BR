@@ -1,25 +1,23 @@
 ---
-title: Como incorporar licenças
-description: Como incorporar licenças
+title: Incorporação de licenças
+description: Incorporação de licenças
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8cd58808-73fb-4635-9a75-0520430f6b3a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
+# Incorporação de licenças {#embedding-licenses}
 
-# Como incorporar licenças {#embedding-licenses}
+Depois que o conteúdo é criptografado e uma licença é pré-gerada, a licença pode ser incorporada ao conteúdo criptografado.
 
-Depois que o conteúdo for criptografado e uma licença tiver sido pré-gerada, ela poderá ser incorporada ao conteúdo criptografado.
+Se quiser incorporar uma licença do, obtenha uma instância de `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Se você souber o tipo do conteúdo criptografado, use o construtor para `FLVKeyMetaDataUpdater` ou `F4VKeyMetaDataUpdater`; caso contrário, use `MediaProcessorFactory.getMediaProcessor()` para retornar uma instância com base no tipo de arquivo detectado. Em seguida, é necessário construir um `KeyMetaDataCallback` e invocar `modifyKeyMetaData()`. A implementação de retorno de chamada é invocada quando os metadados de DRM estão localizados no conteúdo criptografado. Com base nos metadados encontrados, você pode escolher uma licença para incorporar e definir a licença usando `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`.
 
-Se quiser incorporar uma licença, você precisa obter uma instância de `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Se você sabe o tipo de conteúdo criptografado, use o construtor para `FLVKeyMetaDataUpdater` ou `F4VKeyMetaDataUpdater`; caso contrário, use `MediaProcessorFactory.getMediaProcessor()` para retornar uma instância com base no tipo de arquivo detectado. Em seguida, é necessário construir um `KeyMetaDataCallback` e invocar `modifyKeyMetaData()`. Sua implementação de retorno de chamada é então invocada quando os metadados de DRM estão localizados no conteúdo criptografado. Com base nos metadados encontrados, você pode escolher uma licença para incorporar e definir a licença usando `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`.
-
-Consulte `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` no diretório Ferramentas de linha de comando da implementação de referência [!DNL Samples] para obter o código de amostra que demonstra licenças incorporadas.
+Consulte `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` nas Ferramentas de linha de comando da Implementação de referência [!DNL Samples] diretório para código de amostra que demonstra licenças incorporadas.
 
 >[!NOTE]
 >
->Um cliente Adobe Primetime DRM 2.0 ignora qualquer licença incorporada ao conteúdo e, em seguida, tenta obter uma licença do servidor de licença especificado nos metadados. No entanto, se os metadados indicarem que nenhum servidor de licença está disponível, um cliente DRM 2.0 do Primetime precisa ser atualizado antes que você possa exibir o conteúdo.
-
+>Um cliente Adobe Primetime DRM 2.0 ignora todas as licenças incorporadas ao conteúdo e, em seguida, tenta obter uma licença do servidor de licenças especificado nos metadados. No entanto, se os metadados indicarem que nenhum servidor de licença está disponível, um cliente do Primetime DRM 2.0 precisará ser atualizado para que você possa visualizar o conteúdo.

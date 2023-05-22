@@ -1,29 +1,28 @@
 ---
 title: Pré-autorizar Android
 description: Pré-autorizar Android
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b5337595-135f-4981-a578-2da432f125d6
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
-
 # Pré-autorizar {#preuthorize-android}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 </br>
 
 
-O método de API Pré-autorização precisa ser usado pelos aplicativos para obter uma decisão de pré-autorização para um ou mais recursos. A solicitação de pré-autorização de API deve ser usada para dicas de interface e/ou filtragem de conteúdo. Uma solicitação real da API de autorização deve ser feita antes de conceder ao usuário acesso aos recursos especificados.
+O método da API pré-autorizada precisa ser usado pelos aplicativos para obter uma decisão de pré-autorização para um ou mais recursos. A solicitação da API pré-autorizada deve ser usada para dicas da interface do usuário e/ou filtragem de conteúdo. Uma solicitação de API de autorização real deve ser feita antes de conceder ao usuário acesso aos recursos especificados.
 
 
 
-Em caso de erro inesperado (por exemplo, problema de rede, ponto de extremidade de autorização MVPD indisponível, etc.) ocorrendo quando uma solicitação de API pré-autorizada é processada pelos serviços de autenticação da Adobe Primetime, uma ou várias informações de erro separadas serão incluídas para os recursos afetados como parte do resultado da resposta da API pré-autorizar.
+Em caso de erro inesperado (por exemplo, problema de rede, ponto de acesso de autorização MVPD indisponível etc.) Quando uma solicitação de API pré-autorizada é processada pelos serviços de autenticação da Adobe Primetime, uma ou várias informações de erro separadas serão incluídas para os recursos afetados como parte do resultado da resposta da API pré-autorizada.
 
 
 ## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
@@ -35,14 +34,14 @@ Em caso de erro inesperado (por exemplo, problema de rede, ponto de extremidade 
 
 **Parâmetros:**
 
-- *Pré-autorizarSolicitação*: Objeto do construtor usado para definir a solicitação
+- *PreauthorizeRequest*: objeto Builder usado para definir a solicitação
 - AccessEnablerCallback : retorno de chamada usado para retornar a resposta da API
-- Pré-autorizarResposta : Objeto usado para retornar o conteúdo da resposta da API
+- PreauthorizeResponse : objeto usado para retornar o conteúdo de resposta da API
 
 
-### classe pública Pré-autorizarRequest {#androidpreauthorizerequest}
+### classe pública PreauthorizeRequest {#androidpreauthorizerequest}
 
-**classe Pré-autorizarRequest.Builder**\
+**classe PreauthorizeRequest.Builder**\
  
 
 ```java
@@ -86,7 +85,7 @@ Em caso de erro inesperado (por exemplo, problema de rede, ponto de extremidade 
 ```
 
 
-**public Builder disableFeatures(Set\&lt;preauthorizerequest.feature>
+**public Builder disableFeatures(Definir\&lt;preauthorizerequest.feature>
 recursos)**
 
 ```
@@ -107,9 +106,9 @@ recursos)**
     ///
 ```
 
-**public PreauthorizedRequest build()**
+**build() public PreauthorizeRequest**
 
-**enum PreauthorizedRequest.Feature**
+**enum PreauthorizeRequest.Feature**
 
 ```java
     ///
@@ -143,7 +142,7 @@ recursos)**
 
  
 
-### classe PreauthorizedResponse {#preauthorizeresponse}
+### classe PreauthorizeResponse {#preauthorizeresponse}
 
 ```java
     ///
@@ -228,7 +227,7 @@ recursos)**
 
 </br>
 
->**decisão de classe** {#decision}
+>**Decisão de classe** {#decision}
 
 ```
     ///
@@ -265,7 +264,7 @@ recursos)**
 
 
 
-Exemplo : 
+Exemplo: 
 
 
 ```java
@@ -289,4 +288,3 @@ Exemplo : 
         }
     });
 ```
-

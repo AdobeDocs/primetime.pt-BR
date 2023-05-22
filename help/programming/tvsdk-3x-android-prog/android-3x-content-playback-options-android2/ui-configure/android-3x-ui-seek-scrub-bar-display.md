@@ -1,63 +1,62 @@
 ---
-description: O TVSDK oferece suporte à busca para uma posição específica (hora) em que o fluxo é uma lista de reprodução de janela deslizante, em vídeos sob demanda (VOD) e fluxos ao vivo.
-title: Exibir uma barra de movimentação com a posição de reprodução atual
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O TVSDK oferece suporte à busca em uma posição específica (tempo) em que o fluxo seja uma lista de reprodução de janela deslizante, em vídeos sob demanda (VOD) e fluxos ao vivo.
+title: Exibir uma barra de limpeza de busca com a posição de reprodução atual
+exl-id: d5bc3a54-7dfd-435e-abb4-323639732e0a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
+# Exibir uma barra de limpeza de busca com a posição de reprodução atual {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-# Exibir uma barra de movimentação com a posição de reprodução atual {#display-a-seek-scrub-bar-with-the-current-playback-position}
-
-O TVSDK oferece suporte à busca para uma posição específica (hora) em que o fluxo é uma lista de reprodução de janela deslizante, em vídeos sob demanda (VOD) e fluxos ao vivo.
+O TVSDK oferece suporte à busca em uma posição específica (tempo) em que o fluxo seja uma lista de reprodução de janela deslizante, em vídeos sob demanda (VOD) e fluxos ao vivo.
 
 >[!TIP]
 >
->A busca em direto só é permitida para DVR.
+>A busca em um stream ao vivo é permitida somente para DVR.
 
-1. Configurar retornos de chamada para busca.
+1. Configure retornos de chamada para busca.
 
    A busca é assíncrona, portanto, o TVSDK despacha os seguintes eventos relacionados à busca:
 
-   * `MediaPlayerEvent.SEEK_BEGIN`, onde a busca começa.
-   * `MediaPlayerEvent.SEEK_END`, em que a busca é bem-sucedida.
+   * `MediaPlayerEvent.SEEK_BEGIN`, em que a busca começa.
+   * `MediaPlayerEvent.SEEK_END`, em que a busca foi bem-sucedida.
    * `MediaPlayerEvent.OPERATION_FAILED`, em que a busca falhou.
 
 1. Aguarde até que o reprodutor esteja em um status válido para busca.
 
    Os status válidos são PREPARED, COMPLETE, PAUSED e PLAYING.
-1. Use o nativo `SeekBar` para definir `OnSeekBarChangeListener`, que determina quando o usuário está depurando.
-1. Passe a posição de busca solicitada (milissegundos) para o método `MediaPlayer.seek`.
+1. Usar o nativo `SeekBar` para definir `OnSeekBarChangeListener`, que determina quando o usuário está depurando.
+1. Transmita a posição de busca solicitada (milissegundos) para a `MediaPlayer.seek` método.
 
    ```java
    void seek(long position) throws MediaPlayerException;
    ```
 
-   Você pode procurar somente na duração pesquisável do ativo. Para vídeo sob demanda, ou seja, de 0 à duração do ativo.
+   Você pode buscar somente na duração pesquisável do ativo. Para vídeo sob demanda, isso é do 0 até a duração do ativo.
 
    >[!TIP]
    >
-   >Essa etapa move o indicador de reprodução para uma nova posição no fluxo, mas a posição final calculada pode ser diferente da posição de busca especificada.
+   >Essa etapa move o indicador de reprodução para uma nova posição no fluxo, mas a posição calculada final pode diferir da posição de busca especificada.
 
-1. Escute `MediaPlayerEvent.OPERATION_FAILED` e execute as ações apropriadas.
+1. Ouvir `MediaPlayerEvent.OPERATION_FAILED` e tomar as medidas adequadas.
 
-   Esse evento passa o aviso apropriado. Seu aplicativo determina como proceder e as opções incluem tentar a busca novamente ou continuar a reprodução na posição anterior.
+   Esse evento passa o aviso apropriado. Seu aplicativo determina como proceder, e as opções incluem tentar a busca novamente ou continuar a reprodução a partir da posição anterior.
 
-1. Aguarde TVSDK chamar o retorno de chamada `MediaPlayerEvent.SEEK_END`.
-1. Recupere a posição final de reprodução ajustada usando o parâmetro de posição do retorno de chamada.
+1. Aguarde até que o TVSDK chame o `MediaPlayerEvent.SEEK_END` retorno de chamada.
+1. Recupere a posição de reprodução ajustada final usando o parâmetro de posição do retorno de chamada.
 
-   Isso é importante porque a posição inicial real após a busca pode ser diferente da posição solicitada. As regras, incluindo o comportamento de reprodução, serão afetadas se uma busca ou outro reposicionamento terminar no meio de uma pausa de anúncio ou ignorar quebras de anúncio.
+   Isso é importante porque a posição inicial real após a busca pode ser diferente da posição solicitada. As regras, incluindo o comportamento de reprodução, são afetadas se uma busca ou outro reposicionamento terminar no meio de um ad break ou pular ad breaks, puderem ser aplicados.
 
-1. Use as informações de posição ao exibir uma barra de movimentação.
+1. Use as informações de posição ao exibir uma barra de limpeza de busca.
 
 <!--<a id="example_EEB73818260C43C8B5AE12BA68548AB7"></a>-->
 
 **Exemplo de busca**
 
-Neste exemplo, o usuário movimenta a barra de busca para buscar a posição desejada.
+Neste exemplo, o usuário movimenta a barra de busca para buscar na posição desejada.
 
 ```java
 //Use the native SeekBar to set an OnSeekBarChangeListener to 

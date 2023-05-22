@@ -1,49 +1,49 @@
 ---
 title: Visão geral do Account IQ
-description: O Account IQ ajuda os MVPDs e programadores a compreenderem os riscos de suas operações de receita e negócios e a determinarem as ações mais eficazes a serem tomadas para mitigar os impactos da fraude de credenciais.
+description: O Account IQ ajuda os MVPDs e os programadores a entender os riscos para suas operações de receita e negócios e determinar as ações mais eficazes a serem tomadas para atenuar os impactos da fraude de credenciais.
 exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
 source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
 
 # Visão geral do Account IQ {#account-iq-overview}
 
-O compartilhamento de credenciais por assinantes de serviços de transmissão é um grande e crescente problema do setor. Para adicioná-lo, entender, identificar e atuar no compartilhamento de credenciais é um processo complexo. Há complexidade envolvida na compreensão do comportamento de uso do assinante e no desenvolvimento de uma visão holística de sua atividade, por exemplo, distinguindo o compartilhamento entre membros dentro e fora da mesma família. Devido a esse desafio, os provedores de serviços de transmissão podem ter inibições em agir contra o compartilhamento de credenciais.
+O compartilhamento de credenciais por assinantes do serviço de transmissão é um problema importante e crescente para o setor. Além disso, entender, identificar e agir sobre o compartilhamento de credenciais é um processo complexo. Há uma complexidade envolvida na compreensão do comportamento de uso do assinante e no desenvolvimento de uma visão holística de sua atividade, por exemplo, diferenciando o compartilhamento entre membros dentro da mesma família e fora dela. Devido a esse desafio, os provedores de serviços de streaming podem ter inibições de agir contra o compartilhamento de credenciais.
 
 
 <div class "preview">
-Geralmente, os provedores de serviços de streaming de vídeo entendem o risco e o custo do compartilhamento em seus negócios, mas têm soluções limitadas, como bloquear os compartilhadores ou fazer ofertas. No entanto, é recomendada uma abordagem informada e direcionada, que permita que os serviços entendam o compartilhamento com precisão e adotem estratégias que recompensem o bom comportamento de visualização e, simultaneamente, direcionem o crescimento dos negócios. </span>
+Geralmente, os provedores de serviços de transmissão de vídeo entendem o risco e o custo de compartilhar com seus negócios, mas têm soluções limitadas, como bloquear os compartilhadores ou fazer ofertas. No entanto, recomenda-se uma abordagem informada e direcionada, que permita que os serviços entendam o compartilhamento com precisão e adotem estratégias que recompensem o bom comportamento de visualização e, simultaneamente, direcionem o crescimento dos negócios. </span>
 
 ![Diagrama de fluxo do Account IQ](assets/aiq-intro.png)
 
 *Figura: Fluxo de informações do Account IQ*
 
-O Adobe Primetime Account IQ permite que os serviços de streaming de vídeo compreendam os padrões de uso do assinante e identifiquem o compartilhamento de credenciais. Analisando profundamente a longa trilha de dados deixada por cada assinante usando o modelo de aprendizagem de máquina de várias camadas do Adobe, os serviços de transmissão podem entender o comportamento de uso e identificar o compartilhamento de credenciais com maior grau de certeza. Além disso, ele permite que ações sejam tomadas por meio de integrações com outros sistemas, como limitar fluxos simultâneos ou personalizar ofertas, e valida o impacto dessas ações, seja incentivando o comportamento de visualização legítimo ou os assinantes e a receita crescentes.
+O Adobe Primetime Account IQ permite que os serviços de streaming de vídeo entendam os padrões de uso do assinante e identifiquem o compartilhamento de credenciais. Analisando profundamente a longa trilha de dados deixada para trás por cada assinante usando o modelo de aprendizado de máquina multicamada proprietário do Adobe, os serviços de transmissão podem entender o comportamento de uso e identificar o compartilhamento de credenciais com um grau maior de certeza. Além disso, permite que a ação seja tomada por meio de integrações com outros sistemas, como limitar fluxos simultâneos ou personalizar ofertas, e valida o impacto dessas ações — incentivando o comportamento de visualização legítimo ou aumentando os assinantes e a receita.
 
-O Account IQ fornece as ferramentas e os recursos para medir, gerenciar e monetizar o compartilhamento de credenciais. Relatórios, análises e painéis permitem a exploração dos dados para identificar padrões. A ação direta é suportada por exportações e integrações com sistemas Adobe e de terceiros, como gerenciamento de campanha, limitação de moeda ou registro de assinante. E as ferramentas de rastreamento dedicadas medem o sucesso dessas ações para que possam ser atualizadas ou expandidas.
+O Account IQ fornece as ferramentas e os recursos para medir, gerenciar e monetizar o compartilhamento de credenciais. Relatórios, análises e painéis permitem a exploração de dados para identificar padrões. A ação direta é suportada por meio de exportações e integrações com o Adobe e sistemas de terceiros, como gestão de campanha, limitação de moeda ou registro de assinantes. E ferramentas de rastreamento dedicadas medem o sucesso dessas ações para que possam ser atualizadas ou expandidas.
 
 As ferramentas e os recursos do aplicativo Account IQ são explicados nas seguintes seções:
 
 * [Painel](/help/AccountIQ/dashboard.md)
 * [Relatórios de uso geral](/help/AccountIQ/general-usage-reports.md)
-* [Relatórios de contas compartilhadas](/help/AccountIQ/shared-acc-reports.md)
+* [Relatórios de Contas compartilhadas](/help/AccountIQ/shared-acc-reports.md)
 * [Padrões de uso](/help/AccountIQ/usage-patterns.md)
 * [Operações](/help/AccountIQ/operations.md)
 
-Vamos mergulhar nos gráficos e relatórios em cada uma dessas seções.
+Vamos dar um mergulho profundo nos gráficos e relatórios em cada uma dessas seções.
 
 >[!MORELIKETHIS]
 >
 >* [Como começar a usar o Account IQ](/help/AccountIQ/get-started.md)
 >* [Painel](/help/AccountIQ/dashboard.md)
->* [Relatórios de uso gerais](/help/AccountIQ/general-usage-reports.md)
+>* [Relatórios de uso geral](/help/AccountIQ/general-usage-reports.md)
 >* [Relatórios de contas compartilhadas](/help/AccountIQ/shared-acc-reports.md)
 >* [Padrões de uso](/help/AccountIQ/usage-patterns.md)
 >* [Glossário de termos do produto](/help/AccountIQ/product-concepts.md)
->* [White paper sobre o Account IQ](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
+>* [Informe oficial do Account IQ](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
 
 
 <!-- Credential sharing is rampant and prevalent among subscribers in the video streaming industry. To add to it, understanding, identifying, and acting on password sharing is a complex process. There is complexity involved in understanding the subscriber usage behavior and developing a holistic view of viewer activity—for example, distinguishing sharing among members within the same household and outside. Due to this challenge, streaming service providers have inhibitions in acting against password sharing.

@@ -1,32 +1,31 @@
 ---
-description: Ativar o instantâneo em significa que um ou mais canais são pré-carregados. Quando os usuários selecionam um canal ou alternam canais, o conteúdo é reproduzido imediatamente. O buffering é concluído até o momento em que o usuário começa a assistir.
-title: Instantâneo ativado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ativar instantâneo em significa que um ou mais canais são pré-carregados. Quando os usuários selecionam um canal ou alternam canais, o conteúdo é reproduzido imediatamente. O buffering é concluído até o momento em que o usuário começa a assistir.
+title: Instantâneo
+exl-id: a9c0b9d0-ef2b-4113-bd08-e2b2792b04fb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
+# Instantâneo {#instant-on}
 
-# Em Instantâneo {#instant-on}
+Ativar instantâneo em significa que um ou mais canais são pré-carregados. Quando os usuários selecionam um canal ou alternam canais, o conteúdo é reproduzido imediatamente. O buffering é concluído até o momento em que o usuário começa a assistir.
 
-Ativar o instantâneo em significa que um ou mais canais são pré-carregados. Quando os usuários selecionam um canal ou alternam canais, o conteúdo é reproduzido imediatamente. O buffering é concluído até o momento em que o usuário começa a assistir.
+Sem o Instant On, o TVSDK inicializa a mídia a ser reproduzida, mas não inicia o buffering do fluxo até que o aplicativo chame `play`. O usuário não vê conteúdo até que o buffering seja concluído. Com o Instant On, é possível iniciar várias instâncias do reprodutor de mídia (ou carregador de item do reprodutor de mídia), e o TVSDK inicia o buffering dos fluxos imediatamente. Quando um usuário altera o canal e o fluxo é armazenado em buffer corretamente, chamando `play` no novo canal inicia a reprodução imediatamente.
 
-Sem o Instant On, o TVSDK inicializa a mídia a ser reproduzida, mas não inicia o buffering do fluxo até que o aplicativo chame `play`. O usuário não vê conteúdo até que o buffering seja concluído. Com o Instant On, você pode iniciar várias instâncias do reprodutor de mídia (ou carregador de item do reprodutor de mídia) e o TVSDK inicia o buffering dos fluxos imediatamente. Quando um usuário altera o canal e o fluxo é armazenado em buffer corretamente, chamar `play` no novo canal inicia a reprodução imediatamente.
-
-Embora não haja limites para o número de instâncias `MediaPlayer` e `MediaPlayerItemLoader` que o TVSDK pode executar, a execução de mais instâncias consome mais recursos. O desempenho do aplicativo pode ser afetado pelo número de instâncias em execução. Para obter mais informações sobre `MediaPlayerItemLoader`, consulte [Carregar um recurso de mídia no reprodutor de mídia](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
+Embora não existam limites para o número de `MediaPlayer` e `MediaPlayerItemLoader` instâncias que o TVSDK pode executar, executar mais instâncias consome mais recursos. O desempenho da aplicação pode ser afetado pelo número de instâncias que estão sendo executadas. Para obter mais informações sobre `MediaPlayerItemLoader`, consulte [Carregar um recurso de mídia no reprodutor de mídia](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
 
 >[!IMPORTANT]
 >
->O TVSDK não oferece suporte a um único `QoSProvider` para funcionar com `itemLoader` e `MediaPlayer`. Se o cliente usar o Instant On, o aplicativo precisará manter duas instâncias de QoS e gerenciar ambas as instâncias para as informações.
+>O TVSDK não oferece suporte a um único `QoSProvider` para trabalhar com ambos `itemLoader` e `MediaPlayer`. Se o cliente usar Ativação instantânea, o aplicativo precisará manter duas instâncias de QoS e gerenciar ambas para obter as informações.
 
 Para obter mais informações sobre `MediaPlayerItemLoader`, consulte [Carregar um recurso de mídia usando MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md).
 
-## Adicione uma instância do Provedor de QoS a mediaPlayerItemLoader {#section_2F9F24C7BFAD49599D043D64F767F9A0}
+## Adicionar uma ocorrência de Provedor de QoS a mediaPlayerItemLoader {#section_2F9F24C7BFAD49599D043D64F767F9A0}
 
-* Criar e anexar um Provedor de QoS a uma instância `mediaPlayerItemLoader`
+* Crie e anexe um provedor de QoS a um `mediaPlayerItemLoader` instância
 
    ```
    // Create an instance of QoSProvider  
@@ -37,28 +36,28 @@ Para obter mais informações sobre `MediaPlayerItemLoader`, consulte [Carregar 
    _qosProvider.attachMediaPlayerItemLoader(this._loader); 
    ```
 
-   Depois que a reprodução começar, use `_qosProvider` para obter `timeToLoad` e `timeToPrepare` QoSdata. As métricas de QoS restantes podem ser recuperadas usando o `QoSProvider` anexado ao `mediaPlayer`.
+   Quando a reprodução começar, use o `_qosProvider` para obter `timeToLoad` e `timeToPrepare` QoSdata. As métricas de QoS restantes podem ser recuperadas usando o `QoSProvider` anexado à `mediaPlayer`.
 
    Para obter mais informações sobre `MediaPlayerItemLoader`, consulte [Carregar um recurso de mídia usando MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader).
 
-## Configurar buffering para Instant On {#section_4FE346B7BE434BA8A2203896D6E52146}
+## Configurar buffering para Ativação Instantânea {#section_4FE346B7BE434BA8A2203896D6E52146}
 
-O TVSDK fornece métodos e status para permitir o uso do Instant On com um recurso de mídia.
+O TVSDK fornece métodos e status para permitir usar o Instant On com um recurso de mídia.
 
 >[!NOTE]
 >
->O Adobe recomenda usar `MediaPlayerItemLoader` para InstantOn. Para usar `MediaPlayerItemLoader`, em vez de `MediaPlayer`, consulte media-resource-load-using-mediaplayeritemloader .
+>O Adobe recomenda usar `MediaPlayerItemLoader` para InstantOn. Para usar `MediaPlayerItemLoader`, em vez de `MediaPlayer`, consulte media-resource-load-using-mediaplayeritemloader.
 
 1. Confirme se o recurso foi carregado e se o reprodutor está preparado para reproduzir o recurso.
-1. Antes de chamar `play`, chame `prepareBuffer` para cada instância `MediaPlayer`.
+1. Antes de chamar `play`, chamar `prepareBuffer` para cada `MediaPlayer` instância.
 
    >[!NOTE]
    >
-   >`prepareBuffer` ativa o Instant On e o TVSDK inicia o buffering imediatamente e despacha o  `BUFFERING_COMPLETED` evento quando o buffer está cheio.
+   >`prepareBuffer` ativa o Instant On e o TVSDK inicia o buffering imediatamente e envia o `BUFFERING_COMPLETED` evento quando o buffer estiver cheio.
 
    >[!TIP]
    >
-   >Por padrão, `prepareBuffer` e `prepareToPlay` configuram o fluxo de mídia para iniciar a reprodução a partir do início. Para iniciar em outra posição, passe a posição (em milissegundos) para `prepareToPlay`.
+   >Por padrão, `prepareBuffer` e `prepareToPlay` configure o fluxo de mídia para começar a reproduzir a partir do início. Para começar em outra posição, passe a posição (em milissegundos) para `prepareToPlay`.
 
    ```
    @Override 
@@ -78,9 +77,8 @@ O TVSDK fornece métodos e status para permitir o uso do Instant On com um recur
    }
    ```
 
-1. Ao receber o evento `BUFFERING_COMPLETE`, comece a reproduzir o item ou exiba um feedback visual para indicar que o conteúdo está completamente armazenado em buffer.
+1. Ao receber a `BUFFERING_COMPLETE` evento, comece a reproduzir o item ou exiba feedback visual para indicar que o conteúdo está completamente em buffer.
 
    >[!NOTE]
    >
-   >Se você chamar `play`, a reprodução deverá começar imediatamente.
-
+   >Se você chamar `play`, a reprodução deve começar imediatamente.

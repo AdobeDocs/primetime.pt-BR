@@ -1,32 +1,31 @@
 ---
-description: Você pode ativar ou desativar o recurso de Resolução de anúncios preguiçosos usando o mecanismo de Carregamento de anúncios preguiçoso (a Resolução de anúncios preguiçosos está desativada por padrão).
-keywords: Preguiçoso;Resolução de anúncio;Carregamento de anúncio;delayLoading
-title: Habilitar a resolução de anúncio lento
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode ativar ou desativar o recurso Resolução de anúncio lento usando o mecanismo de Carregamento de anúncio lento existente (A Resolução de anúncio lento está desativada por padrão).
+keywords: Lento;Resolução de anúncio;Carregamento de anúncio;delayLoading
+title: Habilitar resolução de anúncios lentos
+exl-id: a52a1f9a-3bf6-4193-8347-1ef248ba8884
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
 
 ---
 
+# Habilitar resolução de anúncios lentos {#enable-lazy-ad-resolving}
 
-# Habilitar lento e resolver {#enable-lazy-ad-resolving}
+Você pode ativar ou desativar o recurso Resolução de anúncio lento usando o mecanismo de Carregamento de anúncio lento existente (A Resolução de anúncio lento está desativada por padrão).
 
-Você pode ativar ou desativar o recurso de Resolução de anúncios preguiçosos usando o mecanismo de Carregamento de anúncios preguiçoso (a Resolução de anúncios preguiçosos está desativada por padrão).
+Você pode ativar ou desativar a Resolução de anúncios lentos chamando [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) com verdadeiro ou falso.
 
-Você pode ativar ou desativar a Resolução de anúncio preguiçoso ao chamar [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) com verdadeiro ou falso.
+* Usar o booleano *hasDelayAdLoading* e *setDelayAdLoading* métodos em AdvertisingMetadata para controlar o tempo de resolução do anúncio e a colocação de anúncios na linha do tempo:
 
-* Use os métodos booleanos *hasDelayAdLoading* e *setDelayAdLoading* no AdvertisingMetadata para controlar o tempo de resolução do anúncio e o posicionamento dos anúncios na linha do tempo:
-
-   * Se *hasDelayAdLoading* retornar falso, o TVSDK aguarda até que todos os anúncios sejam resolvidos e colocados antes da transição para o estado PREPARED.
-   * Se *hasDelayAdLoading* retornar true, o TVSDK resolverá apenas os anúncios iniciais e fará a transição para o estado PREPARADO.
+   * Se *hasDelayAdLoading* retorna false, o TVSDK aguarda até que todos os anúncios sejam resolvidos e colocados antes da transição para o estado PREPARADO.
+   * Se *hasDelayAdLoading* retorna true, o TVSDK resolve somente os anúncios iniciais e faz a transição para o estado PREPARADO.
 
       * Os anúncios restantes são resolvidos e colocados durante a reprodução.
-   * Quando *hasPreroll *ou *hasLivePreroll* retornar falso, o TVSDK assume que não há um anúncio de pré-lançamento e inicia a reprodução do conteúdo imediatamente. Eles são definidos como verdadeiro por padrão.
+   * Quando *hasPreroll *ou *hasLivePreroll* Quando retornado como false, o TVSDK presume que não há anúncio precedente e inicia a reprodução do conteúdo imediatamente. Elas são definidas como true por padrão.
 
 
-**APIs relevantes para a resolução de anúncios lentos:**
+**APIs relevantes para resolução de anúncios lentos:**
 
 ```
 Class:    com.adobe.mediacore.metadata.AdvertisingMetadata 
@@ -46,11 +45,11 @@ Methods:
     public Placement.Type getPlacementType() // Returns whether
 ```
 
-Para refletir com precisão os anúncios como dicas em uma barra de depuração, escute o evento `TimelineEvent`e redesenhe a barra de depuração sempre que receber esse evento.
+Para refletir com precisão os anúncios como dicas em uma barra de limpeza, acompanhe o `TimelineEvent`e redesenhe a barra de limpeza toda vez que receber esse evento.
 
-Quando a resolução de anúncios ociosos está ativada para fluxos VOD, todos os ad breaks são colocados na linha do tempo, no entanto, muitos dos ad breaks ainda não serão resolvidos. O aplicativo pode determinar se deseja ou não desenhar esses marcadores marcando o `TimelineMarker::getDuration()`. Se o valor for maior que zero, os anúncios no ad break foram resolvidos.
+Quando a Resolução de anúncios lenta está ativada para fluxos de VOD, todos os ad breaks são colocados na linha do tempo, no entanto, muitos dos ad breaks ainda não serão resolvidos. O aplicativo pode determinar se esses marcadores devem ser desenhados ou não, verificando o `TimelineMarker::getDuration()`. Se o valor for maior que zero, os anúncios no ad break foram resolvidos.
 
-O TVSDK despacha esse evento quando um ad break é resolvido e também quando o reprodutor muda para o status PREPARED.
+O TVSDK despacha esse evento quando um ad break é resolvido e também quando o reprodutor passa para o status PREPARADO.
 
 ```
 mediaPlayer.addEventListener(MediaPlayerEvent.TIMELINE_UPDATED, timelineUpdatedEventListener); 

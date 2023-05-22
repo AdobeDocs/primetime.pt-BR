@@ -1,26 +1,25 @@
 ---
-description: Por padrão, o TVSDK força a reprodução de um ad break quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um ad break se o tempo decorrido desde o término de um ad break anterior estiver em um determinado número de minutos.
-title: Ignorar ad breaks por um período de tempo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Por padrão, o TVSDK força um ad break a ser reproduzido quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um intervalo comercial se o tempo decorrido desde a conclusão de um intervalo anterior estiver dentro de um determinado número de minutos.
+title: Ignorar ad breaks por um período
+exl-id: 7d5ee788-4a67-4c70-acc7-a950e6b2db8a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
+# Ignorar ad breaks por um período{#skip-ad-breaks-for-a-period-of-time}
 
-# Ignorar ad breaks por um período de tempo{#skip-ad-breaks-for-a-period-of-time}
-
-Por padrão, o TVSDK força a reprodução de um ad break quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um ad break se o tempo decorrido desde o término de um ad break anterior estiver em um determinado número de minutos.
+Por padrão, o TVSDK força um ad break a ser reproduzido quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um intervalo comercial se o tempo decorrido desde a conclusão de um intervalo anterior estiver dentro de um determinado número de minutos.
 
 >[!IMPORTANT]
 >
 >Quando há uma busca interna para ignorar um anúncio, pode haver uma pequena pausa na reprodução.
 
-O exemplo a seguir de um seletor de política de anúncio personalizado ignora os anúncios nos próximos cinco minutos (hora do relógio da parede) depois que o usuário assiste a um ad break.
+O exemplo a seguir de um seletor de política de anúncio personalizado ignora anúncios nos próximos cinco minutos (tempo do relógio de parede) depois que um usuário assiste a um ad break.
 
-1. Estenda o seletor de política de publicidade padrão para substituir o comportamento padrão.
+1. Estenda o seletor padrão de políticas de anúncios para substituir o comportamento padrão.
 
    ```
    /** 
@@ -79,7 +78,7 @@ O exemplo a seguir de um seletor de política de anúncio personalizado ignora o
    }
    ```
 
-1. Crie um novo fatory de publicidade que use seu seletor personalizado.
+1. Crie uma nova fábrica de anúncios que use seu seletor personalizado.
 
    ```
    public class CustomAdPolicyContentFactory extends DefaultContentFactory { 
@@ -116,4 +115,3 @@ O exemplo a seguir de um seletor de política de anúncio personalizado ignora o
    mediaPlayerItemConfig.advertisingFactory = new CustomAdPolicyContentFactory(); 
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

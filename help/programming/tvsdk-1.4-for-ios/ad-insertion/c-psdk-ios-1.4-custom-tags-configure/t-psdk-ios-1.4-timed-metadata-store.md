@@ -1,33 +1,32 @@
 ---
-description: Seu aplicativo deve usar os objetos PTTimedMetadata apropriados em momentos apropriados.
-title: Armazenar objetos de metadados cronometrados à medida que são despachados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Seu aplicativo deve usar os objetos PTTimedMetadata apropriados nos momentos apropriados.
+title: Armazenar objetos de metadados cronometrados à medida que são expedidos
+exl-id: 43bc2b47-b947-4af1-bba8-6f2063c7b60c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
 
 ---
 
+# Armazenar objetos de metadados cronometrados à medida que são expedidos {#store-timed-metadata-objects-as-they-are-dispatched}
 
-# Armazenar objetos de metadados cronometrados à medida que são despachados {#store-timed-metadata-objects-as-they-are-dispatched}
+Seu aplicativo deve usar os objetos PTTimedMetadata apropriados nos momentos apropriados.
 
-Seu aplicativo deve usar os objetos PTTimedMetadata apropriados em momentos apropriados.
+Durante a análise de conteúdo, que ocorre antes da reprodução, o TVSDK identifica tags assinadas e notifica o aplicativo sobre essas tags. O tempo associado a cada `PTTimedMetadata` é o tempo absoluto na linha do tempo de reprodução.
 
-Durante a análise de conteúdo, o que acontece antes da reprodução, o TVSDK identifica as tags assinadas e notifica seu aplicativo sobre essas tags. O tempo associado a cada `PTTimedMetadata` é o tempo absoluto na linha do tempo da reprodução.
-
-O aplicativo deve realizar as seguintes tarefas:
+Seu aplicativo deve concluir as seguintes tarefas:
 
 1. Rastreie o tempo de reprodução atual.
-1. Corresponda o tempo de reprodução atual aos objetos `PTTimedMetadata` despachados.
+1. Corresponder o tempo de reprodução atual ao distribuído `PTTimedMetadata` objetos.
 
-1. Use `PTTimedMetadata` onde a hora de início é igual à hora de reprodução atual.
+1. Use o `PTTimedMetadata` em que a hora de início é igual à hora de reprodução atual.
 
    >[!NOTE]
    >
-   >O código abaixo presume que haja apenas uma instância `PTTimedMetadata` de cada vez. Se houver várias instâncias, o aplicativo deve salvá-las adequadamente em um dicionário. Um método é criar uma matriz em um determinado momento e armazenar todas as instâncias nessa matriz.
+   >O código abaixo presume que há apenas um `PTTimedMetadata` instância de cada vez. Se houver várias instâncias, o aplicativo deverá salvá-las adequadamente em um dicionário. Um método é criar uma matriz em um determinado momento e armazenar todas as instâncias nessa matriz.
 
-   O exemplo a seguir mostra como salvar `PTTimedMetadata` objetos em um `NSMutableDictionary (timedMetadataCollection)` digitado pela hora de início de cada `timedMetadata`.
+   O exemplo a seguir mostra como salvar `PTTimedMetadata` objetos em uma `NSMutableDictionary (timedMetadataCollection)` digitado pela hora de início de cada `timedMetadata`.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -52,9 +51,9 @@ O aplicativo deve realizar as seguintes tarefas:
    }
    ```
 
-## Análise das tags ID3 da Nielsen {#example_3B51E9D4AF2449FAA8E804206F873ECF}
+## Análise de tags Nielsen ID3 {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-Para extrair a tag ID3 para análise, use o seguinte no método `onMediaPlayerSubscribedTagIdentified`:
+Para extrair a tag ID3 para análise, use o seguinte no `onMediaPlayerSubscribedTagIdentified` método:
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
@@ -67,7 +66,7 @@ Unknown macro: { PTMetadata *metadata = (PTMetadata *)timedMetadata; NSString * 
 }
 ```
 
-Depois de analisar a tag ID3, extraia os metadados específicos da Nielsen usando o seguinte:
+Depois de analisar a tag ID3, extraia os metadados específicos do Nielsen usando o seguinte:
 
 ```
     (NSString *)parseNielsenUrlFromID3Tag:(NSString *)str 
@@ -93,4 +92,3 @@ if([keyValuePairString rangeOfString:@"nielsen.com"].location != NSNotFound)
 return nielsenStr; 
 }
 ```
-

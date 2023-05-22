@@ -1,24 +1,23 @@
 ---
-description: A inserção de anúncio resolve os anúncios de VOD (video-on-demand) , para transmissão ao vivo e para transmissão linear com rastreamento de anúncios e reprodução de anúncios. O TVSDK faz as solicitações necessárias para o servidor de publicidade, recebe informações sobre anúncios para o conteúdo especificado e coloca os anúncios em fases.
+description: A inserção de anúncios soluciona anúncios de VOD (Video On Demand, vídeo sob demanda), de transmissão ao vivo e de transmissão linear com rastreamento de anúncios e reprodução de anúncio. O TVSDK faz as solicitações necessárias ao servidor de anúncios, recebe informações sobre os anúncios do conteúdo especificado e coloca os anúncios no conteúdo em fases.
 title: Inserção de anúncios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3a472435-2e37-46d6-8c08-dd6e953c7a7a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral {#inserting-ads-overview}
 
-A inserção de anúncio resolve os anúncios de VOD (video-on-demand) , para transmissão ao vivo e para transmissão linear com rastreamento de anúncios e reprodução de anúncios. O TVSDK faz as solicitações necessárias para o servidor de publicidade, recebe informações sobre anúncios para o conteúdo especificado e coloca os anúncios em fases.
+A inserção de anúncios soluciona anúncios de VOD (Video On Demand, vídeo sob demanda), de transmissão ao vivo e de transmissão linear com rastreamento de anúncios e reprodução de anúncio. O TVSDK faz as solicitações necessárias ao servidor de anúncios, recebe informações sobre os anúncios do conteúdo especificado e coloca os anúncios no conteúdo em fases.
 
-Um *`ad break`* contém um ou mais anúncios que são exibidos em sequência. O TVSDK insere anúncios no conteúdo principal como membros de um ou mais ad breaks.
+Um *`ad break`* contém um ou mais anúncios reproduzidos em sequência. O TVSDK insere anúncios no conteúdo principal como membros de um ou mais ad breaks.
 
 ## Desativar anúncios precedentes {#disable-preroll-ads}
 
-Para desativar o anúncio antes da exibição, altere os geradores de oportunidade padrão para não fazer a chamada antes da exibição. Os geradores de oportunidade padrão são:
+Para desativar o antes da exibição, altere os geradores de oportunidade padrão para não fazer a chamada antes da exibição. Os geradores de oportunidade padrão são:
 
 ```
 @inheritDoc 
@@ -31,7 +30,7 @@ return result;
 }
 ```
 
-Para desativar o precedente em fluxos ao vivo, altere o acima para incluir somente SpliceOutOpportunityGenerator:
+Para desabilitar a pré-implantação em fluxos ao vivo, altere o acima para incluir somente o SpliceOutOpportunityGenerator:
 
 ```
 @inheritDoc 

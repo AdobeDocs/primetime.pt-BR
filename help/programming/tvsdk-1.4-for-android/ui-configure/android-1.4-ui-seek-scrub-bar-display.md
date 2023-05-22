@@ -1,52 +1,51 @@
 ---
-description: O TVSDK oferece suporte à busca para uma posição específica (hora) em que o fluxo é uma lista de reprodução de janela deslizante, tanto em fluxos de vídeo sob demanda (VOD) quanto em tempo real.
-title: Exibir uma barra de movimentação com a posição de reprodução atual
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O TVSDK permite a busca em uma posição específica (tempo) em que o fluxo é uma lista de reprodução de janela deslizante, em fluxos de vídeo sob demanda (VOD) e ao vivo.
+title: Exibir uma barra de limpeza de busca com a posição de reprodução atual
+exl-id: 8076521b-579d-491f-97de-c7b57daa9b2e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
+# Exibir uma barra de limpeza de busca com a posição de reprodução atual {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-# Exibir uma barra de movimentação com a posição de reprodução atual {#display-a-seek-scrub-bar-with-the-current-playback-position}
-
-O TVSDK oferece suporte à busca para uma posição específica (hora) em que o fluxo é uma lista de reprodução de janela deslizante, tanto em fluxos de vídeo sob demanda (VOD) quanto em tempo real.
+O TVSDK permite a busca em uma posição específica (tempo) em que o fluxo é uma lista de reprodução de janela deslizante, em fluxos de vídeo sob demanda (VOD) e ao vivo.
 
 >[!IMPORTANT]
 >
->A busca em direto só é permitida para DVR.
+>A busca em um stream ao vivo é permitida somente para DVR.
 
-1. Configurar retornos de chamada para busca.
+1. Configure retornos de chamada para busca.
 
        A busca é assíncrona, portanto, o TVSDK despacha os seguintes eventos relacionados à busca:
    
-   * `QOSEventListener.onSeekStart` - Busca a começar.
+   * `QOSEventListener.onSeekStart` - Início da busca.
    * `QOSEventListener.onSeekComplete` - Busca bem-sucedida.
    * `QOSEventListener.onOperationFailed` - Falha na busca.
 
 1. Aguarde até que o reprodutor esteja em um estado válido para busca.
 
-   Os estados válidos são PREPARADO, CONCLUÍDO, PAUSADO e REPRODUZINDO.
+   Os estados válidos são PREPARED, COMPLETE, PAUSED e PLAYING.
 
 1. Use a SeekBar nativa para definir `OnSeekBarChangeListener` para ver quando o usuário está depurando.
-1. Escute `QOSEventListener.onOperationFailed` e execute as ações apropriadas.
+1. Ouvir `QOSEventListener.onOperationFailed` e tomar as medidas adequadas.
 
-   Esse evento passa o aviso apropriado. Seu aplicativo determina como proceder, por exemplo, experimentando a busca novamente ou continuando a reprodução a partir da posição anterior.
+   Esse evento passa o aviso apropriado. O aplicativo determina como proceder, por exemplo, tentando a busca novamente ou continuando a reprodução a partir da posição anterior.
 
-1. Aguarde TVSDK chamar o retorno de chamada `QOSEventListener.onSeekComplete`.
-1. Recupere a posição final de reprodução ajustada usando o parâmetro de posição do retorno de chamada.
+1. Aguarde até que o TVSDK chame o `QOSEventListener.onSeekComplete` retorno de chamada.
+1. Recupere a posição de reprodução ajustada final usando o parâmetro de posição do retorno de chamada.
 
-   Isso é importante porque a posição inicial real após a busca pode ser diferente da posição solicitada. O comportamento de reprodução pode ser afetado se uma busca ou outro reposicionamento terminar no meio de um ad break ou ignorar ad breaks.
+   Isso é importante porque a posição inicial real após a busca pode ser diferente da posição solicitada. O comportamento da reprodução pode ser afetado se uma busca ou outro reposicionamento terminar no meio de um ad break ou pular ad breaks.
 
-1. Use as informações de posição ao exibir uma barra de movimentação.
+1. Use as informações de posição ao exibir uma barra de limpeza de busca.
 
 <!--<a id="example_9657AA855B6A4355B0E7D854596FFB54"></a>-->
 
 **Exemplo de busca**
 
-Neste exemplo, o usuário movimenta a barra de busca para buscar a posição desejada.
+Neste exemplo, o usuário movimenta a barra de busca para buscar na posição desejada.
 
 ```java
 // Use the native SeekBar to set OnSeekBarChangeListener to  
@@ -79,4 +78,3 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     } 
 }; 
 ```
-

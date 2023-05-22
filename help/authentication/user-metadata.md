@@ -1,21 +1,21 @@
 ---
 title: Metadados do usuário
 description: Metadados do usuário
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
-
 # Metadados do usuário {#user-metadata}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
-## Endpoints REST API {#clientless-endpoints}
+## Endpoints da REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -38,17 +38,17 @@ Recupere os metadados que o MVPD compartilhou sobre o usuário autenticado.
 
 | Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/usermetadata | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante</br>2.  deviceId (Obrigatório)</br>3.  device_info/X-Device-Info (Obrigatório)</br>4.  deviceType</br>5.  deviceUser (obsoleto)</br>6.  appId (obsoleto) | GET | XML ou JSON contendo metadados do usuário ou detalhes do erro, se não tiver êxito. | 200 - Sucesso</br></br>404 - Nenhum metadados encontrado</br></br>412 - Token AuthN inválido (por exemplo, token expirado) |
+| &lt;sp_fqdn>/api/v1/tokens/usermetadata | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. requerente</br>2.  deviceId (Obrigatório)</br>3.  device_info/X-Device-Info (Obrigatório)</br>4.  deviceType</br>5.  deviceUser (obsoleto)</br>6.  appId (obsoleto) | GET | XML ou JSON que contém metadados do usuário ou detalhes do erro, se malsucedido. | 200 - Sucesso</br></br>404 - Nenhum metadado encontrado</br></br>412 - Token de autenticação inválido (por exemplo, token expirado) |
 
 
 | Parâmetro de entrada | Descrição |
 | --- | --- |
-| solicitante | O ID do solicitador do Programador para o qual esta operação é válida. |
-| deviceId | Os bytes da ID do dispositivo. |
-| device_info/</br></br>X-Device-Info | Informações do dispositivo de transmissão.</br></br>**Observação**: Isso PODE ser passado device_info como um parâmetro de URL, mas devido ao tamanho potencial desse parâmetro e limitações no comprimento de um URL de GET, ele deve ser passado como X-Device-Info no cabeçalho http. </br></br>Veja os detalhes completos em **Transmitindo informações de dispositivo e conexão** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
-| _deviceType_ | O tipo de dispositivo (por exemplo, Roku, PC).</br></br>Se esse parâmetro for definido corretamente, o ESM oferece métricas que são [detalhado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) ao usar a opção sem cliente, para que diferentes tipos de análise possam ser executados para, por exemplo, Roku, AppleTV, Xbox etc.</br></br>Consulte [Benefícios do uso do parâmetro de tipo de dispositivo sem cliente em Métricas de passagem ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Observação:** O `device_info` substitui esse parâmetro. </br> |
-| _deviceUser_ | O identificador do usuário do dispositivo.</br></br>**Observação:**se usado, `deviceUser` deve ter os mesmos valores de [Criar código de registro](/help/authentication/registration-code-request.md) solicitação. |
-| _appId_ | A ID/nome do aplicativo. </br></br>**Observação:**A variável `device_info` substitui esse parâmetro. Se usado, `appId` deve ter os mesmos valores de **Criar código de registro** solicitação. |
+| solicitante | O requestorId do Programador para o qual esta operação é válida. |
+| deviceId | Os bytes de id do dispositivo. |
+| device_info/</br></br>X-Device-Info | Informações do dispositivo de transmissão.</br></br>**Nota**: isso PODE ser passado para device_info como um parâmetro de URL, mas devido ao tamanho potencial desse parâmetro e às limitações no comprimento de um URL do GET, ele DEVE ser passado como X-Device-Info no cabeçalho http. </br></br>Veja todos os detalhes em **Transmitindo Informações sobre Dispositivo e Conexão** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
+| _deviceType_ | O tipo de dispositivo (por exemplo, Roku, PC).</br></br>Se esse parâmetro estiver definido corretamente, o ESM oferecerá métricas que são [detalhado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) ao usar sem cliente, para que diferentes tipos de análise possam ser executados para, por exemplo, Roku, Apple TV, Xbox etc.</br></br>Consulte [Benefícios do uso do parâmetro de tipo de dispositivo sem cliente nas métricas Pass ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota:** A variável `device_info` O substitui esse parâmetro. </br> |
+| _deviceUser_ | O identificador do usuário do dispositivo.</br></br>**Observação:**se usado, `deviceUser` deve ter os mesmos valores que no [Criar código de registro](/help/authentication/registration-code-request.md) solicitação. |
+| _appId_ | O id/nome do aplicativo. </br></br>**Nota:**A `device_info` O substitui esse parâmetro. Se usado, `appId` deve ter os mesmos valores que no **Criar código de registro** solicitação. |
 
 >[!NOTE]
 > 
@@ -56,7 +56,7 @@ Recupere os metadados que o MVPD compartilhou sobre o usuário autenticado.
 
 </br>
 
-## Resposta de exemplo {#sample-response}
+## Exemplo de resposta {#sample-response}
 
 Após uma chamada bem-sucedida, o servidor responderá com um objeto XML (padrão) ou JSON com uma estrutura semelhante à apresentada abaixo:
 
@@ -79,11 +79,11 @@ Após uma chamada bem-sucedida, o servidor responderá com um objeto XML (padrã
 
 Na raiz do objeto, haverá três nós:
 
-* **atualizado**: especifica um carimbo de data e hora UNIX que representa a última vez que os metadados foram atualizados. Essa propriedade será definida inicialmente pelo servidor ao gerar os metadados durante a fase de autenticação. As chamadas subsequentes (após a atualização dos metadados) resultarão em um aumento no carimbo de data e hora.
+* **atualizado**: especifica um carimbo de data e hora UNIX que representa a última vez que os metadados foram atualizados. Essa propriedade será definida inicialmente pelo servidor ao gerar os metadados durante a fase de autenticação. Chamadas subsequentes (após a atualização dos metadados) resultarão em um carimbo de data e hora incrementado.
 
-* **dados**: contém os valores de metadados reais.
+* **dados**: contém os valores reais de metadados.
 
-* **criptografado**: uma matriz que lista as propriedades criptografadas. Para descriptografar um valor de metadados específico, o Programador deve executar um decodificador Base64 nos metadados e aplicar uma descriptografia RSA no valor resultante, usando sua própria chave privada (o Adobe criptografa os metadados no servidor usando o certificado público do Programador).
+* **criptografado**: uma matriz que lista as propriedades criptografadas. Para descriptografar um valor de metadados específico, o Programador deve executar uma decodificação Base64 nos metadados e, em seguida, aplicar uma descriptografia RSA no valor resultante, usando sua própria chave privada (o Adobe criptografa os metadados no servidor usando o certificado público do Programador).
 
 No caso de um erro, o servidor retornará um objeto XML ou JSON que especifica uma mensagem de erro detalhada.
 

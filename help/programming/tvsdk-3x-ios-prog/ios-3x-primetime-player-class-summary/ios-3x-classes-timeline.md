@@ -1,18 +1,17 @@
 ---
-description: Essas classes fornecem informações sobre a linha do tempo de uma mídia específica, incluindo o posicionamento dos anúncios.
+description: Essas classes fornecem informações sobre a linha do tempo de uma mídia específica, incluindo a colocação de anúncios.
 title: Classes de linha do tempo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3241d99d-1716-4778-9203-6f6e66440360
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
-
 # Classes de linha do tempo {#timeline-classes}
 
-Essas classes fornecem informações sobre a linha do tempo de uma mídia específica, incluindo o posicionamento dos anúncios.
+Essas classes fornecem informações sobre a linha do tempo de uma mídia específica, incluindo a colocação de anúncios.
 
 <table frame="all" colsep="1" rowsep="1" id="table_6752E908BA6546549619994A3F7D5F87"> 
  <thead> 
@@ -23,7 +22,7 @@ Essas classes fornecem informações sobre a linha do tempo de uma mídia espec�
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlacementOpportunity.html" format="html" scope="external"> PTPlacementOpportunity</a> </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlacementOpportunity.html" format="html" scope="external"> OportunidadePosicionamentoPTP</a> </td> 
    <td colname="2"> Uma classe de oportunidade representa um ponto de interesse na linha do tempo. </td> 
   </tr> 
   <tr rowsep="1"> 

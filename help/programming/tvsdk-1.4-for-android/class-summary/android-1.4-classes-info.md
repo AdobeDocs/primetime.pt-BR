@@ -1,18 +1,17 @@
 ---
-description: Essas classes fornecem informações sobre a mídia.
-title: Classes de informações
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Essas aulas fornecem informações sobre a mídia.
+title: Classes de informação
+exl-id: bc84a265-5bad-44f2-80da-4a2e0d6fc53e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
+# Classes de informação {#info-classes}
 
-# Classes de informações {#info-classes}
-
-Essas classes fornecem informações sobre a mídia.
+Essas aulas fornecem informações sobre a mídia.
 
 Pacote: [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/package-summary.html)
 
@@ -26,20 +25,20 @@ Pacote: [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/ps
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/AudioTrack.html" format="html" scope="external"> AudioTrack</a></span></td> 
-   <td colname="2">Classe que estende <span class="codeph"> Track</span> para definir a abstração da faixa de áudio. </td> 
+   <td colname="2">Classe que estende <span class="codeph"> Rastrear</span> para definir a abstração da faixa de áudio. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/ClosedCaptionsTrack.html" format="html" scope="external"> </a> 
-   ClosedCaptionsTrackClosedCaptionsTrack</span> </td> 
-   <td colname="2">Classe que estende <span class="codeph"> Track</span> para definir a abstração de legenda fechada. Classe que define a abstração <span class="codeph"> ClosedCaptions</span>. Um rastreamento de legendas ocultas é definido exclusivamente pelo nome E pelo tipo de serviço. Tipos de serviço diferentes podem compartilhar o mesmo nome.</td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/ClosedCaptionsTrack.html" format="html" scope="external"> ClosedCaptionsTrack</a> 
+   ClosedCaptionsTrack</span> </td> 
+   <td colname="2">Classe que estende <span class="codeph"> Rastrear</span> para definir a abstração de legendas ocultas. Classe que define o <span class="codeph"> Legendas codificadas</span> abstração. Uma faixa de legendas ocultas é definida exclusivamente por seu nome E por seu tipo de serviço. Tipos de serviço diferentes podem compartilhar o mesmo nome.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Profile.html" format="html" scope="external"> Perfil</a> </span></td> 
-   <td colname="2"> Classe que contém informações de perfil de mídia, como altura, largura e taxa de bits. </td> 
+   <td colname="2"> Classe que contém informações do perfil de mídia, como altura, largura e taxa de bits. </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Track</a> </span></td> 
-   <td colname="2">Classe que define a abstração de rastreamento a ser usada na definição de <span class="codeph"> AudioTrack</span> e <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Rastrear</a> </span></td> 
+   <td colname="2">Classe que define a abstração de faixa a ser usada na definição <span class="codeph"> AudioTrack</span> e <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
   </tr>
  </tbody>
 </table>

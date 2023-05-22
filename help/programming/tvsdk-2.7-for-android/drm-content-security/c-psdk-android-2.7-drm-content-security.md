@@ -1,18 +1,17 @@
 ---
-description: Você pode usar os recursos do sistema Primetime Digital Rights Management (DRM) para fornecer acesso seguro ao conteúdo de vídeo. Como alternativa, você pode usar soluções DRM de terceiros como uma alternativa para a solução integrada Adobe.
+description: Você pode usar os recursos do sistema de Digital Rights Management do Primetime (DRM) para fornecer acesso seguro ao conteúdo de vídeo. Como alternativa, você pode usar soluções de DRM de terceiros como uma alternativa para a solução integrada Adobe.
 keywords: DRM;HLS
 title: Proteção de conteúdo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 48eb38a4-055b-4b6e-b492-664166b4643a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral {#content-protection-overview}
 
-Você pode usar os recursos do sistema Primetime Digital Rights Management (DRM) para fornecer acesso seguro ao conteúdo de vídeo. Como alternativa, você pode usar soluções DRM de terceiros como uma alternativa para a solução integrada Adobe.
+Você pode usar os recursos do sistema de Digital Rights Management do Primetime (DRM) para fornecer acesso seguro ao conteúdo de vídeo. Como alternativa, você pode usar soluções de DRM de terceiros como uma alternativa para a solução integrada Adobe.
 
-Entre em contato com seu representante de Adobe para obter as informações mais atualizadas sobre a disponibilidade de soluções de DRM de terceiros.
+Entre em contato com o representante da Adobe para obter as informações mais atualizadas sobre a disponibilidade de soluções de DRM de terceiros.

@@ -1,7 +1,6 @@
 ---
-description: Se o cliente solicitar informações de rastreamento, o servidor de manifesto enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro de consulta pttrackingversion
-title: Formato VMAP para rastrear URLs
-translation-type: tm+mt
+description: Se o cliente solicitar informações de rastreamento, o servidor de manifesto enviará de volta um arquivo formatado. Seu formato e conteúdo dependem do valor do parâmetro de consulta pttrackingversion
+title: Formato VMAP para URLs de rastreamento
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '138'
@@ -10,13 +9,13 @@ ht-degree: 0%
 ---
 
 
-# Formato VMAP para rastrear URLs {#vmap-format-for-tracking-urls}
+# Formato VMAP para URLs de rastreamento {#vmap-format-for-tracking-urls}
 
-Se o cliente solicitar informações de rastreamento, o servidor de manifesto enviará um arquivo formatado de volta. Seu formato e conteúdo dependem do valor do parâmetro de consulta `pttrackingversion`
+Se o cliente solicitar informações de rastreamento, o servidor de manifesto enviará de volta um arquivo formatado. Seu formato e conteúdo dependem do valor do parâmetro de consulta `pttrackingversion`
 
 ## Formato VMAP único {#vmap}
 
-O arquivo VMAP que o servidor de manifesto envia se `pttrackingversion=vmap` tiver o formato do exemplo a seguir, que vem de um bloco VMAP típico. Foi encurtado para evitar repetições desnecessárias, de modo a que a estrutura fique mais clara. Uma elipse (três pontos, separados por espaços) indica informações omitidas em alguns URLs e entre alguns blocos de código. Os URLs não encurtados aparecem em várias linhas, embora apareçam em uma única linha no arquivo VMAP.
+O arquivo VMAP que o servidor de manifesto envia se `pttrackingversion=vmap` tem o formato do exemplo a seguir, que vem de um bloco VMAP típico. Ele foi encurtado para evitar repetições desnecessárias, de modo que a estrutura seja mais clara. Uma reticências (três pontos, separados por espaços) indica informações omitidas em alguns URLs e entre alguns blocos de código. URLs não encurtados aparecem em várias linhas, embora apareçam em uma única linha no arquivo VMAP.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 

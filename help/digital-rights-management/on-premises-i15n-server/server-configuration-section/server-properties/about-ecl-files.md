@@ -1,19 +1,18 @@
 ---
-title: Sobre arquivos ECI
-description: Sobre arquivos ECI
+title: Sobre os arquivos ECI
+description: Sobre os arquivos ECI
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ac452897-3c64-4481-a3b7-4b69ef6edb61
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
 
 ---
 
+# Sobre os arquivos ECI{#about-eci-files}
 
-# Sobre arquivos ECI{#about-eci-files}
-
-Além das CRLs, você também precisa atualizar periodicamente os arquivos ECI (Embedded Common Interface, interface comum incorporada). Sempre que o Adobe adiciona suporte para uma nova plataforma de cliente Primetime DRM (por exemplo: iOS, Android, Windows FlashPlayer etc.), um novo registro ECI é criado. Para dar suporte à individualização desse cliente, é necessário que um registro de ECI correspondente esteja presente no servidor de individualização.
+Além das CRLs, você também precisa atualizar periodicamente os arquivos ECI (Embedded Common Interface). Sempre que o Adobe adiciona suporte para uma nova plataforma de cliente DRM do Primetime (por exemplo: iOS, Android, Windows FlashPlayer etc.), um novo registro ECI é criado. Para dar suporte à individualização desse cliente, um registro ECI correspondente precisa estar presente no Servidor de individualização.
 
 Como o lançamento de novos clientes DRM do Primetime não é muito frequente, o Adobe lançará dados ECI atualizados conforme necessário. Periodicamente, o Adobe coletará arquivos ECI e os hospedará no local abaixo para distribuição:
 
@@ -21,7 +20,7 @@ Como o lançamento de novos clientes DRM do Primetime não é muito frequente, o
 http://cdmdownload.adobe.com/indiv/onprem/eci/Latest.txt
 ```
 
-O arquivo [!DNL Latest.txt] conterá o URL para o arquivo de distribuição CRL mais recente.
+A variável [!DNL Latest.txt] arquivo conterá o URL para o arquivo de distribuição CRL mais recente.
 
 O Adobe criará o arquivo zip ECI da maneira descrita abaixo:
 
@@ -37,7 +36,7 @@ O conteúdo da pasta será compactado recursivamente:
 zip -R ECI ECI.zip
 ```
 
-Um resumo OpenSSL SHA-256 será calculado do arquivo zip:
+Um resumo do OpenSSL SHA-256 será calculado sobre o arquivo zip:
 
 ```
 openssl dgst -sha256 -hex ECI.zip
@@ -55,14 +54,13 @@ Por exemplo:
 20150310_aea45bf06241f04fba2b310ff9a8066c6aba73c8d22387b60509481e9cefc43e.zip
 ```
 
-Você deve verificar periodicamente o local acima para arquivos ECI atualizados.
+Você deve verificar periodicamente se há arquivos ECI atualizados no local acima.
 
-Execute o seguinte processo de instalação após download:
+Execute o seguinte processo para instalação após o download:
 
-1. Observe o resumo SHA-256 e recalcule-o usando OpenSSL ou uma ferramenta equivalente.
-1. Compare-o com o especificado no nome do arquivo.
+1. Observe o resumo SHA-256 e recalcule-o usando o OpenSSL ou uma ferramenta equivalente.
+1. Comparar com o especificado no nome do arquivo.
 1. Renomeie o arquivo para [!DNL ECI.zip].
-1. Descompacte o diretório [!DNL ECI].
+1. Descompacte o [!DNL ECI] diretório.
 1. Substitua o diretório ECI antigo pelo novo.
-1. Reinicie o servidor de individualização.
-
+1. Reinicie o servidor de Individualização.

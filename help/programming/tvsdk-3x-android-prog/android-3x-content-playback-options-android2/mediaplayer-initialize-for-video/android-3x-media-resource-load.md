@@ -1,14 +1,13 @@
 ---
 description: Carregue um recurso instanciando diretamente um MediaResource e carregando o conteúdo de vídeo a ser reproduzido. Essa é uma maneira de carregar um recurso de mídia.
 title: Carregar um recurso de mídia no reprodutor de mídia
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f39d3aa2-8912-4dac-9f10-91b6d20395ea
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
-
 
 # Carregar um recurso de mídia no reprodutor de mídia {#load-a-media-resource-in-the-media-player}
 
@@ -16,22 +15,22 @@ Carregue um recurso instanciando diretamente um MediaResource e carregando o con
 
 1. Defina o reprodutor de mídia para reproduzir o novo recurso.
 
-   Substitua o item que pode ser reproduzido chamando `MediaPlayer.replaceCurrentResource()` e transmitindo uma instância `MediaResource` existente.
+   Substituir o item reproduzível no momento chamando `MediaPlayer.replaceCurrentResource()` e transmitindo um existente `MediaResource` instância.
 
    Isso inicia o processo de carregamento de recursos.
 
-1. Registre o evento `MediaPlayerEvent.STATUS_CHANGED` com a instância `MediaPlayer`. Na chamada de retorno, verifique pelo menos os seguintes valores de status:
+1. Registre o `MediaPlayerEvent.STATUS_CHANGED` evento com o `MediaPlayer` instância. No retorno de chamada, verifique pelo menos os seguintes valores de status:
 
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
 
-   Por meio desses eventos, o objeto `MediaPlayer` notifica seu aplicativo quando ele tiver carregado com êxito o recurso de mídia.
-1. Quando o status do reprodutor de mídia for alterado para `INITIALIZED`, você poderá chamar `MediaPlayer.prepareToPlay()`.
+   Através destes eventos, a `MediaPlayer` O objeto notifica o aplicativo quando carregou o recurso de mídia com êxito.
+1. Quando o status do reprodutor de mídia muda para `INITIALIZED`, você pode chamar `MediaPlayer.prepareToPlay()`.
 
-   Esse status indica que a mídia foi carregada com êxito. O novo `MediaPlayerItem` está pronto para reprodução. Chamar `prepareToPlay()` inicia a resolução e o processo de posicionamento do anúncio, se houver.
+   Esse status indica que a mídia foi carregada com sucesso. O novo `MediaPlayerItem` está pronto para reprodução. Chamando `prepareToPlay()` inicia o processo de resolução e posicionamento do anúncio, se houver.
 
-Se ocorrer uma falha, o reprodutor de mídia alterna para o status `ERROR`.
+Se ocorrer uma falha, o reprodutor de mídia alterna para o `ERROR` status.
 
 O código de amostra simplificado a seguir ilustra o processo de carregamento de um recurso de mídia:
 

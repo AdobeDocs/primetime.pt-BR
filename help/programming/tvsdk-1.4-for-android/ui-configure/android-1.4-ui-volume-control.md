@@ -1,25 +1,23 @@
 ---
-description: Você pode configurar um controle da interface do usuário para o volume de som.
+description: Você pode configurar um controle da interface do usuário para volume de som.
 title: Fornecer controle de volume
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: aa8ffdf3-515b-4899-8a00-8fb5b8c595a9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
-
 # Fornecer controle de volume{#provide-volume-control}
 
-Você pode configurar um controle da interface do usuário para o volume de som.
+Você pode configurar um controle da interface do usuário para volume de som.
 
-1. Aguarde até que a instância do MediaPlayer esteja em um estado válido para esse comando, que é qualquer um, exceto LIBERADO ou ERRO.
-1. Chame `setVolume` na instância `MediaPlayer` para definir o volume de áudio.
+1. Aguarde até que a ocorrência de MediaPlayer esteja em um estado válido para esse comando, que é qualquer um exceto RELEASED ou ERROR.
+1. Chame `setVolume` no `MediaPlayer` instância para definir o volume de áudio.
 
    ```java
    void setVolume(int volume) throws IllegalStateException;
    ```
 
-   O valor do volume representa o volume solicitado expresso em proporção do volume máximo, em que 0 é silencioso e 100 é o volume máximo.
-
+   O valor do volume representa o volume solicitado expresso como uma proporção do volume máximo, onde 0 é silencioso e 100 é o volume máximo.

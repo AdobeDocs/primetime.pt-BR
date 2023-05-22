@@ -1,22 +1,21 @@
 ---
 title: API do Bootstrap
-description: 'API do Bootstrap '
-translation-type: tm+mt
-source-git-commit: bf99c76bbbb67560adc675cf84297b8d3b04e19d
+description: API do Bootstrap
+exl-id: bc7fe244-8664-43ac-b9a1-3967ea8749b1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 0%
 
 ---
 
+# API do Bootstrap {#bootstrap-api}
 
-# API de Bootstrap {#bootstrap-api}
+Normalmente, a API do Bootstrap é o URL enviado para as APIs de reprodução de vídeo/cliente.  Para opções e parâmetros que podem ser configurados, consulte o [Parâmetros da API do Bootstrap](#bootstrap-api-parameters).
 
-Normalmente, a API do Bootstrap é o URL enviado para as APIs de reprodução do cliente/vídeo.  Para opções e parâmetros que podem ser configurados, consulte os [parâmetros da API de Bootstrap](#bootstrap-api-parameters).
+## Enviar um comando para o Servidor de manifesto {#send-a-command-to-the-manifest-server}
 
-## Enviar um comando para o Servidor Manifesto {#send-a-command-to-the-manifest-server}
-
-1. Envie uma solicitação `HTTP GET` para um URL de inicialização construído usando o seguinte padrão:
+1. Enviar um `HTTP GET` solicitação de um URL de inicialização construído usando o seguinte padrão:
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -24,13 +23,13 @@ Normalmente, a API do Bootstrap é o URL enviado para as APIs de reprodução do
     ?{query parameters}
    ```
 
-   * **Extensão** do arquivoDefined. `.m3u8` se o manifesto do público alvo for HLS,  `.mpd` se os manifestos do público alvo estiverem no DASH.
+   * **Extensão de arquivo** Definido. `.m3u8` se o manifesto do público alvo for HLS, `.mpd` se os manifestos do público alvo estiverem no DASH.
 
-   * **** PublisherAssetIDRequired. ID exclusiva do editor para o conteúdo específico.
+   * **PublisherAssetID** Obrigatório. Identificador exclusivo do editor para o conteúdo específico.
 
-   * **Conteúdo** URLRequired. URL do arquivo M3U8 de conteúdo, Base64 codificado para ser seguro dentro do URL do servidor manifest. O URL do conteúdo deve apontar para um arquivo M3U8 variante, mesmo se houver apenas um fluxo de taxa de bits.
+   * **URL de conteúdo** Obrigatório. URL do arquivo de conteúdo M3U8, Base64 codificado para ser seguro no URL do servidor de manifesto. O URL de conteúdo deve apontar para um arquivo M3U8 variante, mesmo se houver apenas um fluxo de taxa de bits.
 
-   * **Parâmetros de query** Estes são a parte mais variada da solicitação. Eles informam ao servidor manifest qual tipo de cliente está fazendo a solicitação e o que ele deseja que o servidor manifest faça.
+   * **Parâmetros de consulta** Estes constituem a parte mais variada do pedido. Eles informam ao servidor de manifesto que tipo de cliente está fazendo a solicitação e o que ele deseja que o servidor de manifesto faça.
 
    Por exemplo:
 
@@ -43,41 +42,41 @@ Normalmente, a API do Bootstrap é o URL enviado para as APIs de reprodução do
 
    **Solicitações HTTP vs. HTTPS**
 
-   O servidor manifest cria URLs usando o mesmo protocolo HTTP da solicitação do cliente. Se um player fizer uma solicitação HTTP não segura (http), o servidor manifest retornará URLs de manifesto e URLs de rastreamento Auditude com o protocolo http. Se um player fizer uma conexão segura HTTP (https), servidor manifest, ele retornará URLs de manifesto e URLs de rastreamento Auditude com o protocolo https.
+   O servidor de manifesto cria URLs usando o mesmo protocolo HTTP da solicitação do cliente. Se um reprodutor fizer uma solicitação HTTP (http) não segura, o servidor de manifesto retornará URLs de manifesto e URLs de rastreamento de Auditoria com o protocolo http. Se um player fizer uma conexão HTTP segura (https), o servidor de manifesto, ele retornará URLs de manifesto e URLs de rastreamento de Auditoria com o protocolo https.
 
    >[!NOTE]
    >
-   >O servidor manifest não pode alterar o protocolo (HTTP ou HTTPS) dos beacons de rastreamento de terceiros. Você deve entrar em contato com o conteúdo e os provedores de anúncios de terceiros para que eles configurem os protocolos desejados.  Os protocolos de URL de segmentos podem ser alterados, no entanto, por padrão, usar os mesmos protocolos definidos nos manifestos do público alvo.
+   >O servidor de manifesto não pode alterar o protocolo (HTTP ou HTTPS) de beacons de rastreamento de terceiros. Você deve entrar em contato com o conteúdo e provedores de anúncios de terceiros para que eles configurem os protocolos desejados.  Os protocolos de URL de segmentos podem ser alterados. No entanto, por padrão, use os mesmos protocolos definidos nos manifestos de destino.
 
 ## Parâmetros da API do Bootstrap {#bootstrap-api-parameters}
 
-Os parâmetros do query informam ao servidor manifest que tipo de cliente enviou a solicitação e o que esse cliente deseja que o servidor manifest faça. Alguns são obrigatórios e alguns têm formatos ou valores aceitáveis específicos.
-O URL completo consiste no URL básico seguido por um ponto de interrogação e, em seguida, `parameterName=value` argumentos separados por E comercial. Por exemplo, `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
+Os parâmetros de consulta informam ao servidor de manifesto que tipo de cliente enviou a solicitação e o que esse cliente deseja que o servidor de manifesto faça. Alguns são obrigatórios e outros têm formatos ou valores aceitáveis específicos.
+O URL completo consiste no URL base seguido por um ponto de interrogação e, em seguida, `parameterName=value` argumentos separados por &quot;E&quot; comercial. Por exemplo, `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-O servidor manifest reconhece os seguintes parâmetros. Todas as querystring\
-são passados para o servidor de publicidade.
+O servidor de manifesto reconhece os parâmetros a seguir. Toda a sequência de consulta\
+Os parâmetros do são passados para o servidor de publicidade.
 
 | parâmetro | descrição | formatos |
 |---|---|---|
-| _sid_ | Uma ID exclusiva que o servidor manifest usará para gerar a ID da sessão. | Obrigatório para DASH/HLS |
-| live | Notifica o Primetime Ad Insertion que o item de conteúdo passado é um fluxo ao vivo.  Se esse parâmetro não for transmitido, a inserção do Anúncio Primetime fará uma solicitação secundária na chamada manifest inicial para determinar se o manifesto é live ou vod.<br>Valores possíveis:<br>true para live <br>contentfalse para vod <br>contentomit para detecção automática | Opcional para HLS.  Obrigatório para DASH |
-| z | A ID de zona do ativo que precisa ser fornecido ao Primetime Ad Insertion. Fornecido pelo Gerente técnico de contas do Adobe. | Obrigatório para DASH/HLS |
-| pabimode | Habilita [inserção parcial de anúncios](/help/primetime-ad-insertion/getting-started/ad-insertion-live-linear-stream.md#partial-ad-break-support) para fluxos ao vivo.<br>Valores possíveis:<br>true para <br>ativar omit para desativar (padrão desativado) | HLS/DASH |
-| ptadtimeout | Permite limitar o tempo geral de resolução do anúncio, se os provedores downstream levarem muito tempo para responder.  Respostas de longa duração podem causar problemas na reprodução, o que permite que o Primetime DAI force uma resposta dentro de um limite de tempo específico.<br>Valores possíveis:sequência <br>numérica em milissegundos.<br>omit to disable (padrão desativado) | HLS/DASH |
-| plataforma | Duração (em segundos) da janela de pesquisa e decisão do anúncio — até que ponto o Primetime Ad Insertion procurará dicas do anúncio quando um usuário do DVR ingressar no fluxo. Um valor de zero desativará a decisão de anúncio intermediário no manifesto inicial, com a decisão sendo retomada somente após a primeira atualização. Esse parâmetro é útil para desativar a inserção de anúncios em sessões que podem durar apenas alguns segundos (também conhecido como mudança de canal).<br>Valores possíveis:string <br>numérica 0-1800 (padrão 1800) | Somente HLS |
-| ptassetid | ID exclusiva do conteúdo atribuído e mantido pelo editor.  Obrigatório quando usado em conjunto com o Akamai Ad Scaler. | HLS/DASH |
-| ptcdn | Lista de um ou mais CDNs para hospedar ativos transcodificados. Para obter mais informações, consulte [Delivery e armazenamento](/help/primetime-ad-insertion/just-in-time-transcoding/delivery-and-storage.md).<br>Valores possíveis:<br>akamai, level3, lnw (redes de luz de luz de fundo), comcast.<br>Por padrão, os Ad Insertion do Primetime são usados. | HLS/DASH |
-| ptcueformat | O formato especificado de tags para executar a decisão de anúncio (por exemplo, scte35).<br>Valores possíveis:<br>detalhado, dpiscte35, <br>elementalPara formatos de sinalização personalizados, entre em contato com seu representante de conta técnica para obter o valor a ser usado no caso de uso | HLS/DASH |
-| failover de canal | Sinaliza o servidor manifest para identificar fluxos primários e de failover especificados na lista de reprodução principal e para tratá-los como conjuntos de disjunção. Isso facilita o failover e evita erros de tempo. (Somente para dispositivos Apple HLS.) Para obter mais informações, consulte [Facilitando a alternância do player HLS](hls-switching-to-failover.md) | Somente HLS |
-| tímulo | Se ativada, uma solicitação de anúncio separada é feita para cada valor encontrado em um ativo VOD.  Por padrão, o Primetime Ad Insertion tentará coletar todas as informações disponíveis e enviá-las para o servidor de publicidade em uma solicitação. Valores possíveis:true para ativar, <br>omit para desativar (padrão desativado) | HLS/DASH |
-| ptparallelstream | Permite que os clientes com players que solicitam streams de áudio ou vídeo descompilados CMAF em paralelo, a fim de garantir que os anúncios nas faixas de áudio e vídeo sejam consistentes. | Somente HLS |
-| protótipo | Habilita regras de regravação de manifesto nomeado e regras de busca de anúncios, que normalmente serão configuradas pelo representante de suporte técnico.<br>Exemplo: adfetch_fw, cdn_akm | HLS/DASH |
-| pttagds | Permite a injeção de tags EXT-X-DISCONTINUITY-SEQUENCE em cabeçalhos HLS.Valores possíveis:true para ativar omit para desativar (padrão desativado) | Somente HLS |
-| linha cronológica | Uma string contendo a linha do tempo desejada para o posicionamento e o conteúdo do anúncio, que substitui e quebra no fluxo de conteúdo. [ Consulte Formato de linha do tempo VOD  ] | HLS/DASH |
-| token | Habilita esquemas de proteção de token de fragmento/autorização de segmento de conteúdo para CDNs<br>Valores possíveis:<br>akamai, lnw (iluminação), ctl (ligação central) (a tokenização padrão está desativada) | HLS/DASH |
-| modo de rastreamento | Habilite esquemas de rastreamento de anúncios.<br>Valores possíveis:<br>simples para <br>rastreamento de anúncio do cliente para <br>stm pararastreamento de anúncio do lado do servidor para rastreamento de anúncio híbrido do cliente/servidor (por padrão, nenhum rastreamento de anúncio é realizado) | HLS/DASH |
-| posição | Instrui o servidor manifest a retornar somente informações de rastreamento de anúncios. Não especifique esse parâmetro na solicitação de bootstrap.<br>Observação: O servidor manifest ignora todos os valores transmitidos. Entretanto, se você passar uma string nula ou vazia, o servidor manifest retornará o M3U8 | Rastreamento HLS/DASH<br>do lado do cliente |
-| pttrackingversion | Define a versão do formato a ser retornada.<br>Valores possíveis:<br>v1, v2, v3 ou vmap | Rastreamento HLS/DASH<br>do lado do cliente |
-| scteTracking | Este parâmetro indica ao servidor manifest que o player que está buscando o M3U8 precisa que as informações da tag SCTE sejam recuperadas.<br>Valores possíveis:<br>true ou false (padrão false)<br>Observação: Os dados SCTE-35 são retornados no auxiliar JSON com a seguinte combinação de valores de parâmetro de query:<br>ptcueformat=turner | elementar | nfl | DPIScte35<br>pttrackingversion=v2<br>scteTracking=true<br> | Somente HLS |
-| vetargetmultiplicador | O número de segmentos a partir do ponto ativo O deslocamento de precedente é configurado usando: ( vetargetmultiplier * targetduration ) + vebufferlength<br>Nota: Este parâmetro se aplica a fluxos HLS ao vivo/linear somente<br>Valores possíveis:<br>flutuante numérico<br>(padrão: 3.0 - igual à especificação HLS) | Somente HLS |
-| vebufferLength | O número de segundos a partir do ponto ativo, usado em conjunto com o multiplicador vetorial.<br>Observação: Esse parâmetro se aplica a fluxos HLS ao vivo/linear <br>onlyValores possíveis:flutuação <br>numérica<br> (padrão: 3,0) | Somente HLS |
+| _sid_ | Uma ID exclusiva que o servidor de manifesto usará para gerar a ID da sessão. | Obrigatório para DASH/HLS |
+| live | Notifica ao Ad Insertion do Primetime que o item de conteúdo transmitido é um fluxo ao vivo.  Se esse parâmetro não for transmitido, a inserção de anúncio do Primetime fará uma solicitação secundária na chamada de manifesto inicial para determinar se o manifesto está ativo ou vod.<br>Valores possíveis:<br>verdadeiro para conteúdo ao vivo<br>falso para conteúdo de vod<br>omitir para detecção automática | Opcional para HLS.  Obrigatório para DASH |
+| z | A ID da zona do ativo que precisa ser fornecido para o Ad Insertion do Primetime. Fornecido pelo Gerente técnico de conta do Adobe. | Obrigatório para DASH/HLS |
+| pabimode | Habilita [inserção parcial de ad break](/help/primetime-ad-insertion/getting-started/ad-insertion-live-linear-stream.md#partial-ad-break-support) para transmissões ao vivo.<br>Valores possíveis:<br>true para habilitar<br>omitir para desativar (desativado por padrão) | HLS/DASH |
+| ptadtimeout | Permite a limitação do tempo geral de resolução do anúncio, se os provedores downstream demorarem muito para responder.  Respostas de longa duração podem causar problemas com a reprodução. Isso permite que o DAI do Primetime force uma resposta em um limite de tempo específico.<br>Valores possíveis:<br>sequência numérica em milissegundos.<br>omitir para desativar (desativado por padrão) | HLS/DASH |
+| ptadwindow | Duração (em segundos) da janela de lookback ad decisioning — até que ponto o Primetime Ad Insertion procurará dicas de anúncios quando um usuário do DVR entrar no fluxo. Um valor zero desativará a decisão de anúncios intermediários no manifesto inicial, com a decisão sendo retomada somente após a primeira atualização. Esse parâmetro é útil para desativar a inserção de anúncios em sessões que podem durar apenas alguns segundos (também conhecido como inversão de canal).<br>Valores possíveis:<br>sequência numérica 0-1800 (padrão 1800) | Somente HLS |
+| ptassetid | Identificador exclusivo do conteúdo atribuído e mantido pelo publicador.  Obrigatório quando usado em conjunto com o Akamai Ad Scaler. | HLS/DASH |
+| ptcdn | Lista de um ou mais CDNs para hospedar ativos transcodificados. Para obter mais informações, consulte [Entrega e armazenamento](/help/primetime-ad-insertion/just-in-time-transcoding/delivery-and-storage.md).<br>Valores possíveis:<br>akamai, level3, llnw (redes de luz), comcast.<br>Por padrão, são usados CDNs de Ad Insertion do Primetime. | HLS/DASH |
+| ptcueformat | O formato especificado de tags para executar a decisão de anúncios (por exemplo, scte35).<br>Valores possíveis:<br>dpisimple, dpiscte35, elemental<br>Para formatos de sinalização personalizados, entre em contato com o representante técnico da conta para obter o valor a ser usado para o caso de uso | HLS/DASH |
+| ptfailover | Sinaliza ao servidor de manifesto para identificar fluxos primários e de failover especificados na lista de reprodução principal e para tratá-los como conjuntos separados. Isso facilita o failover e evita erros de tempo. (Somente para dispositivos Apple HLS.) Para obter mais informações, consulte [Facilitando a alternância do reprodutor HLS](hls-switching-to-failover.md) | Somente HLS |
+| ptmulticall | Se ativado, uma solicitação de anúncio separada é feita para cada uma das vantagens encontradas em um ativo de VOD.  Por padrão, o Primetime Ad Insertion tentará coletar todas as informações disponíveis e enviá-las para o servidor de publicidade em uma solicitação. Valores possíveis:true para habilitar, <br>omitir para desativar (desativado por padrão) | HLS/DASH |
+| ptparallelstream | Permite que clientes com players que solicitam fluxos de áudio ou vídeo desmesclados do CMAF em paralelo para garantir que os anúncios em trilhas de áudio e vídeo sejam consistentes. | Somente HLS |
+| ptprotoswitch | Habilita regras nomeadas de regravação de manifesto e de busca de anúncios, que normalmente serão configuradas pelo representante do suporte técnico.<br>Exemplo: adfetch_fw, cdn_akm | HLS/DASH |
+| pttagds | Habilita a injeção de tags EXT-X-DISCONTINUITY-SEQUENCE em cabeçalhos HLS. Valores possíveis: true para habilitar a omissão para desabilitar (desabilitado por padrão) | Somente HLS |
+| pttimeline | Uma string que contém a linha do tempo desejada para a inserção e o conteúdo do anúncio, que substitui os ad breaks no fluxo de conteúdo. [ Consulte Formato da linha do tempo de VOD ] | HLS/DASH |
+| pttoken | Habilita esquemas de proteção de token de autorização de fragmento/segmento de conteúdo para CDNs<br>Valores possíveis:<br>akamai, llnw (limelight), ctl (centurylink) (a geração de tokens padrão está desativada) | HLS/DASH |
+| pttrackingmode | Habilite os esquemas de rastreamento de anúncios.<br>Valores possíveis:<br>simples para rastreamento de anúncios no lado do cliente<br>sstm para rastreamento de anúncios do lado do servidor<br>simple stm para rastreamento de anúncio de cliente/servidor híbrido (por padrão, nenhum rastreamento de anúncio é executado) | HLS/DASH |
+| pttrackingposition | Instrui o servidor de manifesto a retornar somente informações de rastreamento de anúncios. Não especifique este parâmetro na solicitação de inicialização.<br>Observação: o servidor de manifesto ignora todos os valores transmitidos. No entanto, se você passar uma string nula ou vazia, o servidor de manifesto retornará o M3U8 | HLS/DASH<br>Rastreamento do lado do cliente |
+| pttrackingversion | Define a versão de formato a ser retornada.<br>Valores possíveis:<br>v1, v2, v3 ou vmap | HLS/DASH<br>Rastreamento do lado do cliente |
+| scteTracking | Esse parâmetro indica ao servidor de manifesto que o reprodutor que busca o M3U8 precisa que as informações da tag SCTE sejam recuperadas.<br>Valores possíveis:<br>verdadeiro ou falso (padrão falso)<br>Observação: os dados SCTE-35 são retornados no JSON sidecar com a seguinte combinação de valores de parâmetro de consulta:<br>ptcueformat=turner | elemental | nfl | DPIScte35<br>pttrackingversion=v2<br>scteTracking=true<br> | Somente HLS |
+| vetargetmultiplier | O número de segmentos do ponto ativo O deslocamento antes da exibição é configurado usando: ( vetargetmultiplier * targetduration ) + vebufferlength<br>Observação: esse parâmetro se aplica somente a fluxos Live/Linear HLS<br>Valores possíveis:<br>flutuante numérico<br>(padrão: 3.0 - igual à especificação HLS) | Somente HLS |
+| vebufferLength | O número de segundos a partir do ponto ativo, usado em conjunto com vetargetmultiplier.<br>Observação: esse parâmetro se aplica somente a fluxos Live/Linear HLS<br>Valores possíveis:<br>flutuante numérico<br>(padrão: 3.0) | Somente HLS |

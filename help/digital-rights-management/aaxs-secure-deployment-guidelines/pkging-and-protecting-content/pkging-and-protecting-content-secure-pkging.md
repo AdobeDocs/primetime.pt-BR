@@ -1,30 +1,29 @@
 ---
-title: Embalagem segura
-description: Embalagem segura
+title: Empacotando conteúdo com segurança
+description: Empacotando conteúdo com segurança
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f554852c-83d9-4b31-8dde-2af577c70989
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
+# Empacotando conteúdo com segurança {#securely-packaging-content}
 
-# Empacotar conteúdo com segurança {#securely-packaging-content}
+O arquivo de configuração da ferramenta de linha de comando Adobe Access Media Packager requer uma credencial PKCS12 usada durante o empacotamento.
 
-O arquivo de configuração para a ferramenta de linha de comando Adobe Access Media Packager requer uma credencial PKCS12 usada durante o empacotamento.
+Nas ferramentas de Linha de Comando de Implementação de Referência, a senha do arquivo de credenciais PKCS12 é armazenada no arquivo flashaccess.properties em texto simples. Por esse motivo, tenha cuidado extra ao proteger o computador que hospeda esse arquivo e verifique se ele está em um ambiente seguro. (Consulte [Segurança física e acesso](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
 
-Nas ferramentas de Linha de Comando de Implementação de Referência, a senha do arquivo de credenciais PKCS12 é armazenada no arquivo flashaccess.properties em texto limpo. Por isso, tenha cuidado ao proteger o computador que hospeda esse arquivo e garantir que ele esteja em um ambiente seguro. (Consulte [Segurança física e acesso](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
-
-O empacotador também usa os certificados de Transporte do License Server e do License Server. A integridade e a confidencialidade destas informações devem ser protegidas. Só as entidades autorizadas devem ser autorizadas a utilizar o embalador. Se alguma de suas chaves privadas estiver comprometida, informe imediatamente o Adobe Systems Incorporated para que o certificado possa ser revogado.
+O empacotador também usa os certificados de Transporte do Servidor de Licenças e do Servidor de Licenças. A integridade e a confidencialidade dessas informações devem ser protegidas. Apenas as entidades autorizadas devem ser autorizadas a utilizar o acondicionador. Se alguma de suas chaves privadas estiver comprometida, informe imediatamente o Adobe Systems Incorporated para que o certificado possa ser revogado.
 
 >[!NOTE]
 >
->A API permite usar a mesma chave para vários conteúdos. Para garantir o mais alto nível de segurança, recomendamos que esse recurso seja usado apenas para conteúdo FMS de taxa de bits múltipla. Não é recomendado usar a mesma chave para vários arquivos que representam conteúdo diferente.
+>A API permite usar a mesma chave para vários conteúdos. Para garantir o mais alto nível de segurança, recomendamos que esse recurso seja usado somente para conteúdo FMS com taxa de vários bits. Não é recomendável usar a mesma chave para vários arquivos que representam conteúdo diferente.
 
-A API de empacotamento de acesso ao Adobe emite avisos sob determinadas condições. Você deve revisar esses avisos para determinar se os arquivos foram criptografados com êxito. As mensagens de aviso podem indicar que a política expirou, uma tag ou rastreamento não reconhecido não será criptografado, os fragmentos de filme não serão criptografados (e as referências nesses fragmentos podem se tornar inválidas) e os metadados não serão criptografados.
+A API de empacotamento de acesso ao Adobe emite avisos sob determinadas condições. Você deve revisar esses avisos para determinar se os arquivos foram criptografados com êxito. As mensagens de aviso podem indicar que a política expirou, que uma tag ou trilha não reconhecida não será criptografada, que os fragmentos de filme não serão criptografados (e que as referências dentro desses fragmentos podem se tornar inválidas) e que os metadados não serão criptografados.
 
-Se o conteúdo for empacotado usando uma política com atributos incorretos, a política deverá ser atualizada e a política atualizada deverá ser disponibilizada ao License Server por meio de uma lista de atualização de política ou outro mecanismo para fornecer a política atualizada ao servidor. Alguns atributos de política não podem ser alterados após a criação da política. Se esses atributos estiverem incorretos, puxe o conteúdo de volta dos sites de distribuição, revogue a política para que nenhuma licença futura possa ser concedida e criptografe novamente o conteúdo.
+Se o conteúdo for empacotado usando uma política com atributos incorretos, a política deverá ser atualizada e a política atualizada deverá ser disponibilizada ao License Server por meio de uma lista de atualização de política ou outro mecanismo para fornecer a política atualizada ao servidor. Alguns atributos de política não podem ser alterados após a criação da política. Se esses atributos estiverem incorretos, obtenha o conteúdo dos sites de distribuição, revogue a política para que nenhuma licença futura possa ser concedida e criptografe novamente o conteúdo.
 
-Quando a embalagem estiver completa, a chave de embalagem não é explicitamente destruída; no entanto, é coletado lixo. Por conseguinte, a chave de embalagem permanece na memória por um período de tempo; você deve proteger contra acesso não autorizado à máquina e tomar medidas para garantir que não exponha arquivos, como despejos principais, que possam revelar essas informações.
+Quando o empacotamento é concluído, a chave de empacotamento não é explicitamente destruída; no entanto, ela é coletada pelo lixo. Portanto, a chave de empacotamento permanece na memória por um período de tempo; você deve proteger contra acesso não autorizado à máquina e tomar medidas para garantir que não exponha nenhum arquivo, como despejos de núcleo, que possam revelar essas informações.

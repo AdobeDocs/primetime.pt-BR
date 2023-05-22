@@ -1,40 +1,40 @@
 ---
-title: Notas de versão da autenticação da Adobe Primetime 2.64
-description: Notas de versão da autenticação da Adobe Primetime 2.64
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Notas de versão da autenticação do Adobe Primetime 2.64
+description: Notas de versão da autenticação do Adobe Primetime 2.64
+exl-id: 4db21026-a0c2-4e33-b01f-4ccae824a110
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
-
-# Notas de versão da autenticação da Adobe Primetime 2.64 {#authn-264-rn}
+# Notas de versão da autenticação do Adobe Primetime 2.64 {#authn-264-rn}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 Esta página descreve novos recursos, alterações e problemas conhecidos com esta versão:
 
 ## Lado do servidor e clientes da Web {#ss-web-clients}
 
-* [Número da build](#build-no-264)
+* [Número da Build](#build-no-264)
 * [Novos recursos](#new-featres-264)
 * [Correções de erros](#bug-fixes-264)
 
 
-### Número da build {#build-no-264}
+### Número da Build {#build-no-264}
 
-Autenticação Adobe Primetime: adobe-pass-**2,64**
+Autenticação do Adobe Primetime: adobe-pass-**2,64**
 
-Data de lançamento: **08/11/2022 - 11/10/2022**
+Data de lançamento: **08/11/2022 - 10/11/2022**
 
 ### Novos recursos {#new-featres-264}
 
-* Atualizações de infraestrutura, direcionadas para reduzir os tempos de resposta do servidor, melhorando o desempenho geral do sistema.
+* Atualizações da infraestrutura, destinadas a reduzir os tempos de resposta do servidor, melhorando o desempenho geral do sistema.
 * Melhorias no novo mecanismo de identificação da plataforma.
-* Capacidade de bloquear respostas de autenticação não solicitadas de MVPDs nas quais o parâmetro &quot;in_response_to&quot; está ausente da asserção de SAML.
+* Capacidade de bloquear respostas de autenticação não solicitadas de MVPDs em que o parâmetro &quot;in_response_to&quot; está ausente da asserção SAML.
 
 ### Correções de erros {#bug-fixes-264}
 

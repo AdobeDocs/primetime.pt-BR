@@ -1,22 +1,21 @@
 ---
-description: O licenciamento é o principal mecanismo pelo qual os usuários têm permissão ou a capacidade de reproduzir um conteúdo de vídeo protegido. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado do provedor de conteúdo.
+description: O licenciamento é o principal mecanismo pelo qual os usuários têm a capacidade de reproduzir um conteúdo de vídeo protegido. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado de seu provedor de conteúdo.
 title: Licenciamento
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 60aa3e77-f821-41b3-ba0e-1a2c05b2bb1a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
-
 # Licenciamento{#licensing}
 
-O licenciamento é o principal mecanismo pelo qual os usuários têm permissão ou a capacidade de reproduzir um conteúdo de vídeo protegido. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado do provedor de conteúdo.
+O licenciamento é o principal mecanismo pelo qual os usuários têm a capacidade de reproduzir um conteúdo de vídeo protegido. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado de seu provedor de conteúdo.
 
-Antes que seu aplicativo ou página da Web em um dispositivo de usuário final possa reproduzir conteúdo protegido por DRM, ele deve adquirir um token de um servidor de direito ou loja que você, o cliente, opere. O Adobe fornece um servidor de referência de amostra para essa finalidade: [Servidor de referência: Exemplo de SEES (ExpressPlay Entitlement Server)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Antes que o aplicativo ou página da Web no dispositivo de um usuário final possa reproduzir conteúdo protegido por DRM, ele deve adquirir um token de um servidor de frente de loja ou de direito que você, o cliente, opera. O Adobe fornece um exemplo de servidor de referência para esta finalidade: [Servidor de Referência: Exemplo de Servidor de Direitos ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
-Seu servidor de direito ou de loja solicitará um token de licença do ExpressPlay Server relevante somente após verificar seus próprios sistemas de back-end para determinar se o usuário específico tem direito a assistir o conteúdo solicitado. A resposta retornada da solicitação de token de licença é um URL pronto para uso para o servidor de licença ou a resposta contém o URL em uma estrutura JSON, dependendo da solução DRM com a qual você está trabalhando.
+Seu direito ou servidor de loja solicitará um token de licença do ExpressPlay Server relevante somente após verificar com seus próprios sistemas de back-end para determinar se o usuário específico está autorizado a assistir ao conteúdo solicitado. A resposta retornada pela solicitação de token de licença é um URL pronto para uso do servidor de licenças ou a resposta contém o URL em uma estrutura JSON, dependendo da solução DRM com a qual você está trabalhando.
 
 >[!NOTE]
 >
@@ -25,11 +24,11 @@ Seu servidor de direito ou de loja solicitará um token de licença do ExpressPl
 >1. O autenticador do cliente deve ser mantido em segredo.
 
 
-1. Faça a solicitação do token de licença.
+1. Faça a solicitação de token de licença.
 
-   Para um cenário de início rápido, em que você deseja apenas garantir que os vários componentes envolvidos estejam funcionando juntos, você pode usar algo como [!DNL curl] para fazer sua solicitação de token de licença (em vez de inicialmente colocar um aplicativo em execução e testar chamadas a partir daí). Por exemplo:
+   Para um cenário de início rápido, no qual você deseja apenas garantir que os vários componentes envolvidos estejam trabalhando juntos, convém usar algo como [!DNL curl] para fazer sua solicitação de token de licença (em vez de inicialmente colocar um aplicativo em funcionamento e testar chamadas a partir daí). Por exemplo:
 
-   * Viúva:
+   * Vinha:
 
    ```
    curl "https://wv-gen.test.expressplay.com/hms/wv/token?customerAuthenticator= 
@@ -57,7 +56,7 @@ Seu servidor de direito ou de loja solicitará um token de licença do ExpressPl
       &<Any additional licensing attributes desired>" >>WidevineToken 
    ```
 
-   Token de teste da Widevine de amostra:
+   Exemplo de token de teste Widevine:
 
    ```
    https://wv.test.expressplay.com/widevine/RightsManager.asmx?ExpressPlayToken= 
@@ -66,7 +65,7 @@ Seu servidor de direito ou de loja solicitará um token de licença do ExpressPl
       O1PqRkx59Q2q1s2cFNrqfml8Y3RQ 
    ```
 
-   Observe que a resposta de Widevine é uma string de URL &quot;pronta para uso&quot;.
+   Observe que a resposta do Widevine é uma string de URL &quot;pronta para uso&quot;.
 
    * PlayReady:
 
@@ -96,7 +95,7 @@ Seu servidor de direito ou de loja solicitará um token de licença do ExpressPl
       &<Any additional licensing attributes desired>" >>playreadyToken
    ```
 
-   Amostra do token de teste PlayReady:
+   Exemplo de token de teste PlayReady:
 
    ```
    {"licenseAcquisitionUrl":"https://pr.test.expressplay.com/playready/RightsManager.asmx", 
@@ -104,7 +103,7 @@ Seu servidor de direito ou de loja solicitará um token de licença do ExpressPl
    G_2Qt8RdTGJ2_Q_xtRfnj7H6C-yt6By40IhNaSQ0nNYUsY1_MtCrHXIltlVhN2Ekr_RNyTNvCjYs0V5TqzOPY"} 
    ```
 
-   Observe que a resposta PlayReady é um objeto JSON, com elementos de URL e token separados.
+   Observe que a resposta do PlayReady é um objeto JSON, com URL separados e elementos de token.
 
    * FairPlay:
 
@@ -135,7 +134,7 @@ Seu servidor de direito ou de loja solicitará um token de licença do ExpressPl
     &<Any additional licensing attributes desired>"
    ```
 
-   Amostra do token de teste do FairPlay:
+   Token de teste FairPlay de amostra:
 
    ```
    https://{expressplay_test_domain_license_url}/?ExpressPlayToken= 

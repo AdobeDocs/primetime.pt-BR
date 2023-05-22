@@ -1,22 +1,21 @@
 ---
-description: A interface do token de licença PlayReady fornece serviços de produção e teste.
-title: Solicitação / resposta do token de licença PlayReady
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: A interface do token de licença do PlayReady fornece serviços de produção e teste.
+title: Solicitação/resposta do token de licença do PlayReady
+exl-id: 12f925f7-336b-42b2-95a9-e806801bab8c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 4%
 
 ---
 
+# Solicitação/resposta do token de licença do PlayReady {#playready-license-token-request-response}
 
-# Solicitação / resposta do token de licença PlayReady {#playready-license-token-request-response}
+A interface do token de licença do PlayReady fornece serviços de produção e teste.
 
-A interface do token de licença PlayReady fornece serviços de produção e teste.
+Esta solicitação HTTP retorna um token que pode ser resgatado para uma licença PlayReady.
 
-Esta solicitação HTTP retorna um token que pode ser resgatado para uma licença PlayReady .
-
-**Método: GET, POST**  (com um corpo codificado em www-url que contém parâmetros para ambos os métodos)
+**Método: GET, POST** (com um corpo codificado em www-url que contém parâmetros para ambos os métodos)
 
 **URLs:**
 
@@ -24,7 +23,7 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
 
 * **Teste:** ` [https://pr-gen.test.expressplay.com/hms/pr/token](https://pr-gen.test.expressplay.com/hms/pr/token)`
 
-* **Solicitação de exemplo:**
+* **Exemplo de solicitação:**
 
    ```
    <xref href="https: pr-gen.test.expressplay.com="" hms="" pr="" token?customerAuthenticator="201722,1ad8eed133edf43cbcc185f0236828ae&kid=b366360da82e9c6e0b0984002a362cf2&contentKey=b366360da82e9c6e0b0984002a362cf2&rightsType=BuyToOwn&analogVideoOPL=0&compressedDigitalAudioOPL=0&compressedDigitalVideoOPL=0&uncompressedDigitalAudioOPL=0&uncompressedDigitalVideoOPL=0&quot; format=&quot;html&quot; scope=&quot;external&quot;">
@@ -48,14 +47,14 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
                "token":"<base64-encoded ExpressPlay token>"}
    ```
 
-## Parâmetros de consulta da solicitação {#section_26F8856641A64A46A3290DBE61ACFAD2}
+## Parâmetros de consulta de solicitação {#section_26F8856641A64A46A3290DBE61ACFAD2}
 
-**Quadro 9: Parâmetros de consulta de token**
+**Tabela 9: Parâmetros de consulta de token**
 
 <table id="table_zxg_dyr_pv">  
  <thead> 
   <tr> 
-   <th class="entry"><b>Parâmetro de consulta</b> </th> 
+   <th class="entry"><b>Parâmetro da consulta</b> </th> 
    <th class="entry"><b>Descrição</b> </th> 
    <th class="entry"><b>Obrigatório?</b> </th> 
   </tr> 
@@ -63,23 +62,23 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
  <tbody> 
   <tr> 
    <td><span class="codeph"> customerAuthenticator</span> </td> 
-   <td> <p>Essa é a chave de API do cliente, uma para cada ambiente de produção e teste. Você pode encontrar isso na guia ExpressPlay Admin Dashboard . </p> </td> 
+   <td> <p>Essa é a chave da API do cliente, uma para cada ambiente de produção e teste. Você pode encontrá-lo na guia ExpressPlay Admin Dashboard. </p> </td> 
    <td> Sim </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> errorFormat</span> </td> 
-   <td><span class="codeph"> html</span> ou <span class="codeph"> json</span>. Se <span class="codeph"> html</span> (o padrão) uma representação HTML de qualquer erro é fornecida no corpo da entidade da resposta. <p>Se <span class="codeph"> json</span> for especificado, uma resposta estruturada no formato JSON será retornada. Consulte <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> Erros JSON</a> para obter detalhes. </p> <p>O tipo mime da resposta é <span class="codeph"> text/uri-list</span> em caso de sucesso, <span class="codeph"> text/html</span> para formato de erro HTML ou <span class="codeph"> application/json</span> para formato de erro JSON. </p> </td> 
+   <td>Ou <span class="codeph"> html</span> ou <span class="codeph"> json</span>. Se <span class="codeph"> html</span> (o padrão) uma representação HTML de quaisquer erros é fornecida no corpo da entidade da resposta. <p>Se <span class="codeph"> json</span> for especificada, uma resposta estruturada no formato JSON será retornada. Consulte <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> Erros JSON</a> para obter detalhes. </p> <p>O tipo MIME da resposta é <span class="codeph"> text/uri-list</span> no sucesso, <span class="codeph"> text/html</span> para o formato de erro HTML, ou <span class="codeph"> application/json</span> para formato de erro JSON. </p> </td> 
    <td> Não </td> 
   </tr> 
  </tbody> 
 </table>
 
-**Quadro 10: Parâmetros de consulta de licença**
+**Tabela 10: Parâmetros de consulta de licença**
 
 <table id="table_f1l_fyr_pv">  
  <thead> 
   <tr> 
-   <th class="entry"><b>Parâmetro de consulta</b> </th> 
+   <th class="entry"><b>Parâmetro da consulta</b> </th> 
    <th class="entry"><b>Descrição</b> </th> 
    <th class="entry"><b>Obrigatório?</b> </th> 
   </tr> 
@@ -87,67 +86,67 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
  <tbody> 
   <tr> 
    <td><span class="codeph"> generalFlags</span> </td> 
-   <td>Uma string hexadecimal de 4 bytes que representa os sinalizadores de licença. Deve ser fixado em "00000001" para uma licença persistente. <p>Observação: As licenças de aluguel (<span class="codeph"> rightsType=Rental</span>) DEVEM ser persistentes. </p> </td> 
+   <td>Uma string hexadecimal de 4 bytes que representa os sinalizadores de licença. Deve ser definido como ‘00000001’ para uma licença persistente. <p>Observação: licenças de aluguel (<span class="codeph"> rightsType=Aluguel</span>) DEVE ser persistente. </p> </td> 
    <td> Não </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> chavão</span> </td> 
-   <td> Chave de criptografia de chave (KEK). As chaves são armazenadas criptografadas com um KEK usando um algoritmo de encapsulamento de chave (AES Key Wrap, RFC3394). </td> 
+   <td><span class="codeph"> kek</span> </td> 
+   <td> Chave de criptografia de chave (KEK). As chaves são armazenadas criptografadas com um KEK usando um algoritmo de quebra automática de chaves (AES Key Wrap, RFC3394). </td> 
    <td> Não </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> criança</span> </td> 
-   <td>Uma representação de string hexadecimal de 16 bytes da chave de criptografia de conteúdo ou uma string <span class="codeph"> ^somestring'</span>. O comprimento da cadeia de caracteres seguida pelo '^' não pode ser maior que 64 caracteres. </td> 
+   <td>Uma representação de string hexadecimal de 16 bytes da chave de criptografia de conteúdo ou uma string <span class="codeph"> ^somestring'</span>. O comprimento da cadeia de caracteres seguido por '^' não pode ser maior que 64 caracteres. </td> 
    <td> Sim </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> ek</span> </td> 
-   <td> Uma representação hexadecimal da chave de conteúdo criptografada. </td> 
+   <td> Uma representação de sequência hexadecimal da chave de conteúdo criptografada. </td> 
    <td> Não </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> contentKey</span> </td> 
    <td> Uma representação de string hexadecimal de 16 bytes da chave de criptografia de conteúdo </td> 
-   <td>Sim, a menos que <span class="codeph"> kek</span> e <span class="codeph"> ek</span> ou <span class="codeph"> boy</span> sejam fornecidas </td> 
+   <td>Sim, exceto se <span class="codeph"> kek</span> e <span class="codeph"> ek</span> ou <span class="codeph"> criança</span> são fornecidos </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rightsType</span> </td> 
-   <td>Especifica o tipo de direitos. Deve ser <span class="codeph"> ComprarPróprio</span> ou <span class="codeph"> Aluguer</span>. </td> 
+   <td>Especifica o tipo de direitos. Deve ser <span class="codeph"> BuyToOwn</span> ou <span class="codeph"> Aluguel</span>. </td> 
    <td> Sim </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rent.periodEndTime</span> </td> 
-   <td>Data de término do aluguel. Esse valor DEVE estar no formato 'RFC 3339' _ date/time no formato 'Z' zone designator ("Zulu time") ou um número inteiro precedido por um sinal '+'. <p>Se o valor for um <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a> formato de data/hora, ele representa uma data/hora de expiração absoluta para a licença. Um exemplo de uma data/hora RFC 3339 é 2006-04-14T12:01:10Z. </p> <p> Se o valor for um número inteiro precedido por um sinal "+", ele será considerado um número relativo de segundos a partir do momento em que o token for emitido. O conteúdo não pode ser reproduzido após esse tempo. Só é válido se <span class="codeph"> rightsType</span> for <span class="codeph"> Aluguer</span>. </p> </td> 
-   <td>Sim, quando <span class="codeph"> rightsType</span> é <span class="codeph"> Aluguer</span>. </td> 
+   <td>Data final da locação. Este valor DEVE estar no formato de data/hora 'RFC 3339' _ no formato de designador de zona 'Z' ("Zulu time") ou um número inteiro precedido por um sinal '+'. <p>Se o valor for um <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a> formato de data/hora e, em seguida, representa uma data/hora de expiração absoluta da licença. Um exemplo de data/hora RFC 3339 é 2006-04-14T12:01:10Z </p> <p> Se o valor for um número inteiro precedido por um sinal '+', ele será considerado um número relativo de segundos a partir do momento em que o token for emitido. O conteúdo não pode ser reproduzido após esse tempo. Somente válido se <span class="codeph"> rightsType</span> é <span class="codeph"> Aluguel</span>. </p> </td> 
+   <td>Sim, quando <span class="codeph"> rightsType</span> é <span class="codeph"> Aluguel</span>. </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rent.playDuration</span> </td> 
-   <td>Tempo, em segundos, para que o conteúdo possa ser reproduzido quando a reprodução for iniciada. Só é válido se <span class="codeph"> rightsType</span> for Aluguel. </td> 
+   <td>Tempo, em segundos, que o conteúdo pode ser reproduzido depois que a reprodução é iniciada. Somente válido se <span class="codeph"> rightsType</span> é Aluguel. </td> 
    <td> Não </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> análogoVideoOPL</span> </td> 
-   <td> Valor inteiro para indicar o Nível de proteção de saída para vídeo analógico. Intervalo válido 0-999. </td> 
+   <td> Valor inteiro para indicar o Nível de Proteção de Saída para vídeo analógico. Intervalo válido de 0 a 999. </td> 
    <td> Sim </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> compactadoDigitalAudioOPL</span> </td> 
-   <td> Valor inteiro para indicar o Nível de proteção de saída para áudio digital compactado. Intervalo válido 0-999. </td> 
+   <td><span class="codeph"> compressedDigitalAudioOPL</span> </td> 
+   <td> Valor inteiro para indicar o Nível de Proteção de Saída para áudio digital compactado. Intervalo válido de 0 a 999. </td> 
    <td> Sim </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> compactadoDigitalVideoOPL</span> </td> 
-   <td> Valor inteiro para indicar o Nível de proteção de saída para vídeo digital compactado. Intervalo válido 0-999. </td> 
+   <td><span class="codeph"> compressedDigitalVideoOPL</span> </td> 
+   <td> Valor inteiro para indicar o Nível de proteção de saída para vídeo digital compactado. Intervalo válido de 0 a 999. </td> 
    <td> Sim </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> uncompressedDigitalAudioOPL</span> </td> 
-   <td> Valor inteiro para indicar o Nível de proteção de saída para áudio digital descompactado. Intervalo válido 0-999. </td> 
+   <td> Valor inteiro para indicar o Nível de Proteção de Saída para áudio digital descompactado. Intervalo válido de 0 a 999. </td> 
    <td> Sim </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> uncompressedDigitalVideoOPL</span> </td> 
-   <td> Valor inteiro para indicar o Nível de proteção de saída para vídeo digital descompactado. Intervalo válido 0-999. </td> 
+   <td> Valor inteiro para indicar o Nível de proteção de saída para vídeo digital descompactado. Intervalo válido de 0 a 999. </td> 
    <td> Sim </td> 
   </tr> 
   <tr> 
@@ -162,7 +161,7 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td><span class="codeph"> extensionType</span> </td> 
-   <td>Uma palavra arbitrária de 4 letras representando um identificador de 32 bits para uma Extensão. O código ASCII de 8 bits de cada letra é a parte correspondente de 8 bits do identificador. Por exemplo, o valor identificador 0x61626364 (hexadecimal) seria gravado como ‘<span class="codeph"> abcd</span>', porque o código ASCII para ‘a’ é 0x61, etc. </td> 
+   <td>Uma palavra arbitrária de 4 letras que representa um identificador de 32 bits para uma Extensão. O código ASCII de 8 bits de cada letra é a parte correspondente de 8 bits do identificador. Por exemplo, o valor do identificador 0x61626364 (hexadecimal) seria escrito ‘<span class="codeph"> abcd</span>', porque o código ASCII para 'a' é 0x61, etc. </td> 
    <td> Não </td> 
   </tr> 
   <tr> 
@@ -175,17 +174,17 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
 
 ## Respostas {#section_0079C31B4AF14DBBB6277CF251FB90E3}
 
-**Quadro 11: Respostas HTTP**
+**Tabela 11: Respostas HTTP**
 
-| **Código de status HTTP** | **Descrição** | **Tipo de conteúdo** | **Corpo da Entidade Contém** |
+| **Código de status HTTP** | **Descrição** | **Tipo de conteúdo** | **Corpo da entidade contém** |
 |---|---|---|---|
-| `200 OK` | Nenhum erro. | `text/uri-list` | Token e url de aquisição de licença |
-| `400 Bad Request` | Arcos inválidos | `text/html` ou  `application/json` | Descrição do erro |
-| `401 Unauthorized` | Falha na autenticação | `text/html` ou  `application/json` | Descrição do erro |
-| `404 Not found` | URL inválido | `text/html` ou  `application/json` | Descrição do erro |
-| `50x Server Error` | Erro do servidor | `text/html` ou  `application/json` | Descrição do erro |
+| `200 OK` | Nenhum erro. | `text/uri-list` | URL e token de aquisição de licença |
+| `400 Bad Request` | Argumentos inválidos | `text/html` ou `application/json` | Descrição do erro |
+| `401 Unauthorized` | Falha de autenticação | `text/html` ou `application/json` | Descrição do erro |
+| `404 Not found` | URL inválido | `text/html` ou `application/json` | Descrição do erro |
+| `50x Server Error` | Erro do servidor | `text/html` ou `application/json` | Descrição do erro |
 
-**Quadro 12: Códigos de erro do evento**
+**Tabela 12: Códigos de erro do evento**
 
 <table id="table_lqb_ycs_pv">  
  <thead> 
@@ -197,7 +196,7 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
  <tbody> 
   <tr> 
    <td> -2002 </td> 
-   <td> Hora de expiração do token inválida: &lt;details&gt; </td> 
+   <td> Tempo de expiração de token inválido: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2003 </td> 
@@ -217,7 +216,7 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td>Token de autenticação inválido: &lt;details&gt; <p>Observação:  Isso pode acontecer se o autenticador estiver incorreto ou ao acessar a API de teste em *.test.expression.com usando o autenticador de produção e vice-versa. </p> <p importance="high">Observação: O Test SDK e a Ferramenta de Teste Avançado (ATT) funcionam somente com <span class="filepath"> *.test.expression.com</span>, enquanto os dispositivos de produção devem usar <span class="filepath"> *.service.expression.com</span>. </p> </td> 
+   <td>Token de autenticação inválido: &lt;details&gt; <p>Observação: isso pode acontecer se o autenticador estiver errado ou ao acessar a API de teste em *.test.expressplay.com usando o autenticador de produção e vice-versa. </p> <p importance="high">Observação: o SDK de teste e a Ferramenta de teste avançada (ATT) funcionam somente com o <span class="filepath"> *.test.expressplay.com</span>, enquanto os dispositivos de produção devem utilizar <span class="filepath"> *.service.expressplay.com</span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
@@ -225,7 +224,7 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td> -2020 </td> 
-   <td> Tipo de direitos ausentes </td> 
+   <td> Tipo de direitos ausente </td> 
   </tr> 
   <tr> 
    <td> -2021 </td> 
@@ -233,23 +232,23 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td> -2022 </td> 
-   <td> Hora de término do período de aluguel ausente </td> 
+   <td> Hora final do período de locação ausente </td> 
   </tr> 
   <tr> 
    <td> -2023 </td> 
-   <td> Duração de reprodução de aluguel ausente </td> 
+   <td> Duração da reprodução de locação ausente </td> 
   </tr> 
   <tr> 
    <td> -2025 </td> 
-   <td> Duração de reprodução de aluguel inválida </td> 
+   <td> Duração inválida da reprodução de aluguel </td> 
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> A chave de criptografia de conteúdo deve ter 32 dígitos hexadecimais de comprimento </td> 
+   <td> A chave de criptografia do conteúdo deve ter 32 dígitos hexadecimais </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 
-   <td> Erro do Administrador do ExpressPlay: &lt;details&gt; </td> 
+   <td> Erro do administrador do ExpressPlay: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2031 </td> 
@@ -261,7 +260,7 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td> -2034 </td> 
-   <td> Controle de Saída Inválido, valores fora do intervalo especificado </td> 
+   <td> Controle de saída inválido, valores fora do intervalo especificado </td> 
   </tr> 
   <tr> 
    <td> -2035 </td> 
@@ -273,15 +272,15 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td> -2037 </td> 
-   <td> A carga da extensão deve ser codificada em Base64 </td> 
+   <td> A carga da extensão deve ser codificada na Base64 </td> 
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td><span class="codeph"> </span> OutputControlFlagge deve ter 4 bytes de codificação </td> 
+   <td><span class="codeph"> SinalizadorControleSaída</span> deve ser codificado em 4 bytes </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
-   <td> Formato de erro inválido especificado: &lt;format&gt; </td> 
+   <td> Formato inválido especificado: &lt;format&gt; </td> 
   </tr> 
   <tr> 
    <td> -4001 </td> 
@@ -289,7 +288,7 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td> -4018 </td> 
-   <td><span class="codeph"> filho ausente</span> </td> 
+   <td>Ausente <span class="codeph"> criança</span> </td> 
   </tr> 
   <tr> 
    <td> -4019 </td> 
@@ -297,19 +296,19 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td><span class="codeph"> </span> deve ter 32 caracteres hexadecimais </td> 
+   <td><span class="codeph"> criança</span> deve ter 32 caracteres hexadecimais </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td><span class="codeph"> </span> deve ter 64 caracteres após o ^ </td> 
+   <td><span class="codeph"> criança</span> deve ter 64 caracteres após ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td><span class="codeph"> subordinado inválido</span> </td> 
+   <td>Inválido <span class="codeph"> criança</span> </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td>Chave <span class="codeph"> criptografada inválida</span> ou chave </td> 
+   <td>Criptografado inválido <span class="codeph"> key</span> ou kek </td> 
   </tr> 
   <tr> 
    <td> -5001 </td> 
@@ -317,7 +316,7 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td> -5002 </td> 
-   <td> A opção PlayReady está desativada para este serviço </td> 
+   <td> A opção PlayReady está desabilitada para este serviço </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
@@ -329,7 +328,7 @@ Esta solicitação HTTP retorna um token que pode ser resgatado para uma licenç
   </tr> 
   <tr> 
    <td> -5005 </td> 
-   <td> ID de dispositivo inválido </td> 
+   <td> ID de dispositivo inválida </td> 
   </tr> 
   <tr> 
    <td> -5006 </td> 

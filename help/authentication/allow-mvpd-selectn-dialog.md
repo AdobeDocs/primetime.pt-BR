@@ -1,31 +1,31 @@
 ---
 title: Permitir MVPDs na Caixa de Diálogo de Seleção
 description: Permitir MVPDs na Caixa de Diálogo de Seleção
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2c0e0f06-ddc6-4bea-90dc-d7ef8e78d27e
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
 
-
 # Permitir MVPDs na Caixa de Diálogo de Seleção {#allow-mvpds-selection-dialog}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 ## Problema {#issue}
 
-O Programador pode testar ou verificar a experiência do usuário de novas integrações MVPD antes de ir ao público para os usuários finais.
+O programador pode querer testar ou verificar a experiência do usuário de novas integrações MVPD antes de tornar públicas para os usuários finais.
 
 ## Solução {#solution}
 
-No `displayProviderDialog()` retorno de chamada, a autenticação do Adobe Primetime retorna todos os MVPDs integrados ao Programador selecionado (ID do Solicitante). Mas o Programador pode aplicar um filtro na matriz de retorno de MVPDs e exibir apenas aqueles que estão em ambas as listas.
+No `displayProviderDialog()` callback, a autenticação do Adobe Primetime retorna todos os MVPDs integrados ao Programador selecionado (ID do Solicitante). Mas o Programador pode aplicar um filtro na matriz de retorno de MVPDs e exibir apenas aqueles que estão em ambas as listas.
 
 ## Exemplo {#example}
 
-Este exemplo demonstra como exibir somente CableCompany_1 e CableCompany_2 na caixa de diálogo do seletor MVPD e não mostrar CableCompany_NewIntegration.
+Este exemplo demonstra como exibir somente CableCompany_1 e CableCompany_2 na caixa de diálogo do seletor de MVPD e não mostrar CableCompany_NewIntegration.
 
 ```C
 function displayProviderDialog(mvpdList) {

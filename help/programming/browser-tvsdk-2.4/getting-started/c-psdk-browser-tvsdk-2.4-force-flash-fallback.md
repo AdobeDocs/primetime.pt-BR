@@ -1,20 +1,19 @@
 ---
-description: O sinalizador forceflash na lista de origem força o fallback do Flash para um URL. Para este URL, você pode usar o Adobe Flash Player para reproduzir o conteúdo.
-title: Forçar o fallback do Flash usando a lista de fonte de mídia
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O sinalizador forceflash na lista de origem força o fallback do Flash para um URL. Nesse URL, você pode usar o Adobe Flash Player para reproduzir o conteúdo.
+title: Forçar o fallback do Flash usando a lista de origem de mídia
+exl-id: 657bf9b1-d911-489d-80ca-2956b008431b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
 # Forçar o fallback do Flash usando a lista de origem de mídia{#forcing-the-flash-fallback-using-the-media-source-list}
 
-O sinalizador forceflash na lista de origem força o fallback do Flash para um URL. Para este URL, você pode usar o Adobe Flash Player para reproduzir o conteúdo.
+O sinalizador forceflash na lista de origem força o fallback do Flash para um URL. Nesse URL, você pode usar o Adobe Flash Player para reproduzir o conteúdo.
 
-Na lista de origem da mídia (por exemplo, no arquivo `sources.js`), você pode definir `forceflash` como `true`. Por exemplo:
+Na lista de origem da mídia (por exemplo, na caixa `sources.js` arquivo), você pode definir `forceflash` para `true`. Por exemplo:
 
 ```js
 { 
@@ -31,4 +30,3 @@ Na lista de origem da mídia (por exemplo, no arquivo `sources.js`), você pode 
         "forceflash" : true
 },
 ```
-

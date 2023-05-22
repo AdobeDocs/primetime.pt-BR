@@ -1,21 +1,20 @@
 ---
-title: Criar uma interface de usuário de autenticação
-description: Criar uma interface de usuário de autenticação
+title: Criar uma interface de autenticação
+description: Criar uma interface de autenticação
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 54853dcf-2241-44e6-9565-7eca94cc84cc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
+# Criar uma interface de autenticação {#create-an-authentication-ui}
 
-# Criar uma interface de usuário de autenticação {#create-an-authentication-ui}
+1. Crie uma interface do usuário para recuperar as credenciais de autenticação do usuário.
 
-1. Crie uma interface de usuário para recuperar as credenciais de autenticação do usuário.
-
-   Veja a seguir um exemplo de Flex de uma interface de usuário simples para recuperar credenciais de usuário. Ele consiste em um objeto de painel contendo dois objetos `TextInput`, um para cada uma das credenciais de nome de usuário e senha. O painel também contém um botão que inicia o método `credentials()`.
+   Este é um exemplo de Flex de uma interface de usuário simples para recuperar credenciais de usuário. Consiste em um objeto de painel contendo dois `TextInput` objetos, um para cada uma das credenciais de nome de usuário e senha. O painel também contém um botão que inicia o `credentials()` método.
 
    ```xml
    <mx:Panel x="236.5"  
@@ -44,9 +43,9 @@ ht-degree: 0%
    </mx:Panel>  
    ```
 
-1. Escreva o método `credentials()` para processar os valores de autenticação fornecidos pelo usuário.
+1. Escreva o `credentials()` para processar os valores de autenticação fornecidos pelo usuário.
 
-   O método `credentials()` é um método definido pelo usuário que passa os valores de nome de usuário e senha para o método `setDRMAuthenticationCredentials()`. Depois que os valores são passados, o método `credentials()` redefine os valores dos objetos `TextInput`.
+   A variável `credentials()` é um método definido pelo usuário que passa os valores de nome de usuário e senha para o `setDRMAuthenticationCredentials()` método. Depois que os valores forem transmitidos, a variável `credentials()` O método redefine os valores de `TextInput` objetos.
 
    ```
    <mx:Script> 
@@ -59,7 +58,7 @@ ht-degree: 0%
    </mx:Script> 
    ```
 
-   Uma maneira de implementar esse tipo de interface simples é incluir o painel como parte de um novo estado. O novo estado se origina do estado base quando o objeto `DRMAuthenticateEvent` é lançado. O exemplo a seguir contém um objeto `VideoDisplay` com um atributo de origem que aponta para um arquivo de vídeo protegido. Nesse caso, o método `credentials()` é modificado para que também retorne o aplicativo ao estado base. Esse método faz isso após transmitir as credenciais do usuário e redefinir os valores do objeto TextInput.
+   Uma maneira de implementar esse tipo de interface simples é incluir o painel como parte de um novo estado. O novo estado se origina do estado base quando a variável `DRMAuthenticateEvent` objeto é lançado. O exemplo a seguir contém um `VideoDisplay` objeto com um atributo de origem que aponta para um arquivo de vídeo protegido. Neste caso, o `credentials()` é modificado para que também retorne o aplicativo ao estado base. Esse método faz isso depois de passar as credenciais do usuário e redefinir os valores do objeto TextInput.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 
@@ -133,4 +132,3 @@ ht-degree: 0%
                     source="https://www.example.com/flv/Video.flv" /> 
    </mx:WindowedApplication> 
    ```
-

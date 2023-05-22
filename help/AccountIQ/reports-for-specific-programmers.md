@@ -1,7 +1,8 @@
 ---
 title: Exibir relatórios de compartilhamento de conta para um programador específico
 description: Exibir relatórios de compartilhamento de conta para um programador específico
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 34b198e1-dbb9-4486-b688-92780eec0a56
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -12,12 +13,12 @@ ht-degree: 0%
 
 Para exibir relatórios no Account IQ, depois de fazer logon no aplicativo como um MVPD:
 
-1. Selecione o programador específico conforme você define seu segmento de assinante para análise e visualização de relatórios usando as etapas em [Como definir segmentos](/help/AccountIQ/howto-select-segment-timeframe.md).
+1. Selecione o programador específico conforme define o segmento do assinante para análise e exibição de relatórios usando etapas em [Como definir um segmento](/help/AccountIQ/howto-select-segment-timeframe.md).
 
    ![selecionar canais](assets/programmer-selection.png)
 
 
-1. Selecione uma página de relatórios desejada no painel de navegação esquerdo:
+1. Selecione uma página de relatórios desejada na navegação à esquerda:
 
 * [Uso geral](/help/AccountIQ/general-usage-reports.md)
 
@@ -29,7 +30,7 @@ Para exibir relatórios no Account IQ, depois de fazer logon no aplicativo como 
 
    ![](assets/specific-mvpd-usage-pattern.png)
 
-* [Painel](/help/AccountIQ/dashboard.md) (o painel dá uma ideia dos gráficos selecionados de diferentes páginas de relatórios).
+* [Painel](/help/AccountIQ/dashboard.md) (o painel fornece uma visão geral dos gráficos selecionados das diferentes páginas de relatórios).
 
    ![](assets/specific-mvpd-dashboard.png)
 

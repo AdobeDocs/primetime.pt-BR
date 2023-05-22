@@ -1,26 +1,25 @@
 ---
 description: Configure um único local para lidar com erros.
 title: Configurar tratamento de erros
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2d0e0d08-d932-4b6e-8f95-494a2e666827
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '88'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Configurar tratamento de erros{#set-up-error-handling}
 
 Configure um único local para lidar com erros.
 
-1. Implemente uma função de retorno de chamada de evento para `MediaPlayerEvent.STATUS_CHANGED`.
+1. Implementar uma função de retorno de chamada de evento para `MediaPlayerEvent.STATUS_CHANGED`.
 
-   O TVSDK transmite informações do evento, como um objeto `MediaPlayerStatusChangeEvent` .
-1. Na chamada de retorno, quando o estado retornado for `MediaPlayerState.ERROR`, forneça lógica para lidar com todos os erros.
-1. Depois que o erro for tratado, redefina o objeto `MediaPlayer` ou carregue um novo recurso de mídia.
+   O TVSDK transmite informações de eventos, como uma `MediaPlayerStatusChangeEvent` objeto.
+1. No retorno de chamada, quando o estado retornado for `MediaPlayerState.ERROR`, fornecem lógica para lidar com todos os erros.
+1. Após o tratamento do erro, redefina a `MediaPlayer` ou carregar um novo recurso de mídia.
 
-   Quando o objeto `MediaPlayer` está no estado de erro, ele permanece nesse estado até que você o redefina usando o método `MediaPlayer.reset`.
+   Quando a variável `MediaPlayer` objeto estiver no estado de erro, ele permanecerá nesse estado até que você o redefina usando o `MediaPlayer.reset` método.
 
 <!--<a id="example_49FF225E92EA494AA06B2E5F26101F4C"></a>-->
 
@@ -37,4 +36,3 @@ mediaPlayer.addEventListener(
     } 
 });
 ```
-

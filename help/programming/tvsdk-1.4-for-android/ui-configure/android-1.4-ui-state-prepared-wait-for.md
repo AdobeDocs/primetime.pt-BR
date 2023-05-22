@@ -1,20 +1,19 @@
 ---
-description: Com o TVSDK, você pode controlar a experiência básica de reprodução de vídeo sob demanda (VOD). O TVSDK fornece métodos e propriedades na instância do reprodutor que você pode usar para configurar a interface do usuário do reprodutor.
+description: Com o TVSDK, você pode controlar a experiência básica de reprodução para VOD (live and video on demand). O TVSDK fornece métodos e propriedades na instância do player que você pode usar para configurar a interface do usuário do player.
 title: Aguardar um estado válido
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ab9da066-429f-44ca-b2e7-2bde9e5c0f90
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
 
 ---
 
+# Aguardar um estado válido {#wait-for-a-valid-state}
 
-# Aguarde um estado válido {#wait-for-a-valid-state}
-
-Com o TVSDK, você pode controlar a experiência básica de reprodução de vídeo sob demanda (VOD). O TVSDK fornece métodos e propriedades na instância do reprodutor que você pode usar para configurar a interface do usuário do reprodutor.
+Com o TVSDK, você pode controlar a experiência básica de reprodução para VOD (live and video on demand). O TVSDK fornece métodos e propriedades na instância do player que você pode usar para configurar a interface do usuário do player.
 
 Antes de usar a maioria dos métodos do reprodutor TVSDK, o reprodutor deve estar em um estado válido.
-O reprodutor passa por vários estados. Aguardar o estado correto do reprodutor garante que este tenha sido carregado com êxito. Se o reprodutor não estiver no estado exigido, muitos métodos do reprodutor exibirão `IllegalStateException`.
+O reprodutor passa por vários estados. Aguardar o reprodutor para estar no estado correto garante que o recurso de mídia foi carregado com êxito. Se o reprodutor não estiver pelo menos no estado obrigatório, muitos métodos de reprodutor acionarão `IllegalStateException`.
 
-O estado necessário geralmente é PREPARADO.
+O estado obrigatório é geralmente PREPARADO.

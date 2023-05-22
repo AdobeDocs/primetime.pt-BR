@@ -1,16 +1,15 @@
 ---
 description: A classe de utilitário ReplaceTimeRange é uma extensão da classe TimeRange a ser usada com CustomRangeMetadata.
-title: Classe ReplaceTimeRange
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: classe ReplaceTimeRange
+exl-id: 61885c52-d40a-4c72-97a0-51e56da9d449
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
 
 ---
 
-
-# Classe ReplaceTimeRange {#replacetimerange-class}
+# classe ReplaceTimeRange {#replacetimerange-class}
 
 A classe de utilitário ReplaceTimeRange é uma extensão da classe TimeRange a ser usada com CustomRangeMetadata.
 
@@ -33,4 +32,3 @@ public class ReplaceTimeRange extends TimeRange {
     }
 }
 ```
-

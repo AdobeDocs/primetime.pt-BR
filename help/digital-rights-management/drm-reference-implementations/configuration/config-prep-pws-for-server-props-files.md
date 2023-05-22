@@ -1,26 +1,25 @@
 ---
-title: Preparar senhas para os arquivos de propriedades do servidor
-description: Preparar senhas para os arquivos de propriedades do servidor
+title: Preparar senhas para os arquivos de propriedades do Servidor
+description: Preparar senhas para os arquivos de propriedades do Servidor
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b613d43d-17ec-44e9-bd14-81f9bb9a7f62
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
 
 ---
 
+# Preparar senhas para os arquivos de propriedades do Servidor{#prepare-passwords-for-the-server-properties-files}
 
-# Preparar senhas para os arquivos de propriedades do servidor{#prepare-passwords-for-the-server-properties-files}
+A implementação de referência fornece `ScrambleUtil.class`, uma classe que garante a segurança da senha da sua credencial.
 
-A implementação de referência fornece `ScrambleUtil.class`, uma classe que garante a segurança da senha da credencial.
+Use esta ferramenta para criptografar a senha antes de incluí-la na [!DNL flashaccess-refimpl.properties] arquivo.
 
-Use essa ferramenta para criptografar a senha antes de incluí-la no arquivo [!DNL flashaccess-refimpl.properties].
+Para executar a ferramenta, você pode usar um script Ant ou Java.
 
-Para executar a ferramenta, é possível usar um script Ant ou Java.
-
-O utilitário gera a senha criptografada, que deve ser copiada para o arquivo [!DNL flashaccess-refimpl.properties].
+O utilitário gera a senha criptografada, que você deve copiar para o [!DNL flashaccess-refimpl.properties] arquivo.
 
 >[!NOTE]
 >
->As senhas que foram codificadas com o `ScrambleUtil.class` fornecido com a implementação de referência não funcionam com o servidor DRM Primetime para transmissão protegida.
+>Senhas que foram codificadas com o `ScrambleUtil.class` que foram fornecidas com a implementação de referência não funcionam com o servidor DRM do Primetime para transmissão protegida.

@@ -1,36 +1,34 @@
 ---
-description: Para conteúdo ao vivo/linear, o TVSDK do navegador substitui uma parte do conteúdo do fluxo principal por um ad break da mesma duração, para que a duração da linha do tempo permaneça a mesma.
-title: Resolução e inserção de anúncios em tempo real/linear
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Para conteúdo dinâmico/linear, o TVSDK do navegador substitui uma parte do conteúdo do fluxo principal por um ad break com a mesma duração, para que a duração da linha do tempo permaneça a mesma.
+title: Live/linear e resolução e inserção de anúncios
+exl-id: 5d5954c6-9d1c-4900-9813-d3248fd61911
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
 
 ---
 
+# Live/linear e resolução e inserção de anúncios{#live-linear-ad-resolving-and-insertion}
 
-# Resolução e inserção de anúncios em tempo real/linear{#live-linear-ad-resolving-and-insertion}
+Para conteúdo dinâmico/linear, o TVSDK do navegador substitui uma parte do conteúdo do fluxo principal por um ad break com a mesma duração, para que a duração da linha do tempo permaneça a mesma.
 
-Para conteúdo ao vivo/linear, o TVSDK do navegador substitui uma parte do conteúdo do fluxo principal por um ad break da mesma duração, para que a duração da linha do tempo permaneça a mesma.
-
-Antes e durante a reprodução, o TVSDK do navegador resolve anúncios conhecidos, substitui partes do conteúdo principal por intervalos de anúncios da mesma duração e recalcula a linha do tempo virtual, se necessário. As posições dos ad breaks são especificadas por pontos de sinalização definidos pelo manifesto.
+Antes e durante a reprodução, o TVSDK do navegador resolve anúncios conhecidos, substitui partes do conteúdo principal por ad breaks com a mesma duração e recalcula a linha do tempo virtual, se necessário. As posições dos ad breaks são especificadas por pontos de sinalização definidos pelo manifesto.
 
 O TVSDK do navegador insere anúncios das seguintes maneiras:
 
 * **Antes da exibição**, que está no início do conteúdo.
 
-O TVSDK do navegador aceita o ad break, mesmo se a duração for maior ou menor que a duração da substituição do ponto de sinalização. Por padrão, o TVSDK do navegador suporta a dica `#EXT-X-CUE` como um marcador de anúncio válido ao resolver e inserir anúncios. Esse marcador requer o campo de metadados `DURATION` em segundos e a ID exclusiva da sinalização. Por exemplo:
+O TVSDK do navegador aceita o ad break mesmo se a duração for maior ou menor que a duração da substituição do ponto de sinalização. Por padrão, o TVSDK do navegador é compatível com o `#EXT-X-CUE` Indicar como um marcador de anúncio válido ao resolver e inserir anúncios. Este marcador requer o campo de metadados `DURATION` em segundos e o identificador exclusivo da indicação. Por exemplo:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
 ```
 
-Você pode definir e assinar dicas adicionais (tags).
+É possível definir e assinar dicas adicionais (tags).
 
-Após o início da reprodução, o mecanismo de vídeo atualiza periodicamente o arquivo manifest. O TVSDK do navegador resolve quaisquer novos anúncios e insere os anúncios quando um ponto de sinalização é encontrado no fluxo ao vivo ou linear que foi definido no manifesto. Depois que os anúncios são resolvidos e inseridos, o TVSDK do navegador calcula a linha do tempo virtual novamente e despacha um evento `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
+Depois que a reprodução começa, o mecanismo de vídeo atualiza periodicamente o arquivo de manifesto. O TVSDK do navegador resolve quaisquer novos anúncios e insere os anúncios quando um ponto de sinalização é encontrado no fluxo ao vivo ou linear que foi definido no manifesto. Depois que os anúncios são resolvidos e inseridos, o TVSDK do navegador calcula a linha do tempo virtual novamente e envia um `AdobePSDK.PSDKEventType.TIMELINE_UPDATED` evento.
 
 >[!TIP]
 >
->Para fluxos ao vivo, o TVSDK do navegador é compatível somente com anúncios precedentes e intermediários MP4 e HLS.
-
+>Para transmissões ao vivo, o TVSDK do navegador é compatível apenas com anúncios MP4 e HLS precedentes e intermediários.

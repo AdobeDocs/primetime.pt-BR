@@ -1,31 +1,30 @@
 ---
-description: Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe TextFormat, que define o estilo para legendas ocultas exibidas pelo seu reprodutor.
-title: Controle o estilo da legenda oculta
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe TextFormat, que define o estilo das legendas ocultas exibidas pelo reprodutor.
+title: Controlar estilo de legendas ocultas
+exl-id: 43c1391d-a937-464f-99fd-fe8deda7da44
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '842'
 ht-degree: 0%
 
 ---
 
+# Controlar estilo de legendas ocultas {#control-closed-caption-styling}
 
-# Controlar estilo de legenda {#control-closed-caption-styling}
+Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe TextFormat, que define o estilo das legendas ocultas exibidas pelo reprodutor.
 
-Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe TextFormat, que define o estilo para legendas ocultas exibidas pelo seu reprodutor.
+Essa classe encapsula informações de estilo de legendas ocultas, como tipo de fonte, tamanho, cor e opacidade do plano de fundo.
 
-Essa classe encapsula informações de estilo de legenda fechada, como tipo de fonte, tamanho, cor e opacidade do plano de fundo.
+## Definir estilos de legendas ocultas {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
 
-## Definir estilos de legenda {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
+É possível estilizar o texto de legenda oculta com métodos TVSDK.
 
-Você pode criar um estilo para o texto de legenda com métodos TVSDK.
+1. Aguarde o reprodutor de mídia estar no estado `PREPARED` status.
+1. Criar um `TextFormatBuilder` instância.
 
-1. Aguarde até que o reprodutor de mídia tenha pelo menos o status `PREPARED` .
-1. Crie uma instância `TextFormatBuilder`.
+   Você pode fornecer todos os parâmetros de estilo de legendas ocultas agora ou defini-los posteriormente.
 
-   Você pode fornecer todos os parâmetros de estilo de legenda agora ou defini-los posteriormente.
-
-   O TVSDK encapsula informações de estilo de legenda fechada na interface `TextFormat`. A classe `TextFormatBuilder` cria objetos que implementam essa interface.
+   O TVSDK encapsula informações de estilo de legendas ocultas no `TextFormat` interface. A variável `TextFormatBuilder` A classe cria objetos que implementam essa interface.
 
    ```java
    public TextFormatBuilder( 
@@ -43,16 +42,16 @@ Você pode criar um estilo para o texto de legenda com métodos TVSDK.
       java.lang.String safeArea)
    ```
 
-1. Para obter uma referência a um objeto que implementa a interface `TextFormat`, chame o método público `TextFormatBuilder.toTextFormat`.
+1. Para obter uma referência a um objeto que implemente a variável `TextFormat` , chame o `TextFormatBuilder.toTextFormat` método público.
 
-   Isso retorna um objeto `TextFormat` que pode ser aplicado ao reprodutor de mídia.
+   Isso retorna um `TextFormat` objeto que pode ser aplicado ao reprodutor de mídia.
 
    `public TextFormat toTextFormat()`
 
 
-1. Opcionalmente, obtenha as configurações de estilo de legenda fechada atuais seguindo um destes procedimentos:
+1. Como opção, obtenha as configurações de estilo atuais de legenda oculta seguindo um destes procedimentos:
 
-   * Obtenha todas as configurações de estilo com `MediaPlayer.getCCStyle` O valor de retorno é uma instância da interface `TextFormat`.
+   * Obter todas as configurações de estilo com `MediaPlayer.getCCStyle` O valor de retorno é uma instância do `TextFormat` interface.
 
       ```java
       /** 
@@ -64,7 +63,7 @@ Você pode criar um estilo para o texto de legenda com métodos TVSDK.
       public TextFormat getCCStyle() throws MediaPlayerException;
       ```
 
-   * Obtenha as configurações, uma de cada vez, por meio dos métodos getter da interface `TextFormat`.
+   * Obtenha as configurações, uma de cada vez, por meio da `TextFormat` métodos getter da interface.
 
       ```java
       public java.lang.String getFontColor(); 
@@ -82,7 +81,7 @@ Você pode criar um estilo para o texto de legenda com métodos TVSDK.
 
 1. Para alterar as configurações de estilo, siga um destes procedimentos:
 
-   * Use o método setter `MediaPlayer.setCCStyle`, transmitindo uma instância da interface `TextFormat`:
+   * Usar o método setter `MediaPlayer.setCCStyle`, transmitindo uma instância do `TextFormat` interface:
 
       ```java
       /** 
@@ -98,9 +97,9 @@ Você pode criar um estilo para o texto de legenda com métodos TVSDK.
       public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
       ```
 
-   * Use a classe `TextFormatBuilder`, que define métodos setter individuais.
+   * Use o `TextFormatBuilder` classe, que define métodos setter individuais.
 
-      A interface `TextFormat` define um objeto imutável para que haja apenas métodos getter e nenhum setters. Você pode definir os parâmetros de estilo de legenda fechada somente com a classe `TextFormatBuilder` :
+      A variável `TextFormat` A interface define um objeto imutável para que haja apenas métodos Getter e nenhum setters. É possível definir os parâmetros de estilo de legenda oculta somente com a `TextFormatBuilder` classe:
 
       ```java
       // set font type 
@@ -125,7 +124,7 @@ Você pode criar um estilo para o texto de legenda com métodos TVSDK.
 
       >[!IMPORTANT]
       >
-      >**Configurações de cor:** no Android TVSDK 2.X, foi feito um aprimoramento no estilo de cores de legendas ocultas. O aprimoramento permite definir cores de legenda ocultas usando uma sequência hexadecimal que representa valores de cor RGB. A representação de cores hexadecimais RGB é a conhecida sequência de 6 bytes usada em aplicativos como o Photoshop:
+      >**Configurações de cores:** No Android TVSDK 2.X, foi feito um aprimoramento no estilo de cores de legendas ocultas. O aprimoramento permite definir cores de legendas ocultas usando uma string hexadecimal que representa valores de cor de RGB. A representação de cor hexadecimal do RGB é a familiar string de 6 bytes usada em aplicativos como o Photoshop:
       >
       >* FFFFFF = Preto
       >* 000000 = Branco
@@ -135,17 +134,15 @@ Você pode criar um estilo para o texto de legenda com métodos TVSDK.
          >e assim por diante.
 
       >
-      >No seu aplicativo, sempre que você passar informações de estilo de cor para `TextFormatBuilder`, ainda usará a enumeração `Color` como antes, mas agora deverá adicionar `getValue()` à cor para obter o valor como uma string. Por exemplo:
+      >No aplicativo, sempre que você passar informações de estilo de cor para `TextFormatBuilder`, você ainda usará o `Color` enumeração como antes, mas agora é necessário adicionar `getValue()` à cor para obter o valor como uma sequência de caracteres. Por exemplo:
       >
       >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
+A configuração do estilo de legenda oculta é uma operação assíncrona, portanto, pode levar alguns segundos para que as alterações apareçam na tela.
 
+## Opções de estilo de legendas ocultas {#section_6D685EC2D58C42A2BDDD574EDFCCC2A0}
 
-A configuração do estilo de legenda oculta é uma operação assíncrona; portanto, pode levar até alguns segundos para que as alterações sejam exibidas na tela.
-
-## Opções de estilo de legenda ocultas {#section_6D685EC2D58C42A2BDDD574EDFCCC2A0}
-
-Você pode especificar várias opções de estilo de legenda, e essas opções substituem as opções de estilo nas legendas originais.
+É possível especificar várias opções de estilo de legenda, e essas opções substituem as opções de estilo nas legendas originais.
 
 ```java
 public TextFormatBuilder( 
@@ -165,7 +162,7 @@ public TextFormatBuilder(
 
 >[!TIP]
 >
->Nas opções que definem valores padrão (por exemplo, `DEFAULT`), esse valor refere-se à configuração quando a legenda foi originalmente especificada.
+>Nas opções que definem valores padrão (por exemplo, `DEFAULT`), esse valor se refere ao que era a configuração quando a legenda foi originalmente especificada.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -177,33 +174,33 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fonte </td> 
-   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente como um valor definido pela enumeração <span class="codeph"> TextFormat.Font </span> e representa, por exemplo, um espaçamento único com ou sem serifs. </p> <p>Dica:  As fontes reais disponíveis em um dispositivo podem variar, e as substituições são usadas quando necessário. O espaço único com serifs é normalmente utilizado como substituto, embora esta substituição possa ser específica do sistema. </p> </td> 
+   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente como um valor definido pela variável <span class="codeph"> FormatoTexto.Fonte </span> enumeração e representa, por exemplo, monospaced com ou sem serifas. </p> <p>Dica: as fontes reais disponíveis em um dispositivo podem variar, e as substituições são usadas quando necessário. O monoespaço com serifas é normalmente usado como um substituto, embora essa substituição possa ser específica do sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamanho </td> 
-   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente como um valor definido pela enumeração <span class="codeph"> TextFormat.Size </span>: 
+   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente como um valor definido pelo <span class="codeph"> FormatoTexto.Tamanho </span> enumeração: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MÉDIO  </span> - O tamanho padrão </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Aproximadamente 30% maior que a média </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUENO  </span> - Aproximadamente 30% menor que o médio </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT  </span> - O tamanho padrão da legenda; igual ao meio </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MÉDIO </span> - O tamanho padrão </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Aproximadamente 30% maior que o médio </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUENO </span> - Aproximadamente 30% menor que o médio </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PADRÃO </span> - O tamanho padrão da legenda; o mesmo que o médio </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Borda da fonte </td> 
-   <td colname="2"> <p>O efeito usado para a borda da fonte, como acima ou não. </p> <p>Pode ser definido somente como um valor definido pela enumeração <span class="codeph"> TextFormat.FontEdge </span>. </p> </td> 
+   <td colname="2"> <p>O efeito usado para a borda da fonte, como elevado ou nenhum. </p> <p>Pode ser definido somente como um valor definido pela variável <span class="codeph"> FormatoTexto.BordaFonte </span> lista discriminada. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da fonte </td> 
-   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente como um valor definido pela enumeração <span class="codeph"> TextFormat.Color </span>. </p> </td> 
+   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente como um valor definido pelo <span class="codeph"> FormatoDeTexto.Cor </span> lista discriminada. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da borda </td> 
-   <td colname="2"> <p>A cor do efeito da borda. </p> <p>Pode ser definido como qualquer um dos valores disponíveis para a cor da fonte. </p> </td> 
+   <td colname="2"> <p>A cor do efeito de borda. </p> <p>Pode ser definido como qualquer um dos valores disponíveis para a cor da fonte. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor do plano de fundo </td> 
-   <td colname="2"> <p>A cor da célula do caractere de fundo. </p> <p>Pode ser definido somente para valores que estão disponíveis para a cor da fonte. </p> </td> 
+   <td colname="2"> <p>A cor da célula do caractere de plano de fundo. </p> <p>Pode ser definido somente para valores que estão disponíveis para a cor da fonte. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor de preenchimento </td> 
@@ -211,30 +208,30 @@ public TextFormatBuilder(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidade da fonte </td> 
-   <td colname="2"> <p>A opacidade do texto. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> para a fonte é 100. </p> </td> 
+   <td colname="2"> <p>A opacidade do texto. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para a fonte, é 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Opacidade de fundo </td> 
-   <td colname="2"> <p>A opacidade da célula do caractere de plano de fundo. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> para o plano de fundo é 100. </p> </td> 
+   <td colname="1"> Opacidade do plano de fundo </td> 
+   <td colname="2"> <p>A opacidade da célula de caractere do plano de fundo. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para o fundo é 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidade de preenchimento </td> 
-   <td colname="2"> <p>A opacidade do plano de fundo da janela da legenda. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> para preenchimento é 0. </p> </td> 
+   <td colname="2"> <p>A opacidade do plano de fundo da janela de legenda. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para preenchimento é 0. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Inset inferior </td> 
-   <td colname="2"> <p>Distância vertical da parte inferior da janela da legenda para legendas a serem evitadas. </p> <p>Expressa como uma porcentagem da altura da janela da legenda (por exemplo, "20%") ou um número de pixels (por exemplo, "20"). </p> </td> 
+   <td colname="1"> Inserção inferior </td> 
+   <td colname="2"> <p>Distância vertical a partir da parte inferior da janela de legenda para evitar legendas. </p> <p>Expressa como uma porcentagem da altura da janela da legenda (por exemplo, "20%") ou um número de pixels (por exemplo, "20"). </p> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"> Área segura </td> 
-   <td colname="2"> <p>Uma região ao redor da borda da tela entre 0% e 25%, onde as legendas não aparecerão. </p> <p>Por padrão, a área segura para WebVTT é 0%. Essa configuração permite que seu aplicativo substitua esse padrão. Se dois valores forem fornecidos, por exemplo, a string "10%,20%", o primeiro valor será a área segura horizontal e o segundo valor será a área segura vertical. Se um valor for fornecido, por exemplo, a string "15%", os eixos vertical e horizontal usarão a área segura especificada. </p> </td> 
+   <td colname="1"> Área de segurança </td> 
+   <td colname="2"> <p>Uma região ao redor da borda da tela entre 0% e 25% em que as legendas não serão exibidas. </p> <p>Por padrão, a área segura para WebVTT é 0%. Essa configuração permite que o aplicativo substitua esse padrão. Se dois valores forem fornecidos, por exemplo, a string "10%,20%", o primeiro valor será a área segura horizontal e o segundo valor será a área segura vertical. Se um valor for fornecido, por exemplo, a string "15%", ambos os eixos vertical e horizontal usarão a área segura especificada. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Exemplos de formatação de legenda {#section_58E8E82494EC4683B010FFDE67485CF9}
+## Exemplos de formatação da legenda {#section_58E8E82494EC4683B010FFDE67485CF9}
 
-Estes são alguns exemplos que mostram como especificar a formatação de legenda fechada.
+Estes são alguns exemplos que mostram como especificar a formatação de legendas ocultas.
 
 ```java
 private final MediaPlayer.PlaybackEventListener _playbackEventListener = 
@@ -306,4 +303,3 @@ public
 <b>TextFormatBuilder</b> setFont(Font font); 
 ...
 ```
-

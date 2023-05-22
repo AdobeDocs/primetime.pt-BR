@@ -1,18 +1,17 @@
 ---
-description: O TVSDK pode configurar várias Informações iniciais do PlacementInformation.
-title: Várias informações iniciais de posicionamento
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O TVSDK pode configurar várias informações de posicionamento iniciais.
+title: Várias informações de posicionamento iniciais
+exl-id: 104e981e-7246-4e4a-9c14-dac6ee2624f6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '20'
 ht-degree: 0%
 
 ---
 
+# Várias informações de posicionamento iniciais{#multiple-initial-placementinformations}
 
-# Várias informações iniciais de posicionamento{#multiple-initial-placementinformations}
-
-O TVSDK pode configurar várias Informações iniciais do PlacementInformation.
+O TVSDK pode configurar várias informações de posicionamento iniciais.
 
 ```java
 ArrayList<PlacementInformation> placementInformations = new ArrayList<PlacementInformation>(); 
@@ -48,4 +47,3 @@ else if (customRangeHelper.hasRanges() == CustomRangeHelper.REPLACE_RANGE) {
 } 
 return  placementInformations;
 ```
-

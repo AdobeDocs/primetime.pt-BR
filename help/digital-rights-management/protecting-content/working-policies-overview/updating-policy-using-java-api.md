@@ -1,28 +1,27 @@
 ---
-title: Atualização de uma política de DRM com a API Java
-description: Atualização de uma política de DRM com a API Java
+title: Atualização de uma política DRM com a API Java
+description: Atualização de uma política DRM com a API Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 00bb9b64-30f7-4900-b6bd-57604295b44d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Atualização de uma política DRM com a API Java {#updating-a-drm-policy-with-the-java-api}
 
-# Atualização de uma política de DRM com a API Java {#updating-a-drm-policy-with-the-java-api}
+Para atualizar uma política DRM com a API do Java:
 
-Para atualizar uma política de DRM com a API Java:
-
-1. Configure seu ambiente de desenvolvimento e inclua em seu projeto todos os arquivos JAR listados em [Setting up the development environment](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Crie uma instância de DRM `Policy` e leia a política de DRM de um arquivo ou banco de dados.
+1. Configure seu ambiente de desenvolvimento e inclua em seu projeto todos os arquivos JAR listados em [Configuração do ambiente de desenvolvimento](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Criar um DRM `Policy` e leia a política DRM de um arquivo ou banco de dados.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Atualize o objeto DRM `Policy` definindo suas propriedades, como o nome e as regras de uso.
+1. Atualizar o DRM `Policy` definindo suas propriedades, como nome e regras de uso.
 
    ```java
    // Change the DRM policy name.  
@@ -47,7 +46,7 @@ Para atualizar uma política de DRM com a API Java:
    }
    ```
 
-1. Serialize o objeto DRM `Policy` atualizado e armazene-o em um arquivo ou banco de dados.
+1. Serializar o DRM atualizado `Policy` objeto e armazená-lo em um arquivo ou banco de dados.
 
    ```java
    // Serialize the DRM policy.  
@@ -61,4 +60,4 @@ Para atualizar uma política de DRM com a API Java:
    out.close();
    ```
 
-Consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` no diretório Ferramentas de linha de comando de implementação de referência [!DNL samples] para obter a origem deste código de amostra.
+Consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` nas Ferramentas de linha de comando da Implementação de referência [!DNL samples] diretório para a origem deste código de amostra.

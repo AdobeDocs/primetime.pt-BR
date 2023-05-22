@@ -11,38 +11,38 @@ ht-degree: 0%
 
 # Práticas recomendadas {#aiq-best-practices}
 
-O Account IQ permite identificar o compartilhamento de credenciais, medir seu escopo e impacto, segmentar coortes relevantes e rastrear o efeito de ações direcionadas. Ele oferece uma variedade de ferramentas, gráficos e relatórios usados para entender e gerenciar contas compartilhadas que podem ser usados de várias formas. Cada serviço de transmissão se aproxima desse comportamento e desenvolve processos que correspondem às suas metas exclusivas, e o produto é projetado para atender a essas necessidades de forma flexível.  No entanto, existem algumas regras de práticas gerais que podem ser aplicadas a um amplo conjunto de cenários.
+O Account IQ permite identificar o compartilhamento de credenciais, medir seu escopo e impacto, segmentar coortes relevantes e rastrear o efeito de ações direcionadas. Ele oferece uma variedade de ferramentas, gráficos e relatórios usados para entender e gerenciar contas compartilhadas que podem ser usadas de várias maneiras. Cada serviço de transmissão aborda esse comportamento e desenvolve processos que correspondem a suas metas exclusivas, e o produto é projetado para atender a essas necessidades de forma flexível.  No entanto, há algumas regras de práticas gerais que podem ser aplicadas a um conjunto amplo de cenários.
 
 ## Analisar e entender {#analyze-understand}
 
-As ferramentas do Account IQ ajudam a entender a natureza e a amplitude do compartilhamento de credenciais em sua empresa, desde os gráficos de nível mais alto que exibem a porcentagem de contas compartilhadas até as exportações de nível mais baixo que relatam as características de contas individuais. Especialmente no início, use essas ferramentas para explorar os dados e identificar coortes ou padrões comportamentais incomuns ou interessantes - indicando altos níveis de compartilhamento, por exemplo. Em seguida, os segmentos que representam uma oportunidade ou objetivo específico podem ser identificados.
+As ferramentas do Account IQ ajudam a entender a natureza e a amplitude do compartilhamento de credenciais em sua empresa, desde os gráficos de nível mais alto que exibem a porcentagem de contas compartilhadas até as exportações de nível mais baixo que relatam as características de contas individuais. Especialmente desde o início, use essas ferramentas para explorar os dados e identificar coortes incomuns ou interessantes ou padrões comportamentais, indicando altos níveis de compartilhamento, por exemplo. Em seguida, os segmentos que representam uma oportunidade ou objetivo específico podem ser identificados.
 
-Para entender a natureza e o impacto do compartilhamento em sua empresa:
+Para entender a natureza e o impacto do compartilhamento na sua empresa:
 
-* Comece revisando todos os dados potencialmente relevantes.
+* Comece revisando todo e qualquer dado potencialmente relevante.
 
-* Identificar e analisar o compartilhamento no contexto de seus objetivos.
+* Identifique e analise o compartilhamento no contexto de seus objetivos.
 
-* Identificar padrões e comportamento para direcionar.
+* Identificar padrões e comportamento para direcionamento.
 
 ## Executar ação incremental direcionada {#incremental-targeted-action}
 
-Com um segmento de destino definido, execute uma ação. Começando pequeno com um segmento bem definido, você diminui o risco de consequências não intencionais e pode entender melhor o resultado. Não importa onde você esteja ao longo do caminho, você sempre pode refinar ou expandir o target da sua operação.
-Começar com o pequeno e o crescimento é uma abordagem prudente. Use segmentos identificados anteriormente e execute ações (como experimentos) com objetivos específicos.
+Com um segmento de público-alvo definido, tome providências. Ao começar pequeno com um segmento bem definido, você diminui o risco de consequências não intencionais e pode entender melhor o resultado. Não importa onde você esteja ao longo do caminho, você sempre pode refinar ou expandir o destino da sua operação.
+Começar pequeno e aumentar é uma abordagem prudente. Use segmentos identificados anteriormente e execute ações (como experimentos) com objetivos específicos.
 
-Use a ferramenta Operação para definir o segmento de destino e um período operacional. Isso permitirá rastrear os efeitos na próxima fase.
+Use a ferramenta Operação para definir o segmento de destino e um intervalo de tempo operacional. Isso permitirá rastrear os efeitos na próxima fase.
 
-* Identifique um conjunto bem definido e representativo de usuários para agir.
+* Identifique um conjunto (ou subconjunto) bem definido e representativo de usuários sobre o qual agir.
 
-* Crie uma operação que defina o segmento de destino e o período da operação.
+* Crie uma operação que defina o segmento de destino e o período de operação.
 
-* Dependendo de objetivos como o aumento, o aumento do carregamento de anúncios ou a diminuição do acesso a contas fraudulentas, tome medidas relevantes no conjunto de usuários definido, como: em ofertas de aplicativo, anúncios extras ou que exijam autenticação multifator.
+* Dependendo dos objetivos, como venda adicional, aumento da carga de anúncios ou mitigação do acesso a contas fraudulentas, tome medidas relevantes no conjunto de usuários definido, como: em ofertas de aplicativo, anúncios extras ou exigir autenticação multifator.
 
 <!--If necessary, gauge the affect [by measuring the impact of actions taken](#track-measure-impact).-->
 
 ## Rastrear e medir o impacto das ações {#track-measure-impact}
 
-As ações exigem tempo para entrarem em vigor. Use a operação e os gráficos associados para rastrear o estado da operação e as características do segmento durante semanas ou meses subsequentes do período de operação. Combine essas informações com qualquer outra análise para responder ou entender o resultado. Por exemplo: Qual a percentagem de mutuários convertidos em assinantes? Quantos anúncios adicionais foram visualizados? O número de mutuários diminuiu?
+As ações exigem tempo para entrarem em vigor. Use a operação e os gráficos associados para rastrear o estado da operação e as características do segmento durante as semanas ou meses subsequentes do intervalo de tempo da operação. Combine essas informações com qualquer outra análise para responder ou entender o resultado. Por exemplo: Que porcentagem de mutuários converteu em assinantes? Quantos anúncios adicionais foram visualizados? O número de mutuários diminuiu?
 
 * Use gráficos de operação e outras análises para rastrear e medir o efeito das ações.
 
@@ -50,7 +50,7 @@ As ações exigem tempo para entrarem em vigor. Use a operação e os gráficos 
 
 Com base nos resultados de seus experimentos e ações direcionadas em um conjunto de usuários, você pode expandir o alcance de suas estratégias para um conjunto maior de usuários ou ajustar ou redefinir a abordagem.
 
-* Se os resultados do experimento forem favoráveis, você pode ampliar o experimento ou a ação e repetir essas ações em um grupo maior.
+* Se os resultados do experimento forem favoráveis, você poderá aumentar o experimento ou a ação e repetir essas ações em um grupo maior.
 
 * Se os resultados do experimento forem desfavoráveis, você poderá ajustar sua ação ou o segmento.
 

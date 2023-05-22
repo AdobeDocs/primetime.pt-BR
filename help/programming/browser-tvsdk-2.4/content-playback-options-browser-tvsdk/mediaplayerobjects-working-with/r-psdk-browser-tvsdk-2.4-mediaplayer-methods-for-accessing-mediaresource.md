@@ -1,16 +1,15 @@
 ---
 description: Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo de conteúdo representado por um MediaResource carregado.
 title: Atributos do MediaPlayer para acessar informações do MediaResource
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 183a2992-06f2-4b1d-84c3-a6c2a7223e32
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-
-# Atributos do MediaPlayer para acessar as informações do MediaResource{#mediaplayer-attributes-to-access-mediaresource-information}
+# Atributos do MediaPlayer para acessar informações do MediaResource{#mediaplayer-attributes-to-access-mediaresource-information}
 
 Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo de conteúdo representado por um MediaResource carregado.
 
@@ -24,62 +23,61 @@ Os métodos na classe MediaPlayerItem permitem obter informações sobre o fluxo
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> Live stream </td> 
-   <td colname="2"> <span class="codeph"> live  </span> </td> 
-   <td colname="3"> Verdadeiro se o fluxo for em tempo real; falso se for VOD. </td> 
+   <td colname="1"> Transmissão ao vivo </td> 
+   <td colname="2"> <span class="codeph"> live </span> </td> 
+   <td colname="3"> True se o fluxo estiver ativo; false se for VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Legendas ocultas </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
-   <td colname="3"> True se as faixas de legenda fechada estiverem disponíveis. </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
+   <td colname="3"> Verdadeiro se as faixas de legendas ocultas estiverem disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closedCaptionsTracks  </span> </td> 
+   <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
    <td colname="3"> Fornece uma lista de faixas de legendas ocultas disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> seletedClosedCaptionsTrack  </span> </td> 
-   <td colname="3"> Recupera a faixa de legenda fechada que foi selecionada com <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
+   <td colname="2"> <span class="codeph"> seletedClosedCaptionsTrack </span> </td> 
+   <td colname="3"> Recupera a faixa de legendas ocultas que foi selecionada com <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Áudio alternativo </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
-   <td colname="3"> <p>True é verdadeiro se o fluxo tiver trilhas de áudio alternativas. </p> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
+   <td colname="3"> <p>Verdadeiro se o fluxo tiver faixas de áudio alternativas. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
-   <td colname="3"> Fornece uma lista de trilhas de áudio alternativas disponíveis. </td> 
+   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
+   <td colname="3"> Fornece uma lista de faixas de áudio alternativas disponíveis. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> seletedAudioTrack  </span> </td> 
+   <td colname="2"> <span class="codeph"> seletedAudioTrack </span> </td> 
    <td colname="3"> 
     <pre>
-      Recupera a faixa de áudio atualmente selecionada com 
-     <span class="codeph"> selecione AudioTrack </span>. 
+      Recupera a faixa de áudio selecionada no momento com 
+     <span class="codeph"> selectAudioTrack </span>. 
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Metadados cronometrados </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
    <td colname="3"> True se o fluxo tiver metadados cronometrados associados. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
    <td colname="3"> Fornece uma lista dos objetos de metadados cronometrados associados ao fluxo. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Vários perfis (taxas de bits) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> perfis  </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> perfis </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="3"> Fornece uma lista dos perfis de taxa de bits associados que estão associados a este fluxo. <p>Observação:  Você pode recuperar a taxa de bits para cada perfil e a altura e largura do perfil. </p> </td> 
+   <td colname="3"> Fornece uma lista dos perfis de taxa de bits associados a esse fluxo. <p>Observação: você pode recuperar a taxa de bits de cada perfil, bem como a altura e a largura do perfil. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Recurso de mídia </td> 
-   <td colname="2"> <span class="codeph"> recurso  </span> </td> 
+   <td colname="2"> <span class="codeph"> recurso </span> </td> 
    <td colname="3"> Retorna o recurso de mídia associado a este item. </td> 
   </tr> 
  </tbody> 
 </table>
-

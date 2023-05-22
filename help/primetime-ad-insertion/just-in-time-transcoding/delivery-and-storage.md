@@ -2,23 +2,22 @@
 title: Entrega e armazenamento
 description: Entrega e armazenamento
 copied-description: true
-exl-id: 84ccc140-02e6-4293-b087-13f87aee355b,8af58261-9277-4f46-9349-10b641238e1d
-translation-type: tm+mt
-source-git-commit: f0e58c59e5f71ff79861dc634d9c9b3364e49db6
+exl-id: 84ccc140-02e6-4293-b087-13f87aee355b
+source-git-commit: e3ab3718add5ff1f31f8f72d8388a39a940f36a4
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
-# Delivery e armazenamento {#delivery-and-storage}
+# Entrega e armazenamento {#delivery-and-storage}
 
-O Primetime Ad Insertion é compatível com o armazenamento de anúncios criativos em CDNs do cliente ou CDNs hospedadas pelo Adobe.
+O Primetime Ad Insertion suporta o armazenamento criativo de anúncios nos CDNs do cliente ou nos CDNs hospedados em Adobe.
 
-## Suporte a várias CDN {#multi-cdn-support}
+## Suporte a vários CDNs {#multi-cdn-support}
 
-Por padrão, o Primetime Ad Insertion serve anúncios transcodificados de CDNs hospedadas no Adobe (Akamai).  Os clientes podem escolher locais de CDN adicionais para hospedar o ativo transcodificado ou usar o CDN hospedado no Adobe como uma origem para seus próprios CDNs.  Ambos os casos permitem que criações de conteúdo e anúncios sejam veiculadas a partir do mesmo CDN e/ou nome de host.
+O Primetime Ad Insertion por padrão serve anúncios transcodificados e criativos de CDNs hospedados em Adobe (Akamai).  Os clientes podem escolher locais adicionais de CDN para hospedar o ativo transcodificado ou usar o CDN hospedado em Adobe como uma origem para seus próprios CDNs.  Ambos os casos permitem que o conteúdo e as criações de anúncios sejam distribuídos a partir do mesmo CDN e/ou nome do host.
 
-Para a entrega de Várias CDN, usando o Primetime Ad Insertion como uma origem CDN, consulte: [Regravação de Manifesto](../technical-reference/manifest-rewriting.md)
+Para delivery Multi-CDN, usando o Ad Insertion do Primetime como uma origem CDN, consulte: [Reescrita do manifesto](../technical-reference/manifest-rewriting.md)
 
-Para habilitar o armazenamento/upload de Várias CDN, entre em contato com o gerente técnico da conta.
+Para habilitar o armazenamento/upload por vários CDNs, entre em contato com seu gerente técnico de conta.

@@ -1,238 +1,238 @@
 ---
 title: Visão geral para programadores
 description: Visão geral para programadores
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 64a12e49-0ecb-4b81-977d-60c10925bb59
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '4272'
 ht-degree: 0%
 
 ---
 
-
 # Visão Geral Para Programadores {#programmers-overview}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 ## Introdução {#introduction}
 
-Esta visão geral destina-se ao provedor de conteúdo (Programador) que planeja integrar o Adobe® Pass em seu site ou aplicativo. Para obter a documentação adicional, incluindo o Kickstart e os guias de integração, consulte Informações relacionadas abaixo.
+Essa visão geral destina-se ao provedor de conteúdo (Programador) que planeja integrar o Adobe® Pass ao seu site ou aplicativo. Para obter a documentação adicional, incluindo o Kickstart e guias de integração, consulte Informações relacionadas abaixo.
 
-Hoje, seus visualizadores podem acessar a Internet a qualquer hora, em qualquer lugar, e solicitar acesso a conteúdo protegido diretamente de você, o Programador. Eles podem querer assistir a um evento único ou podem estar buscando direitos de exibição para uma série inteira de televisão que você está exibindo.
+Hoje, seus visualizadores podem acessar a Internet a qualquer hora, em qualquer lugar e solicitar acesso a conteúdo protegido diretamente de você, o Programador. Eles podem querer assistir a um evento único ou podem estar buscando direitos de visualização para uma série de televisão inteira que você está transmitindo.
 
-Mas antes de permitir o acesso ao seu conteúdo protegido, é necessário determinar se um cliente tem direito a visualizar esse conteúdo. Eles têm uma assinatura com um Distribuidor de programação de vídeo multicanal (MVPD)? Em caso afirmativo, essa assinatura inclui sua programação?
+Mas antes de permitir o acesso ao conteúdo protegido, é necessário determinar se um cliente tem direito a visualizar esse conteúdo. Eles têm uma assinatura com um Distribuidor de programação de vídeo multicanal (MVPD)? Em caso afirmativo, essa assinatura inclui sua programação?
 
-Determinar o direito de um visualizador nem sempre é simples para um programador. Os MVPDs mantêm os dados de identificação e os privilégios de acesso de seus clientes.  Adicione o fato de que os visualizadores que tentam acessar seu conteúdo protegido assinam uma variedade de MVPDs, cada um com sistemas diferentes, e é fácil ver que determinar o direito do visualizador ao conteúdo protegido pode se tornar rapidamente complicado e tecnicamente desafiador:
+Determinar o direito de um visualizador nem sempre é simples para um programador. Os MVPDs mantêm os privilégios de identificação de dados e acesso para seus clientes.  Adicione o fato de que os visualizadores que tentam acessar seu conteúdo protegido assinam uma variedade de MVPDs, cada um com sistemas diferentes, e é fácil ver que determinar o direito do visualizador ao conteúdo protegido pode se tornar rapidamente complicado e tecnicamente desafiador:
 
 ![](assets/user-ent-by-progr.png)
 
 *Figura: Direito Do Usuário Determinado Diretamente Pelo Programador*
 
-A autenticação Adobe Primetime para TV em qualquer lugar medirá com segurança essas transações de direito entre programadores e MVPDs. A autenticação da Adobe Primetime facilita, agiliza e protege os Programadores para fornecer conteúdo protegido a clientes válidos:
+A autenticação do Adobe Primetime para TV Everywhere realiza com segurança essas transações de direitos entre Programadores e MVPDs. A autenticação do Adobe Primetime torna fácil, rápido e seguro para os programadores fornecerem conteúdo protegido a clientes válidos:
 
 ![](assets/user-ent-mediatedby-authn.png)
 
-*Figura: Direitos de usuário mediados pela autenticação da Adobe Primetime*
+*Figura: Direito do usuário mediado pela autenticação da Adobe Primetime*
 
-A autenticação da Adobe Primetime atua como seu proxy em trocas com MVPDs participantes, para que você possa apresentar seus visualizadores com uma interface consistente entre sites. A autenticação da Adobe Primetime também permite fornecer aos visualizadores autenticação e autorização de logon único (SSO). A autenticação e a autorização são rastreadas para todos os serviços participantes, de modo que um assinante não precisa fazer logon novamente após sua primeira autenticação em seu próprio sistema.
+A autenticação do Adobe Primetime atua como proxy nas trocas com os MVPDs participantes, para que você possa apresentar aos visualizadores uma interface consistente entre sites. A autenticação do Adobe Primetime também permite fornecer aos visualizadores autenticação e autorização de logon único (SSO). A autenticação e a autorização são rastreadas para todos os serviços participantes, de modo que um assinante não precise fazer logon novamente após a primeira autenticação em seu próprio sistema.
 
-* **Autenticação** - O processo de confirmação com um MVPD de que um determinado usuário é um cliente conhecido.
+* **Autenticação** - O processo de confirmar com um MVPD que um determinado usuário é um cliente conhecido.
 * **Autorização** - O processo de confirmação com um MVPD de que um usuário autenticado tem uma assinatura válida para um recurso especificado.
 
-### Como a autenticação do Adobe Primetime funciona {#HowItWorks}
+### Como funciona a autenticação do Adobe Primetime {#HowItWorks}
 
-O aplicativo de visualização de conteúdo do Programador interage com a autenticação da Adobe Primetime usando o componente do cliente Ativador de Acesso ou os serviços Web RESTful da API sem cliente (para dispositivos sem capacidade para a Web, como TVs inteligentes, consoles de jogos, conversores de sinais, etc.). O Ativador de Acesso é executado no sistema do usuário, onde facilita todos os workflows de direito.  O componente Ativador de acesso é baixado de seu site de hospedagem no Adobe, quando os clientes acessam seu site e solicitam conteúdo protegido.  Os servidores de autenticação da Adobe Primetime hospedam os serviços Web RESTful usados na solução sem cliente.
+O aplicativo de visualização de conteúdo do programador interage com a autenticação do Adobe Primetime usando o componente de cliente Access Enabler ou os serviços Web RESTful da API sem cliente (para dispositivos não compatíveis com a Web, como TVs inteligentes, consoles de jogos, decodificadores de sinais, etc.). O Access Enabler é executado no sistema do usuário, onde facilita todos os workflows de direito.  O componente Ativador de acesso é baixado do site de hospedagem na Adobe quando os clientes acessam seu site e solicitam conteúdo protegido.  Os servidores de autenticação da Adobe Primetime hospedam os serviços Web RESTful usados na solução sem cliente.
 
-A autenticação da Adobe Primetime lida com os workflows de direito reais e, ao mesmo tempo, fornece primitivos usados para:
+A autenticação do Adobe Primetime lida com os workflows de direito reais, enquanto fornece as primitivas que você usa para:
 
-* Defina sua identidade. (O Programador é o &quot;solicitante&quot; no fluxo de direito de autenticação da Adobe Primetime.)
+* Defina sua identidade. (O Programador é o &quot;solicitante&quot; no fluxo de direito de autenticação do Adobe Primetime.)
 * Autentique um usuário com um MVPD específico.  (O MVPD é o &quot;provedor de identidade&quot; ou &quot;IdP&quot; no fluxo de direito de autenticação da Adobe Primetime.)
-* Autorize um usuário com o MVPD para um recurso específico.
+* Autorizar um usuário com o MVPD para um recurso específico.
 * Faça logout do usuário.
 
-O Programador é responsável por sua página da Web de nível superior ou aplicativo do player que faz o seguinte:
+O Programador é responsável pela página da Web de nível superior ou pelo aplicativo do reprodutor que faz o seguinte:
 
 * Implementa a interface do usuário
 * Interage com os serviços da Web do Access Enabler ou da API sem cliente
 
-O objetivo da autenticação da Adobe Primetime é criar uma maneira simples e modular para Programadores e MVPDs lidarem com a verificação de direito.
+O objetivo da autenticação do Adobe Primetime é criar uma maneira simples e modular para os programadores e MVPDs lidarem com a verificação de direitos.
 
-## Noções básicas sobre tokens {#understanding-tokens}
+## Compreensão de tokens {#understanding-tokens}
 
-A solução de direito de autenticação da Adobe Primetime se concentra na geração de partes específicas de dados criadas após a conclusão com êxito dos workflows de autenticação e autorização. Esses dados são chamados de tokens. Os tokens têm uma duração limitada; quando expiram, os tokens precisam ser reemitidos por meio do reinício dos fluxos de trabalho de autenticação e autorização.
+A solução de direitos de autenticação da Adobe Primetime se concentra na geração de dados específicos que são criados após a conclusão bem-sucedida dos workflows de autenticação e autorização. Esses dados são chamados de tokens. Os tokens têm uma duração limitada; quando expiram, os tokens precisam ser reemitidos por meio da reinicialização dos workflows de autenticação e autorização.
 
 Para obter detalhes sobre tokens, consulte as seguintes seções:
 
 * [Tipos de tokens](#token-types)
-* [Armazenamento de tokens](#token-storage)
+* [Armazenamento de token](#token-storage)
 * [Segurança de token](#token-security)
 * [Compartilhamento de token](#token-sharing)
 
 ### Tipos de tokens {#token-types}
 
-Três tipos de tokens são emitidos durante os fluxos de trabalho de autenticação e autorização. Os tokens AuthN e AuthZ têm &quot;vida longa&quot;, proporcionando continuidade à experiência de visualização do usuário. O Media Token é um token de curta duração que fornece suporte para as práticas recomendadas do setor, a fim de evitar fraudes por meio de ripagem. Os programadores especificam os valores de TTL (time-to-live) para cada tipo de token com base em acordos feitos com MVPDs. Os programadores decidem sobre um valor de TTL que melhor atende à sua empresa e aos seus clientes.
+Três tipos de tokens são emitidos durante os workflows de autenticação e autorização. Os tokens AuthN e AuthZ têm &quot;longa vida&quot;, fornecendo continuidade na experiência de visualização do usuário. O token de mídia é um token de vida curta que fornece suporte às práticas recomendadas do setor para evitar fraudes por meio da extração de fluxo. Os programadores especificam os valores de TTL (time-to-live) para cada tipo de token com base em acordos feitos com MVPDs. Os programadores decidem sobre um valor TTL que melhor atenda a sua empresa e seus clientes.
 
-* **Token de AuthN** (&quot;Vida longa&quot;): Após a autenticação bem-sucedida, a autenticação da Adobe Primetime cria um token AuthN associado ao dispositivo solicitante e um GUID (identificador globalmente exclusivo).
-   * A autenticação da Adobe Primetime envia o token AuthN para o Criador de acesso, que o armazena em cache com segurança no sistema do cliente.  Embora o token AuthN esteja lá e ainda não tenha expirado, ele está disponível para todos os aplicativos que usam a autenticação Adobe Primetime. O Ativador de acesso usa o token AuthN para o fluxo de autorização.
-   * Em um determinado momento, apenas um token AuthN é armazenado em cache. Sempre que um novo token AuthN for emitido e um antigo já existir, a autenticação do Adobe Primetime substituirá o token em cache.
-* **Token de AuthZ** (&quot;Vida longa&quot;): Após uma autorização bem-sucedida, a autenticação do Adobe Primetime cria um token AuthZ associado ao dispositivo solicitante e a um recurso protegido específico.  O recurso protegido é identificado por uma ID de recurso exclusiva.
-   * A autenticação da Adobe Primetime envia o token AuthZ para o Ativador de acesso, que o armazena em cache com segurança no sistema local. O Ativador de acesso usa o token AuthZ para criar o token de mídia de curta duração usado para o acesso de visualização real.
-   * Em qualquer momento, apenas um token AuthZ por recurso é armazenado em cache. A autenticação da Adobe Primetime pode armazenar em cache vários tokens AuthZ, desde que associados a recursos diferentes. Sempre que um novo token AuthZ é emitido e um antigo já existe para o mesmo recurso, a autenticação do Adobe Primetime substitui o token em cache.
-* **Token de mídia** (&quot;Short-Lived&quot;): O Ativador de acesso usa o token AuthZ para gerar uma vida curta (padrão: 7 minutos) Token de mídia. Este é o ponto em que se considera ter ocorrido um pedido de reprodução bem-sucedido.
-   * Antes de fornecer acesso ao recurso protegido, o servidor de mídia deve usar um componente de autenticação da Adobe Primetime, o Verificador de token de mídia, para validar o token de mídia.
-   * Como o token de mídia não está vinculado ao dispositivo, sua duração é significativamente menor (padrão: 7 minutos) mais do que os tokens AuthN e AuthZ de vida longa.
-   * O token de mídia de curta duração é restrito ao uso único e nunca é armazenado em cache. Ele é recuperado do servidor de autenticação da Adobe Primetime sempre que uma API de autorização é chamada.
+* **Token de autenticação** (&quot;Vida longa&quot;): após a autenticação bem-sucedida, a autenticação do Adobe Primetime cria um token de Autenticação associado ao dispositivo solicitante e a um identificador exclusivo global (GUID).
+   * A autenticação do Adobe Primetime envia o token de autenticação para o Access Enabler, que o armazena em cache com segurança no sistema do cliente.  Enquanto o token de autenticação estiver lá e não expirar, ele estará disponível para todos os aplicativos que usam a autenticação Adobe Primetime. O Ativador de acesso usa o token de autenticação para o fluxo de autorização.
+   * A qualquer momento, somente um token de AuthN é armazenado em cache. Sempre que um novo token de autenticação é emitido e um antigo já existe, a autenticação do Adobe Primetime substitui o token em cache.
+* **Token de autorização** (&quot;Vida longa&quot;): após a autorização bem-sucedida, a autenticação do Adobe Primetime cria um token de AuthZ associado ao dispositivo solicitante e a um recurso protegido específico.  O recurso protegido é identificado por uma ID de recurso exclusiva.
+   * A autenticação do Adobe Primetime envia o token de AuthZ para o Access Enabler, que o armazena em cache com segurança no sistema local. O Ativador de acesso usa o token de AuthZ para criar o token de mídia de vida curta usado para acesso de visualização real.
+   * Em um dado momento, somente um token de AuthZ por recurso é armazenado em cache. A autenticação do Adobe Primetime pode armazenar em cache vários tokens AuthZ, desde que estejam associados a recursos diferentes. Sempre que um novo token de AuthZ é emitido e um antigo já existe para o mesmo recurso, a autenticação do Adobe Primetime substitui o token em cache.
+* **Token de mídia** (&quot;Vida curta&quot;): o Ativador de acesso usa o token AuthZ para gerar um token de mídia de vida curta (padrão: 7 minutos). Esse é o ponto no qual uma solicitação de reprodução bem-sucedida é considerada como tendo ocorrido.
+   * Antes de fornecer acesso ao recurso protegido, o servidor de mídia deve usar um componente de autenticação do Adobe Primetime, o Verificador de token de mídia, para validar o token de mídia.
+   * Como o token de mídia não está vinculado ao dispositivo, sua duração é significativamente menor (padrão: 7 minutos) do que a dos tokens AuthN e AuthZ de longa duração.
+   * O token de mídia de vida curta é restrito ao uso único e nunca é armazenado em cache. Ele é recuperado do servidor de autenticação da Adobe Primetime sempre que uma API de autorização é chamada.
 
-### Armazenamento de tokens {#token-storage}
+### Armazenamento de token {#token-storage}
 
-O Access Enabler armazena tokens de longa duração (AuthN e AuthZ) em locais específicos ao seu ambiente:
+O Access Enabler armazena tokens de vida longa (AuthN e AuthZ) em locais específicos para seu ambiente:
 
 * **Flash 10.1** (ou superior): Os tokens de vida longa são armazenados como Objetos compartilhados locais.
-* **HTML5**: Os tokens de longa duração são mantidos em segurança na loja local do navegador HTML5.
-* **iOS**: Os tokens de longa duração são armazenados em uma área de transferência persistente, onde podem ser acessados por outros aplicativos clientes de autenticação da Adobe Primetime.
-* **Android**: Os tokens de duração são armazenados em um arquivo de banco de dados compartilhado, onde podem ser acessados por outros aplicativos clientes de autenticação da Adobe Primetime.
-* **Dispositivos de API sem cliente**: Os tokens são armazenados nos servidores de autenticação do Primetime.
+* **HTML5**: os tokens de vida longa são mantidos em segurança no armazenamento local do navegador HTML5.
+* **iOS**: os tokens de longa vida são armazenados em uma área de trabalho persistente, onde podem ser acessados por outros aplicativos clientes de autenticação da Adobe Primetime.
+* **Android**: os tokens de longa duração são armazenados em um arquivo de banco de dados compartilhado, onde podem ser acessados por outros aplicativos clientes de autenticação do Adobe Primetime.
+* **Dispositivos de API sem cliente**: os tokens são armazenados nos servidores de autenticação do Primetime.
 
 ### Segurança de token {#token-security}
 
-O Servidor de autenticação da Adobe Primetime assina digitalmente todos os tokens de longa duração usando a ID do dispositivo (derivada das características de hardware do dispositivo). A assinatura digital difere na forma como é gerada, protegida e validada, dependendo do ambiente:
+O Servidor de autenticação da Adobe Primetime assina digitalmente todos os tokens de longa vida usando a ID do dispositivo (derivada das características de hardware do dispositivo). A assinatura digital difere na forma como é gerada, protegida e validada dependendo do ambiente:
 
-* **Flash 10.1** (ou superior) - A ID do dispositivo depende da credencial do dispositivo, um certificado exclusivo emitido do servidor de individualização do Adobe. Essa segurança é equivalente à tecnologia FAXS DRM. Essa validação do lado do servidor compara a ID de dispositivo exclusiva no token com a credencial do dispositivo (comunicada com segurança do Flash Player para a autenticação da Adobe Primetime). A credencial do dispositivo também identifica a versão do cliente FAXS e a versão do Flash Player (ou AIR) para a qual foi emitida. A vinculação do dispositivo é mais forte do que com a HTML5, portanto, o TTL (time-to-live) para os tokens geralmente é maior com o Flash.
-* **HTML5** - O dispositivo é individualizado no lado do cliente. Ela usa características disponíveis no JavaScript para produzir uma ID de pseudodispositivo que inclui versões de navegador e SO, um endereço IP e um GUID de cookie do navegador (identificador globalmente exclusivo). Essa ID de dispositivo de token é comparada à ID de pseudo-dispositivo atual do dispositivo. Como o endereço IP pode mudar durante o uso normal, mesmo na mesma sessão, a autenticação da Adobe Primetime armazena os tokens de HTML5 em dois locais: localStorage e sessionStorage. Se o IP mudar e o token sessionStorage ainda for válido, a sessão será mantida. Com a HTML5, a vinculação do dispositivo não é tão forte, portanto, o TTL para tokens normalmente é menor do que para o Flash.
-* **Clientes nativos** (iOS e Android) - Os tokens de longa duração contêm informações de individualização da ID do dispositivo nativa e, portanto, estão vinculados ao dispositivo solicitante. As solicitações de autenticação e autorização são enviadas por HTTPS, e as informações da ID do dispositivo são assinadas digitalmente pela biblioteca do Ativador de Acesso antes de enviá-las para os servidores de backend. No lado do servidor, as informações da ID do dispositivo são validadas em relação à assinatura digital associada.
-* **Clientes de API sem cliente** - A solução de API sem cliente tem seu conjunto de protocolos de segurança que envolvem a assinatura digital de todas as chamadas de API. Os tokens gerados durante os fluxos de direito são armazenados com segurança nos servidores de autenticação da Adobe Primetime.
+* **Flash 10.1** (ou superior) - A ID do dispositivo depende da credencial do dispositivo, um certificado exclusivo emitido do servidor de individualização do Adobe. Esta segurança é equivalente à tecnologia FAXS DRM. Essa validação do lado do servidor compara a ID de dispositivo exclusiva no token com a credencial do dispositivo (comunicada com segurança do Flash Player para a autenticação da Adobe Primetime). A credencial do dispositivo também identifica a versão do cliente FAXS e a versão do Flash Player (ou AIR) para a qual foi emitida. A ligação de dispositivo é mais forte do que com o HTML5, portanto, o TTL (time-to-live) para tokens normalmente é mais longo com o Flash.
+* **HTML5** - O dispositivo é individualizado no lado do cliente. Ele usa características disponíveis por meio do JavaScript para produzir uma ID de pseudodispositivo que inclui versões de navegador e sistema operacional, um endereço IP e um GUID de cookie de navegador (identificador exclusivo global). Essa ID de dispositivo de token é comparada à ID de pseudodispositivo atual do dispositivo. Como o endereço IP pode mudar durante o uso normal, mesmo na mesma sessão, a autenticação do Adobe Primetime armazena tokens HTML5 em dois locais: localStorage e sessionStorage. Se o IP for alterado e o token sessionStorage ainda for válido, a sessão será mantida. Com o HTML5, a vinculação do dispositivo não é tão forte, portanto, o TTL dos tokens normalmente é menor do que o do Flash.
+* **Clientes nativos** (iOS e Android) - Os tokens de longa vida mantêm informações de individualização de ID de dispositivo nativo e, portanto, são vinculados ao dispositivo solicitante. As solicitações de autenticação e autorização são enviadas por HTTPS, e as informações da ID do dispositivo são assinadas digitalmente pela biblioteca do Access Enabler antes de enviá-las aos servidores de back-end. No lado do servidor, as informações de ID do dispositivo são validadas em relação à assinatura digital associada.
+* **Clientes da API sem cliente** - A solução de API sem cliente tem seu conjunto de protocolos de segurança que envolvem a assinatura digital de todas as chamadas de API. Os tokens gerados durante os fluxos de direito são armazenados com segurança nos servidores de autenticação da Adobe Primetime.
 
-A autenticação da Adobe Primetime valida cada token de duração longa para garantir que o dispositivo que acessar o conteúdo seja o mesmo que o que emitiu o token. Para todos os tokens, uma validação do lado do cliente garante que a assinatura digital esteja intacta e que a integridade do token seja preservada. Quando a validação da ID do dispositivo falhar, a sessão de autenticação será invalidada e o usuário será solicitado a fazer logon novamente, o que redefinirá os tokens.
+A autenticação do Adobe Primetime valida cada token de longa duração para garantir que o dispositivo que acessa o conteúdo seja o mesmo que emitiu o token. Para todos os tokens, uma validação no lado do cliente garante que a assinatura digital esteja intacta e que a integridade do token seja preservada. Quando a validação da ID de dispositivo falha, a sessão de autenticação é invalidada e o usuário é solicitado a fazer logon novamente, o que redefine os tokens.
 
 ### Compartilhamento de token {#token-sharing}
 
-Aplicativos em plataformas diferentes não compartilham tokens. Existem vários motivos para isso, incluindo o seguinte:
+Os aplicativos em diferentes plataformas não compartilham tokens. Há várias razões para isso, incluindo as seguintes:
 
-* Conforme descrito em [Armazenamento de tokens](#token-storage), o método de armazenamento de tokens varia entre plataformas (por exemplo, Objetos compartilhados locais para Flash, WebStorage para JavaScript).
-* O grau de segurança do token é diferente entre plataformas. Por exemplo, os tokens de Flash são fortemente vinculados a um dispositivo que usa o FAXS. Os tokens em um ambiente JavaScript puro não têm o mesmo nível de suporte de DRM que o Flash.  O compartilhamento de tokens JS com aplicativos Flash aumentaria a possibilidade de tokens menos seguros explorarem um ambiente mais seguro.
+* Conforme descrito em [Armazenamento de token](#token-storage), o método de armazenamento de tokens varia entre plataformas (por exemplo, Local Shared Objects for Flash, WebStorage for JavaScript).
+* O grau de segurança do token difere entre as plataformas. Por exemplo, os tokens de Flash estão fortemente vinculados a um dispositivo que usa FAXS. Os tokens em um ambiente JavaScript puro não têm o mesmo nível de suporte DRM que no Flash.  O compartilhamento de tokens JS com aplicativos do Flash aumentaria a possibilidade de tokens menos seguros explorarem um ambiente mais seguro.
 
-## Ciclo de vida da integração do programador {#prog-integ-lifecycle}
+## Ciclo de vida de integração do programador {#prog-integ-lifecycle}
 
 ![](assets/progr-flow-int-lifecycle.png)
 
-*Figura: Integração da autenticação com o site e o aplicativo do programador*
+*Figura: Integração da autenticação ao site e aplicativo do programador*
 
 
 ## Fluxos lógicos {#logical-flows}
 
-### Fluxograma de direitos {#chart}
+### Fluxograma de Direitos {#chart}
 
-O fluxograma a seguir apresenta o processo geral de confirmação do direito (usando o componente cliente Adobe Primetime authentication Access Enabler ):
+O fluxograma a seguir apresenta o processo geral de confirmação de direitos (usando o componente de cliente Access Enabler de autenticação do Adobe Primetime):
 
 ![](assets/ent-flowchart.png)
 
-*Figura: Processo de confirmação do direito*
+*Figura: Processo de confirmação de direito*
 
 ### Etapas de autenticação {#authn-steps}
 
-As etapas a seguir apresentam um exemplo do fluxo de autenticação da Adobe Primetime.  Essa é a parte do processo de direito no qual um Programador determina se o usuário é um cliente válido de um MVPD.  Nesse cenário, o usuário é um assinante válido de um MVPD.  O usuário está tentando visualizar conteúdo protegido usando um aplicativo Flash do Programador:
+As etapas a seguir apresentam um exemplo do fluxo de autenticação da Adobe Primetime.  Essa é a parte do processo de qualificação em que um Programador determina se o usuário é um cliente válido de um MVPD.  Nesse cenário, o usuário é um assinante válido de um MVPD.  O usuário está tentando exibir o conteúdo protegido usando um aplicativo de Flash do Programador:
 
-1. O usuário navega até a página da Web do Programador, que carrega o aplicativo do Flash do Programador e os componentes do Ativador de acesso para autenticação da Adobe Primetime na máquina do usuário. O aplicativo Flash usa o Ativador de Acesso para definir a identificação do Programador com autenticação Adobe Primetime, e a autenticação Adobe Primetime prioriza o Ativador de Acesso com dados de configuração e estado para esse Programador (o &quot;solicitante&quot;). O Ativador de acesso deve receber esses dados do servidor antes de executar qualquer outra chamada de API. Nota técnica: o Programador definiu sua identidade com o Enabler de Acesso `setRequestor()` método; para obter detalhes, consulte o [Guia de integração do programador](/help/authentication/programmer-integration-guide-overview.md).
-1. Quando o usuário tenta visualizar o conteúdo protegido do Programador, o aplicativo do Programador apresenta ao usuário uma lista de MVPDs, a partir da qual o usuário seleciona um provedor.
-1. O usuário é redirecionado para um servidor de autenticação da Adobe Primetime, onde um [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) A solicitação para o MVPD selecionado pelo usuário é criada. Esta solicitação é enviada como uma solicitação de autenticação em nome do Programador para o MVPD. Dependendo do sistema do MVPD, o navegador do usuário é redirecionado para o site do MVPD para fazer logon ou um iFrame de login é criado no aplicativo do Programador.
+1. O usuário navega até a página do Programador na Web, que carrega o aplicativo Flash do Programador e os componentes do Adobe Primetime authentication Access Enabler na máquina do usuário. O aplicativo Flash usa o Access Enabler para definir a identificação do Programador com a autenticação do Adobe Primetime, e a autenticação do Adobe Primetime prioriza o Access Enabler com os dados de configuração e estado desse Programador (o &quot;solicitante&quot;). O Ativador de acesso deve receber esses dados do servidor antes de executar outras chamadas de API. Nota técnica: o Programador definiu sua identidade com o Access Enabler `setRequestor()` método; para obter detalhes, consulte o [Guia de integração do programador](/help/authentication/programmer-integration-guide-overview.md).
+1. Quando o usuário tenta visualizar o conteúdo protegido do Programador, o aplicativo do Programador apresenta ao usuário uma lista de MVPDs, a partir dos quais o usuário seleciona um provedor.
+1. O usuário é redirecionado para um servidor de autenticação da Adobe Primetime, em que um [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) para o MVPD selecionado pelo usuário é criada. Essa solicitação é enviada como uma solicitação de autenticação em nome do Programador para o MVPD. Dependendo do sistema do MVPD, o navegador do usuário é então redirecionado para o site do MVPD para fazer logon ou um iFrame de logon é criado no aplicativo do Programador.
 1. Em ambos os casos (redirecionamento ou iFrame), o MVPD aceita a solicitação e exibe sua página de logon.
-1. O usuário faz logon com o MVPD, o MVPD valida o status do usuário como um cliente pagador e, em seguida, o MVPD cria sua própria sessão HTTP.
-1. Quando o usuário é validado, o MVPD cria uma resposta (SAML &amp; criptografada), que o MVPD envia de volta para a autenticação da Adobe Primetime.
-1. A autenticação Adobe Primetime recebe a resposta MVPD, vê que há uma sessão HTTP de autenticação Adobe Primetime aberta, valida a resposta SAML do MVPD e redireciona para o site do Programador.
-1. O site do Programador é recarregado, o Ativador de Acesso é recarregado e o Programador chama setRequestor() novamente.  A segunda chamada para setRequestor() é necessária porque a configuração atual foi alterada - agora há um sinalizador presente que informa ao Ativador de Acesso que um token AuthN está aguardando ser gerado no servidor.
-1. O Ativador de Acesso vê que há uma autenticação pendente e solicita o token do servidor de autenticação da Adobe Primetime. O token é recuperado do servidor, chamando os recursos de DRM do Flash Player.
-1. O token AuthN é armazenado no cache LSO do Flash Player do programador; a autenticação agora é concluída e a sessão é destruída no servidor de autenticação da Adobe Primetime.
+1. O usuário faz logon com o MVPD, o MVPD valida o status do usuário como um cliente pagante e, em seguida, o MVPD cria sua própria sessão HTTP.
+1. Quando o usuário é validado, o MVPD cria uma resposta (SAML e criptografada), que o MVPD envia de volta para a autenticação da Adobe Primetime.
+1. A autenticação do Adobe Primetime recebe a resposta do MVPD, vê que há uma sessão HTTP de autenticação do Adobe Primetime aberta, valida a resposta do SAML do MVPD e redireciona de volta para o site do Programador.
+1. O site do Programador é recarregado, o Ativador de acesso é recarregado e o Programador chama setRequestor() novamente.  A segunda chamada para setRequestor() é necessária porque a configuração atual foi alterada - agora há um sinalizador presente que informa ao Ativador de acesso que um token de autenticação está aguardando para ser gerado no servidor.
+1. O Ativador de acesso vê que há uma autenticação pendente e solicita o token do servidor de autenticação do Adobe Primetime. O token é recuperado do servidor chamando os recursos DRM do Flash Player.
+1. O token de autenticação é armazenado no cache LSO do Flash Player do programador; a autenticação agora está concluída e a sessão é destruída no servidor de autenticação do Adobe Primetime.
 
 ### Etapas de autorização {#authz-steps}
 
 As etapas a seguir continuam do [Etapas de autenticação](#authn-steps):
 
-1. Quando o usuário tenta acessar o conteúdo protegido do Programador, o aplicativo do Programador verifica primeiro se há um token AuthN no computador ou dispositivo local do usuário.  Se esse token não estiver lá, então a variável [Etapas de autenticação](#authn-steps) acima são seguidas.  Se o token AuthN estiver lá, o fluxo de Autorização continuará com o aplicativo do Programador iniciando uma chamada para o Criador de Acesso com uma solicitação para obter os direitos de visualização do usuário para um item específico de conteúdo protegido.
-1. O item específico de conteúdo protegido é representado por um &quot;identificador de recurso&quot;.  Pode ser uma sequência simples ou uma estrutura mais complexa, mas em qualquer caso a natureza do identificador de recursos é acordada antecipadamente entre o programador e o MVPD.  O aplicativo do Programador passa o identificador de recurso para o Ativador de Acesso.  O Ativador de Acesso verifica se há um token AuthZ no computador ou dispositivo local do usuário.  Se o token AuthZ não estiver lá, o Habilitador de acesso passará a solicitação para o servidor de autenticação da Adobe Primetime de back-end.
-1. O servidor de autenticação da Adobe Primetime se comunica com o endpoint de autorização MVPDs usando protocolos padronizados.  Se a resposta do MVPD indicar que o usuário tem direito a exibir o conteúdo protegido, o servidor de autenticação da Adobe Primetime cria um token AuthZ e o transmite para o Ativador de acesso, que armazena o token AuthZ na máquina do usuário.
-1. Com um token AuthZ armazenado no computador ou no dispositivo do usuário, o aplicativo Programador chama o Criador de acesso para obter um Token de mídia do servidor de autenticação da Adobe Primetime e fornece esse token para o aplicativo do Programador.
-1. Por fim, o aplicativo do Programador usa o componente Verificador de token de mídia para confirmar que o usuário correto está visualizando o conteúdo correto, e com o Token de mídia no lugar, o usuário tem permissão para visualizar o conteúdo protegido.
+1. Quando o usuário tenta acessar o conteúdo protegido do Programador, o aplicativo do Programador primeiro verifica se há um token de Autenticação no computador ou dispositivo local do usuário.  Se esse token não estiver lá, a variável [Etapas de autenticação](#authn-steps) acima são seguidos.  Se o token de autenticação estiver lá, o fluxo de autorização continuará com o aplicativo do programador iniciando uma chamada para o ativador de acesso com uma solicitação para obter os direitos de visualização do usuário para um item específico de conteúdo protegido.
+1. O item específico de conteúdo protegido é representado por um &quot;identificador de recurso&quot;.  Pode ser uma sequência simples ou uma estrutura mais complexa, mas, em qualquer caso, a natureza do identificador de recursos é acordada antecipadamente entre o Programador e o MVPD.  O aplicativo do Programador passa o identificador de recurso para o Ativador de acesso.  O Ativador de acesso verifica um token de AuthZ no computador ou dispositivo local do usuário.  Se o token AuthZ não estiver lá, o Ativador de acesso passará a solicitação para o servidor de autenticação Adobe Primetime de back-end.
+1. O servidor de autenticação do Adobe Primetime se comunica com o endpoint de autorização de MVPDs usando protocolos padronizados.  Se a resposta do MVPD indicar que o usuário tem direito a visualizar o conteúdo protegido, o servidor de autenticação do Adobe Primetime criará um token de AuthZ e o transmitirá de volta para o Access Enabler, que armazena o token de AuthZ no computador do usuário.
+1. Com um token de AuthZ armazenado na máquina ou no dispositivo do usuário, o aplicativo do Programador chama o Ativador de acesso para obter um token de mídia do servidor de autenticação do Adobe Primetime e fornece esse token para o aplicativo do Programador.
+1. Por fim, o aplicativo do Programador usa o componente Verificador de token de mídia para confirmar se o usuário correto está visualizando o conteúdo correto e, com o token de mídia instalado, o usuário pode visualizar o conteúdo protegido.
 
 
 ## Registro e inicialização {#reg-and-init}
 
-A primeira etapa para trabalhar com a autenticação da Adobe Primetime é se registrar no Adobe ou com um parceiro autorizado para autenticação da Adobe Primetime.
+A primeira etapa para trabalhar com a autenticação da Adobe Primetime é fazer o registro no Adobe ou em um parceiro autorizado para autenticação da Adobe Primetime.
 
-Ao se registrar, você fornece uma lista dos domínios dos quais se comunicará com a autenticação da Adobe Primetime. Por exemplo, os domínios Turner Broadcasting System incluem tbs.com e tnt.tv como domínios registrados pela autenticação da Adobe Primetime. Cada um desses sites de conteúdo recebe acesso à autenticação da Adobe Primetime e recebe sua própria ID de Solicitante (por exemplo, &quot;TBS&quot; e &quot;TNT&quot;). Se decidir adicionar outros sites, você deve informar o Adobe sobre os nomes de domínio adicionais para colocá-los na lista de domínios permitidos e receber IDs de Solicitante adicionais.
+Ao se registrar, você fornece uma lista dos domínios a partir dos quais se comunicará com a autenticação da Adobe Primetime. Por exemplo, os domínios do Turner Broadcasting System incluem tbs.com e tnt.tv como domínios registrados para autenticação da Adobe Primetime. Cada um desses sites de conteúdo recebe acesso à autenticação do Adobe Primetime e recebe sua própria ID de solicitante (por exemplo, &quot;TBS&quot; e &quot;TNT&quot;). Se decidir adicionar mais sites, você deverá informar ao Adobe os nomes de domínio adicionais para colocá-los na lista de domínios permitidos e receber IDs de solicitante adicionais.
 
 >[!WARNING]
 >
->Ao testar sua integração, verifique se o servidor de teste está em um domínio registrado que você pretende usar na produção. As solicitações, mesmo as solicitações de teste, provenientes de domínios não incluídos na lista de permissões são ignoradas. Por exemplo, se você solicitou que domain.com fosse usado na produção, verifique se está implantando sua integração de teste em domain.com, test.domain.com e staging.domain.com.
+>Enquanto você está testando a integração, verifique se o servidor de teste está em um domínio registrado que pretende usar na produção. Solicitações, até mesmo solicitações de teste, provenientes de domínios que não estão na lista de permissões são ignoradas. Por exemplo, se você solicitou que domain.com seja usado na produção, certifique-se de implantar a integração de teste em domain.com, test.domain.com e staging.domain.com.
 >
->As solicitações que contêm nome de usuário e/ou senha no URL são ignoradas mesmo se os domínios forem incluídos na lista de permissões. Exemplo: `//username@registered-domain/`
+>Solicitações que contêm nome de usuário e/ou senha no URL são ignoradas mesmo se os domínios estiverem na lista de permissões. Exemplo: `//username@registered-domain/`
 
-A ID do Solicitante identifica exclusivamente o cliente do Programador em todas as comunicações com o componente do cliente Ativador de Acesso da Adobe Primetime. Todos os dados estáticos de autenticação do Adobe Primetime associados ao Programador são marcados com essa ID.
+A ID do solicitante identifica exclusivamente o cliente do programador em todas as comunicações com o componente de cliente Access Enabler da autenticação do Adobe Primetime. Todos os dados estáticos de autenticação do Adobe Primetime associados ao programador são digitados para essa ID.
 
 >[!TIP]
 >
->Além da ID do Solicitante, ao se registrar, você também receberá URLs funcionais para o componente do cliente Ativador de Acesso e o Verificador de Token de Mídia.
+>Além da ID do solicitante, ao se registrar, você também recebe URLs funcionais para o componente de cliente do Access Enabler e o Verificador de token de mídia.
 
 ## Etapas de integração {#integration-steps}
 
 >[!TIP]
 >
->Se você estiver usando o Open Source Media Framework do Adobe (&quot;OSMF&quot;) para o desenvolvimento de sua mídia, a maneira mais rápida de usar a autenticação do Adobe Primetime é integrar o plug-in OSMF *(Obsoleto)* no código do seu jogador.
+>Se você estiver usando o Open Source Media Framework de Adobe (&quot;OSMF&quot;) para o desenvolvimento de seu reprodutor de mídia, a maneira mais rápida de usar a autenticação do Adobe Primetime é integrar o plug-in OSMF *(Obsoleto)* no código do reprodutor.
 >
 ><!--For details, see [Adobe Primetime authentication Plugin For OSMF](https://tve.helpdocsonline.com/9-2-2) in the Programmer Integration Guide.-->
 
 1. [Configuração do solicitante](#requestor)
-1. [Manipular autenticação e autorização](#authn-authz)
-1. [Suporte ao Logout Único](#ssl)
+1. [Manipulando Autenticação e Autorização](#authn-authz)
+1. [Suporte para logout único](#ssl)
 
 ### 1. Configuração do solicitante {#requestor}
 
-#### 1 bis. Registrando-se com o Adobe
+#### 1-A. Registrando Com O Adobe
 
-Sua primeira etapa é se registrar no Adobe ou com um parceiro autorizado de autenticação da Adobe Primetime.  Ao se registrar, você recebe um ou mais identificadores globais exclusivos (GUIDs). Cada GUID emitida está associada a um domínio do qual o acesso é permitido para a autenticação da Adobe Primetime. Você passa um GUID (chamado de ID do solicitante) para o domínio que fez a solicitação para registrar sua identidade para cada sessão em que interage com o Ativador de acesso. Para obter detalhes, consulte [Registro e inicialização](#reg-and-init) no Guia de integração do programador.
+Seu primeiro passo é se registrar no Adobe ou em um parceiro autorizado de autenticação da Adobe Primetime.  Ao se registrar, você receberá um ou mais identificadores exclusivos globais (GUIDs). Cada GUID emitida está associada a um domínio do qual o acesso é permitido para autenticação da Adobe Primetime. Você passa um GUID (chamado ID do solicitante) para o domínio solicitante registrar sua identidade para cada sessão em que você interage com o Access Enabler. Para obter detalhes, consulte [Registro e inicialização](#reg-and-init) no Guia de integração do programador.
 
-#### 1-B. Integração do ativador de acesso inicial
+#### 1-B. Integração inicial do Access Enabler
 
-A próxima etapa é integrar o Ativador de acesso ao aplicativo do reprodutor de mídia ou página da Web existente:
+A próxima etapa é integrar o Access Enabler ao aplicativo de reprodutor de mídia ou página da Web existente:
 
-* Você pode incorporar a versão do Flash, `AccessEnabler.swf`, em um reprodutor de vídeo baseado em Flash, ou você pode incorporá-lo diretamente ao HTML da página da Web. Você pode se comunicar com o SWF Access Enabler no ActionScript ou no JavaScript. A API base é o ActionScript, mas se você preferir trabalhar com JavaScript, uma biblioteca de wrapper completa estará disponível para inclusão em suas páginas.
-* Para ambientes que não sejam Flashes, você pode:
-   * Use a versão HTML5/JavaScript, AccessEnabler.js e comunique-se com ela por meio da API do JavaScript
-   * Use a Extensão nativa do AIR para autenticação do Adobe Primetime para combinar o código nativo com classes de ActionScript integradas
-   * Usar uma das versões nativas do cliente da biblioteca do Access Enabler (iOS ou Android)
+* É possível incorporar a versão do Flash, `AccessEnabler.swf`, em um reprodutor de vídeo baseado em Flash, ou você pode incorporá-lo diretamente no HTML da sua página da Web. Você pode se comunicar com o SWF do Access Enabler no ActionScript ou JavaScript. A API base é o ActionScript, mas se você preferir trabalhar com JavaScript, uma biblioteca completa de invólucro está disponível para inclusão em suas páginas.
+* Para ambientes que não sejam de Flash, é possível:
+   * Use a versão do HTML5/JavaScript e o AccessEnabler.js e comunique-se com ele por meio da API do JavaScript
+   * Usar a extensão nativa do AIR para autenticação do Adobe Primetime para combinar código nativo com classes de ActionScript integradas
+   * Usar uma das versões nativas do cliente da biblioteca Access Enabler (iOS ou Android)
 
-### 2. Manipulação da autenticação e da autorização {#authn-authz}
+### 2. Tratamento da autenticação e da autorização {#authn-authz}
 
-#### 2 bis. Comunicação com o ativador de acesso
+#### 2-A. Comunicação com o Access Enabler
 
-A comunicação entre o Ativador de acesso e a página da Web ou o aplicativo do reprodutor é assíncrona. Seu aplicativo chama métodos do Access Enabler e o Access Enabler responde por meio de retornos de chamada que você registra na biblioteca do Access Enabler.
+A comunicação entre o Ativador de acesso e sua página da Web ou aplicativo de reprodução é assíncrona. Seu aplicativo chama os métodos do Access Enabler, e o Access Enabler responde via retornos de chamada que você registra na biblioteca do Access Enabler.
 
-* Quando seu aplicativo faz uma solicitação de autorização, o Ativador de Acesso inicia automaticamente uma solicitação de autenticação, se um token AuthN válido ainda não estiver no sistema local. Quando a autenticação é bem-sucedida, o token AuthN do usuário é armazenado localmente, de modo que não é necessário fazer logon novamente. Se eles tiverem sido autenticados com êxito por meio da autenticação da Adobe Primetime em qualquer outro contexto (por exemplo, por meio do site do MVPD ou com um programador diferente), o Ativador de acesso terá acesso ao token AuthN local e uma autenticação adicional não será necessária.
-* Quando um usuário tenta acessar seu conteúdo protegido, você envia uma solicitação de autorização ao Ativador de acesso. Após verificar (ou iniciar) a autenticação, o Habilitador de Acesso entra em contato com o MVPD (por meio do servidor de autenticação da Adobe Primetime) para determinar se o cliente tem direito a exibir o conteúdo protegido. Seu aplicativo só precisa enviar a solicitação ao Enabler de acesso e, em seguida, lidar com a resposta (sucesso ou falha da autorização). Se a autorização for bem-sucedida, um token AuthZ será armazenado no sistema cliente.  Por fim, seu aplicativo recebe um token de mídia de curta duração para uso em seu próprio procedimento de autorização.
+* Quando o aplicativo faz uma solicitação de autorização, o Ativador de acesso inicia automaticamente uma solicitação de autenticação, se um token de autenticação válido ainda não estiver no sistema local. Quando a autenticação é bem-sucedida, o token de autenticação do usuário é armazenado localmente, para que ele não precise fazer logon novamente. Se eles tiverem sido autenticados com êxito por meio da autenticação do Adobe Primetime em qualquer outro contexto (por exemplo, por meio do site MVPD ou com um programador diferente), o Ativador de acesso terá acesso ao token de autenticação local e uma autenticação adicional não será necessária.
+* Quando um usuário tenta acessar seu conteúdo protegido, você envia uma solicitação de autorização para o Ativador de acesso. Depois de verificar (ou iniciar) a autenticação, o Ativador de acesso entra em contato com o MVPD (por meio do servidor de autenticação da Adobe Primetime) para determinar se o cliente tem direito a visualizar o conteúdo protegido. Seu aplicativo só precisa enviar a solicitação ao Ativador de acesso e, em seguida, manipular a resposta (sucesso ou falha na autorização). Se a autorização for bem-sucedida, um token de AuthZ será armazenado no sistema cliente.  Por fim, seu aplicativo recebe um token de mídia de vida curta para uso em seu próprio procedimento de autorização.
 
 >[!NOTE]
 >
->* A autenticação ocorre como uma troca SAML, entre a autenticação Adobe Primetime como Provedor de Serviços (SP) e o MVPD como Provedor de Identidade (IdP).
+>* A autenticação ocorre como uma troca SAML, entre a autenticação do Adobe Primetime como Provedor de Serviço (SP) e o MVPD como Provedor de Identidade (IdP).
 >
->* A autorização usa uma troca de serviço da Web de canal reverso (servidor para servidor) entre a autenticação da Adobe Primetime (o SP) e um MVPD (o IdP).
+>* A autorização usa uma troca de serviço Web de canal de retorno (servidor para servidor) entre a autenticação do Adobe Primetime (a controladora de armazenamento) e um MVPD (o IdP).
 
 
 
-#### 2 ter. Fornecendo Uma Interface De Usuário De Direito {#entitlement-ui}
+#### 2-B. Fornecer Uma Interface Do Usuário De Direito {#entitlement-ui}
 
-Você fornece sua própria interface do usuário para acessar seu conteúdo. Alguns elementos, como o processo de logon real, são fornecidos pelo MVPD e alguns elementos estão opcionalmente disponíveis como parte da autenticação da Adobe Primetime. No mínimo, você faz o seguinte:
+Você fornece sua própria interface do usuário para acesso do usuário ao seu conteúdo. Alguns elementos, como o processo de logon real, são fornecidos pelo MVPD e alguns elementos estão opcionalmente disponíveis como parte da autenticação do Adobe Primetime. No mínimo, você deve fazer o seguinte:
 
-* **Implemente uma interface de seleção MVPD que permita que um novo usuário identifique seu MVPD e faça logon pela primeira vez**. Para desenvolvimento, o Ativador de acesso fornece uma interface de usuário básica que dá ao cliente uma opção de MVPDs e inicia o processo de logon. Para produção, você deve implementar sua própria caixa de diálogo Seletor de MVPD. Alguns MVPDs redirecionam para seu próprio site para logon e alguns exigem que suas páginas de logon sejam exibidas em um iFrame. Você deve implementar um retorno de chamada que crie este iFrame para lidar com os casos em que o MVPD do usuário exibe sua página de logon em um iFrame.
-* **Identificar conteúdo protegido**. O conteúdo protegido requer autorização para acessar o . Sua interface deve indicar qual conteúdo está protegido e qual conteúdo foi autorizado.  O status da autorização é frequentemente indicado com ícones &quot;desbloqueados&quot; e &quot;bloqueados&quot;.
-* **Mostrar que um usuário está autenticado**. Você deve indicar o status de autenticação de um usuário como parte de qualquer meio usado para identificar conteúdo protegido. Você pode consultar o Ativador de acesso para determinar se o cliente já foi autenticado.
+* **Implementar uma interface de seleção do MVPD que permita que um novo usuário identifique o MVPD e faça logon pela primeira vez**. Para desenvolvimento, o Access Enabler fornece uma interface básica de usuário que oferece ao cliente uma opção de MVPDs e inicia o processo de logon. Para produção, você deve implementar sua própria caixa de diálogo Seletor de MVPD. Alguns MVPDs redirecionam para seu próprio site para logon e outros exigem que suas páginas de logon sejam exibidas em um iFrame. Você deve implementar um retorno de chamada que crie esse iFrame para lidar com os casos em que o MVPD do usuário exibe a página de logon em um iFrame.
+* **Identificar conteúdo protegido**. O conteúdo protegido exige autorização para acessar o. Sua interface deve indicar qual conteúdo está protegido e qual conteúdo foi autorizado.  O status da autorização geralmente é indicado com ícones &quot;desbloqueado&quot; e &quot;bloqueado&quot;.
+* **Mostrar que um usuário está autenticado**. Você deve indicar o status de autenticação de um usuário como parte de qualquer meio usado para identificar o conteúdo protegido. Você pode consultar o Ativador de acesso para determinar se o cliente já foi autenticado.
 
 #### 2-C. Integração do verificador de token de mídia {#int-media-token-ver}
 
-Você deve integrar o componente Verificador de token de mídia de autenticação da Adobe Primetime ao seu servidor de mídia.  Assim, seu verificador de token existente pode reconhecer os tokens de mídia de curta duração fornecidos pela autenticação da Adobe Primetime com uma autorização bem-sucedida. O Verificador de token de mídia valida os tokens de mídia como a última etapa de segurança antes de fornecer ao usuário acesso a conteúdo protegido. Você recebe o local do qual deseja baixar o Verificador de token de mídia ao se registrar no Adobe.
+É necessário integrar o componente Verificador de token de mídia de autenticação do Adobe Primetime ao seu servidor de mídia.  Dessa forma, o verificador de token existente pode reconhecer os tokens de mídia de curta duração fornecidos pela autenticação da Adobe Primetime com uma autorização bem-sucedida. O Verificador de token de mídia valida os tokens de mídia como a última etapa de segurança antes de você fornecer ao usuário acesso ao conteúdo protegido. Você recebe o local de onde baixar o Media Token Verifier ao se registrar no Adobe.
 
-### 3. Suporte ao Logout Único {#ssl}
+### 3. Suporte ao logout único {#ssl}
 
-Na maioria dos casos, o reprodutor de mídia é responsável por gerenciar logouts de usuário por meio de uma API de habilitação de acesso simples. Quando você chama logout(), o Ativador de acesso faz o seguinte:
+Na maioria dos casos, o reprodutor de mídia é responsável por lidar com logouts de usuários por meio de uma simples API do Access Enabler. Quando você chama logout(), o Access Enabler faz o seguinte:
 
 * Faz logoff do usuário atual
 * Limpa todas as informações de autenticação e autorização do usuário desconectado
@@ -240,31 +240,31 @@ Na maioria dos casos, o reprodutor de mídia é responsável por gerenciar logou
 
 Se o usuário deixar a máquina ociosa por tempo suficiente para que os tokens expirem, ele ainda poderá retornar à sessão e iniciar o logout com êxito. A autenticação da Adobe Primetime garante que todos os tokens sejam excluídos e notifica o MVPD para excluir sua sessão também.
 
-Quando o logout é iniciado a partir de um site que não está integrado à autenticação da Adobe Primetime, o MVPD pode chamar o serviço de Logout Único de autenticação da Adobe Primetime por meio de um redirecionamento do navegador.
+Quando o logout é iniciado a partir de um site que não está integrado à autenticação da Adobe Primetime, o MVPD pode chamar o serviço de Logout único da autenticação da Adobe Primetime por meio de um redirecionamento do navegador.
 
-## Como entender IDs de usuário {#user-ids}
+## Compreensão das IDs de usuário {#user-ids}
 
-Conceitualmente, cada usuário que inicia um fluxo de direito é associado a uma única ID de usuário exclusiva.  No entanto, durante um fluxo de direito, essa ID de usuário pode ser apresentada de diferentes maneiras, dependendo da API da qual você obtém a ID.
+Conceitualmente, cada usuário que inicia um fluxo de direitos é associado a uma ID de usuário única.  No entanto, durante um fluxo de direitos, essa ID de usuário pode ser apresentada de diferentes maneiras, dependendo da API da qual você obtém a ID.
 
-O sessionGUID no Token de mídia curta é a forma segura do UserID, que está disponível por meio da chamada sendTrackingData() .   Em todas as integrações atuais, esse é um GUID persistente para o usuário ao longo do tempo e dos dispositivos, mas a fonte do GUID começa com o UserID na resposta SAML do MVPD.   No entanto, alguns MVPDs podem mudar de ideia no futuro e começar a enviar um GUID transitório.  Se um Programador quiser garantir que o UserID de origem do MVPD na resposta do AuthN seja persistente, ele deverá providenciar isso em seus contratos com MVPDs.
+O sessionGUID no token de mídia curta é a forma segura da ID de usuário, que está disponível por meio da chamada sendTrackingData().   Em todas as integrações atuais, esse é um GUID persistente para o usuário no tempo e nos dispositivos, mas a origem do GUID começa com o UserID na resposta SAML do MVPD.   No entanto, alguns MVPDs podem mudar de ideia no futuro e começar a enviar um GUID transitório.  Se um Programador quiser garantir que a UserID de origem do MVPD na resposta do AuthN seja persistente, ele deverá providenciar isso em seus contratos com os MVPDs.
 
-Estas são as diferentes maneiras em que a ID de usuário é representada nas APIs de autenticação do Adobe Primetime:
+Estas são as diferentes maneiras de representar a ID de usuário nas APIs de autenticação do Adobe Primetime:
 
-* `sendTrackingData()` Propriedade GUID - Esta é a versão com hash do Adobe do UserID do MVPD.  Ele tem hash para que essa ID de usuário não possa ser rastreada de volta para a fonte do MVPD.   Essa ID é exclusiva e normalmente persistente, mas não pode ser compartilhada com o MVPD para comparar o comportamento de uso específico com o que os MVPDs têm no seu lado.   Não está assinado digitalmente, portanto não é infalível para a prevenção da fraude, mas é suficientemente bom para a análise.  Esse formulário da ID de usuário é fornecido no lado do cliente em todos os eventos gerados pela autenticação da Adobe Primetime no fluxo AuthN/AuthZ.
-* Token de mídia curta `sessionGUID` propriedade - É o mesmo que UserID via `sendTrackingData()`, no entanto, este é assinado digitalmente para proteger sua integridade.  Isso torna esse valor bom o suficiente para rastrear fraudes de uso simultâneo. Ele deve ser processado no lado do servidor após o uso da biblioteca do validador e pode ser analisado em busca de padrões de fraude antes de lançar o fluxo de vídeo para o cliente.  Fazer qualquer uma dessas tarefas depende do Programador.
-* `getMetadata() userID `propriedade - Essa propriedade permitirá que o Adobe exponha a ID de usuário MVPD de origem real ao Programador. Ele será criptografado com a chave pública pelo certificado que temos do Programador, para que não seja exposto de forma clara ao cliente. Isso fornece ao Programador o UserID real do MVPD, então é algo que pode ser usado para vinculação de contas ou investigação de fraude diretamente com o MVPD.
+* `sendTrackingData()` Propriedade GUID - Essa é a versão com hash do Adobe da UserID do MVPD.  Ela é transformada em hash para que essa ID de usuário não possa ser rastreada de volta para a origem no MVPD.   Essa ID é exclusiva e geralmente persistente, mas não pode ser compartilhada com o MVPD para comparar o comportamento de uso específico com o que os MVPDs têm a seu lado.   Ele não é assinado digitalmente, portanto, não é imune para a prevenção de fraudes, mas é bom o suficiente para a análise.  Esse formulário da ID de usuário é fornecido no lado do cliente em todos os eventos que a autenticação do Adobe Primetime gera no fluxo AuthN/AuthZ.
+* Token de mídia curta `sessionGUID` propriedade - É igual à ID do usuário via `sendTrackingData()`No entanto, este é assinado digitalmente para proteger sua integridade.  Isso torna esse valor bom o suficiente para rastrear fraudes de uso simultâneo. Ele deve ser processado no lado do servidor depois de usar nossa biblioteca de validação e pode ser analisado em busca de padrões de fraude antes de lançar o fluxo de vídeo para o cliente.  Fazer qualquer uma dessas tarefas depende do Programador.
+* `getMetadata() userID `propriedade - Essa propriedade permitirá que o Adobe exponha a UserID MVPD de origem real para o Programador. Ele será criptografado com a chave pública do certificado que temos do Programador, para que não seja exposto ao cliente claramente. Isso fornece ao Programador a UserID real do MVPD, de modo que é algo que pode ser usado para vinculação de contas ou investigação de fraude diretamente com o MVPD.
 
 **Em conclusão**
 
-* A ID de usuário do MVPD é uma ID exclusiva persistente, embora não garantida, geralmente **gerado a partir dos MVPDs e passado para o Adobe na autenticação bem-sucedida**. Geralmente é consistente em todas as redes, com algumas exceções.
-* A ID de usuário do MVPD não contém PII e NÃO é um número de conta. Ele não precisa ser exposto em um formulário criptografado, pois validamos com todos os MVPDs que nenhum PII está sendo enviado.
+* A ID de usuário do MVPD é uma ID exclusiva persistente, geralmente, embora não garantida, que é **gerado pelos MVPDs e passado para o Adobe na autenticação bem-sucedida**. Geralmente é consistente em todas as redes, com algumas exceções.
+* A ID de usuário MVPD não contém PII e NÃO é um número de conta. Ela não precisa ser exposta em um formato criptografado, pois validamos com todos os MVPDs que nenhuma PII está sendo enviada.
 
 
-A forma como você usa a ID do usuário depende do caso de uso:
+A forma como você usa a ID de usuário depende do caso de uso:
 
-* Se for necessário para rastreamento/análise, o local mais prático é obtê-la de `sendTrackingData()`.
-* Se precisar deles no lado do servidor para liberação de fluxo, fraude ou dados operacionais, você pode obtê-los do Validador de token de mídia.
-* Se precisar disso para vinculação de contas e fraude mais profunda, verifique sua disponibilidade com o Adobe contact.
+* Se você precisar dele para rastreamento/análise, o local mais prático é obtê-lo de `sendTrackingData()`.
+* Se você precisar dele no lado do servidor para lançamento de transmissão, fraude ou dados operacionais, é possível obtê-lo no Media Token Validator.
+* Se precisar dela para vinculação de contas e fraude mais profunda, verifique a disponibilidade com seu contato do Adobe.
 
 <!--
 >[!RELATEDINFORMATION]

@@ -1,26 +1,25 @@
 ---
-description: A otimização de redirecionamento 302 minimiza o número de 302 respostas de redirecionamento, o que permite que o aplicativo balanceamento de carga com mais eficiência.
-title: Desative ou ative a otimização de redirecionamento 302
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: A otimização de redirecionamento 302 minimiza o número de respostas de redirecionamento 302, o que permite que seu aplicativo faça o balanceamento de carga com mais eficiência.
+title: Desabilitar ou habilitar otimização de redirecionamento 302
+exl-id: b1bdb6d6-b34d-4e0a-8c96-7fd4ce77b5c9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Otimização de redirecionamento HTTP 302 {#http-302-redirect-optimization}
 
-A otimização de redirecionamento 302 minimiza o número de 302 respostas de redirecionamento, o que permite que o aplicativo balanceamento de carga com mais eficiência.
+A otimização de redirecionamento 302 minimiza o número de respostas de redirecionamento 302, o que permite que seu aplicativo faça o balanceamento de carga com mais eficiência.
 
-Se uma solicitação de manifesto principal for redirecionada e a otimização 302 estiver ativada no reprodutor, as solicitações subsequentes feitas para ativos desse manifesto usarão o local de domínio final, o que evita respostas adicionais 302.
+Se uma solicitação de manifesto principal for redirecionada e a otimização 302 estiver habilitada no player, as solicitações subsequentes feitas para ativos desse manifesto usarão o local de domínio final, o que evita respostas 302 adicionais.
 
 Esse recurso é ativado por padrão e você pode alterar essa configuração.
 
-## Desative ou ative a otimização de redirecionamento 302{#disable-or-enable-redirect-optimization}
+## Desabilitar ou habilitar otimização de redirecionamento 302{#disable-or-enable-redirect-optimization}
 
-Use a propriedade `useRedirectedUrl` para ativar ou desativar o redirecionamento 302 (true).
+Use o `useRedirectedUrl` para ativar (true) ou desativar (false) o redirecionamento 302.
 Por exemplo:
 
 ```java
@@ -39,4 +38,3 @@ MediaResource resource = MediaResource.createFromURL(url, resourceMetadata);
 //Load the resource 
 mediaPlayer.replaceCurrentItem(resource);
 ```
-

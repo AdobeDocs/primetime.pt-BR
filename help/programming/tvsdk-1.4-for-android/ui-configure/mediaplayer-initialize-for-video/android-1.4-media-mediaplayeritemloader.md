@@ -1,37 +1,36 @@
 ---
 description: Outra maneira de resolver um recurso de mídia é com MediaPlayerItemLoader. Isso é útil quando você deseja obter informações sobre um fluxo de mídia específico sem instanciar uma instância do MediaPlayer.
 title: Carregar um recurso de mídia usando MediaPlayerItemLoader
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9d129497-8a71-433a-a542-f49be519893b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
-
 # Carregar um recurso de mídia usando MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
 
 Outra maneira de resolver um recurso de mídia é com MediaPlayerItemLoader. Isso é útil quando você deseja obter informações sobre um fluxo de mídia específico sem instanciar uma instância do MediaPlayer.
 
-Por meio da classe `MediaPlayerItemLoader`, é possível trocar um recurso de mídia pelo `MediaPlayerItem` correspondente sem anexar uma exibição a uma instância `MediaPlayer`, o que resultaria na alocação dos recursos de hardware de decodificação de vídeo. O processo de obter a instância `MediaPlayerItem` é assíncrono.
+Por meio da `MediaPlayerItemLoader` classe, você pode trocar um recurso de mídia pela classe correspondente `MediaPlayerItem` sem anexar uma visualização a uma `MediaPlayer` que levaria à alocação dos recursos de hardware de decodificação de vídeo. O processo de obtenção da `MediaPlayerItem` é assíncrona.
 
-1. Implemente a interface de retorno de chamada `MediaPlayerItemLoader.LoaderListener`.
+1. Implementar o `MediaPlayerItemLoader.LoaderListener` interface de retorno de chamada.
 
        Essa interface define dois métodos:
    
    * `LoaderListener.onError` função de retorno de chamada
 
-      O TVSDK usa essa opção para informar ao aplicativo que ocorreu um erro. O TVSDK fornece um código de erro como parâmetros e uma string de descrição que contém informações de diagnóstico.
+      O TVSDK usa isso para informar ao aplicativo que ocorreu um erro. O TVSDK fornece um código de erro como parâmetros e uma string de descrição que contém informações de diagnóstico.
 
    * `LoaderListener.onError` função de retorno de chamada
 
-      O TVSDK usa essa opção para informar ao aplicativo que as informações solicitadas estão disponíveis no formato de uma instância `MediaPlayerItem` transmitida como parâmetro para o retorno de chamada.
+      O TVSDK usa isso para informar ao aplicativo que as informações solicitadas estão disponíveis no formato de um `MediaPlayerItem` que é passada como parâmetro para o retorno de chamada.
 
-1. Registre essa instância no TVSDK, passando-a como um parâmetro para o construtor do `MediaPlayerItemLoader`.
-1. Chame `MediaPlayerItemLoader.load`, transmitindo uma instância de um objeto `MediaResource`.
+1. Registre essa instância no TVSDK passando-a como um parâmetro para o construtor do `MediaPlayerItemLoader`.
+1. Chame `MediaPlayerItemLoader.load`, transmitindo uma instância de um `MediaResource` objeto.
 
-   O URL do objeto `MediaResource` deve apontar para o fluxo para o qual você deseja obter informações. Por exemplo:
+   O URL do `MediaResource` O objeto deve apontar para o fluxo para o qual você deseja obter informações. Por exemplo:
 
    ```java
    // instantiate the listener interface 
@@ -57,4 +56,3 @@ Por meio da classe `MediaPlayerItemLoader`, é possível trocar um recurso de m�
    // load the media resource 
    itemLoader.load(mediaResource); 
    ```
-

@@ -1,29 +1,28 @@
 ---
 description: Você pode implementar seus próprios detectores de oportunidade.
-title: Implementar um detector de oportunidade personalizado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Implementar um detector de oportunidades personalizado
+exl-id: a3f6d6b3-4d5e-49bc-b8de-a1196305bbb4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
-
-# Implementar um detector de oportunidade personalizado{#implement-a-custom-opportunity-detector}
+# Implementar um detector de oportunidades personalizado{#implement-a-custom-opportunity-detector}
 
 Você pode implementar seus próprios detectores de oportunidade.
 
-* Se o gerador de oportunidades for baseado em `TimedMetadata` objetos associados ao fluxo de mídia atual, ele deverá estender o `SpliceOutOpportunityGenerator` ou `TimedMetadataOpportunityGenerator`.
+* Se o gerador de oportunidades estiver baseado em `TimedMetadata` objetos associados ao fluxo de mídia atual, ele deve estender a variável `SpliceOutOpportunityGenerator` ou `TimedMetadataOpportunityGenerator`.
 
-* Se o seu gerador de oportunidades se baseia em dados fora de banda fornecidos por um serviço externo (como um CIS), então ele deve estender o `OpportunityGenerator`.
+* Se o gerador de oportunidades se basear em dados fora de banda fornecidos por um serviço externo (como um CIS), ele deverá estender a `OpportunityGenerator`.
 
-1. Crie o gerador de oportunidade personalizado.
+1. Crie o gerador de oportunidades personalizado.
 
-       Se o seu gerador de oportunidade personalizado se baseia em objetos &quot;TimedMetadata&quot;, estenda &quot;TimedMetadataOpportunityGenerator&quot; e substitua esses métodos:
+       Se o seu gerador de oportunidades personalizado for baseado em objetos &quot;TimedMetadata&quot;, estenda &quot;TimedMetadataOpportunityGenerator&quot; e substitua esses métodos:
    
-   * `doConfigure` - Este método é chamado depois que o item do reprodutor de mídia é criado e fornece o gerador de oportunidades para criar um conjunto inicial de oportunidades, se necessário
-   * `doProcess` - Esse método é chamado sempre que  `TimedMetadata` for detectado novo (por exemplo, para fluxos ao vivo/lineares toda vez que a lista de reprodução/manifesto for atualizada)
+   * `doConfigure` - Esse método é chamado após a criação do item do reprodutor de mídia e fornece ao gerador de oportunidades para criar um conjunto inicial de oportunidades, se necessário
+   * `doProcess` - Este método é chamado sempre que um novo `TimedMetadata` for detectado (por exemplo, para fluxos ao vivo/lineares sempre que a lista de reprodução/manifesto for atualizada)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
@@ -47,7 +46,7 @@ Você pode implementar seus próprios detectores de oportunidade.
    }
    ```
 
-1. Crie a fábrica de conteúdo personalizado, que usa o gerador de oportunidade personalizado.
+1. Crie a fábrica de conteúdo personalizado, que usa o gerador de oportunidades personalizado.
 
    ```
    public class CustomContentFactory extends DefaultContentFactory { 
@@ -65,7 +64,7 @@ Você pode implementar seus próprios detectores de oportunidade.
    }
    ```
 
-1. Registre a fábrica de conteúdo personalizado do fluxo de mídia a ser reproduzido.
+1. Registre a fábrica de conteúdo personalizado para que o fluxo de mídia seja reproduzido.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig = new DefaultMediaPlayerItemConfig(); 
@@ -74,4 +73,3 @@ Você pode implementar seus próprios detectores de oportunidade.
    
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

@@ -1,20 +1,18 @@
 ---
-title: Implementação do registro de domínio
-description: Implementação do registro de domínio
+title: Implementar o registro de domínio
+description: Implementar o registro de domínio
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ba3ff0cd-9462-49b2-8810-d334c9ca861b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
 
+# Implementar o registro de domínio {#implementing-domain-registration}
 
-# Implementando o registro de domínio {#implementing-domain-registration}
+O servidor de licença de implementação de referência demonstra duas variações na lógica de negócios do registro de domínio. Um servidor de domínio típico implementaria apenas um destes workflows:
 
-O servidor de licença de implementação de referência demonstra duas variações na lógica comercial do registro de domínio. Um servidor de domínio típico implementaria apenas um desses workflows:
-
-* Domínios com base em identidade
+* Domínios baseados em identidade
 * Domínios anônimos
-

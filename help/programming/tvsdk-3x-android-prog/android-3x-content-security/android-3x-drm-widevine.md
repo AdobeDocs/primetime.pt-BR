@@ -1,34 +1,33 @@
 ---
-description: Você pode usar os recursos do sistema Primetime Digital Rights Management (DRM) para fornecer acesso seguro ao conteúdo de vídeo. Como alternativa, você pode usar soluções DRM de terceiros como uma alternativa para a solução integrada Adobe.
-title: DRM de widevina
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode usar os recursos do sistema de Digital Rights Management do Primetime (DRM) para fornecer acesso seguro ao conteúdo de vídeo. Como alternativa, você pode usar soluções de DRM de terceiros como uma alternativa para a solução integrada Adobe.
+title: DRM Widevine
+exl-id: 44ab032e-e665-4b63-a08b-54e862894987
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
+# DRM Widevine {#widevine-drm}
 
-# DRM {#widevine-drm} da janela
+Você pode usar os recursos do sistema de Digital Rights Management do Primetime (DRM) para fornecer acesso seguro ao conteúdo de vídeo. Como alternativa, você pode usar soluções de DRM de terceiros como uma alternativa para a solução integrada Adobe.
 
-Você pode usar os recursos do sistema Primetime Digital Rights Management (DRM) para fornecer acesso seguro ao conteúdo de vídeo. Como alternativa, você pode usar soluções DRM de terceiros como uma alternativa para a solução integrada Adobe.
-
-Entre em contato com seu representante de Adobe para obter as informações mais atualizadas sobre a disponibilidade de soluções de DRM de terceiros.
+Entre em contato com o representante da Adobe para obter as informações mais atualizadas sobre a disponibilidade de soluções de DRM de terceiros.
 
 <!--<a id="section_1385440013EF4A9AA45B6AC98919E662"></a>-->
 
-Você pode usar o DRM nativo da Widevine do Android com fluxos HLS CMAF.
+Você pode usar o DRM Widevine nativo do Android com fluxos HLS CMAF.
 
 >[!NOTE]
 >
-> O Esquema de CTR CENC de viúva requer o Android versão 4.4 (Nível de API 19).
+> O esquema CTR do Widevine CENC requer no mínimo a versão 4.4 do Android (Nível 19 da API).
 >
-> O Esquema CBCS de Widevine requer a versão mínima 7.1 do Android (Nível de API 25).
+> O esquema CBCS Widevine exige a versão mínima do Android 7.1 (Nível de API 25).
 
 ## Definir detalhes do servidor de licenças {#license-server-details}
 
-Chame a seguinte API `com.adobe.mediacore.drm.DRMManager` antes de carregar o recurso MediaPlayer:
+Chame o seguinte `com.adobe.mediacore.drm.DRMManager` API antes de carregar o recurso MediaPlayer:
 
 ```java
 public static void setProtectionData(
@@ -39,13 +38,13 @@ Map<String, String> requestProperties)
 
 ### Argumentos {#arguments-license-server}
 
-* `drm` -  `"com.widevine.alpha"` para Widevine.
+* `drm` - `"com.widevine.alpha"` para Widevine.
 
-* `licenseServerURL` - O URL do servidor de licenças do Widevine que recebe solicitações de licença.
+* `licenseServerURL` - O URL do servidor de licenças Widevine que recebe solicitações de licença.
 
-* `requestProperties` - Contém cabeçalhos extras para incluir na solicitação de licença de saída.
+* `requestProperties` - Contém cabeçalhos extras a serem incluídos na solicitação de licença de saída.
 
-Por exemplo, ao usar o conteúdo empacotado para o DRM de exibição, use o seguinte código antes de reproduzir:
+Por exemplo, ao usar o conteúdo empacotado para o ExpressPlay DRM, use o seguinte código antes de reproduzir:
 
 ```java
 DRMManager.setProtectionData(
@@ -57,7 +56,7 @@ DRMManager.setProtectionData(
 
 ## Fornecer retorno de chamada personalizado {#custom-callback}
 
-Chame a seguinte API `com.adobe.mediacore.drm.DRMManager` antes de carregar o recurso MediaPlayer.
+Chame o seguinte `com.adobe.mediacore.drm.DRMManager` antes de carregar o recurso MediaPlayer.
 
 ```java
 public static void setMediaDrmCallback(
@@ -66,22 +65,22 @@ MediaDrmCallback callback)
 
 ### Argumentos {#arguments-custom-callback}
 
-* `callback` - implementação personalizada de MediaDrmCallback para usar em vez do padrão  `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
+* `callback` - implementação personalizada do MediaDrmCallback a ser usada em vez do padrão `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
 
-Para obter detalhes, consulte a [documentação da API do Android TVSDK 3.1](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html).
+Para obter detalhes, consulte [Documentação da API do Android TVSDK 3.11](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html).
 
-## Buscar caixa PSSH do recurso atual do MediaPlayer {#pssh-box-mediaplayer-resoource} carregado
+## Buscar caixa PSSH do recurso MediaPlayer carregado no momento {#pssh-box-mediaplayer-resoource}
 
-Chame a seguinte API `com.adobe.mediacore.drm.DRMManager` , preferencialmente na implementação de retorno de chamada personalizada.
+Chame o seguinte `com.adobe.mediacore.drm.DRMManager` API, de preferência na implementação de retorno de chamada personalizado.
 
 ```java
 public static byte[] getPSSH()
 ```
 
-A API retorna a Caixa de Cabeçalho Específico do Sistema de Proteção associada ao recurso de mídia Widevine carregado.
+A API retorna a caixa de cabeçalho específica do sistema de proteção associada ao recurso de mídia Widevine carregado.
 
-Uma caixa válida está disponível por curta duração (entre a criação da instância DRM e o carregamento de chaves). `MediaDrmCallback callback executeKeyRequest()` Você pode usá-lo para personalizar a busca de chaves de licença.
+Uma caixa válida está disponível por curto período (entre a criação da instância de DRM e o carregamento de chaves). `MediaDrmCallback callback executeKeyRequest()` O pode usá-lo para personalizar a obtenção de chaves de licença.
 
 >[!NOTE]
 >
-> `getPSSH()` A API é compatível somente com uma instância do reprodutor único. Vários players ou o recurso Instant On deve ser inicializado em série para receber a caixa correta.
+> `getPSSH()` A API é compatível somente com instância de player único. Vários players ou o recurso Instant On devem inicializar serialmente para receber a caixa correta.

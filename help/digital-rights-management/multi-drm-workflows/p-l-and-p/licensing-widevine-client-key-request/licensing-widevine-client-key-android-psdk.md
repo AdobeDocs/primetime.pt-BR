@@ -1,20 +1,19 @@
 ---
-description: O código do cliente transmite dados para uma API do Android.
+description: O código do cliente passa dados para uma API Android.
 title: Fluxo de trabalho de solicitação principal no Android PSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3ff52c0d-0789-4fe5-bf9d-f03184bad488
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
-
 # Fluxo de trabalho de solicitação principal no Android PSDK{#key-request-workflow-on-android-psdk}
 
-O código do cliente transmite dados para uma API do Android.
+O código do cliente passa dados para uma API Android.
 
-No Android, seu código de cliente deve transmitir o URL do servidor de licença e os dados de aquisição de licença que o acompanham usando a seguinte API:
+No Android, o código de cliente deve passar o URL do servidor de licenças e os dados de aquisição de licença que o acompanham usando a seguinte API:
 
 ```
 class DRMManager 
@@ -32,9 +31,9 @@ class DRMManager
     }
 ```
 
-Depois de chamar essa API com sucesso, seu código pode iniciar a reprodução do conteúdo da maneira usual. Se você estiver usando o Express, é possível passar o token como parte do URL do servidor de licenças ou como uma propriedade de solicitação e retirar o token do URL do servidor de licenças.
+Depois de chamar essa API com êxito, seu código pode iniciar a reprodução de conteúdo da maneira usual. Se você estiver usando o ExpressPlay, é possível passar o token como parte do URL do servidor de licença ou como uma propriedade de solicitação e retirar o token do URL do servidor de licença.
 
-Alguns dispositivos Android suportam Widevine e PlayReady. Nesses dispositivos, o cliente pode forçar o PSDK a descriptografar o conteúdo usando um DRM específico se o conteúdo tiver vários cabeçalhos de DRM. Isso pode ser feito chamando a seguinte API antes da reprodução:
+Alguns dispositivos Android são compatíveis com Widevine e PlayReady. Nesses dispositivos, o cliente pode forçar o PSDK a descriptografar o conteúdo usando um DRM específico, se o conteúdo tiver vários cabeçalhos DRM. Isso pode ser feito chamando a seguinte API antes da reprodução:
 
 ```
 class MediaPlayer 
@@ -48,4 +47,3 @@ class MediaPlayer
    public void setDRMScheme(String drm) throws MediaPlayerException 
    }
 ```
-

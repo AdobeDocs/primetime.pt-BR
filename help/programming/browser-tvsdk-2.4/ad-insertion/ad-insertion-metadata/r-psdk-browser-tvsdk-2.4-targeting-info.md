@@ -1,20 +1,19 @@
 ---
-description: No Adobe Primetime ad decisioning, você pode direcionar anúncios em pares de valores chave.
+description: No Adobe Primetime ad decisioning, é possível direcionar anúncios em pares de valores chave.
 title: Informações de direcionamento
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 25610f7d-6b14-4ed1-b61c-9e6bf13ba8e6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
 
+# Informações de direcionamento{#targeting-information}
 
-# Informações de definição de metas{#targeting-information}
+No Adobe Primetime ad decisioning, é possível direcionar anúncios em pares de valores chave.
 
-No Adobe Primetime ad decisioning, você pode direcionar anúncios em pares de valores chave.
-
-Para transmitir esses pares de valores chave ao TVSDK do navegador:
+Para passar esses pares de valores principais para o TVSDK do navegador:
 
 ```js
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
@@ -26,4 +25,3 @@ targetingInfo.setValue(key2, value2);
  
 auditudeSettings.targetingInfo = targetingInfo;
 ```
-

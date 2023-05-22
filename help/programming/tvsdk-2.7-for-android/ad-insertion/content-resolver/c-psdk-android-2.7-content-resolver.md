@@ -1,35 +1,34 @@
 ---
-description: Um gerador de oportunidades identifica oportunidades de posicionamento por tags personalizadas em um fluxo, marcadores personalizados do modo de sinalização de anúncios e assim por diante. O gerador de oportunidades envia essas oportunidades de posicionamento para o resolvedor de conteúdo, que personaliza o fluxo de trabalho de inserção de conteúdo/anúncio com base nas propriedades e metadados da oportunidade de posicionamento.
+description: Um gerador de oportunidades identifica oportunidades de posicionamento por tags personalizadas em um fluxo, marcadores personalizados do modo de sinalização e assim por diante. O gerador de oportunidades envia essas oportunidades de posicionamento para o resolvedor de conteúdo, que personaliza o fluxo de trabalho de inserção de conteúdo/anúncio com base nas propriedades e nos metadados da oportunidade de posicionamento.
 title: Personalizar geradores de oportunidades e resolvedores de conteúdo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2ce859c4-6bf6-4ec5-82b1-2bc6a2316fd9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral {#customize-opportunity-generators-and-content-resolvers-overview}
 
-Um gerador de oportunidades identifica oportunidades de posicionamento por tags personalizadas em um fluxo, marcadores personalizados do modo de sinalização de anúncios e assim por diante. O gerador de oportunidades envia essas oportunidades de posicionamento para o resolvedor de conteúdo, que personaliza o fluxo de trabalho de inserção de conteúdo/anúncio com base nas propriedades e metadados da oportunidade de posicionamento.
+Um gerador de oportunidades identifica oportunidades de posicionamento por tags personalizadas em um fluxo, marcadores personalizados do modo de sinalização e assim por diante. O gerador de oportunidades envia essas oportunidades de posicionamento para o resolvedor de conteúdo, que personaliza o fluxo de trabalho de inserção de conteúdo/anúncio com base nas propriedades e nos metadados da oportunidade de posicionamento.
 
 O TVSDK inclui os seguintes geradores de oportunidade padrão:
 
-* `ManifestCuesOpportunityGenerator` gera oportunidades com base nas dicas de anúncio padrão (  `#EXT-X-CUE`).
+* `ManifestCuesOpportunityGenerator` gera oportunidades a partir das dicas de publicidade padrão ( `#EXT-X-CUE`).
 
-* `AdSignalingModeOpportunityGenerator` gera uma oportunidade inicial para o modo de sinalização de anúncio especificado. Isso ignora quaisquer dicas ou informações de metadados cronometrados.
-* `CustomMarkerOpportunityGenerator` gera oportunidades para substituir anúncios em C3 integrados.
-* `AuditudeResolver`O gerador de oportunidades do produz oportunidades quando a resolução de anúncios ociosos está ativada.
+* `AdSignalingModeOpportunityGenerator` gera uma oportunidade inicial para o modo de sinalização de anúncio especificado. Isso ignora qualquer dica ou informação de metadados cronometrados.
+* `CustomMarkerOpportunityGenerator` O gera oportunidades para substituir anúncios C3 elaborados.
+* `AuditudeResolver`O gerador de oportunidades do produz oportunidades quando a resolução de anúncios lento está ativada.
 
 O TVSDK também inclui resolvedores de conteúdo padrão:
 
 * `CustomRangeResolver`
 * `JSONResolver`
-* `AuditudeResolver`, que pode se comunicar com o Primetime ad decisioning.
+* `AuditudeResolver`, que pode se comunicar com o Primetime e o Decisioning.
 
-Você pode substituir os geradores de oportunidade e os resolvedores de conteúdo padrão para personalizar o fluxo de trabalho de publicidade de formas como as seguintes:
+É possível substituir os geradores de oportunidade e resolvedores de conteúdo padrão para personalizar o fluxo de trabalho de publicidade das seguintes maneiras:
 
-* Reconhecer tags personalizadas para inserção de anúncios
-* Crie um provedor de publicidade personalizado.
-* Conteúdo preto.
+* Reconhecer tags personalizadas para inserção de anúncio
+* Crie um provedor de anúncios personalizado.
+* Conteúdo em preto-e-branco.

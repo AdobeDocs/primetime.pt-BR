@@ -1,20 +1,19 @@
 ---
-description: Em algumas implementações de análise, o aplicativo cliente pode desejar fornecer uma posição de indicador de reprodução diferente da posição relatada pelo valor LocalTime do TVSDK do navegador.
-title: Implementar atualizações de hora personalizadas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Em algumas implementações do Analytics, o aplicativo cliente pode querer fornecer uma posição de indicador de reprodução diferente da posição relatada pelo valor TVSDK localTime do navegador.
+title: Implementar atualizações de tempo personalizadas
+exl-id: 4d045c4d-298a-42ae-af61-0463a76bc872
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
+# Implementar atualizações de tempo personalizadas{#implement-custom-time-updates}
 
-# Implementar atualizações de hora personalizadas{#implement-custom-time-updates}
+Em algumas implementações do Analytics, o aplicativo cliente pode querer fornecer uma posição de indicador de reprodução diferente da posição relatada pelo valor TVSDK localTime do navegador.
 
-Em algumas implementações de análise, o aplicativo cliente pode desejar fornecer uma posição de indicador de reprodução diferente da posição relatada pelo valor LocalTime do TVSDK do navegador.
-
-Por exemplo, durante uma reprodução de fluxo linear, o indicador de reprodução de cada programa pode ser fornecido de acordo com a hora de início.
+Por exemplo, durante uma reprodução de fluxo linear, o indicador de reprodução de cada programa pode ser fornecido de acordo com seu tempo de início.
 
 >[!TIP]
 >
@@ -31,4 +30,3 @@ vaMetadata.currentTimeUpdateBlock = function() {
 >[!IMPORTANT]
 >
 >Os valores neste trecho de código são apenas amostras. Você precisa usar valores diferentes para a posição do indicador de reprodução personalizado.
-

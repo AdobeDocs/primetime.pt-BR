@@ -2,18 +2,17 @@
 title: Desativar anúncios precedentes
 description: Desativar anúncios precedentes
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ff52588e-540e-4072-bec0-e531c8cb6fe3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
 
 ---
 
-
 # Desativar anúncios precedentes{#disable-pre-roll-ads}
 
-Para desativar o anúncio antes da exibição, altere os geradores de oportunidade padrão para não fazer a chamada antes da exibição. Os geradores de oportunidade padrão são:
+Para desativar o antes da exibição, altere os geradores de oportunidade padrão para não fazer a chamada antes da exibição. Os geradores de oportunidade padrão são:
 
 ```
 @inheritDoc 
@@ -26,7 +25,7 @@ return result;
 }
 ```
 
-Para desativar o precedente em fluxos ao vivo, altere o acima para incluir somente SpliceOutOpportunityGenerator:
+Para desabilitar a pré-implantação em fluxos ao vivo, altere o acima para incluir somente o SpliceOutOpportunityGenerator:
 
 ```
 @inheritDoc 
@@ -39,4 +38,3 @@ result.push(new SpliceOutOpportunityGenerator());
 return result; 
 }
 ```
-

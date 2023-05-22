@@ -1,20 +1,19 @@
 ---
-description: Você pode substituir o comportamento padrão de como o TVSDK lida com anúncios ao usar marcadores de anúncios personalizados.
-title: Controlar o comportamento da reprodução para busca em marcadores de anúncios personalizados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode substituir o comportamento padrão de como o TVSDK lida com buscas por anúncios ao usar marcadores de anúncios personalizados.
+title: Controlar o comportamento da reprodução para buscar nos marcadores de anúncios personalizados
+exl-id: c148aca6-699d-4b93-9013-9e20bc391687
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
+# Controlar o comportamento da reprodução para buscar nos marcadores de anúncios personalizados {#control-playback-behavior-for-seeking-over-custom-ad-markers}
 
-# Controlar o comportamento da reprodução para busca em marcadores de anúncio personalizados {#control-playback-behavior-for-seeking-over-custom-ad-markers}
+Você pode substituir o comportamento padrão de como o TVSDK lida com buscas por anúncios ao usar marcadores de anúncios personalizados.
 
-Você pode substituir o comportamento padrão de como o TVSDK lida com anúncios ao usar marcadores de anúncios personalizados.
-
-Por padrão, quando um usuário busca seções de anúncios ou seções passadas que resultam do posicionamento de marcadores de anúncios personalizados, o TVSDK ignora os anúncios. Isso pode ser diferente do comportamento de reprodução atual para ad breaks padrão. Você pode definir o TVSDK para reposicionar o indicador de reprodução no início do anúncio personalizado ignorado mais recentemente quando o usuário buscar mais de um ou mais anúncios personalizados.
+Por padrão, quando um usuário busca em ou seções de anúncios anteriores que resultam do posicionamento de marcadores de anúncios personalizados, o TVSDK ignora os anúncios. Isso pode ser diferente do comportamento de reprodução atual para ad breaks padrão. É possível definir o TVSDK para reposicionar o indicador de reprodução no início do anúncio personalizado ignorado mais recentemente quando o usuário procura por um ou mais anúncios personalizados.
 
 1. Chame `CustomRangeMetadata.setAdjustSeekPosition` com `true`.
 
@@ -22,7 +21,7 @@ Por padrão, quando um usuário busca seções de anúncios ou seções passadas
    customRangeMetadata.setAdjustSeekPosition (true);
    ```
 
-1. Use `customRangeMetadata` em `MediaPlayerItemConfig`.
+1. Uso `customRangeMetadata` in `MediaPlayerItemConfig`.
 
    ```java
    // Set customRangeMetadata 

@@ -1,22 +1,21 @@
 ---
 description: Para receber notificações sobre tags no manifesto, é necessário implementar os ouvintes de eventos apropriados.
 title: Adicionar ouvintes para notificações de metadados cronometrados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e38f2a25-3379-4132-a8de-6703dc564ed4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-
 # Adicionar ouvintes para notificações de metadados cronometrados {#add-listeners-for-timed-metadata-notifications}
 
 Para receber notificações sobre tags no manifesto, é necessário implementar os ouvintes de eventos apropriados.
 
-Você pode monitorar metadados programados escutando `onTimedMetadata`, que notificam seu aplicativo de atividade relacionada. Cada vez que uma tag assinada exclusiva é identificada durante a análise do conteúdo, o TVSDK prepara um novo objeto `TimedMetadata` e despacha esse evento. O objeto contém o nome da tag da qual você se inscreveu, o horário local na reprodução em que essa tag será exibida e outros dados.
+Você pode monitorar metadados cronometrados ouvindo `onTimedMetadata`, que notificam sua aplicação sobre atividades relacionadas. Cada vez que uma tag única assinada é identificada durante a análise do conteúdo, o TVSDK prepara uma nova `TimedMetadata` e despacha esse evento. O objeto contém o nome da tag que você assinou, o horário local na reprodução em que essa tag aparecerá e outros dados.
 
-1. Escute os eventos.
+1. Analise os eventos.
 
    ```java
    private final TimedMetadataEventListener timedMetadataEventListener = new TimedMetadataEventListener() { 
@@ -38,4 +37,4 @@ Você pode monitorar metadados programados escutando `onTimedMetadata`, que noti
    }; 
    ```
 
-Os metadados ID3 usam o mesmo ouvinte `onTimedMetadata` para indicar a presença de uma tag ID3. No entanto, isso não deve causar confusão, pois é possível usar a propriedade `TimedMetadata` `type` para diferenciar entre TAG e ID3. Para obter mais informações sobre as tags ID3, consulte [ID3 tags](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md).
+Os metadados de ID3 usam o mesmo `onTimedMetadata` ouvinte para indicar a presença de uma tag ID3. No entanto, isso não deve causar confusão, pois você pode usar o `TimedMetadata` `type` para diferenciar entre TAG e ID3. Para obter mais informações sobre tags ID3, consulte  [Tags ID3](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md).

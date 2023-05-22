@@ -1,35 +1,34 @@
 ---
-description: Você pode habilitar uma experiência de TV de poder participar de um anúncio, em streams ao vivo.
-title: Inserção parcial de ad break
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode habilitar uma experiência tipo TV ao participar no meio de um anúncio, em transmissões ao vivo.
+title: Inserção parcial de Ad break
+exl-id: cb0d2f5f-c760-450e-ab34-fd7639d1190b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
+# Inserção parcial de Ad break {#partial-ad-break-insertion}
 
-# Inserção parcial de ad break {#partial-ad-break-insertion}
+Você pode habilitar uma experiência tipo TV ao participar no meio de um anúncio, em transmissões ao vivo.
 
-Você pode habilitar uma experiência de TV de poder participar de um anúncio, em streams ao vivo.
+O recurso Ad Break parcial permite imitar uma experiência semelhante à de TV, em que, se o cliente iniciar um stream ao vivo dentro de um midroll, ele será iniciado dentro desse midroll. É como mudar para um canal de TV e os comerciais rodam perfeitamente.
 
-O recurso Ad Break parcial permite que você imite uma experiência semelhante a TV, onde, se o cliente iniciar um stream ao vivo dentro de um midroll, ele será iniciado dentro desse midroll. É semelhante a mudar para um canal de TV e os comerciais funcionam perfeitamente.
+Por exemplo, Se um usuário se juntar no meio de um ad break de 90 segundos (três anúncios de 30 segundos), 10 segundos no segundo anúncio (ou seja, a 40 segundos no ad break), o seguinte acontece:
 
-Por exemplo, se um usuário ingressar no meio de um ad break de 90 segundos (três anúncios de 30 segundos), 10 segundos no segundo anúncio (ou seja, 40 segundos após o ad break), o seguinte acontece:
+* O segundo anúncio é reproduzido pelo tempo restante (20 segundos) seguido pelo terceiro anúncio.
+* Os rastreadores de anúncios do anúncio parcialmente reproduzido (o segundo anúncio) não são acionados. Somente o rastreador do terceiro anúncio é acionado.
 
-* O segundo anúncio é reproduzido pela duração restante (20 segundos) seguido do terceiro anúncio.
-* Rastreadores de anúncios para o anúncio parcialmente reproduzido (o segundo anúncio) não são acionados. Somente o rastreador do terceiro anúncio é disparado.
+Esse comportamento não é ativado por padrão. Para habilitar o funcionamento deste recurso no aplicativo, faça o seguinte.
 
-Esse comportamento não é ativado por padrão. Para ativar esse recurso no aplicativo, faça o seguinte:
-
-1. Desative as permissões ativas, usando o método da classe AdvertisingMetadata setEnableLivePreroll.
+1. Desative as pré-rolagens ao vivo, usando o método setEnableLivePreroll da classe AdvertisingMetadata.
 
    ```
    advertisingMetadata.setEnableLivePreroll(String.valueOf(false))
    ```
 
-1. ATIVE a preferência de Inserção parcial de quebra de anúncio. Use o novo método setPartialAdBreakPref na interface MediaPlayer para ativar esse recurso. Use o método getPartialAdBreakPref para encontrar o estado atual dessa preferência.
+1. Ative a preferência para Inserção ad-break parcial. Use o novo método setPartialAdBreakPref na interface do MediaPlayer para ativar esse recurso. Use o método getPartialAdBreakPref para encontrar o estado atual dessa preferência.
 
    ```
    MediaPlayer mediaPlayer = DefaultMediaPlayer.create(getActivity().getApplicationContext()); 
@@ -37,11 +36,11 @@ Esse comportamento não é ativado por padrão. Para ativar esse recurso no apli
           mediaPlayer.setPartialAdBreakPref(true); 
    ```
 
-1. Este recurso exige que você implemente um seletor de política de anúncio personalizado para personalizar o comportamento. Se você ainda não tiver uma implementação personalizada da classe AdvertisingFactory , adicione uma nova implementação AdvertisingFactory . Substitua o método createAdPolicySelector . Este método retorna uma nova instância da implementação do AdPolicySelector.
+1. Esse recurso exige a implementação de um seletor de política de Anúncio personalizado para personalizar o comportamento. Se você ainda não tiver uma implementação personalizada da classe AdvertisingFactory, adicione uma nova implementação AdvertisingFactory. Substitua o método createAdPolicySelector. Este método retorna uma nova instância da implementação do AdPolicySelector.
 
-   Um exemplo de implementação é fornecido abaixo para sua referência. O exemplo de implementação a seguir está disponível para uso no pacote com.adobe.mediacore. No entanto, é simplificado para uma referência fácil e não se recomenda utilizá-la como está.
+   Um exemplo de implementação é fornecido abaixo para sua referência. Os exemplos de implementação a seguir estão disponíveis para uso no pacote com.adobe.mediacore. No entanto, ele é simplificado para facilitar a referência e não é recomendado usá-lo como está.
 
-   1. Exemplo de seletor de política de publicidade
+   1. Exemplo de seletor de política de anúncio
 
       ```
        package com.adobe.mediacore;
@@ -159,7 +158,7 @@ Esse comportamento não é ativado por padrão. Para ativar esse recurso no apli
       } 
       ```
 
-   1. Exemplo de fábrica de publicidade
+   1. Amostra de fábrica de publicidade
 
       ```
       private AdvertisingFactory createPartialAdBreakFactory() { 
@@ -184,7 +183,7 @@ Esse comportamento não é ativado por padrão. Para ativar esse recurso no apli
       } 
       ```
 
-   1. Registre nosso AdvertisingFactory com o reprodutor de mídia
+   1. Registre nossa AdvertisingFactory com o reprodutor de mídia
 
       ```
       AdvertisingFactory advertisingFactory = createPartialAdBreakFactory();  
@@ -203,4 +202,3 @@ Esse comportamento não é ativado por padrão. Para ativar esse recurso no apli
          return new PartialAdBreakAdPolicySelector(mediaPlayerItem); 
       } 
       ```
-

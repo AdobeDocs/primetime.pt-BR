@@ -1,34 +1,32 @@
 ---
-description: O áudio alternativo usa o MediaPlayer para reproduzir um vídeo especificado em uma lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
-title: Acessar trilhas de áudio alternativas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O áudio alternativo usa o MediaPlayer para reproduzir um vídeo especificado em uma lista de reprodução HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
+title: Acessar faixas de áudio alternativas
+exl-id: e5f5b943-4886-4884-80d2-225b5c7e3aed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
+# Acessar faixas de áudio alternativas {#access-alternate-audio-tracks}
 
-# Acessar trilhas de áudio alternativas {#access-alternate-audio-tracks}
+O áudio alternativo usa o MediaPlayer para reproduzir um vídeo especificado em uma lista de reprodução HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
 
-O áudio alternativo usa o MediaPlayer para reproduzir um vídeo especificado em uma lista de reprodução de HLS M3U8 e que pode conter vários fluxos de áudio alternativos.
+1. Aguarde a `MediaPlayer` estar pelo menos no estado `MediaPlayerStatus.PREPARED` status.
+1. Ouça o `MediaPlayerEvent.STATUS_CHANGED` evento com status `MediaPlayerStatus.PREPARED`.
 
-1. Aguarde até que `MediaPlayer` esteja pelo menos no status `MediaPlayerStatus.PREPARED`.
-1. Analise o evento `MediaPlayerEvent.STATUS_CHANGED` com o status `MediaPlayerStatus.PREPARED`.
+   Esta etapa significa que a lista inicial de faixas de áudio está disponível.
 
-   Esta etapa significa que a lista inicial de trilhas de áudio está disponível.
-
-1. Obtenha as faixas de áudio disponíveis da instância `MediaPlayerItem`.
+1. Obter as faixas de áudio disponíveis do `MediaPlayerItem` instância.
 
    ```java
    mediaPlayerItem.getAudioTracks()
    ```
 
-1. (Opcional) Apresente as faixas disponíveis para o usuário.
-1. Defina a faixa de áudio selecionada na instância `MediaPlayerItem`.
+1. (Opcional) Apresente as trilhas disponíveis ao usuário.
+1. Definir a faixa de áudio selecionada no `MediaPlayerItem` instância.
 
    ```java
    mediaPlayerItem.selectAudioTrack(audioTrack)
    ```
-

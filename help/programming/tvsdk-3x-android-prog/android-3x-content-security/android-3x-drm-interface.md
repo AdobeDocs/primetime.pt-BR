@@ -1,28 +1,27 @@
 ---
-description: O elemento principal do lado do cliente da solução DRM do Primetime é o Gerenciador de DRM. O aplicativo de amostra incluído no Android SDK também inclui uma classe DRMHelper que pode ser usada para facilitar a implementação de determinadas operações de DRM.
+description: O elemento principal do lado do cliente da solução de DRM do Primetime é o Gerenciador de DRM. O aplicativo de exemplo incluído com o Android SDK também inclui uma classe DRMHelper que pode ser usada para facilitar a implementação de determinadas operações de DRM.
 title: Visão geral da interface DRM do Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 39e9f2e2-0945-4a89-baee-a2e558f03fd4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral da interface DRM do Primetime {#primetime-drm-interface-overview}
 
-O elemento principal do lado do cliente da solução DRM do Primetime é o Gerenciador de DRM. O aplicativo de amostra incluído no Android SDK também inclui uma classe `DRMHelper` que pode ser usada para facilitar a implementação de determinadas operações de DRM.
+O elemento principal do lado do cliente da solução de DRM do Primetime é o Gerenciador de DRM. O aplicativo de exemplo incluído com o Android SDK também inclui um `DRMHelper` classe que pode ser usada para facilitar a implementação de determinadas operações de DRM.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
 O Primetime DRM fornece um fluxo de trabalho escalável e eficiente para implementar a proteção de conteúdo em aplicativos TVSDK. Você protege e gerencia os direitos ao conteúdo de vídeo criando uma licença para cada arquivo de mídia digital.
 
-Para obter mais informações, consulte o código do reprodutor de amostra DRM incluído no pacote TVSDK.
+Para obter mais informações, consulte o código do reprodutor de amostra do DRM incluído no pacote TVSDK.
 
-Estes são os elementos de API mais importantes para trabalhar com DRM:
+Estes são os elementos mais importantes da API para trabalhar com DRM:
 
-* Uma referência no reprodutor de mídia ao objeto do gerenciador de DRM que implementa o subsistema de DRM:
+* Uma referência no reprodutor de mídia ao objeto gerenciador de DRM que implementa o subsistema de DRM:
 
    ```java
    MediaPlayer.getDRMManager();
@@ -30,10 +29,10 @@ Estes são os elementos de API mais importantes para trabalhar com DRM:
 
    >[!TIP]
    >
-   >Essa API retornará um objeto `DRMManager` válido somente após o acionamento de `MediaPlayerEvent.DRM_METADATA`. Se você chamar `getDRMManager()` antes que esse evento seja acionado, ele poderá retornar NULL.
+   >Essa API retornará um válido `DRMManager` somente após o `MediaPlayerEvent.DRM_METADATA` foi acionado. Se você chamar `getDRMManager()` antes de esse evento ser disparado, ele pode retornar NULL.
 
-* A classe auxiliar `DRMHelper`, que é útil ao implementar workflows de DRM.
-* Um método de carregador de metadados `DRMHelper`, que carrega metadados DRM quando está localizado em um URL separado da mídia.
+* A variável `DRMHelper` classe auxiliar, que é útil ao implementar workflows DRM.
+* A `DRMHelper` método do carregador de metadados, que carrega metadados de DRM quando está localizado em um URL separado da mídia.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -41,7 +40,7 @@ Estes são os elementos de API mais importantes para trabalhar com DRM:
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* Um método `DRMHelper` para verificar os metadados de DRM e determinar se a autenticação é necessária.
+* A `DRMHelper` para verificar os metadados de DRM e determinar se a autenticação é necessária.
 
    ```java
    /** 
@@ -80,6 +79,6 @@ Estes são os elementos de API mais importantes para trabalhar com DRM:
    final DRMAuthenticationListener authenticationListener);
    ```
 
-* Eventos que notificam seu aplicativo sobre várias atividades e status do DRM.
+* Eventos que notificam seu aplicativo sobre várias atividades e status de DRM.
 
-Para obter mais informações sobre DRM, consulte a [documentação de DRM](https://helpx.adobe.com/primetime/user-guide.html).
+Para obter mais informações sobre DRM, consulte a [Documentação do DRM](https://helpx.adobe.com/primetime/user-guide.html).

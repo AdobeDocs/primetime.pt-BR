@@ -1,27 +1,25 @@
 ---
-description: Ocasionalmente, haverá momentos em que o conteúdo não poderá ser reproduzido. Qualquer número de situações pode causar isso, incluindo erros na pilha de rede do navegador, na camada de transporte, no sistema operacional, no tempo de execução do Flash Player ou no sistema de DRM do Primetime.
-title: Visão geral dos erros de teste
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ocasionalmente, haverá momentos em que o conteúdo não poderá ser reproduzido. Qualquer número de situações pode causar isso, incluindo erros na pilha de rede do navegador, na camada de transporte, no sistema operacional, no tempo de execução do Flash Player ou no sistema DRM do Primetime.
+title: Visão geral de erros de triagem
+exl-id: fe94d0a4-4f3c-4b0e-b830-a7a83bac1e85
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
 
 ---
 
+# Erros de triagem {#triaging-errors}
 
-# Teste de erros {#triaging-errors}
+Ocasionalmente, haverá momentos em que o conteúdo não poderá ser reproduzido. Qualquer número de situações pode causar isso, incluindo erros na pilha de rede do navegador, na camada de transporte, no sistema operacional, no tempo de execução do Flash Player ou no sistema DRM do Primetime.
 
-Ocasionalmente, haverá momentos em que o conteúdo não poderá ser reproduzido. Qualquer número de situações pode causar isso, incluindo erros na pilha de rede do navegador, na camada de transporte, no sistema operacional, no tempo de execução do Flash Player ou no sistema de DRM do Primetime.
+A primeira etapa de diagnóstico é determinar se o problema se manifesta sem a criptografia DRM introduzida na equação. Tente empacotar o conteúdo, mas instrua o empacotador a não criptografar o conteúdo. Se o problema ainda existir, ele provavelmente se trata de um problema de codificação ou empacotamento do conteúdo, ou de algum lugar na infraestrutura de rede. Se o problema desaparecer quando o conteúdo for empacotado sem criptografia, a falha na reprodução provavelmente se deve a um problema de DRM, e você deve participar da triagem cliente/servidor.
 
-A primeira etapa de diagnóstico é determinar se o problema se manifesta sem a criptografia de DRM introduzida na equação. Tente empacotar o conteúdo, mas instrua o empacotador a não criptografar o conteúdo. Se o problema ainda existir, é provável que haja um problema na codificação ou embalagem do conteúdo ou em algum lugar na infraestrutura de rede. Se o problema desaparecer quando o conteúdo for empacotado sem criptografia, a falha da reprodução provavelmente se deve a um problema de DRM e você deve participar do armazenamento de dados do cliente/servidor.
+O Primetime DRM (fora do Primetime Cloud DRM) está no mercado há vários anos. Dessa forma, há uma grande variedade de informações de origem comunitária sobre solução de problemas e configuração do Primetime DRM. O Adobe forneceu um fórum para que usuários do Primetime DRM (anteriormente chamado de Adobe Access) agregassem e compartilhassem problemas e resoluções. Para determinar se o problema foi discutido anteriormente, verifique: [https://forums.adobe.com/community/adobe_access](https://forums.adobe.com/community/adobe_access)
 
-O DRM do Primetime (fora do DRM da Primetime Cloud) está no mercado há vários anos. Dessa forma, há uma grande variedade de informações fornecidas pela comunidade sobre solução de problemas e configuração do DRM do Primetime. O Adobe forneceu um fórum para usuários do Primetime DRM (antigo Adobe Access) para agregar e compartilhar problemas e resoluções. Para determinar se seu problema foi discutido anteriormente, verifique: [https://forums.adobe.com/community/adobe_access](https://forums.adobe.com/community/adobe_access)
+## Triagem de erros do cliente {#section_D0EBAEB0C27F4B01BD44124DEE62F6BA}
 
-## Acionamento do erro do cliente {#section_D0EBAEB0C27F4B01BD44124DEE62F6BA}
+Se o conteúdo não for reproduzido, examine o painel do lado direito dos Players de vídeo de exemplo, que registrarão qualquer `DRMErrorEvent` que ocorre. Se houver um evento de erro, ele se correlacionará com um dos Erros de tempo de execução do Flash Player:
 
-Se o conteúdo não for reproduzido, examine o painel do lado direito dos Players de vídeo de amostra, que registrará qualquer `DRMErrorEvent` que ocorrer. Se houver um evento de erro, ele estará correlacionado a um dos Erros de tempo de execução do Flash Player :
-
-* [Referência](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages) de mensagem de erro do cliente DRM; ou
-* [Erros](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html)  de tempo de execução do Flash AS3 (problemas de DRM começam em 3300)
-
+* [Referência de mensagem de erro de cliente DRM](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages); ou
+* [Erros de Tempo de Execução do Flash AS3](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html) (Problemas de DRM começam em 3300)

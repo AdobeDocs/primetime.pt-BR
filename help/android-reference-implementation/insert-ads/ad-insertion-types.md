@@ -1,44 +1,43 @@
 ---
-description: O TVSDK atualmente oferece suporte incorporado a metadados do provedor de anúncios para anúncios TVSDK, quebras de anúncios diretos e marcadores de anúncios personalizados.
+description: Atualmente, o TVSDK fornece suporte a metadados de provedor de anúncios integrados para anúncios TVSDK, ad breaks diretos e marcadores de anúncios personalizados.
 title: Tipos de inserção de anúncio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1634ff41-8a8f-4f34-9685-149ec58518ba
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-
 # Tipos de inserção de anúncio {#ad-insertion-types}
 
-O TVSDK atualmente oferece suporte incorporado a metadados do provedor de anúncios para anúncios TVSDK, quebras de anúncios diretos e marcadores de anúncios personalizados.
+Atualmente, o TVSDK fornece suporte a metadados de provedor de anúncios integrados para anúncios TVSDK, ad breaks diretos e marcadores de anúncios personalizados.
 
-Ele suporta os seguintes tipos de fluxos de trabalho de inserção de anúncio para VOD e conteúdo ativo/linear.
+Ela é compatível com os seguintes tipos de fluxos de trabalho de inserção de anúncios para VOD e conteúdo dinâmico/linear.
 
 <table id="table_1C3A659BDDB7453CA953A103045FCA01"> 
  <thead> 
   <tr> 
    <th colname="col1" class="entry"> Tipo de inserção </th> 
-   <th colname="col2" class="entry"> Suportado em... </th> 
+   <th colname="col2" class="entry"> Compatível com... </th> 
    <th colname="col3" class="entry"> Descrição </th> 
   </tr>
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> Anúncios de decisão do Adobe Primetime ad </td> 
+   <td colname="col1"> Anúncios do Adobe Primetime Ad Decisioning </td> 
    <td colname="col2">VOD <p>Ao vivo </p> <p>Linear </p> </td> 
-   <td colname="col3">A implementação de referência fornece informações <span class="codeph"> AuditudeMetadata</span> para se conectar ao servidor para decisão de anúncio do Primetime (anteriormente conhecido como Auditude), com base nas informações fornecidas na porção de anúncios do Primetime</a> do arquivo de configuração JSON</a>. </td> 
+   <td colname="col3">A implementação de referência fornece <span class="codeph"> AuditudeMetadata</span> informações para se conectar ao servidor para o Primetime ad decisioning (anteriormente conhecido como Auditude), com base nas informações fornecidas na parte de anúncios do Primetime</a> do arquivo de configuração JSON</a>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Quebras de anúncios diretos </td> 
+   <td colname="col1"> Intervalos de publicidade diretos </td> 
    <td colname="col2"> VOD </td> 
-   <td colname="col3">Você deve fornecer URLs de publicidade no arquivo JSON de entrada. Quando o TVSDK tenta resolver um anúncio, ele chama o resolvedor de ad break direto e resolve os anúncios com base nas informações de ad break direto fornecidas no arquivo de configuração JSON</a>. </td> 
+   <td colname="col3">Você deve fornecer URLs de anúncios no arquivo JSON de entrada. Quando o TVSDK tenta resolver um anúncio, ele chama o resolvedor direto de ad break e resolve os anúncios com base nas informações diretas de ad breaks fornecidas no arquivo de configuração JSON</a>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Marcadores de anúncio personalizados </td> 
+   <td colname="col1"> Marcadores de publicidade personalizados </td> 
    <td colname="col2"> VOD </td> 
-   <td colname="col3">Os marcadores de anúncio personalizados são úteis quando o fluxo de vídeo contém conteúdo principal e anúncios, mas não inclui informações relacionadas às posições e tempo do anúncio. Se as informações de posicionamento do anúncio forem obtidas de outra maneira, por exemplo, por meio de um CMS externo, é possível definir marcadores de anúncio personalizados e transmiti-los para a linha do tempo do player. <p>Para configurar um reprodutor para inserção de anúncio, você precisa transmitir metadados de anúncio na seção Metadados de anúncio personalizados do arquivo de configuração JSON</a>, que tem uma implementação de provedor de anúncio de suporte na implementação de referência. </p> </td>
+   <td colname="col3">Os marcadores de anúncios personalizados são úteis quando o fluxo de vídeo contém conteúdo principal e anúncios, mas não inclui informações relacionadas às posições e ao tempo do anúncio. Se as informações de posicionamento do anúncio forem obtidas de outra maneira, por exemplo, por meio de um CMS externo, será possível definir marcadores de anúncio personalizados e transmiti-los à linha do tempo do reprodutor. <p>Para configurar um reprodutor para inserção de anúncio, é necessário transmitir metadados de anúncio na seção metadados de anúncio personalizados do arquivo de configuração JSON</a>, que tem uma implementação de provedor de anúncios de suporte na implementação de referência. </p> </td>
   </tr>
  </tbody>
 </table>

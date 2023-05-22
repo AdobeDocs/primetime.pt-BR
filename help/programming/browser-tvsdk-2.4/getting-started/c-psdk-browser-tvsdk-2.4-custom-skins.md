@@ -1,18 +1,17 @@
 ---
-description: Para usar as capas personalizadas, você deve gravar a personalização semelhante ao default-video-controls.css e consultar essa nova personalização no reprodutor.
+description: Para usar as capas personalizadas, você deve gravar a personalização de forma semelhante a default-video-controls.css e consultar essa nova personalização no reprodutor.
 title: Capas personalizadas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4d627545-942d-4883-a010-afddcffb8dd5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-
 # Capas personalizadas{#custom-skins}
 
-Para usar as capas personalizadas, você deve gravar a personalização semelhante ao default-video-controls.css e consultar essa nova personalização no reprodutor.
+Para usar as capas personalizadas, você deve gravar a personalização de forma semelhante a default-video-controls.css e consultar essa nova personalização no reprodutor.
 
 Por exemplo, você pode usar uma das seguintes opções:
 
@@ -21,31 +20,30 @@ Por exemplo, você pode usar uma das seguintes opções:
 
 Você pode fazer os seguintes tipos de alterações:
 
-* Cor do primeiro plano dos botões e do texto
+* Cor de primeiro plano dos botões e texto
 
-   Todos os controles que têm um primeiro plano estão usando a classe `vid-skin-fgcolor`. Para alterar o primeiro plano de todos os controles, percorra todos os elementos com a classe `vid-skin-fgcolor` e especifique a cor desejada.
-* Cor de fundo dos botões e do texto
+   Todos os controles que têm um primeiro plano estão usando o `vid-skin-fgcolor` classe. Para alterar o primeiro plano de todos os controles, percorra todos os elementos com o `vid-skin-fgcolor` e especifique a cor desejada.
+* Cor de fundo dos botões e texto
 
-   Todos os controles que têm um primeiro plano estão usando a classe `vid-skin-bgcolor`. Para alterar o primeiro plano de todos os controles, percorra todos os elementos com a classe `vid-skin-bgcolor` e especifique a cor desejada.
-* Forma do indicador de reprodução
+   Todos os controles com um primeiro plano estão usando o `vid-skin-bgcolor` classe. Para alterar o primeiro plano de todos os controles, repita todos os elementos com `vid-skin-bgcolor` e especifique a cor desejada.
+* Forma da cabeça de jogo
 
-   O indicador de reprodução pode ser quadrado ou redondo. Para alterar o indicador de reprodução, adicione a classe `square` ou `round` ao elemento `playhead`.
-* Estilo dos giradores de buffering
+   A cabeça de jogo pode ser quadrada ou redonda. Para alterar o indicador de reprodução, adicione `square` ou `round` classe para `playhead` elemento.
+* Estilo dos spinners de buffering
 
-   O reprodutor de referência fornece os seguintes estilos de rotação que podem ser exibidos como conteúdo de buffer do reprodutor:
+   O reprodutor de referência fornece os seguintes estilos de spinners que podem ser exibidos como conteúdo de buffers do reprodutor:
 
    * Texto de sobreposição ( `overlay-text`)
-   * Ponteiro retangular ( `spinner`)
+   * Indicador de rotação retangular ( `spinner`)
    * Sinal ( `signal`)
    * Barras verticais ( `vertical`)
 
       >[!TIP]
       >
-      >Para usar qualquer um dos giradores de buffering, você deve adicionar a classe no elemento de sobreposição de buffering. Por exemplo, para usar `overlay-text`, adicione as seguintes linhas no arquivo `BufferOverlay.js`:
+      >Para usar qualquer um dos spinners de buffering, você deve adicionar a classe no elemento buffering-overlay. Por exemplo, para usar `overlay-text`, adicione as seguintes linhas no `BufferOverlay.js` arquivo:
       >
       >
       ```js
       >var overlay = document.getElementById("buffering-overlay"); 
       >overlay.classList.add ("spinner");
       >```
-

@@ -1,73 +1,73 @@
 ---
 title: Requisitos mínimos do sistema
 description: Requisitos mínimos do sistema
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 57b21e2a-abd7-4b4b-85f1-25584a850e40
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
 
 ---
 
-
 # Requisitos mínimos do sistema {#minimum-system-requirements}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 
 ## Visão geral {#overview}
 
-Este documento apresenta os requisitos atuais de software e hardware para implementar integrações de Autenticação Adobe Primetime em plataformas compatíveis. Todos os navegadores Web/móveis e sistemas operacionais compatíveis listados abaixo se beneficiarão do suporte completo da equipe de Autenticação da Adobe Primetime, vinculada aos SLAs acordados.
+Este documento apresenta os requisitos atuais de software e hardware para implementar as integrações da Autenticação Adobe Primetime nas plataformas compatíveis. Todos os navegadores e sistemas operacionais da Web/dispositivos móveis compatíveis listados abaixo se beneficiarão do suporte total da equipe de autenticação da Adobe Primetime, vinculados aos SLAs acordados.
 
-Enquanto equipe de Autenticação da Adobe Primetime, incentivamos o uso das versões estáveis mais recentes dos navegadores e sistemas operacionais; reconhecemos também a existência de plataformas e navegadores incompatíveis/antigos que estão em uso no momento. Esses dispositivos desatualizados ainda podem funcionar sem problemas, no entanto, estarão mais propensos a erros.
+Enquanto a equipe de autenticação da Adobe Primetime incentivamos o uso das versões estáveis mais recentes dos navegadores e sistemas operacionais; também reconhecemos a existência de plataformas e navegadores incompatíveis/antigos que estão em uso no momento. Esses dispositivos desatualizados ainda podem funcionar sem problemas, no entanto, estarão mais propensos a erros.
 
-A abordagem inicial para atenuar qualquer problema que apareça nessas plataformas desatualizadas deve ser a atualização para as versões mais recentes; pode ser a versão do SO, do navegador ou a versão do aplicativo instalado.
+A abordagem inicial para atenuar quaisquer problemas que apareçam nessas plataformas desatualizadas deve ser a atualização para as versões mais recentes; pode ser a versão do SO, a versão do navegador ou a versão do aplicativo instalado.
 
-Qualquer problema que apareça nessas plataformas será resolvido da melhor maneira pela equipe de autenticação da Adobe Primetime. 
+Quaisquer problemas que aparecerem nessas plataformas serão tratados como uma base de melhor esforço pela equipe de autenticação da Adobe Primetime. 
 
-A Adobe Primetime incentiva nossos parceiros a considerar a atualização para as versões mais recentes para se beneficiarem do suporte completo da Adobe, além de possíveis problemas de desempenho, eficiência e melhorias de segurança. 
-
-
-## Requisitos do navegador e sistema operacional {#browser-OS-system-requirements}
+A Adobe Primetime incentiva nossos clientes e parceiros a considerarem a atualização para as versões mais recentes para se beneficiarem do suporte completo do Adobe em quaisquer problemas em potencial, além de melhorias de desempenho, eficiência e segurança. 
 
 
-| Navegador Web/móvel (†) | Versões suportadas |
+## Requisitos de sistema operacional e navegador {#browser-OS-system-requirements}
+
+
+| Navegador da Web/móvel (†) | Versões suportadas |
 |---|---|
-| Google Chrome | **70º** ou posterior |
-| Mozilla Firefox | **57º** ou posterior |
-| Apple Safari | **14.** ou posterior |
+| Google Chrome | **70** ou posterior |
+| Mozilla Firefox | **57** ou posterior |
+| Apple Safari | **14** ou posterior |
 | Microsoft Edge | **100** ou posterior |
 
-(†) O Adobe recomenda não usar o modo privado ou incógnito.
+(†) O Adobe recomenda não usar o modo privado ou anônimo.
 
 | Sistema operacional | Versões suportadas |
 |---|---|
-| *Android* | **7,0** (Nougat) ou posterior |
-| *iOS* | **14.** ou posterior |
-| *iPadOS* | **14.** ou posterior |
-| *tvOS* | **14.** ou posterior |
-| *Fire OS* | **5 (Android 5.1)** ou posterior |
-| *Mac OS* | **10,13** ou posterior |
-| *Microsoft Windows* | **10º** ou posterior |
+| *Android* | **7.0** (Nougat) ou posterior |
+| *iOS* | **14** ou posterior |
+| *iPadOS* | **14** ou posterior |
+| *tvOS* | **14** ou posterior |
+| *Acionar SO* | **5 (Android 5.1)** ou posterior |
+| *SO MAC* | **10.13** ou posterior |
+| *Microsoft Windows* | **10** ou posterior |
 
 
 
 
 >[!NOTE]
 >
->Cookies de terceiros - Os fluxos de direito da Autenticação do Adobe Primetime podem falhar quando cookies de terceiros estão desativados.  Esse problema só é exibido quando as configurações do navegador são modificadas. Para todos os navegadores compatíveis, a Autenticação do Primetime deve ser funcional com as configurações padrão.\
+>Cookies de terceiros - Os fluxos de direito de autenticação da Adobe Primetime podem falhar quando os cookies de terceiros são desativados.  Esse problema entra em ação somente quando as configurações do navegador são modificadas. Para todos os navegadores compatíveis, a Autenticação do Primetime deve funcionar com as configurações padrão.\
  
 
-## Requisitos do dispositivo para implementações sem cliente (REST) {#general_clientless_reqs}
+## Requisitos de dispositivo para implementações sem cliente (REST) {#general_clientless_reqs}
 
  
-Qualquer dispositivo que consumirá serviços de autenticação da Adobe Primetime por meio de implementações sem cliente **deve ser capaz de**:
+Qualquer dispositivo que consumirá os serviços de autenticação da Adobe Primetime por meio de implementações sem cliente **deve poder**:
 
-* Forneça uma ID de dispositivo com hash exclusiva. Se o dispositivo não fornecer uma ID de dispositivo com hash exclusiva, ele deverá ser capaz de manter uma ID exclusiva fornecida pela Autenticação Adobe Primetime. O dispositivo deve ser capaz de manter a ID exclusiva permanentemente em seu armazenamento local e fornecer a ID exclusiva como a ID do dispositivo ao fazer chamadas para as APIs de autenticação da Adobe Primetime.
+* Forneça uma ID de dispositivo exclusiva com hash. Se o dispositivo não fornecer uma ID de dispositivo com hash exclusiva, ele deverá ser capaz de manter uma ID exclusiva fornecida pela Autenticação Adobe Primetime. O dispositivo deve ser capaz de manter o identificador exclusivo permanentemente em seu armazenamento local e fornecer o identificador exclusivo como o identificador do dispositivo ao fazer chamadas para as APIs de autenticação da Adobe Primetime.
 * Gerar assinaturas digitais usando o algoritmo HMAC-SHA1
 * Definir cabeçalhos HTTP arbitrários
 * Consumir serviços Web RESTful
 * Analisar formatos de dados XML e JSON
 * Enviar tráfego usando HTTPS
-* Gerenciar códigos de erro HTTP
+* Lidar com códigos de erro HTTP

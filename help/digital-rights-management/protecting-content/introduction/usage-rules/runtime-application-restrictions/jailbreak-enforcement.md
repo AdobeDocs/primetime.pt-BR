@@ -1,21 +1,19 @@
 ---
-title: Aplicação de quebra de falha (requer Adobe Primetime DRM)
-description: Aplicação de quebra de falha (requer Adobe Primetime DRM)
+title: Imposição de Jailbreak (requer Adobe Primetime DRM)
+description: Imposição de Jailbreak (requer Adobe Primetime DRM)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ae255709-7b2f-4cab-b249-a6918bef28f4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
+# Imposição de Jailbreak (requer Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-# Aplicação de quebra de falha (requer Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
-
-Em plataformas que oferecem suporte à detecção de quebra de poste, como dispositivos móveis Android e iOS, é possível habilitar a imposição de quebra de postagem para impedir a reprodução do conteúdo se [!DNL jailbreak/root] tiver sido detectado no dispositivo.
+Em plataformas que oferecem suporte à detecção de jailbreak, como dispositivos móveis Android e iOS, você pode ativar a aplicação de jailbreak para impedir a reprodução do conteúdo, se [!DNL jailbreak/root] foi detectado no dispositivo.
 
 >[!NOTE]
 >
->Essa regra de uso é compatível com o cliente DRM do Adobe Primetime versão 4.0 ou posterior. No entanto, não tem efeito em plataformas que não suportam a detecção de quebra-maré. O comportamento em clientes mais antigos depende da versão mínima do cliente compatível com o servidor de licenças.
-
+>Esta regra de uso é compatível com o cliente Adobe Primetime DRM versão 4.0 ou posterior. No entanto, não tem efeito em plataformas que não oferecem suporte à detecção de jailbreak. O comportamento em clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças.

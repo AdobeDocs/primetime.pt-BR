@@ -1,25 +1,24 @@
 ---
-title: Otimizar tempos de start de vídeo
-description: Otimização dos tempos de start de vídeo
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+title: Otimizar os tempos de inicialização do vídeo
+description: Otimização dos tempos de inicialização do vídeo
+exl-id: 5a89c774-0fed-4378-9cf8-98c4c843ae0d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
+# Otimizar a visão geral dos tempos de inicialização do vídeo {#optimize-video-start-up-times}
 
-# Otimizar a visão geral dos tempos de start do vídeo {#optimize-video-start-up-times}
+O Ad Insertion do Primetime fornece vários recursos para otimizar o tempo de inicialização do vídeo, como armazenamento em cache e regras para otimização de rota/protocolo. Estas são algumas outras recomendações para garantir tempos mais rápidos de inicialização de vídeo ao usar o Ad Insertion do Primetime:
 
-O Primetime Ad Insertion oferece vários recursos para otimizar o tempo de start do vídeo, como cache e regras para otimização de roteamento/protocolo. Estas são algumas outras recomendações para garantir tempos de start de vídeo mais rápidos ao usar o Primetime Ad Insertion:
+* Veicular todos os anúncios e conteúdo de Redes de entrega de conteúdo (CDNs)
 
-* Servir todos os anúncios e conteúdo das redes de Delivery de conteúdo (CDNs)
+* Reduza ou remova handshakes de TLS entre o Ad Insertion do Primetime e os CDNs. Para obter mais informações, consulte [Otimizar rotas e protocolos](optimize-routes-protocols.md).
 
-* Reduza ou remova os apertos de mão TLS entre o Primetime Ad Insertion e as CDNs. Para obter mais informações, consulte [Otimizar rotas e protocolos](optimize-routes-protocols.md).
+* Veicular fragmentos de anúncio e conteúdo da mesma CDN
 
-* Fornecer fragmentos de anúncio e conteúdo do mesmo CDN
+* Inserir cabeçalhos de controle de cache para conteúdo ativo/VOD e manifestos
 
-* Inserir cabeçalhos de controle de cache para conteúdo ao vivo/VOD e manifestos
-
-* Reduza ou remova os provedores de anúncios ou as criações de anúncios que demoram a responder
+* Reduzir ou remover provedores de anúncios ou criadores de anúncios lentos na resposta

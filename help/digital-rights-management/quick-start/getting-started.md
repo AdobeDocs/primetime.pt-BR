@@ -2,23 +2,22 @@
 title: Introdução
 description: Introdução
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d29d141e-913c-4b9d-979c-91c486414071
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
 
 ---
 
-
 # Introdução {#getting-started}
 
-Este documento fornece as etapas para uma configuração e implantação rápidas de um ecossistema Adobe Primetime DRM que usa o Download Progressivo para distribuir conteúdo, e o Servidor DRM Primetime para transmissão protegida para distribuição de licenças. Detalhes adicionais sobre cada etapa são fornecidos nos guias a seguir:
+Este documento fornece as etapas para uma configuração e implantação rápidas de um ecossistema de DRM do Adobe Primetime que usa o Download progressivo para distribuir conteúdo, e do Servidor DRM do Primetime para transmissão protegida para distribuição de licença. Detalhes adicionais sobre cada etapa são fornecidos nos seguintes guias:
 
 * *Uso do servidor DRM Primetime para proteção de conteúdo*
-* *Uso do servidor DRM do Primetime para transmissão protegida*
+* *Uso do servidor DRM Primetime para transmissão protegida*
 
-O Primetime DRM Server for Protected Streaming é um servidor de funcionalidade mínima que não inclui código fonte. Para um servidor modificável com fonte Java completa, consulte o guia *Using the Primetime DRM Reference Implementations*. Se você configurar um servidor de Licença de Referência, que substituirá a etapa *Configurar e implantar o Primetime DRM Server for Protected Streaming (License Server)*.
+O servidor DRM do Primetime para transmissão protegida é um servidor com funcionalidade mínima que não inclui código-fonte. Para um servidor modificável com código-fonte Java completo, consulte *Uso das implementações de referência de DRM do Primetime* guia. Se você configurar um servidor de Licença de referência, isso substituirá o *Configurar e implantar o servidor DRM Primetime para transmissão protegida (Servidor de licenças)* etapa.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -36,18 +35,18 @@ Antes de começar, conclua as seguintes tarefas:
 
 ## Obter certificados {#obtain-certificates}
 
-Depois que o software SDK for entregue, o Administrador de certificado da empresa designado receberá um convite para concluir o processo de registro de certificado DRM da Adobe Primetime. Para obter mais informações, consulte o *Guia de Registro de Certificado DRM Primetime*.
+Depois que o software SDK for entregue, o Administrador de Certificados da Empresa designado receberá um convite para concluir o processo de registro do Registro de Certificados DRM da Adobe Primetime. Para obter mais informações, consulte *Guia de inscrição de certificado DRM do Primetime*.
 
-1. O Administrador nomeia pelo menos um indivíduo para agir como o Requerente do Certificado.
-1. O Solicitante de Certificado gera uma chave privada e um CSR.
-1. O Requerente envia uma solicitação de certificado.
-1. O Administrador da Empresa aprova a solicitação.
-1. O Administrador de Certificados do Adobe confirma o envio.
-1. O Requester recebe o certificado, vincula o certificado à chave privada e implanta o certificado. conforme descrito em .
+1. O Administrador nomeia pelo menos uma pessoa para atuar como Solicitante de certificado.
+1. O Solicitante do certificado gera uma chave privada e uma CSR.
+1. O Solicitante envia uma solicitação de certificado.
+1. O Administrador da empresa aprova a solicitação.
+1. O Administrador do Certificado de Adobe confirma o envio.
+1. O Solicitante recebe o certificado, vincula o certificado à chave privada e implanta o certificado. conforme descrito em .
 
-   Para obter mais informações sobre a implantação do certificado, consulte o guia *Implantação do servidor DRM Adobe Primetime para transmissão protegida* .
+   Para obter mais informações sobre a implantação do certificado, consulte a *Implantação do servidor DRM do Adobe Primetime para transmissão protegida* guia.
 1. As etapas 3 a 6 devem ser concluídas para cada tipo de certificado.
 
-   Para a versão Primetime DRM Production (Produção de DRM Primetime), o Solicitante deve fazer solicitações separadas para os certificados License Server, Packaging e Transport, que são válidos por dois anos.
+   Para a versão de Produção DRM do Primetime, o Solicitante deve fazer solicitações separadas para os certificados Servidor de licenças, Empacotamento e Transporte, que são válidos por dois anos.
 
-   Os clientes que usam as versões de Avaliação ou Avaliação de DRM do Primetime precisam apenas de um certificado válido por 1 ano/90 dias, respectivamente.
+   Os clientes que usam a Avaliação DRM do Primetime ou as versões de avaliação precisam apenas de um certificado válido por 1 ano/90 dias, respectivamente.

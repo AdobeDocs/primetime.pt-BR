@@ -1,23 +1,23 @@
 ---
 title: Identificação de recursos protegidos
 description: Identificação de recursos protegidos
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
 
 ---
 
-
 # Identificação de recursos protegidos {#identifying-protected-resources}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 ## Visão geral {#overview}
 
-Cada pedido de autorização (ou pedido para verificar a autorização) deve conter um identificador único para o recurso protegido ao qual o utilizador está a pedir acesso. Um recurso protegido pode ser qualquer nível de conteúdo autorizado, conforme acordado entre um MVPD e programadores participantes. Os potenciais recursos protegidos devem se encaixar nesta estrutura em árvore de granularidade cada vez mais específica:
+Cada solicitação de autorização (ou solicitação para verificar a autorização) deve conter um identificador exclusivo para o recurso protegido para o qual o usuário está solicitando acesso. Um recurso protegido pode ser qualquer nível de conteúdo autorizado, conforme acordado entre um MVPD e os Programadores participantes. Os recursos protegidos potenciais devem se encaixar nessa estrutura de árvore de granularidade cada vez mais específica:
 
 - Rede
    - Canal
@@ -28,12 +28,12 @@ Cada pedido de autorização (ou pedido para verificar a autorização) deve con
 
 </br>
 
-## Formato RSS de mídia {#media_rss}
+## Formato RSS de Mídia {#media_rss}
 
-Os recursos podem ser identificados por uma string simples (um identificador exclusivo para um canal) ou podem ser representados no formato RSS de mídia (MRSS), conforme acordado entre o Adobe (ou um parceiro autorizado de autenticação da Adobe Primetime) e os MVPDs e Programadores participantes. A sequência de caracteres de RSS usada como um especificador de recursos pode incluir informações adicionais, como classificações e metadados de controle dos pais.\
+Os recursos podem ser identificados por uma string simples (um identificador exclusivo para um canal) ou podem ser representados no formato Media RSS (MRSS), conforme acordado entre o Adobe (ou um parceiro autorizado de autenticação da Adobe Primetime) e os MVPDs e Programadores participantes. A cadeia de caracteres RSS usada como um especificador de recurso pode incluir informações adicionais, como classificações e metadados de controle dos pais.\
  
 
-Se você usar um identificador de recurso simples, como &quot;TNT&quot;, assume-se que representa um canal e é traduzido neste especificador de recurso RSS:
+Se você usar um identificador de recurso simples, como &quot;TNT&quot;, presume-se que ele represente um canal, e é traduzido neste especificador de recurso RSS:
 
 ```RSS
     <rss version="2.0"> 
@@ -44,7 +44,7 @@ Se você usar um identificador de recurso simples, como &quot;TNT&quot;, assume-
 ```
  
 
-Um especificador mais complexo pode incluir, por exemplo, informações adicionais de classificação. Você pode passar toda a cadeia de caracteres de RSS para funções do Ativador de Acesso que exigem uma ID de recurso, como [`getAuthorization()`](/help/authentication/rest-api-reference.md):
+Um especificador mais complexo pode incluir, por exemplo, informações de classificação adicionais. É possível passar toda a cadeia de caracteres RSS para funções do Access Enabler que exigem uma ID de recurso, como [`getAuthorization()`](/help/authentication/rest-api-reference.md):
 
 ```rss
     var resource = 
@@ -57,7 +57,7 @@ Um especificador mais complexo pode incluir, por exemplo, informações adiciona
     getAuthorization(resource);
 ```
 
-Os especificadores de recursos são opacos para a autenticação da Adobe Primetime; são simplesmente passados para o MVPD. Se o MVPD não reconhecer ou não puder analisar o especificador de recursos, ele retornará um erro para a autenticação da Adobe Primetime, que retornará o erro ao seu `tokenRequestFailed()` retorno de chamada.
+Os especificadores de recursos são opacos à autenticação do Adobe Primetime; eles são simplesmente transmitidos para o MVPD. Se o MVPD não reconhecer ou não puder analisar o especificador de recurso, retornará um erro à autenticação da Adobe Primetime, que transmitirá o erro de volta ao `tokenRequestFailed()` retorno de chamada.
 
 <!--
 ## Related Information {#related}

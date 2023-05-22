@@ -1,21 +1,19 @@
 ---
-description: 'O reprodutor pode implementar ações com base nos seguintes eventos '
-title: Eventos de carregador
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Seu reprodutor pode implementar ações com base nos seguintes eventos
+title: Eventos carregadores
+exl-id: c9fd00fb-1872-4bfb-8ce3-fdece4af45fe
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%
 
 ---
 
+# Eventos carregadores{#loader-events}
 
-# Eventos de carregador{#loader-events}
-
-O reprodutor pode implementar ações com base nos seguintes eventos:
+Seu reprodutor pode implementar ações com base nos seguintes eventos:
 
 | Evento | Significado |
 |---|---|
-| `MediaPlayerItemLoader.completed` | Carregamento do recurso de mídia concluído com êxito. |
-| `MediaPlayerItemLoader.failed` | Ocorreu um problema com o carregamento de recursos de mídia. |
-
+| `MediaPlayerItemLoader.completed` | O carregamento do recurso de mídia foi concluído com êxito. |
+| `MediaPlayerItemLoader.failed` | Ocorreu um problema com o carregamento do recurso de mídia. |

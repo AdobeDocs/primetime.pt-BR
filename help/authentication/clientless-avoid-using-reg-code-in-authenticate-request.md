@@ -1,19 +1,19 @@
 ---
-title: Evite usar '&'reg_code na solicitação /authentication
-description: Evite usar '&'reg_code na solicitação /authentication
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Evite usar '&'reg_code in /authenticate Request
+description: Evite usar '&'reg_code in /authenticate Request
+exl-id: c0ecb6f9-2167-498c-8a2d-a692425b31c5
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
-
-# Evite usar &#39;&amp;&#39;reg_code na solicitação /authentication {#clientless-avoid-using-reg_code-in-authenticate-request}
+# Evite usar &#39;&amp;&#39;reg_code in /authenticate Request {#clientless-avoid-using-reg_code-in-authenticate-request}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 </br>
 
@@ -25,7 +25,7 @@ O navegador IE 9 interpreta &#39;\®&#39; como um comando especial e o converte 
 
 ## Explicação
 
-Se a variável `/authenticate` A solicitação é composta da seguinte maneira...
+Se a variável `/authenticate` é composta da seguinte forma...
 
  
 
@@ -34,7 +34,7 @@ Se a variável `/authenticate` A solicitação é composta da seguinte maneira..
 ```
  
 
-...ele será interpretado pelo navegador IE como abaixo e será enviado ao Adobe neste formato:
+... será interpretado pelo navegador IE conforme abaixo e será enviado para o Adobe neste formato:
 
  
 
@@ -43,23 +43,22 @@ Se a variável `/authenticate` A solicitação é composta da seguinte maneira..
 ```
  
 
-O solicitante\_id será interpretado como univision®\_code=EKAFMFI, pois não há &#39;&amp;&#39; e o Adobe não encontrará um `regCode` param para associar o token.  Há uma chance de o token AuthN não ser criado, nesse caso `/checkauthn` as chamadas não encontrarão tokens.
+O requestor\_id será interpretado como univision®\_code=EKAFIFM, já que não há &#39;&amp;&#39; e o Adobe não encontrará um `regCode` parâmetro ao qual associar o token.  Há uma chance de o token de autenticação não ser criado, nesse caso `/checkauthn` As chamadas do não localizarão nenhum token.
 
 
 
 ## Solução
 
-Uma das opções a seguir deve resolver esse problema:
+Uma das seguintes opções deve resolver esse problema:
 
-1. Evite usar o `&reg_code` parâmetro entre os outros parâmetros da string de consulta.  Em vez disso, mova-o para o primeiro parâmetro da string de consulta no URL da solicitação, tornando o url da solicitação assim:\
+1. Evite usar o `&reg_code` parâmetro entre os outros parâmetros da cadeia de caracteres de consulta.  Em vez disso, mova-o para o primeiro parâmetro da string de consulta no URL da solicitação, tornando o URL da solicitação assim:\
     
 
-       &lt;fqdn>autentica?reg_code =EKAFMFI&amp;requestor_id=someRequestor&amp;domain_name=someRequestor.com&amp;noflash=true&amp;mso_id=someMvpd&amp;redirect_url=someRequestor.redirect.url.html
+       &lt;fqdn>authenticate?reg_code =EKAFIFM&amp;requestor_id=someRequestor&amp;domain_name=someRequestor.com&amp;noflash=true&amp;mso_id=someMvpd&amp;redirect_url=someRequestor.redirect.url.html
    
 
-   Dessa forma, o `&reg` param não será interpretado incorretamente.
+   Deste modo, a Comissão `&reg` O parâmetro não será interpretado incorretamente.
 
 1. Normalizar `&reg_code` como usar `&amp;reg_code`.
 
-1. O Adobe poderia introduzir um novo recurso para enviar um código de erro de volta para a segunda tela em resposta a uma chamada de autenticação, se a criação do token AuthN falhasse.
-
+1. O Adobe poderia introduzir um novo recurso para enviar um código de erro de volta à segunda tela em resposta a uma chamada de autenticação, se a criação do token de autenticação falhasse.

@@ -1,20 +1,19 @@
 ---
-description: É possível especificar a formatação de legenda oculta.
-title: Exemplos de formatação de legenda
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode especificar a formatação de legendas ocultas.
+title: Exemplos Formatação da legenda
+exl-id: 946530a1-c7d7-4582-81b8-71b2980561cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%
 
 ---
 
-
 # Exemplos: Formatação de legenda{#examples-caption-formatting}
 
-É possível especificar a formatação de legenda oculta.
+Você pode especificar a formatação de legendas ocultas.
 
-## Exemplo 1: Especificar valores de formato explicitamente {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
+## Exemplo 1: especificar explicitamente valores de formato {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
 
 ```js
 // Set CC style. 
@@ -35,4 +34,3 @@ var tf = new AdobePSDK.TextFormat(
 >[!IMPORTANT]
 >
 >O TVSDK do navegador não oferece suporte à borda da fonte, cor de preenchimento ou opacidade de preenchimento.
-

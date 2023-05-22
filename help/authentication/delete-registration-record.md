@@ -1,21 +1,21 @@
 ---
-title: Excluir Registro
-description: Eliminar registro reordenado
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Excluir Registro de Registro
+description: Excluir registro de registro
+exl-id: 42707070-2e1f-4847-93fd-30025aef56c1
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-
-# Excluir Registro {#delete-registration-record}
+# Excluir Registro de Registro {#delete-registration-record}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
-## Endpoints REST API {#clientless-endpoints}
+## Endpoints da REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -32,11 +32,11 @@ ht-degree: 0%
 
 ## Descrição {#delete-record}
 
-Exclui o registro de código reg e libera o código reg para reutilização. 
+Exclui o registro de código de registro e libera o código de registro para reutilização. 
 
 | Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por exemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/regcode/ER45RTY | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. ID do solicitante  </br>    (Componente de caminho)</br>2.  Código de registro  </br>    (Componente de caminho) | DELETE | Nenhum | 204 |
+| &lt;reggie_fqdn>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por exemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/regcode/ER45RTY | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. ID do solicitante  </br>    (Componente do caminho)</br>2.  Código de registro  </br>    (Componente do caminho) | DELETE | Nenhum | 204 |
 
 {style="table-layout:auto"}
 
@@ -44,8 +44,8 @@ Exclui o registro de código reg e libera o código reg para reutilização. 
 
 | Parâmetro de entrada | Descrição |
 | --- | --- |
-| solicitante | O ID do solicitador do Programador para o qual esta operação é válida. |
-| código de registro | O valor do código de registro que seria exibido no Dispositivo de transmissão (a ser inserido no fluxo de autenticação). |
+| solicitante | O requestorId do Programador para o qual esta operação é válida. |
+| código de registro | O valor do código de registro que seria exibido no dispositivo de transmissão (a ser inserido no fluxo de autenticação). |
 
 {style="table-layout:auto"}
 

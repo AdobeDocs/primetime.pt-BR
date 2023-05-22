@@ -1,36 +1,34 @@
 ---
 title: Perguntas e respostas sobre certificados
 description: Perguntas e respostas sobre certificados
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: d4e493b0-4467-42b1-9758-16c5941d8051
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
-
-
 # Perguntas e respostas sobre certificados {#certificates-q}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 </br>
 
-**T1:** É possível registrar certificados no iOS e Android?
+**P1:** É possível registrar certificados no iOS e no Android?
 
-**A:** O certificado para iOS e Android é o mesmo na configuração atual. O certificado nativo é usado para ambas as plataformas.
+**R:** O certificado para iOS e Android é o mesmo na configuração atual. O certificado nativo é usado para ambas as plataformas.
 
 </br>
 
-**T2:** Os mesmos certificados iOS podem ser usados como certificados Primários e de Backup nos ambientes de produção e preparo? Se não for recomendado, pode dar uma explicação?
+**P2:** Os mesmos certificados iOS podem ser usados como certificados Primários e de Backup nos ambientes de produção e de preparo? Se isso não for recomendado, você pode oferecer uma explicação?
 
-**A:** Não faz sentido configurar o mesmo certificado do certificado Principal e do Certificado de Backup. Temos o conceito de certificados Primários e de Backup para que possamos configurar vários certificados para um Programador caso o certificado Primário expire ou seja revogado. Ter um certificado de backup dará aos programadores tempo para alterar o principal sem afetar o ambiente de lançamento. Mas você pode usar o mesmo conjunto de certificados Primários e de Backup para os perfis Produção e Armazenamento temporário.
+**R:** Não há razão para configurar o mesmo certificado como certificado Principal e de Backup. Temos o conceito de certificados primários e de backup para que possamos configurar vários certificados para um programador caso o certificado primário expire ou seja revogado. Ter um certificado de backup dará aos programadores tempo para alterar o principal sem afetar o ambiente da versão. Mas você pode usar o mesmo conjunto de certificados primários e de backup para os perfis de produção e de preparo.
 
 </br>
 
 **P3:** É necessário um novo certificado para páginas da Web que usarão o novo TempPass flexível? 
 
-**A:** O certificado (e qualquer certificado de fato) é configurado no nível da Empresa de mídia e do Programador. FlexibleTempPass é um MVPD, você não precisa configurar qualquer certificado para ele, portanto, se estiver integrando um Programador existente com TempPass flexível, o certificado que já está configurado no nível Programador / Empresa de mídia será usado.
-
+**R:** O certificado (e qualquer certificado) é configurado no nível da Empresa de mídia e do Programador. FlexibleTempPass é um MVPD, você não precisa configurar nenhum certificado para ele, portanto, se você estiver integrando um Programador existente com TempPass flexível, o certificado que já está configurado no nível Programador/Empresa de Mídia será usado.

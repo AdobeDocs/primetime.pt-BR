@@ -1,5 +1,5 @@
 ---
-description: Você pode decidir se deseja resolver somente os anúncios que ocorrem após o ponto ativo atual do usuário ou também resolver os anúncios que ocorrem antes do ponto ativo atual.
+description: Você pode decidir se deseja resolver somente os anúncios que ocorrem após o ponto de ativação atual do usuário ou também resolver anúncios que ocorrem antes do ponto de ativação atual.
 title: Carregar anúncio para uma janela DVR
 exl-id: 3e8542a8-0912-4023-904d-0fdb28411a9d
 source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
@@ -11,23 +11,23 @@ ht-degree: 0%
 
 # Carregar anúncio para uma janela DVR {#load-ad-for-a-dvr-window}
 
-Você pode decidir se deseja resolver somente os anúncios que ocorrem após o ponto ativo atual do usuário ou também resolver os anúncios que ocorrem antes do ponto ativo atual.
+Você pode decidir se deseja resolver somente os anúncios que ocorrem após o ponto de ativação atual do usuário ou também resolver anúncios que ocorrem antes do ponto de ativação atual.
 
-Quando um usuário começa a visualizar o conteúdo no início de um fluxo de DVR, o TVSDK resolve todos os anúncios do fluxo no momento. No entanto, quando o usuário começa a exibir o conteúdo em um ponto após o início do fluxo, você pode decidir se deseja resolver apenas os anúncios que ocorrem após o ponto ativo atual do usuário ou também resolver os anúncios que ocorreram antes do ponto ativo atual.
+Quando um usuário começa a visualizar o conteúdo no início de um fluxo de DVR, o TVSDK resolve todos os anúncios do fluxo nesse momento. No entanto, quando o usuário começa a visualizar o conteúdo em um ponto após o início do fluxo, é possível decidir se deseja resolver somente os anúncios que ocorrem após o ponto de ativação atual do usuário ou também resolver anúncios que ocorreram antes do ponto de ativação atual.
 
 >[!TIP]
 >
->Resolver anúncios depois do ponto ativo atual é mais rápido, mas se o usuário buscar de trás para frente, essa opção impede que o reprodutor reproduza anúncios que foram exibidos anteriormente.
+>Resolver anúncios após o ponto de ativação atual é mais rápido, mas se o usuário buscar de forma retroativa, essa opção impede que o reprodutor reproduza anúncios que apareceram anteriormente.
 
 ## Controle e carregamento de uma janela DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
-Para controlar o carregamento de anúncio de uma janela DVR:
+Para controlar e carregar uma janela DVR:
 
-Para carregar todos os anúncios para o fluxo inteiro, defina a variável `PTAdMetadata.enableDVRAds` propriedade para `YES`.
+Para carregar todos os anúncios para o fluxo inteiro, defina o `PTAdMetadata.enableDVRAds` propriedade para `YES`.
 
 >[!NOTE]
 >
->O valor padrão é `NO`e essa opção carrega anúncios somente do ponto ativo atual.
+>O valor padrão é `NO`, e essa opção carrega anúncios somente do ponto ativo atual.
 
 Por exemplo:
 

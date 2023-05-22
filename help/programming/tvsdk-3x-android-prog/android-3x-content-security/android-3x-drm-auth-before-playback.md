@@ -1,31 +1,30 @@
 ---
-description: Quando os metadados de DRM de um vídeo estão separados do fluxo de mídia, você deve autenticar antes de iniciar a reprodução.
+description: Quando os metadados de DRM de um vídeo são separados do fluxo de mídia, é necessário autenticar antes de iniciar a reprodução.
 title: Autenticação DRM antes da reprodução
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 74eb7218-403e-4264-9063-bf959403436f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Autenticação DRM antes da reprodução {#drm-authentication-before-playback}
 
-Quando os metadados de DRM de um vídeo estão separados do fluxo de mídia, você deve autenticar antes de iniciar a reprodução.
+Quando os metadados de DRM de um vídeo são separados do fluxo de mídia, é necessário autenticar antes de iniciar a reprodução.
 
 Um ativo de vídeo pode ter um arquivo de metadados DRM associado, por exemplo:
 
 * `"url": "https://www.domain.com/asset.m3u8"`
 * `"drmMetadata": "https://www.domain.com/asset.metadata"`
 
-Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo do arquivo de metadados DRM, analisá-lo e verificar se a autenticação DRM é necessária.
+Neste exemplo, você pode usar `DRMHelper` métodos para baixar o conteúdo do arquivo de metadados DRM, analisá-lo e verificar se a autenticação DRM é necessária.
 
-1. Use `loadDRMMetadata` para carregar o conteúdo do URL de metadados e analisar os bytes baixados em um `DRMMetadata`.
+1. Uso `loadDRMMetadata` para carregar o conteúdo do URL de metadados e analisar os bytes baixados em um `DRMMetadata`.
 
    >[!TIP]
    >
-   >Esse método é assíncrono e cria seu próprio thread.
+   >Este método é assíncrono e cria seu próprio thread.
 
    ```java
    public static void loadDRMMetadata( 
@@ -42,13 +41,13 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
                                       new DRMLoadMetadataListener());
    ```
 
-1. Notifique o usuário que essa operação é assíncrona. Convém informar o usuário sobre isso.
+1. Notifique o usuário que esta operação é assíncrona. Convém informar o usuário sobre isso.
 
-   Se os usuários não souberem que a operação é assíncrona, poderão se perguntar por que a reprodução ainda não foi iniciada. Você pode, por exemplo, mostrar uma roda giratória enquanto os metadados de DRM estão sendo baixados e analisados.
+   Se os usuários não souberem que a operação é assíncrona, talvez eles se perguntem por que a reprodução ainda não foi iniciada. Você pode, por exemplo, mostrar uma roda giratória enquanto os metadados de DRM estão sendo baixados e analisados.
 
-1. Implemente os retornos de chamada no `DRMLoadMetadataListener`.
+1. Implemente os retornos de chamada na `DRMLoadMetadataListener`.
 
-   O `loadDRMMetadata` chama esses manipuladores de evento.
+   A variável `loadDRMMetadata` O chama esses manipuladores de eventos.
 
    ```java
    public interface DRMLoadMetadataListener { 
@@ -65,13 +64,13 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
    } 
    ```
 
-   Aqui estão detalhes adicionais sobre os manipuladores:
+   Estes são detalhes adicionais sobre os manipuladores:
 
-   * `onLoadMetadataUrlStart` detecta quando o carregamento do URL de metadados começou.
+   * `onLoadMetadataUrlStart` O detecta quando o carregamento do URL de metadados começou.
    * `onLoadMetadataUrlComplete` O detecta quando o URL de metadados terminou de ser carregado.
-   * `onLoadMetadataUrlError` indica que os metadados não foram carregados.
+   * `onLoadMetadataUrlError` indica que houve falha ao carregar os metadados.
 
-1. Após concluir o carregamento, inspecione o objeto `DRMMetadata` para determinar se a autenticação de DRM é necessária.
+1. Após concluir o carregamento, inspecione o `DRMMetadata` para determinar se a autenticação DRM é necessária.
 
    ```java
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
@@ -95,7 +94,7 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
 
 1. Conclua uma das seguintes tarefas:
 
-   * Se a autenticação não for necessária, inicie a reprodução.
+   * Se a autenticação não for necessária, comece a reprodução.
    * Se a autenticação for necessária, conclua a autenticação adquirindo a licença.
 
       ```java
@@ -118,7 +117,7 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
            final DRMAuthenticationListener authenticationListener);
       ```
 
-      Neste exemplo, para simplificar, o nome e a senha do usuário são explicitamente codificados:
+      Neste exemplo, para simplificar, o nome do usuário e a senha são explicitamente codificados:
 
       ```java
       DRMHelper.performDrmAuthentication(drmManager,  
@@ -152,9 +151,9 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
       }); 
       ```
 
-1. Use um ouvinte de evento para verificar o status de autenticação.
+1. Use um ouvinte de eventos para verificar o status de autenticação.
 
-   Esse processo implica a comunicação da rede, então essa também é uma operação assíncrona.
+   Esse processo implica a comunicação em rede, portanto, essa também é uma operação assíncrona.
 
    ```java
    public interface DRMAuthenticationListener { 
@@ -193,4 +192,4 @@ Neste exemplo, você pode usar os métodos `DRMHelper` para baixar o conteúdo d
 1. Se a autenticação for bem-sucedida, inicie a reprodução.
 1. Se a autenticação não for bem-sucedida, notifique o usuário e não inicie a reprodução.
 
-   Seu aplicativo deve lidar com erros de autenticação. Falha na autenticação antes da reprodução do coloca o TVSDK em um estado de erro e a reprodução é interrompida. Seu aplicativo deve resolver o problema, redefinir o reprodutor e recarregar o recurso.
+   Seu aplicativo deve manipular todos os erros de autenticação. Falha ao autenticar antes de reproduzir coloca o TVSDK em um estado de erro e a reprodução é interrompida. Seu aplicativo deve resolver o problema, redefinir o reprodutor e recarregar o recurso.

@@ -1,22 +1,22 @@
 ---
-title: Registro de Devolução
-description: Registro de Devolução
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Retornar Registro de Registro
+description: Retornar Registro de Registro
+exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
-
-# Registro de Devolução {#return-registration-record}
+# Retornar Registro de Registro {#return-registration-record}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 
-## Endpoints REST API {#clientless-endpoints}
+## Endpoints da REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## Descrição {#description}
 
-Retorna o registro do código de registro contendo UUID do código de registro, código de registro e ID de dispositivo com hash. 
+Retorna o registro do código de registro contendo o código de registro UUID, o código de registro e a ID do dispositivo com hash. 
 
  
 
@@ -42,7 +42,7 @@ Retorna o registro do código de registro contendo UUID do código de registro, 
 
 | Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por exemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJCFK?format=xml | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante  </br>    (Componente de caminho)</br>2.  código de registro  </br>    (Componente de caminho) | GET | XML ou JSON contendo um código de registro e informações. Consulte esquema e amostra abaixo. | 200 |
+| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por exemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. requerente  </br>    (Componente do caminho)</br>2.  código de registro  </br>    (Componente do caminho) | GET | XML ou JSON contendo um código de registro e informações. Consulte esquema e amostra abaixo. | 200 |
 
 {style="table-layout:auto"}
 
@@ -50,12 +50,12 @@ Retorna o registro do código de registro contendo UUID do código de registro, 
 
 | Parâmetro de entrada | Descrição |
 | --- | --- |
-| solicitante | O ID do solicitador do Programador para o qual esta operação é válida. |
-| código de registro | O valor do código de registro que seria exibido no Dispositivo de transmissão (a ser inserido no fluxo de autenticação). |
+| solicitante | O requestorId do Programador para o qual esta operação é válida. |
+| código de registro | O valor do código de registro que seria exibido no dispositivo de transmissão (a ser inserido no fluxo de autenticação). |
 
 </br>
 
-## Esquema XML de Resposta {#response-xml-schema}
+## Esquema XML de resposta {#response-xml-schema}
 
 ### Código de registro XSD
 
@@ -93,22 +93,22 @@ Retorna o registro do código de registro contendo UUID do código de registro, 
 
 | Nome do elemento | Descrição |
 | --- | --- |
-| id | UUID gerada pelo Serviço de Código de Registro |
-| código | Código de Registro gerado pelo Serviço de Código de Registro |
-| solicitante | ID do solicitante |
-| mvpd | ID do MVPD |
-| gerado | Carimbo de data e hora de criação do Código de Registro (em milissegundos desde 1° de janeiro de 1970 GMT) |
-| expira | Carimbo de data e hora quando o código de registro expira (em milissegundos desde 1° de janeiro de 1970 GMT) |
-| deviceId | ID de dispositivo exclusiva (ou token XSTS) |
+| id | UUID gerado pelo Serviço de Código de Registro |
+| código | Código de registro gerado pelo Serviço de código de registro |
+| solicitante | ID do Solicitante |
+| mvpd | ID MVPD |
+| gerado | Carimbo de data e hora de criação do Código de registro (em milissegundos desde 1° de janeiro de 1970 GMT) |
+| expira em | Carimbo de data e hora quando o código de registro expira (em milissegundos desde 1° de janeiro de 1970 GMT) |
+| deviceId | Identificador exclusivo do dispositivo (ou token XSTS) |
 | deviceType | Tipo de dispositivo |
 | deviceUser | Usuário conectado ao dispositivo |
 | appId | ID do aplicativo |
 | appVersion | Versão do aplicativo |
-| registrationURL | URL para o Aplicativo Web de Logon a ser exibido ao usuário final |
+| registrationURL | URL do Aplicativo Web de Logon a ser exibido para o usuário final |
 
 {style="table-layout:auto"}
 
-### Resposta de exemplo {#sample-response}
+### Exemplo de resposta {#sample-response}
 
 ```XML
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>

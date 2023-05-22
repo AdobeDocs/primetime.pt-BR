@@ -1,24 +1,23 @@
 ---
-description: O TVSDK obtém informações do FreeWheel e de outros servidores de anúncios que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mat. O serviço Mat conta impressões e exibe uma precisão que mostra melhor se as criações capturam ou negligenciam os interesses de um público-alvo.
-title: Medições de anúncios do Moat
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O TVSDK obtém informações do FreeWheel e de outros servidores de anúncios que fornecem respostas do VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Moat. O serviço de Mat conta impressões de anúncios com uma precisão que mostra melhor se os criadores capturam ou negligenciam os interesses de um público.
+title: Medições de anúncios do Fosso
+exl-id: 20962678-15a0-4e7c-96fd-19c59c5ae008
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
+# Medições de anúncios do Fosso{#ad-measurements-from-moat}
 
-# Medições de anúncio do Moat{#ad-measurements-from-moat}
+O TVSDK obtém informações do FreeWheel e de outros servidores de anúncios que fornecem respostas do VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Moat. O serviço de Mat conta impressões de anúncios com uma precisão que mostra melhor se os criadores capturam ou negligenciam os interesses de um público.
 
-O TVSDK obtém informações do FreeWheel e de outros servidores de anúncios que fornecem respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Mat. O serviço Mat conta impressões e exibe uma precisão que mostra melhor se as criações capturam ou negligenciam os interesses de um público-alvo.
+O Mat é um serviço de medição e visualização em vários usos, desde navegadores até dentro de aplicativos. O Mat gera dados de análise de marketing em tempo real em várias plataformas.
 
-O Moat é um serviço que avalia e visualiza em vários usos, desde navegadores até dentro de aplicativos. O Moat gera dados de análise de marketing em tempo real em várias plataformas.
+O XML de resposta VAST tem uma propriedade e um elemento que seu código pode ler, o mais externo `Ad id` propriedade e os mais `Extension` elemento. De qualquer maneira, seu código pode usar o TVSDK para salvar as `Ad id` informações e a `Extension` informações e, em seguida, organize as informações em uma estrutura em árvore. Com essa organização, seu código pode coletar os dados de qualquer nível e transmiti-los para onde for necessário. O valor da região mais `Ad id` permite que seu código coordene informações da campanha associada.
 
-O XML de resposta VAST tem uma propriedade e um elemento que seu código pode ler, a propriedade `Ad id` mais externa e o elemento `Extension` mais externo. De qualquer maneira, seu código pode usar o TVSDK para salvar as informações `Ad id` e `Extension`, em seguida, organizar as informações em uma estrutura de árvore. Com essa organização, seu código pode coletar os dados de qualquer nível e transmiti-los para onde for necessário. O valor da propriedade mais externa `Ad id` permite que o código coordene informações da campanha associada.
-
-Por exemplo, o FreeWheel pode retornar dados em um elemento de Extensões. Abaixo está um elemento de amostra.
+Por exemplo, o FreeWheel pode retornar dados em um elemento Extensions. Abaixo está uma amostra de elemento.
 
 ```xml
 <?xml version="1.0"?> 
@@ -36,10 +35,10 @@ Por exemplo, o FreeWheel pode retornar dados em um elemento de Extensões. Abaix
 </Extensions> 
 ```
 
-O Freewheel também pode definir a propriedade `id` no elemento `Ad`, conforme mostrado na amostra abaixo.
+O Freewheel também pode definir a `id` propriedade na `Ad` como mostrado na amostra abaixo.
 
 ```xml
 <Ad id="118566" sequence="1">
 ```
 
-Para obter informações da API, consulte a documentação da API para a classe [NetworkAdInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/)
+Para obter informações sobre APIs, consulte a documentação da classe [NetworkAdInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/)

@@ -1,14 +1,13 @@
 ---
 description: Essas classes permitem personalizar o registro.
-title: Classes de registro
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Registrando classes
+exl-id: 85cf33dc-54c0-43f0-8386-2805853226ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
 
 ---
-
 
 # Registrando classes{#logging-classes}
 
@@ -30,7 +29,7 @@ Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/DefaultLogger.html" format="html" scope="external"> DefaultLogger</a></span> </td> 
-   <td colname="2"> Classe. O logger padrão envia toda a mensagem de entrada para rastreamento. </td> 
+   <td colname="2"> Classe. O agente de log padrão envia todas as mensagens de entrada para o rastreamento. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Log.html" format="html" scope="external"> Log</a></span> </td> 
@@ -38,7 +37,7 @@ Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/LogFactory.html" format="html" scope="external"> LogFactory</a></span> </td> 
-   <td colname="2"> Classe. Fábrica de registro padrão.</td> 
+   <td colname="2"> Classe. Fatory de log padrão.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a></span> </td> 
@@ -46,8 +45,7 @@ Pacote: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/NullLogger.html" format="html" scope="external"> NullLogger</a></span> </td> 
-   <td colname="2"> Classe. Logger que não registra nada.</td> 
+   <td colname="2"> Classe. Agente que não registra nada.</td> 
   </tr> 
  </tbody> 
 </table>
-

@@ -1,21 +1,21 @@
 ---
-title: Recuperar Lista de Recursos Pré-Autorizados
-description: Recuperar Lista de Recursos Pré-Autorizados
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Recuperar lista de recursos pré-autorizados
+description: Recuperar lista de recursos pré-autorizados
+exl-id: 3821378c-bab5-4dc9-abd7-328df4b60cc3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
-
-# Recuperar Lista de Recursos Pré-Autorizados {#retrieve-list-of-preauthorized-resources}
+# Recuperar lista de recursos pré-autorizados {#retrieve-list-of-preauthorized-resources}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
-## Endpoints REST API {#clientless-endpoints}
+## Endpoints da REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,29 +31,29 @@ ht-degree: 0%
 
 ## Descrição {#description}
 
-Uma solicitação para a autenticação da Adobe Primetime para obter a lista de recursos pré-autorizados.
+Uma solicitação de autenticação da Adobe Primetime para obter a lista de recursos pré-autorizados.
 
-Há dois conjuntos de APIs: um conjunto para o Aplicativo de transmissão ou o Serviço do programador e um conjunto para o Aplicativo Web de segunda tela. Esta página descreve a API do Aplicativo de transmissão ou do Serviço do programador.
+Há dois conjuntos de APIs: um conjunto para o Aplicativo de streaming ou Serviço de programador e um conjunto para o Aplicativo Web de segunda tela. Esta página descreve a API do aplicativo de streaming ou do serviço de programador.
 
 
 | Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/pré-autorizar | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante (Obrigatório)</br>2.  deviceId (Obrigatório)</br>3.  lista de recursos (Obrigatório)</br>4.  device_info/X-Device-Info (Obrigatório)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Obsoleto)</br>7.  _appId_ (Obsoleto) | GET | XML ou JSON contendo decisões individuais de pré-autorização ou detalhes do erro. Veja as amostras abaixo. | 200 - Sucesso</br></br>400 - Solicitação incorreta</br></br>401 - Não autorizado</br></br>405 - Método não permitido  </br></br>412 - Falha na pré-condição</br></br>500 - Erro interno do servidor |
+| &lt;sp_fqdn>/api/v1/preauthorize | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante (obrigatório)</br>2.  deviceId (Obrigatório)</br>3.  lista de recursos (Obrigatório)</br>4.  device_info/X-Device-Info (Obrigatório)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Obsoleto)</br>7.  _appId_ (Obsoleto) | GET | XML ou JSON que contém decisões individuais de pré-autorização ou detalhes de erros. Consulte os exemplos abaixo. | 200 - Sucesso</br></br>400 - Solicitação inválida</br></br>401 - Não autorizado</br></br>405 - Método não permitido  </br></br>412 - Falha na pré-condição</br></br>500 - Erro interno do servidor |
 
 
 | Parâmetro de entrada | Descrição |
 | --- | --- |
-| solicitante | O ID do solicitador do Programador para o qual esta operação é válida. |
-| deviceId | Os bytes da ID do dispositivo. |
-| lista de recursos | Uma string que contém uma lista delimitada por vírgulas de resourceIds que identifica o conteúdo que pode ser acessível a um usuário e é reconhecido pelos endpoints de autorização MVPD. |
-| device_info/</br></br>X-Device-Info | Informações do dispositivo de transmissão.</br></br>**Observação**: Isso PODE ser passado device_info como um parâmetro de URL, mas devido ao tamanho potencial desse parâmetro e limitações no comprimento de um URL de GET, ele deve ser passado como X-Device-Info no cabeçalho http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | O tipo de dispositivo (por exemplo, Roku, PC).</br></br>Se esse parâmetro for definido corretamente, o ESM oferece métricas que são [detalhado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) ao usar Clientless, para que diferentes tipos de análise possam ser executados, por exemplo, Roku, AppleTV e Xbox.</br></br>Consulte [benefícios de usar o parâmetro de tipo de dispositivo sem cliente nas métricas de transmissão ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Observação**: o `device_info` substituirá esse parâmetro. |
+| solicitante | O requestorId do Programador para o qual esta operação é válida. |
+| deviceId | Os bytes de id do dispositivo. |
+| lista de recursos | Uma string que contém uma lista delimitada por vírgulas de resourceIds que identifica o conteúdo que pode ser acessível a um usuário e é reconhecida por pontos de extremidade de autorização MVPD. |
+| device_info/</br></br>X-Device-Info | Informações do dispositivo de transmissão.</br></br>**Nota**: isso PODE ser passado para device_info como um parâmetro de URL, mas devido ao tamanho potencial desse parâmetro e às limitações no comprimento de um URL do GET, ele DEVE ser passado como X-Device-Info no cabeçalho http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| _deviceType_ | O tipo de dispositivo (por exemplo, Roku, PC).</br></br>Se esse parâmetro estiver definido corretamente, o ESM oferecerá métricas que são [detalhado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) ao usar sem cliente, para que diferentes tipos de análise possam ser executados, por exemplo, Roku, Apple TV e Xbox.</br></br>Consulte [benefícios de usar o parâmetro de tipo de dispositivo sem cliente nas métricas de passagem ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: a variável `device_info` substituirá este parâmetro. |
 | _deviceUser_ | O identificador do usuário do dispositivo. |
-| _appId_ | A ID/nome do aplicativo. </br></br>**Observação**: o device_info substitui esse parâmetro. |
+| _appId_ | O id/nome do aplicativo. </br></br>**Nota**: device_info substitui esse parâmetro. |
 
 
 
-### Resposta de exemplo {#sample-response}
+### Exemplo de resposta {#sample-response}
 
  
 

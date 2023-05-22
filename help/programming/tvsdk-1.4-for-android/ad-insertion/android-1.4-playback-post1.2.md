@@ -1,35 +1,34 @@
 ---
-description: O comportamento da reprodução de mídia é afetado pela busca, pausa, avanço rápido ou retrocesso (modo de trick play) e pela inclusão da publicidade.
+description: O comportamento da reprodução de mídia é afetado pela busca, pausa, avanço rápido ou retrocesso (modo de reprodução de truque) e pela inclusão de publicidade.
 title: Comportamento de reprodução padrão e personalizado com anúncios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 242a94e7-acc1-4676-b8a7-9652d4fd1e7e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 0%
 
 ---
 
-
 # Comportamento de reprodução padrão e personalizado com anúncios {#default-and-customized-playback-behavior-with-ads}
 
-O comportamento da reprodução de mídia é afetado pela busca, pausa, avanço rápido ou retrocesso (modo de trick play) e pela inclusão da publicidade.
+O comportamento da reprodução de mídia é afetado pela busca, pausa, avanço rápido ou retrocesso (modo de reprodução de truque) e pela inclusão de publicidade.
 
 Para substituir o comportamento padrão, use `AdBreakPolicySelector`.
 
 >[!IMPORTANT]
 >
->O TVSDK não fornece uma maneira de desativar a busca durante os anúncios. O Adobe recomenda que você configure seu aplicativo para desativar a busca durante os anúncios.
+>O TVSDK não fornece uma maneira de desativar a busca durante os anúncios. A Adobe recomenda configurar seu aplicativo para desativar a busca durante os anúncios.
 
-Este é o comportamento de reprodução do conteúdo ao vivo/linear:
+Este é o comportamento de reprodução para conteúdo dinâmico/linear:
 
-* Retomar a reprodução após uma pausa resulta na reprodução do conteúdo que foi armazenado em buffer no momento da pausa.
+* Retomar a reprodução após uma pausa resulta na reprodução do conteúdo que estava em buffer no momento da pausa.
 
-   Se a posição de retomada ainda estiver no intervalo de reprodução, a reprodução deverá ser contínua. Caso contrário, o TVSDK vai para o novo ponto ativo. Também é possível executar uma operação de busca e selecionar um ponto de reprodução diferente.
-* O TVSDK resolve os anúncios entre as dicas após a posição em que o aplicativo entra na reprodução em tempo real.
+   Se a posição de retomada ainda estiver no intervalo de reprodução, a reprodução deverá ser contínua. Caso contrário, o TVSDK saltará para o novo ponto ativo. Também é possível executar uma operação de busca e selecionar um ponto de reprodução diferente.
+* O TVSDK resolve anúncios entre dicas após a posição em que o aplicativo entra na reprodução ao vivo.
 
-   A reprodução começa depois que a primeira dica é resolvida. O valor padrão para inserir a reprodução em tempo real é o ponto ativo do cliente, mas você pode escolher uma posição diferente. Todas as dicas antes da posição inicial são resolvidas depois que o aplicativo realiza uma busca na janela DVR.
+   A reprodução começa após a primeira indicação ser resolvida. O valor padrão para inserir a reprodução ao vivo é o ponto ao vivo do cliente, mas você pode escolher uma posição diferente. Todas as dicas antes da posição inicial são resolvidas depois que o aplicativo executa uma busca na janela DVR.
 
-A tabela a seguir descreve como o TVSDK lida com anúncios e quebras de anúncios durante a reprodução:
+A tabela a seguir descreve como o TVSDK lida com anúncios e ad breaks durante a reprodução:
 
 <table id="table_466538B1C2A646B89EB4F9AA111203BE"> 
  <thead> 
@@ -44,51 +43,50 @@ A tabela a seguir descreve como o TVSDK lida com anúncios e quebras de anúncio
    <td colname="col1"> Durante a reprodução normal, um ad break é encontrado. </td> 
    <td colname="col2"> 
     <ul id="ul_10D2638676EA4ADDA718E61BD4FDC1D2"> 
-     <li id="li_D5CC30F063934C738971E2E8AF00C137"> Para linhas/ao vivo, reproduz o ad break, mesmo que o ad break já tenha sido assistido. </li> 
-     <li id="li_D962C0938DA74186AE99D117E5A74E38">Para VOD, reproduz o ad break e marca o ad break como observado. </li> 
+     <li id="li_D5CC30F063934C738971E2E8AF00C137"> Para live/linear, o reproduz o ad break, mesmo que o ad break já tenha sido assistido. </li> 
+     <li id="li_D962C0938DA74186AE99D117E5A74E38">Para VOD, o reproduz o ad break e marca o ad break como assistido. </li> 
     </ul> </td> 
    <td colname="col3">Especifique uma política diferente para o ad break usando <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Seu aplicativo busca o(s) ad break(s) em conteúdo principal. </td> 
-   <td colname="col2"> Reproduz a última quebra de anúncio não assistida que foi ignorada e retoma a reprodução na posição de busca desejada quando a reprodução da quebra é concluída. </td> 
-   <td colname="col3">Selecione qual quebra foi ignorada para reproduzir usando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+   <td colname="col1"> Seu aplicativo procura por ad break(s) no conteúdo principal. </td> 
+   <td colname="col2"> Reproduz o último ad break não assistido que foi ignorado e reinicia a reprodução na posição de busca desejada quando a reprodução do ad break(s) é concluída. </td> 
+   <td colname="col3">Selecione qual interrupção ignorada deve ser reproduzida usando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Seu aplicativo busca o(s) ad break(s) para o conteúdo principal. </td> 
-   <td colname="col2"> Ignora a posição de busca desejada sem reproduzir ad breaks. </td> 
-   <td colname="col3">Selecione qual quebra foi ignorada para reproduzir usando <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
+   <td colname="col1"> Seu aplicativo busca retroativamente por ad break(s) no conteúdo principal. </td> 
+   <td colname="col2"> Salta para a posição de busca desejada sem reproduzir ad breaks. </td> 
+   <td colname="col3">Selecione qual interrupção ignorada deve ser reproduzida usando <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Seu aplicativo busca um ad break. </td> 
-   <td colname="col2"> Reproduz a partir do início do anúncio no qual a busca terminou. </td> 
-   <td colname="col3">Especifique uma política de publicidade diferente para o ad break e para o anúncio específico em que a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col1"> Seu aplicativo procura por um ad break. </td> 
+   <td colname="col2"> Reproduz a partir do início do anúncio em que a busca terminou. </td> 
+   <td colname="col3">Especifique uma política de anúncio diferente para o ad break e para o anúncio específico em que a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Seu aplicativo busca um anúncio de volta. </td> 
-   <td colname="col2"> Reproduz a partir do início do anúncio no qual a busca terminou. </td> 
-   <td colname="col3">Especifique uma política de publicidade diferente para o ad break e para o anúncio específico no qual a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col1"> O aplicativo busca de volta em um ad break. </td> 
+   <td colname="col2"> Reproduz a partir do início do anúncio em que a busca terminou. </td> 
+   <td colname="col3">Especifique uma política de anúncio diferente para o ad break e para o anúncio específico em que a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Seu aplicativo busca para frente ou para trás em ad break(s) assistido(s) em conteúdo principal. </td> 
-   <td colname="col2"> Se o último ad break ignorado já tiver sido observado, ignora a posição de busca selecionada pelo usuário. </td> 
-   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas usando <span class="codeph"> selectAdBreaksToPlay</span> e determine quais quebras já foram observadas usando <span class="codeph"> AdBreak.isWatched</span>. <p>Importante:  Por padrão, o TVSDK marca um ad break como observado imediatamente após inserir o primeiro anúncio no ad break. </p> </td> 
+   <td colname="col1"> Seu aplicativo busca avançar ou retroceder os ad break(s) assistidos no conteúdo principal. </td> 
+   <td colname="col2"> Se o último ad break ignorado já tiver sido observado, o pulará para a posição de busca selecionada pelo usuário. </td> 
+   <td colname="col3">Selecione quais das interrupções ignoradas devem ser reproduzidas usando <span class="codeph"> selectAdBreaksToPlay</span> e determinar quais interrupções já foram assistidas usando <span class="codeph"> AdBreak.isWatched</span>. <p>Importante: por padrão, o TVSDK marca um ad break como assistido imediatamente após inserir o primeiro anúncio no ad break. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Seu aplicativo avança ou retroage em um ou mais ad breaks e cai em um ad break observado. </td> 
+   <td colname="col1"> Seu aplicativo busca um ou mais ad breaks e cai em um ad break assistido. </td> 
    <td colname="col2"> Ignora o ad break e busca a posição imediatamente após o ad break. </td> 
-   <td colname="col3">Especifique uma política de publicidade diferente para o ad break (com o status observado definido como true) e para o anúncio específico em que a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col3">Especifique uma política de anúncio diferente para o ad break (com o status observado definido como verdadeiro) e para o anúncio específico em que a busca terminou usando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Seu aplicativo entra no modo de peça (DVR). A taxa de reprodução pode ser negativa (retrocesso) ou maior que 1 (avançar rapidamente). </td> 
-   <td colname="col2"> Ignora todos os anúncios durante um avanço rápido ou retrocesso, reproduz o último intervalo ignorado após o término da reprodução de truques e ignora a posição da reprodução de truques selecionada pelo usuário quando essa quebra termina a reprodução. </td> 
-   <td colname="col3">Selecione quais das quebras ignoradas serão reproduzidas depois que a reprodução de truque terminar usando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+   <td colname="col1"> Seu aplicativo entra em trick-play (modo DVR). A taxa de reprodução pode ser negativa (retrocesso) ou maior que 1 (avanço rápido). </td> 
+   <td colname="col2"> Ignora todos os anúncios durante o avanço ou retrocesso rápido, reproduz o último intervalo ignorado após o término do truque e salta para a posição de jogo do truque selecionada pelo usuário quando esse intervalo termina a reprodução. </td> 
+   <td colname="col3">Selecione quais das pausas ignoradas devem ser reproduzidas depois que a reprodução terminar usando <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Seu aplicativo avança com anúncios que foram inseridos usando marcadores de anúncio personalizados. </td> 
-   <td colname="col2"> Ignora a posição de busca selecionada pelo usuário. </td> 
-   <td colname="col3">Para obter mais informações, consulte <a href="../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-seek-scrub-bar-display.md">Exibir uma barra de movimentação com a posição de reprodução atual</a>. </td> 
+   <td colname="col1"> Seu aplicativo procura anúncios que foram inseridos usando marcadores de anúncios personalizados. </td> 
+   <td colname="col2"> Salta para a posição de busca selecionada pelo usuário. </td> 
+   <td colname="col3">Para obter mais informações, consulte <a href="../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-seek-scrub-bar-display.md">Exibir uma barra de limpeza de busca com a posição de reprodução atual</a>. </td> 
   </tr> 
  </tbody> 
 </table>
-

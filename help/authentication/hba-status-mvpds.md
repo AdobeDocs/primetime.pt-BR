@@ -1,40 +1,40 @@
 ---
-title: Status do HBA para MVPDs
-description: Status do HBA para MVPDs
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Status de HBA para MVPDs
+description: Status de HBA para MVPDs
+exl-id: 9e506417-0886-4306-9b9f-5fde24a792d3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
 
 ---
 
-
-# Status do HBA para MVPDs
+# Status de HBA para MVPDs
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 
-* HBA com MVPDs habilitados por SAML
+* HBA com MVPDs habilitados para SAML
 * HBA com MVPDs habilitados para OAuth 2.0
 
 
-## HBA com MVPDs habilitados por SAML {#bha-saml-enabled-mvpds}
+## HBA com MVPDs habilitados para SAML {#bha-saml-enabled-mvpds}
 
 | MVPD | Funcionalidade básica disponível? | Envia sinalizador na resposta de autenticação | SSO? | Comentários |
 |---|---|---|---|---|
 | DirecTV | Sim | Não |  |  |
-| Dish | Em andamento | Em andamento |  |  |
+| Prato | Em andamento | Em andamento |  |  |
 | Espectro | Sim | Sim |  |  |
 | Carta | Sim | Não |  |  |
-| Cox | Sim | Não |  | Os Controles dos Pais precisam ser habilitados |
+| Cox | Sim | Não |  | Os Controles dos Pais precisam estar habilitados |
 | AT&amp;T | Sim | Não |  |  |
 | Verizon | Sim | Sim |  |  |
-| Cablevision | Em Andamento | Em andamento |  |  |
+| Visão do cabo | Em andamento | Em andamento |  |  |
 | Suddenlink | Sim | Em andamento |  |  |
 | Mediacom | Sim | Em andamento |  |  |
-| Midcontinente | Sim | Em andamento |  |  |
+| Centro-continente | Sim | Em andamento |  |  |
 | Massilon | Sim | Não |  |  |
 | Fibra Google | Sim | Em andamento |  |  |
 | AlticeOne | Sim | Sim |  |  |
@@ -45,4 +45,3 @@ ht-degree: 0%
 | MVPD | Funcionalidade básica disponível? | Envia sinalizador na resposta de autenticação | SSO? | Comentários |
 |---|---|---|---|---|
 | Comcast | Sim | Sim |  |  |
-

@@ -1,21 +1,20 @@
 ---
-description: A regra de prioridade define a ordem de prioridade dos anúncios que serão selecionados para reprodução a partir de uma resposta VAST/VMAP.
-keywords: regra de prioridade; regras de seleção criativa
+description: A regra de prioridade define a ordem de prioridade das criações de anúncios que serão selecionadas para reprodução a partir de uma resposta VAST/VMAP.
+keywords: regra de prioridade;regras de seleção criativa
 title: Regras de prioridade
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e2aa0bd7-4071-4b42-88aa-73e5172e4f02
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Regras de prioridade {#priority-rules}
 
-A regra de prioridade define a ordem de prioridade dos anúncios que serão selecionados para reprodução a partir de uma resposta VAST/VMAP.
+A regra de prioridade define a ordem de prioridade das criações de anúncios que serão selecionadas para reprodução a partir de uma resposta VAST/VMAP.
 
-## Uma regra de Prioridade tem os seguintes atributos e valores possíveis:
+## Uma regra de prioridade tem os seguintes atributos e valores possíveis:
 
 <table id="table_ljp_tgx_hz">  
  <thead> 
@@ -28,42 +27,42 @@ A regra de prioridade define a ordem de prioridade dos anúncios que serão sele
  </thead>
  <tbody> 
   <tr> 
-   <td><span class="codeph"> priority</span></td> 
+   <td><span class="codeph"> prioridade</span></td> 
    <td><span class="codeph"> Matriz</span></td> 
    <td></td> 
-   <td> Uma matriz de tipos MIME em letras minúsculas que define a prioridade na qual os elementos de origem devem ser selecionados para reprodução.</td> 
+   <td> Uma matriz de tipos MIME em letras minúsculas que define a prioridade na qual as criações de origem devem ser selecionadas para reprodução.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> String</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Atualmente, somente <span class="codeph"> host</span> é suportado. Esse atributo deve estar presente quando <span class="codeph"> corresponder a</span> e <span class="codeph"> valores</span> forem definidos.</td> 
+   <td>Somente no momento <span class="codeph"> host</span> é compatível. Este atributo deve estar presente quando <span class="codeph"> corresponde a</span> e <span class="codeph"> valores</span> atributos são definidos.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> matches</span></td> 
+   <td><span class="codeph"> corresponde a</span></td> 
    <td><span class="codeph"> String</span></td> 
-   <td><span class="codeph"> multiple</span></td> 
+   <td><span class="codeph"> múltiplo</span></td> 
    <td>Valores possíveis:
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span>  - igual</li> 
-     <li><span class="codeph"> ne</span>  - não é igual</li> 
+     <li><span class="codeph"> eq</span> - igual a</li> 
+     <li><span class="codeph"> ne</span> - não é igual</li> 
      <li><span class="codeph"> co</span> - contém</li> 
-     <li><span class="codeph"> nc</span>  - não contém</li> 
-     <li><span class="codeph"> sw</span>  - começa com</li> 
-     <li><span class="codeph"> ew</span>  - termina com</li> 
+     <li><span class="codeph"> nc</span> - não contém</li> 
+     <li><span class="codeph"> sw</span> - começa com</li> 
+     <li><span class="codeph"> Novo</span> - termina com</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> String</span></td> 
-   <td><span class="codeph"> priority</span></td> 
-   <td>O valor deve ser sempre <span class="codeph"> priority</span></td> 
+   <td><span class="codeph"> prioridade</span></td> 
+   <td>O valor deve ser sempre <span class="codeph"> prioridade</span></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> values</span></td> 
+   <td><span class="codeph"> valores</span></td> 
    <td><span class="codeph"> Matriz</span></td> 
    <td></td> 
-   <td> <p>O TVSDK usará o atributo <span class="codeph"> corresponde</span> no <span class="codeph"> item</span> do criativo de origem e corresponderá aos valores definidos nessa matriz</p> </td> 
+   <td> <p>O TVSDK usará o <span class="codeph"> corresponde a</span> atributo no <span class="codeph"> item</span> da criação de origem e corresponder aos valores definidos nessa matriz</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> fluxo</span></td> 
@@ -104,4 +103,3 @@ A regra de prioridade define a ordem de prioridade dos anúncios que serão sele
     }
 }
 ```
-

@@ -1,18 +1,17 @@
 ---
-description: Você pode gerar tokens de expressão para seu conteúdo criptografado enviando solicitações de token para o servidor de token de expressão adequado.
-title: Exprimir tokens
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode gerar tokens Expressplay para o conteúdo criptografado enviando solicitações de token para o servidor de token Expressplay apropriado.
+title: Tokens de expressão
+exl-id: 38faba06-6737-4dec-ac97-27db3124b993
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
+# Tokens de expressão {#expressplay-tokens}
 
-# Apresentar tokens {#expressplay-tokens}
-
-Você pode gerar tokens de expressão para seu conteúdo criptografado enviando solicitações de token para o servidor de token de expressão adequado.
+Você pode gerar tokens Expressplay para o conteúdo criptografado enviando solicitações de token para o servidor de token Expressplay apropriado.
 
 Um exemplo é o seguinte URL:
 
@@ -25,7 +24,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-A ID de armazenamento da chave de criptografia de conteúdo ou CEKSID fornecida ao parâmetro `kid` e a chave de criptografia de conteúdo ou CEK fornecida ao parâmetro `contentKey` devem corresponder à ID de armazenamento da chave de criptografia de conteúdo e à chave de criptografia de conteúdo usada para empacotamento. O texto a seguir é um exemplo da resposta do servidor de token:
+A ID de armazenamento da chave de criptografia de conteúdo ou CEKSID fornecida para o `kid` e a chave de criptografia de conteúdo ou CEK fornecida ao `contentKey` O parâmetro deve corresponder à ID de armazenamento da chave de criptografia de conteúdo e à chave de criptografia de conteúdo usadas para o empacotamento. O texto a seguir é um exemplo da resposta do servidor de token:
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -34,7 +33,7 @@ https://wv.service.expressplay.com/hms/wv/rights/
  SJ4o-d8teAkUZUtW3Od5V-SHsCLnAlbFW84K71h2xNUiMAvRcUFBG3bjxMQ
 ```
 
-Você pode
+Você pode então:
 
-* usar o URL retornado e a consulta como o URL do servidor de licença ou
-* retire a consulta do URL e passe o ExpressPlayToken separadamente como um cabeçalho POST HTTP
+* usar o URL retornado e consultar como o URL do servidor de licenças, ou
+* retire a consulta do URL e passe o ExpressPlayToken separadamente como um cabeçalho de POST HTTP

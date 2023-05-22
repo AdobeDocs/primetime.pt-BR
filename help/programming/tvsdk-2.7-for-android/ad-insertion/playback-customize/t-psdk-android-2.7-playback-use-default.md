@@ -1,47 +1,46 @@
 ---
-description: Você pode optar por usar comportamentos de publicidade padrão.
+description: Você pode optar por usar comportamentos de anúncio padrão.
 title: Usar o comportamento de reprodução padrão
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: eb4ce0b4-9dfd-4de8-8cbf-8aba093a5ddd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
+# Usar o comportamento de reprodução padrão  {#use-the-default-playback-behavior}
 
-# Usar o comportamento de reprodução padrão {#use-the-default-playback-behavior}
-
-Você pode optar por usar comportamentos de publicidade padrão.
+Você pode optar por usar comportamentos de anúncio padrão.
 
 1. Para usar comportamentos padrão, conclua uma das seguintes tarefas:
 
-   * Se você implementar sua própria classe `AdvertisingFactory`, retorne null para `createAdPolicySelector`.
+   * Se você implementar o seu próprio `AdvertisingFactory` classe, retornar nulo para `createAdPolicySelector`.
 
-   * Se você não tiver uma implementação personalizada para a classe `AdvertisingFactory`, o TVSDK usará um seletor de política de publicidade padrão.
+   * Se você não tiver uma implementação personalizada para o `AdvertisingFactory` classe, o TVSDK usa um seletor de política de anúncio padrão.
 
 ## Configurar reprodução personalizada {#set-up-customized-playback}
 
-Você pode personalizar ou substituir comportamentos de publicidade.
+Você pode personalizar ou substituir comportamentos de anúncios.
 
-Antes de personalizar ou substituir comportamentos de anúncios, registre a instância da política de anúncios com TVSDK.
+Antes de personalizar ou substituir comportamentos de anúncios, registre a instância da política de anúncios com o TVSDK.
 
-* Implemente a interface `AdPolicySelector` e todos os seus métodos.
+* Implementar o `AdPolicySelector` e todos os seus métodos.
 
-   Essa opção é recomendada se você precisar substituir **all** os comportamentos de publicidade padrão.
+   Essa opção é recomendada se você precisar substituir **all** os comportamentos de anúncio padrão.
 
-* Estenda a classe `DefaultAdPolicySelector` e forneça implementações somente para os comportamentos que exigem personalização.
+* Estenda o `DefaultAdPolicySelector` e fornecem implementações somente para os comportamentos que exigem personalização.
 
-   Essa opção é recomendada se você precisar substituir apenas **some** dos comportamentos padrão.
+   Essa opção é recomendada se você precisar substituir apenas o **alguns** dos comportamentos padrão.
 
-Para personalizar os comportamentos do anúncio:
+Para personalizar comportamentos de anúncios:
 
-1. Implemente a interface `AdPolicySelector` e todos os seus métodos.
-1. Atribua a instância de política a ser usada pelo TVSDK por meio do setor de publicidade.
+1. Implementar o `AdPolicySelector` e todos os seus métodos.
+1. Atribua a instância de política a ser usada pelo TVSDK por meio da fábrica de publicidade.
 
    >[!NOTE]
    >
-   >As políticas de anúncio personalizadas registradas no início da reprodução são apagadas quando a instância `MediaPlayer` é desalocada. O aplicativo deve registrar uma instância do seletor de políticas sempre que uma nova sessão de reprodução for criada.
+   >As políticas de anúncios personalizados registradas no início da reprodução são apagadas quando a variável `MediaPlayer` instância desalocada. Seu aplicativo deve registrar uma instância do seletor de políticas sempre que uma nova sessão de reprodução for criada.
 
    Por exemplo:
 

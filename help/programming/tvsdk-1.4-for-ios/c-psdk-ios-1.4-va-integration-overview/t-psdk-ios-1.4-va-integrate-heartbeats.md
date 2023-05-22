@@ -1,6 +1,6 @@
 ---
 description: Você pode configurar o player para rastrear e analisar o uso do vídeo.
-title: Inicializar e configurar análises de vídeo
+title: Inicializar e configurar a análise de vídeo
 exl-id: dbb1e0b4-2a9e-4687-952d-4772440c1643
 source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
@@ -9,28 +9,28 @@ ht-degree: 0%
 
 ---
 
-# Inicializar e configurar análises de vídeo{#initialize-and-configure-video-analytics}
+# Inicializar e configurar a análise de vídeo{#initialize-and-configure-video-analytics}
 
 Você pode configurar o player para rastrear e analisar o uso do vídeo.
 
 Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se você tem o seguinte:
 
 * TVSDK para iOS
-* Informações de configuração/inicialização - Entre em contato com o representante do Adobe para obter as informações específicas da conta de rastreamento de vídeo:
+* Informações de configuração/inicialização - entre em contato com o representante da Adobe para obter informações específicas sobre a conta de rastreamento de vídeo:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
-   <td colname="col2"> <p>Importante:  Este nome de arquivo de configuração JSON deve permanecer <span class="codeph"> ADBMobileConfig.json </span>. Não é possível alterar o nome e o caminho deste ficheiro de configuração. O caminho para esse arquivo deve ser <span class="codeph"> &lt;source root&gt;/AdobeMobile </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
+   <td colname="col2"> <p>Importante: esse nome de arquivo de configuração JSON deve permanecer <span class="codeph"> ADBMobileConfig.json </span>. O nome e o caminho deste arquivo de configuração não podem ser alterados. O caminho para este arquivo deve ser <span class="codeph"> &lt;source root=""&gt;/AdobeMobile </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> Ponto de extremidade do servidor  </span> de rastreamento do AppMeasurement </td> 
-   <td colname="col2"> O URL do ponto de extremidade da coleção de back-end do Adobe Analytics (antigo SiteCatalyst). </td> 
+   <td colname="col1"> <span class="codeph"> AppMeasurement </span> ponto de extremidade do servidor de rastreamento </td> 
+   <td colname="col2"> O URL do endpoint da coleção de back-end do Adobe Analytics (antigo SiteCatalyst). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Ponto de extremidade do servidor de rastreamento do Video Analytics </td> 
-   <td colname="col2"> O URL do ponto de extremidade da coleção de back-end da análise de vídeo. É aqui que todas as chamadas de rastreamento de pulsação de vídeo são enviadas. <p>Dica:  O URL do servidor de rastreamento do visitante é o mesmo do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o Serviço de ID de visitante, consulte <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementar o Serviço de ID </a>. </p> </td> 
+   <td colname="col1"> Ponto de acesso do servidor de rastreamento de análise de vídeo </td> 
+   <td colname="col2"> A URL do ponto de extremidade da coleção de back-end da análise de vídeo. Aqui, todas as chamadas de rastreamento de heartbeat de vídeo são enviadas. <p>Dica: o URL do servidor de rastreamento do visitante é o mesmo URL do servidor de rastreamento do Analytics. Para obter informações sobre como implementar o Serviço de ID de visitante, consulte <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementar o serviço de ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nome da conta </td> 
@@ -38,18 +38,18 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
   </tr> 
   <tr> 
    <td colname="col1"> ID da organização do Marketing Cloud </td> 
-   <td colname="col2"> Um valor da string necessário para instanciar o componente Visitante. </td> 
+   <td colname="col2"> Um valor de string necessário para instanciar o componente Visitante. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Editor </td> 
-   <td colname="col2"> Esta é a Publisher ID, fornecida aos clientes pelo representante do Adobe. <p>Dica:  Essa ID não é apenas uma string com o nome da marca/televisão. </p> </td> 
+   <td colname="col2"> Essa é a ID do editor, fornecida aos clientes pelo representante da Adobe. <p>Dica: essa ID não é apenas uma sequência de caracteres com o nome da marca/televisão. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-Para configurar o rastreamento de vídeo no player:
+Para configurar o rastreamento de vídeo no seu reprodutor:
 
-1. Confirme se as opções de tempo de carregamento no arquivo de recurso `ADBMobileConfig.json` estão corretas.
+1. Confirme se as opções de tempo de carregamento no `ADBMobileConfig.json` o arquivo de recurso está correto.
 
    ```
    { 
@@ -78,27 +78,27 @@ Para configurar o rastreamento de vídeo no player:
    }
    ```
 
-   Esse arquivo de configuração formatado JSON é fornecido como um recurso com TVSDK. O reprodutor lê esses valores somente no momento do carregamento e os valores permanecem constantes enquanto o aplicativo é executado.
+   Esse arquivo de configuração formatado em JSON é fornecido como um recurso com TVSDK. O reprodutor lê esses valores somente no momento do carregamento e os valores permanecem constantes enquanto o aplicativo é executado.
 
    Para configurar as opções de tempo de carregamento:
 
-   1. Confirme se o arquivo `ADBMobileConfig.json` contém os valores apropriados que são fornecidos por Adobe.
-   1. Confirme se este arquivo está localizado na pasta `AdobeMobile`.
+   1. Confirme se o `ADBMobileConfig.json` O arquivo contém os valores apropriados fornecidos pelo Adobe.
+   1. Confirme se esse arquivo está localizado na `AdobeMobile` pasta.
 
-      Essa pasta deve estar localizada na raiz da árvore de origem do aplicativo.
+      Esta pasta deve estar localizada na raiz da árvore de origem do aplicativo.
    1. Compile e crie seu aplicativo.
    1. Implante e execute o aplicativo agrupado.
 
-      Para obter mais informações sobre essas configurações de AppMeasurement, consulte [Medição de vídeo no Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
-1. Inicialize e configure os metadados de rastreamento da pulsação de vídeo.
+      Para obter mais informações sobre essas configurações do AppMeasurement, consulte [Medição de vídeo no Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
+1. Inicialize e configure os metadados de rastreamento de pulsação de vídeo.
 
    >[!IMPORTANT]
    >
-   >Você pode interromper o midstream do módulo de análise de vídeo e reinicializá-lo novamente, conforme necessário. Antes de reinicializar o módulo, verifique se os metadados de análise de vídeo também são atualizados para os metadados de conteúdo corretos. Para recriar os metadados, repita as subetapas 1 e 2.
+   >Você pode parar o módulo de análise de vídeo midstream e reinicializá-lo novamente, conforme necessário. Antes de reinicializar o módulo, verifique se os metadados de análise de vídeo também estão atualizados para os metadados de conteúdo corretos. Para recriar os metadados, repita as subetapas 1 e 2.
 
-   1. Crie uma instância dos metadados do Video Analytics.
+   1. Crie uma instância dos metadados da Análise de vídeo.
 
-      Essa instância contém todas as informações de configuração necessárias para ativar o rastreamento de pulsação de vídeo. Por exemplo:
+      Essa instância contém todas as informações de configuração necessárias para ativar o rastreamento de video heartbeat. Por exemplo:
 
       ```
       - (PTVideoAnalyticsTrackingMetadata *)getVideoAnalyticsTrackingMetadata 
@@ -126,7 +126,7 @@ Para configurar o rastreamento de vídeo no player:
 
    1. Adicione os metadados do Video Analytics à instância de metadados global.
 
-      Quando estiver pronto, defina a instância dos metadados globais no recurso de mídia ou no item do reprodutor de mídia:
+      Quando estiver pronto, defina a instância de metadados globais no recurso de mídia ou no item do reprodutor de mídia:
 
       ```
       - (PTMetadata *)createMetadata 
@@ -153,16 +153,16 @@ Para configurar o rastreamento de vídeo no player:
 
       >[!TIP]
       >
-      >Sempre crie uma nova instância do rastreador para cada sessão de reprodução de conteúdo e remova a referência anterior após desconectar a instância do reprodutor de mídia.
+      >Sempre crie uma nova instância do rastreador para cada sessão de reprodução de conteúdo e remova a referência anterior depois de desanexar a instância do reprodutor de mídia.
 
       ```
       self.videoAnalyticsTracker =  
         [[[PTVideoAnalyticsTracker alloc] initWithMediaPlayer:self.player] autorelease];
       ```
 
-   1. Destrua o rastreador do Video Analytics.
+   1. Destruir o rastreador do Video Analytics.
 
-      Antes de iniciar uma nova sessão de reprodução de conteúdo, destrua a instância anterior do rastreador de vídeo. Depois de receber o evento de conclusão de conteúdo (ou notificação), aguarde alguns minutos antes de destruir a instância do rastreador de vídeo. A destruição imediata da instância pode interferir na capacidade do rastreador do Video Analytics de enviar um ping de conclusão de vídeo.
+      Antes de começar uma nova sessão de reprodução de conteúdo, destrua a instância anterior do rastreador de vídeo. Após receber o evento de conclusão de conteúdo (ou notificação), aguarde alguns minutos antes de destruir a instância do rastreador de vídeo. Destruir a instância imediatamente pode interferir na capacidade do rastreador do Video Analytics de enviar um ping de conclusão de vídeo.
 
       ```
       self.videoAnalyticsTracker = nil;
@@ -170,11 +170,11 @@ Para configurar o rastreamento de vídeo no player:
 
    1. Marca manualmente o fluxo Live/Linear como concluído.
 
-      Se você tiver vários episódios em um stream ao vivo, é possível marcar manualmente um episódio como concluído usando a API completa. Isso encerra a sessão de rastreamento de vídeo do episódio atual e você pode iniciar uma nova sessão de rastreamento do próximo episódio.
+      Se você tiver vários episódios em um stream ao vivo, poderá marcar manualmente um episódio como concluído usando a API completa. Isso encerra a sessão de rastreamento de vídeo do episódio de vídeo atual, e você pode iniciar uma nova sessão de rastreamento para o próximo episódio.
 
       >[!TIP]
       >
-      >Essa API é opcional e não é necessária para o rastreamento de vídeo VOD.
+      >Essa API é opcional e não é necessária para o rastreamento de vídeo de VOD.
 
       ```
       if (self.videoAnalyticsTracker) 

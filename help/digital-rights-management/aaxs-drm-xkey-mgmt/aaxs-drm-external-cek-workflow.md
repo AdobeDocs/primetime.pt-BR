@@ -1,25 +1,24 @@
 ---
-title: Fluxo de trabalho CEK externo do DRM AXS
-description: Esse workflow é uma saída da maioria dos sistemas DRM existentes, pois não requer o uso de nenhum repositório central ou do Sistema de Gerenciamento de Chave de Conteúdo (CKMS)
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Fluxo de Trabalho Externo CEK do AXS DRM
+description: Esse fluxo de trabalho é um desvio da maioria dos sistemas DRM existentes, pois não requer o uso de nenhum repositório central ou CKMS (Content Key Management System, sistema de gerenciamento de chaves de conteúdo)
+exl-id: f084aa57-8bef-40a0-b52d-4d23dfdf36c4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
 
 ---
 
+# Fluxo de Trabalho Externo CEK do AXS DRM{#aaxs-drm-external-cek-workflow}
 
-# Fluxo de trabalho CEK externo do DRM AXS{#aaxs-drm-external-cek-workflow}
-
-Esse workflow é uma saída da maioria dos sistemas DRM existentes, pois não requer o uso de nenhum repositório central ou do Sistema de Gerenciamento de Chave de Conteúdo (CKMS). No entanto, para os clientes que desejam que o AXS funcione com seu CKMS existente, o AAXS fornece um recurso chamado &quot;CEK externo&quot;, no qual o CEK é fornecido externamente no momento da embalagem e da emissão da licença.
+Esse fluxo de trabalho é um desvio da maioria dos sistemas DRM existentes, pois não requer o uso de nenhum repositório central ou Sistema de gerenciamento de chaves de conteúdo (CKMS). No entanto, para clientes que desejam que o AXS funcione com seu CKMS existente, o AXS fornece um recurso chamado &quot;CEK externo&quot;, no qual o CEK é fornecido externamente no momento da emissão da embalagem e da licença.
 
 ![](assets/ECEK_Workflow.PNG)
 
-1. (Pacote) O AAXS Java SDK é fornecido com um CEK e uma CEK ID.
-1. (Pacote) O CEK é usado para criptografar conteúdo.
+1. (Pacote) O SDK Java AXS é fornecido com um CEK e uma ID de CEK.
+1. (Pacote) O CEK é usado para criptografar o conteúdo.
 1. (Pacote) A ID do CEK é inserida nos metadados DRM do conteúdo.
-1. O dispositivo tenta reproduzir o conteúdo solicitando uma licença do servidor AXS.
-1. (Licenciamento) O servidor AAXS extrai a ID do CEK dos metadados de conteúdo.
-1. O servidor AAXS recupera o CEK do CKMS.
-1. (Licenciamento) O servidor AXS emite ao dispositivo uma licença que contém o CEK.
+1. O dispositivo tenta reproduzir o conteúdo solicitando uma licença ao servidor AXS.
+1. (Licenciamento) O servidor AXS extrai a ID do CEK dos metadados de conteúdo.
+1. O servidor AXS recupera o CEK do CKMS.
+1. (Licenciamento) O servidor AXS emite para o dispositivo uma licença que contém o CEK.

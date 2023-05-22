@@ -1,33 +1,33 @@
 ---
 title: Pré-autorização da API do iOS/tvOS
 description: Pré-autorização da API do iOS/tvOS
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
 
-
 # Pré-autorizar {#preauthorize}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 A API pré-autorizada pode ser usada para obter uma decisão de pré-autorização para um ou mais recursos, dessa forma, o aplicativo pode implementar dicas de interface do usuário e/ou filtragem de conteúdo.
 
 >[!IMPORTANT]
 >
->A API de autorização **must** ser usada antes de conceder ao usuário acesso aos recursos especificados.
+>A API de autorização **deve** ser usado antes de conceder ao usuário acesso aos recursos especificados.
 
-Caso o resultado de resposta da API Pré-autorizar contenha um ou mais recursos com uma decisão de pré-autorização negada, informações de erro adicionais podem ser incluídas **(veja a observação abaixo)** para cada recurso afetado.
+Se o resultado da resposta da API pré-autorizada contiver um ou mais recursos com uma decisão de pré-autorização negada, informações adicionais sobre o erro poderão ser incluídas **(veja a observação abaixo)** para cada recurso afetado.
 
 >[!IMPORTANT]
 >
->O recurso aprimorado de relatório de erros que adiciona informações de erro adicionais para decisões de pré-autorização negadas está disponível mediante solicitação, pois precisa ser ativado no lado de configuração da Autenticação do Adobe Primetime.
+>O recurso aprimorado de relatório de erros, que adiciona informações de erro adicionais para decisões de pré-autorização negadas, está disponível mediante solicitação, pois deve ser ativado no lado da configuração da Autenticação Adobe Primetime.
 
-Caso a solicitação da API pré-autorizada não pudesse ser atendida devido a um erro do SDK de autenticação da Adobe Primetime ou caso um erro de serviços de autenticação da Adobe Primetime ocorresse, uma informação de erro adicional (independentemente da configuração acima) e nenhum recurso será incluído como parte do resultado da resposta da API pré-autorizar.
+Caso a solicitação da API pré-autorizada não possa ser atendida devido a um erro do SDK de autenticação da Adobe Primetime ou caso ocorra um erro nos serviços de autenticação da Adobe Primetime, informações de erro adicionais (independentemente da configuração acima) e nenhum recurso serão incluídos como parte do resultado da resposta da API pré-autorizada.
 
 </br>
 
@@ -38,16 +38,16 @@ Caso a solicitação da API pré-autorizada não pudesse ser atendida devido a u
 
 **Parâmetros:**
 
-- Pré-autorizarSolicitação: O objeto de solicitação usado para transmitir o conteúdo da solicitação de API;
-- AccessEnablerCallback: O objeto de retorno de chamada usado para retornar a resposta da API;
-- Pré-autorizarResposta: O objeto de resposta usado para retornar o conteúdo da resposta da API;
+- PreauthorizeRequest: o objeto de solicitação usado para transmitir o conteúdo da solicitação de API;
+- AccessEnablerCallback: o objeto de retorno de chamada usado para retornar a resposta da API;
+- PreauthorizeResponse: o objeto de resposta usado para retornar o conteúdo de resposta da API;
 
  
 </br>
 
 ## `class PreauthorizeRequest`{#androidpreauthorizerequest}
 
-### **classe Pré-autorizarRequest.Builder**
+### **classe PreauthorizeRequest.Builder**
 
 ```
     ///
@@ -111,7 +111,7 @@ Caso a solicitação da API pré-autorizada não pudesse ser atendida devido a u
 ```
  
 
-## **enum PreauthorizedRequest.Feature**
+## **enum PreauthorizeRequest.Feature**
 
 ```
     ///
@@ -161,17 +161,17 @@ Caso a solicitação da API pré-autorizada não pudesse ser atendida devido a u
 
 ### Exemplos:
 
-Esta seção destaca a estrutura JSON de alguns possíveis objetos PreauthorizedResponse.
+Esta seção destaca a estrutura JSON de alguns objetos PreauthorizeResponse possíveis.
 
 >[!IMPORTANT]
 >
->Os JSONs apresentados pelos exemplos a seguir são acessíveis somente por meio das classes de modelo mostradas neste documento. Você não poderá acessar as propriedades desses JSONs senão por meio de métodos públicos.
+>Os JSONs apresentados pelos exemplos a seguir podem ser acessados somente por meio das classes de modelo mostradas neste documento. Você não será capaz de acessar as propriedades desses JSONs por meio de métodos públicos.
 
 >[!IMPORTANT]
 >
 >A lista de possíveis erros adicionais recuperados por meio do recurso aprimorado de relatório de erros está documentada em [Relatório de erros avançado](/help/authentication/enhanced-error-codes.md).
 
-#### Êxito
+#### Bem-sucedido
 
 Todos os recursos solicitados estão tendo uma decisão de pré-autorização positiva
 
@@ -195,7 +195,7 @@ Todos os recursos solicitados estão tendo uma decisão de pré-autorização po
 ```
  
 
-Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o recurso aprimorado de relatório de erros não está habilitado na configuração de Autenticação do Adobe Primetime
+Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o recurso de relatório de erros aprimorado não está habilitado na configuração de Autenticação do Adobe Primetime
 
 ```JSON
     {
@@ -218,7 +218,7 @@ Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o r
 ```
  
 
-Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o recurso aprimorado de relatório de erros está habilitado na configuração de Autenticação do Adobe Primetime
+Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o recurso de relatório de erros aprimorado está habilitado na configuração de Autenticação do Adobe Primetime
 
 ```JSON
     {
@@ -253,7 +253,7 @@ Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o r
 
  
 
-Os serviços de Autenticação do Adobe Primetime atingiram um erro ao atender à solicitação de pré-autorização da API
+Os serviços de Autenticação do Adobe Primetime encontram um erro ao atender à solicitação da API Pré-autorizada
 
 ```JSON
     {
@@ -273,7 +273,7 @@ Os serviços de Autenticação do Adobe Primetime atingiram um erro ao atender �
 
 #### Falha
 
-O SDK de autenticação do Adobe Primetime atinge um erro ao atender à solicitação de API pré-autorização
+O SDK de autenticação da Adobe Primetime apresenta um erro ao atender à solicitação da API pré-autorizada
 
 ```JSON
     {
@@ -377,7 +377,7 @@ O SDK de autenticação do Adobe Primetime atinge um erro ao atender à solicita
 
 <br>
 
-## **decisão de classe** {#decision}
+## **Decisão de classe** {#decision}
 
 ```
     ///

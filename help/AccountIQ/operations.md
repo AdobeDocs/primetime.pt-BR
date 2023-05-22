@@ -1,25 +1,25 @@
 ---
-title: Operações no QI da conta
-description: As operações no Account IQ envolvem a execução de ações para realizar automações e operações em massa em contas de assinantes e acompanhar seus efeitos.
+title: Operações no Account IQ
+description: As operações no Account IQ envolvem a tomada de ações para executar automações e operações em massa em contas de assinantes e rastrear seus efeitos.
 exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
 source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 # Operações {#operations-tab-next-steps}
 
-Depois de entender os padrões de uso dos assinantes e identificar o compartilhamento de senha para o segmento selecionado (usando relatórios e análises no Account IQ), você pode realizar ações direcionadas para um objetivo de reduzir o compartilhamento de senha.
+Depois de entender os padrões de uso dos assinantes e identificar o compartilhamento de senhas para o segmento selecionado (usando relatórios e análises no Account IQ), você pode tomar ações direcionadas para um objetivo e reduzir o compartilhamento de senhas.
 
-A funcionalidade Operações no Account IQ ajuda você a lidar e gerenciar efetivamente o compartilhamento de credenciais por meio de procedimentos focalizados chamados de operações. Ele oferece opções para projetar ações objetivas e direcionadas (com base no objetivo) para um grupo específico de contas de assinantes e automatizar a execução por uma duração futura. Por meio da funcionalidade Operações , você pode não apenas criar e executar operações, mas também medir seus impactos. Portanto, ao medir os impactos, você pode ajustar sua estratégia para otimizar o efeito, seja convertendo mutuários ou reduzindo o compartilhamento de credenciais.
+A funcionalidade de operações no Account IQ ajuda você a lidar e gerenciar com eficiência o compartilhamento de credenciais por meio de procedimentos focados chamados operações. Ele oferece opções para projetar um objetivo e personalizar ações direcionadas (com base no objetivo) para grupos específicos de contas de assinantes, além de automatizar a execução para uma duração futura. Através da funcionalidade Operações, você pode não só criar e executar operações, mas também medir seus impactos. Então, avaliando os impactos, você pode ajustar sua estratégia para otimizar o efeito, seja convertendo mutuários ou mitigando o compartilhamento de credenciais.
 
-Para exibir **Operações** seleção de página **Operações** opção em **Ações** na navegação à esquerda do aplicativo Account IQ. A página Operações lista todas as operações já existentes no sistema de QI da conta, juntamente com seus detalhes.
+Para exibir **Operações** seleção de página **Operações** opção em **Ações** na navegação à esquerda do aplicativo Account IQ. A página Operações lista todas as operações já existentes no sistema Account IQ, juntamente com seus detalhes.
 
 ![](assets/operations-page.png)
 
-*Figura: Lista e detalhes das operações existentes no Account IQ*
+*Figura: Lista e detalhes de operações existentes no Account IQ*
 
 Na página Operações, é possível:
 
@@ -27,15 +27,15 @@ Na página Operações, é possível:
 
 * Exibir detalhes da operação, como:
 
-   * status (Programado, Em Execução, Encerrado, Erro ou Interrompido)
+   * Status (Agendado, Em Execução, Encerrado, Com Erro ou Interrompido)
 
-   * andamento (em porcentagem de conclusão)
+   * progresso (em porcentagem de conclusão)
 
-   * público-alvo (segmento para executar a operação)
+   * público alvo (segmento no qual executar a operação)
 
-   * horário (data de início e de término da operação)
+   * programação (data inicial e final da operação)
 
-   * criação e data final da operação
+   * data de criação e de término da operação
 
 * [Criar nova operação](/help/AccountIQ/operation-affecting-user-segment.md)
 
@@ -51,28 +51,28 @@ Na página Operações, é possível:
 
 ## Exibir relatórios de operação {#operation-reports}
 
-Você pode analisar os impactos de uma operação ao visualizar seu relatório. Para exibir o relatório de uma operação:
+Você pode analisar os impactos de uma operação exibindo seu relatório. Para exibir um relatório de operação:
 
-1. Selecione o nome da operação na página principal de Operações.
+1. Selecione o nome da operação na página principal Operações.
 
-   O relatório é exibido no formato de um gráfico de coluna empilhada.
+   O relatório é exibido no formato de um gráfico de colunas empilhadas.
 
    ![](assets/operation-impact-report.png)
 
    *Figura: Relatório de operações para visualizar os impactos das operações*
 
-   O eixo X representa o período de avaliação e o eixo y descreve o impacto da operação (em termos de número de contas num segmento durante o período de avaliação). Cada barra é dividida em três partes.
+   O eixo X representa o período de avaliação e o eixo y representa o impacto da operação (em termos de número de contas em um segmento durante o período de avaliação). Cada barra é dividida em três partes.
 
    * Uma parte representa o número de contas que ainda atendem aos critérios do segmento de operação.
 
-   * Outra parte representa o número de contas ativas para o período que estavam originalmente no segmento, mas não atendem mais aos critérios do segmento de operação.
+   * Outra parte representa o número de contas ativas para esse período que estavam originalmente no segmento, mas que não atendem mais aos critérios do segmento de operação.
 
    * A terceira parte representa as contas que não estavam ativas nesse período.
    >[!NOTE]
    >
-   >A Primeira barra representa o número de contas que atendem às condições do segmento de operação no início do período de avaliação.
+   >A primeira barra representa o número de contas que atendem às condições do segmento de operação no início do período de avaliação.
 
-   Com o tempo, o gráfico mostra o efeito de sua ação (por meio da operação), indicando o número de contas que alteraram seu comportamento em relação aos critérios originais (por exemplo, ter probabilidade de compartilhamento superior a 90 e usar mais de 5 dispositivos) ou ficaram inativas.
+   Com o tempo, o gráfico mostra o efeito da sua ação (por meio da operação ), indicando o número de contas que alteraram seu comportamento em relação aos critérios originais (por exemplo, têm probabilidade de compartilhamento superior a 90 e usam mais de 5 dispositivos) ou que se tornaram inativas.
 
 <!--For example, in the above image the variable on the y-axis is number of accounts. Looking at the graph you can compare the number of accounts that are in the operations' segment versus the number of accounts that are outside the operations segment at a particular time (such as week 2nd of the operations evaluation period). Therefore, you can analyze how over the evaluation period do number of accounts vary within the operation segment and outside the segment.
 

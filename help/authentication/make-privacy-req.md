@@ -1,27 +1,27 @@
 ---
 title: Como fazer uma solicitação de privacidade
 description: Como fazer uma solicitação de privacidade
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: abb21306-98d6-4899-914a-bdfa85cbd204
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
 
 ---
 
-
 # Como fazer uma solicitação de privacidade {#howto-make-privacy-request}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 ## Identificadores e namespaces {#identifier-namespace}
 
-Ao enviar uma solicitação de acesso ou exclusão de privacidade, o aplicativo do cliente precisa incluir os seguintes identificadores:
+Ao enviar uma solicitação de Privacidade de acesso ou exclusão, o aplicativo do cliente precisa incluir os seguintes identificadores:
 
 * **mvpdID** - Identificador exclusivo do MVPD.
-* **userID** - Identifica exclusivamente o usuário de um aplicativo do Programador, mas é originário do MVPD. Consulte Entendendo as IDs de usuário na Visão geral do programador.
-* **IMSOrgID** - a ID da organização do serviço da Adobe Experience Cloud Identity Management, que identifica exclusivamente o cliente na Adobe Experience Cloud
+* **userID** - Identifica exclusivamente o usuário de um aplicativo do programador, mas é originário do MVPD. Consulte Compreensão das IDs de usuário na Visão geral do programador.
+* **IMSOrgID** - A ID da organização de serviço da Adobe Experience Cloud Identity Management, que identifica exclusivamente o cliente na Adobe Experience Cloud
 
 
 Verifique a amostra abaixo:
@@ -36,23 +36,23 @@ Verifique a amostra abaixo:
 
 >[!IMPORTANT]
 >
->Os usuários devem ser autenticados para poderem gerar solicitações de privacidade para a Autenticação do Primetime. Caso contrário, os programadores devem encontrar outros meios de extrair a ID de usuário do MVPD.
+>Os usuários devem ser autenticados para gerar solicitações de privacidade para a Autenticação do Primetime. Caso contrário, os programadores devem encontrar outros meios de extrair a ID de usuário do MVPD.
 
 ## Tipos de solicitações {#req-type}
 
-A Autenticação do Primetime é compatível com solicitações de Acesso e Exclusão.
+A Autenticação do Primetime dá suporte a solicitações de Acesso e Exclusão.
 
-### Acesso {#access-req}
+### Access {#access-req}
 
 Para uma solicitação de acesso:
 
-forneceremos um arquivo JSON que contém um resumo do número total de solicitações de autenticação e autorização criadas para esse Titular de dados.
-todos esses eventos são filtrados por cliente.
+forneceremos de volta um arquivo JSON que contém um resumo do número total de solicitações de autenticação e autorização criadas para esse Titular de dados.
+todos esses eventos são filtrados por Cliente.
 
 
-**Exemplo de solicitação**
+**Solicitar amostra**
 
-Você deve carregar um JSON com os identificadores de autenticação do Primetime para os quais está enviando a solicitação de acesso a dados. Para ver a aparência de um JSON bem formado, consulte esta amostra:
+Você deve carregar um JSON com os identificadores de Autenticação do Primetime para os quais está enviando a solicitação de acesso a dados. Para ver a aparência de um JSON bem formado, consulte esta amostra:
 
 ```JSON
 {
@@ -78,7 +78,7 @@ Você deve carregar um JSON com os identificadores de autenticação do Primetim
 }
 ```
 
-**Exemplo de resposta**
+**Amostra de resposta**
 
 ```JSON
 {
@@ -132,9 +132,9 @@ Você deve carregar um JSON com os identificadores de autenticação do Primetim
 
 ### Excluir {#delete-req}
 
-Você deve carregar um JSON com os identificadores de autenticação do Primetime para os quais está enviando a solicitação de exclusão de dados. Para ver a aparência de um JSON bem formado, consulte esta amostra:
+Você deve carregar um JSON com os identificadores de Autenticação do Primetime para os quais está enviando a solicitação de exclusão de dados. Para ver a aparência de um JSON bem formado, consulte esta amostra:
 
-**Exemplo de solicitação**
+**Solicitar amostra**
 
 ```JSON
 {
@@ -160,12 +160,12 @@ Você deve carregar um JSON com os identificadores de autenticação do Primetim
 }
 ```
 
-**Exemplo de resposta**
+**Amostra de resposta**
 
-Para uma solicitação de exclusão:
+Para uma solicitação Delete:
 
-* compartilhamos apenas um recibo com os dados removidos, não um arquivo agregado com todos os dados removidos.
-* o recebimento incluído na resposta contém um resumo do número total de tokens de autenticação e autorização encontrados para esse Titular de dados.
+* compartilhamos apenas um recibo de que os dados foram removidos, não um arquivo agregado com todos os dados removidos.
+* o recibo incluído na resposta contém um resumo do número total de tokens de autenticação e autorização encontrados para esse titular de dados.
 
 ```JSON
 {
@@ -219,41 +219,41 @@ Para uma solicitação de exclusão:
 
 ## Como acionar uma solicitação {#trigger-req}
 
-Há duas opções para os clientes enviarem solicitações de privacidade ao Adobe:
+Há duas opções para os clientes enviarem solicitações de privacidade para o Adobe:
 
-* **manualmente** - utilizando [Interface do usuário do Privacy Service](#privacy-service-ui)
-* **automaticamente** - utilizando [API Privacy Service ](#privacy-service-api)
+* **manualmente** - usando [Interface do usuário do Privacy Service](#privacy-service-ui)
+* **automaticamente** - usando [API PRIVACY SERVICE ](#privacy-service-api)
 
-### Ao usar a interface do usuário do Privacy Service {#privacy-service-ui}
+### Ao usar a interface do Privacy Service {#privacy-service-ui}
 
-A [tutorial completo](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) sobre como acessar e usar a interface do usuário do Privacy Service está disponível online através dos serviços do Adobe I/O. Além disso, os clientes podem usar esse link para acessar a biblioteca de vídeos e artigos sobre as regras de privacidade. Clique no menu Adobe Experience Cloud e RGPD. Isso abrirá uma série de vídeos - &quot;Instruções sobre a interface do usuário do GDPR&quot; explica como usá-lo.
+A [tutorial completo](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) sobre como acessar e usar a interface do usuário do Privacy Service está disponível online através dos serviços do Adobe I/O. Além disso, os clientes podem usar este link para acessar a biblioteca de vídeos e artigos sobre Regulamentos de privacidade. Clique no menu Adobe Experience Cloud e GDPR. Isso abrirá vários vídeos - &quot;Como fazer a interface do GDPR&quot; explica como usá-la.
 
-Na interface do usuário, os clientes precisam carregar seu próprio IMSOrgID e um JSON contendo os detalhes das solicitações do GDPR para cada produto.
+Na interface do usuário, os clientes precisam carregar sua própria IMSOrgID e um JSON contendo detalhes de solicitações do GDPR para cada produto.
 
-### Usando a API do Privacy Service {#privacy-service-api}
+### Ao usar a API de Privacy Service {#privacy-service-api}
 
-O Adobe Experience Platform Privacy Service oferece uma facilitação comum e centralizada de solicitações de acesso/exclusão e de recusa de venda para dados privados.
+O Adobe Experience Platform Privacy Service fornece uma facilitação comum e centralizada de solicitações de acesso/exclusão e solicitações de não participação na venda para dados privados.
 
-O **Documentação da API do Privacy Service** aborda detalhadamente como um cliente do Adobe pode se integrar à API do Adobe.
+A variável **Documentação da API do Privacy Service** A aborda em detalhes como um cliente do Adobe pode se integrar à API do Adobe.
 
 **Visualizar chamadas de API com o Postman (um software gratuito de terceiros):**
 
-* [Coleção de Postman da API do Privacy Service no GitHub](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
-* [Guia de vídeo para criar o ambiente Postman](https://video.tv.adobe.com/v/28832)
+* [Coleção Privacy Service API Postman no GitHub](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
+* [Guia em vídeo para criar o ambiente do Postman](https://video.tv.adobe.com/v/28832)
 * [Etapas para importar ambientes e coleções no Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)
 
 
 **Caminhos da API:**
 
 * URL do gateway da PLATFORM: `https://platform.adobe.io/`
-* Caminho básico para esta API: `/data/core/privacy/jobs`
+* Caminho base para esta API: `/data/core/privacy/jobs`
 * Exemplo de um caminho completo: `https://platform.adobe.io/data/core/privacy/jobs/ping`
 
 
 **Cabeçalhos obrigatórios:**
 
-* Todas as chamadas exigem cabeçalhos `Authorization`, `x-gw-ims-org-id`e `x-api-key`. Para obter mais informações sobre como obter esses valores, consulte o **tutorial de autenticação**.
-* Todas as solicitações com uma carga no corpo da solicitação (como chamadas de POST, PUT e PATCH) devem incluir o cabeçalho `Content-Type` com um valor de `application/json`.
+* Todas as chamadas exigem os cabeçalhos `Authorization`, `x-gw-ims-org-id`, e `x-api-key`. Para obter mais informações sobre como obter esses valores, consulte a **tutorial de autenticação**.
+* Todas as solicitações com uma carga no corpo da solicitação (como chamadas POST, PUT e PATCH) devem incluir o cabeçalho `Content-Type` com um valor de `application/json`.
 
 <!--
 

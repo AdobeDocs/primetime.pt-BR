@@ -2,66 +2,65 @@
 title: Definição de regras baseadas em tempo
 description: Definição de regras baseadas em tempo
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ef72ee76-7d83-486d-86fe-df90c2aaca3a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
+# Definição de regras baseadas em tempo {#defining-time-based-rules}
 
-# Definindo regras baseadas em tempo {#defining-time-based-rules}
+O Adobe Access usa &quot;aplicação suave&quot; de restrições de licença baseadas em tempo. Se um direito de tempo expirar durante a reprodução de um vídeo, o comportamento padrão do Acesso ao Adobe é não restringir a reprodução até a próxima vez que o fluxo de vídeo for recriado (chamando `Netstream.stop()` e `Netstream.play()`).
 
-O Adobe Access utiliza a &quot;aplicação flexível&quot; de restrições de licença baseadas em tempo. Se um direito de tempo expirar durante a reprodução de um vídeo, o comportamento padrão do Acesso ao Adobe é não restringir a reprodução até a próxima vez que o fluxo de vídeo for recriado (chamando `Netstream.stop()` e `Netstream.play()`).
+Embora a aplicação flexível seja o comportamento padrão, você também pode ativar a aplicação forçada executando uma das seguintes tarefas:
 
-Embora a aplicação flexível seja o comportamento padrão, você também pode ativar a aplicação rígida executando uma das seguintes tarefas:
+* Peça ao reprodutor de vídeo que consulte periodicamente a licença para verificar se nenhuma das restrições de tempo expirou. Isso pode ser feito chamando `DRMManager.loadVoucher(LOCAL_ONLY).`Um código de erro indica que a licença armazenada localmente não é mais válida.
+* Sempre que o usuário clicar no botão Pausar, você poderá gravar o carimbo de data e hora atual do vídeo e chamar `Netstream.stop().`Quando o usuário clica no botão Reproduzir, é possível buscar no local gravado e chamar `Netstream.play()`.
 
-* Solicite ao seu reprodutor de vídeo que pesquise periodicamente a licença para verificar se nenhuma das restrições de tempo expirou. Isso pode ser feito ao chamar `DRMManager.loadVoucher(LOCAL_ONLY).`Um código de erro indica que a licença armazenada localmente não é mais válida.
-* Sempre que o usuário clicar no botão Pausar, você poderá gravar o carimbo de data e hora do vídeo atual e chamar `Netstream.stop().`Quando o usuário clicar no botão Reproduzir , você poderá procurar no local gravado e, em seguida, chamar `Netstream.play()`.
-
-## Data de início {#start-date}
+## Data inicial {#start-date}
 
 Especifica a data após a qual uma licença é válida.
 
-Exemplo de caso de uso: Use uma data absoluta para emitir licenças de conteúdo antes da data de disponibilidade de um ativo ou para aplicar um período de &quot;embargo&quot;.
+Exemplo de caso de uso: use uma data absoluta para emitir licenças de conteúdo antes da data de disponibilidade de um ativo, ou para aplicar um período de &quot;embargo&quot;.
 
 ## Data final {#end-date}
 
-Especifica a data após a qual as licenças expiram.
+Especifica a data após a qual uma licença expira.
 
-Exemplo de caso de uso: Use uma data de expiração absoluta para refletir o fim dos direitos de distribuição.
+Exemplo de caso de uso: use uma data de expiração absoluta para refletir o fim dos direitos de distribuição.
 
 ## Data final relativa {#relative-end-date}
 
-Especifica a data de expiração da licença, expressa em relação à data do empacotamento.
+Especifica a data de expiração da licença, expressa em relação à data de embalagem.
 
-Exemplo de caso de uso: Em um processo de empacotamento automatizado, use uma única política com essa opção para uma série de vídeos para definir a data de expiração como 30 dias em relação à data do empacotamento.
+Exemplo de caso de uso: em um processo automatizado de empacotamento, use uma única política com essa opção para uma série de vídeos, a fim de definir a data de expiração para 30 dias em relação à data do empacotamento.
 
-## Duração do armazenamento em cache da licença {#license-caching-duration}
+## Duração do cache de licenças {#license-caching-duration}
 
-Especifica a duração em que uma licença pode ser armazenada em cache no disco no License Store local do cliente sem exigir reaquisição do servidor de licença. Como alternativa, você pode especificar uma data/hora absoluta após a qual uma licença não pode mais ser armazenada em cache.
+Especifica a duração em que uma licença pode ser armazenada em cache no disco no License Store local do cliente sem exigir a reaquisição do servidor de licenças. Como alternativa, você pode especificar uma data/hora absoluta após a qual uma licença não poderá mais ser armazenada em cache.
 
-Depois que a data de expiração do cache tiver passado, a licença não será mais válida e o cliente deverá solicitar uma nova licença do servidor de licenças.
+Depois que a data de expiração do cache for ultrapassada, a licença não será mais válida e o cliente deverá solicitar uma nova licença ao servidor de licenças.
 
-Exemplo de caso de uso: Use a duração do armazenamento em cache de licenças para especificar um período fixo válido para uma licença específica, como em um caso de uso de aluguel. É possível especificar um aluguel de 30 dias (com armazenamento em cache de licenças) para indicar a duração total da licença dentro da qual consumir o conteúdo.
+Exemplo de caso de uso: use a duração do armazenamento em cache de licença para especificar uma quantidade fixa de tempo válida para uma licença específica, como em um caso de uso de aluguel. Uma locação de 30 dias pode ser especificada (com cache de licença) para indicar a duração total da licença dentro da qual o conteúdo será consumido.
 
 ## Janela de reprodução {#playback-window}
 
 Especifica a duração em que uma licença é válida após a primeira vez em que é usada para reproduzir conteúdo protegido.
 
-Exemplo de caso de uso: Alguns modelos de negócios permitem um período de aluguel de 30 dias, mas, uma vez iniciada a reprodução, ele deve ser concluído em 48 horas. Essa longevidade de 48 horas da licença é definida como a janela de reprodução.
+Exemplo de caso de uso: alguns modelos de negócios permitem um período de aluguel de 30 dias, mas, uma vez que a reprodução começa, ela deve ser concluída em 48 horas. Essa duração de 48 horas da licença é definida como a janela de reprodução.
 
 ## Requisitos para sincronização {#requirements-for-synchronization}
 
-Especifica a frequência na qual o cliente sincronizará seu estado com o servidor. Se o cliente tiver recebido uma licença fora de banda (sem que um servidor de licenças seja contatado), as regras de uso poderão especificar que o cliente deve enviar mensagens de sincronização para o servidor a fim de sincronizar a hora segura do cliente e relatar o estado do cliente ao servidor.
+Especifica a frequência com que o cliente sincronizará seu estado com o servidor. Se uma licença fora de banda tiver sido emitida ao cliente (sem que um servidor de licenças tenha sido contatado), as regras de uso poderão especificar que o cliente deve enviar mensagens de sincronização ao servidor para sincronizar o tempo seguro do cliente e relatar o estado do cliente ao servidor.
 
 O comportamento de sincronização é definido usando os seguintes parâmetros:
 
 * Intervalo de Início — Especifica o tempo de espera após a última sincronização bem-sucedida para iniciar outra solicitação de sincronização.
-* Intervalo de Parada Rígida — (Opcional). Não permitir a reprodução se uma sincronização bem-sucedida não tiver ocorrido no período especificado.
-* Forçar Probabilidade de Sincronização — (Opcional). Probabilidade com a qual o cliente deve enviar uma mensagem de sincronização antes do próximo intervalo de início.
+* Intervalo de Interrupção Permanente — (Opcional). Não permitir reprodução se uma sincronização bem-sucedida não tiver ocorrido no período especificado.
+* Probabilidade de sincronização forçada — (opcional). Probabilidade com a qual o cliente deve enviar uma mensagem de sincronização antes do próximo intervalo de início.
 
 >[!NOTE]
 >
->Essa regra de uso é compatível com os clientes do Adobe Access versão 3.0 e superior. O comportamento em clientes mais antigos depende da versão mínima do cliente compatível com o servidor de licenças. Consulte [Versão mínima do cliente](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
+>Esta regra de uso é suportada pelos clientes Adobe Access versões 3.0 e superiores. O comportamento em clientes mais antigos depende da versão mínima do cliente suportada pelo servidor de licenças. Consulte [Versão Mínima do Cliente](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).

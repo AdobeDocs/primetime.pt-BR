@@ -1,22 +1,21 @@
 ---
-description: O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
-title: Implementar o gerenciamento de blecaute
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O TVSDK fornece APIs e códigos de amostra para lidar com períodos de blecaute.
+title: Implementar tratamento de blecaute
+exl-id: 31e4a016-ecba-47cc-b574-553db85ece53
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Implementar tratamento de blecaute {#implement-blackout-handling}
 
-# Implementar o tratamento de blecaute {#implement-blackout-handling}
-
-O TVSDK fornece APIs e código de amostra para lidar com períodos de blecaute.
+O TVSDK fornece APIs e códigos de amostra para lidar com períodos de blecaute.
 
 Para implementar o tratamento de blecaute e fornecer conteúdo alternativo durante o blecaute:
 
-1. Configure seu aplicativo para assinar tags de blecaute em um manifesto de fluxo ao vivo.
+1. Configure seu aplicativo para assinar tags de blecaute em um manifesto de transmissão ao vivo.
 
 ```
  - (void) createMediaPlayer:(PTMediaPlayerItem *)item
@@ -27,7 +26,7 @@ Para implementar o tratamento de blecaute e fornecer conteúdo alternativo duran
  }
 ```
 
-1. Adicione um ouvinte de notificação para `PTTimedMetadataChangedNotification`.
+1. Adicionar um ouvinte de notificação para `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -37,7 +36,7 @@ Para implementar o tratamento de blecaute e fornecer conteúdo alternativo duran
    }
    ```
 
-1. Implemente um método de ouvinte para objetos `PTTimedMetadata` em primeiro plano.
+1. Implementar um método de ouvinte para `PTTimedMetadata` objetos em primeiro plano.
 
    Por exemplo:
 
@@ -61,7 +60,7 @@ Para implementar o tratamento de blecaute e fornecer conteúdo alternativo duran
    }
    ```
 
-1. Lide com objetos `TimedMetadata` com atualizações constantes durante a reprodução.
+1. Alça `TimedMetadata` objetos com atualizações constantes durante a reprodução.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +81,7 @@ Para implementar o tratamento de blecaute e fornecer conteúdo alternativo duran
    }
    ```
 
-1. Adicione o manipulador `PTTimedMetadata` para alternar para o conteúdo alternativo e retornar ao conteúdo principal, conforme indicado pelo objeto `PTTimedMetadata` e seu tempo de reprodução.
+1. Adicione o `PTTimedMetadata` para alternar para conteúdo alternativo e retornar ao conteúdo principal conforme indicado pela `PTTimedMetadata` objeto e seu tempo de reprodução.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +196,7 @@ Para implementar o tratamento de blecaute e fornecer conteúdo alternativo duran
    }
    ```
 
-1. Implemente um método de ouvinte para objetos `PTTimedMetadata` em segundo plano.
+1. Implementar um método de ouvinte para `PTTimedMetadata` objetos em segundo plano.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
@@ -218,7 +217,7 @@ Para implementar o tratamento de blecaute e fornecer conteúdo alternativo duran
    }
    ```
 
-1. Implemente um método listener para erros em segundo plano.
+1. Implemente um método de ouvinte para erros em segundo plano.
 
    ```
    - (void) onBackgroundManifestError:(NSNotification *)notification 

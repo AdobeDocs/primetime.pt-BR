@@ -1,20 +1,19 @@
 ---
-description: Este é um exemplo de como criar um botão que permite ao usuário selecionar um rastreamento de legenda.
-title: Exemplo Permitir que os usuários alterem o rastreamento de legenda
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Este é um exemplo de como criar um botão que permite ao usuário selecionar uma faixa de legendas ocultas.
+title: Exemplo Permitir que os usuários alterem a faixa de legenda
+exl-id: d7ba19ac-cbfa-4fb4-a92d-21a3d0f7c23f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
+# Exemplo: permitir que os usuários alterem a faixa de legenda{#example-allow-users-to-change-the-caption-track}
 
-# Exemplo: Permitir que os usuários alterem o rastreamento de legenda{#example-allow-users-to-change-the-caption-track}
+Este é um exemplo de como criar um botão que permite ao usuário selecionar uma faixa de legendas ocultas.
 
-Este é um exemplo de como criar um botão que permite ao usuário selecionar um rastreamento de legenda.
-
-1. Crie um botão simples para alterar a faixa de legenda oculta.
+1. Crie um botão simples para alterar a faixa de legendas ocultas.
 
    ```xml
       <Button 
@@ -28,7 +27,7 @@ Este é um exemplo de como criar um botão que permite ao usuário selecionar um
      android:text="CC" /> 
    ```
 
-1. Converta a lista de faixas de legenda ocultas disponíveis em uma matriz de sequências de caracteres. As faixas de legenda fechada que têm atividade, ou seja, canais para os quais o TVSDK descobriu dados, são marcadas de acordo:
+1. Converter a lista de faixas de legendas ocultas disponíveis em uma matriz de sequências de caracteres. As faixas de legendas ocultas que têm atividade (ou seja, canais para os quais o TVSDK descobriu dados) são marcadas adequadamente:
 
    ```java
    /** 
@@ -54,7 +53,7 @@ Este é um exemplo de como criar um botão que permite ao usuário selecionar um
    } 
    ```
 
-1. Quando o usuário clicar no botão , exiba uma caixa de diálogo que lista todas as faixas padrão de CC.
+1. Quando o usuário clicar no botão, exibir uma caixa de diálogo que lista todas as faixas CC padrão.
 
    ```java
       public void selectClosedCaptioningClick(View view) { 
@@ -82,4 +81,3 @@ Este é um exemplo de como criar um botão que permite ao usuário selecionar um
        ab.show(); 
    } 
    ```
-

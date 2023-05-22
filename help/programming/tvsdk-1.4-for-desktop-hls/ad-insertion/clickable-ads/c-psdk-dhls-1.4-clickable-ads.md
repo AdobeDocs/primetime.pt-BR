@@ -1,28 +1,27 @@
 ---
-description: O TVSDK fornece informações para que você possa agir com anúncios de click-through. À medida que você cria a interface do usuário do player, deve decidir como responder quando um usuário clica em um anúncio clicável.
+description: O TVSDK fornece informações para que você possa agir em anúncios de click-through. Ao criar a interface do usuário do player, é necessário decidir como responder quando um usuário clicar em um anúncio clicável.
 title: Anúncios clicáveis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 50c74c82-c5d8-43f6-accf-8330a426a7bd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
-
 # Anúncios clicáveis {#clickable-ads}
 
-O TVSDK fornece informações para que você possa agir com anúncios de click-through. À medida que você cria a interface do usuário do player, deve decidir como responder quando um usuário clica em um anúncio clicável.
+O TVSDK fornece informações para que você possa agir em anúncios de click-through. Ao criar a interface do usuário do player, é necessário decidir como responder quando um usuário clicar em um anúncio clicável.
 
-Para TVSDK para Flash Runtime, somente anúncios lineares podem ser clicados.
+Para TVSDK para Flash Runtime, somente anúncios lineares são clicáveis.
 
-## Responder cliques em anúncios {#respond-to-clicks-on-ads}
+## Responder a cliques nos anúncios {#respond-to-clicks-on-ads}
 
-Quando um usuário clica em uma publicidade ou em um botão relacionado, seu aplicativo é responsável por responder. O TVSDK fornece informações sobre o URL de destino.
+Quando um usuário clica em um anúncio ou em um botão relacionado, seu aplicativo é responsável por responder. O TVSDK fornece informações sobre o URL de destino.
 
-Este exemplo mostra uma maneira possível de gerenciar cliques de anúncios.
+Este exemplo mostra uma maneira possível de gerenciar cliques em anúncios.
 
-1. Cada vez que um anúncio é reproduzido, exiba um botão no reprodutor de mídia. Um usuário que clica no anúncio é redirecionado para o URL do anúncio. Esse botão faz parte do [!DNL ClickableAdsOverlay.xml].
+1. Cada vez que um anúncio é reproduzido, exiba um botão na parte superior do reprodutor de mídia. Um usuário que clica no anúncio é redirecionado para o URL do anúncio. Esse botão faz parte da [!DNL ClickableAdsOverlay.xml].
 
    ```xml
       <?xml version="1.0"?> 
@@ -35,7 +34,7 @@ Este exemplo mostra uma maneira possível de gerenciar cliques de anúncios.
    </s:VGroup>
    ```
 
-1. Inclua essa sobreposição na amostra do reprodutor de mídia, [!DNL psdkdemo.xml].
+1. Inclua essa sobreposição em nossa amostra de reprodutor de mídia, [!DNL psdkdemo.xml].
 
    ```xml
       <psdk:ClickableAdsOverlay id="clickableAdsOverlay"  
@@ -45,7 +44,7 @@ Este exemplo mostra uma maneira possível de gerenciar cliques de anúncios.
    </psdk:ClickableAdsOverlay
    ```
 
-1. Para tornar a exibição visível somente quando um anúncio está sendo reproduzido, acompanhe os eventos `onAdStart` e `onAdComplete` despachados por .
+1. Para tornar a exibição visível somente quando um anúncio estiver sendo reproduzido, acompanhe o `onAdStart` e `onAdComplete` eventos despachados por .
 
    ```
    _player.addEventListener(AdPlaybackEvent.AD_STARTED, onAdStarted); 
@@ -64,7 +63,7 @@ Este exemplo mostra uma maneira possível de gerenciar cliques de anúncios.
    }
    ```
 
-1. Monitore as interações do usuário em anúncios clicáveis. Quando o usuário tocar ou clicar no botão, notifique o TVSDK com `notifyClick`.
+1. Monitore as interações do usuário em anúncios clicáveis. Quando o usuário tocar ou clicar no anúncio ou botão, notifique o TVSDK com `notifyClick`.
 
    ```
    private function onAdsOverlayClicked():void {     
@@ -72,15 +71,15 @@ Este exemplo mostra uma maneira possível de gerenciar cliques de anúncios.
    }
    ```
 
-1. Analise o evento `AdclickEvent.AD_CLICK`.
+1. Ouça o `AdclickEvent.AD_CLICK` evento.
 
-   Se um anúncio estiver sendo reproduzido, o TVSDK despacha o evento `AdClickEvent.AD_CLICK`, do qual você pode recuperar o URL de click-through e as informações relacionadas.
+   Se um anúncio estiver sendo reproduzido, o TVSDK enviará o `AdClickEvent.AD_CLICK` evento, do qual você pode recuperar o URL de click-through e as informações relacionadas.
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);
    ```
 
-1. Pause o reprodutor de mídia ao direcionar o usuário para o URL do anúncio.
+1. Pausar o reprodutor de mídia ao direcionar o usuário para o URL do anúncio.
 
    ```
    private function onAdClick(event:AdClickEvent):void { 
@@ -93,13 +92,13 @@ Este exemplo mostra uma maneira possível de gerenciar cliques de anúncios.
 
 1. Exiba o URL de click-through do anúncio e qualquer informação relacionada.
 
-       Por exemplo, você pode exibi-lo de uma das seguintes maneiras:
+       Por exemplo, você pode exibi-la de uma das seguintes maneiras:
    
    * Abra o URL de click-through em um navegador dentro do aplicativo.
 
-      Em plataformas de desktop, a área de reprodução do anúncio de vídeo é normalmente usada para chamar URLs de click-through após cliques do usuário.
-   * Redirecione o usuário para o navegador da Web móvel externo.
+      Em plataformas de desktop, a área de reprodução de anúncio de vídeo geralmente é usada para chamar URLs de click-through após cliques do usuário.
+   * Redirecionar o usuário para o navegador externo da web para dispositivos móveis.
 
-      Em dispositivos móveis, a área de reprodução do anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela cheia e assim por diante. Portanto, em dispositivos móveis, uma visualização separada, como um botão patrocinador, é geralmente apresentada ao usuário como um meio de iniciar o URL de click-through.
+      Em dispositivos móveis, a área de reprodução de anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela inteira e assim por diante. Portanto, em dispositivos móveis, uma exibição separada, como um botão de patrocinador, geralmente é apresentada ao usuário como um meio de iniciar o URL de click-through.
 
-1. Feche a janela do navegador em que as informações de click-through são exibidas e retome a reprodução do vídeo.
+1. Feche a janela do navegador na qual as informações de click-through são exibidas e continue a reproduzir o vídeo.

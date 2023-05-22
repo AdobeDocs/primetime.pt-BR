@@ -1,20 +1,19 @@
 ---
-title: Nível mínimo de segurança para DRM e tempos de execução
-description: Nível mínimo de segurança para DRM e tempos de execução
+title: Nível de segurança mínimo para DRM e tempos de execução
+description: Nível de segurança mínimo para DRM e tempos de execução
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d8b1162f-26ed-4072-9fed-20a38b9c587c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
 
 ---
 
+# Nível de segurança mínimo para DRM e tempos de execução{#minimum-security-level-for-drm-and-runtimes}
 
-# Nível mínimo de segurança para DRM e tempos de execução{#minimum-security-level-for-drm-and-runtimes}
-
-O nível mínimo de segurança especifica o nível de segurança necessário para acessar o conteúdo. Você especifica níveis de segurança individuais para cada componente.
+O nível de segurança mínimo especifica o nível de segurança necessário para acessar o conteúdo. Você especifica níveis de segurança individuais para cada componente.
 
 O nível de segurança padrão para módulos DRM/Runtime é 10000.
 
-Exemplo de caso de uso: Certos tipos de conteúdo (por exemplo, vídeo de alta definição) podem exigir um nível de segurança mais alto do que outros tipos.
+Exemplo de caso de uso: determinados tipos de conteúdo (por exemplo, vídeo de alta definição) podem exigir um nível de segurança mais alto do que outros tipos.

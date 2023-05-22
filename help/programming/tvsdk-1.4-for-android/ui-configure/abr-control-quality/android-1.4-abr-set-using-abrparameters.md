@@ -1,14 +1,13 @@
 ---
 description: Você pode definir valores de controle ABR somente com ABRControlParameters, mas pode construir um novo a qualquer momento.
 title: Configurar taxas de bits adaptáveis usando ABRControlParameters
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 787e962c-371f-4ac8-ae13-8b38a230593f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
-
 
 # Configurar taxas de bits adaptáveis usando ABRControlParameters{#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
@@ -18,7 +17,7 @@ As seguintes condições se aplicam a `ABRControlParameters`:
 
 * Você deve fornecer valores para todos os parâmetros no momento da construção.
 * Não é possível alterar valores individuais após o tempo de construção.
-* Se os parâmetros especificados estiverem fora do intervalo permitido, um `ArgumentError` será lançado.
+* Se os parâmetros especificados estiverem fora do intervalo permitido, uma variável `ArgumentError` é lançado.
 
 1. Decida sobre as taxas de bits inicial, mínima e máxima.
 1. Determine a política ABR:
@@ -27,7 +26,7 @@ As seguintes condições se aplicam a `ABRControlParameters`:
    * `ABR_MODERATE`
    * `ABR_AGGRESSIVE`
 
-1. Defina os valores dos parâmetros ABR no construtor `ABRControlParameters` e os atribua ao Player de mídia.
+1. Defina os valores do parâmetro ABR no `ABRControlParameters` e atribua-os ao reprodutor de mídia.
 
    ```java
    public ABRControlParameters(int initialBitRate, 
@@ -39,4 +38,3 @@ As seguintes condições se aplicam a `ABRControlParameters`:
      int maxTrickPlayBandwidthUsage, 
      int maxPlayoutRate);
    ```
-

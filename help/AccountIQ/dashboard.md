@@ -1,17 +1,17 @@
 ---
-title: Painel Account IQ
-description: O Painel ajuda a identificar as instâncias de compartilhamento de senha ao analisar uma grande variedade de dados do assinante.
+title: Painel do Account IQ
+description: O Painel ajuda a identificar as instâncias de compartilhamento de senha analisando uma grande variedade de dados do assinante.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
 source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
 
 # O painel {#dashboard}
 
-O Painel resume e agrega dados em uma coleção de gráficos e relatórios criada para fornecer uma visão geral de alto nível do escopo e impacto do compartilhamento de conta. Ele fornece uma única página contendo os principais relatórios e métricas do QI da conta.
+O painel resume e agrega dados em uma coleção de gráficos e relatórios criados para fornecer uma visão geral de alto nível do escopo e do impacto do compartilhamento de contas. Ela fornece uma página única com os principais relatórios e métricas do Account IQ.
 
 
 +++Programador- painel
@@ -19,67 +19,67 @@ O Painel resume e agrega dados em uma coleção de gráficos e relatórios criad
 ![painel do Account IQ para usuários programadores](assets/dashboard-programr.png)
 
 
-Figura: O painel para usuários programadores
+Figura: o painel para usuários programadores
 
 +++
 
 +++MVPD- painel
 
-O painel para usuários de MVPD é um pouco diferente dos usuários do programador.
+O painel de controle para usuários do MVPD é um pouco diferente daqueles dos usuários programadores.
 
 ![painel do Account IQ para usuários programadores](assets/dashboard-mvpd.png)
 
-Figura: O painel para usuários do MVPD
+Figura: O painel de controle para usuários do MVPD
 
 +++
 
 ## Pontuação média de compartilhamento - agregada para o segmento atual {#aggregated-sharing}
 
-O painel Pontuação de compartilhamento agregada fornece uma leitura de linha superior resumindo a quantidade e o impacto do compartilhamento em termos de contas e volume de streaming.
+O painel Pontuação de compartilhamento agregada fornece uma leitura da linha superior resumindo a quantidade e o impacto do compartilhamento em termos de contas e volume de transmissão.
 
-Os valores ajudam você a entender a magnitude do compartilhamento de credenciais pelos assinantes, fornecendo uma medida da necessidade de agir de acordo com ela.
+Os valores ajudam você a entender a magnitude do compartilhamento de credenciais por seus assinantes, fornecendo uma medida da necessidade de agir em relação a ele.
 
 ![](assets/aggregate-sharing-score.png)
 
 
-*Figura: Painel de pontuação de compartilhamento médio - agregado para o segmento atual*
+*Figura: Painel de pontuação média de compartilhamento - agregado para o segmento atual*
 
 As três métricas a seguir são componentes da Pontuação média de compartilhamento.
 
 ### Nível de compartilhamento {#sharing-level}
 
-O medidor de nível de compartilhamento mostra a porcentagem de todas as contas de assinantes (no segmento definido) que foram compartilhadas durante o intervalo de tempo selecionado.
+O medidor do nível de compartilhamento mostra a porcentagem de todas as contas de assinante (no segmento definido) que são compartilhadas, durante o intervalo de tempo selecionado.
 
-Um valor calculado com base na média da probabilidade de compartilhamento calculada para cada conta no conjunto de MVPDs selecionados que foram transmitidos de um dos canais de programador selecionados durante o intervalo de tempo selecionado.
+Um valor calculado com base em uma média da probabilidade de compartilhamento calculada para cada conta no conjunto de MVPDs selecionados que foi transmitida de um dos canais do programador selecionados durante o intervalo de tempo selecionado.
 
 ![](assets/sharing-level.png)
 
 
 *Figura: Nível de compartilhamento*
 
-O indicador de Tendência mostra a mudança de porcentagem no valor da métrica em em relação ao período anterior.
+O indicador de Tendência mostra a alteração percentual no valor da métrica em relação ao período anterior.
 
 ### Uso de contas compartilhadas {#usage-from-shared-accounts}
 
-Esse medidor indica qual é a porcentagem do uso de todas as contas de assinante das contas compartilhadas para o segmento e período de tempo definidos. O medidor marca os intervalos de uso (de contas compartilhadas) na escala de 0 a 100%. Esses intervalos — chamados de Baixo, Médio, Alto e Anormal — são baseados na média do setor.
+Esse medidor indica qual porcentagem do uso de todas as contas do assinante é das contas compartilhadas para o segmento e o período de tempo definidos. O medidor marca os intervalos de uso (de contas compartilhadas) na escala de 0 a 100%. Esses intervalos — chamados de Baixo, Médio, Alto e Anormal — baseiam-se na média do setor.
 
-Você também pode ver o indicador de Tendência, que descreve um aumento ou queda no uso de contas compartilhadas em comparação ao período anterior.
+Você também pode ver o indicador de Tendência, que mostra um aumento ou uma queda no uso de contas compartilhadas em comparação ao período anterior.
 
 ![](assets/usage-4mshared-accounts.png)
 
 
-*Figura: Uso de contas compartilhadas*
+*Figura: uso de contas compartilhadas*
 
-### Pontuação de compartilhamento geral {#overall-sharing-score}
+### Pontuação geral de compartilhamento {#overall-sharing-score}
 
-A pontuação de compartilhamento geral é composta de pontuações de compartilhamento, incluindo &quot;Nível de compartilhamento&quot; e &quot;Uso z de contas compartilhadas&quot;.
+A pontuação de compartilhamento geral é composta de pontuações de compartilhamento, incluindo &quot;Nível de compartilhamento&quot; e &quot;Uso de z de contas compartilhadas&quot;.
 
-Ele fornece um valor para refletir o impacto relativo do compartilhamento em comparação com o setor. Seu propósito é semelhante ao de uma pontuação de crédito, resumindo a situação com um único número. Mas, neste caso, quanto maior o número, maior o dano potencial.
+Ele fornece um valor destinado a refletir o impacto relativo do compartilhamento quando comparado ao setor. Seu propósito é semelhante ao de uma pontuação de crédito, resumindo a situação com um único número. Mas, nesse caso, quanto maior o número, maior o dano potencial.
 
 ![](assets/overall-sharing-score.png)
 
 
-*Figura: Pontuação de compartilhamento geral*
+*Figura: Pontuação geral de compartilhamento*
 
 <!--### MVPDs in segment {#mvpd-in-segment}
 
@@ -87,31 +87,31 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/mvpds-in-segment.png)-->
 
-## Pontuações de compartilhamento em todo o setor para MVPDs {#top-mvpds}
+## Pontuação geral de compartilhamento do setor para MVPDs {#top-mvpds}
 
-Esta tabela fornece uma exibição comparativa das diferentes Pontuações de Compartilhamento Agregado para os MVPDs no segmento.
+Essa tabela fornece uma exibição comparativa das diferentes Pontuações de Compartilhamento Agregadas dos MVPDs no segmento.
 
 >[!NOTE]
 >
->Esta tabela utiliza dados gerais do setor para fins comparativos, não os dados representados por esses MVPDs no segmento.
+>Essa tabela usa os dados gerais do setor para fins comparativos, não os dados representados por esses MVPDs no segmento.
 
 ![](assets/top-mvpds.png)
 
 
 *Figura: Principais MVPDs no segmento por pontuação geral*
 
-## Compartilhamento de pontuação por canais e MVPDs {#sharin-score-by-channels-and-mvpds}
+## Pontuação de compartilhamento por canais e MVPDs {#sharin-score-by-channels-and-mvpds}
 
-Esta tabela fornece uma exibição comparativa das pontuações de compartilhamento dos canais selecionados para os MVPDs no segmento atual.
+Essa tabela fornece uma exibição comparativa das pontuações de compartilhamento dos canais selecionados para os MVPDs no segmento atual.
 
 ![](assets/sharing-scores-by-channels-mvpds.png)
 
 
-*Figura: Compartilhamento de pontuações por canais e MVPDs*
+*Figura: compartilhamento de pontuações por canais e MVPDs*
 
 ## Probabilidade de compartilhamento de contas {#accounts-sharing-probability}
 
-Este gráfico divide-se em intervalos de probabilidade de compartilhamento de quintis de muito baixo (0-20%) a muito alto (80=100%).
+As partições deste gráfico são contabilizadas em intervalos de quintis de probabilidade de compartilhamento, de muito baixo (0-20%) a muito alto (80=100%).
 
 >[!NOTE]
 >
@@ -123,14 +123,14 @@ Este gráfico divide-se em intervalos de probabilidade de compartilhamento de qu
 
 *Figura: Números e porcentagens de contas de assinantes em diferentes intervalos de probabilidade de compartilhamento*
 
-## Número de contas e utilização por nível de probabilidade de compartilhamento {#number-of-accounts-usage-sharing-probability}
+## Número de contas e uso por nível de probabilidade de compartilhamento {#number-of-accounts-usage-sharing-probability}
 
-Esse painel fornece uma exibição tabular de contas particionadas em intervalos de probabilidade de compartilhamento de quintis de muito baixo (0-20%) a muito alto (80-100%) com o uso associado de cada quintil a partir de contas compartilhadas.
+Esse painel fornece uma exibição tabular de contas particionadas em intervalos de quintis de probabilidade de compartilhamento, de muito baixo (0-20%) a muito alto (80-100%), com cada uso associado de quintil a partir de contas compartilhadas.
 
 ![](assets/no-acc-usage-prob-level.png)
 
 
-*Figura: Número de contas, tendências e usos que caíram em vários intervalos de probabilidade*
+*Figura: Número de contas, tendências e usos em vários intervalos de probabilidade*
 
 <!--
 +++Dashboard for programmers

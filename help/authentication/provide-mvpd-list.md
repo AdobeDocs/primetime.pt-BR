@@ -1,21 +1,21 @@
 ---
 title: Fornecer Lista MVPD
 description: Fornecer Lista MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
-
 # Fornecer Lista MVPD {#provide-mvpd-list}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
-## Endpoints REST API {#clientless-endpoints}
+## Endpoints da REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -35,26 +35,26 @@ Retorna a lista de MVPDs configurados para o solicitante.
 
 | Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>Por exemplo:</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestorId | Autenticação do Primetime | 1. Requerente</br>    (Componente de caminho)</br>_2.  deviceType (obsoleto)_ | GET | Lista de MVPDs que contém XML ou JSON. | 200 |
+| &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>Por exemplo:</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestId | Autenticação do Primetime | 1. Solicitante</br>    (Componente do caminho)</br>_2.  deviceType (obsoleto)_ | GET | XML ou JSON contendo a lista de MVPDs. | 200 |
 
 {style="table-layout:auto"}
 
 
 | Parâmetro de entrada | Descrição |
 | --------------- | ------------------------------------------------------------- |
-| solicitante | O ID do solicitador do Programador para o qual esta operação é válida. |
+| solicitante | O requestorId do Programador para o qual esta operação é válida. |
 | *deviceType* | Tipo de dispositivo. |
 
 {style="table-layout:auto"}
 
-### Resposta de exemplo {#sample-response}
+### Exemplo de resposta {#sample-response}
 
-Igual à Resposta XML MVPD existente para o servlet /config
+Igual à resposta XML do MVPD existente ao servlet /config
 
-Observação: Todos os MVPDs configurados para usar o Platform SSO terão as seguintes propriedades extras em seus nós correspondentes (JSON/XML):
+Observação: todos os MVPDs configurados para usar o Platform SSO terão as seguintes propriedades extras no nó correspondente (JSON/XML):
 
-* **enablePlatformServices (booleano):** sinalizador indicando se esse MVPD está integrado via Platform SSO
-* **boardingStatus (string):** sinalizador que indica se o MVPD suporta totalmente o Platform SSO (SUPORTADO) ou se o MVPD aparece apenas no seletor de plataforma (PICKER)
-* **displayInPlatformPicker (booleano):** este MVPD deve aparecer no seletor de plataforma
-* **platformMappingId (cadeia de caracteres):** o identificador deste MVPD conhecido pela plataforma
+* **enablePlatformServices (booleano):** sinalizador que indica se este MVPD está integrado via SSO da Plataforma
+* **boardingStatus (string):** sinalizador que indica se o MVPD oferece suporte total ao SSO da Plataforma (SUPORTADO) ou se o MVPD só aparece no seletor de plataforma (SELETOR)
+* **displayInPlatformPicker (booleano):** esse MVPD deve aparecer no seletor de plataforma?
+* **platformMappingId (cadeia de caracteres):** o identificador deste MVPD conforme conhecido pela plataforma
 * **requiredMetadataFields (matriz de sequência):** os campos de metadados do usuário que devem estar disponíveis em um logon bem-sucedido

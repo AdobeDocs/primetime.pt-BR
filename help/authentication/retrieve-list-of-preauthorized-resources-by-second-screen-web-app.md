@@ -1,21 +1,21 @@
 ---
-title: Recuperar a lista de recursos pré-autorizados pelo aplicativo web de segunda tela
-description: Recuperar a lista de recursos pré-autorizados pelo aplicativo web de segunda tela
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Recuperar lista de recursos pré-autorizados pelo aplicativo web de segunda tela
+description: Recuperar lista de recursos pré-autorizados pelo aplicativo web de segunda tela
+exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-
-# Recuperar a lista de recursos pré-autorizados pelo aplicativo web de segunda tela {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
+# Recuperar lista de recursos pré-autorizados pelo aplicativo web de segunda tela {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
-## Endpoints REST API {#clientless-endpoints}
+## Endpoints da REST API {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,23 +31,23 @@ ht-degree: 0%
 
 ## Descrição {#description}
 
-Uma solicitação para a autenticação da Adobe Primetime para obter a lista de recursos pré-autorizados.
+Uma solicitação de autenticação da Adobe Primetime para obter a lista de recursos pré-autorizados.
 
-Há dois conjuntos de APIs: um conjunto para o Aplicativo de transmissão ou o Serviço do programador e um conjunto para o Aplicativo Web de segunda tela. Esta página descreve a API do aplicativo AuthN.
+Há dois conjuntos de APIs: um conjunto para o Aplicativo de streaming ou Serviço de programador e um conjunto para o Aplicativo Web de segunda tela. Esta página descreve a API do aplicativo AuthN.
 
  \
-| Ponto final | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorized/{código de registro} | Módulo AuthN | 1.  código de registro  </br>    (Componente de caminho)</br>2.  solicitante (Obrigatório)</br>3.  lista de recursos (Obrigatório) | GET | XML ou JSON contendo decisões individuais de pré-autorização ou detalhes do erro. Veja as amostras abaixo. | 200 - Êxito</br></br>400 - Solicitação incorreta</br></br>401 - Não autorizado</br></br>405 - Método não permitido  </br></br>412 - Falha na pré-condição</br></br>500 - Erro interno do servidor |
+Endpoint | | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorize/{código de registro} | Módulo AuthN | 1  código de registro  </br>    (Componente do caminho)</br>2.  solicitante (Obrigatório)</br>3.  lista de recursos (Obrigatório) | GET | XML ou JSON que contém decisões individuais de pré-autorização ou detalhes de erros. Consulte os exemplos abaixo. | 200 - Êxito</br></br>400 - Solicitação inválida</br></br>401 - Não autorizado</br></br>405 - Método não permitido  </br></br>412 - Falha na pré-condição</br></br>500 - Erro interno do servidor |
 
 
 
 | Parâmetro de entrada | Descrição |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | código de registro | O valor do código de registro fornecido pelo usuário no início do fluxo de autenticação. |
-| solicitante | O ID do solicitador do Programador para o qual esta operação é válida. |
-| lista de recursos | Uma string que contém uma lista delimitada por vírgulas de resourceIds que identifica o conteúdo que pode ser acessível a um usuário e é reconhecido pelos endpoints de autorização MVPD. |
+| solicitante | O requestorId do Programador para o qual esta operação é válida. |
+| lista de recursos | Uma string que contém uma lista delimitada por vírgulas de resourceIds que identifica o conteúdo que pode ser acessível a um usuário e é reconhecida por pontos de extremidade de autorização MVPD. |
 
 
-### Resposta de exemplo {#sample-response}
+### Exemplo de resposta {#sample-response}
 
 **XML:**
 
@@ -108,4 +108,3 @@ Content-Type: application/json; charset=utf-8
     ]
 }
 ```
-

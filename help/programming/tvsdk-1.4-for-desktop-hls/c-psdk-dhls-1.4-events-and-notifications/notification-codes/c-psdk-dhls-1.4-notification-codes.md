@@ -1,20 +1,19 @@
 ---
-description: O sistema de notificação TVSDK produz vários avisos de erro, aviso e informações que fornecem metadados de diagnóstico.
+description: O sistema de notificação TVSDK produz vários avisos de erro, aviso e informativos que fornecem metadados de diagnóstico.
 title: Códigos de notificação
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7ea079f1-658d-45ab-891d-044b7b4ff4ec
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral {#notification-codes-overview}
 
-O sistema de notificação TVSDK produz vários avisos de erro, aviso e informações que fornecem metadados de diagnóstico.
+O sistema de notificação TVSDK produz vários avisos de erro, aviso e informativos que fornecem metadados de diagnóstico.
 
-Os objetos de notificação fornecem informações relacionadas ao status do reprodutor. O TVSDK fornece uma lista ordenada cronologicamente dos objetos de notificação e cada notificação contém os seguintes metadados:
+Os objetos de notificação fornecem informações relacionadas ao status do player. O TVSDK fornece uma lista classificada cronologicamente de objetos de notificação e cada notificação contém os seguintes metadados:
 
 <table frame="all" colsep="1" rowsep="1" id="table_DBA8CACF02DB4AF2B053E560850B49CE"> 
  <thead> 
@@ -26,16 +25,16 @@ Os objetos de notificação fornecem informações relacionadas ao status do rep
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> type </td> 
-   <td colname="2"> O tipo de notificação. Dependendo da plataforma, essa propriedade se refere a um tipo enumerado com possíveis valores de INFO, AVISO ou ERRO. Este é o agrupamento de nível superior para notificações. </td> 
+   <td colname="2"> O tipo de notificação. Dependendo da plataforma, essa propriedade se refere a um tipo enumerado com valores possíveis de INFO, WARN ou ERROR. Este é o agrupamento de nível superior para notificações. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> código </td> 
    <td colname="2">A representação numérica atribuída à notificação: 
     <ul id="ul_31AB497C6FFA452496DD09B0D78687B9"> 
-     <li id="li_53E75022C50246E0982E315D04EFD8B3">Eventos de notificação de erro, de 100000 a 19999 </li> 
-     <li id="li_11AE91D1325E4F718228E662C9C55F9A">Eventos de notificação de aviso, de 20000 a 299999 </li> 
+     <li id="li_53E75022C50246E0982E315D04EFD8B3">Eventos de notificação de erro, de 100000 a 199999 </li> 
+     <li id="li_11AE91D1325E4F718228E662C9C55F9A">Eventos de notificação de aviso, de 200000 a 299999 </li> 
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Eventos de notificação de informações, de 300000 a 399999 </li> 
-    </ul> <p>Cada intervalo de nível superior, como erros, é dividido em subintervalos, como 101000 a 101999 representando erros de reprodução. </p>
+    </ul> <p>Cada intervalo de nível superior, como erros, é dividido em subintervalos, como 101000 a 101999, que representam erros de reprodução. </p>
     <pre>
      A enumeração 
      <span class="codeph"> mediacore.PSDKErrorCode</span> lista os valores possíveis.
@@ -47,12 +46,11 @@ Os objetos de notificação fornecem informações relacionadas ao status do rep
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> metadados </td> 
-   <td colname="2">Pares de chave/valor que contêm informações adicionais relevantes sobre a notificação. Por exemplo, uma chave chamada <span class="codeph"> URL</span> seria emparelhada a um valor que é um URL relacionado à notificação, como um URL inválido que causou um erro. </td> 
+   <td colname="2">Pares de chave/valor que contêm informações adicionais relevantes sobre a notificação. Por exemplo, uma chave chamada <span class="codeph"> URL</span> seria emparelhado com um valor que é um URL relacionado à notificação, como um URL inválido que causou um erro. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> innerNotification </td> 
-   <td colname="2">Uma referência a outro objeto <span class="codeph"> MediaPlayerNotification</span> que afetou diretamente essa notificação. Um exemplo pode ser uma notificação sobre uma falha de inserção de anúncio que corresponde diretamente a um conflito de inserção de linha do tempo. Nem todas as notificações fornecem uma notificação interna. </td> 
+   <td colname="2">Uma referência a outro <span class="codeph"> MediaPlayerNotification</span> objeto que afetou diretamente esta notificação. Um exemplo pode ser uma notificação sobre uma falha de inserção de anúncio que corresponde diretamente a um conflito de inserção de linha do tempo. Nem todas as notificações fornecem uma notificação interna. </td> 
   </tr> 
  </tbody> 
 </table>
-

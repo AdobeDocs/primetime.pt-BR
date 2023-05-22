@@ -1,46 +1,45 @@
 ---
-description: A Qualidade do serviço (QoS) fornece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
-title: Estatísticas de qualidade dos serviços
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: A Qualidade do serviço (QoS) fornece uma visualização detalhada do desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+title: Estatísticas de qualidade do serviço
+exl-id: 62b2b65e-7383-4694-bdec-aacc4c2ae372
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
 
 ---
 
-
 # Estatísticas de qualidade do serviço {#quality-of-service-statistics}
 
-A Qualidade do serviço (QoS) fornece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+A Qualidade do serviço (QoS) fornece uma visualização detalhada do desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
 
 O TVSDK também fornece informações sobre os seguintes recursos baixados:
 
-* Arquivos Playlist/manifest
+* Arquivos de lista de reprodução/manifesto
 * Fragmentos de arquivo
-* Rastreamento de informações para arquivos
+* Informações de rastreamento para arquivos
 
 ## Rastrear no nível do fragmento usando informações de carregamento {#section_4439D91E8EDC45588EF1D7BE25697350}
 
-Você pode ler informações de qualidade do serviço (QoS) sobre os recursos baixados, como fragmentos e rastreamentos, da classe `LoadInformation`.
+Você pode ler informações de qualidade de serviço (QoS) sobre recursos baixados, como fragmentos e rastreamentos, no `LoadInformation` classe.
 
-1. Implemente e registre o ouvinte do evento `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`.
-1. Chame `event.getLoadInformation()` para ler os dados relevantes do parâmetro `event` passado para o retorno de chamada.
+1. Implementar e registrar o `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` ouvinte de eventos.
+1. Chame `event.getLoadInformation()` para ler os dados relevantes do `event` que é passado para o retorno de chamada.
 
    >[!NOTE]
    >
-   >Para obter mais informações sobre `LoadInformation`, consulte [3.0 para documentos da API do Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.0/index.html).
+   >Para obter mais informações sobre `LoadInformation`, consulte [3.0 para Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.0/index.html) Documentos da API.
 
-## Ler a reprodução do QOS, o buffering e as estatísticas do dispositivo {#section_D21722600F324E67A9F06234D338B243}
+## Ler estatísticas de reprodução, buffering e dispositivo de QOS {#section_D21722600F324E67A9F06234D338B243}
 
-Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe `QOSProvider`.
+Você pode ler as estatísticas de reprodução, buffering e dispositivo no `QOSProvider` classe.
 
-A classe `QOSProvider` fornece várias estatísticas, incluindo informações sobre buffering, taxas de bits, taxas de quadros, dados de tempo e assim por diante. Ele também fornece informações sobre o dispositivo, como fabricante, modelo, sistema operacional, versão do SDK, ID do dispositivo do fabricante e tamanho/densidade da tela.
+A variável `QOSProvider` A classe fornece várias estatísticas, incluindo informações sobre buffering, taxas de bits, taxas de quadros, dados de tempo, etc. Também fornece informações sobre o dispositivo, como fabricante, modelo, sistema operacional, versão do SDK, ID do dispositivo do fabricante e tamanho/densidade da tela.
 
-1. Instancie um reprodutor de mídia.
-1. Crie um objeto `QOSProvider` e o anexe ao reprodutor de mídia.
+1. Instanciar um reprodutor de mídia.
+1. Criar um `QOSProvider` e anexe-o ao reprodutor de mídia.
 
-   O construtor `QOSProvider` assume um contexto de reprodutor para que possa recuperar informações específicas do dispositivo.
+   A variável `QOSProvider` O construtor usa um contexto do player para recuperar informações específicas do dispositivo.
 
    ```java
    // Create Media Player. 
@@ -50,7 +49,7 @@ A classe `QOSProvider` fornece várias estatísticas, incluindo informações so
 
 1. (Opcional) Leia as estatísticas de reprodução.
 
-   Uma solução para ler as estatísticas de reprodução é ter um temporizador que busca periodicamente os novos valores de QoS do `QOSProvider`.
+   Uma solução para ler as estatísticas de reprodução é ter um temporizador, que busca periodicamente os novos valores de QoS na `QOSProvider`.
 
    Por exemplo:
 

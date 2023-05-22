@@ -1,28 +1,27 @@
 ---
-description: O elemento principal do lado do cliente do sistema Primetime digital rights management (DRM) é o Gerenciador de DRM.
+description: O elemento principal do lado do cliente do sistema de gerenciamento de direitos digitais (DRM) do Primetime é o Gerenciador de DRM.
 title: Visão geral da interface DRM do Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8d6b9416-5d8a-4d1e-b8e6-47c43389f079
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral da interface DRM do Primetime{#primetime-drm-interface-overview}
 
-O elemento principal do lado do cliente do sistema Primetime digital rights management (DRM) é o Gerenciador de DRM.
+O elemento principal do lado do cliente do sistema de gerenciamento de direitos digitais (DRM) do Primetime é o Gerenciador de DRM.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
 O Primetime DRM fornece um fluxo de trabalho escalável e eficiente para implementar a proteção de conteúdo em aplicativos TVSDK. Você protege e gerencia os direitos ao conteúdo de vídeo criando uma licença para cada arquivo de mídia digital.
 
-O TVSDK oferece suporte à integração de DRM do Primetime como fluxos de trabalho de DRM personalizados. Isso significa que seu aplicativo deve implementar os workflows de autenticação de DRM antes de reproduzir o fluxo usando o Flash `DRMManager`. Para habilitar isso, o `MediaPlayer` fornece o gerenciador de DRM para autenticação.
+O TVSDK oferece suporte à integração DRM do Primetime como fluxos de trabalho DRM personalizados. Isso significa que o aplicativo deve implementar os workflows de autenticação DRM antes de reproduzir o fluxo usando o Flash `DRMManager`. Para habilitar isso, a variável `MediaPlayer` O fornece o gerenciador DRM para autenticação.
 
-Esses são os elementos de API mais importantes para trabalhar com DRM:
+Estes são os elementos de API mais importantes para trabalhar com DRM:
 
-* Uma referência no reprodutor de mídia ao objeto do gerenciador de DRM que implementa o subsistema de DRM:
+* Uma referência no reprodutor de mídia ao objeto gerenciador de DRM que implementa o subsistema de DRM:
 
    ```
    public function get drmManager():DRMManager 
@@ -41,4 +40,4 @@ Elementos adicionais relevantes da API:
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Para obter mais informações sobre DRM, consulte a documentação do DRM da Adobe Primetime.
+Para obter mais informações sobre o DRM, consulte a documentação do Adobe Primetime DRM.

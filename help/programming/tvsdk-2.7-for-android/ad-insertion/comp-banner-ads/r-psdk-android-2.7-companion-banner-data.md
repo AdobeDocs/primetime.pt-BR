@@ -1,22 +1,21 @@
 ---
 description: O conteúdo de um AdAsset descreve um banner complementar.
-title: Dados de banner complementar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Dados de banner de companhia
+exl-id: 922577fd-bc58-4669-b051-fe54b197a5f5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
-
-# Dados do banner complementar {#companion-banner-data}
+# Dados de banner de companhia {#companion-banner-data}
 
 O conteúdo de um AdAsset descreve um banner complementar.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Cada `AdAsset` fornece informações sobre como exibir o ativo.
+Each `AdAsset` O fornece informações sobre a exibição do ativo.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -39,13 +38,12 @@ Cada `AdAsset` fornece informações sobre como exibir o ativo.
    <td colname="col2">O tipo de recurso para este banner complementar: 
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
      <li id="li_02B7224C67004095B3F6E50FD21E507E">html: Os dados estão no código HTML. </li> 
-     <li id="li_5F37E14472424F808C6094F42009E676">iframe: Os dados são um URL de iframe (src). </li> 
+     <li id="li_5F37E14472424F808C6094F42009E676">iframe: os dados são um URL de iframe (src). </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> URL estático </td> 
-   <td colname="col2"> <p>Às vezes, o banner complementar também tem um <span class="codeph"> staticURL</span> que é um URL direto para a imagem ou para um <span class="codeph"> .swf</span> (banner flash). </p> <p>Se você não quiser usar html ou iframe, poderá usar um URL direto para uma imagem ou swf para exibir o banner no palco do Flash. Nesse caso, você pode usar o <span class="codeph"> staticURL</span> para exibir o banner. </p> <p>Importante:  Você deve verificar se o URL estático é uma string válida, pois essa propriedade pode nem sempre estar disponível. </p> </td> 
+   <td colname="col2"> <p>Às vezes, o banner complementar também tem um <span class="codeph"> staticURL</span> que é um URL direto para a imagem ou para um <span class="codeph"> .swf</span> (banner flash). </p> <p>Se não quiser usar html ou iframe, você poderá usar um URL direto para uma imagem ou swf para exibir o banner no estágio de Flash. Nesse caso, você pode usar a variável <span class="codeph"> staticURL</span> para exibir o banner. </p> <p>Importante: você deve verificar se o URL estático é uma string válida, pois essa propriedade nem sempre pode estar disponível. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

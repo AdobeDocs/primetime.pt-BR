@@ -2,15 +2,14 @@
 title: Proteção contra repetição
 description: Proteção contra repetição
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dfb6d615-07d2-4303-82cc-10cfee4bb387
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
 
 ---
 
+# Proteção contra repetição{#replay-protection}
 
-# Reproduzir proteção{#replay-protection}
-
-Para proteção de repetição, pode ser prudente verificar se o identificador de mensagem foi visto recentemente, chamando `RequestMessageBase.getMessageId()`. Em caso afirmativo, um atacante pode estar a tentar responder novamente ao pedido, o que deve ser negado. Para detectar tentativas de repetição, o servidor pode armazenar uma lista de ids de mensagem vistas recentemente e verificar cada solicitação recebida em relação à lista em cache. Para limitar a quantidade de tempo em que os identificadores de mensagem precisam ser armazenados, chame `HandlerConfiguration.setTimestampTolerance()`. Se essa propriedade for definida, o SDK negará qualquer solicitação que tenha um carimbo de data e hora maior que o número especificado de segundos da hora do servidor.
+Para proteção contra repetição, pode ser prudente verificar se o identificador de mensagem foi visto recentemente, chamando `RequestMessageBase.getMessageId()`. Nesse caso, um invasor pode estar tentando repetir a solicitação, que deve ser negada. Para detectar tentativas de repetição, o servidor pode armazenar uma lista de IDs de mensagem vistas recentemente e verificar cada solicitação recebida em relação à lista em cache. Para limitar o tempo que os identificadores de mensagem precisam ser armazenados, chame `HandlerConfiguration.setTimestampTolerance()`. Se essa propriedade for definida, o SDK negará qualquer solicitação que carregue um carimbo de data e hora maior do que o número especificado de segundos fora do horário do servidor.

@@ -2,18 +2,17 @@
 title: Marcar intervalos
 description: Marcar intervalos
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 173769cd-6580-4461-9dbc-5bb2fed346d2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%
 
 ---
 
-
 # Marcar intervalos{#mark-ranges}
 
-Marque `TimeRanges` entre `begin` e `end` em `localTime` como um `AdBreak` na linha do tempo. Outras configurações de anúncio são ignoradas.
+Marcar `TimeRanges` entre as `begin` e `end` in `localTime` como um `AdBreak` da linha do tempo. Outras configurações de Anúncio são ignoradas.
 
 1. Marcar intervalos de tempo.
 
@@ -58,4 +57,3 @@ Marque `TimeRanges` entre `begin` e `end` em `localTime` como um `AdBreak` na li
        "id": "vod_004"
    }
    ```
-

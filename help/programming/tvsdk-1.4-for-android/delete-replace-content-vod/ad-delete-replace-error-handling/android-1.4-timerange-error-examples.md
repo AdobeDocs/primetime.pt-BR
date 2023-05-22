@@ -1,7 +1,6 @@
 ---
-description: O TVSDK responde a especificações de intervalo de tempo incorretas ao mesclar ou substituir os intervalos de tempo, conforme apropriado.
-title: Exemplos de erros de intervalo de tempo
-translation-type: tm+mt
+description: O TVSDK responde a especificações de intervalo de tempo incorretas mesclando ou substituindo os intervalos de tempo conforme apropriado.
+title: Exemplos de erro de intervalo de tempo
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '110'
@@ -12,9 +11,9 @@ ht-degree: 0%
 
 # Exemplos de erro de intervalo de tempo{#time-range-error-examples}
 
-O TVSDK responde a especificações de intervalo de tempo incorretas ao mesclar ou substituir os intervalos de tempo, conforme apropriado.
+O TVSDK responde a especificações de intervalo de tempo incorretas mesclando ou substituindo os intervalos de tempo conforme apropriado.
 
-No exemplo a seguir, quatro intervalos de tempo de DELETE de interseção são definidos. O TVSDK mescla os quatro intervalos de tempo em um, para que o intervalo de exclusão real seja de 0 a 50.
+No exemplo a seguir, quatro intervalos de tempo de DELETE de interseção são definidos. O TVSDK mescla os quatro intervalos de tempo em um, para que o intervalo de exclusão real seja de 0 a 50 s.
 
 ```
 "time-ranges": {
@@ -35,7 +34,7 @@ No exemplo a seguir, quatro intervalos de tempo de DELETE de interseção são d
 }
 ```
 
-No exemplo a seguir, quatro intervalos de tempo REPLACE são definidos com intervalos de tempo conflitantes. Nesse caso, o TVSDK substitui de 0 a 50s por 25s de anúncios. Ele vai com a primeira duração de substituição na ordem de classificação, porque há conflitos em intervalos subsequentes.
+No exemplo a seguir, quatro intervalos de tempo REPLACE são definidos com intervalos de tempo conflitantes. Nesse caso, o TVSDK substitui de 0 a 50 por 25 segundos de anúncios. Acompanha a primeira duração de substituição na ordem de classificação, pois há conflitos nos intervalos subsequentes.
 
 ```
 "time-ranges": {

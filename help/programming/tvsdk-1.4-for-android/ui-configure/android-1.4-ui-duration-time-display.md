@@ -1,49 +1,48 @@
 ---
 description: Você pode usar o TVSDK para recuperar informações sobre a mídia que pode ser exibida na barra de busca.
-title: Exibir a duração, o tempo atual e o tempo restante do vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Exibir a duração, a hora atual e o tempo restante do vídeo
+exl-id: 58288501-7d61-4cf3-ae62-d92b83c73a58
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
 
 ---
 
-
-# Exibir a duração, o tempo atual e o tempo restante do vídeo{#display-the-duration-current-time-and-remaining-time-of-the-video}
+# Exibir a duração, a hora atual e o tempo restante do vídeo{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 Você pode usar o TVSDK para recuperar informações sobre a mídia que pode ser exibida na barra de busca.
 
-1. Aguarde até que o player esteja no estado PREPARADO.
-1. Recupere o tempo atual do indicador de reprodução usando o método `MediaPlayer.getCurrentTime`.
+1. Aguarde o reprodutor estar no estado PREPARADO.
+1. Recupere o tempo do indicador de reprodução atual usando o `MediaPlayer.getCurrentTime` método.
 
-   Isso retorna a posição atual do indicador de reprodução na linha do tempo virtual, em milissegundos. O tempo é calculado em relação ao fluxo resolvido, que pode conter várias instâncias de conteúdo alternativo, como vários anúncios ou quebras de anúncios segmentados no fluxo principal. Para fluxos ao vivo/lineares, o tempo retornado está sempre no intervalo da janela de reprodução.
+   Isso retorna a posição atual do indicador de reprodução na linha do tempo virtual em milissegundos. O tempo é calculado de acordo com o fluxo resolvido que pode conter várias instâncias de conteúdo alternativo, como vários anúncios ou ad breaks fatiados no fluxo principal. Para fluxos ao vivo/lineares, o tempo retornado está sempre no intervalo da janela de reprodução.
 
    ```java
    long getCurrentTime() throws IllegalStateException;
    ```
 
 1. Recupere o intervalo de reprodução do fluxo e determine a duração.
-   1. Use o método `mediaPlayer.getPlaybackRange` para obter o intervalo de tempo da linha do tempo virtual.
+   1. Use o `mediaPlayer.getPlaybackRange` para obter o intervalo de tempo da linha de tempo virtual.
 
       ```java
       TimeRange getPlaybackRange() throws IllegalStateException;
       ```
 
-   1. Analise o intervalo de tempo usando `mediacore.utils.TimeRange`.
+   1. Analisar o intervalo de tempo usando `mediacore.utils.TimeRange`.
    1. Para determinar a duração, subtraia o início do final do intervalo.
 
       Isso inclui a duração do conteúdo adicional inserido no fluxo (anúncios).
 
       Para VOD, o intervalo sempre começa com zero e o valor final é igual à soma da duração do conteúdo principal e das durações do conteúdo adicional inserido no fluxo (anúncios).
 
-      Para um ativo linear/ao vivo, o intervalo representa o intervalo da janela de reprodução e esse intervalo muda durante a reprodução.
+      Para um ativo linear/em tempo real, o intervalo representa o intervalo da janela de reprodução, que muda durante a reprodução.
 
-      O TVSDK chama o retorno de chamada `onUpdated` para indicar que o item de mídia foi atualizado e que seus atributos (incluindo o intervalo de reprodução) foram atualizados.
+      O TVSDK chama o `onUpdated` retorno de chamada para indicar que o item de mídia foi atualizado e que seus atributos (incluindo o intervalo de reprodução) foram atualizados.
 
-1. Use os métodos disponíveis nas classes `MediaPlayer` e `SeekBar` que estão disponíveis publicamente no Android SDK para configurar os parâmetros da barra de busca.
+1. Use os métodos disponíveis no `MediaPlayer` e a variável `SeekBar` classe que está disponível publicamente no SDK do Android para configurar os parâmetros da barra de busca.
 
-   Por exemplo, aqui está um layout possível que contém os elementos `SeekBar` e dois `TextView`.
+   Por exemplo, este é um layout possível que contém a variável `SeekBar` e dois `TextView` elementos.
 
    ```xml
    <LinearLayout 
@@ -75,9 +74,9 @@ Você pode usar o TVSDK para recuperar informações sobre a mídia que pode ser
    </LinearLayout>
    ```
 
-1. Use um temporizador para recuperar periodicamente a hora atual e atualizar a SeekBar.
+1. Use um cronômetro para recuperar periodicamente a hora atual e atualizar a SeekBar.
 
-   O exemplo a seguir usa a classe auxiliar `Clock.java` como timer, que está disponível no player de referência PrimetimeReference. Essa classe define um ouvinte de evento e aciona um evento `onTick` a cada segundo ou outro valor de tempo limite que você pode especificar.
+   O exemplo a seguir usa o `Clock.java` classe auxiliar como o temporizador, que está disponível no reprodutor de referência PrimetimeReference. Essa classe define um ouvinte de eventos e aciona um `onTick` evento a cada segundo ou outro valor de tempo limite que você pode especificar.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -90,7 +89,7 @@ Você pode usar o TVSDK para recuperar informações sobre a mídia que pode ser
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   Em cada marca de relógio, esse exemplo recupera a posição atual do reprodutor de mídia e atualiza a SeekBar. Ela usa os dois elementos TextView para marcar a hora atual e a posição final do intervalo de reprodução como valores numéricos.
+   Em cada tique-taque do relógio, este exemplo recupera a posição atual do reprodutor de mídia e atualiza a SeekBar. Ele usa os dois elementos TextView para marcar a hora atual e a posição final do intervalo de reprodução como valores numéricos.
 
    ```java
    @Override 
@@ -110,4 +109,3 @@ Você pode usar o TVSDK para recuperar informações sobre a mídia que pode ser
    } 
    }
    ```
-

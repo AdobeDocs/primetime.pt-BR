@@ -1,14 +1,13 @@
 ---
 description: O TVSDK despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 title: Ordem dos eventos de reprodução
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d03692f6-04b9-4962-92d1-fad671d06665
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
-
 
 # Ordem dos eventos de reprodução{#order-of-playback-events}
 
@@ -18,19 +17,19 @@ O TVSDK despacha eventos/notificações em sequências geralmente esperadas. O r
 
 Os exemplos a seguir mostram a ordem de alguns eventos que incluem eventos de reprodução.
 
-* Ao carregar com êxito um recurso de mídia por meio de `MediaPlayer.replaceCurrentResource`, a ordem dos eventos é:
+* Ao carregar um recurso de mídia com êxito por meio do `MediaPlayer.replaceCurrentResource`, a ordem dos eventos é:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` com status  `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` com status `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` com status  `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` com status `MediaPlayerStatus.INITIALIZED`
 
-* Ao preparar para reprodução por meio de `MediaPlayer.prepareToPlay`, a ordem dos eventos é:
+* Ao se preparar para a reprodução por meio do `MediaPlayer.prepareToPlay`, a ordem dos eventos é:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` com status  `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` com status `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` se anúncios foram inseridos
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` com status  `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` com status `MediaPlayerStatus.PREPARED`
 
 * Para fluxos ao vivo/lineares, durante a reprodução, à medida que a janela de reprodução avança e as oportunidades adicionais são resolvidas, a ordem dos eventos é:
 
@@ -68,4 +67,3 @@ public function onTimeChanged(event:TimeChangeEvent):void {
     ... 
 }
 ```
-

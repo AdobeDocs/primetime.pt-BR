@@ -2,59 +2,57 @@
 title: Configurar o banco de dados do servidor de licenças
 description: Configurar o banco de dados do servidor de licenças
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1d5d988e-d22a-4405-8f39-1763f1f65094
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
-
 # Configurar o banco de dados do servidor de licenças{#configure-the-license-server-database}
 
-Para configurar o banco de dados de amostra configurando o schema do banco de dados e preenchendo o banco de dados com dados de amostra:
+Para configurar o banco de dados de amostra configurando o esquema do banco de dados e preenchendo o banco de dados com dados de amostra:
 
-1. Abra a linha de comando MySQL .
+1. Abra a linha de comando do MySQL.
 
-   **No Windows -** Clique em   **[!UICONTROL Window's Start Menu]** >  **[!UICONTROL MySQL]** >  **[!UICONTROL MySQL Server 5.1]** >  **[!UICONTROL MySQL Command Line Client]**
+   **No Windows -** Clique em  **[!UICONTROL Window's Start Menu]** > **[!UICONTROL MySQL]** > **[!UICONTROL MySQL Server 5.1]** > **[!UICONTROL MySQL Command Line Client]**
 
-   **No Linux etc.** - Tipo  `MySQL`.
+   **No Linux, etc.** - Tipo `MySQL`.
 
 1. Execute o seguinte script SQL:
 
-   mysql> origem &quot;`"[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\createsampledb.sql" dbscript\createsampledb.sql`&quot;
+   mysql> origem &quot; `"[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\createsampledb.sql" dbscript\createsampledb.sql`&quot;
 
-   Esse script adiciona a conta de usuário `dbuser`, estabelece uma conexão por meio de uma aplicação Web e cria um schema de banco de dados.
-
-   >[!NOTE]
-   >
-   >Certifique-se de que não haja ponto e vírgula ( `;`) no final do script.
-
-1. Edite o script `PopulateSampleDB.sql` que preenche os dados de amostra nas tabelas para incluir dados para seu teste.
-
-   Esse script está localizado na pasta `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\ dbscript\`.
-1. Execute o script [!DNL PopulateSampleDB] para preencher os dados, como fez na etapa 2.
+   Este script adiciona a conta de usuário `dbuser`, estabelece uma conexão por meio de uma aplicação web e cria um esquema de banco de dados.
 
    >[!NOTE]
    >
-   >Na primeira vez que você executa o script [!DNL CreateSampleDB.sql], ocorre o seguinte erro:
+   >Verifique se não há ponto e vírgula ( `;`) no final do script.
+
+1. Edite o `PopulateSampleDB.sql` script que preenche dados de amostra nas tabelas para incluir dados para teste.
+
+   Este script está localizado no `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\ dbscript\` pasta.
+1. Execute o [!DNL PopulateSampleDB] script para preencher os dados conforme descrito na etapa 2.
+
+   >[!NOTE]
+   >
+   >Na primeira vez que você executar o [!DNL CreateSampleDB.sql] script o seguinte erro ocorre:
 
    Você pode ignorar esse erro com segurança. Isso só ocorre na primeira vez que você executa esse script.
 
-Você precisa configurar o DBCP (Database Connection Pooling, Pool de Conexões de Banco de Dados), que usa o Pool de Conexões de Banco de Dados Jakarta-Commons. Um JNDI Datasource TestDB é configurado para aproveitar esse pool de conexão do servidor de aplicativos. Para alterar a conexão do banco de dados para apontar para um servidor MySQL que não esteja no host local, modifique um dos seguintes arquivos:
+Você precisa configurar o DBCP (Database Connection Pooling), que usa o Pool de Conexões de Banco de Dados Jakarta-Commons. Um TestDB de Origem de Dados JNDI é configurado para aproveitar este pool de conexões do servidor de aplicações. Para alterar a conexão de banco de dados para apontar para um servidor MySQL que não esteja em localhost, modifique um dos seguintes arquivos:
 
-* O arquivo [!DNL META-INF\context.xml], que especifica o local, o nome de usuário e a senha do banco de dados do servidor de licenças que está no arquivo [!DNL flashaccess.war].
+* A variável [!DNL META-INF\context.xml] arquivo, que especifica a localização, o nome de usuário e a senha do banco de dados do servidor de licenças que está na [!DNL flashaccess.war] arquivo.
 
-* O arquivo `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl\WebContent/META-INF\context.xml`.
+* A variável `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl\WebContent/META-INF\context.xml` arquivo.
 
 e recrie o arquivo WAR usando os arquivos atualizados.
 
-Para alterar qualquer um desses parâmetros, edite o arquivo [!DNL context.xml] no diretório [!DNL WebContent] e use o script Ant para recriar o arquivo WAR. Para ajustar o banco de dados, altere as configurações da fonte de dados JNDI nesse arquivo.
+Para alterar qualquer um desses parâmetros, edite o [!DNL context.xml] arquivo no [!DNL WebContent] e use o script Ant para recriar o arquivo WAR. Para ajustar o banco de dados, altere as configurações da fonte de dados JNDI neste arquivo.
 
-Se você depurar o projeto de Implementação de referência no Eclipse, adicione `$CATALINA_HOME\lib\tomcat-dbcp.jar` à sua configuração de execução/depuração.
+Se você depurar o projeto de implementação de referência no Eclipse, adicione `$CATALINA_HOME\lib\tomcat-dbcp.jar` à sua configuração executar/depurar.
 
 >[!NOTE]
 >
->Se você executar o arquivo [!DNL flashaccess.war] em um servidor Tomcat 6.0 independente, essa etapa não será necessária.
-
+>Se você executar o [!DNL flashaccess.war] em um servidor Tomcat 6.0 independente, essa etapa não é necessária.

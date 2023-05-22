@@ -1,30 +1,29 @@
 ---
-description: Você pode inserir anúncios no VOD e conteúdo ao vivo/linear usando a interface do Adobe Primetime Ad Decisioning.
-title: Requisitos de publicidade
-translation-type: tm+mt
-source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
+description: É possível inserir anúncios em VOD e conteúdo dinâmico/linear usando a interface de decisão de anúncios do Adobe Primetime.
+title: Exigências para publicidade
+exl-id: 164a5e79-1634-4853-a2b9-d4b5bdbbf190
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
 
 ---
 
+# Exigências para publicidade {#advertising-requirements}
 
-# Requisitos de publicidade {#advertising-requirements}
-
-Você pode inserir anúncios no VOD e conteúdo ao vivo/linear usando a interface do Adobe Primetime Ad Decisioning.
+É possível inserir anúncios em VOD e conteúdo dinâmico/linear usando a interface de decisão de anúncios do Adobe Primetime.
 
 <!--<a id="section_A2966DC850E140FE9400A1D9E412F819"></a>-->
 
-O Primetime ad decisioning funciona com TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
+O Primetime Ad Decisioning funciona com TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
 
-Para incorporar anúncios no seu conteúdo de vídeo, verifique se o anúncio e o conteúdo principal do vídeo atendem aos seguintes requisitos:
+Para incorporar anúncios no seu conteúdo de vídeo, verifique se o conteúdo de publicidade e vídeo principal atende aos seguintes requisitos:
 
 * A versão HLS do conteúdo de publicidade não pode ser superior à versão HLS do conteúdo principal.
-* Os anúncios devem ser multiplexados e conter uma renderização somente de áudio, independentemente de o conteúdo principal ser multiplexado.
-* As listas de reprodução de anúncio devem ter as mesmas representações de taxa de bits que as representações na lista de reprodução do conteúdo principal.
-* A duração do target e a duração individual do fragmento de um anúncio não podem exceder a duração do target do conteúdo principal.
-* Se o conteúdo principal contiver um fluxo somente de áudio, o conteúdo da publicidade também deverá conter um fluxo somente de áudio.
-* Se o conteúdo principal contiver fluxos de subtítulo, o conteúdo da publicidade deverá ser descriptografado.
-* Se o conteúdo principal for uma taxa de bits múltipla (MBR), o conteúdo do anúncio também deverá ser MBR.
-* Se o conteúdo principal tiver trilhas de áudio alternativas, cada anúncio deve ter pelo menos um fluxo somente de áudio ou os anúncios devem ser descontinuados. Se o anúncio não tiver pelo menos um fluxo somente de áudio nem for descontinuado, o anúncio será ignorado.
+* Os anúncios devem ser multiplexados e devem conter uma representação somente de áudio, independentemente do conteúdo principal ser multiplexado.
+* As listas de reprodução de anúncios devem ter as mesmas representações de taxa de bits que as representações na lista de reprodução do conteúdo principal.
+* A duração alvo e a duração de fragmento individual de um anúncio não podem exceder a duração alvo do conteúdo principal.
+* Se o conteúdo principal contiver um fluxo somente de áudio, o conteúdo de publicidade também deverá conter um fluxo somente de áudio.
+* Se o conteúdo principal contiver fluxos de legendas, o conteúdo de publicidade deve ser descriptografado.
+* Se o conteúdo principal for MBR (multiple bit rate), o conteúdo de publicidade também deverá ser MBR.
+* Se o conteúdo principal tiver faixas de áudio alternativas, cada anúncio deve ter pelo menos um fluxo somente de áudio, ou os anúncios devem ser desmesclados. Se o anúncio não tiver pelo menos um fluxo somente de áudio nem for desmesclado, o anúncio será ignorado.

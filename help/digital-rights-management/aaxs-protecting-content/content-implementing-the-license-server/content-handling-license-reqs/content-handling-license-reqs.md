@@ -1,15 +1,13 @@
 ---
-title: Tratamento de solicitações de licença
-description: Tratamento de solicitações de licença
+title: Lidar com solicitações de licença
+description: Lidar com solicitações de licença
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bf6d4193-283f-4c08-8139-5f7c2f3e2180
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '9'
 ht-degree: 0%
 
 ---
 
-
-# Tratamento de solicitações de licença{#handling-license-requests}
-
+# Lidar com solicitações de licença{#handling-license-requests}

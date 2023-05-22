@@ -1,24 +1,23 @@
 ---
-description: A otimização de redirecionamento 302 minimiza o número de 302 respostas de redirecionamento, o que permite que o aplicativo balanceamento de carga com mais eficiência.
+description: A otimização de redirecionamento 302 minimiza o número de respostas de redirecionamento 302, o que permite que seu aplicativo faça o balanceamento de carga com mais eficiência.
 title: Otimização de redirecionamento HTTP 302
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a238e90f-3aa1-486b-b57f-d543e4c94b2e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
 # Otimização de redirecionamento HTTP 302 {#http-redirect-optimization}
 
-A otimização de redirecionamento 302 minimiza o número de 302 respostas de redirecionamento, o que permite que o aplicativo balanceamento de carga com mais eficiência.
+A otimização de redirecionamento 302 minimiza o número de respostas de redirecionamento 302, o que permite que seu aplicativo faça o balanceamento de carga com mais eficiência.
 
-Se uma solicitação de manifesto principal for redirecionada e a otimização 302 estiver ativada no reprodutor, as solicitações subsequentes feitas para ativos desse manifesto usarão o local de domínio final, o que evita respostas adicionais 302. Esse recurso é ativado por padrão e você pode alterar essa configuração.
+Se uma solicitação de manifesto principal for redirecionada e a otimização 302 estiver habilitada no player, as solicitações subsequentes feitas para ativos desse manifesto usarão o local de domínio final, o que evita respostas 302 adicionais. Esse recurso é ativado por padrão e você pode alterar essa configuração.
 
-## Desative ou ative a otimização de redirecionamento 302 {#section_8977448B268E41D69A8F75B60EB9DA3B}
+## Desabilitar ou habilitar otimização de redirecionamento 302 {#section_8977448B268E41D69A8F75B60EB9DA3B}
 
-Use a propriedade `useRedirectedUrl` para ativar ou desativar o redirecionamento 302 ( `true`) ou ( `false`).
+Use o `useRedirectedUrl` propriedade para ativar o redirecionamento 302 ( `true`) ou desativado ( `false`).
 
 <!--<a id="example_888749F70C8A43279D06A29BD68E7E4D"></a>-->
 

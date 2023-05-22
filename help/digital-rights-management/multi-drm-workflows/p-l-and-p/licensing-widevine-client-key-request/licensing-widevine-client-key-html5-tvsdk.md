@@ -1,20 +1,19 @@
 ---
 description: O código pode solicitar uma chave por meio do DRMManager.
-title: Fluxo de trabalho de solicitação principal em HTML5 TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Fluxo de trabalho de solicitação principal no TVSDK do HTML5
+exl-id: 1f60aadc-4730-4f71-a221-1af3ae3cba93
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
-
-# Fluxo de trabalho da solicitação principal em HTML5 TVSDK{#key-request-workflow-on-html-tvsdk}
+# Fluxo de trabalho de solicitação principal no TVSDK do HTML5{#key-request-workflow-on-html-tvsdk}
 
 O código pode solicitar uma chave por meio do DRMManager.
 
-O TVSDK do navegador também expõe uma API setProtectionData por meio do objeto DRMManager :
+O TVSDK do navegador também expõe uma API setProtectionData por meio do objeto DRMManager:
 
 ```
 [  /** 
@@ -31,9 +30,9 @@ license acquisition. </p>
    setProtectionData: function(protectionData) 
 ```
 
-Seu código precisaria chamar essa API antes de iniciar a reprodução do conteúdo da maneira normal. MediaPlayer.vo.protection.ProtectionData está documentado aqui: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
+Seu código precisaria chamar essa API antes de iniciar a reprodução do conteúdo normalmente. MediaPlayer.vo.protection.ProtectionData está documentado aqui: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
 
-Este é um exemplo de objeto de dados de proteção com URLs do servidor de licenças para PlayReady e Widevine.
+Este é um exemplo de objeto de dados de proteção com URLs de servidor de licença para PlayReady e Widevine.
 
 ```
 var protectionData = { 
@@ -53,4 +52,4 @@ var protectionData = {
    };
 ```
 
-O TVSDK não fornece nenhuma API para forçar um sistema de DRM específico porque cada navegador suporta apenas um sistema de DRM.
+O TVSDK não fornece nenhuma API para forçar um sistema DRM específico porque cada navegador oferece suporte apenas a um sistema DRM.

@@ -1,22 +1,21 @@
 ---
-description: Você pode inserir anúncios no VOD e conteúdo ao vivo/linear usando a interface do Adobe Primetime Ad Decisioning. O Primetime ad decisioning funciona com TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
-title: Requisitos de publicidade
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: É possível inserir anúncios em VOD e conteúdo dinâmico/linear usando a interface de decisão de anúncios do Adobe Primetime. O Primetime Ad Decisioning trabalha com o TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
+title: Exigências para publicidade
+exl-id: 3ca82cc5-ed64-458e-9a8d-475a84512478
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
-
 # Publicidade e seus requisitos {#advertising-requirements}
 
-Você pode inserir anúncios no VOD e conteúdo ao vivo/linear usando a interface do Adobe Primetime Ad Decisioning. O Primetime ad decisioning funciona com TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
+É possível inserir anúncios em VOD e conteúdo dinâmico/linear usando a interface de decisão de anúncios do Adobe Primetime. O Primetime Ad Decisioning trabalha com o TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
 
 <!--<a id="section_282A8000A8BF4860A24F0D3F1A19BC9E"></a>-->
 
-Para incorporar anúncios no seu conteúdo de vídeo, verifique se o anúncio e o conteúdo principal do vídeo atendem aos seguintes requisitos:
+Para incorporar anúncios no seu conteúdo de vídeo, verifique se o conteúdo de publicidade e vídeo principal atende aos seguintes requisitos:
 
 * A versão HLS do conteúdo de publicidade não pode ser superior à versão HLS do conteúdo principal.
 * Os anúncios não precisam ser multiplexados (sem restrições), independentemente do conteúdo principal ser multiplexado.

@@ -1,25 +1,23 @@
 ---
-description: Você pode ativar o fallback quando um anúncio em linha do VMAP contiver um tipo de mídia inválido.
-title: Definir o comportamento do anúncio de fallback para anúncios em linha do VMAP
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode habilitar o fallback quando um anúncio em linha do VMAP contiver um tipo de mídia inválido.
+title: Definir comportamento de anúncio de fallback para anúncios em linha do VMAP
+exl-id: 57fd1b89-bcee-4c23-88e7-7a576c47c6f9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
+# Definir comportamento de anúncio de fallback para anúncios em linha do VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
 
-# Definir o comportamento do anúncio de fallback para anúncios em linha do VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
+Você pode habilitar o fallback quando um anúncio em linha do VMAP contiver um tipo de mídia inválido.
 
-Você pode ativar o fallback quando um anúncio em linha do VMAP contiver um tipo de mídia inválido.
+1. Definir `setFallbackOnInvalidCreativeEnabled` para `true` para que o VMAP retorne quando o tipo de mídia de um anúncio linear/em linha for inválido para HLS.
 
-1. Defina `setFallbackOnInvalidCreativeEnabled` como `true` para que o VMAP retorne quando o tipo de mídia para um anúncio linear/em linha for inválido para HLS.
-
-   O valor padrão é `false`. Se um anúncio linear falhar porque tem um tipo de mídia inválido ou porque o anúncio não pode ser reempacotado, esse sinalizador permite que o Primetime e a decisão sigam o mesmo comportamento de fallback que se o anúncio fosse um invólucro VAST vazio.
+   O valor padrão é `false`. Se um anúncio linear falhar porque tem um tipo de mídia inválido ou porque o anúncio não pode ser reempacotado, esse sinalizador permitirá que as decisões de anúncios do Primetime sigam o mesmo comportamento de fallback que um anúncio VAST vazio.
 
    ```java
    AuditudeSettings result = new AuditudeSettings(); 
    result.setFallbackOnInvalidCreative(true);
    ```
-

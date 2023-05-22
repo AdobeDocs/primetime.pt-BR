@@ -1,24 +1,23 @@
 ---
-description: Para usar o TVSDK, verifique se as versões do hardware, do sistema operacional e do aplicativo atendem aos requisitos mínimos listados abaixo.
+description: Para usar o TVSDK, verifique se o hardware, o sistema operacional e as versões do aplicativo atendem aos requisitos mínimos listados abaixo.
 title: Requisitos de sistema e software
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fb1bccb9-1791-48e5-8e07-91bf776ca14b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
 
-
 # Requisitos de sistema e software{#system-and-software-requirements}
 
-O TVSDK requer propriedades específicas para conteúdo de mídia, conteúdo manifesto, DRM e versões de software.
+O TVSDK requer propriedades específicas para conteúdo de mídia, conteúdo de manifesto, DRM e versões de software.
 
-Para usar o TVSDK, verifique se as versões do hardware, do sistema operacional e do aplicativo atendem aos requisitos mínimos listados abaixo.
+Para usar o TVSDK, verifique se o hardware, o sistema operacional e as versões do aplicativo atendem aos requisitos mínimos listados abaixo.
 
 <!--<a id="section_FD9C110E85BB483B869FBB94E5662710"></a>-->
 
-* Para Mac OS:
+* Para o sistema operacional Mac:
 
    | Sistema operacional | Mac OS X v10.9 ou posterior |
    |---|---|
@@ -26,16 +25,16 @@ Para usar o TVSDK, verifique se as versões do hardware, do sistema operacional 
    | Flash Player | 11.1 ou posterior (14 ou posterior para usar curingas em tokens assinados) |
    | CPU | Processador Intel Core Duo de 1,83 GHz ou mais rápido |
    | RAM | 513 MB |
-   | GPU | Memória gráfica de 128 MB |
-   | swf | Seu aplicativo compilado deve usar pelo menos o SWF versão 22 |
+   | GPU | 128 MB de memória gráfica |
+   | swf | Seu aplicativo compilado deve usar pelo menos a versão 22 do SWF |
 
 * Para Windows:
 
-   | Sistema operacional | <ul><li>Microsoft Windows XP (32 bits)</li><li>Microsoft Windows 7 (32 bits e 64 bits)</li><li>Microsoft Windows 8.1 (64 bits)</li><li>Microsoft Windows 10 (64 bits)</li></ul> |
+   | Sistema operacional | <ul><li>Microsoft Windows XP (32 bits)</li><li>Microsoft Windows 7 (32 e 64 bits)</li><li>Microsoft Windows 8.1 (64 bits)</li><li>Microsoft Windows 10 (64 bits)</li></ul> |
    |---|---|
    | Navegador | Versão mais recente do Microsoft Internet Explorer, Microsoft Edge, Mozilla Firefox ou Google Chrome |
-   | Flash Player | <ul><li>14 ou posterior (para usar curingas em tokens assinados)</li><li>15 ou posterior (para um fallback perfeito do Hardware StageVideo para Software StageVideo)</li></ul> |
-   | CPU | Processador compatível com x86 de 2,33 GHz ou mais rápido, ou Intel Atom 1,6 GHz ou mais rápido para netbooks |
+   | Flash Player | <ul><li>14 ou posterior (para usar curingas em tokens assinados)</li><li>15 ou posterior (para fallback contínuo do vídeo de estágio de hardware para o vídeo de estágio de software)</li></ul> |
+   | CPU | Processador de 2,33 GHz ou compatível com x86 mais rápido ou processador Intel Atom de 1,6 GHz ou mais rápido para netbooks |
    | RAM | 512 MB (1 GB recomendado para netbooks) |
-   | GPU | Memória gráfica de 128 MB |
-   | SWF | Seu aplicativo compilado deve usar pelo menos a versão 22 do swf |
+   | GPU | 128MB de memória gráfica |
+   | SWF | Seu aplicativo compilado deve usar pelo menos o swf versão 22 |

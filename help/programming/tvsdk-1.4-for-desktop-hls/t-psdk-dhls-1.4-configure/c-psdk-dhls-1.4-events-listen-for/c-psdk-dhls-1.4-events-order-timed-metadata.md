@@ -1,21 +1,19 @@
 ---
-description: O TVSDK despacha eventos de metadados cronometrados e gera metadados cronometrados sempre que tags padrão ou personalizadas são encontradas ou quando uma lista de reprodução é alterada em um manifesto. Os eventos são despachados na ordem em que aparecem no manifesto.
+description: O TVSDK despacha eventos de metadados cronometrados e gera metadados cronometrados sempre que tags padrão ou personalizadas são encontradas ou quando uma lista de reprodução é alterada em um manifesto. Eventos são despachados na ordem em que aparecem no manifesto.
 title: Eventos de metadados cronometrados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4c58b06e-5f70-452c-a743-55c4b6206711
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
-
 # Eventos de metadados cronometrados{#timed-metadata-events}
 
-O TVSDK despacha eventos de metadados cronometrados e gera metadados cronometrados sempre que tags padrão ou personalizadas são encontradas ou quando uma lista de reprodução é alterada em um manifesto. Os eventos são despachados na ordem em que aparecem no manifesto.
+O TVSDK despacha eventos de metadados cronometrados e gera metadados cronometrados sempre que tags padrão ou personalizadas são encontradas ou quando uma lista de reprodução é alterada em um manifesto. Eventos são despachados na ordem em que aparecem no manifesto.
 
-O reprodutor implementa ações com base nos seguintes eventos:
+Seu reprodutor implementa ações com base nos seguintes eventos:
 
-* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: Despachado quando metadados cronometrados de ID3 eram processados.
-* `TimedMetadataEvent.TIMED_METADATA_SKIPPED`: Despachado quando os metadados cronometrados eram processados e nenhuma oportunidade era detectada.
-
+* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: despachado quando um metadado de ID3 cronometrado foi processado.
+* `TimedMetadataEvent.TIMED_METADATA_SKIPPED`: despachado quando os metadados cronometrados eram processados e nenhuma oportunidade era detectada.

@@ -1,18 +1,17 @@
 ---
-title: Gerar CRLs para complementar aqueles publicados pelo Adobe
-description: Gerar CRLs para complementar aqueles publicados pelo Adobe
+title: Gerar CRLs para complementar aquelas publicadas pelo Adobe
+description: Gerar CRLs para complementar aquelas publicadas pelo Adobe
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 05dc2159-fa7f-4772-9f25-c89370b4981e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
+# Gerar CRLs para complementar aquelas publicadas pelo Adobe{#generate-crls-to-supplement-those-published-by-adobe}
 
-# Gere CRLs para complementar aqueles publicados pelo Adobe{#generate-crls-to-supplement-those-published-by-adobe}
+O Adobe Access permite que você crie CRLs para complementar a CRL de máquina publicada pelo Adobe. O SDK de acesso do Adobe verifica e impõe as CRLs do Adobe. No entanto, você pode proibir máquinas clientes adicionais criando uma CRL que revogue credenciais de máquina adicionais. Para fazer isso, você deve passar a CRL para o SDK de acesso do Adobe e, ao emitir uma licença, o SDK verificará a CRL do Adobe e sua própria CRL.
 
-O Adobe Access permite criar CRLs para complementar a CRL do computador publicada pelo Adobe. O SDK do Adobe Access verifica e aplica as CRLs do Adobe. No entanto, você pode não permitir máquinas cliente adicionais criando uma CRL que revoga credenciais de máquina adicionais. Para fazer isso, você deve passar a CRL para o SDK do Adobe Access e, ao emitir uma licença, o SDK verifica a CRL do Adobe e sua própria CRL.
-
-Para saber mais sobre a geração de CRLs, consulte `RevocationListFactory` em *Referência da API de acesso ao Adobe*.
+Para saber mais sobre a geração de CRLs, consulte `RevocationListFactory` in *Referência da API de acesso do Adobe*.

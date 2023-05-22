@@ -2,26 +2,25 @@
 title: Selecionar as faixas de áudio
 description: Selecionar as faixas de áudio
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d4a7260a-82dd-4b57-8037-b91815d9b954
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
+# Selecionar as faixas de áudio{#select-the-audio-tracks}
 
-# Selecione as faixas de áudio{#select-the-audio-tracks}
+Para selecionar faixas de áudio para áudio de associação tardia, implemente [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
 
-Para selecionar trilhas de áudio para áudio de ligação tardia, implemente [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
-
-| Para... | Chame... |
+| Para... | Chamar... |
 |---|---|
-| Obter uma lista de rastreamentos AA disponíveis | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
-| Obter a faixa selecionada atual | [getSeletedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
-| Selecionar um rastreamento AA | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
+| Obter uma lista de faixas do AA disponíveis | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
+| Obter a faixa selecionada no momento | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
+| Selecionar uma faixa do AA | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
 
-A amostra de código a seguir ilustra como a implementação de referência obtém as faixas de áudio do TVSDK e atribui a faixa selecionada ao item de mídia associado:
+O código de amostra a seguir ilustra como a implementação de referência obtém as faixas de áudio do TVSDK e atribui a faixa selecionada ao item de mídia associado:
 
 ```java
 /** 

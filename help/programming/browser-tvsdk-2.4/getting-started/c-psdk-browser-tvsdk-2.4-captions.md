@@ -1,20 +1,19 @@
 ---
 description: É possível exibir legendas ao reproduzir conteúdo de vídeo.
 title: Legendas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2144a6b2-0b9a-49ea-ad44-997adf36cbe6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
-
 
 # Legendas{#captions}
 
 É possível exibir legendas ao reproduzir conteúdo de vídeo.
 
-Para lidar com legendas, você deve adicionar o ouvinte de evento `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`:
+Para lidar com legendas, é necessário adicionar o `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` ouvinte de eventos:
 
 ```js
 ... 
@@ -34,7 +33,7 @@ function onCaptionsUpdateEvent (event) {
 </pre>
 ```
 
-A Estrutura da interface do usuário fornece uma implementação de comportamentos de legendas padrão, que podem ser modificadas. Os comportamentos de legendas ocultas também podem ser modificados pela extensão de comportamentos de legendas ocultas padrão. Por exemplo:
+A Estrutura da interface do usuário fornece uma implementação de comportamentos de legendas padrão, que podem ser modificadas. Comportamentos de legendas ocultas também podem ser modificados ao estender comportamentos padrão de legendas ocultas. Por exemplo:
 
 ```js
 // Using UI Framework 

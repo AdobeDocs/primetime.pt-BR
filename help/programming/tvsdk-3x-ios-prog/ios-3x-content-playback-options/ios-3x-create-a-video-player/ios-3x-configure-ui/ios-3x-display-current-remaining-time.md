@@ -1,6 +1,6 @@
 ---
-description: Você pode exibir o tempo atual e o restante do conteúdo que está sendo reproduzido.
-title: Exibir o tempo atual e o tempo restante
+description: Você pode exibir a hora atual e a hora restante do conteúdo que está sendo reproduzido.
+title: Exibir a hora atual e o tempo restante
 exl-id: f1aebeb7-381b-4bd5-8535-32b902f838d2
 source-git-commit: 7e3f1e2dcf855ecd241b2aebc01d9d60c90ed114
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# Exibir o tempo atual e o tempo restante {#display-the-current-time-and-remaining-time}
+# Exibir a hora atual e o tempo restante {#display-the-current-time-and-remaining-time}
 
-Você pode exibir o tempo atual e o restante do conteúdo que está sendo reproduzido.
+Você pode exibir a hora atual e a hora restante do conteúdo que está sendo reproduzido.
 
-1. Para implementar uma exibição que mostre o tempo atual e restante do conteúdo ativo, use o seguinte código de exemplo:
+1. Para implementar uma exibição que mostre o tempo atual e restante do conteúdo ativo, use o seguinte código de amostra:
 
    ```
       // 1. Register for the PTMediaPlayerTimeChangeNotification 
@@ -66,7 +66,7 @@ Você pode exibir o tempo atual e o restante do conteúdo que está sendo reprod
       } 
    ```
 
-1. Para implementar uma exibição que mostra o progresso de um anúncio e o tempo restante, use o seguinte código de exemplo:
+1. Para implementar uma exibição que mostre o progresso de um anúncio e o tempo restante, use o seguinte código de exemplo:
 
    ```
       double adBreakDurationLeft; 

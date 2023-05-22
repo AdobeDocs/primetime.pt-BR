@@ -1,30 +1,29 @@
 ---
 description: Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
 title: Implementar um resolvedor de conteúdo personalizado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f594840b-ff56-49c5-baf5-ac2800411215
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '191'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Implementar um resolvedor de conteúdo personalizado{#implement-a-custom-content-resolver}
 
 Você pode implementar seus próprios resolvedores de conteúdo com base nos resolvedores padrão.
 
-Quando o TVSDK do navegador detecta uma nova oportunidade, ele repete por meio dos resolvedores de conteúdo registrados procurando por um que seja capaz de resolver essa oportunidade usando o método `canResolve`. O primeiro que retorna true é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar o TVSDK do navegador quando o processo for concluído.
+Quando o TVSDK do navegador detecta uma nova oportunidade, ele repete pelos resolvedores de conteúdo registrados procurando por um que seja capaz de resolver essa oportunidade usando o `canResolve` método. O primeiro que retornar verdadeiro é selecionado para resolver a oportunidade. Se nenhum resolvedor de conteúdo for capaz, essa oportunidade será ignorada. Como o processo de resolução de conteúdo geralmente é assíncrono, o resolvedor de conteúdo é responsável por notificar o TVSDK do navegador quando o processo for concluído.
 
 Lembre-se das seguintes informações:
 
-* O resolvedor de conteúdo chama `client.process` para especificar qual operação de linha do tempo o TVSDK precisa executar.
+* As chamadas do resolvedor de conteúdo `client.process` para especificar qual operação de linha do tempo o TVSDK precisa executar.
 
-   A operação geralmente é uma disposição de ad break.
+   Normalmente, a operação é uma inserção de ad break.
 
-* O resolvedor de conteúdo chama `client.notifyCompleted` se o processo de resolução for bem-sucedido ou `client.notifyFailed` se o processo falhar.
+* As chamadas do resolvedor de conteúdo `client.notifyCompleted` se o processo de resolução tiver êxito ou `client.notifyFailed` se o processo falhar.
 
-1. Crie um resolvedor de oportunidade personalizado.
+1. Criar um resolvedor de oportunidades personalizado.
 
    ```js
    /** 
@@ -81,7 +80,7 @@ Lembre-se das seguintes informações:
    }; 
    ```
 
-1. Crie o fatory de conteúdo personalizado, que usa o resolvedor de conteúdo personalizado.
+1. Crie a fábrica de conteúdo personalizado, que usa o resolvedor de conteúdo personalizado.
 
    Por exemplo:
 
@@ -106,9 +105,9 @@ Lembre-se das seguintes informações:
    }; 
    ```
 
-1. Registre a fábrica de conteúdo personalizado do fluxo de mídia a ser reproduzido.
+1. Registre a fábrica de conteúdo personalizado para que o fluxo de mídia seja reproduzido.
 
-   No reprodutor da Estrutura de interface do usuário, você pode especificar a fábrica de conteúdo personalizado da seguinte maneira:
+   No reprodutor da estrutura da interface do usuário, você pode especificar a fábrica de conteúdo personalizado da seguinte maneira:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -132,4 +131,3 @@ Lembre-se das seguintes informações:
    
    }); 
    ```
-

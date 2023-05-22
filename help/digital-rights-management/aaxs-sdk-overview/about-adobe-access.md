@@ -1,26 +1,24 @@
 ---
-title: Sobre o Adobe Access
-description: Sobre o Adobe Access
+title: Sobre o Acesso ao Adobe
+description: Sobre o Acesso ao Adobe
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fb994516-fcad-44a7-9cf0-44a7e3dd8fa1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
 
 ---
 
+# Sobre o Acesso ao Adobe {#about-adobe-access}
 
-# Sobre o Adobe Access {#about-adobe-access}
+O Adobe Access permite que os proprietários e distribuidores de conteúdo controlem como e onde seu conteúdo pode ser distribuído e experimentado, fornecendo proteção completa durante todo o ciclo de vida do conteúdo. Ele criptografa arquivos de vídeo FLV e F4V do Flash, que podem ser transmitidos ou baixados para as plataformas Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e fiscaliza os modelos empresariais, como o aluguel de vídeos on-line. Os consumidores podem desfrutar de conteúdo de alta qualidade quando desejarem, seja online ou offline. O Adobe Access oferece as principais vantagens que os proprietários e distribuidores de conteúdo podem usar para fornecer rapidamente novos serviços que os diferenciam da concorrência.
 
-O Adobe Access permite que os proprietários e distribuidores de conteúdo controlem como e onde seu conteúdo pode ser distribuído e experimentado, fornecendo proteção completa durante todo o ciclo de vida do conteúdo. Ele criptografa arquivos de vídeo FLV e F4V do Flash, que podem ser transmitidos ou baixados para plataformas Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e aplica modelos comerciais como o aluguel online de vídeo. Os consumidores podem desfrutar de conteúdo de alta qualidade, quer estejam online ou offline. O Adobe Access oferece as principais vantagens que os proprietários e distribuidores de conteúdo podem usar para fornecer rapidamente novos serviços que os diferenciam da concorrência.
+Essa solução entre plataformas pode ser integrada aos sistemas existentes de cobrança e autenticação, permitindo que os proprietários e distribuidores de conteúdo mantenham o controle do conteúdo de áudio e vídeo, independentemente da abrangência da sua distribuição. O Adobe Access ajuda a proteger e monetizar o conteúdo com confiança e oferece flexibilidade para gerenciar como e onde o conteúdo protegido é vivido.
 
-Essa solução entre plataformas pode ser integrada aos sistemas de faturamento e autenticação existentes, permitindo que os proprietários e distribuidores de conteúdo mantenham o controle do conteúdo de áudio e vídeo, independentemente de sua distribuição. O Adobe Access ajuda a proteger e gerar receita com confiança e oferece a flexibilidade para gerenciar como e onde o conteúdo protegido é vivido.
+O acesso ao Adobe fornece:
 
-O Adobe Access dá:
-
-* Os proprietários e distribuidores de conteúdo têm maior alcance por ativos de mídia, e uma maneira de recuperar custos de produção, ao mesmo tempo em que protegem esses ativos de uso indevido.
-* Os distribuidores de conteúdo podem distribuir rapidamente o conteúdo e recuperar custos de produção através de uma compensação direta (paga pelo usuário) ou indireta (paga pelo anunciante).
-* Consume a flexibilidade para desfrutar de conteúdo premium com uma experiência de visualização avançada, intuitiva, não intrusiva, conveniente e envolvente.
-* Desenvolvedores da capacidade de automatizar recursos de acesso ao Adobe, incluindo autorização e autenticação, em um ambiente existente de um distribuidor de conteúdo.
-
+* Os proprietários e distribuidores de conteúdo têm mais alcance para os ativos de mídia e uma maneira de recuperar os custos de produção, protegendo esses ativos contra o uso indevido.
+* Os distribuidores de conteúdo têm a capacidade de distribuir rapidamente o conteúdo e recuperar os custos de produção por meio de compensação direta (paga pelo usuário) ou indireta (paga pelo anunciante).
+* Os consumidores têm a flexibilidade de desfrutar de conteúdo premium com uma rica experiência de visualização intuitiva, não intrusiva, conveniente e envolvente.
+* Desenvolvedores: a capacidade de automatizar recursos de acesso ao Adobe, incluindo autorização e autenticação, no ambiente existente de um distribuidor de conteúdo.

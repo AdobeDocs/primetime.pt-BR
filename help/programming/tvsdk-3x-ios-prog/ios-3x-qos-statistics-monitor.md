@@ -1,35 +1,34 @@
 ---
-description: A Qualidade do serviço (QoS) oferece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
-title: Estatísticas de qualidade dos serviços
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: A Qualidade do serviço (QoS) oferece uma visualização detalhada do desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+title: Estatísticas de qualidade do serviço
+exl-id: 1e9f32fb-3faf-4646-8af1-0c1cc441cb42
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Estatísticas de qualidade do serviço {#quality-of-service-statistics}
 
-A Qualidade do serviço (QoS) oferece uma visualização detalhada sobre o desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
+A Qualidade do serviço (QoS) oferece uma visualização detalhada do desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
 
-## Ler a reprodução do QOS, o buffering e as estatísticas do dispositivo {#section_9996406E2D814FA382B77E3041CB02BC}
+## Ler estatísticas de reprodução, buffering e dispositivo de QOS {#section_9996406E2D814FA382B77E3041CB02BC}
 
-Você pode ler as estatísticas de reprodução, buffering e dispositivo da classe `PTQOSProvider`.
+Você pode ler as estatísticas de reprodução, buffering e dispositivo no `PTQOSProvider` classe.
 
-A classe `PTQOSProvider` fornece várias estatísticas, incluindo informações sobre buffering, taxas de bits, taxas de quadros, dados de tempo e assim por diante.
+A variável `PTQOSProvider` A classe fornece várias estatísticas, incluindo informações sobre buffering, taxas de bits, taxas de quadros, dados de tempo, etc.
 
-Ele também fornece informações sobre o dispositivo, como o modelo, o sistema operacional e a ID do dispositivo do fabricante.
+Ela também fornece informações sobre o dispositivo, como o modelo, o sistema operacional e a ID do dispositivo do fabricante.
 
 >[!TIP]
 >
->Você não pode alterar o tamanho do buffer de reprodução, mas pode monitorar o status do tamanho do buffer para depuração ou análise. `PTPlaybackInformation` inclui propriedades como  `playbackBufferFull` e  `playbackLikelyToKeepUp`.
+>Você não pode alterar o tamanho do buffer de reprodução, mas pode monitorar o status do tamanho do buffer para depuração ou análise. `PTPlaybackInformation` inclui propriedades como `playbackBufferFull` e `playbackLikelyToKeepUp`.
 
-1. Instancie um reprodutor de mídia.
-1. Crie um objeto `PTQOSProvider` e o anexe ao reprodutor de mídia.
+1. Instanciar um reprodutor de mídia.
+1. Criar um `PTQOSProvider` e anexe-o ao reprodutor de mídia.
 
-   O construtor `PTQOSProvider` assume um contexto de reprodutor para que possa recuperar informações específicas do dispositivo.
+   A variável `PTQOSProvider` O construtor usa um contexto do player para recuperar informações específicas do dispositivo.
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
@@ -37,7 +36,7 @@ Ele também fornece informações sobre o dispositivo, como o modelo, o sistema 
 
 1. (Opcional) Leia as estatísticas de reprodução.
 
-   Uma solução para ler as estatísticas de reprodução é ter um temporizador, como `NSTimer`, que busca periodicamente os novos valores de QoS do `PTQOSProvider`. Por exemplo:
+   Uma solução para ler as estatísticas de reprodução é ter um cronômetro, como um `NSTimer`, que busca periodicamente os novos valores de QoS no `PTQOSProvider`. Por exemplo:
 
    ```
    - (void)printPlaybackInfoLog { 

@@ -1,23 +1,22 @@
 ---
-description: Complete as etapas a seguir para criar um reprodutor básico usando o Browser TVSDK.
-title: Criar um reprodutor básico usando TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Conclua as etapas a seguir para criar um reprodutor básico usando o TVSDK do navegador.
+title: Criar um reprodutor básico usando o TVSDK
+exl-id: ea7485e0-5d15-469b-b8b6-f9604d283492
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
+# Criar um reprodutor básico usando o TVSDK{#create-a-basic-player-using-tvsdk}
 
-# Criar um reprodutor básico usando TVSDK{#create-a-basic-player-using-tvsdk}
+Conclua as etapas a seguir para criar um reprodutor básico usando o TVSDK do navegador.
 
-Complete as etapas a seguir para criar um reprodutor básico usando o Browser TVSDK.
-
-1. Crie um novo diretório no qual você pode baixar os arquivos compactados para Browser TVSDK.
-1. Baixe o Browser TVSDK do Zendesk, descompacte os arquivos e coloque a pasta de estruturas no novo diretório.
-1. Crie um padrão estereotipado HTML simples para o código com um `div` nele.
-1. Coloque este padrão estereotipado em um arquivo HTML no diretório que você criou na etapa 1.
+1. Crie um novo diretório no qual você possa baixar os arquivos compactados para o TVSDK do navegador.
+1. Baixe o navegador TVSDK do Zendesk, descompacte os arquivos e coloque a pasta de estruturas no novo diretório.
+1. Crie uma placa de formatação de HTML simples para o código com uma `div` nele.
+1. Coloque esse modelo em um arquivo HTML no diretório criado na etapa 1.
 
    ```
    <!DOCTYPE html> 
@@ -33,7 +32,7 @@ Complete as etapas a seguir para criar um reprodutor básico usando o Browser TV
    </html>
    ```
 
-1. Adicione as bibliotecas TVSDK do navegador na seção do cabeçalho.
+1. Adicione as bibliotecas TVSDK do navegador na seção head.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -42,14 +41,14 @@ Complete as etapas a seguir para criar um reprodutor básico usando o Browser TV
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. Para a tag body , adicione a seção `onLoad` .
+1. Para a tag body, adicione o `onLoad` seção.
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Comece a implementar a função `startVideo`.
-1. Adicione uma tag de script e crie a função `startVideo` na tag .
+1. Comece a implementar o `startVideo` função.
+1. Adicione uma tag de script e crie o `startVideo` na tag.
 
    Isso deve estar na seção de cabeçalho da página.
 
@@ -70,7 +69,7 @@ Complete as etapas a seguir para criar um reprodutor básico usando o Browser TV
 
    >[!TIP]
    >
-   >É aqui que o `div` criado anteriormente é usado.
+   >É aqui que a `div` que você criou anteriormente será usado.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -78,13 +77,13 @@ Complete as etapas a seguir para criar um reprodutor básico usando o Browser TV
    player.view = view;
    ```
 
-1. Adicione o ouvinte de evento do player.
+1. Adicione o ouvinte de eventos do player.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
    ```
 
-1. Implemente o manipulador de eventos e coloque-o antes de adicionar o ouvinte de eventos.
+1. Implemente o manipulador de eventos e coloque-o antes do ouvinte de eventos de adição.
 
    ```js
    var onStatusChange = function (event) { 
@@ -172,4 +171,3 @@ Complete as etapas a seguir para criar um reprodutor básico usando o Browser TV
     player.play(); 
     break;
    ```
-

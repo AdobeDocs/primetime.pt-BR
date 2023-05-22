@@ -1,36 +1,34 @@
 ---
-description: É possível rastrear o uso do vídeo integrando o TVSDK com o Adobe Analytics.
+description: Você pode rastrear o uso de vídeos integrando o TVSDK ao Adobe Analytics.
 title: Análise de vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 02303511-2713-4974-ada7-6f50fc500325
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
-
 # Análise de vídeo{#video-analytics}
 
-É possível rastrear o uso do vídeo integrando o TVSDK com o Adobe Analytics.
+Você pode rastrear o uso de vídeos integrando o TVSDK ao Adobe Analytics.
 
-O rastreamento de vídeo no TVSDK usa o serviço **Adobe Analytics Video Essentials**, que fornece métricas de envolvimento com o vídeo, como exibições de vídeo, conclusões de vídeo, impressões de anúncios, tempo gasto com vídeo etc. Para obter mais informações sobre esse serviço, entre em contato com o representante do Adobe.
+O rastreamento de vídeo no TVSDK usa o **Adobe Analytics Video Essentials** serviço, que fornece métricas de envolvimento com o vídeo, como exibições, conclusões de vídeo, impressões de anúncios, tempo gasto no vídeo e assim por diante. Para obter mais informações sobre esse serviço, entre em contato com o representante da Adobe.
 
-O procedimento a seguir resume as etapas para ativar o rastreamento de vídeo no player:
+O procedimento a seguir resume as etapas para ativar o rastreamento de vídeo no seu reprodutor:
 
 1. Inicialize e/ou configure os seguintes componentes de rastreamento de vídeo:
 
-   * **Biblioteca do AppMeasurement**  - Contém a lógica principal de coleta de dados de baixo nível. É aqui que os dados da pulsação de vídeo são acumulados e enviados pela rede.
-   * **Biblioteca do Video Heartbeat**  - Contém a lógica principal de coleta de dados do Video Heartbeat. A biblioteca do Video Heartbeat acessa um subconjunto das APIs da biblioteca `AppMeasurement`.
+   * **Biblioteca AppMeasurement** - Contém a lógica principal da coleta de dados de baixo nível. É aqui que os dados de heartbeat de vídeo são acumulados e enviados pela rede.
+   * **Biblioteca de heartbeat de vídeo** - Contém a lógica principal da coleção de dados de video-heartbeat. A biblioteca de heartbeat de vídeo acessa um subconjunto da variável `AppMeasurement` APIs de biblioteca.
 
       >[!TIP]
       >
-      >Seu aplicativo não interage diretamente com o código de pulsação de vídeo. Em vez disso, o aplicativo usa APIs TVSDK para configurar os recursos de rastreamento de vídeo do player.
+      >O aplicativo não interage diretamente com o código de heartbeat de vídeo. Em vez disso, o aplicativo usa APIs TVSDK para configurar os recursos de rastreamento de vídeo do player.
 
-   * **Biblioteca VisitorID**  - identifica de forma exclusiva os visitantes da página da Web que hospeda o reprodutor de vídeo.
+   * **Biblioteca VisitorID** - Identifica exclusivamente os visitantes da página da Web que hospeda o reprodutor de vídeo.
    >[!IMPORTANT]
    >
-   >O recurso integrado de rastreamento de vídeo TVSDK depende de uma instância `AppMeasurement` configurada corretamente. Os elementos de rastreamento presumem que a biblioteca `AppMeasurement` já está instanciada e configurada antes de configurar e ativar o rastreamento de vídeo. Os recursos de rastreamento de vídeo TVSDK dependem da existência de uma instância totalmente funcional e configurada corretamente da biblioteca `AppMeasurement`.
+   >O recurso de rastreamento de vídeo integrado do TVSDK depende de uma configuração correta `AppMeasurement` instância. Os elementos de rastreamento presumem que a variável `AppMeasurement` A biblioteca do já está instanciada e configurada antes de configurar e ativar o rastreamento de vídeo. Os recursos de rastreamento de vídeo do TVSDK dependem da existência de uma instância totalmente funcional e configurada corretamente do `AppMeasurement` biblioteca.
 
-1. Configure os relatórios de análise de vídeo no lado do servidor usando as Ferramentas administrativas do Adobe Analytics.
-
+1. Configure relatórios de análise de vídeo no lado do servidor usando as Ferramentas administrativas do Adobe Analytics.

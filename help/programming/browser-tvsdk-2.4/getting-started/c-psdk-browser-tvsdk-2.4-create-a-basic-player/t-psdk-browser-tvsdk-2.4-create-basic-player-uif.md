@@ -1,21 +1,20 @@
 ---
-title: Criar um reprodutor básico usando a Estrutura da interface do usuário
-description: Criar um reprodutor básico usando a Estrutura da interface do usuário
+title: Criar um player básico usando a Estrutura da interface
+description: Criar um player básico usando a Estrutura da interface
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 78629042-fd87-406b-af42-229e34d48162
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
-# Crie um reprodutor básico usando a Estrutura da interface do usuário{#create-a-basic-player-using-the-ui-framework}
+# Criar um player básico usando a Estrutura da interface{#create-a-basic-player-using-the-ui-framework}
 
 Para criar um reprodutor básico usando a Estrutura da interface do usuário:
 
-1. Crie um `<div>` para a instância do reprodutor.
+1. Criar um `<div>` para sua instância do reprodutor.
 
    Por exemplo:
 
@@ -34,7 +33,7 @@ Para criar um reprodutor básico usando a Estrutura da interface do usuário:
    </script>
    ```
 
-   Quando o reprodutor é criado, o elemento `<div>` especificado recebe uma classe CSS `ptp-main-video-div-style`. O DOM resultante aparece assim:
+   Quando o reprodutor é criado, o `<div>` elemento recebe uma classe CSS de `ptp-main-video-div-style`. O DOM resultante aparece assim:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -42,9 +41,9 @@ Para criar um reprodutor básico usando a Estrutura da interface do usuário:
    </div>
    ```
 
-1. Adicionar um controle de interface do usuário.
+1. Adicionar um controle da interface do usuário.
 
-   Por exemplo, adicione uma barra de controle que aparece quando o mouse passa sobre o player:
+   Por exemplo, adicione uma barra de controle que aparece quando o mouse passa sobre o reprodutor:
 
    ```js
    <script> 
@@ -62,7 +61,7 @@ Para criar um reprodutor básico usando a Estrutura da interface do usuário:
    </script>
    ```
 
-   O DOM resultante aparece da seguinte maneira:
+   O DOM resultante é exibido da seguinte maneira:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -71,7 +70,7 @@ Para criar um reprodutor básico usando a Estrutura da interface do usuário:
    </div>
    ```
 
-O objeto retornado da chamada `ptp.videoPlayer()` fornece um comportamento que envolve a API do reprodutor de mídia TVSDK e permite o controle programático da reprodução. Quando você faz chamadas na instância do reprodutor de mídia, a interface do usuário é atualizada com base nos eventos acionados pelo reprodutor de mídia:
+O objeto retornou da chamada `ptp.videoPlayer()` O fornece um comportamento que envolve a API do reprodutor de mídia TVSDK e permite o controle programático da reprodução. Quando você faz chamadas na instância do reprodutor de mídia, a interface do usuário se atualiza com base nos eventos acionados pelo reprodutor de mídia:
 
 ```js
 <script> 

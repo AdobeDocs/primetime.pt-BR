@@ -1,16 +1,15 @@
 ---
 description: Essas classes permitem personalizar o registro.
-title: Classes de registro
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Registrando classes
+exl-id: 214c3744-dea8-448d-9d7e-68a18e02dd3b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
-
-# Classes de registro {#logging-classes}
+# Registrando classes {#logging-classes}
 
 Essas classes permitem personalizar o registro.
 
@@ -28,11 +27,11 @@ Essas classes permitem personalizar o registro.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogFactory.html" format="html" scope="external"> PTLogFactory</a> </td> 
-   <td colname="2"> Classe que permite o logon personalizado.</td> 
+   <td colname="2"> Classe que habilita o log personalizado.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLogger</a> </td> 
-   <td colname="2"> Protocolo Os métodos necessários para implementar um logger personalizado para o TVSDK. </td> 
+   <td colname="2"> Protocolo. Os métodos necessários para implementar um agente de log personalizado para o TVSDK. </td> 
   </tr> 
  </tbody> 
 </table>

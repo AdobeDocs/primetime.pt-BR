@@ -1,20 +1,19 @@
 ---
 description: Você pode concluir fluxos de trabalho específicos do Digital Rights Management (DRM).
 title: Digital Rights Management
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5a40252b-2917-4341-bc64-8642432ddda9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-
 # Digital Rights Management {#digital-rights-management}
 
 Você pode concluir fluxos de trabalho específicos do Digital Rights Management (DRM).
 
-Você pode ouvir o evento `AdobePSDK.DRMMetadataInfoEvent` para lidar com workflows de DRM:
+Você pode ouvir o `AdobePSDK.DRMMetadataInfoEvent` evento para lidar com fluxos de trabalho DRM:
 
 ```js
 ... 
@@ -24,13 +23,13 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 
 ## Adicionar Digital Rights Management {#add-digital-rights-management}
 
-1. Adicione o `DRMMetadataInfoAvailableEvent` para obter o `DRMMetadata`.
+1. Adicione o `DRMMetadataInfoAvailableEvent` para obter a `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. Implemente a seção `onDRMMetadataInfoAvailable` acima da linha na etapa 1.
+1. Implementar o `onDRMMetadataInfoAvailable` acima da linha na etapa 1.
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -51,7 +50,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    var drmManager = player.drmManager;
    ```
 
-1. Crie os dados de proteção para Widevine e PlayReady copiando a seguinte amostra:
+1. Crie os dados de proteção para Widevine e PlayReady copiando o exemplo a seguir:
 
    ```js
    var protectionData = { 
@@ -79,7 +78,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 
    >[!TIP]
    >
-   >Certifique-se de atualizar o tipo de recurso, pois agora é DASH.
+   >Atualize o tipo de recurso, pois ele agora é DASH.
 
    ```js
    var resourceUrl = "https://ptdemos.com/videos/dashdrm/stream.mpd"; 

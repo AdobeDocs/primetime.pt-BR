@@ -1,38 +1,37 @@
 ---
-description: Você pode usar sobreposições HTML com StageVideo para exibir elementos da interface do usuário no plano de vídeo da lista de exibição do Flash. Esse plano está acima do plano StageVideo, de modo que StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição de Flash.
-title: Sobreposições de StageVideo e HTML
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode usar sobreposições de HTML com StageVideo para exibir elementos da interface no plano de vídeo da lista de exibição do Flash. Esse plano está acima do plano StageVideo, portanto, StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição do Flash.
+title: Sobreposições StageVideo e HTML
+exl-id: 6beda4c8-0981-4a38-bd5e-5714b9ec7efa
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
+# Sobreposições StageVideo e HTML{#stagevideo-and-html-overlays}
 
-# Sobreposições de StageVideo e HTML{#stagevideo-and-html-overlays}
+Você pode usar sobreposições de HTML com StageVideo para exibir elementos da interface no plano de vídeo da lista de exibição do Flash. Esse plano está acima do plano StageVideo, portanto, StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição do Flash.
 
-Você pode usar sobreposições HTML com StageVideo para exibir elementos da interface do usuário no plano de vídeo da lista de exibição do Flash. Esse plano está acima do plano StageVideo, de modo que StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição de Flash.
-
-As sobreposições HTML são elementos da interface do usuário que podem ser exibidos no plano de exibição do Flash no vídeo renderizado por `StageVideo` em seu próprio plano. Antes do Flash 15, não era possível usar as sobreposições HTML quando a aceleração de hardware não estava disponível. A partir do Flash 15, as sobreposições HTML são exibidas quando `StageVideo` retorna à renderização do software.
+as sobreposições de HTML são elementos da interface do usuário que podem ser exibidos no plano de exibição do Flash em um vídeo renderizado por `StageVideo` no seu próprio plano. Antes do Flash 15, você não podia usar sobreposições de HTML quando a aceleração de hardware não estava disponível. A partir do Flash 15, as sobreposições de HTML são exibidas quando `StageVideo` retorna à renderização de software.
 
 >[!IMPORTANT]
 >
->Dependendo dos recursos de seu sistema, o desempenho pode degradar-se em maior ou menor grau quando você usa sobreposições HTML.
+>Dependendo das capacidades do seu sistema, o desempenho pode ser degradado em maior ou menor grau com o uso de sobreposições de HTML.
 
 Considere as seguintes informações:
 
 * No Flash Player 15:
 
-   * Você pode usar sobreposições HTML se a aceleração de hardware estiver disponível.
-   * Para usar as sobreposições HTML, defina `wmode` como `opaque`.
+   * Você pode usar as sobreposições de HTML se a aceleração de hardware estiver disponível.
+   * Para usar sobreposições de HTML, defina `wmode` para `opaque`.
 
 * No Flash Player 14:
 
-   * Quando a aceleração de hardware estiver disponível, `StageVideo` fica abaixo da lista de exibição do Flash, para que você possa usar as sobreposições de HTML.
-   * Quando a aceleração de hardware não está disponível, o vídeo é renderizado sobre todos os outros elementos no navegador, o que impede o uso de sobreposições HTML.
+   * Quando a aceleração de hardware estiver disponível, `StageVideo` O fica abaixo da lista de exibição do Flash, para que você possa usar as sobreposições de HTML.
+   * Quando a aceleração de hardware não está disponível, o vídeo é renderizado sobre todos os outros elementos no navegador, o que impede o uso de sobreposições de HTML.
 
-Estes são os requisitos mínimos do navegador para usar as sobreposições HTML com `StageVideo`:
+Estes são os requisitos mínimos do navegador para usar sobreposições de HTML com `StageVideo`:
 
 * Firefox versão 4 e posterior
 * Safari versão 4 e posterior
@@ -45,5 +44,4 @@ Estes são os requisitos mínimos do navegador para usar as sobreposições HTML
 
    >[!IMPORTANT]
    >
-   >Chrome Pepper no Windows XP e Windows Vista não é compatível.
-
+   >O Chrome Pepper no Windows XP e no Windows Vista não é compatível.

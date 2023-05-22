@@ -1,42 +1,40 @@
 ---
-title: Regras de negócios de demonstração do modelo de uso
-description: Regras de negócios de demonstração do modelo de uso
+title: Regras de negócios da demonstração do modelo de uso
+description: Regras de negócios da demonstração do modelo de uso
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 689a0335-55e9-427a-bc27-3a69e37ef0b5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
+# Regras de negócios da demonstração do modelo de uso{#usage-model-demo-business-rules}
 
-# Regras de negócios de demonstração do modelo de uso{#usage-model-demo-business-rules}
+Quando um usuário solicita uma licença, o servidor de implementação de referência verifica os metadados enviados pelo cliente para determinar se o conteúdo foi empacotado usando o `RI_UsageModelDemo` propriedade. Se esse for o caso, o servidor aplicará as seguintes regras de negócios.
 
-Quando um usuário solicita uma licença, o servidor de Implementação de Referência verifica os metadados que o cliente enviou, para determinar se o conteúdo foi empacotado usando a propriedade `RI_UsageModelDemo`. Se esse for o caso, o servidor aplicará as seguintes regras de negócios.
+* Se uma das políticas DRM exigir autenticação:
 
-* Se uma das políticas de DRM exigir autenticação:
+   * Se a solicitação tiver um token de autenticação válido, procure o nome do usuário na tabela de banco de dados Cliente.
 
-   * Se a solicitação contiver um token de autenticação válido, procure o nome do usuário na tabela do banco de dados do Cliente.
+      Se não conseguir localizar o nome do usuário, conclua as seguintes tarefas:
 
-      Se não for possível localizar o nome do usuário, conclua as seguintes tarefas:
+      * Se a variável `Customer.IsSubscriber` propriedade está definida como `true`, é necessário gerar uma licença para o *`Subscription`* modelo de uso e envie-o para o usuário.
 
-      * Se a propriedade `Customer.IsSubscriber` estiver definida como `true`, será necessário gerar uma licença para o modelo de uso *`Subscription`* e enviá-la ao usuário.
-
-      * Procure por um registro na tabela do banco de dados `CustomerAuthorization` para o nome do usuário e a ID do conteúdo.
+      * Pesquisar um registro no `CustomerAuthorization` tabela de banco de dados para o nome do usuário e a ID de conteúdo.
 
       Se você puder localizar o registro do usuário, conclua as seguintes tarefas:
 
-      * Se a propriedade `CustomerAuthorization.UsageType` estiver definida como `DTO`, gere uma licença para o modelo de uso DTO e envie-a para o usuário.
+      * Se a variável `CustomerAuthorization.UsageType` propriedade está definida como `DTO`, gere uma licença para o modelo de uso DTO e envie-a para o usuário.
 
-      * Se a propriedade `CustomerAuthorization.UsageType` estiver definida como `VOD`, gere uma licença para o modelo de uso de VOD e envie-a para o usuário.
+      * Se a variável `CustomerAuthorization.UsageType` propriedade está definida como `VOD`, gere uma licença para o modelo de uso de VOD e envie-a ao usuário.
 
-      Se nenhuma das políticas de DRM permitir acesso anônimo, conclua as seguintes tarefas:
+      Se nenhuma das políticas DRM permitir acesso anônimo, conclua as seguintes tarefas:
 
-      * Se não houver um token de autenticação válido na solicitação, será necessário retornar um erro de &quot;autenticação necessária&quot;.
+      * Se não houver um token de autenticação válido na solicitação, você precisará retornar um erro &quot;autenticação necessária&quot;.
       * Caso contrário, retorne um erro &quot;não autorizado&quot;.
 
 
 
-* Se uma das políticas de DRM permitir o acesso anônimo, gere uma licença para o modelo de uso financiado pelo anúncio e envie-a para o usuário.
-
+* Se uma das políticas DRM permitir acesso anônimo, gere uma licença para o modelo de uso financiado por anúncio e envie-a para o usuário.

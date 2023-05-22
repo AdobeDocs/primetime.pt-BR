@@ -1,14 +1,13 @@
 ---
 description: Você pode definir valores de controle ABR somente com ABRControlParameters, mas pode construir um novo a qualquer momento.
 title: Configurar taxas de bits adaptáveis usando ABRControlParameters
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 53ca8516-b449-46c8-baa9-9d0d5800b3c8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
-
 
 # Configurar taxas de bits adaptáveis usando ABRControlParameters{#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
@@ -18,7 +17,7 @@ As seguintes condições se aplicam a `ABRControlParameters`:
 
 * Você deve fornecer valores para todos os parâmetros no momento da construção.
 * Não é possível alterar valores individuais após o tempo de construção.
-* Se os parâmetros especificados estiverem fora do intervalo permitido, um `ArgumentError` será lançado.
+* Se os parâmetros especificados estiverem fora do intervalo permitido, uma variável `ArgumentError` é lançado.
 
 1. Determine a política ABR:
 
@@ -26,7 +25,7 @@ As seguintes condições se aplicam a `ABRControlParameters`:
    * `ABRControlParameters.MODERATE_POLICY`
    * `ABRControlParameters.AGGRESSIVE_POLICY`
 
-1. Defina os valores dos parâmetros ABR no construtor `ABRControlParameters` e os atribua ao Player de mídia.
+1. Defina os valores do parâmetro ABR no `ABRControlParameters` e atribua-os ao reprodutor de mídia.
 
    ```js
    var abrParams = new AdobePSDK.ABRControlParameters(); 
@@ -36,4 +35,3 @@ As seguintes condições se aplicam a `ABRControlParameters`:
    abrParams.abrPolicy = eABRPolicy; 
    player.abrControlParameters = abrParams;
    ```
-

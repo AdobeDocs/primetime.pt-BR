@@ -1,19 +1,18 @@
 ---
-description: A propriedade MediaPlayerItem.timedMetadata fornece acesso a todos os objetos TimedMetadata criados a partir de tags playlist/manifest ou de tags ID3 no fluxo de mídia.
+description: A propriedade MediaPlayerItem.timedMetadata fornece acesso a todos os objetos TimedMetadata criados nas tags de lista de reprodução/manifesto ou nas tags ID3 no fluxo de mídia.
 title: Notificações para tags de manifesto
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a8a3cada-d796-460a-bd8f-fc4a2703e7f0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
-
 # Notificações para tags de manifesto{#notifications-for-manifest-tags}
 
-A propriedade MediaPlayerItem.timedMetadata fornece acesso a todos os objetos TimedMetadata criados a partir de tags playlist/manifest ou de tags ID3 no fluxo de mídia.
+A propriedade MediaPlayerItem.timedMetadata fornece acesso a todos os objetos TimedMetadata criados nas tags de lista de reprodução/manifesto ou nas tags ID3 no fluxo de mídia.
 
 <!--<a id="section_9A22F6F1EA1F4F0C9E0C7687D12AA4AA"></a>-->
 
-A propriedade `MediaPlayerItem.hasTimedMetadata` indica se uma tag personalizada subscrita existe na mídia atual. Você pode monitorar metadados cronometrados escutando o `Events.TimedMetadataEvent`, que a instância MediaPlayer envia sempre que um novo objeto `TimedMetadata` é criado.
+A variável `MediaPlayerItem.hasTimedMetadata` indica se uma tag personalizada assinada existe na mídia atual. Você pode monitorar os metadados cronometrados ouvindo a `Events.TimedMetadataEvent`, que a ocorrência de MediaPlayer despacha cada vez que um novo `TimedMetadata` objeto é criado.

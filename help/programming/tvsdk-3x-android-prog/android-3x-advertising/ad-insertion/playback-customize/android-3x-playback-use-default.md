@@ -1,59 +1,58 @@
 ---
-description: Você pode optar por usar comportamentos de publicidade padrão.
+description: Você pode optar por usar comportamentos de anúncio padrão.
 title: Usar o comportamento de reprodução padrão
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0ea3d2bb-b4d4-4090-ab5f-b6c31c1abe32
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
-
 # Usar o comportamento de reprodução padrão {#use-the-default-playback-behavior}
 
-Você pode optar por usar comportamentos de publicidade padrão.
+Você pode optar por usar comportamentos de anúncio padrão.
 
 1. Para usar comportamentos padrão, conclua uma das seguintes tarefas:
 
-   * Se você implementar sua própria classe `AdvertisingFactory`, retorne null para `createAdPolicySelector`.
+   * Se você implementar o seu próprio `AdvertisingFactory` classe, retornar nulo para `createAdPolicySelector`.
 
-   * Se você não tiver uma implementação personalizada para a classe `AdvertisingFactory`, o TVSDK usará um seletor de política de publicidade padrão.
+   * Se você não tiver uma implementação personalizada para o `AdvertisingFactory` classe, o TVSDK usa um seletor de política de anúncio padrão.
 
 ## Configurar reprodução personalizada {#set-up-customized-playback}
 
-Você pode personalizar ou substituir comportamentos de publicidade.
+Você pode personalizar ou substituir comportamentos de anúncios.
 
-Antes de personalizar ou substituir comportamentos de publicidade, registre a instância da política de publicidade com .
-Para personalizar os comportamentos do anúncio, siga um destes procedimentos:
+Antes de personalizar ou substituir comportamentos de anúncios, registre a instância da política de anúncios com .
+Para personalizar comportamentos de anúncios, siga um destes procedimentos:
 
-* Implemente a interface `AdPolicySelector` e todos os seus métodos.
+* Implementar o `AdPolicySelector` e todos os seus métodos.
 
-   Essa opção é recomendada se você precisar substituir **all** os comportamentos de publicidade padrão.
+   Essa opção é recomendada se você precisar substituir **all** os comportamentos de anúncio padrão.
 
-* Estenda a classe `DefaultAdPolicySelector` e forneça implementações somente para os comportamentos que exigem personalização.
+* Estenda o `DefaultAdPolicySelector` e fornecem implementações somente para os comportamentos que exigem personalização.
 
-   Essa opção é recomendada se você precisar substituir apenas **some** dos comportamentos padrão.
+   Essa opção é recomendada se você precisar substituir apenas o **alguns** dos comportamentos padrão.
 
-Para personalizar os comportamentos do anúncio:
+Para personalizar comportamentos de anúncios:
 
-1. Implemente a interface `AdPolicySelector` e todos os seus métodos.
-1. Atribua a instância de política a ser usada pelo TVSDK por meio do setor de publicidade.
+1. Implementar o `AdPolicySelector` e todos os seus métodos.
+1. Atribua a instância de política a ser usada pelo TVSDK por meio da fábrica de publicidade.
 
    >[!NOTE]
    >
-   >Classe CustomContentFactory estende ContentFactory &amp;lbrace;
+   >classe CustomContentFactory estende ContentFactory &amp;lbrace;
    >...
    >@Override
-   >public AdPolicySelector retrieveAdPolicySelector>(MediaPlayerItem mediaPlayerItem) &amp;lbrace;
-   >return new CustomAdPolicySelector(mediaPlayerItem);
+   >public AdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem) &amp;lbrace;
+   >retornar novo CustomAdPolicySelector(mediaPlayerItem);
    >&amp;rbrace;
    >...
    >&amp;rbrace;
-   >// registrar a fábrica de conteúdo personalizado no reprodutor de mídia
-   >MediaPlayerItemConfig = new MediaPlayerItemConfig();
+   >// registrar a fábrica de conteúdo personalizado com o reprodutor de mídia
+   >Configuração MediaPlayerItemConfig = new MediaPlayerItemConfig();
    >config.setAdvertisingFactory(new CustomContentFactory());
-   >// essa configuração deve ser passada posteriormente durante o carregamento do recurso
+   >// essa configuração deverá ser passada posteriormente ao carregar >o recurso
    >mediaPlayer.replaceCurrentResource(resource, config);
 
 1. Implemente suas personalizações.

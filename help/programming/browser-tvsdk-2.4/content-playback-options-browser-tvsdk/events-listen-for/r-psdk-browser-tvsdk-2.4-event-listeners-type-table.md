@@ -1,24 +1,23 @@
 ---
-description: Ao registrar ouvintes de eventos no Browser TVSDK, você especifica um tipo de evento para acompanhar e o nome de seu retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama seu retorno de chamada e transmite para ele um objeto de evento do tipo apropriado.
-title: Tipos e classes de eventos para retornos de chamada
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ao registrar ouvintes de eventos no TVSDK do navegador, você especifica um tipo de evento para acompanhar e o nome do seu retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama o retorno de chamada e transmite para ele um objeto de evento do tipo apropriado.
+title: Tipos e classes de evento para retornos de chamada
+exl-id: 94c571ea-6dd2-4c15-89db-7015d89c9208
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
+# Tipos e classes de evento para retornos de chamada{#event-types-and-classes-for-callbacks}
 
-# Tipos e classes de eventos para retornos de chamada{#event-types-and-classes-for-callbacks}
-
-Ao registrar ouvintes de eventos no Browser TVSDK, você especifica um tipo de evento para acompanhar e o nome de seu retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama seu retorno de chamada e transmite para ele um objeto de evento do tipo apropriado.
+Ao registrar ouvintes de eventos no TVSDK do navegador, você especifica um tipo de evento para acompanhar e o nome do seu retorno de chamada. Quando um evento ocorre, o TVSDK do navegador chama o retorno de chamada e transmite para ele um objeto de evento do tipo apropriado.
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="2" class="entry"> Ao ouvir o nome desse evento (AdobePSDK.EventType) </th> 
-   <th class="entry">frases/browser-tvsdk-name passa um evento para o retorno de chamada desse tipo de objeto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
+   <th colname="2" class="entry"> Ao ouvir esse nome de evento (AdobePSDK.EventType) </th> 
+   <th class="entry">frases/browser-tvsdk-name transmite um evento de retorno de chamada desse tipo de objeto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -73,26 +72,26 @@ Ao registrar ouvintes de eventos no Browser TVSDK, você especifica um tipo de e
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> STATUS_CHANGED</span> </td> 
-   <td><span class="codeph"> StatusChangeEvent</span> </td> 
+   <td><span class="codeph"> EventoDeAlteraçãoDeStatus</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> OPERATION_FAILED</span> </td> 
    <td><span class="codeph"> NotificationEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> RESERVATION_REACHED</span> </td> 
-   <td><span class="codeph"> ReservationEvent</span> </td> 
+   <td colname="2"><span class="codeph"> RESERVA_ALCANÇADA</span> </td> 
+   <td><span class="codeph"> EventoReserva</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_jfl_224_2y"> 
-     <li id="li_02B430978FA14A41A000DF8F9A345793"><span class="codeph"> RATE_SELECTED</span> </li> 
+     <li id="li_02B430978FA14A41A000DF8F9A345793"><span class="codeph"> RATE_SELETED</span> </li> 
      <li id="li_1EDC0664B59E49448040DF312C928FAA"><span class="codeph"> RATE_PLAYING</span> </li> 
     </ul> </td> 
-   <td><span class="codeph"> PlaybackRateEvent</span> </td> 
+   <td><span class="codeph"> EventoTaxaReprodução</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PROFILE_CHANGED</span> </td> 
+   <td colname="2"><span class="codeph"> PERFIL_ALTERADO</span> </td> 
    <td><span class="codeph"> ProfileEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -114,15 +113,15 @@ Ao registrar ouvintes de eventos no Browser TVSDK, você especifica um tipo de e
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> TIME_CHANGED</span> </td> 
-   <td><span class="codeph"> TimeChangeEvent</span> </td> 
+   <td><span class="codeph"> EventoDeAlteraçãoDeTempo</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> TIMED_METADATA_AVAILABLE</span> </td> 
    <td><span class="codeph"> TimedMetadataEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> TIMELINE_UPDATE</span> </td> 
-   <td><span class="codeph"> TimelineEvent</span> </td> 
+   <td colname="2"><span class="codeph"> LINHA DO TEMPO_ATUALIZADA</span> </td> 
+   <td><span class="codeph"> EventoDeLinhaDoTempo</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> PLAYBACK_RANGE_UPDATED</span> </td> 
@@ -130,4 +129,3 @@ Ao registrar ouvintes de eventos no Browser TVSDK, você especifica um tipo de e
   </tr> 
  </tbody> 
 </table>
-

@@ -1,46 +1,46 @@
 ---
-title: Autorização de MVPD
-description: Autorização de MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Autorização MVPD
+description: Autorização MVPD
+exl-id: 215780e4-12b6-4ba6-8377-4d21b63b6975
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 0%
 
 ---
 
-
-# Autorização de MVPD
+# Autorização MVPD
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 ## Visão geral {#mvpd-authz-overview}
 
-A autorização (AuthZ) é executada por meio de comunicações de canal traseiro (servidor para servidor) entre um servidor de back-end hospedado pelo Adobe e o terminal MVPD AuthZ.
+A autorização (AuthZ) é executada através de comunicações back-channel (servidor para servidor) entre um servidor back-end hospedado em Adobe e o endpoint MVPD AuthZ.
 
 Para solicitações AuthZ, o endpoint de autorização deve ser capaz de processar pelo menos os seguintes parâmetros:
 
 * **Uid**. A ID de usuário recebida da etapa de autenticação.
 
-* **ID do recurso**. Uma string que identifica um determinado recurso de conteúdo. Essa ID de recurso é especificada pelo Programador e o MVPD deve reforçar as regras de negócios nesses recursos (por exemplo, verificando se o usuário está inscrito em um determinado canal).
+* **ID do recurso**. Uma string que identifica um determinado recurso de conteúdo. Essa ID de recurso é especificada pelo Programador e o MVPD deve reforçar as regras de negócios desses recursos (por exemplo, verificando se o usuário está inscrito em um determinado canal).
 
-Além de determinar se o usuário está autorizado, a resposta deve incluir o TTL (time-to-live) dessa autorização, ou seja, quando a autorização expira. Se o TTL não estiver definido, a solicitação AuthZ falhará.  Por isso, **o TTL é uma configuração obrigatória no lado da autenticação do Adobe Primetime**, a fim de cobrir o caso em que um MVPD não inclui o TTL no seu pedido.
+Além de determinar se o usuário está autorizado, a resposta deve incluir o TTL (time-to-live) dessa autorização, ou seja, quando a autorização expira. Se o TTL não for definido, a solicitação AuthZ falhará.  Por esse motivo, **o TTL é uma configuração obrigatória no lado da autenticação do Adobe Primetime**, a fim de abranger o caso em que um MVPD não inclua o TTL no seu pedido.
 
-## A Solicitação de Autorização {#authz-req}
+## A solicitação de autorização {#authz-req}
 
-Uma solicitação AuthZ deve incluir um assunto em cujo nome a solicitação está sendo feita, o(s) recurso(s) que o assunto está tentando acessar, a ação que o assunto está tentando executar no recurso e o ambiente em que a operação está prestes a ocorrer. No caso específico da autenticação da Adobe Primetime, esses elementos correspondem a:
+Uma solicitação AuthZ deve incluir um assunto em nome do qual a solicitação está sendo feita, os recursos que o sujeito está tentando acessar, a ação que o sujeito está tentando executar no recurso e o ambiente no qual a operação está prestes a ocorrer. No caso específico da autenticação Adobe Primetime, esses elementos correspondem a:
 
 | Elemento XACML | Corresponde a |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------|
-| Assunto | O principal identificado pela Sessão Autenticada, referenciado pelo AttributeValue &#39;subject-token&#39; da asserção SAML. |
+| Assunto | A entidade de segurança identificada pela Sessão Autenticada, referenciada pelo AttributeValue &quot;subject-token&quot; da asserção SAML. |
 | Recurso | Um URI para o recurso protegido. |
 | Ação | EXIBIR. |
-| Ambiente | Inclui o endereço IP do cliente que fez a solicitação, conforme visualizado pela controladora do armazenamento. |
+| Ambiente | Inclui o endereço IP do cliente solicitante, conforme visto pela controladora. |
 
 
 
-O SP neste ponto deve preparar um XACML Authorization DecisionQuery e enviá-lo (via HTTP POST) para o PDP (Policy Decisioning Point) (anteriormente acordado) para o IdP. Abaixo está um exemplo de uma Solicitação XACML simples (consulte a especificação principal do XACML):
+A controladora de armazenamento neste ponto deve preparar uma consulta de decisão de autorização XACML e enviá-la (via POST HTTP) ao ponto de decisão de política (PDP) (previamente acordado) para o IdP. Abaixo está um exemplo de uma solicitação XACML simples (consulte a especificação principal XACML):
 
 ```XML
 POST https://authz.site.com/XACML_endpoint
@@ -80,11 +80,11 @@ http://docs.oasis-open.org/xacml/access_control-xacml-2.0-context-schema-os.xsd"
 ```
 
 
-Depois de receber a solicitação AuthZ, o PDP do MVPD avalia a solicitação e determina se o assunto deve ter permissão para executar a ação solicitada no recurso. O MVPD retorna uma resposta com uma Decisão, Código de status e mensagem, conforme descrito em A resposta da autorização abaixo.
+Depois de receber a solicitação AuthZ, o PDP do MVPD avalia a solicitação e determina se o assunto deve ter permissão para executar a ação solicitada no recurso. O MVPD retorna uma resposta com uma Decisão, Código de status e mensagem, conforme descrito em A resposta de autorização abaixo.
 
 ## A Resposta de Autorização {#authz-response}
 
-A resposta à solicitação AuthZ vem depois que o MVPD avalia a solicitação e aplica as regras de negócios solicitadas para determinar se o assunto tem permissão para executar a ação solicitada no recurso . A resposta retornada à autenticação da Adobe Primetime é expressa novamente seguindo a especificação principal de XACML com uma Decisão, um código de status, mensagem e Obrigações que a controladora tem como Ponto de Aplicação de Política (PEP). Este é um exemplo de Resposta:
+A resposta à solicitação de AuthZ vem depois que o MVPD avalia a solicitação e aplica as regras de negócios solicitadas para determinar se o sujeito tem permissão para executar a ação solicitada no recurso. A resposta retornada à autenticação da Adobe Primetime é expressa novamente seguindo a especificação principal da XACML com uma Decisão, um Código de status, uma mensagem e Obrigações que a controladora tem como PEP (Ponto de aplicação de política). Este é um exemplo de Resposta:
 
 ```XML
 <Response xmlns="urn:oasis:names:tc:xacml:2.0:context:schema:os">
@@ -104,17 +104,17 @@ A resposta à solicitação AuthZ vem depois que o MVPD avalia a solicitação e
 </Response>
 ```
 
-Veja a seguir uma lista de obrigações de NEGAÇÃO que a autenticação da Adobe Primetime suporta e permite que os programadores atendam:
+Veja a seguir uma lista de Obrigações de NEGAÇÃO que a autenticação do Adobe Primetime aceita e permite que os Programadores cumpram:
 
 * **urn:tve:xacml:2.0:obligations:restrict-pc** - O Assinante não passou em uma verificação de controle dos pais e o SP deve tomar as medidas apropriadas para restringir o acesso a esse conteúdo.
 
-* **urn:tve:xacml:2.0:obligations:atualizar** - O Assinante não tem um nível de assinatura apropriado.  É necessário atualizar a assinatura para acessar o conteúdo.
+* **urn:tve:xacml:2.0:obligations:atualização** - O Assinante não tem um nível de assinatura apropriado.  É necessário atualizar a assinatura para acessar o conteúdo.
 
-A autenticação da Adobe Primetime é compatível com o seguinte **PERMITE** Obrigações e condições para que os programadores as cumpram:
+A autenticação do Adobe Primetime é compatível com o seguinte **PERMITIR** Obrigações e permite aos programadores cumprirem-nas:
 
 * **urn:cablelabs:olca:1.0:obligations:log** - A Adobe Pass registra a transação e pode disponibilizá-la por meio do mecanismo de relatório acordado.
 
-* **urn:cablelabs:olca:1.0:obligations:re-authz** - A autenticação da Adobe Primetime atualiza a autorização novamente em n segundos (especificado como um argumento para a Obrigação por meio de uma Atribuição de atributo XACML - consulte a especificação principal de XACML , Seção 5.46).
+* **urn:cablelabs:olca:1.0:obligations:reautenticação** - A autenticação do Adobe Primetime atualiza a autorização novamente em n segundos (especificado como um argumento para a Obrigação por meio de uma Atribuição XACML - consulte Especificação principal XACML , Seção 5.46).
 
 <!--
 >![RelatedInformation]

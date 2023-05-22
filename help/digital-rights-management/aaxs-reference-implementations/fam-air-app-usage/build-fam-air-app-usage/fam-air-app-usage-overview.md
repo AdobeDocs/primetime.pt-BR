@@ -1,21 +1,20 @@
 ---
-title: Criando o servidor do Packager e o aplicativo AIR
-description: Criando o servidor do Packager e o aplicativo AIR
+title: Construindo o servidor de empacotamento e o aplicativo AIR
+description: Construindo o servidor de empacotamento e o aplicativo AIR
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7f2333ef-bd6b-414a-834f-5c6a9e2b6610
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%
 
 ---
 
-
-# Criando o servidor do Packager e o aplicativo AIR {#building-the-packager-server-and-air-application}
+# Construindo o servidor de empacotamento e o aplicativo AIR {#building-the-packager-server-and-air-application}
 
 Há dois componentes necessários para usar o Gerenciador de Flashes Access:
 
 * O aplicativo AIR do Flash Access Manager
-* O Servidor do Empacotador ( [!DNL flashaccess-packager.war])
+* O Servidor Packager ( [!DNL flashaccess-packager.war])
 
-Ambos os componentes são distribuídos em formulários de origem e binários com a Implementação de referência.
+Ambos os componentes são distribuídos nos formatos de origem e binário com a Implementação de referência.

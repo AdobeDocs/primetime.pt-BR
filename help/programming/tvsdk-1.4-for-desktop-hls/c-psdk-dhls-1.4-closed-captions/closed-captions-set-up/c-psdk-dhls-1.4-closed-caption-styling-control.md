@@ -1,38 +1,37 @@
 ---
-description: Você pode fornecer informações de estilo para faixas de legenda fechada usando a classe ClosedCaptionStyles. Isso define o estilo para quaisquer legendas ocultas exibidas pelo seu reprodutor.
-title: Controle o estilo da legenda oculta
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe ClosedCaptionStyles. Isso define o estilo de todas as legendas ocultas exibidas pelo reprodutor.
+title: Controlar estilo de legendas ocultas
+exl-id: fd94a851-1e8f-4406-a3bb-ca115b4e60f8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
+# Controlar estilo de legendas ocultas{#control-closed-caption-styling}
 
-# Controlar estilo de legenda fechada{#control-closed-caption-styling}
+Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe ClosedCaptionStyles. Isso define o estilo de todas as legendas ocultas exibidas pelo reprodutor.
 
-Você pode fornecer informações de estilo para faixas de legenda fechada usando a classe ClosedCaptionStyles. Isso define o estilo para quaisquer legendas ocultas exibidas pelo seu reprodutor.
+Essa classe encapsula informações de estilo de legendas ocultas, como tipo de fonte, tamanho, cor e opacidade do plano de fundo. Uma classe auxiliar associada, `ClosedCaptionStylesBuilder`, facilita o trabalho com configurações de estilo de legenda oculta.
 
-Essa classe encapsula informações de estilo de legenda fechada, como tipo de fonte, tamanho, cor e opacidade do plano de fundo. Uma classe auxiliar associada, `ClosedCaptionStylesBuilder`, facilita o trabalho com configurações de estilo de legenda fechada.
+## Definir estilos de legendas ocultas {#section_DAE84659D1964DB1B518F91B59AF29D9}
 
-## Definir estilos de legenda {#section_DAE84659D1964DB1B518F91B59AF29D9}
+É possível estilizar o texto de legenda oculta com métodos TVSDK.
 
-Você pode criar um estilo para o texto de legenda com métodos TVSDK.
-
-1. Aguarde até que o MediaPlayer tenha pelo menos o status PREPARED (consulte [Wait for a valid state](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Aguarde o MediaPlayer ter pelo menos o status PREPARADO (consulte [Aguardar um estado válido](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Para alterar as configurações de estilo, siga um destes procedimentos:
 
-   * Use a classe auxiliar `ClosedCaptionStylesBuilder` (opera em `ClosedCaptionStyles` nos bastidores).
-   * Use a classe `ClosedCaptionStyles` diretamente.
+   * Use o `ClosedCaptionStylesBuilder` classe auxiliar (opera em `ClosedCaptionStyles` nos bastidores).
+   * Use o `ClosedCaptionStyles` diretamente.
 
 >[!NOTE]
 >
->A configuração do estilo de legenda oculta é uma operação assíncrona, portanto, pode levar até alguns segundos para que as alterações sejam exibidas na tela.
+>A definição do estilo de legenda oculta é uma operação assíncrona, portanto, pode levar alguns segundos para que as alterações apareçam na tela.
 
-## Opções de estilo de legenda ocultas {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
+## Opções de estilo de legendas ocultas {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
 
-Você pode fornecer informações de estilo para faixas de legenda fechada usando a classe `ClosedCaptionStyles`. Isso define o estilo para quaisquer legendas ocultas exibidas pelo seu reprodutor.
+Você pode fornecer informações de estilo para faixas de legendas ocultas usando o `ClosedCaptionStyles` classe. Isso define o estilo de todas as legendas ocultas exibidas pelo reprodutor.
 
 ```
 public function TextFormat( 
@@ -50,7 +49,7 @@ public function TextFormat(
 
 >[!TIP]
 >
->Nas opções que definem valores padrão (por exemplo, `DEFAULT`), esse valor refere-se à configuração quando a legenda foi originalmente especificada.
+>Nas opções que definem valores padrão (por exemplo, `DEFAULT`), esse valor se refere ao que era a configuração quando a legenda foi originalmente especificada.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -62,7 +61,7 @@ public function TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fonte </td> 
-   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente para um valor definido pela matriz <span class="codeph"> ClosedCaptionStyles.FONT </span> e representa, por exemplo, monoespaçado com ou sem serifs. 
+   <td colname="2"> <p>O tipo de fonte. </p> <p>Pode ser definido somente como um valor definido pela variável <span class="codeph"> ClosedCaptionStyles.FONT </span> matriz e representa, por exemplo, espaçados uma única vez com ou sem serifas. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;AVCaptionStyle.DEFAULT, 
@@ -74,21 +73,21 @@ public function TextFormat(
       &nbsp;AVCaptionStyle.CURSIVE, 
       &nbsp;AVCaptionStyle.SMALL_CAPITALS 
       &nbsp;]; 
-     </code> </p> <p>Dica:  As fontes reais disponíveis em um dispositivo podem variar, e as substituições são usadas quando necessário. O espaço único com serifs é normalmente utilizado como substituto, embora esta substituição possa ser específica do sistema. </p> </td> 
+     </code> </p> <p>Dica: as fontes reais disponíveis em um dispositivo podem variar, e as substituições são usadas quando necessário. O monoespaço com serifas é normalmente usado como um substituto, embora essa substituição possa ser específica do sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamanho </td> 
-   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente como um valor definido pela matriz <span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span>: 
+   <td colname="2"> <p>O tamanho da legenda. </p> <p> Pode ser definido somente como um valor definido pelo <span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span> matriz: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MÉDIO  </span> - O tamanho padrão </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Aproximadamente 30% maior que a média </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUENO  </span> - Aproximadamente 30% menor que o médio </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT  </span> - O tamanho padrão da legenda; igual ao meio </li> 
-     </ul> </p> <p>Dica:  Você pode alterar o tamanho da fonte das legendas da WebVTT alterando o parâmetro de tamanho para a função <span class="codeph"> DefaultMediaPlayer.ccStyles setter </span>. </p> </td> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MÉDIO </span> - O tamanho padrão </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Aproximadamente 30% maior que o médio </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUENO </span> - Aproximadamente 30% menor que o médio </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PADRÃO </span> - O tamanho padrão da legenda; o mesmo que o médio </li> 
+     </ul> </p> <p>Dica: você pode alterar o tamanho da fonte das legendas WebVTT alterando o parâmetro de tamanho da <span class="codeph"> Definidor DefaultMediaPlayer.ccStyles </span> função. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Borda da fonte </td> 
-   <td colname="2"> <p>O efeito usado para a borda da fonte, como acima ou não. </p> <p>Pode ser definido somente para um valor definido pela matriz <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span>. 
+   <td colname="2"> <p>O efeito usado para a borda da fonte, como elevado ou nenhum. </p> <p>Pode ser definido somente como um valor definido pela variável <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span> matriz. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT_EDGE&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -103,7 +102,7 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da fonte </td> 
-   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente como um valor definido pela matriz <span class="codeph"> ClosedCaptionStyles.COLOR </span>. 
+   <td colname="2"> <p>A cor da fonte. </p> <p>Pode ser definido somente como um valor definido pelo <span class="codeph"> ClosedCaptionStyles.COLOR </span> matriz. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;COLOR&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -133,36 +132,36 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor da borda </td> 
-   <td colname="2"> <p>A cor do efeito da borda. </p> <p>Pode ser definido como qualquer um dos valores disponíveis para a cor da fonte. </p> </td> 
+   <td colname="2"> <p>A cor do efeito de borda. </p> <p>Pode ser definido como qualquer um dos valores disponíveis para a cor da fonte. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor do plano de fundo </td> 
-   <td colname="2"> <p>A cor da célula do caractere de fundo. </p> <p>Pode ser definido somente para valores que estão disponíveis para a cor da fonte. </p> </td> 
+   <td colname="2"> <p>A cor da célula do caractere de plano de fundo. </p> <p>Pode ser definido somente para valores que estão disponíveis para a cor da fonte. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Cor de preenchimento </td> 
-   <td colname="2"> <p>A cor do plano de fundo da janela em que o texto está localizado. </p> <p>Pode ser definido como qualquer um dos valores disponíveis para a cor da fonte. </p> <p>Importante:  Isso não se aplica às legendas da WebVTT, pois a WebVTT não usa esse recurso. </p> </td> 
+   <td colname="2"> <p>A cor do plano de fundo da janela em que o texto está localizado. </p> <p>Pode ser definido como qualquer um dos valores disponíveis para a cor da fonte. </p> <p>Importante: isso não se aplica a legendas WebVTT, pois WebVTT não usa esse recurso. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidade da fonte </td> 
-   <td colname="2"> <p>A opacidade do texto. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> para a fonte é 100. </p> </td> 
+   <td colname="2"> <p>A opacidade do texto. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para a fonte, é 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Opacidade de fundo </td> 
-   <td colname="2"> <p>A opacidade da célula do caractere de plano de fundo. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> para o plano de fundo é 100. </p> </td> 
+   <td colname="1"> Opacidade do plano de fundo </td> 
+   <td colname="2"> <p>A opacidade da célula de caractere do plano de fundo. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para o fundo é 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidade de preenchimento </td> 
-   <td colname="2"> <p>A opacidade do plano de fundo da janela da legenda. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaca). <span class="codeph"> DEFAULT_OPACITY  </span> para preenchimento é 0. </p> </td> 
+   <td colname="2"> <p>A opacidade do plano de fundo da janela de legenda. </p> <p>Expressa como uma porcentagem de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para preenchimento é 0. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Exemplos: Formatação de legenda {#section_63E33840B7A14D26990046E2ACF2ECA1}
 
-É possível especificar a formatação de legenda oculta.
+Você pode especificar a formatação de legendas ocultas.
 
-## Exemplo 1: Especificar valores de formato explicitamente {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
+## Exemplo 1: especificar explicitamente valores de formato {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
 
 ```
 private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void { 
@@ -181,7 +180,7 @@ private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void {
 } 
 ```
 
-## Exemplo 2: Especificar valores de formato nos parâmetros {#section_147036D7C31C4010A5A7DF49997014A9}
+## Exemplo 2: especificar valores de formato em parâmetros {#section_147036D7C31C4010A5A7DF49997014A9}
 
 ```
 /** 

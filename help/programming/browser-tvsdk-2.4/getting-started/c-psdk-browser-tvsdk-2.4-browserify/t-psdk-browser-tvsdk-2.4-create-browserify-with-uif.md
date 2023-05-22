@@ -1,29 +1,28 @@
 ---
-description: Use os arquivos da biblioteca Browserify fornecidos pelo Browser TVSDK no seu aplicativo para criar um player compatível com o Browserify usando a Estrutura da interface do usuário.
-title: Criar um reprodutor compatível com o Browserify usando a Estrutura da Interface do Usuário
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Use os arquivos de biblioteca do Browserify fornecidos pelo TVSDK do Navegador em seu aplicativo para criar um player compatível com Browserify usando a Estrutura de interface do usuário.
+title: Criar um player compatível com Browserify usando a estrutura de interface do usuário
+exl-id: cd72cae1-f67e-4192-9a7e-1c1492d88922
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%
 
 ---
 
+# Criar um player compatível com Browserify usando a estrutura de interface do usuário {#create-a-browserify-compatible-player-using-the-ui-framework}
 
-# Crie um reprodutor compatível com o Browserify usando a Estrutura da interface do usuário {#create-a-browserify-compatible-player-using-the-ui-framework}
+Use os arquivos de biblioteca do Browserify fornecidos pelo TVSDK do Navegador em seu aplicativo para criar um player compatível com Browserify usando a Estrutura de interface do usuário.
 
-Use os arquivos da biblioteca Browserify fornecidos pelo Browser TVSDK no seu aplicativo para criar um player compatível com o Browserify usando a Estrutura da interface do usuário.
+Arquivos Browserify de exemplo incluídos no TVSDK:
 
-Arquivos de pesquisa de exemplo incluídos no TVSDK:
+* [!DNL [..]/samples/browserify/ui-framework/build/Gruntfile.js]
+* [!DNL [..]/samples/browserify/ui-framework/build/package.json]
+* [!DNL [..]/samples/browserify/ui-framework/examples/sample.html]
+* [!DNL [..]/samples/browserify/ui-framework/examples/sample.js]
 
-* [!DNL [...]/samples/browserify/ui-framework/build/Gruntfile.js]
-* [!DNL [...]/samples/browserify/ui-framework/build/package.json]
-* [!DNL [...]/samples/browserify/ui-framework/examples/sample.html]
-* [!DNL [...]/samples/browserify/ui-framework/examples/sample.js]
+Para criar um aplicativo compatível com Browserify usando a Estrutura de Interface de Usuário, você deve `require` os dois módulos Browserify (fornecidos pelo TVSDK do Navegador) no código do aplicativo:
 
-Para criar um aplicativo compatível com o Browserify usando a Estrutura da interface do usuário, você deve `require` os dois módulos do Browserify (fornecidos pelo Browser TVSDK) no código do aplicativo:
-
-1. Exigir módulos de Browserify:
+1. Exigir módulos Browserify:
 
    ```
    var AdobePSDK = require('../../../../frameworks/player/AdobePSDK.module.js');  
@@ -31,5 +30,5 @@ Para criar um aplicativo compatível com o Browserify usando a Estrutura da inte
    […]
    ```
 
-1. Continue com o desenvolvimento conforme descrito em [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-uif.md).
->Agora é possível agrupar os arquivos do aplicativo usando o Browserify.
+1. Continue o desenvolvimento conforme descrito em [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-uif.md).
+>Agora você pode agrupar seus arquivos de aplicativo usando Browserify.

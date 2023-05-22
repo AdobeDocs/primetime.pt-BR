@@ -1,52 +1,52 @@
 ---
-title: Amazon FireOS SSO usando o guia da API sem cliente
-description: Amazon FireOS SSO usando o guia da API sem cliente
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Amazon FireOS SSO usando livro de cookies de API sem cliente
+description: Amazon FireOS SSO usando livro de cookies de API sem cliente
+exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%
 
 ---
 
-
-# Amazon FireOS SSO usando o guia da API sem cliente {#amazon-fireos-sso-using-clientless-api-cookbook}
+# Amazon FireOS SSO usando livro de cookies de API sem cliente {#amazon-fireos-sso-using-clientless-api-cookbook}
 
 >[!NOTE]
 >
->O conteúdo desta página é fornecido apenas para fins de informação. O uso dessa API requer uma licença atual do Adobe. Não é permitida a utilização não autorizada.
+>O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
 
 </br>
 
 ## Introdução {#Introduction}
 
-Este documento fornece instruções para implementar a versão SSO do Amazon do fluxo de Autenticação do Adobe Primetime usando a API sem cliente. A primeira parte deste documento foca na especificidade da versão Amazon da arquitetura, para os muitos parceiros já familiarizados e experientes com a implementação.
+Este documento fornece instruções para implementar a versão SSO do Amazon do fluxo de autenticação da Adobe Primetime usando a API sem clientes. A primeira parte deste documento se concentra na especificidade da versão da arquitetura do Amazon para os muitos parceiros já familiarizados e experientes com sua implementação.
 
-A segunda parte do documento passa pelas etapas principais para implementar a API sem cliente de Autenticação Adobe Primetime.
+A segunda parte do documento aborda as etapas principais para implementar a API sem cliente do Adobe Primetime Authentication.
 
-Para obter uma visão geral técnica de como a solução sem cliente funciona, consulte a [Visão geral da REST API](/help/authentication/rest-api-overview.md). O Adobe é o contato preferido para oferecer suporte sobre a arquitetura geral e as primeiras implementações.
+Para obter uma visão geral técnica abrangente de como a solução sem clientes funciona, consulte [Visão geral da REST API](/help/authentication/rest-api-overview.md). O Adobe é o contato preferido para suporte sobre a arquitetura geral e as primeiras implementações.
 
-## Amazon Client SSO {#AMZ-Clientless-SSO}
+## SSO sem cliente do Amazon {#AMZ-Clientless-SSO}
 
 ### Arquitetura de alto nível {#High-Level-Arch}
 
-A implementação de SSO sem cliente do Amazon é simples e quase idêntica às APIs sem cliente comuns da Autenticação Adobe Primetime.
+A implementação do SSO sem cliente do Amazon é simples e basicamente idêntica às APIs sem cliente da Autenticação Adobe Primetime comuns.
 
-Você precisará usar o SDK do Amazon para recuperar uma carga personalizada e usá-la ao chamar APIs sem cliente do Adobe.
+Você precisará usar o SDK da Amazon para recuperar uma carga personalizada e usá-la ao chamar as APIs sem cliente do Adobe.
 
 Se a carga for reconhecida e corresponder a uma sessão autenticada, as APIs sem cliente retornarão imediatamente com o token da sessão.
 
-### Como criar o aplicativo para usar o Amazon SDK {#Build-entries}
+### Como criar o aplicativo para usar o SDK do Amazon {#Build-entries}
 
-* Baixe e copie a versão mais recente [SDK do Stub do Amazon](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) em uma pasta /SSOEnabler paralela ao diretório do aplicativo
-* Atualize arquivos de manifesto/gradle para usar a biblioteca :
+* Baixe e copie a mais recente [SDK stub do Amazon](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) em uma pasta /SOEnabler paralela ao diretório de aplicativo
+* Atualizar arquivos manifest/gradle para usar a biblioteca:
 
-   **Adicione a seguinte linha ao arquivo Manifest :**
+   **Adicione a seguinte linha ao arquivo Manifesto:**
 
    ```Java
    <uses-library android:name="com.amazon.ottssotokenlib" android:required="false"/\>
    ```
 
-   **Entradas do arquivo de grade:**
+   **Entradas de arquivo de gradação:**
 
    Em repositórios:
 
@@ -63,19 +63,19 @@ Se a carga for reconhecida e corresponder a uma sessão autenticada, as APIs sem
    ```
 
 
-* Lidando com a ausência do aplicativo complementar do Amazon:
+* Lidar com a ausência do aplicativo associado do Amazon:
 
-   Embora não seja provável que o companheiro não esteja presente no dispositivo Amazon em que seu aplicativo está em execução, você deve encontrar um ClassNotFoundException no tempo de execução na seguinte classe: `com.amazon.ottssotokenlib.SSOEnabler`.
+   Embora isso não seja provável, se o companheiro não estiver presente no dispositivo Amazon que seu aplicativo está executando, você deve encontrar uma ClassNotFoundException no tempo de execução na seguinte classe: `com.amazon.ottssotokenlib.SSOEnabler`.
 
-   Se isso acontecer, tudo o que você precisa fazer é ignorar a etapa de carga e voltar para o fluxo regular do PrimeTime. O SSO não será ativado, mas o fluxo de autenticação regular ocorrerá normalmente.
+   Se isso acontecer, tudo o que você precisa fazer é ignorar a etapa de carga e voltar ao fluxo normal do PrimeTime. O SSO não será habilitado, mas o fluxo de autenticação regular ocorrerá normalmente.
 
 </br>
 
-### Como obter a carga SSO do Amazon usando o Amazon SDK {#UseAmazonSSO}
+### Como obter a carga do SSO do Amazon usando o SDK do Amazon {#UseAmazonSSO}
 
-Durante a inicialização do aplicativo, obtenha uma instância do SSOEnabler. Com base na arquitetura de seu aplicativo, você deve decidir entre uma implementação síncrona ou assíncrona.
+Durante a inicialização do aplicativo, obtenha uma instância do SOEnabler. Com base na arquitetura do aplicativo, você deve decidir entre uma implementação síncrona ou assíncrona.
 
-Se, por qualquer motivo, as chamadas de API não retornarem uma carga útil, use o fluxo não-SSO regular e entre em contato com seus parceiros Amazon e Adobe para investigar.
+Se, por qualquer motivo, as chamadas de API não retornarem uma carga, use o fluxo não-SSO regular e entre em contato com seus parceiros Amazon e Adobe para investigar.
 
 **API assíncrona**
 
@@ -98,22 +98,22 @@ Se, por qualquer motivo, as chamadas de API não retornarem uma carga útil, use
    }
    ```
 
-   * O pacote de resposta bem-sucedido conterá:
-      * Token SSO como uma string com chave &quot;SSOToken&quot;
-   * O pacote de resposta da falha conterá:
-      * código de erro como um int com chave &quot;ErrorCode&quot;
-      * descrição do erro como uma string com chave &quot;ErrorDescription&quot;
+   * O pacote de resposta de sucesso conterá:
+      * Token SSO como uma string com a chave &quot;SSOToken&quot;
+   * O pacote de respostas de falha conterá:
+      * código de erro como um int com a chave &quot;ErrorCode&quot;
+      * descrição do erro como uma string com a chave &quot;ErrorDescription&quot;
 
 
-* Obter token SSO
+* Obter token de SSO
 
    ```JAVA
    Bundle getSSOTokenAsync(Void);
    ```
 
-* Essa API fornecerá a resposta via callback definido durante a inicialização.
+* Essa API fornecerá a resposta por meio do callback definido durante a inicialização.
 
-   **Ex**. chamada usando a instância singleton criada durante a inicialização:
+   **Ex**. chamar usando instância singleton criada durante a inicialização:
 
    ```JAVA
    ssoEnabler.getSSOTokenAsync().
@@ -128,35 +128,35 @@ Se, por qualquer motivo, as chamadas de API não retornarem uma carga útil, use
    ssoEnabler = SSOEnabler.getInstance(context);</span>
    ```
 
-* Obter token SSO
+* Obter token de SSO
 
    ```JAVA
    Bundle getSSOTokenSync(Void);
    ```
 
-   * Essa API bloqueará o encadeamento do chamador e responderá com o pacote de resultados. Como esta é uma chamada síncrona, não use-a no seu thread principal.
+   * Essa API bloqueará o thread do chamador e responderá com o pacote de resultados. Como esta é uma chamada síncrona, certifique-se de não usá-la no thread principal.
 
    ```JAVA
    void setSSOTokenTimeout(long);
    ```
 
-   * Valor em milissegundos. se definido, substitua o valor padrão de tempo limite de 1 minuto para a API de sincronização.
+   * Valor em milissegundos. se definido, substitua o valor de tempo limite padrão de 1 minuto para a API de sincronização.
 
 
 
-### Atualização da API sem cliente do Adobe Primetime para usar o Registro dinâmico de clientes {#clientlessdcr}
+### Atualização da API sem cliente do Adobe Primetime para usar o Registro de cliente dinâmico {#clientlessdcr}
 
-Se esta for a sua primeira implementação, consulte o **Visão geral técnica sem cliente** e entre em contato com o Adobe caso precise de suporte.
+Se esta for sua primeira implementação, consulte a **Visão geral técnica sem cliente** e entre em contato com o Adobe caso precise de suporte.
 
-A API sem cliente do Adobe requer que os aplicativos usem o Registro dinâmico de clientes para fazer chamadas para servidores Adobe.
+A API sem cliente do Adobe exige que os aplicativos usem o Registro de cliente dinâmico para fazer chamadas para servidores Adobe.
 
-* Para usar o Registro dinâmico de clientes em seu aplicativo, siga as instruções em [ Dynamic Client Registration Management para registrar o aplicativo](/help/authentication/dynamic-client-registration-management.md).
+* Para usar o Registro de cliente dinâmico em seu aplicativo, siga as instruções em [ Dynamic Client Registration Management para registrar o aplicativo](/help/authentication/dynamic-client-registration-management.md).
 
-* Para implementar a API Dynamic Client Registration para executar solicitações de autenticação e autorização para servidores da Adobe Primetime, siga as instruções em [API dinâmica de registro de cliente](/help/authentication/dynamic-client-registration-api.md) .
+* Para implementar a API de registro de cliente dinâmico para executar solicitações de autenticação e autorização para servidores Adobe Primetime, siga as instruções em [API dinâmica de registro de cliente](/help/authentication/dynamic-client-registration-api.md) .
 
-### Atualização da API sem cliente do Adobe Primetime para usar o Amazon SSO {#clientlesssso}
+### Atualização da API sem cliente do Adobe Primetime para usar o SSO do Amazon {#clientlesssso}
 
-A carga SSO do Amazon obtida do SDK do Amazon precisa estar presente nas solicitações feitas nos endpoints de Autenticação do Adobe Primetime :
+A carga de SSO do Amazon obtida do SDK do Amazon precisa estar presente nas solicitações feitas para os endpoints de autenticação da Adobe Primetime:
 
 ```
       /adobe-services/*
@@ -165,20 +165,20 @@ A carga SSO do Amazon obtida do SDK do Amazon precisa estar presente nas solicit
 ```
 
 
-Todos os endpoints de Autenticação do Primetime oferecem suporte aos seguintes métodos para receber o identificador do escopo do dispositivo ou o identificador do escopo da plataforma (presente na carga útil SSO do Amazon):
+Todos os pontos de extremidade de autenticação do Primetime oferecem suporte aos seguintes métodos para receber o identificador com escopo de dispositivo ou o identificador com escopo de plataforma (presente na carga do SSO do Amazon):
 
-* Como um cabeçalho : &quot;Adobe-Subject-Token&quot;
+* Como cabeçalho : &quot;Adobe-Subject-Token&quot;
 * Como parâmetro de consulta : &quot;ast&quot;
-* Como um parâmetro de publicação : &quot;ast&quot;
+* Como parâmetro de publicação : &quot;ast&quot;
 
 
 >[!NOTE]
 >
->Se o identificador do escopo do dispositivo ou o identificador do escopo da plataforma for enviado como parâmetro de consulta/postagem, ele deverá ser incluído ao gerar a assinatura da solicitação.
+>Se o identificador com escopo de dispositivo ou identificador com escopo de plataforma for enviado como parâmetro de consulta/publicação, ele deverá ser incluído ao gerar a assinatura da solicitação.
 
 >[!NOTE]
 >
->Usando o parâmetro de consulta &quot;ast&quot;, todo o url pode se tornar muito longo e rejeitado. Na chamada /autentica, esse parâmetro pode ser ignorado, pois foi fornecido na chamada /regcode
+>Usando o parâmetro de consulta &quot;ast&quot;, o URL inteiro pode se tornar muito longo e ser rejeitado. Na chamada /authenticate, esse parâmetro pode ser ignorado porque foi fornecido na chamada /regcode
 
 **Exemplos:**
 
@@ -190,7 +190,7 @@ GET /adobe-services/config/requestor HTTP/1.1 Host: sp-preprod.auth.adobe.com
 Adobe-Subject-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.JlBFhNhNCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA
 ```
 
-**Enviar como parâmetro de consulta**
+**Envio como parâmetro de consulta**
 
 ```HTTPS
 GET /adobe-services/config/requestor?ast=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.JlBFhNhNCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA
@@ -200,7 +200,7 @@ Host: sp.auth.adobe.com
 ```
 
 
-**Enviar como parâmetro de publicação**
+**Envio como parâmetro de publicação**
 
 
 ```HTTPS

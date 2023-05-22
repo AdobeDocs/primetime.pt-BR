@@ -1,29 +1,27 @@
 ---
-description: O TVSDK envia eventos de item do reprodutor de mídia em resposta ao carregamento de um item de mídia.
-title: Eventos de carregador
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: O TVSDK despacha eventos de itens de reprodutor de mídia em resposta ao carregamento de um item de mídia.
+title: Eventos carregadores
+exl-id: 80a503f2-ad2e-44e5-93dc-2311df77f52e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
+# Eventos carregadores{#loader-events}
 
-# Eventos de carregador{#loader-events}
+O TVSDK despacha eventos de itens de reprodutor de mídia em resposta ao carregamento de um item de mídia.
 
-O TVSDK envia eventos de item do reprodutor de mídia em resposta ao carregamento de um item de mídia.
+Esses eventos fornecem um fluxo de trabalho alternativo. Não é necessário implementar essa interface ao criar um MediaPlayer. Use isso quando quiser ter um `MediaPlayerItemLoader`.
 
-Esses eventos fornecem um workflow alternativo. Não é necessário implementar essa interface ao criar um MediaPlayer. Use essa opção quando quiser ter um `MediaPlayerItemLoader`.
-
-Para ser notificado sobre eventos relacionados ao carregamento de um recurso do reprodutor de mídia, registre uma implementação de `MediaPlayerItemLoader.LoaderListener` incluindo os seguintes eventos.
+Para ser notificado sobre eventos relacionados ao carregamento de um recurso de reprodutor de mídia, registre uma implementação de `MediaPlayerItemLoader.LoaderListener` incluindo os eventos a seguir.
 
 | Evento | Significado |
 |---|---|
-| [onLoadComplete](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.LoaderListener.html#onLoadComplete(com.adobe.mediacore.MediaPlayerItem)) ([](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItem.html) mediaPlayerItemplayerItem) | Carregamento do recurso de mídia concluído com êxito. |
-| [onError](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.LoaderListener.html#onError(com.adobe.ave.MediaErrorCode,%20java.lang.String)) | Ocorreu um problema com o carregamento de recursos de mídia. |
+| [onLoadComplete](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.LoaderListener.html#onLoadComplete(com.adobe.mediacore.MediaPlayerItem))([mediaPlayerItem](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItem.html) playerItem) | O carregamento do recurso de mídia foi concluído com êxito. |
+| [onError](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.LoaderListener.html#onError(com.adobe.ave.MediaErrorCode,%20java.lang.String)) | Ocorreu um problema com o carregamento do recurso de mídia. |
 
 >[!NOTE]
 >
 >Consulte também `onLoadInfo (loadInfo)` em Eventos de QoS.
-

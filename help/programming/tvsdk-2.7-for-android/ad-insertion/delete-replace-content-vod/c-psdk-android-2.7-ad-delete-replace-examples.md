@@ -1,20 +1,19 @@
 ---
-description: Estes são alguns exemplos do processo para excluir e substituir anúncios.
+description: Estes são alguns exemplos do processo de exclusão e substituição de anúncios.
 title: Exemplos para excluir e substituir anúncios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a6fdb86e-507e-4a65-bb32-928e216c6e9a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
-
 # Exemplos para excluir e substituir anúncios {#examples-to-delete-and-replace-ads}
 
-Estes são alguns exemplos do processo para excluir e substituir anúncios.
+Estes são alguns exemplos do processo de exclusão e substituição de anúncios.
 
-Este é um exemplo de uso do `DELETE_RANGE`:
+Este é um exemplo de uso de `DELETE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -43,7 +42,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-Este é um exemplo de uso do `REPLACE_RANGE`:
+Este é um exemplo de uso de `REPLACE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 
@@ -76,4 +75,3 @@ config.setCustomRangeMetadata(customRangeMetadata);
 // prepare the content for playback by calling replaceCurrentResource 
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
-

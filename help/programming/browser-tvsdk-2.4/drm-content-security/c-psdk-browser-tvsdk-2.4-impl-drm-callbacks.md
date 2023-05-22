@@ -1,22 +1,21 @@
 ---
-description: As novas APIs a seguir permitem definir retornos de chamada de DRM.
-title: Implementar retornos de chamada de DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: As novas APIs a seguir permitem definir retornos de chamada DRM.
+title: Implementação de retornos de chamada DRM
+exl-id: 3aaa502d-9273-4320-a022-642fee75dafd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
+# Implementação de retornos de chamada DRM{#implementing-drm-callbacks}
 
-# Implementando retornos de chamada de DRM{#implementing-drm-callbacks}
-
-As novas APIs a seguir permitem definir retornos de chamada de DRM.
+As novas APIs a seguir permitem definir retornos de chamada DRM.
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
-Você pode definir uma função de retorno de chamada (por exemplo, `parseContentIdCallback`) para analisar a ID de conteúdo e defini-la como `drmManager` usando a API `setParseContentIdCallback`.
+Você pode definir uma função de retorno de chamada (por exemplo, `parseContentIdCallback`) para analisar a ID de conteúdo e defini-la como `drmManager` usando o `setParseContentIdCallback` API.
 
 ```js
 var arrayToString = function (array) { 
@@ -39,7 +38,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-Você pode definir uma função de retorno de chamada (por exemplo, `onCertificateResponseCallback`) para processar uma resposta de certificado de texto e definir a função como `drmManager` usando a API `setCertificateResponseCallback`. Você pode definir `setCertificateResponseCallback` para substituir o comportamento padrão. Por exemplo, se você tiver um `certificateResponseType` que seja diferente de `ArrayBuffer`, poderá usar esse retorno de chamada para converter a resposta do certificado para o tipo `ArrayBuffer`.
+Você pode definir uma função de retorno de chamada (por exemplo, `onCertificateResponseCallback`) para processar uma resposta de certificado de texto e definir a função como `drmManager` usando o `setCertificateResponseCallback` API. Você pode definir `setCertificateResponseCallback` para substituir o comportamento padrão. Por exemplo, se você tiver uma `certificateResponseType` que não seja `ArrayBuffer`, você pode usar essa chamada de retorno para converter a resposta do certificado para a variável `ArrayBuffer` tipo.
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -66,7 +65,7 @@ drmManager.setCertificateResponseCallback(onCertificateResponseCallback);
 
 <!--<a id="section_4DCC1B3ABCED484EB5340A558C9A770A"></a>-->
 
-Você pode definir funções de retorno de chamada para analisar a mensagem da licença e a resposta da licença e passá-las em uma chamada para `drmManager.acquireLicense`. `onLicenseResponseCallback` é um novo parâmetro na  `acquireLicense` API.
+Você pode definir funções de retorno de chamada para analisar a mensagem de licença e a resposta da licença e passá-las para o `drmManager.acquireLicense`. `onLicenseResponseCallback` é um novo parâmetro na variável `acquireLicense` API.
 
 ```js
 var base64EncodeUint8Array = function (input) { 
@@ -121,7 +120,7 @@ var base64EncodeUint8Array = function (input) {
 drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMessageCallback, onLicenseResponseCallback);
 ```
 
-Nos dados de Proteção, o novo campo **[!UICONTROL certificateResponseType]** é usado para definir o tipo de resposta do certificado. Este é um exemplo de dados de proteção:
+Em Dados de proteção, o novo **[!UICONTROL certificateResponseType]** é usado para definir o tipo de resposta do certificado. Este é um exemplo de dados de proteção:
 
 ```js
 { 
@@ -137,4 +136,4 @@ Nos dados de Proteção, o novo campo **[!UICONTROL certificateResponseType]** �
 }
 ```
 
-O uso do campo `certificateResponseType` é opcional. Se não for usado, o valor será considerado `ArrayBuffer`.
+Usar o `certificateResponseType` é opcional. Se não for usado, o valor será considerado `ArrayBuffer`.

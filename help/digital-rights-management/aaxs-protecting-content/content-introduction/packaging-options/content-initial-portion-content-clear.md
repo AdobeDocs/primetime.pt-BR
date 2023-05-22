@@ -2,17 +2,16 @@
 title: Parte inicial do conteúdo na limpeza
 description: Parte inicial do conteúdo na limpeza
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ef296d64-e0e1-4126-8258-f95d5da3adbf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# Parte inicial do conteúdo na limpeza{#initial-portion-of-content-in-the-clear}
 
-# Parte inicial do conteúdo no clear{#initial-portion-of-content-in-the-clear}
+Especifica uma quantidade opcional de tempo, em segundos, que o início do conteúdo é deixado sem criptografia (o que significa que não está criptografado).
 
-Especifica uma quantidade opcional de tempo, em segundos, em que o início do conteúdo é deixado em branco (o que significa que não está criptografado).
-
-Exemplo de caso de uso: Permite uma reprodução mais rápida enquanto o cliente de Acesso ao Adobe baixa a licença em segundo plano. A parte não criptografada do vídeo inicia a reprodução imediatamente, enquanto a inicialização do Acesso ao Adobe e a aquisição da licença ocorrem em segundo plano. Com esse recurso desativado, os usuários podem perceber um atraso na experiência de reprodução, pois o computador cliente está executando todas as etapas de licenciamento antes que qualquer reprodução de vídeo ocorra.
+Exemplo de caso de uso: permite um tempo de reprodução mais rápido enquanto o cliente do Adobe Access baixa a licença em segundo plano. A parte não criptografada do vídeo começa a ser reproduzida imediatamente, enquanto a inicialização do Adobe Access e a aquisição da licença ocorrem nos bastidores. Com esse recurso desativado, os usuários podem notar um atraso na experiência de reprodução, já que a máquina cliente está executando todas as etapas de licenciamento antes de ocorrer qualquer reprodução de vídeo.

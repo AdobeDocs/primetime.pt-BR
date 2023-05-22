@@ -1,26 +1,25 @@
 ---
-title: Obter certificados de AC de Domínio
-description: Obter certificados de AC de Domínio
+title: Obter certificados de autoridade de certificação de domínio
+description: Obter certificados de autoridade de certificação de domínio
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cad233e0-41f7-4897-ab5f-d5a098c37306
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# Obter certificados de autoridade de certificação de domínio{#obtain-domain-ca-certificates}
 
-# Obter certificados de AC de Domínio{#obtain-domain-ca-certificates}
+Ao contrário do License Server, Packager ou certificado de Transporte, o certificado de CA de domínio não é emitido pelo Adobe. Você pode obter esse certificado de uma autoridade de certificação ou gerar um certificado autoassinado para usar com essa finalidade.
 
-Ao contrário do License Server, do Packager ou do Certificado de Transporte, o certificado da autoridade de certificação de domínio não é emitido pelo Adobe. Você pode obter esse certificado de uma autoridade de certificação ou gerar um certificado autoassinado para uso com essa finalidade.
+O certificado CA de domínio deve usar uma chave de 1024 bits e conter os atributos padrão necessários em um certificado CA:
 
-O certificado de autoridade de certificação de domínio deve usar uma chave de 1024 bits e conter os atributos padrão necessários em um certificado de autoridade de certificação:
+* Extensão de Restrições Básicas com o sinalizador CA definido como verdadeiro
+* A extensão Uso de Chave que especifica Assinatura de Certificado é permitida
 
-* Extensão Restrições Básicas com o sinalizador CA definido como true
-* A extensão de Uso de Chave que especifica a Assinatura de Certificado é permitida
-
-Por exemplo, usando OpenSSL, um certificado CA autoassinado pode ser gerado da seguinte maneira:
+Por exemplo, usando o OpenSSL, um certificado CA autoassinado pode ser gerado da seguinte maneira:
 
 1. Crie um arquivo chamado [!DNL ca-extensions.txt] contendo:
 
@@ -61,4 +60,3 @@ Por exemplo, usando OpenSSL, um certificado CA autoassinado pode ser gerado da s
    openssl pkcs12 -export -inkey domain-ca.key \ 
    -in domain-ca.cer -out domain-ca.pfx
    ```
-

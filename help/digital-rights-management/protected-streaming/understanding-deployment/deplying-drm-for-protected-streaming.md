@@ -1,34 +1,32 @@
 ---
-title: Implantação do servidor DRM Adobe Primetime para transmissão protegida
-description: Implantação do servidor DRM Adobe Primetime para transmissão protegida
+title: Implantação do servidor DRM do Adobe Primetime para transmissão protegida
+description: Implantação do servidor DRM do Adobe Primetime para transmissão protegida
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 814c08e6-5d09-495b-b529-cedc9b9c02a7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
-
 # Implantação do servidor DRM do Adobe Primetime para transmissão protegida{#deploying-the-adobe-primetime-drm-server-for-protected-streaming}
 
-Antes de implantar o Adobe Primetime DRM Server for Protected Streaming, é necessário instalar as versões do Java e Tomcat, conforme listado no tópico Requisitos.
+Antes de implantar o servidor DRM da Adobe Primetime para transmissão protegida, você deve ter instalado as versões do Java e do Tomcat conforme listado no tópico Requisitos.
 
-O pacote Primetime DRM Server for Protected Streaming inclui [!DNL flashaccesserver.war]. Se você:
+O pacote do servidor DRM Primetime para Transmissão protegida inclui [!DNL flashaccesserver.war]. Se você:
 
-* Para implantar esse arquivo WAR, você precisa copiá-lo no diretório [!DNL webapps] do Tomcat.
-* Depois de implantar o arquivo WAR anteriormente, talvez seja necessário excluir o diretório WAR descompactado ( [!DNL flashaccessserver] no diretório [!DNL webapps] do Tomcat).
+* Para implantar esse arquivo WAR, é necessário copiá-lo para o do Tomcat [!DNL webapps] diretório.
+* Ter implantado anteriormente o arquivo WAR, talvez seja necessário excluir o diretório WAR desempacotado ( [!DNL flashaccessserver] no do Tomcat [!DNL webapps] diretório).
 
-* Deseja impedir que o Tomcat descompacte arquivos WAR, edite o arquivo [!DNL server.xml] no diretório [!DNL conf] do Tomcat e configure o atributo `unpackWARs` configurando-o para `false`.
-
->[!NOTE]
->
->Se você configurou o Tomcat para incluir [!DNL commons-logging.jar] no caminho da classe do sistema (não é necessário para o servidor DRM Primetime para transmissão protegida), é necessário configurar o registro de commons para usar o Log4J.
-
-Opcionalmente, o servidor usa uma biblioteca específica da plataforma ( [!DNL jsafe.dll] no Microsoft Windows ou [!DNL libjsafe.so] no Linux para obter o melhor desempenho. Você pode copiar a biblioteca apropriada para sua plataforma de [!DNL thirdparty/cryptoj/]*platform* para um local especificado pela variável de ambiente `PATH` ou `LD_LIBRARY_PATH` no Linux.
+* Para evitar que o Tomcat descompacte arquivos WAR, edite o [!DNL server.xml] arquivo no do Tomcat [!DNL conf] e configure o `unpackWARs` atributo ao configurá-lo como `false`.
 
 >[!NOTE]
 >
->Você só deve usar a versão de 64 bits se o sistema operacional e o JDK oferecerem suporte a 64 bits. Caso contrário, você precisará usar a versão de 32 bits.
+>Se você configurou o Tomcat para incluir [!DNL commons-logging.jar] no caminho de classe Sistema (não necessário para o Servidor DRM do Primetime para Transmissão protegida), você deve configurar o registro commons para usar o Log4J.
 
+O servidor usa, opcionalmente, uma biblioteca específica de plataforma ( [!DNL jsafe.dll] no Microsoft Windows ou [!DNL libjsafe.so] no Linux para obter o desempenho ideal. Você pode copiar a biblioteca apropriada para sua plataforma do [!DNL thirdparty/cryptoj/]*platform* para um local especificado pelo `PATH` variável de ambiente ou `LD_LIBRARY_PATH` no Linux.
+
+>[!NOTE]
+>
+>Você só deve usar a versão de 64 bits se o sistema operacional e o JDK forem compatíveis com 64 bits. Caso contrário, você precisará usar a versão de 32 bits.

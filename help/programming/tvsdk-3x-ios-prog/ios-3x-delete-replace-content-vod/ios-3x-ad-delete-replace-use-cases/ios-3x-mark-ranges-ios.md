@@ -2,14 +2,13 @@
 title: Marcar intervalos
 description: Marcar intervalos
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b3314ee5-bb30-4b25-beff-ff810eff06b2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
 
 ---
-
 
 # Casos de uso para excluir e substituir anúncios {#use-cases-delete-replace-ads}
 
@@ -17,11 +16,11 @@ Estes são os casos de uso para excluir e substituir anúncios:
 
 ## Marcar intervalos {#mark-ranges}
 
-Para implementar o `PTTimeRangeCollection` e marcar intervalos de conteúdo como anúncios:
+Para implementar a `PTTimeRangeCollection` e marcar intervalos de conteúdo como anúncios:
 1. Prepare o `PTTimeRangeCollection`.
 1. Defina o tipo de `PTTimeRangeCollection` para `PTTimeRangeCollectionTypeMarkRanges`.
 
-   Esta etapa notifica o TVSDK de que os intervalos personalizados devem ser tratados como anúncios.
+   Esta etapa notifica o TVSDK que os intervalos personalizados devem ser tratados como anúncios.
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -74,8 +73,8 @@ Para implementar o `PTTimeRangeCollection` e marcar intervalos de conteúdo como
 
 ## Substituir intervalos {#replace-ranges}
 
-Para implementar o `PTTimeRangeCollection` e excluir intervalos de conteúdo como anúncios:
-1. Prepare `PTTimeRangeCollection`.
+Para implementar a `PTTimeRangeCollection` e exclua intervalos de conteúdo como anúncios:
+1. Preparar `PTTimeRangeCollection`.
 1. Defina o tipo de `PTTimeRangeCollection` para `PTTimeRangeCollectionTypeReplaceRanges`.
 
    Esta etapa notifica o TVSDK de que os intervalos fornecidos precisam ser substituídos por conteúdo alternativo (anúncios).
@@ -99,7 +98,7 @@ Para implementar o `PTTimeRangeCollection` e excluir intervalos de conteúdo com
 
    >[!TIP]
    >
-   >O argumento `replacementDuration` é opcional. Se não estiver definido, o `AdServer` determinará a duração do ad break.
+   >O argumento `replacementDuration` é opcional. Se não estiver definido, a variável `AdServer` determina a duração do ad break.
 
 1. Crie o `PTAdMetadata` e defina o `PTTimeRangeCollection`.
 
@@ -125,7 +124,7 @@ Para implementar o `PTTimeRangeCollection` e excluir intervalos de conteúdo com
 
    >[!TIP]
    >
-   >Embora `signalingMode` esteja definido como `PTAdSignalingModeCustomRanges`, esse modo de sinalização de anúncio é definido automaticamente ao definir `PTTimeRangeCollection` do tipo `PTTimeRangeCollectionTypeReplace`.
+   >Embora a `signalingMode` está definido como `PTAdSignalingModeCustomRanges`, esse modo de sinalização de anúncio é definido automaticamente ao definir o `PTTimeRangeCollection` do tipo `PTTimeRangeCollectionTypeReplace`.
 
 1. Crie o reprodutor e inicie a reprodução.
 
@@ -142,9 +141,9 @@ Para implementar o `PTTimeRangeCollection` e excluir intervalos de conteúdo com
 
 ## Excluir intervalos {#delete-ranges}
 
-Para implementar o `PTTimeRangeCollection` e excluir intervalos de conteúdo como anúncios:
+Para implementar a `PTTimeRangeCollection` e exclua intervalos de conteúdo como anúncios:
 1. Prepare o `PTTimeRangeCollection`.
-1. Defina o tipo de `PTTimeRangeCollection` para `PTTimeRangeCollectionTypeDeleteRanges`, que notifica TVSDK de que os intervalos fornecidos precisam ser excluídos.
+1. Defina o tipo de `PTTimeRangeCollection` para `PTTimeRangeCollectionTypeDeleteRanges`, que notifica o TVSDK que os intervalos fornecidos precisam ser excluídos.
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -185,7 +184,7 @@ Para implementar o `PTTimeRangeCollection` e excluir intervalos de conteúdo com
 
    >[!TIP]
    >
-   >A inserção de anúncio ocorre após a exclusão dos intervalos personalizados com base em `PTAdMetadata` e no `PTAdSignalingMode` atual.
+   >A inserção do anúncio ocorre após a exclusão dos intervalos personalizados com base no `PTAdMetadata` e o atual `PTAdSignalingMode`.
 
 1. Crie o reprodutor e inicie a reprodução.
 

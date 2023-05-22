@@ -1,30 +1,29 @@
 ---
-description: Você deve lançar uma instância e recursos do MediaPlayer quando não precisar mais do MediaResource.
+description: Você deve liberar uma instância MediaPlayer e recursos quando não precisar mais do MediaResource.
 title: Liberar uma instância e recursos do MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2a802754-5c51-4e5f-8c36-843074b487b5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
 
 ---
 
+# Liberar uma instância e recursos do MediaPlayer{#release-a-mediaplayer-instance-and-resources}
 
-# Liberar uma instância do MediaPlayer e recursos{#release-a-mediaplayer-instance-and-resources}
+Você deve liberar uma instância MediaPlayer e recursos quando não precisar mais do MediaResource.
 
-Você deve lançar uma instância e recursos do MediaPlayer quando não precisar mais do MediaResource.
+Quando você libera um `MediaPlayer` objeto, os recursos de hardware subjacentes associados a este `MediaPlayer` objeto são desalocados.
 
-Quando você lança um objeto `MediaPlayer`, os recursos de hardware subjacentes associados a esse objeto `MediaPlayer` são desalocados.
+Aqui estão alguns motivos para lançar um `MediaPlayer`:
 
-Estes são alguns motivos para lançar um `MediaPlayer`:
+* Manter recursos desnecessários pode afetar o desempenho.
+* Se várias instâncias do mesmo codec de vídeo não forem suportadas em um dispositivo, pode ocorrer uma falha de reprodução para outros aplicativos.
 
-* A retenção de recursos desnecessários pode afetar o desempenho.
-* Se várias instâncias do mesmo codec de vídeo não forem suportadas em um dispositivo, a falha de reprodução poderá ocorrer em outros aplicativos.
-
-1. Solte o `MediaPlayer`.
+1. Lançar o `MediaPlayer`.
 
    ```
    function release():void;
    ```
 
-Depois que a instância `MediaPlayer` for lançada, não será mais possível usá-la. Se qualquer método da interface `MediaPlayer` for chamado depois de ser lançado, um `IllegalStateException` será lançado.
+Depois que a variável `MediaPlayer` for lançada, você não poderá mais usá-la. Se qualquer método do `MediaPlayer` for chamada depois de ser lançada, uma `IllegalStateException` é lançado.

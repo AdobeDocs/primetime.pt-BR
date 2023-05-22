@@ -1,34 +1,33 @@
 ---
 description: Para fornecer uma experiência de visualização mais suave, o TVSDK às vezes armazena o fluxo de vídeo em buffer. Você pode configurar o modo como o reprodutor é armazenado em buffer.
 title: Definir tempos de buffering
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4542d10a-b6f8-430d-8b9a-5a358d1c0e9d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
 
 ---
 
-
 # Buffering {#buffering}
 
 Para fornecer uma experiência de visualização mais suave, o TVSDK às vezes armazena o fluxo de vídeo em buffer. Você pode configurar o modo como o reprodutor é armazenado em buffer.
 
-O TVSDK define uma duração de buffer de reprodução de pelo menos 30 segundos e um tempo de buffer inicial de pelo menos 2 segundos durante a reprodução da mídia. Depois que o aplicativo chama `play`, mas antes do início da reprodução, o TVSDK armazena a mídia em buffer até o momento inicial para fornecer um início suave quando realmente começa a reproduzir.
+O TVSDK define um tamanho de buffer de reprodução de pelo menos 30 segundos e um tempo de buffer inicial de pelo menos 2 segundos antes de a mídia começar a ser reproduzida. Depois que o aplicativo chamar `play` mas antes de começar a reprodução, o TVSDK armazena a mídia em buffer até o momento inicial para dar um início suave quando ela realmente começa a ser reproduzida.
 
-Você pode alterar os tempos do buffer definindo novas políticas de buffering e pode alterar quando o buffering inicial ocorrer usando o instantâneo.
+Você pode alterar os tempos de buffer definindo novas políticas de buffering e pode alterar quando o buffering inicial ocorre usando instantâneo.
 
 ## Definir tempos de buffering {#set-buffering-times}
 
-O `MediaPlayer` fornece métodos para definir e obter o tempo de buffering inicial e o tempo de buffering de reprodução.
+A variável `MediaPlayer` O fornece métodos para definir e obter o tempo de buffering inicial e o tempo de buffering de reprodução.
 
 >[!TIP]
 >
->Se você não definir os parâmetros de controle de buffer antes de iniciar a reprodução, o padrão do reprodutor de mídia será 2 segundos para o buffer inicial e 30 segundos para o tempo de buffer de reprodução em andamento.
+>Se você não definir os parâmetros de controle de buffer antes de iniciar a reprodução, o reprodutor de mídia assumirá como padrão 2 segundos para o buffer inicial e 30 segundos para o tempo de buffer de reprodução em andamento.
 
-1. Configure o objeto `BufferControlParameters`, que encapsula o tempo de buffer inicial e os parâmetros de controle de tempo do buffer de reprodução:
+1. Configurar o `BufferControlParameters` objeto, que encapsula o tempo de buffer inicial e os parâmetros de controle do tempo de buffer de reprodução:
 
-       Esta classe fornece dois métodos de fábrica:
+       Essa classe fornece dois métodos de fábrica:
    
    * Para definir o tempo de buffer inicial igual ao tempo de buffer de reprodução:
 
@@ -45,31 +44,31 @@ O `MediaPlayer` fornece métodos para definir e obter o tempo de buffering inici
           long bufferTime)
       ```
 
-      Esses métodos exibem um `IllegalArgumentException` se os parâmetros não forem válidos, como quando:
+      Esses métodos lançam um `IllegalArgumentException` se os parâmetros não forem válidos, como quando:
 
    * O tempo de buffer inicial é menor que zero.
    * O tempo de buffer inicial é maior que o tempo de buffer.
 
-1. Para definir os valores dos parâmetros de buffer, use este método `MediaPlayer`:
+1. Para definir os valores de parâmetro de buffer, use esta opção `MediaPlayer` método:
 
    ```java
    void setBufferControlParameters(BufferControlParameters params)
    ```
 
-1. Para obter os valores atuais dos parâmetros de buffer, use este método `MediaPlayer`:
+1. Para obter os valores atuais de parâmetro de buffer, use este `MediaPlayer` método:
 
    ```java
       BufferControlParameters getBufferControlParameters()  
    ```
 
-   Se o AVE não puder definir os valores especificados, o reprodutor de mídia entrará no estado `ERROR` com o código de erro `SET_BUFFER_PARAMETERS_ERROR`.
+   Se o AVE não puder definir os valores especificados, o reprodutor de mídia inserirá o `ERROR` com o código de erro `SET_BUFFER_PARAMETERS_ERROR`.
 
 <!--<a id="example_B5C5004188574D8D8AB8525742767280"></a>-->
 
-Por exemplo, para definir o buffer inicial como 2 segundos e o tempo do buffer de reprodução como 30 segundos:
+Por exemplo, para definir o buffer inicial como 2 segundos e o tempo de buffer de reprodução como 30 segundos:
 
 ```java
 mediaPlayer.setBufferControlParameters(BufferControlParameters.createDual(2000, 30000));
 ```
 
-A implementação de referência do Primetime demonstra esse recurso; use as configurações do aplicativo para definir os valores do buffer.
+A implementação de referência do Primetime demonstra esse recurso; use as configurações do aplicativo para definir os valores de buffer.

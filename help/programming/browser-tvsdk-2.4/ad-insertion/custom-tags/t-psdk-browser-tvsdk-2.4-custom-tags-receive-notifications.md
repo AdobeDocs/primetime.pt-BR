@@ -1,20 +1,19 @@
 ---
-description: Para receber notificações sobre tags no manifesto, ouça AdobePSDK.TimedMetadataEvent.
+description: Para receber notificações sobre tags no manifesto, acompanhe AdobePSDK.TimedMetadataEvent.
 title: Adicionar ouvintes para notificações de metadados cronometrados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: eea2505f-595c-4bbe-9b68-ae395943c888
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
 
 ---
 
-
 # Adicionar ouvintes para notificações de metadados cronometrados{#add-listeners-for-timed-metadata-notifications}
 
-Para receber notificações sobre tags no manifesto, ouça AdobePSDK.TimedMetadataEvent.
+Para receber notificações sobre tags no manifesto, acompanhe AdobePSDK.TimedMetadataEvent.
 
-Quando um novo objeto `TimedMetadata` é criado, o MediaPlayer envia `AdobePSDK.TimedMetadataEvent`.
+Quando um novo `TimedMetadata` for criado, o MediaPlayer enviará `AdobePSDK.TimedMetadataEvent`.
 
 1. Implemente os ouvintes apropriados.
 
@@ -25,11 +24,10 @@ Quando um novo objeto `TimedMetadata` é criado, o MediaPlayer envia `AdobePSDK.
        } 
    ```
 
-1. Registre os ouvintes do evento.
+1. Registre os ouvintes de eventos.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE, onTimedMetadataEvent);
    ```
 
-Os metadados ID3 são despachados por meio do mesmo `Events.TimedMetadataEvent`. Você pode usar a propriedade `timedMetadata.type` para distinguir entre TAG e ID3.
-
+Os metadados de ID3 são despachados pelo mesmo `Events.TimedMetadataEvent`. Você pode usar o `timedMetadata.type` para distinguir entre TAG e ID3.
