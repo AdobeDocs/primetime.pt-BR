@@ -5,9 +5,9 @@ contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: 5e227c99-acf6-4b16-a35a-68e2928fdbfd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '5195'
+source-wordcount: '5194'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ A criptografia AES baseada em amostra agora é compatível.
 
 * Zendesk #33777 - SWF de token localhost para build de distribuição DHLS expirado.
 
-   Atualização do token localhost para demonstração PMP no DHLS.
+  Atualização do token localhost para demonstração PMP no DHLS.
 
 ### Problemas resolvidos nas versões anteriores {#resolved-issues-previous}
 
@@ -110,11 +110,11 @@ A criptografia AES baseada em amostra agora é compatível.
 
 * Zendesk #30731 - O TVSDK não reproduz vários anúncios VPAID em um AdBreak.
 
-   Correção da reprodução de vários anúncios VPAID em um AdBreak.
+  Correção da reprodução de vários anúncios VPAID em um AdBreak.
 
 * Zendesk #29968 - Billboard Dupla.
 
-   O reprodutor de vídeo pode repetir o último segmento de um período em que ocorre um switch ABR. Devido a isso, às vezes, o último segmento da pré-rolagem se repetiu. Isso foi corrigido.
+  O reprodutor de vídeo pode repetir o último segmento de um período em que ocorre um switch ABR. Devido a isso, às vezes, o último segmento da pré-rolagem se repetiu. Isso foi corrigido.
 
 **Versão 1.4.35** (879)
 
@@ -124,31 +124,31 @@ A criptografia AES baseada em amostra agora é compatível.
 
 * Zendesk #21701 - Envie o URL criativo original para a solicitação 1401 CRS em vez do URL normalizado.
 
-   O problema em que URLs já reempacotados estão sendo solicitados para transcodificação foi corrigido, de acordo com o exigido pelo back-end do CRS.
+  O problema em que URLs já reempacotados estão sendo solicitados para transcodificação foi corrigido, de acordo com o exigido pelo back-end do CRS.
 * Zendesk #26197 - Compactação anamórfica não repetida na Resolução de Exibição desejada.
 
-   **Nota**: esse problema exige o Flash player 24.0.0.194 ou posterior.
+  **Nota**: esse problema exige o Flash player 24.0.0.194 ou posterior.
 
-   O problema em que as entradas ausentes nas tabelas de proporção eram usadas para calcular a largura da saída foi corrigido.
+  O problema em que as entradas ausentes nas tabelas de proporção eram usadas para calcular a largura da saída foi corrigido.
 
 * Zendesk #26840 - Falha na detecção de HDCP no IE11 + Windows7 após a segunda tentativa.
 
-   **Nota**: esse problema exige o Flash player 24.0.0.218 ou posterior.
+  **Nota**: esse problema exige o Flash player 24.0.0.218 ou posterior.
 
-   Esse problema foi resolvido modificando o processamento da fila de mensagens principal do AdobeCP para iterar por toda a fila, em vez de apenas bloquear na primeira mensagem.
+  Esse problema foi resolvido modificando o processamento da fila de mensagens principal do AdobeCP para iterar por toda a fila, em vez de apenas bloquear na primeira mensagem.
 
 * Zendesk #27460 - A nova conta Akamai não pode lidar com uma solicitação CDN POST.
 
-   A nova conta CDN não pode lidar com uma solicitação CDN POST. Esse problema foi resolvido atualizando o código para fazer com que a solicitação de anúncio cdn.auditude.com fosse GET em vez de POST.
+  A nova conta CDN não pode lidar com uma solicitação CDN POST. Esse problema foi resolvido atualizando o código para fazer com que a solicitação de anúncio cdn.auditude.com fosse GET em vez de POST.
 * Zendesk #27619 - Flash crash no Windows 10
 
-   **Nota**: esse problema exige o Flash player 24.0.0.218 ou posterior.
+  **Nota**: esse problema exige o Flash player 24.0.0.218 ou posterior.
 
-   Esse problema era resolvido evitando uma falha como resultado de URLs longos.
+  Esse problema era resolvido evitando uma falha como resultado de URLs longos.
 
 * Zendesk #28218 - O evento de rastreamento não é acionado enquanto o reprodução do ponto de retomada
 
-   Esta edição é a mesma edição do Zendesk #26592. O problema em que as operações de busca eram permitidas quando o reprodutor de mídia estava no estado PREPARADO para fluxos de VOD foi corrigido.
+  Esta edição é a mesma edição do Zendesk #26592. O problema em que as operações de busca eram permitidas quando o reprodutor de mídia estava no estado PREPARADO para fluxos de VOD foi corrigido.
 
 **Versão 1.4.32** (867)
 
@@ -194,9 +194,9 @@ Esse problema foi resolvido com o rastreamento das alterações na taxa de bits 
 
 **Versão 1.4.28** (848)
 
-* Zendesk #25027 - O Auditude não funciona na versão 1.4.27 para desktop
+* Zendesk #25027 - Auditude não funciona na versão 1.4.27 para desktop
 
-Esse problema foi resolvido adicionando o código para verificar a AUDITUDE_METADATA_KEY e tornando as AUDITUDE_METADATA_KEY e ADVERTISING_METADATA_KEY intercambiáveis.
+Esse problema foi resolvido adicionando o código para verificar o AUDITUDE_METADATA_KEY e tornando o AUDITUDE_METADATA_KEY e ADVERTISING_METADATA_KEY intercambiáveis.
 
 * Zendesk #24428 - Problema frequente de buffering usando o TVSDK para reproduzir um DRM HLS
 
@@ -380,7 +380,7 @@ Esse problema foi resolvido para se comportar corretamente e não despachar even
 
 **Nota**: esse problema exige o Flash player 21.0.0.182 ou posterior.
 
-A Solicitação de Auditoria analisa as Configurações de Auditoria em busca de parâmetros personalizados ao criar uma unidade de publicidade para solicitações de publicidade.
+A Solicitação Auditude analisa as Configurações de Auditoria em busca de parâmetros personalizados ao criar uma unidade de publicidade para solicitações de publicidade.
 
 Esse comportamento foi alterado para incluir parâmetros personalizados do objeto Oportunidade na solicitação. Além disso, várias oportunidades com parâmetros personalizados diferentes não podem ser compactadas em uma solicitação do Auditude.
 
@@ -754,7 +754,7 @@ _playbackManager.pause();
 
    * PTPLAY-1634 - A mesma tag inscrita tem carimbos de data e hora diferentes em diferentes janelas ativas. Quando as janelas ativas são movidas, a mesma tag em cada uma delas deve ter os mesmos carimbos de data e hora. No entanto, às vezes, as mesmas tags têm carimbos de data e hora diferentes.
    * PTPLAY-28 - A linha do tempo do MediaPlayer não inclui quebras vazias.
-   * É necessário um arquivo de política entre domínios (crossdomain.xml) para obter permissão para transmitir conteúdo de um domínio diferente. [Configurar um arquivo crossdomain.xml para transmissão HTTP](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html).
+   * É necessário um arquivo de política entre domínios (crossdomain.xml) para obter permissão para transmitir conteúdo de um domínio diferente. [Configurar um arquivo crossdomain.xml para transmissão HTTP](https://helpx.adobe.com/adobe-media-server/dev/configure-dynamic-streaming-live-streaming.html).
    * Bug #3694203 - Em um fluxo de DVR, buscar em um mid-roll de reprodução em outra sinalização de anúncio mid-roll pode levar ao congelamento do navegador
    * Bug #3753725 - selectPolicyForSeekIntoAd não leva em conta se o ad break foi assistido
    * Bug #3754529 - Os anúncios precedentes não são removidos do fluxo ao buscar de volta em um fluxo DVR ao vivo

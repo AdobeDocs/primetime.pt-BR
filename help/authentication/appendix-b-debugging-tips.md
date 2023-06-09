@@ -2,9 +2,9 @@
 title: Apêndice B "Dicas de depuração"
 description: Apêndice B "Dicas de depuração"
 exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ A autenticação do Adobe Primetime armazena dados temporários, como cache do n
 
 - [Limpeza do cache do navegador e cookies](#clearing-the-browser-cache-and-cookies)
 - [Limpando cache de LSOs](#clearing-lsos-cache)\
-    
+   
 
 ## Limpeza do cache do navegador e cookies {#clearing-the-browser-cache-and-cookies}
 
@@ -41,8 +41,7 @@ Selecione o ```entitlement.\*``` (dependendo do que for testado) e clique em &qu
 Os engenheiros de autenticação do Adobe Primetime usam as seguintes ferramentas de depuração:
 
 - Firebug - <http://www.getfirebug.com/>
-- Flashbug (funciona com a versão de depuração do flash player) <https://addons.mozilla.org/en-US/firefox/addon/14465/>
-- Cabeçalhos http em tempo real - <https://addons.mozilla.org/en-US/firefox/addon/3829/>
+- Flashbug (funciona com a versão de depuração do flash player)
 - Violador - <http://www.fiddler2.com/fiddler2/>
 - Charles - <http://www.charlesproxy.com/>
 - Wireshark - <http://www.wireshark.org/>

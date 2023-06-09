@@ -3,9 +3,9 @@ title: Detalhes da notificação NATIVE_ERROR
 description: Detalhes da notificação NATIVE_ERROR
 copied-description: true
 exl-id: 51c75349-0fa8-405d-9e09-b51b425fe21b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '6888'
+source-wordcount: '6868'
 ht-degree: 2%
 
 ---
@@ -352,7 +352,7 @@ Ao relatar erros de DRM para o Adobe, inclua a variável `NATIVE_SUBERROR_CODE` 
    <td colname="col2"><span class="codeph"> AXS_I15nFalha </span> </td> 
    <td colname="col3"> <p>Falha no processo de provisionamento do cliente com chaves. subErrorId contém um erro de linha, específico do servidor ou do cliente. </p> 
     <ul id="ul_98D919B9060A441AACB6106F6D8E8DA7"> 
-     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">O software do distribuidor deve repetir a operação pelo menos uma vez. <p>Se você estiver usando o Google Chrome no Windows, forneça uma explicação sobre como permitir o acesso ao plug-in que não está em uma sandbox. Para obter mais informações, consulte <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Acesso à unsandbox do Google Chrome negado</a>. </p> </li> 
+     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">O software do distribuidor deve repetir a operação pelo menos uma vez. <p>Se você estiver usando o Google Chrome no Windows, forneça uma explicação sobre como permitir o acesso ao plug-in que não está em uma sandbox. Acesso à unsandbox do Google Chrome negado</a>. </p> </li> 
      <li id="li_7FB7681FE32D444BB1BDBA3E5953A2C3">O distribuidor deve concluir uma das seguintes tarefas: 
       <ul id="ul_486B64F187C44AE3B4775953A6142836"> 
        <li id="li_095B1D4CD051427CB2BFA7082B454056">Se o erro for consistente em todas as plataformas, você deverá escalonar o problema com o Adobe. </li> 
@@ -685,7 +685,7 @@ Ao relatar erros de DRM para o Adobe, inclua a variável `NATIVE_SUBERROR_CODE` 
   <tr> 
    <td colname="col1"> 3368 </td> 
    <td colname="col2"><span class="codeph"> AXS_UserSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>O usuário cancelou a operação ou inseriu configurações que não permitem acesso ao sistema. </p> <p>Esse erro só é lançado quando a versão do SWF é 19 ou posterior. Para compatibilidade com versões anteriores, 3321 é lançado quando o SWF é versão 18 ou anterior. </p> <p>O software do distribuidor deve orientar o usuário para uma explicação de como permitir o acesso a plug-ins fora da área restrita. Para obter mais informações, consulte <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Acesso à unsandbox do Google Chrome negado</a> e <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> Erro de DRM 3322/3346/3368 no Chrome (problemas na barra de informações)</a>. </p> </td> 
+   <td colname="col3"> <p>O usuário cancelou a operação ou inseriu configurações que não permitem acesso ao sistema. </p> <p>Esse erro só é lançado quando a versão do SWF é 19 ou posterior. Para compatibilidade com versões anteriores, 3321 é lançado quando o SWF é versão 18 ou anterior. </p> <p>O software do distribuidor deve orientar o usuário para uma explicação de como permitir o acesso a plug-ins fora da área restrita. Acesso à unsandbox do Google Chrome negado</a> e <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> Erro de DRM 3322/3346/3368 no Chrome (problemas na barra de informações)</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3369 </td> 
@@ -700,7 +700,7 @@ Ao relatar erros de DRM para o Adobe, inclua a variável `NATIVE_SUBERROR_CODE` 
   <tr> 
    <td colname="col1"> 3371 </td> 
    <td colname="col2"><span class="codeph"> AXS_SemOPConstraintInPixel</span><span class="codeph"> Restrições</span> </td> 
-   <td colname="col3"> <p>Resolução malformada com base nas restrições de proteção de saída da licença. </p> <p>O software do distribuidor deve exibir uma mensagem de erro. Peça ao usuário para relatar o problema ao distribuidor com um título de conteúdo. </p> <p>O distribuidor deve reempacotar o conteúdo com uma política válida. </p> </td> 
+   <td colname="col3"> <p>Resolução malformada com base em restrições de proteção de saída na licença. </p> <p>O software do distribuidor deve exibir uma mensagem de erro. Peça ao usuário para relatar o problema ao distribuidor com um título de conteúdo. </p> <p>O distribuidor deve reempacotar o conteúdo com uma política válida. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3372 </td> 

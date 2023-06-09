@@ -3,9 +3,9 @@ title: Requisitos para usar o servidor de chaves DRM do Primetime
 description: Requisitos para usar o servidor de chaves DRM do Primetime
 copied-description: true
 exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,9 @@ Os requisitos mínimos para usar o Servidor de Chaves DRM do Primetime são:
 
 * [Java JRE 1.6](https://www.oracle.com/technetwork/java/javase/downloads/index.html) ou posteriormente. (Para usar o HSM no Windows de 64 bits, é necessário o JRE 8)
 
-   >[!NOTE]
-   >
-   >O PKCS11 de 64 bits agora é suportado no OpenJDK 8: [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131), e Oracle JDK: [https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559).
-
+  >[!NOTE]
+  >
+  >O PKCS11 de 64 bits agora é suportado no OpenJDK 8: [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131), e ORACLE
 * [Apache Tomcat 7](https://tomcat.apache.org)
 * Credenciais emitidas pelo Adobe
 * Credenciais emitidas pelo Microsoft (para clientes Xbox 360)
