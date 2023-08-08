@@ -1,0 +1,48 @@
+---
+product: adobe primetime
+audience: end-user
+user-guide-title: Monitoramento de simultaneidade do Primetime
+user-guide-description: null
+source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 0%
+
+---
+
+
+# Ajuda do Monitoramento de simultaneidade do Primetime {#cm}
+
++ [Introdução ao monitoramento de simultaneidade](cm-home.md)
++ [Glossário de monitoramento de simultaneidade](cm-glossary.md)
++ [Casos de uso do monitoramento de simultaneidade](cm-use-cases.md)
++ [Ponto de decisão da política](cm-policy-decision-point.md)
++ [Visão geral da API de monitoramento de concorrência](cm-api-overview.md)
++ [Atributos de metadados padrão](standard-metadata-attributes.md)
++ [Política de retenção de dados](data-retention-policy.md)
++ [Procedimentos de escalonamento](cm-escalation-procedures.md)
++ Uso do monitoramento de simultaneidade {#cmu}
+   + [Relatórios de uso de monitoramento de simultaneidade](cm-usage-reports.md)
+   + [API de uso de monitoramento de simultaneidade](cmu-api.md)
++ API versão 1{#v1-api}
+   + [Ponto de informações da política](policy-info-pt-versionone.md)
+   + [Metadados personalizados](custom-metadata.md)
+   + Cookies de integração {#int-cookbooks}
+      + [Restrição do uso simultâneo com vários aplicativos pertencentes a proprietários diferentes](restrict-concurr-usage-mult-apps.md)
+      + [Um único locatário/política e vários aplicativos](single-tenant-policy-mult-app.md)
+   + [Modelos de implementação](implementation-models.md)
++ Notas de versão {#cm-release-notes}
+   + [Notas de versão do Concurrency Monitoring Services 3.1](rn-cm-services-31.md)
+   + [Notas de versão do Concurrency Monitoring Services 3.0](rn-cm-services-30.md)
+   + [Notas de versão do Monitoramento de simultaneidade 2.9.6](rn-cm-296.md)
+   + [Notas de versão do Monitoramento de simultaneidade 2.9](rn-cm-29.md)
+   + [Monitoramento de simultaneidade do Primetime - Notas de versão 2.8.2](rn-cm-282.md)
+   + [Monitoramento de simultaneidade do Primetime - Notas de versão 2.7.2](rn-cm-272.md)
+   + [Monitoramento de simultaneidade do Primetime - Notas de versão 2.6.0](rn-cm-260.md)
+   + [Monitoramento de simultaneidade do Primetime - Notas de versão 2.5.0](rn-cm-250.md)
+   + [Monitoramento de simultaneidade do Primetime - Notas de versão 2.3.2](rn-cm-232.md)
+   + [Monitoramento de simultaneidade do Primetime - Notas de versão 2.2.2](rn-cm-222.md)
++ Notas técnicas{#tech-notes}
+   + [Como: distinguir entre VOD e conteúdo ao vivo no monitoramento de simultaneidade](vod-live-dist.md)
+<!--    + [Usage reports](usage-rep-versionone.md) -->
+
