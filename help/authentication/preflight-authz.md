@@ -2,14 +2,14 @@
 title: Autorização de comprovação
 description: Autorização de comprovação
 exl-id: 036b1a8e-f2dc-4e9a-9eeb-0787e40c00d9
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
 
 ---
 
-# Autorização de comprovação {#preflight-authorization}
+# Autorização de comprovação {#preflight-authorization}
 
 >[!NOTE]
 >
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 Esse recurso fornece uma verificação de autorização simples para vários recursos. O objetivo dessa verificação leve é decorar a interface do usuário (por exemplo, indicando o status de acesso com ícones de bloqueio e desbloqueio). A autorização de comprovação é o mais leve e eficiente possível, de modo que uma única chamada de API produz o status de autorização para uma lista de recursos. Observe que esse recurso não é autoritativo em relação à autorização de um recurso.
 
-A `getAuthorization(resource)` ou `checkAuthorization(resource)` a chamada ainda DEVE ser feita antes de permitir a reprodução.
+A `getAuthorization(resource)` ou `checkAuthorization(resource)` a chamada ainda DEVE ser feita antes de permitir a reprodução.
 
 A autorização de comprovação também oferece suporte a um caso de uso diferente, em que o Programador precisa solicitar autorização para várias IDs de recursos para permitir a reprodução de um item do conteúdo de mídia. O programador pode fazer uma verificação inicial de comprovação nos recursos necessários e, dependendo da resposta, pode falhar antecipadamente se as condições comerciais não forem atendidas.
 
-Para obter uma lista de MVPDs que oferecem suporte à autorização de comprovação, consulte [Autorização de simulação do MVPD](/help/authentication/mvpd-preflight-authz.md#preflight_support_list) página. 
+Para obter uma lista de MVPDs que oferecem suporte à autorização de comprovação, consulte [Autorização de simulação do MVPD](/help/authentication/mvpd-preflight-authz.md#preflight_support_list) página.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ O AccessEnabler expõe um par de funções de API/retorno de chamada para implem
 
 Chame essa função no objeto AccessEnabler para solicitar o status de autorização para uma lista de recursos.
 
-O parâmetro resources é a lista de recursos cuja autorização deve ser verificada. Cada elemento na lista deve ser uma string que representa a ID do recurso. A ID do recurso está sujeita às mesmas limitações que a ID do recurso na `getAuthorization()` chamada, ou seja, é acordado um valor estabelecido entre o Programador e o MVPD, ou um fragmento de RSS de mídia. Observe que a autenticação do Adobe Primetime não gerencia recursos de nenhuma maneira, exceto por uma camada de mediação reduzida que pode transformar formatos de recursos dependendo do que o MVPD realmente suporta.
+O parâmetro resources é a lista de recursos cuja autorização deve ser verificada. Cada elemento na lista deve ser uma string que representa a ID do recurso. A ID do recurso está sujeita às mesmas limitações que a ID do recurso na `getAuthorization()` chamada, ou seja, é acordado um valor estabelecido entre o Programador e o MVPD, ou um fragmento de RSS de mídia. Observe que a autenticação do Adobe Primetime não gerencia recursos de nenhuma maneira, exceto por uma camada de mediação reduzida que pode transformar formatos de recursos dependendo do que o MVPD realmente suporta.
 
 ### preauthorizedResources(Matriz:authorizedResources) {#preauthRes}
 
@@ -70,19 +70,19 @@ Essa é uma função de retorno de chamada que deve ser implementada no aplicati
 
 A chamada de API tenta encontrar uma lista em cache de recursos autorizados para o usuário atual no armazenamento local do cliente. Se não houver nenhuma lista em cache, será feita uma chamada HTTPS aos servidores Adobe Pass para recuperar a lista.
 
-O mecanismo de armazenamento em cache melhora os tempos de desempenho em chamadas subsequentes ignorando completamente a chamada de rede. Além disso, a lista em cache pode ser preenchida antecipadamente como parte do processo de autenticação.  (Para obter informações sobre como configurar esse cenário, consulte [Integração da autorização de comprovação](/help/authentication/authz-usecase.md#preflight_authz_int) na seção Autorização do Guia de Integração do MVPD).
+O mecanismo de armazenamento em cache melhora os tempos de desempenho em chamadas subsequentes ignorando completamente a chamada de rede. Além disso, a lista em cache pode ser preenchida antecipadamente como parte do processo de autenticação.  (Para obter informações sobre como configurar esse cenário, consulte [Integração da autorização de comprovação](/help/authentication/authz-usecase.md#preflight_authz_int) na seção Autorização do Guia de Integração do MVPD).
 
-Além disso, a lista de recursos em cache pode ser usada para otimizar o fluxo de autorização, no sentido de que, se uma lista de recursos em cache existir, `checkAuthorization()` O pode verificá-lo antes de fazer uma chamada de rede. Se o recurso não estiver na lista de recursos pré-autorizados, a verificação pode falhar sem precisar chamar os servidores de autenticação do Primetime.
+Além disso, a lista de recursos em cache pode ser usada para otimizar o fluxo de autorização, no sentido de que, se uma lista de recursos em cache existir, `checkAuthorization()` O pode verificá-lo antes de fazer uma chamada de rede. Se o recurso não estiver na lista de recursos pré-autorizados, a verificação pode falhar sem precisar chamar os servidores de autenticação do Primetime.
 
 
 ### Comprovação usando ChannelID {#preflight_using_channelID}
 
 A partir da versão 2.4.1 de autenticação do Primetime, o fluxo de Comprovação funciona da seguinte maneira:
 
-1. Durante a autenticação, a autenticação do Primetime lê o `channelIID` elemento da resposta SAML do MVPD, e usa esse valor para definir a variável `authorizedResources` elemento no token de autenticação.
-1. Dentro do `checkPreauthorizedResources()` função da API, a autenticação do Primetime verifica se `authorizedResources` elemento está definido.
-1. Se a variável `authorizedResources` for definido, a autenticação do Primetime lerá esse valor e executará uma interseção entre a lista de recursos da `authorizedResources` e a lista de recursos recebidos do `checkPreauthorizedResources()` parâmetro.  O resultado dessa interseção é a lista final de recursos pré-autorizados.
-1. Se a variável `authorizedResources` elemento não estiver definido, execute o fluxo implementado anteriormente, no qual a lista de recursos recebidos do `checkPreauthorizedResources()` é passado para o PreAuthorizationServlet. Esse servlet executa as chamadas de autorização para os endpoints do MVPD e retorna a lista de recursos pré-autorizados.
+1. Durante a autenticação, a autenticação do Primetime lê o `channelIID` elemento da resposta SAML do MVPD, e usa esse valor para definir a variável `authorizedResources` elemento no token de autenticação.
+1. Dentro do `checkPreauthorizedResources()` função da API, a autenticação do Primetime verifica se `authorizedResources` elemento está definido.
+1. Se a variável `authorizedResources` for definido, a autenticação do Primetime lerá esse valor e executará uma interseção entre a lista de recursos da `authorizedResources` e a lista de recursos recebidos do `checkPreauthorizedResources()` parâmetro.  O resultado dessa interseção é a lista final de recursos pré-autorizados.
+1. Se a variável `authorizedResources` elemento não estiver definido, execute o fluxo implementado anteriormente, no qual a lista de recursos recebidos do `checkPreauthorizedResources()` é passado para o PreAuthorizationServlet. Esse servlet executa as chamadas de autorização para os endpoints do MVPD e retorna a lista de recursos pré-autorizados.
 
 ### Exemplo de simulação com ChannelID
 
@@ -106,7 +106,7 @@ O exemplo abaixo mostra um exemplo de alinhamento de canal. Observe que o nome d
         <saml:AttributeValue xsi:type="xs:string">SPEED-SPEED2</saml:AttributeValue>
     </saml:Attribute>
 ```
- 
+
 
 A variável `authorizedResources` elemento do elemento de autenticação aparece da seguinte maneira:
 
@@ -129,10 +129,10 @@ A variável `authorizedResources` elemento do elemento de autenticação aparece
     </authorizedResources>
 ```
 
-O programador executa o `checkPreauthorizedResources()` chamada de API, transmitindo a seguinte lista de parâmetros:</span>
+O programador executa o `checkPreauthorizedResources()` chamada de API, transmitindo a seguinte lista de parâmetros:</span>
 
-- &quot;MSNBC&quot; 
-- &quot;FBN&quot; 
+- &quot;MSNBC&quot;
+- &quot;FBN&quot;
 - &quot;TruTV&quot;
 - &quot;fbc-fox&quot;
 
@@ -142,15 +142,15 @@ A implementação de Comprovação atual executa a interseção com a lista de r
 - &quot;FBN&quot;
 - &quot;TruTV&quot;
 
- 
+
 
 **Nota:** Observe que a interseção não diferencia maiúsculas de minúsculas.
 
- 
+
 
 ### POST / Pré-autorizar {#post}
 
-Esta chamada será executada automaticamente pelo AccessEnabler quando não existir nenhuma lista de recursos em cache, autorizada. 
+Esta chamada será executada automaticamente pelo AccessEnabler quando não existir nenhuma lista de recursos em cache, autorizada.
 
 
 #### Solicitação {#req}
@@ -161,7 +161,7 @@ Esta chamada será executada automaticamente pelo AccessEnabler quando não exis
 | `resource_id` | string | SIM | Um único recurso. Isso pode ser especificado várias vezes, uma vez para cada elemento da matriz de recursos fornecida na variável `checkPreauthorizedResources()` chamada à API. |
 
 
-**Nota:** O número máximo de recursos solicitados é configurável.
+**Nota:** O número máximo de recursos solicitados é configurável.
 **O valor padrão máximo é 5.**
 
 
@@ -211,17 +211,17 @@ Essa lista é chamada de &quot;cache de pré-autorização&quot;.
 
 #### Fluxo {#flow}
 
-1. O aplicativo/site do programador faz uma `checkPreauthorizedResources(resourceList)` chame.
+1. O aplicativo/site do programador faz uma `checkPreauthorizedResources(resourceList)` chame.
 1. O AccessEnabler verifica o token de autenticação para recursos autorizados:
-   1. Se o token de autenticação contiver recursos autorizados, essa lista será autoritativa e nenhuma chamada deverá ser feita para obter essas informações. Os recursos de resourceList são pesquisados dentro da lista de recursos autorizados no token de autenticação e somente os encontrados são retornados pelo `preauthorizedResources()` retorno de chamada.
-   1. Se o token de autenticação NÃO contiver recursos autorizados - `resourceList` é comparado à lista de recursos no cache de pré-autorização.
-      1. Se a lista contiver os mesmos recursos, significa que uma chamada para o servidor já foi feita e a resposta já está no cache de pré-autorização. Somente os recursos autorizados serão retornados pelo `preauthorizedResources()` retorno de chamada.
-      1. Se a lista NÃO contiver os mesmos recursos, o cliente precisará fazer uma chamada para o servidor para obter o estado de autorização dos recursos em resourceList. A resposta será obtida e armazenada no cache de pré-autorização, substituindo completamente os recursos antigos. Somente os recursos autorizados serão retornados pelo `preauthorizedResources()` retorno de chamada.
+   1. Se o token de autenticação contiver recursos autorizados, essa lista será autoritativa e nenhuma chamada deverá ser feita para obter essas informações. Os recursos de resourceList são pesquisados dentro da lista de recursos autorizados no token de autenticação e somente os encontrados são retornados pelo `preauthorizedResources()` retorno de chamada.
+   1. Se o token de autenticação NÃO contiver recursos autorizados - `resourceList` é comparado à lista de recursos no cache de pré-autorização.
+      1. Se a lista contiver os mesmos recursos, significa que uma chamada para o servidor já foi feita e a resposta já está no cache de pré-autorização. Somente os recursos autorizados serão retornados pelo `preauthorizedResources()` retorno de chamada.
+      1. Se a lista NÃO contiver os mesmos recursos, o cliente precisará fazer uma chamada para o servidor para obter o estado de autorização dos recursos em resourceList. A resposta será obtida e armazenada no cache de pré-autorização, substituindo completamente os recursos antigos. Somente os recursos autorizados serão retornados pelo `preauthorizedResources()` retorno de chamada.
 
 
 #### Recuperação de Lista {#listRetrieve}
 
-Sempre que um `checkPreauthorizedResources()` for chamada, a lista de recursos para verificar a autorização será verificada em relação ao cache de pré-autorização. Se a lista contiver o mesmo conjunto de recursos, nenhuma chamada para o Provedor de Serviços será feita, pois todos os recursos necessários para acionar o `preauthorizedResources()` As chamadas de retorno já estão no cache.
+Sempre que um `checkPreauthorizedResources()` for chamada, a lista de recursos para verificar a autorização será verificada em relação ao cache de pré-autorização. Se a lista contiver o mesmo conjunto de recursos, nenhuma chamada para o Provedor de Serviços será feita, pois todos os recursos necessários para acionar o `preauthorizedResources()` As chamadas de retorno já estão no cache.
 
 
 #### logout() {#logout}
@@ -231,7 +231,7 @@ O cache de pré-autorização é esvaziado no logout.
 
 ## Dependências {#depends}
 
-O desempenho da API de comprovação depende de implementações específicas do MVPD.  Para obter opções de implementação, consulte [Integração da autorização de comprovação](/help/authentication/authz-usecase.md#preflight_authz_int) na seção Autorização do Guia de Integração do MVPD.
+O desempenho da API de comprovação depende de implementações específicas do MVPD.  Para obter opções de implementação, consulte [Integração da autorização de comprovação](/help/authentication/authz-usecase.md#preflight_authz_int) na seção Autorização do Guia de Integração do MVPD.
 
 
 ## Segurança {#security}
@@ -240,20 +240,20 @@ As APIs do cliente estão disponíveis para todos os programadores.
 
 A implementação usa HTTPS como um transporte, mas para ter uma chamada mais leve, nenhuma medida de segurança adicional é empregada (sem assinatura, sem FAXS).
 
-**Atenção:** NÃO use essa API de maneira autoritativa para determinar se um usuário deve receber acesso a um recurso protegido. A finalidade dessa API é a decoração da interface e/ou a comprovação de decisões comerciais. A variável `getAuthorization()` e `checkAuthorization()` as chamadas devem ser sempre feitas antes de permitir a reprodução.
+**Atenção:** NÃO use essa API de maneira autoritativa para determinar se um usuário deve receber acesso a um recurso protegido. A finalidade dessa API é a decoração da interface e/ou a comprovação de decisões comerciais. A variável `getAuthorization()` e `checkAuthorization()` as chamadas devem ser sempre feitas antes de permitir a reprodução.
 
 
 ## Compatibilidade {#compat}
 
 Este recurso é suportado em todos os tipos do AccessEnabler: AS, JS, AIR, iOS, Android, Xbox (no fluxo de Autenticação de 2ª tela).
 
-A autorização de comprovação não oferece suporte a recursos de pré-autorização que contêm seções CDATA. O foco do sistema de comprovação atual é oferecer suporte à filtragem em nível de canal. Os recursos com seções CDATA provavelmente são recursos no nível do ativo. A comprovação oferece suporte a `mrss` recursos para pré-autorização no nível do canal, desde que não contenham CDATA. 
+A autorização de comprovação não oferece suporte a recursos de pré-autorização que contêm seções CDATA. O foco do sistema de comprovação atual é oferecer suporte à filtragem em nível de canal. Os recursos com seções CDATA provavelmente são recursos no nível do ativo. A comprovação oferece suporte a `mrss` recursos para pré-autorização no nível do canal, desde que não contenham CDATA.
 
 ## Integração Com Outros Recursos {#integ_w_other_features}
 
 Uma possível otimização pode ocorrer no fluxo de autorização para falhar rapidamente se o recurso não estiver na lista de recursos pré-autorizados.
 
-Nessa otimização, o endpoint de comprovação do servidor se integra ao mecanismo de Degradação.  
+Nessa otimização, o endpoint de comprovação do servidor se integra ao mecanismo de Degradação.
 
 Se uma regra &quot;Autenticar todos&quot; estiver em vigor para o MVPD e o Solicitante, o endpoint de comprovação simplesmente espelhará todos os recursos recebidos na solicitação.
 

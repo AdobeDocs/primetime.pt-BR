@@ -2,7 +2,7 @@
 title: Excluir Registro de Registro
 description: Excluir registro de registro
 exl-id: 42707070-2e1f-4847-93fd-30025aef56c1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
@@ -19,22 +19,22 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 
 ## Descrição {#delete-record}
 
-Exclui o registro de código de registro e libera o código de registro para reutilização. 
+Exclui o registro de código de registro e libera o código de registro para reutilização.
 
-| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
+| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
 | &lt;reggie_fqdn>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por exemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/regcode/ER45RTY | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. ID do solicitante  </br>    (Componente do caminho)</br>2.  Código de registro  </br>    (Componente do caminho) | DELETE | Nenhum | 204 |
 

@@ -2,7 +2,7 @@
 title: Limitações do JS SDK para o navegador Safari
 description: Limitações do JS SDK para o navegador Safari
 exl-id: 5e5c3b36-ee09-49e0-b5b7-83b24854d69d
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 <!--
 >[!IMPORTANT] 
 >
->We are strongly recommending [migration to AccessEnabler JavaScript SDK versions 4.x](http://tve.helpdocsonline.com/accessenabler-js-v4-migration-guide) in order to have a stable and predictable behavior on Safari browser.-->
+>We are strongly recommending [migration to AccessEnabler JavaScript SDK versions 4.x](http://tve.helpdocsonline.com/accessenabler-js-v4-migration-guide) in order to have a stable and predictable behavior on Safari browser.-->
 
 
 ## Safari 10 {#safari10}
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 * Para atenuar essas limitações, você pode instruir o usuário a alterar as configurações de privacidade do navegador Safari 10 e usar o &quot;**Sempre permitir** opção &quot; para &quot;**Cookies e dados de site**&quot; na guia Privacidade do navegador, em Preferências, conforme representado na imagem abaixo.
 
-   ![](assets/always-allow-safari10.png)
+  ![](assets/always-allow-safari10.png)
 
 
 ## Safari 11 {#safari11}
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 * A partir do Safari 11, o navegador apresenta [Prevenção de rastreamento inteligente](https://webkit.org/blog/7675/intelligent-tracking-prevention/)(ITP), uma tecnologia que usa heurística para impedir o rastreamento entre sites. Essa heurística afeta a maneira como os cookies de terceiros são armazenados e repetidos em chamadas de rede, o que significa que, dependendo da ativação do mecanismo ITP, o navegador Safari bloqueará os cookies de terceiros na comunicação entre o cliente e o modelo do servidor.
 
-* O serviço de autenticação da Adobe Primetime usa e depende de cookies como parte do processo de autenticação **para funcionar**. Em situações em que o processo de autenticação ocorre automaticamente (por exemplo, Temp Pass) ou em implementações que usam iFrames ou funcionalidade &quot;sem atualização&quot;, os cookies Adobe são considerados cookies de terceiros e bloqueados por padrão. Para qualquer outro caso, o Safari usa um algoritmo de aprendizado de máquina que pode sinalizar todos os cookies do serviço de autenticação Primetime do Adobe como cookies de rastreamento, estando, portanto, sujeito ao bloqueio da ITP.  
+* O serviço de autenticação da Adobe Primetime usa e depende de cookies como parte do processo de autenticação **para funcionar**. Em situações em que o processo de autenticação ocorre automaticamente (por exemplo, Temp Pass) ou em implementações que usam iFrames ou funcionalidade &quot;sem atualização&quot;, os cookies Adobe são considerados cookies de terceiros e bloqueados por padrão. Para qualquer outro caso, o Safari usa um algoritmo de aprendizado de máquina que pode sinalizar todos os cookies do serviço de autenticação Primetime do Adobe como cookies de rastreamento, estando, portanto, sujeito ao bloqueio da ITP.
 
 * Concluindo, um usuário do navegador Safari 11 pode não conseguir se autenticar em um site habilitado para Autenticação Adobe Primetime após a ativação do mecanismo de Prevenção de Rastreamento Inteligente (ITP), especialmente quando os usuários estiverem usando vários sites habilitados para Autenticação Primetime Adobe. Portanto, a experiência de autenticação do usuário pode ser inesperada e indefinida, variando de incapacidade de fazer logon a uma duração de autenticação menor do que a esperada.
 
@@ -54,21 +54,21 @@ ht-degree: 0%
 
 ### Mitigação {#mitigation-safari11}
 
-* Tanto para o AccessEnabler JavaScript SDK v3 (versões 3.x) quanto para o AccessEnabler JavaScript SDK v4 (versões 4.x), a biblioteca contém um mecanismo capaz de identificar as situações em que a autenticação do usuário foi bloqueada devido à falta de cookies necessários. Nessas situações, a biblioteca aciona um retorno de chamada de erro específico [N130](/help/authentication/error-reporting.md#advanced-error-codes-reference), que é repassado para o site habilitado para Autenticação do Adobe Primetime para ser usado como um sinal para instruir o usuário a tomar ações que possam atenuar o problema. Para beneficiar deste mecanismo, o sítio Web deve aplicar o [Relatório de erros](/help/authentication/error-reporting.md) especificação.
+* Tanto para o AccessEnabler JavaScript SDK v3 (versões 3.x) quanto para o AccessEnabler JavaScript SDK v4 (versões 4.x), a biblioteca contém um mecanismo capaz de identificar as situações em que a autenticação do usuário foi bloqueada devido à falta de cookies necessários. Nessas situações, a biblioteca aciona um retorno de chamada de erro específico [N130](/help/authentication/error-reporting.md#advanced-error-codes-reference), que é repassado para o site habilitado para Autenticação do Adobe Primetime para ser usado como um sinal para instruir o usuário a tomar ações que possam atenuar o problema. Para beneficiar deste mecanismo, o sítio Web deve aplicar o [Relatório de erros](/help/authentication/error-reporting.md) especificação.
 
 * Para o SDK v2 do JavaScript do AccessEnabler (versões 2.x), a biblioteca não oferece o mecanismo descrito acima, portanto, o site habilitado para autenticação da Adobe Primetime não pode ser sinalizado ao instruir o usuário a tomar ações para atenuar o problema.
 
-* A lista de ações que podem atenuar as questões acima **aplica-se a todas as três versões** do SDK JavaScript do AccessEnabler.
+* A lista de ações que podem atenuar as questões acima **aplica-se a todas as três versões** do SDK JavaScript do AccessEnabler.
 
 * Quando [N130](/help/authentication/error-reporting.md#advanced-error-codes-reference) Se o retorno de chamada de erro for recebido pelo site do implementador, o usuário deve ser instruído a desativar a Prevenção de rastreamento inteligente (ITP) e ativar cookies de terceiros ao:
 
 * No caso do Mac OS X High Sierra e posterior: desmarcação da opção &quot;**Impedir o rastreamento entre sites** Opção &quot; para &quot;**Rastreamento do site**&quot; na guia Privacidade do navegador, em Preferências, conforme representado na imagem abaixo.
 
-   ![](assets/uncheck-prvnt-cr-st-tr-safari11.png)
+  ![](assets/uncheck-prvnt-cr-st-tr-safari11.png)
 
 * No caso do Mac OS X Sierra e versões anteriores: verifique a &quot;**Sempre permitir** opção &quot; para &quot;**Cookies e dados de site**&quot; na guia Privacidade do navegador, em Preferências, conforme representado na imagem abaixo.
 
-   ![](assets/always-allow-safari11.png)
+  ![](assets/always-allow-safari11.png)
 
 ## Safari 12 {#safari12}
 
@@ -87,13 +87,13 @@ Esta seção detalha os problemas de compatibilidade do **SDK JavaScript do Acce
 
 ### Funcionalidade certificada do AccessEnabler JavaScript SDK v4 (versões 4.x) no Safari 12 {#certified-functionality-of-accessenabler-javacscript=sdk-v4}
 
-* **Autenticação** Os fluxos que usam a interação do usuário sempre funcionarão, mesmo se o navegador do usuário tiver cookies de terceiros desativados, porque a partir da versão 4.0, o SDK JavaScript do AccessEnabler não usará mais cookies de terceiros para os processos de autenticação.
+* **Autenticação** Os fluxos que usam a interação do usuário sempre funcionarão, mesmo se o navegador do usuário tiver cookies de terceiros desativados, porque a partir da versão 4.0, o SDK JavaScript do AccessEnabler não usará mais cookies de terceiros para os processos de autenticação.
 
 >[!NOTE]
 >
 >O usuário DEVE interagir com o site para abrir pop-ups de logon e/ou interagir com a página de logon do MVPD.
 
-* **Autorização/Comprovação/Metadados do usuário** As operações do são totalmente funcionais, desde que o usuário já esteja autenticado.
+* **Autorização/Comprovação/Metadados do usuário** As operações do são totalmente funcionais, desde que o usuário já esteja autenticado.
 
 ### Problemas conhecidos do AccessEnabler JavaScript SDK v4 (versões 4.x) no Safari 12 {#known-issues-of-accessenabler-javascript-sdk-4}
 
@@ -103,11 +103,11 @@ Esta seção detalha os problemas de compatibilidade do **SDK JavaScript do Acce
 
 * Temp Pass (Aprovação temporária)
 
-   * Para passagens temporárias, o SDK JavaScript do AccessEnabler usa um mecanismo de individualização para bloquear um token de autenticação para um dispositivo específico (instância do navegador). Devido aos novos mecanismos no Safari 12 projetados para impedir o rastreamento, a impressão digital que estamos computando e usando no mecanismo de individualização **será o mesmo para todos os usuários com o mesmo endereço IP**. Levamos o IP do cliente em consideração para fins de individualização, mas mesmo assim o impacto é nos usuários que compartilham o mesmo endereço IP público. Para esses usuários, calcularemos a mesma ID de individualização e a passagem temporária será vinculada a ela. Isso significa que, uma vez que esse usuário use um passe temporário, ninguém mais terá acesso a ele \! Isso afeta especialmente usuários corporativos, instituições de ensino ou qualquer outra organização que tenha vários usuários usando NAT ou um proxy comum para acessar a Internet.
+   * Para passagens temporárias, o SDK JavaScript do AccessEnabler usa um mecanismo de individualização para bloquear um token de autenticação para um dispositivo específico (instância do navegador). Devido aos novos mecanismos no Safari 12 projetados para impedir o rastreamento, a impressão digital que estamos computando e usando no mecanismo de individualização **será o mesmo para todos os usuários com o mesmo endereço IP**. Levamos o IP do cliente em consideração para fins de individualização, mas mesmo assim o impacto é nos usuários que compartilham o mesmo endereço IP público. Para esses usuários, calcularemos a mesma ID de individualização e a passagem temporária será vinculada a ela. Isso significa que, uma vez que esse usuário use um passe temporário, ninguém mais terá acesso a ele \! Isso afeta especialmente usuários corporativos, instituições de ensino ou qualquer outra organização que tenha vários usuários usando NAT ou um proxy comum para acessar a Internet.
 
 >[!NOTE]
 >
->Esse problema afeta os usuários somente se o implementador usar a Aprovação Temporária como resultado da interação do usuário, caso contrário, a autenticação da Aprovação Temporária está sujeita a **Fluxos automáticos** abaixo.
+>Esse problema afeta os usuários somente se o implementador usar a Aprovação Temporária como resultado da interação do usuário, caso contrário, a autenticação da Aprovação Temporária está sujeita a **Fluxos automáticos** abaixo.
 
 * Fluxos automáticos
 
@@ -132,7 +132,7 @@ Neste ponto, esses requisitos/prompts do Safari não se alinham aos nossos requi
 
 **Temp Pass (Aprovação temporária)**
 
-Para atenuar os problemas de individualização e ter uma interação com o usuário, recomendamos que você use **[Temp Pass Promocional ](/help/authentication/promotional-temp-pass.md)** De forma interativa e forneça pelo menos uma informação adicional sobre o usuário (por exemplo, endereço de email).
+Para atenuar os problemas de individualização e ter uma interação com o usuário, recomendamos que você use **[Temp Pass Promocional](/help/authentication/promotional-temp-pass.md)** De forma interativa e forneça pelo menos uma informação adicional sobre o usuário (por exemplo, endereço de email).
 
 ## Safari 13 {#safari13}
 
@@ -143,9 +143,9 @@ Para atenuar os problemas de individualização e ter uma interação com o usu�
 >Todos os detalhes acima da seção Safari 10 até a seção Safari 12 ainda se aplicam no caso do Safari 13.
 
 
-A partir do Safari 13, o navegador introduz novas alterações no [Prevenção de rastreamento inteligente](https://webkit.org/blog/7675/intelligent-tracking-prevention/) (ITP), tornando a heurística por trás do mecanismo mais rígida no processo de sinalizar cookies de terceiros como cookies de rastreamento, a fim de evitar o rastreamento entre sites.
+A partir do Safari 13, o navegador introduz novas alterações no [Prevenção de rastreamento inteligente](https://webkit.org/blog/7675/intelligent-tracking-prevention/) (ITP), tornando a heurística por trás do mecanismo mais rígida no processo de sinalizar cookies de terceiros como cookies de rastreamento, a fim de evitar o rastreamento entre sites.
 
-Conforme descrito nas seções anteriores, o serviço de Autenticação da Adobe Primetime usa e depende de cookies de terceiros como parte dos processos de autenticação quando os implementadores usam o AccessEnabler JavaScript SDK v2 (versões 2.x) e o AccessEnabler JavaScript SDK v3 (versões 3.x). Em comparação com versões anteriores do navegador Safari, quando a ITP estava entrando após gastar um tempo para &quot;saber&quot; sobre a interação entre o usuário e as partes envolvidas (sites do programador e Adobe), o navegador Safari 13 está bloqueando desde o início os cookies de terceiros que são considerados cookies de rastreamento na comunicação entre o cliente e o modelo do servidor.
+Conforme descrito nas seções anteriores, o serviço de Autenticação da Adobe Primetime usa e depende de cookies de terceiros como parte dos processos de autenticação quando os implementadores usam o AccessEnabler JavaScript SDK v2 (versões 2.x) e o AccessEnabler JavaScript SDK v3 (versões 3.x). Em comparação com versões anteriores do navegador Safari, quando a ITP estava entrando após gastar um tempo para &quot;saber&quot; sobre a interação entre o usuário e as partes envolvidas (sites do programador e Adobe), o navegador Safari 13 está bloqueando desde o início os cookies de terceiros que são considerados cookies de rastreamento na comunicação entre o cliente e o modelo do servidor.
 
 Em conclusão, um usuário do navegador Safari 13 provavelmente não poderá iniciar novas autenticações em um site habilitado para Autenticação do Adobe Primetime que esteja usando uma versão mais antiga do SDK JavaScript do AccessEnabler, v2 (versões 2.x) ou v3 (versões 3.x). Isso ocorre porque todos os cookies necessários do serviço de autenticação Primetime do Adobe estão bloqueados pelo ITP, impossibilitando o serviço de atender à solicitação de autenticação.
 
@@ -153,9 +153,9 @@ A biblioteca do SDK v4 do JavaScript do AccessEnabler (versões 4.x) não usa co
 
 ### Mitigação {#mitigation-safari13}
 
-Em primeiro lugar, recomendamos fortemente **Migração para o SDK JavaScript do AccessEnabler versões 4.x** para ter um comportamento estável e previsível no navegador Safari.
+Em primeiro lugar, recomendamos fortemente **Migração para o SDK JavaScript do AccessEnabler versões 4.x** para ter um comportamento estável e previsível no navegador Safari.
 
-Em segundo lugar, para o SDK v3 do JavaScript do AccessEnabler (versões 3.x), a biblioteca contém um mecanismo capaz de identificar as situações em que a autenticação dos usuários foi bloqueada devido à falta de cookies necessários. Nessas situações, a biblioteca aciona um retorno de chamada de erro específico ([N130](/help/authentication/error-reporting.md#advanced-error-codes-reference)) que é repassado para o site habilitado para autenticação da Adobe Primetime para ser usado como um sinal para instruir o usuário a tomar ações que possam mitigar o problema. Para beneficiar deste mecanismo, o sítio Web deve aplicar o [Relatório de erros](/help/authentication/error-reporting.md) especificação.
+Em segundo lugar, para o SDK v3 do JavaScript do AccessEnabler (versões 3.x), a biblioteca contém um mecanismo capaz de identificar as situações em que a autenticação dos usuários foi bloqueada devido à falta de cookies necessários. Nessas situações, a biblioteca aciona um retorno de chamada de erro específico ([N130](/help/authentication/error-reporting.md#advanced-error-codes-reference)) que é repassado para o site habilitado para autenticação da Adobe Primetime para ser usado como um sinal para instruir o usuário a tomar ações que possam mitigar o problema. Para beneficiar deste mecanismo, o sítio Web deve aplicar o [Relatório de erros](/help/authentication/error-reporting.md) especificação.
 
 Para o SDK v2 do JavaScript do AccessEnabler (versões 2.x), a biblioteca não oferece o mecanismo descrito acima, portanto, o site habilitado para autenticação da Adobe Primetime não pode ser sinalizado ao instruir o usuário a tomar ações para atenuar o problema.
 
@@ -163,8 +163,8 @@ Quando [N130](/help/authentication/error-reporting.md#advanced-error-codes-refer
 
 * No caso do Mac OS X High Sierra e posterior: desmarcação da opção &quot;**Impedir o rastreamento entre sites** Opção &quot; para &quot;**Rastreamento do site**&quot; na guia Privacidade do navegador, em Preferências, conforme representado na imagem abaixo.
 
-   ![](assets/prvnt-cross-site-tr-safari13.png)
+  ![](assets/prvnt-cross-site-tr-safari13.png)
 
 * No caso do Mac OS X Sierra e anterior: verificando</span>he &quot;**Sempre permitir** opção &quot; para &quot;**Cookies e dados de site**&quot; na guia Privacidade do navegador, em Preferências, conforme representado na imagem abaixo.
 
-   ![](assets/always-allow-safari13.png)
+  ![](assets/always-allow-safari13.png)

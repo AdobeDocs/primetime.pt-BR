@@ -2,7 +2,7 @@
 title: Iniciar autenticação
 description: Iniciar autenticação
 exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
@@ -19,24 +19,24 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 
 ## Descrição {#description}
 
-Inicia o processo de autenticação informando sobre um evento de seleção MVPD. Cria um registro no banco de dados de autenticação do Primetime, que é reconciliado quando uma resposta bem-sucedida é recebida do MVPD. 
+Inicia o processo de autenticação informando sobre um evento de seleção MVPD. Cria um registro no banco de dados de autenticação do Primetime, que é reconciliado quando uma resposta bem-sucedida é recebida do MVPD.
 
 
 
-| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
+| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
 | &lt;sp_fqdn>/api/v1/authenticate | Módulo AuthN | 1. requestor_id (Obrigatório)</br>2.  mso_id (Obrigatório)</br>3.  reg_code (Obrigatório)</br>4.  domain_name (Obrigatório)</br>5.  noflash=true -  </br>    (Obrigatório, parâmetro residual)</br>6.  no_iframe=true (Obrigatório, Parâmetro residual)</br>7.  parâmetros extras (opcional)</br>8.  redirect_url (Obrigatório) | GET | O aplicativo web de logon é redirecionado para a página de logon do MVPD. | 302 para implementações de redirecionamento completo |
 
@@ -60,10 +60,9 @@ Inicia o processo de autenticação informando sobre um evento de seleção MVPD
 >**Importante: Parâmetros obrigatórios -** Independentemente da implementação do lado do cliente, todos os parâmetros acima são obrigatórios.
 >
 >
->Exemplo:    
+>Exemplo:
 >
->
-```
+>```
 >domain_name=loginwebapp.com
 >mso_id=sampleMvpdId
 >reg_code=RO0885W
@@ -88,10 +87,10 @@ Inicia o processo de autenticação informando sobre um evento de seleção MVPD
 
 ### **Notas** {#notes}
 
-* O valor de `domain_name` O parâmetro deve ser definido como um dos nomes de domínio registrados com autenticação do Primetime. Para obter mais detalhes, consulte [Registro e inicialização](/help/authentication/programmer-overview.md).
+* O valor de `domain_name` O parâmetro deve ser definido como um dos nomes de domínio registrados com autenticação do Primetime. Para obter mais detalhes, consulte [Registro e inicialização](/help/authentication/programmer-overview.md).
 
 * [Evite usar &#39;&amp;&#39;reg\_code in /authenticate request (Nota técnica)](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
-* A variável `redirect_url` O parâmetro deve ser o último em ordem
+* A variável `redirect_url` O parâmetro deve ser o último em ordem
 
-* O valor de `redirect_url` O parâmetro deve ser codificado em URL
+* O valor de `redirect_url` O parâmetro deve ser codificado em URL

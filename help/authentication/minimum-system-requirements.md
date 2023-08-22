@@ -2,7 +2,7 @@
 title: Requisitos mínimos do sistema
 description: Requisitos mínimos do sistema
 exl-id: 57b21e2a-abd7-4b4b-85f1-25584a850e40
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -24,9 +24,9 @@ Enquanto a equipe de autenticação da Adobe Primetime incentivamos o uso das ve
 
 A abordagem inicial para atenuar quaisquer problemas que apareçam nessas plataformas desatualizadas deve ser a atualização para as versões mais recentes; pode ser a versão do SO, a versão do navegador ou a versão do aplicativo instalado.
 
-Quaisquer problemas que aparecerem nessas plataformas serão tratados como uma base de melhor esforço pela equipe de autenticação da Adobe Primetime. 
+Quaisquer problemas que aparecerem nessas plataformas serão tratados como uma base de melhor esforço pela equipe de autenticação da Adobe Primetime.
 
-A Adobe Primetime incentiva nossos clientes e parceiros a considerarem a atualização para as versões mais recentes para se beneficiarem do suporte completo do Adobe em quaisquer problemas em potencial, além de melhorias de desempenho, eficiência e segurança. 
+A Adobe Primetime incentiva nossos clientes e parceiros a considerarem a atualização para as versões mais recentes para se beneficiarem do suporte completo do Adobe em quaisquer problemas em potencial, além de melhorias de desempenho, eficiência e segurança.
 
 
 ## Requisitos de sistema operacional e navegador {#browser-OS-system-requirements}
@@ -56,13 +56,13 @@ A Adobe Primetime incentiva nossos clientes e parceiros a considerarem a atualiz
 
 >[!NOTE]
 >
->Cookies de terceiros - Os fluxos de direito de autenticação da Adobe Primetime podem falhar quando os cookies de terceiros são desativados.  Esse problema entra em ação somente quando as configurações do navegador são modificadas. Para todos os navegadores compatíveis, a Autenticação do Primetime deve funcionar com as configurações padrão.\
- 
+>Cookies de terceiros - Os fluxos de direito de autenticação da Adobe Primetime podem falhar quando os cookies de terceiros são desativados.  Esse problema entra em ação somente quando as configurações do navegador são modificadas. Para todos os navegadores compatíveis, a Autenticação do Primetime deve funcionar com as configurações padrão.
+
 
 ## Requisitos de dispositivo para implementações sem cliente (REST) {#general_clientless_reqs}
 
- 
-Qualquer dispositivo que consumirá os serviços de autenticação da Adobe Primetime por meio de implementações sem cliente **deve poder**:
+
+Qualquer dispositivo que consumirá os serviços de autenticação da Adobe Primetime por meio de implementações sem cliente **deve poder**:
 
 * Forneça uma ID de dispositivo exclusiva com hash. Se o dispositivo não fornecer uma ID de dispositivo com hash exclusiva, ele deverá ser capaz de manter uma ID exclusiva fornecida pela Autenticação Adobe Primetime. O dispositivo deve ser capaz de manter o identificador exclusivo permanentemente em seu armazenamento local e fornecer o identificador exclusivo como o identificador do dispositivo ao fazer chamadas para as APIs de autenticação da Adobe Primetime.
 * Gerar assinaturas digitais usando o algoritmo HMAC-SHA1

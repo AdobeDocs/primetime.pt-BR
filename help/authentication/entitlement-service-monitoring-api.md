@@ -2,7 +2,7 @@
 title: API de monitoramento do serviço de qualificação
 description: API de monitoramento do serviço de qualificação
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '2026'
 ht-degree: 0%
@@ -23,13 +23,13 @@ O Entitlement Service Monitoring (ESM) é implementado como um WOLAP (Baseado na
 >
 >A API ESM geralmente não está disponível. Entre em contato com o representante da Adobe para tirar dúvidas sobre disponibilidade.
 
-A API ESM fornece uma exibição hierárquica dos cubos OLAP subjacentes. Cada recurso ([dimension](#esm_dimensions) na hierarquia da dimensão, mapeado como um segmento de caminho de URL) gera relatórios com (agregado) [métricas](#esm_metrics) para a seleção atual. Cada recurso aponta para seu recurso pai (para roll-up) e seus sub-recursos (para drill-down). O corte e a divisão são obtidos por meio de parâmetros de sequência de consulta que fixam dimensões a valores ou intervalos específicos.
+A API ESM fornece uma exibição hierárquica dos cubos OLAP subjacentes. Cada recurso ([dimension](#esm_dimensions) na hierarquia da dimensão, mapeado como um segmento de caminho de URL) gera relatórios com (agregado) [métricas](#esm_metrics) para a seleção atual. Cada recurso aponta para seu recurso pai (para roll-up) e seus sub-recursos (para drill-down). O corte e a divisão são obtidos por meio de parâmetros de sequência de consulta que fixam dimensões a valores ou intervalos específicos.
 
 A API REST fornece os dados disponíveis dentro de um intervalo de tempo especificado na solicitação (recorrendo aos valores padrão se nenhum for fornecido), de acordo com o caminho da dimensão, os filtros fornecidos e as métricas selecionadas. O intervalo de tempo não será aplicado a relatórios que não contêm dimensões de tempo (ano, mês, dia, hora, minuto, segundo).
 
-O caminho raiz do URL do ponto de extremidade retornará as métricas agregadas gerais em um único registro, juntamente com os links para as opções de detalhamento disponíveis. A versão da API é mapeada como o segmento à direita do caminho URI do endpoint. Por exemplo, `https://mgmt.auth.adobe.com/*v2*` significa que os clientes acessarão o WOLAP versão 2.
+O caminho raiz do URL do ponto de extremidade retornará as métricas agregadas gerais em um único registro, juntamente com os links para as opções de detalhamento disponíveis. A versão da API é mapeada como o segmento à direita do caminho URI do endpoint. Por exemplo, `https://mgmt.auth.adobe.com/*v2*` significa que os clientes acessarão o WOLAP versão 2.
 
-Os caminhos de URL disponíveis são detectáveis por meio de links contidos na resposta. Os caminhos de URL válidos são mantidos para mapear um caminho na árvore de detalhamento subjacente que contém (pré-) métricas agregadas. Um caminho no formulário `/dimension1/dimension2/dimension3` refletirá uma pré-agregação dessas três dimensões (o equivalente a uma `clause GROUP` POR `dimension1`, `dimension2`, `dimension3`). Se essa pré-agregação não existir e o sistema não puder calculá-la dinamicamente, a API retornará uma resposta 404 Não encontrado.
+Os caminhos de URL disponíveis são detectáveis por meio de links contidos na resposta. Os caminhos de URL válidos são mantidos para mapear um caminho na árvore de detalhamento subjacente que contém (pré-) métricas agregadas. Um caminho no formulário `/dimension1/dimension2/dimension3` refletirá uma pré-agregação dessas três dimensões (o equivalente a uma `clause GROUP` POR `dimension1`, `dimension2`, `dimension3`). Se essa pré-agregação não existir e o sistema não puder calculá-la dinamicamente, a API retornará uma resposta 404 Não encontrado.
 
 ## Árvore de detalhamento {#drill-down-tree}
 
@@ -44,7 +44,7 @@ As árvores de detalhamento a seguir ilustram as dimensões (recursos) disponív
 
 ![](assets/esm-mvpd-dimensions.png)
 
-Uma GET para o `https://mgmt.auth.adobe.com/v2` O endpoint da API retornará uma representação que contém:
+Uma GET para o `https://mgmt.auth.adobe.com/v2` O endpoint da API retornará uma representação que contém:
 
 * Links para os caminhos de drill-down raiz disponíveis:
 
@@ -134,7 +134,7 @@ Os dados estão disponíveis nos seguintes formatos:
 
 As estratégias de negociação de conteúdo a seguir podem ser usadas pelos clientes (a precedência é dada pela posição na lista - primeiros itens primeiro):
 
-1. Uma &quot;extensão de arquivo&quot; anexada ao último segmento do caminho do URL: por exemplo, `/esm/v2/media-company/year/month/day.xml`. Se o URL contiver uma cadeia de caracteres de consulta, a extensão deverá vir antes do ponto de interrogação: `/esm/v2/media-company/year/month/day.csv?mvpd= SomeMVPD`
+1. Uma &quot;extensão de arquivo&quot; anexada ao último segmento do caminho do URL: por exemplo, `/esm/v2/media-company/year/month/day.xml`. Se o URL contiver uma cadeia de caracteres de consulta, a extensão deverá vir antes do ponto de interrogação: `/esm/v2/media-company/year/month/day.csv?mvpd= SomeMVPD`
 1. Um parâmetro de string de consulta de formato: por exemplo, `/esm/report?format=json`
 1. O cabeçalho padrão HTTP Accept: por exemplo, `Accept: application/xml`
 
@@ -198,32 +198,32 @@ Exemplo (supondo que tenhamos uma única métrica chamada `clients` e há uma pr
    </resource>
 ```
 
-* https://mgmt.auth.adobe.com/esm/v2/year/month.json 
+* https://mgmt.auth.adobe.com/esm/v2/year/month.json
 
-   ```JSON
-       {
-         "_links" : {
-           "self" : {
-             "href" : "/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
-           },
-           "roll-up" : {
-             "href" : "/esm/v2/year"
-           },
-           "drill-down" : {
-             "href" : "/esm/v2/year/month/day"
-           }
-         },
-         "report" : [ {
-           "month" : "6",
-           "year" : "2012",
-           "clients" : "205"
-         }, {
-           "month" : "7",
-           "year" : "2012",
-           "clients" : "466"
-         } ]
-       }
-   ```
+  ```JSON
+      {
+        "_links" : {
+          "self" : {
+            "href" : "/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
+          },
+          "roll-up" : {
+            "href" : "/esm/v2/year"
+          },
+          "drill-down" : {
+            "href" : "/esm/v2/year/month/day"
+          }
+        },
+        "report" : [ {
+          "month" : "6",
+          "year" : "2012",
+          "clients" : "205"
+        }, {
+          "month" : "7",
+          "year" : "2012",
+          "clients" : "466"
+        } ]
+      }
+  ```
 
 ### CSV
 

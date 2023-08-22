@@ -2,7 +2,7 @@
 title: Fornecer Lista MVPD
 description: Fornecer Lista MVPD
 exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
@@ -19,21 +19,21 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
+</br>
 
 ## Descrição {#description}
 
 Retorna a lista de MVPDs configurados para o solicitante.
 
-| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
+| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
 | &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>Por exemplo:</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestId | Autenticação do Primetime | 1. Solicitante</br>    (Componente do caminho)</br>_2.  deviceType (obsoleto)_ | GET | XML ou JSON contendo a lista de MVPDs. | 200 |
 

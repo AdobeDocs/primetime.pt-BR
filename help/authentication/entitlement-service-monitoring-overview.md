@@ -2,7 +2,7 @@
 title: Visão Geral do Monitoramento do Serviço de Direito
 description: Visão Geral do Monitoramento do Serviço de Direito
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 Os sites e aplicativos da TVE precisam estar disponíveis 24 horas por dia, 7 dias por semana, para que os clientes precisem de insights em tempo real sobre eventos de direito para detectar e corrigir problemas o mais rápido possível. Eles também precisam analisar dados mensais para determinar quais plataformas estão fornecendo a maior parte do tráfego e quais plataformas podem ter uma implementação incorreta e taxas de conversão inadequadas.
 
-O Entitlement Service Monitoring (ESM) fornece aos programadores e MVPDs um feed de dados que oferece visibilidade em tempo real sobre os eventos de autenticação e autorização. Os dados são coletados dos sistemas de autenticação da Adobe Primetime e fornecidos por meio de uma API RESTful.  Os clientes podem consumir os dados diretamente ou por meio de seus próprios painéis operacionais personalizados.
+O Entitlement Service Monitoring (ESM) fornece aos programadores e MVPDs um feed de dados que oferece visibilidade em tempo real sobre seus eventos de Autenticação e Autorização. Os dados são coletados dos sistemas de autenticação da Adobe Primetime e fornecidos por meio de uma API RESTful.  Os clientes podem consumir os dados diretamente ou por meio de seus próprios painéis operacionais personalizados.
 
-Os elementos centrais do sistema MEE são as suas métricas e dimensões. O ESM gera relatórios que contêm métricas agregadas de acordo com a seleção da dimensão. Como os eventos do Adobe Pass são registrados no fuso horário PST, os relatórios ESM também estão disponíveis no fuso horário PST. 
+Os elementos centrais do sistema MEE são as suas métricas e dimensões. O ESM gera relatórios que contêm métricas agregadas de acordo com a seleção da dimensão. Como os eventos do Adobe Pass são registrados no fuso horário PST, os relatórios ESM também estão disponíveis no fuso horário PST.
 
-A API ESM geralmente não está disponível.  Entre em contato com o representante da Adobe para tirar dúvidas sobre disponibilidade.
+A API ESM geralmente não está disponível.  Entre em contato com o representante da Adobe para tirar dúvidas sobre disponibilidade.
 
 ## ESM para programadores {#esm-for-programmers}
 
@@ -116,11 +116,11 @@ A API ESM geralmente não está disponível.  Entre em contato com o representa
 
 Você pode usar os dados ESM para os seguintes casos de uso:
 
-- **Monitoramento** - As equipes de operações ou monitoramento podem criar um painel ou gráfico que chama a API a cada minuto. Usando as informações exibidas, eles podem detectar um problema (com autenticação do Primetime ou com um MVPD) no minuto em que ele é exibido.  
+- **Monitoramento** - As equipes de operações ou monitoramento podem criar um painel ou gráfico que chama a API a cada minuto. Usando as informações exibidas, eles podem detectar um problema (com autenticação do Primetime ou com um MVPD) no minuto em que ele é exibido.
 
-- **Depuração/teste de qualidade** - Como os dados também são divididos por plataforma, dispositivo, navegador e sistema operacional, a análise dos padrões de uso pode apontar problemas em combinações específicas (por exemplo, Safari no OSX).  
+- **Depuração/teste de qualidade** - Como os dados também são divididos por plataforma, dispositivo, navegador e sistema operacional, a análise dos padrões de uso pode apontar problemas em combinações específicas (por exemplo, Safari no OSX).
 
-- **Analytics** - Os dados fornecidos podem ser usados para complementar/auditar os dados do lado do cliente coletados pelo Adobe Analytics ou outra ferramenta de análise.
+- **Analytics** - Os dados fornecidos podem ser usados para complementar/auditar os dados do lado do cliente coletados pelo Adobe Analytics ou outra ferramenta de análise.
 
 <!--
 ## Related Information {#related-information}

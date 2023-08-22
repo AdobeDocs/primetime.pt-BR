@@ -2,7 +2,7 @@
 title: O fluxo de direitos do programador
 description: O fluxo de direitos do programador
 exl-id: b1c8623a-55da-4b7b-9827-73a9fe90ebac
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1822'
 ht-degree: 0%
@@ -56,17 +56,17 @@ Estabelece a identidade do Programador e do dispositivo e executa tarefas de ini
 
 * **`setRequestor()`** - Estabelece sua identificação com o AccessEnalber e, por extensão, com os servidores de autenticação da Adobe Primetime. Essa chamada é um precursor do restante do fluxo de direitos. Por exemplo, em JavaScript:
 
-   ```JavaScript
-     /* Define the requestor ID (Programmer/aggregator ID). */
-       var requestorID = "sample_requestor_Id";
-       ...
-       // Callback indicating that the AccessEnabler swf has initialized
-       function swfLoaded() {
-           // AccessEnabler is loaded so we can use the API function it provides
-           accessEnablerObject.setRequestor(requestorID); 
-       ...
-       }
-   ```
+  ```JavaScript
+    /* Define the requestor ID (Programmer/aggregator ID). */
+      var requestorID = "sample_requestor_Id";
+      ...
+      // Callback indicating that the AccessEnabler swf has initialized
+      function swfLoaded() {
+          // AccessEnabler is loaded so we can use the API function it provides
+          accessEnablerObject.setRequestor(requestorID); 
+      ...
+      }
+  ```
 
 **API sem cliente**
 
@@ -110,6 +110,7 @@ Um token de autenticação será considerado válido se os dois pontos a seguir 
 
 >[!IMPORTANT]
 >No momento, a Comcast é o único MVPD que não fornece um URL estático para o logotipo. Os programadores devem obter os logotipos atualizados mais recentes de [Portal do desenvolvedor XFINITY](https://developers.xfinity.com/products/tv-everywhere).
+>
 
 ### Fluxo de autorização {#authorization}
 

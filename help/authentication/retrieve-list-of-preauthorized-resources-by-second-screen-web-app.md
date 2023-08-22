@@ -2,7 +2,7 @@
 title: Recuperar lista de recursos pré-autorizados pelo aplicativo web de segunda tela
 description: Recuperar lista de recursos pré-autorizados pelo aplicativo web de segunda tela
 exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -35,8 +35,10 @@ Uma solicitação de autenticação da Adobe Primetime para obter a lista de rec
 
 Há dois conjuntos de APIs: um conjunto para o Aplicativo de streaming ou Serviço de programador e um conjunto para o Aplicativo Web de segunda tela. Esta página descreve a API do aplicativo AuthN.
 
- \
-Endpoint | | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorize/{código de registro} | Módulo AuthN | 1  código de registro  </br>    (Componente do caminho)</br>2.  solicitante (Obrigatório)</br>3.  lista de recursos (Obrigatório) | GET | XML ou JSON que contém decisões individuais de pré-autorização ou detalhes de erros. Consulte os exemplos abaixo. | 200 - Êxito</br></br>400 - Solicitação inválida</br></br>401 - Não autorizado</br></br>405 - Método não permitido  </br></br>412 - Falha na pré-condição</br></br>500 - Erro interno do servidor |
+
+| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
+| --- | --- | --- | --- | --- | --- |
+| &lt;sp_fqdn>/api/v1/preauthorize/{código de registro} | Módulo AuthN | 1. código de registro  </br>    (Componente do caminho)</br>2.  solicitante (Obrigatório)</br>3.  lista de recursos (Obrigatório) | GET | XML ou JSON que contém decisões individuais de pré-autorização ou detalhes de erros. Consulte os exemplos abaixo. | 200 - Sucesso</br></br>400 - Solicitação inválida</br></br>401 - Não autorizado</br></br>405 - Método não permitido  </br></br>412 - Falha na pré-condição</br></br>500 - Erro interno do servidor |
 
 
 
@@ -58,23 +60,23 @@ Adobe-Response-Confidence : full
 Content-Type: application/xml; charset=utf-8
 
 <resources>
-    <resource>
-        <id>TestStream1</id>
-        <authorized>true</authorized>
-    </resource>
-    <resource>
-        <id>TestStream2</id>
-        <authorized>false</authorized>  
-        <error>
-            <status>403</status>
-            <code>authorization_denied_by_mvpd</code>
-            <message>User not authorized</message>
-            <details>Your subscription package does not include the "TestStream3" channel.</details>
-            <helpUrl>https://experienceleague-review.corp.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html#error-codes</helpUrl>
-            <trace>0453f8c8-167a-4429-8784-cd32cfeaee58</trace>
-            <action>none</action>
-        </error>
-    <resource>
+    <resource>
+        <id>TestStream1</id>
+        <authorized>true</authorized>
+    </resource>
+    <resource>
+        <id>TestStream2</id>
+        <authorized>false</authorized>  
+        <error>
+            <status>403</status>
+            <code>authorization_denied_by_mvpd</code>
+            <message>User not authorized</message>
+            <details>Your subscription package does not include the "TestStream3" channel.</details>
+            <helpUrl>https://experienceleague-review.corp.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html#error-codes</helpUrl>
+            <trace>0453f8c8-167a-4429-8784-cd32cfeaee58</trace>
+            <action>none</action>
+        </error>
+    <resource>
 </resources>
 ```
 

@@ -2,7 +2,7 @@
 title: Identificação de recursos protegidos
 description: Identificação de recursos protegidos
 exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
@@ -23,15 +23,14 @@ Cada solicitação de autorização (ou solicitação para verificar a autoriza�
    - Canal
       - Mostrar
          - Episódio
-            - Ativo\
-                
+            - Ativo
 
 </br>
 
 ## Formato RSS de Mídia {#media_rss}
 
-Os recursos podem ser identificados por uma string simples (um identificador exclusivo para um canal) ou podem ser representados no formato Media RSS (MRSS), conforme acordado entre o Adobe (ou um parceiro autorizado de autenticação da Adobe Primetime) e os MVPDs e Programadores participantes. A cadeia de caracteres RSS usada como um especificador de recurso pode incluir informações adicionais, como classificações e metadados de controle dos pais.\
- 
+Os recursos podem ser identificados por uma string simples (um identificador exclusivo para um canal) ou podem ser representados no formato Media RSS (MRSS), conforme acordado entre o Adobe (ou um parceiro autorizado de autenticação da Adobe Primetime) e os MVPDs e Programadores participantes. A cadeia de caracteres RSS usada como um especificador de recurso pode incluir informações adicionais, como classificações e metadados de controle dos pais.
+
 
 Se você usar um identificador de recurso simples, como &quot;TNT&quot;, presume-se que ele represente um canal, e é traduzido neste especificador de recurso RSS:
 
@@ -42,7 +41,7 @@ Se você usar um identificador de recurso simples, como &quot;TNT&quot;, presume
         </channel>
     </rss>
 ```
- 
+
 
 Um especificador mais complexo pode incluir, por exemplo, informações de classificação adicionais. É possível passar toda a cadeia de caracteres RSS para funções do Access Enabler que exigem uma ID de recurso, como [`getAuthorization()`](/help/authentication/rest-api-reference.md):
 

@@ -2,7 +2,7 @@
 title: Apêndice B "Dicas de depuração"
 description: Apêndice B "Dicas de depuração"
 exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -21,20 +21,20 @@ ht-degree: 0%
 A autenticação do Adobe Primetime armazena dados temporários, como cache do navegador, cache de LSOs e cookies. Limpar dados temporários é importante para garantir que você fique limpo ao testar.
 
 - [Limpeza do cache do navegador e cookies](#clearing-the-browser-cache-and-cookies)
-- [Limpando cache de LSOs](#clearing-lsos-cache)\
-   
+- [Limpando cache de LSOs](#clearing-lsos-cache)
+
 
 ## Limpeza do cache do navegador e cookies {#clearing-the-browser-cache-and-cookies}
 
-É dependente do navegador, mas no Firefox: &quot;Ferramentas&quot; -\> &quot;Limpar histórico recente...&quot; -\> Em &quot;Intervalo de tempo a limpar:&quot; selecione &quot;Tudo&quot;; e em &quot;Detalhes&quot;: marque a opção &quot;Cookies&quot; e &quot;Cache&quot; -\> Clique em &quot;Limpar agora&quot;.\
- 
+É dependente do navegador, mas no Firefox: &quot;Ferramentas&quot; -\> &quot;Limpar histórico recente...&quot; -\> Em &quot;Intervalo de tempo a limpar:&quot; selecione &quot;Tudo&quot;; e em &quot;Detalhes&quot;: marque a opção &quot;Cookies&quot; e &quot;Cache&quot; -\> Clique em &quot;Limpar agora&quot;.
+
 
 ## Limpando cache de LSOs {#clearing-lsos-cache}
 
 Acesse o [Ajuda do Flash Player](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
 
-Selecione o ```entitlement.\*``` (dependendo do que for testado) e clique em &quot;Excluir site&quot;.\
- 
+Selecione o ```entitlement.\*``` (dependendo do que for testado) e clique em &quot;Excluir site&quot;.
+
 
 ## Ferramentas de depuração {#tools}
 

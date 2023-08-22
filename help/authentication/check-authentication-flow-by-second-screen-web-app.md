@@ -2,7 +2,7 @@
 title: Verificar Fluxo de Autenticação por Aplicativo Web de Segunda Tela
 description: Verificar Fluxo de Autenticação por Aplicativo Web de Segunda Tela
 exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 Essa API deve ser consumida pelo segundo aplicativo web de logon de tela para confirmar que a autenticação do Adobe Primetime confirmou o logon bem-sucedido do MVPD. Recomendamos chamar essa API antes de mostrar uma mensagem de sucesso para o usuário final que o instrui a prosseguir para o console do dispositivo para continuar com os workflows.
 
 
-| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
+| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
-| SP_FQDN/api/v1/checkauthn/{código de registro} | Aplicativo Web de Logon | 1. código de registro  </br>    (Componente do caminho)</br>2.  solicitante  </br>    (Obrigatório) | GET | XML ou JSON que contém detalhes de erros, caso não seja bem-sucedido. | 200 - Sucesso   </br>403 - Proibido |
+| SP_FQDN/api/v1/checkauthn/{código de registro} | Aplicativo Web de Logon | 1. código de registro  </br>    (Componente do caminho)</br>2.  solicitante  </br>    (Obrigatório) | GET | XML ou JSON que contém detalhes de erros, caso não seja bem-sucedido. | 200 - Sucesso   </br>403 - Proibido |
 
 </br>
 
@@ -50,8 +50,8 @@ Essa API deve ser consumida pelo segundo aplicativo web de logon de tela para co
 
 ```JSON
     {
-        "status": 403,
-        "message": "Forbidden"
+        "status": 403,
+        "message": "Forbidden"
     }
 ```
 

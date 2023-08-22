@@ -2,7 +2,7 @@
 title: Visão geral do guia de integração do programador
 description: descrição do Guia de integração do programador
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -15,10 +15,11 @@ ht-degree: 0%
 >[!NOTE]
 >
 >O conteúdo desta página é fornecido apenas para fins informativos. O uso desta API requer uma licença atual do Adobe. Não é permitida nenhuma utilização não autorizada.
+>
 
 ## Cookbooks {#cookbooks}
 
-* Guia do SDK JavaScript do AccessEnabler 
+* Guia do SDK JavaScript do AccessEnabler
 * Guia do SDK do AccessEnabler iOS/tvOS
 * Guia do SDK do Android AccessEnabler
 * Cookbook da API REST (servidor para servidor)

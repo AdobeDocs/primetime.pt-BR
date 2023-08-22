@@ -2,7 +2,7 @@
 title: API de registro dinâmico do cliente
 description: API de registro dinâmico do cliente
 exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
@@ -52,17 +52,17 @@ Depois de recuperar uma declaração de software do Painel do TVE, é necessári
 
 **Solicitação**
 
-| Chamada HTTP |  |
+| Chamada HTTP |                    |
 |-----------|--------------------|
 | caminho | /o/client/register |
 | método | POST |
 
-| campos |  |  |
+| campos |                                                                           |           |
 |--------------------|---------------------------------------------------------------------------|-----------|
 | declaração_do_software | A declaração de software criada no Painel TVE. | obrigatório |
 | redirect_uri | O URI que o aplicativo usa para concluir o fluxo de autenticação. | opcional |
 
-| cabeçalhos de solicitação |  |  |
+| cabeçalhos de solicitação |                                                                                |           |
 |-----------------|--------------------------------------------------------------------------------|-----------|
 | Tipo de conteúdo | application/json | obrigatório |
 | X-Device-Info | As informações do dispositivo conforme definidas em Passing Device and Connection Information | obrigatório |
@@ -70,11 +70,11 @@ Depois de recuperar uma declaração de software do Painel do TVE, é necessári
 
 **Resposta**
 
-| cabeçalhos de resposta |  |  |
+| cabeçalhos de resposta |                  |           |
 |------------------|------------------|-----------|
 | Tipo de conteúdo | application/json | obrigatório |
 
-| campos de resposta |  |  |
+| campos de resposta |                 |                            |
 |---------------------|-----------------|----------------------------|
 | client_id | String | obrigatório |
 | client_secret | String | obrigatório |
@@ -160,12 +160,12 @@ Depois de recuperar o identificador exclusivo do cliente (ID do cliente e segred
 **Solicitação**
 
 
-| **Chamada HTTP** |  |
+| **Chamada HTTP** | |
 | --- | --- |
 | caminho | `/o/client/token` |
 | método | POST |
 
-| **parâmetros de solicitação** |  |
+| **parâmetros de solicitação** | |
 | --- | --- |
 | `grant_type` | Recebido no processo de registro do cliente.<br/> **Valor aceito**<br/>`client_credentials`: usado para clientes inseguros, como o Android SDK. |
 | `client_id` | Identificador de cliente obtido no processo de registro do cliente. |
@@ -173,13 +173,13 @@ Depois de recuperar o identificador exclusivo do cliente (ID do cliente e segred
 
 **Resposta**
 
-| campos de resposta |  |  |
+| campos de resposta | | |
 | --- | --- | --- |
 | `access_token` | O valor do token de acesso que você deve usar para chamar as APIs do Primetime | obrigatório |
 | `expires_in` | O tempo em segundos até o access_token expirar | obrigatório |
 | `token_type` | O tipo do token **portador** | obrigatório |
 | `created_at` | A hora de emissão do token | obrigatório |
-| **cabeçalhos de resposta** |  |  |
+| **cabeçalhos de resposta** | | |
 | `Content-Type` | application/json | obrigatório |
 
 **Resposta de erro**
@@ -240,7 +240,7 @@ Usar o token de acesso para executar o Adobe Primetime [Chamadas de API de auten
 
 Em caso de erro, as seguintes respostas de erro podem ser retornadas:
 
-| Respostas de erro |  |  |
+| Respostas de erro |     |                                                                                                        |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
 | invalid_request | 400 | A solicitação está malformada. |
 | invalid_client | 403 | A ID do cliente não tem mais permissão para executar solicitações. As novas credenciais do cliente devem ser geradas. |

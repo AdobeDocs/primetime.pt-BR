@@ -2,7 +2,7 @@
 title: Registro do aplicativo Amazon FireOS
 description: Registro do aplicativo Amazon FireOS
 exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -55,8 +55,8 @@ Depois de obter a Instrução de Software, você precisará passá-la como um pa
 
 ## Como usar a Declaração de Software {#use-both}
 
-No arquivo de recursos do aplicativo `strings.xml` adicione o seguinte código:
+No arquivo de recursos do aplicativo `strings.xml` adicione o seguinte código:
 
 ```XML
-<string name="software_statement">softwarestatement value</string>
+<string name="software_statement">softwarestatement value</string>
 ```

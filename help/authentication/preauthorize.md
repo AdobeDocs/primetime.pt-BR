@@ -2,7 +2,7 @@
 title: Pré-autorização da API do iOS/tvOS
 description: Pré-autorização da API do iOS/tvOS
 exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
@@ -19,9 +19,9 @@ A API pré-autorizada pode ser usada para obter uma decisão de pré-autorizaç�
 
 >[!IMPORTANT]
 >
->A API de autorização **deve** ser usado antes de conceder ao usuário acesso aos recursos especificados.
+>A API de autorização **deve** ser usado antes de conceder ao usuário acesso aos recursos especificados.
 
-Se o resultado da resposta da API pré-autorizada contiver um ou mais recursos com uma decisão de pré-autorização negada, informações adicionais sobre o erro poderão ser incluídas **(veja a observação abaixo)** para cada recurso afetado.
+Se o resultado da resposta da API pré-autorizada contiver um ou mais recursos com uma decisão de pré-autorização negada, informações adicionais sobre o erro poderão ser incluídas **(veja a observação abaixo)** para cada recurso afetado.
 
 >[!IMPORTANT]
 >
@@ -31,7 +31,7 @@ Caso a solicitação da API pré-autorizada não possa ser atendida devido a um 
 
 </br>
 
-## `- (void) preauthorize:(nonnull PreauthorizeRequest *)request didCompleteWith:(nonnull AccessEnablerCallback<PreauthorizeResponse *> *)callback;`
+## `- (void) preauthorize:(nonnull PreauthorizeRequest *)request didCompleteWith:(nonnull AccessEnablerCallback<PreauthorizeResponse *> *)callback;`
 
 
 **Disponibilidade:** v3.6.0+
@@ -42,10 +42,10 @@ Caso a solicitação da API pré-autorizada não possa ser atendida devido a um 
 - AccessEnablerCallback: o objeto de retorno de chamada usado para retornar a resposta da API;
 - PreauthorizeResponse: o objeto de resposta usado para retornar o conteúdo de resposta da API;
 
- 
+
 </br>
 
-## `class PreauthorizeRequest`{#androidpreauthorizerequest}
+## `class PreauthorizeRequest`{#androidpreauthorizerequest}
 
 ### **classe PreauthorizeRequest.Builder**
 
@@ -69,7 +69,7 @@ Caso a solicitação da API pré-autorizada não possa ser atendida devido a um 
     ///
     public func setResources(resources: [String]) -> PreauthorizeRequest.Builder
 
- 
+ 
 
     ///
     /// Sets the features which you want to have them disabled when obtaining preauthorization decisions.
@@ -88,9 +88,9 @@ Caso a solicitação da API pré-autorizada não possa ser atendida devido a um 
     ///
     /// - Returns: The reference to the same `Builder` object instance which is the receiver of the function call. It does this in order to allow the creation of function chaining.
     ///
-    public func disableFeatures(features: Set<PreauthorizeRequest.Feature>) -> PreauthorizeRequest.Builder
+    public func disableFeatures(features: Set<PreauthorizeRequest.Feature>) -> PreauthorizeRequest.Builder
 
- 
+ 
 
     ///
     /// Creates and retrieves the reference of a new `PreauthorizeRequest` object instance.
@@ -107,9 +107,9 @@ Caso a solicitação da API pré-autorizada não possa ser atendida devido a um 
     ///
     /// - Returns: The reference to a new `PreauthorizeRequest` object instance.
     ///
-    public func build() -> PreauthorizeRequest
+    public func build() -> PreauthorizeRequest
 ```
- 
+
 
 ## **enum PreauthorizeRequest.Feature**
 
@@ -132,11 +132,11 @@ Caso a solicitação da API pré-autorizada não possa ser atendida devido a um 
 ## `interface AccessEnablerCallback<PreauthorizeResponse>` {#accessenablercallback}
 
 ```
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
     public func onResponse(result: PreauthorizeResponse)
 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
     public func onFailure(result: PreauthorizeResponse)
 ```
 
@@ -150,13 +150,13 @@ Caso a solicitação da API pré-autorizada não possa ser atendida devido a um 
     /// - Returns: Additional status (state) information in case of error or failure.
     ///   Might hold a `nil` value.
     ///
-    public Status getStatus()
+    public Status getStatus()
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of error or failure.
     ///
-    public List<Decision> getDecisions()
+    public List<Decision> getDecisions()
 ```
 
 ### Exemplos:
@@ -193,7 +193,7 @@ Todos os recursos solicitados estão tendo uma decisão de pré-autorização po
         ]
     }
 ```
- 
+
 
 Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o recurso de relatório de erros aprimorado não está habilitado na configuração de Autenticação do Adobe Primetime
 
@@ -216,7 +216,7 @@ Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o r
         ]
     }
 ```
- 
+
 
 Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o recurso de relatório de erros aprimorado está habilitado na configuração de Autenticação do Adobe Primetime
 
@@ -247,29 +247,29 @@ Um ou mais recursos estão tendo uma decisão de pré-autorização negada e o r
         ]
     }
 ```
- 
+
 
 #### Erro
 
- 
+
 
 Os serviços de Autenticação do Adobe Primetime encontram um erro ao atender à solicitação da API Pré-autorizada
 
 ```JSON
     {
-        "resources": [],
-        "status": {
-            "status": 400,
-            "code" : "bad_request",
-            "message": "Missing required parameter : deviceId",
-            "details": "",
-            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
-            "trace" : "9f115e1c-0158-4a41-8805-9f68923f3646",
-            "action" : "none"
-        }
+        "resources": [],
+        "status": {
+            "status": 400,
+            "code" : "bad_request",
+            "message": "Missing required parameter : deviceId",
+            "details": "",
+            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+            "trace" : "9f115e1c-0158-4a41-8805-9f68923f3646",
+            "action" : "none"
+        }
     }
 ```
- 
+
 
 #### Falha
 
@@ -385,14 +385,14 @@ O SDK de autenticação da Adobe Primetime apresenta um erro ao atender à solic
     ///
     /// - Returns: The resource id for which the decision was obtained.
     ///
-    public Status getId()
+    public Status getId()
 
     ///
     /// This is a getter function.
     ///
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
-    public boolean isAuthorized()
+    public boolean isAuthorized()
 
     ///
     /// This is a getter function.
@@ -400,7 +400,7 @@ O SDK de autenticação da Adobe Primetime apresenta um erro ao atender à solic
     /// - Returns: Additional status (state) information in case some error has occurred.
     ///            Might hold a `nil` value.
     ///
-    public Status getError()
+    public Status getError()
 ```
 
 </br>
@@ -417,15 +417,15 @@ let disabledFeatures: Set<PreauthorizationRequest.Feature> = [PreauthorizationRe
 
 let request: PreauthorizationRequest = PreauthorizationRequest.Builder()
 
-                  .setResources(resources: resources)
+                  .setResources(resources: resources)
 
 
-                  .disableFeatures(features: disabledFeatures)  // It is **optional** to disable features. If not used all features are enabled by default.
+                  .disableFeatures(features: disabledFeatures)  // It is **optional** to disable features. If not used all features are enabled by default.
 
-                  .build();
+                  .build();
 
 // Build the AccessEnablerCallback by providing the constructor two callbacks for onResponse and onFailure handling  
-func onResponseCallback(result: PreauthorizeResponse) -> Void {  //
+func onResponseCallback(result: PreauthorizeResponse) -> Void {  //
 TODO };
 
 func onFailureCallback(result: PreauthorizeResponse) -> Void {

@@ -2,7 +2,7 @@
 title: Recuperar solicitação de perfil SSO da plataforma
 description: Recuperar solicitação de perfil SSO da plataforma
 exl-id: 44fd4e26-4d9a-4607-ac2c-b85d848f5fc6
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -34,13 +34,13 @@ ht-degree: 0%
 Esse recurso produz solicitações de perfil para uma ID do solicitante e uma tupla MVPD.
 
 
-| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
+| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/{requestor}/profile-requests/{mvpd} | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante (parâmetro de caminho)</br>2. mvpd (parâmetro de caminho)</br>3. deviceType (Obrigatório) | GET | O Content-Type da resposta será application/octet-stream, pois a carga real é opaca para o aplicativo cliente.</br></br>A resposta deve ser encaminhada pelo aplicativo para a Plataforma</br></br>Mecanismo SSO para obter um SSO de perfil. | 200 - Sucesso   </br>400 - Solicitação inválida |
+| &lt;sp_fqdn>/api/v1/{requestor}/profile-requests/{mvpd} | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. solicitante (parâmetro de caminho)</br>2. mvpd (parâmetro de caminho)</br>3. deviceType (Obrigatório) | GET | O Content-Type da resposta será application/octet-stream, pois a carga real é opaca para o aplicativo cliente.</br></br>A resposta deve ser encaminhada pelo aplicativo para a Plataforma</br></br>Mecanismo SSO para obter um SSO de perfil. | 200 - Sucesso   </br>400 - Solicitação inválida |
 
 
 | Parâmetro de entrada | Descrição |
 | --------------- | -------------------------------------------------------------------------------------------------------- |
 | solicitante | O requestorId do Programador para o qual esta operação é válida. |
 | mvpd | A ID de MVPD para a qual esta operação é válida. |
-| deviceType | A plataforma do Apple para a qual estamos tentando obter uma solicitação de perfil.  Ou **iOS** ou **tvOS**. |
+| deviceType | A plataforma do Apple para a qual estamos tentando obter uma solicitação de perfil.  Ou **iOS** ou **tvOS**. |

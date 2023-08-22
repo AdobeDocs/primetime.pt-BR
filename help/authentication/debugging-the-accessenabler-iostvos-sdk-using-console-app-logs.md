@@ -2,7 +2,7 @@
 title: Depuração do SDK iOS/tvOS do AccessEnabler usando logs de aplicativo do console
 description: Depuração do SDK iOS/tvOS do AccessEnabler usando logs de aplicativo do console
 exl-id: 0dad325e-db15-4ea0-a87a-75409eaf8d46
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%
@@ -32,9 +32,9 @@ A partir da versão AccessEnabler iOS/tvOS 3.5.0, o mecanismo de registro aprese
 
 * A estrutura do AccessEnabler apresenta a capacidade de filtrar logs de aplicativo do Console com base no Subsistema: **com.adobe.pass.AccessEnabler**. Todas as mensagens emitidas pelo SDK fazem parte de com.adobe.pass.AccessEnabler.
 
-* A estrutura do AccessEnabler apresenta a capacidade de filtrar logs de aplicativo do Console com base em Qualquer (prefixo): **[AccessEnabler]**. Todas as mensagens emitidas pelo SDK recebem o prefixo [AccessEnabler].
+* A estrutura do AccessEnabler apresenta a capacidade de filtrar logs de aplicativo do Console com base em Qualquer (prefixo): **[AccessEnabler]**. Todas as mensagens emitidas pelo SDK recebem o prefixo [AccessEnabler].
 
-* A estrutura do AccessEnabler apresenta a capacidade de filtrar logs de aplicativo do Console com base na Categoria: **depurar**, **erro** em conjunto com qualquer um dos dois critérios acima: Subsistema ou Qualquer um (prefixo).
+* A estrutura do AccessEnabler apresenta a capacidade de filtrar logs de aplicativo do Console com base na Categoria: **depurar**, **erro** em conjunto com qualquer um dos dois critérios acima: Subsistema ou Qualquer um (prefixo).
 
 ## Depuração usando logs de aplicativo do Console
 
@@ -43,32 +43,32 @@ Dependendo dos problemas investigados, talvez você queira incluir ou excluir as
 
 ### AccessEnabler iOS/tvOS 3.5.0 e superior
 
-#### Incluindo {#including}
+#### Incluindo {#including}
 
 Primeiro de tudo para poder ver qualquer uma das mensagens de registro emitidas pela estrutura do AccessEnabler que você **deve** selecione as opções &quot;Incluir mensagens informativas&quot; e &quot;Incluir mensagens de depuração&quot; na seção Ação do aplicativo do console, conforme apresentado na imagem abaixo.
 
 ![](assets/include-info-debug-msg.png)
 
 
-Para poder depurar a funcionalidade do SDK do AccessEnabler iOS/tvOS e **consulte** Os logs da estrutura do AccessEnabler podem ser:
+Para poder depurar a funcionalidade do SDK do AccessEnabler iOS/tvOS e **consulte** Os logs da estrutura do AccessEnabler podem ser:
 
 * Pesquise no aplicativo Console usando **Subsistema** opção que É igual ao valor com.adobe.pass.AccessEnabler como na imagem abaixo.
 
 ![](assets/subsys-console-app.png)
 
 * Pesquise no aplicativo Console usando **Qualquer** opção que Contém a variável
-   [AccessEnabler] como na imagem abaixo.
+  [AccessEnabler] como na imagem abaixo.
 
 ![](assets/any-optn-console-app.png)
 
-Juntamente com os dois critérios acima, você também pode usar o **Categoria** em conjunto com **Subsistema** ou **Qualquer um (prefixo)** para pesquisar explicitamente por **depurar** ou **erro** mensagens de nível emitido pelo SDK iOS/tvOS do AccessEnabler.
+Juntamente com os dois critérios acima, você também pode usar o **Categoria** em conjunto com **Subsistema** ou **Qualquer um (prefixo)** para pesquisar explicitamente por **depurar** ou **erro** mensagens de nível emitido pelo SDK iOS/tvOS do AccessEnabler.
 
 #### Excluindo
 
-Para poder depurar melhor a funcionalidade de outros componentes e **excluir** Os logs da estrutura do AccessEnabler podem ser:
+Para poder depurar melhor a funcionalidade de outros componentes e **excluir** Os logs da estrutura do AccessEnabler podem ser:
 
 * Pesquise no aplicativo Console usando **Subsistema** que não é igual ao valor com.adobe.pass.AccessEnabler.
-* Pesquise no aplicativo Console usando **Qualquer** opção que não contém a variável [AccessEnabler] valor.
+* Pesquise no aplicativo Console usando **Qualquer** opção que não contém a variável [AccessEnabler] valor.
 
 ## Relatando um problema
 
@@ -77,4 +77,4 @@ Quando você estiver relatando um problema para a Autenticação Adobe Primetime
 * tente fornecer as etapas de reprodução.
 * tente fornecer as versões do sistema operacional e os modelos de dispositivo nos quais o problema ocorre.
 * tente fornecer a versão do SDK iOS/tvOS do AccessEnabler que está apresentando o problema.
-* tente capturar e anexar todas as mensagens de log do SDK do AccessEnabler iOS/tvOS usando uma das duas opções apresentadas na [Incluindo](#including) seção.
+* tente capturar e anexar todas as mensagens de log do SDK do AccessEnabler iOS/tvOS usando uma das duas opções apresentadas na [Incluindo](#including) seção.

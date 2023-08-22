@@ -2,7 +2,7 @@
 title: Códigos de erro aprimorados
 description: Códigos de erro aprimorados
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '2356'
 ht-degree: 2%
@@ -33,18 +33,18 @@ A API de autenticação do Primetime retorna códigos de status HTTP no interval
 
 - Os códigos de erro 5xx significam que o erro é gerado pelo servidor e que ele precisa fazer trabalho adicional para corrigi-lo.
 
-As informações adicionais sobre o erro são incluídas no campo &quot;erro&quot; no corpo da resposta. 
+As informações adicionais sobre o erro são incluídas no campo &quot;erro&quot; no corpo da resposta.
 
 
 
 
 | Nome | Tipo | Exemplo | Descrição |
 | --- | --- | --- | --- |
-| **erro** | _objeto_ | JSON <br>    {<br>        &quot;Status&quot; : 403,<br>        &quot;code&quot; : &quot;network_connection_failure&quot;,<br>        &quot;message&quot; : &quot;Unable to contact your TV provider services&quot;,<br>        &quot;helpUrl&quot; : &quot;&quot;,<br>        &quot;trace&quot; : &quot;12f6fef9-d2e0-422b-a9d7-60d799abe353&quot;,<br>        &quot;action&quot; : &quot;retry&quot;<br>    }<br><br>—<br><br>XML<br><br>`<``error``>`<br><br>`<``status``>403</``status``>`<br><br>`<``code``>network_connection_failure</``code``>`<br><br>`<``message``>Unable to contact your TV provider services</``message``>   <``helpUrl``></``helpUrl``>`<br><br>`<``trace``>12f6fef9-d2e0-422b-a9d7-60d799abe353</``trace``>`<br><br>`<``action``>retry</``action``>`<br><br>`</``error``> ` | Uma coleção ou objetos de erro coletados ao tentar concluir a solicitação. |
+| **erro** | _objeto_ | JSON <br>    {<br>        &quot;Status&quot; : 403,<br>        &quot;code&quot; : &quot;network_connection_failure&quot;,<br>        &quot;message&quot; : &quot;Unable to contact your TV provider services&quot;,<br>        &quot;helpUrl&quot; : &quot;&quot;,<br>        &quot;trace&quot; : &quot;12f6fef9-d2e0-422b-a9d7-60d799abe353&quot;,<br>        &quot;action&quot; : &quot;retry&quot;<br>    }<br><br>—<br><br>XML<br><br>`<``error``>`<br><br>`<``status``>403</``status``>`<br><br>`<``code``>network_connection_failure</``code``>`<br><br>`<``message``>Unable to contact your TV provider services</``message``>   <``helpUrl``></``helpUrl``>`<br><br>`<``trace``>12f6fef9-d2e0-422b-a9d7-60d799abe353</``trace``>`<br><br>`<``action``>retry</``action``>`<br><br>`</``error``> ` | Uma coleção ou objetos de erro coletados ao tentar concluir a solicitação. |
 
 </br>
 
-As APIs do Adobe Primetime que lidam com vários itens (API de pré-autorização etc.) podem indicar que o processamento falhou para um item específico e foi bem-sucedido para outros itens usando informações de erro no nível do item. Neste caso, o ***&quot;erro&quot;*** objeto está localizado no nível do item e o corpo da resposta pode conter vários ***&quot;erros&quot;*** objetos - consulte a documentação da API.
+As APIs do Adobe Primetime que lidam com vários itens (API de pré-autorização etc.) podem indicar que o processamento falhou para um item específico e foi bem-sucedido para outros itens usando informações de erro no nível do item. Neste caso, o ***&quot;erro&quot;*** objeto está localizado no nível do item e o corpo da resposta pode conter vários ***&quot;erros&quot;*** objetos - consulte a documentação da API.
 
 </br>
 
@@ -60,35 +60,35 @@ Cada objeto de erro tem os seguintes parâmetros:
 |----|----|----|----|--------------|
 | Status | *inteiro* | 403 | ♦ | O código de status HTTP de resposta conforme documentado na RFC 7231 (https://tools.ietf.org/html/rfc7231#section-6) <br> - 400 Solicitação incorreta <br> - 400 Solicitação incorreta <br> - 400 Solicitação incorreta <br> - 401 Não autorizado <br> - 403 Proibido <br> - 404 Não encontrado <br> - 405 Método não permitido <br> - Conflito 409 <br> - 410 Sumiu <br> - Falha na pré-condição 412 <br> - Muitas solicitações 429 <br> - Erro do servidor de intervalo 500 <br> - 503 Serviço indisponível |
 | Código | *string* | network_connection_failure | ♦ | O código de erro de autenticação padrão do Primetime. A lista completa dos códigos de erro está incluída abaixo. |
-| mensagem | *string* | Não é possível contatar os serviços do provedor de TV |  | Mensagem legível por humanos que pode ser exibida ao usuário final. |
-| detalhes | *string* | O pacote de assinatura não inclui o canal &quot;Live&quot; |  | Em alguns casos, uma mensagem detalhada é fornecida pelos endpoints de autorização do MVPD ou pelo Programador através de regras de degradação. <br> <br> Observe que, se nenhuma mensagem personalizada tiver sido recebida dos serviços de parceiro, esse campo poderá não estar presente nos campos de erro. |
-| helpUrl | *url* | &quot;&quot; |  | Um URL que vincula mais informações sobre por que este erro ocorreu e possíveis soluções. <br> <br>  O URI representa um URL absoluto e não deve ser deduzido do código de erro. Dependendo do contexto de erro, um URL diferente pode ser fornecido. Por exemplo, o mesmo código de erro bad_request produzirá URLs diferentes para os serviços de autenticação e autorização. |
-| trace | *string* | 12f6fef9-d2e0-422b-a9d7-60d799abe353 |  | Um identificador exclusivo para essa resposta que pode ser usado ao entrar em contato com o suporte para identificar problemas específicos em cenários mais complexos. |
+| mensagem | *string* | Não é possível contatar os serviços do provedor de TV | | Mensagem legível por humanos que pode ser exibida ao usuário final. |
+| detalhes | *string* | O pacote de assinatura não inclui o canal &quot;Live&quot; | | Em alguns casos, uma mensagem detalhada é fornecida pelos endpoints de autorização do MVPD ou pelo Programador através de regras de degradação. <br> <br> Observe que, se nenhuma mensagem personalizada tiver sido recebida dos serviços de parceiro, esse campo poderá não estar presente nos campos de erro. |
+| helpUrl | *url* | &quot;&quot; | | Um URL que vincula mais informações sobre por que este erro ocorreu e possíveis soluções. <br> <br>  O URI representa um URL absoluto e não deve ser deduzido do código de erro. Dependendo do contexto de erro, um URL diferente pode ser fornecido. Por exemplo, o mesmo código de erro bad_request produzirá URLs diferentes para os serviços de autenticação e autorização. |
+| trace | *string* | 12f6fef9-d2e0-422b-a9d7-60d799abe353 | | Um identificador exclusivo para essa resposta que pode ser usado ao entrar em contato com o suporte para identificar problemas específicos em cenários mais complexos. |
 | ação | *string* | tentar novamente | ♦ | *Ação recomendada para corrigir a situação:* </br><br> -nenhum - Infelizmente, não há nenhuma ação predefinida para corrigir esse problema. Isso pode indicar uma invocação incorreta da API pública </br><br>-configuração - Uma alteração de configuração é necessária por meio do painel TVE ou entrando em contato com o suporte. </br><br>-application-registration - O aplicativo deve se registrar novamente. </br><br>-authentication - O usuário deve autenticar ou autenticar novamente. </br><br>-authorization - O usuário deve obter autorização para o recurso específico. </br><br>-degradação - Deve ser aplicada alguma forma de degradação. </br><br>-repetir - Tentar novamente a solicitação pode resolver o problema</br><br>-retry-after - Tentar novamente a solicitação após o período indicado pode resolver o problema. |
 
 </br>
 
 **Notas:**
 
-- ***Restrito*** coluna *indica se o respectivo valor de campo representa um conjunto finito* (por exemplo, códigos de status HTTP existentes para &quot;*status*&quot;). Atualizações futuras dessa especificação poderão adicionar valores à lista restrita, mas não removerão nem alterarão as existentes. Campos irrestritos geralmente podem conter quaisquer dados, mas pode haver limitações em vigor para garantir um tamanho razoável.
+- ***Restrito*** coluna *indica se o respectivo valor de campo representa um conjunto finito* (por exemplo, códigos de status HTTP existentes para &quot;*status*&quot;). Atualizações futuras dessa especificação poderão adicionar valores à lista restrita, mas não removerão nem alterarão as existentes. Campos irrestritos geralmente podem conter quaisquer dados, mas pode haver limitações em vigor para garantir um tamanho razoável.
 
-- Cada resposta de Adobe conterá um &quot;Adobe-Request-Id&quot; que identifica a solicitação do cliente em todos os nossos serviços HTTP. O &quot;**trace** O campo &quot; complementa isso e eles devem ser relatados juntos. 
+- Cada resposta de Adobe conterá um &quot;Adobe-Request-Id&quot; que identifica a solicitação do cliente em todos os nossos serviços HTTP. O &quot;**trace** O campo &quot; complementa isso e eles devem ser relatados juntos.
 
 ## Códigos de status HTTP e códigos de erro {#http-status-codes-and-error-codes}
 
-As inconsistências entre vários códigos de erro e seus códigos de status HTTP associados se devem aos requisitos de compatibilidade com versões anteriores de sdks e aplicativos mais antigos ( por exemplo, *unknown\_application* gera 400 solicitações incorretas enquanto *unknown\_software\_statement* 401 Não autorizado). A solução dessas inconsistências será direcionada em iterações futuras. 
- 
+As inconsistências entre vários códigos de erro e seus códigos de status HTTP associados se devem aos requisitos de compatibilidade com versões anteriores de sdks e aplicativos mais antigos ( por exemplo, *unknown\_application* gera 400 solicitações incorretas enquanto *unknown\_software\_statement* 401 Não autorizado). A solução dessas inconsistências será direcionada em iterações futuras.
+
 ## Ações e códigos de erro {#actions-and-error-codes}
 
-Para a maioria dos códigos de erro, várias ações podem ser qualificadas como caminhos para a correção do problema em andamento ou até mesmo várias ações podem ser necessárias para corrigi-las automaticamente. Optamos por indicar aquele com a maior probabilidade de correção do erro. A variável **ações** podem ser divididas em três categorias:
+Para a maioria dos códigos de erro, várias ações podem ser qualificadas como caminhos para a correção do problema em andamento ou até mesmo várias ações podem ser necessárias para corrigi-las automaticamente. Optamos por indicar aquele com a maior probabilidade de correção do erro. A variável **ações** podem ser divididas em três categorias:
 
-1. aqueles que tentam corrigir o contexto da solicitação (retry, retry-after) 
-1. aqueles que tentam corrigir o contexto de usuário no aplicativo (registro do aplicativo, autenticação, autorização) 
+1. aqueles que tentam corrigir o contexto da solicitação (retry, retry-after)
+1. aqueles que tentam corrigir o contexto de usuário no aplicativo (registro do aplicativo, autenticação, autorização)
 1. aqueles que tentam corrigir o contexto de integração entre um aplicativo e um provedor de identidade (configuração, degradação)
 
 Para a primeira categoria (repetir e repetir após), simplesmente repetir a mesma solicitação pode ser suficiente para resolver o problema. No caso de APIs que lidam com vários itens, o aplicativo deve repetir a solicitação e incluir apenas os itens com a ação &quot;repetir&quot; ou &quot;tentar depois&quot;. Para &quot;*tentar-depois* ação &quot;, uma &quot;<u>Repetir-após</u>O cabeçalho &quot; indicará quantos segundos o aplicativo deve aguardar antes de repetir a solicitação.
 
-Para a 2ª e a 3ª categorias, a implementação da ação real é altamente dependente dos recursos do aplicativo. Por exemplo, &quot;*degradação*&quot; pode ser implementado como &quot;alternar para etapas temporárias de 15 minutos para permitir a reprodução do conteúdo pelos usuários&quot; ou como &quot;ferramenta automática para aplicar a degradação AUTHN-ALL ou AUTHZ-ALL para sua integração com o MVPD especificado&quot;. Semelhante a *autenticação*&quot;A ação do pode acionar uma autenticação passiva (autenticação de canal traseiro) em um tablet e um fluxo de autenticação de 2ª tela completo em TVs conectadas. É por isso que optamos por fornecer URLs completos com esquema e todos os parâmetros. 
+Para a 2ª e a 3ª categorias, a implementação da ação real é altamente dependente dos recursos do aplicativo. Por exemplo, &quot;*degradação*&quot; pode ser implementado como &quot;alternar para etapas temporárias de 15 minutos para permitir a reprodução do conteúdo pelos usuários&quot; ou como &quot;ferramenta automática para aplicar a degradação AUTHN-ALL ou AUTHZ-ALL para sua integração com o MVPD especificado&quot;. Semelhante a *autenticação*&quot;A ação do pode acionar uma autenticação passiva (autenticação de canal traseiro) em um tablet e um fluxo de autenticação de 2ª tela completo em TVs conectadas. É por isso que optamos por fornecer URLs completos com esquema e todos os parâmetros.
 
 ## Códigos de erro {#error-codes}
 

@@ -2,7 +2,7 @@
 title: Sobre a autenticação da Adobe Primetime e da TV em todos os lugares
 description: Sobre a autenticação da Adobe Primetime e da TV em todos os lugares
 exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '6288'
 ht-degree: 0%
@@ -290,7 +290,6 @@ Quando um cliente solicita um recurso protegido de um Programador pela primeira 
 >* A autorização usa uma troca de serviço Web de canal de retorno (servidor para servidor) entre a autenticação do Adobe Primetime (o SP) e um provedor de TV por assinatura (o IdP).
 
 
-
 ##### Comunicação do programador usando o ativador de acesso
 
 O canal de comunicação bidirecional entre o Ativador de acesso e a página da Web ou o aplicativo de reprodução do Programador segue um padrão totalmente assíncrono. O Programador envia mensagens para o Ativador de acesso por meio dos métodos expostos pela API do Ativador de acesso. O Ativador de acesso responde por meio de retornos de chamada registrados na biblioteca do Ativador de acesso.
@@ -420,3 +419,4 @@ Não há custo adicional para os usuários finais pelo uso da autenticação Ado
 >[!NOTE]
 >
 >**Próximas etapas:** Para obter mais informações, entre em contato com o representante da Adobe ou preencha o Formulário de solicitação de informações [aqui](https://www.adobe.com/cfusion/mmform/index.cfm?name=adobepass_rfi).
+>

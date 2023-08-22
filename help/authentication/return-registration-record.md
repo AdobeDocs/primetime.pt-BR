@@ -2,7 +2,7 @@
 title: Retornar Registro de Registro
 description: Retornar Registro de Registro
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
@@ -20,27 +20,27 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
- 
+</br>
+
 
 ## Descrição {#description}
 
-Retorna o registro do código de registro contendo o código de registro UUID, o código de registro e a ID do dispositivo com hash. 
+Retorna o registro do código de registro contendo o código de registro UUID, o código de registro e a ID do dispositivo com hash.
 
- 
+
 
 <div>
 
 
-| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
+| Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
 | --- | --- | --- | --- | --- | --- |
 | &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por exemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | Aplicativo de transmissão</br></br>ou</br></br>Serviço de programador | 1. requerente  </br>    (Componente do caminho)</br>2.  código de registro  </br>    (Componente do caminho) | GET | XML ou JSON contendo um código de registro e informações. Consulte esquema e amostra abaixo. | 200 |
 

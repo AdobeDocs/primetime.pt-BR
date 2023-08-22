@@ -2,7 +2,7 @@
 title: Erro de autenticação do iOS - adobepass.ios.app não pode ser encontrado
 description: Erro de autenticação do iOS - adobepass.ios.app não pode ser encontrado
 exl-id: cd97c6fb-f0fa-45c2-82c1-f28aa6b2fd12
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ## Problema {#issue}
 
-O usuário está passando pelo Fluxo de autenticação e, após inserir suas credenciais com êxito com seu provedor, é redirecionado de volta para uma página de erro, uma página de pesquisa ou alguma outra página personalizada informando que `adobepass.ios.app` não pôde ser encontrada/resolvida.
+O usuário está passando pelo Fluxo de autenticação e, após inserir suas credenciais com êxito com seu provedor, é redirecionado de volta para uma página de erro, uma página de pesquisa ou alguma outra página personalizada informando que `adobepass.ios.app` não pôde ser encontrada/resolvida.
 
 ## Explicação {#explanation}
 
-No iOS, `adobepass.ios.app` é usado como o URL final de redirecionamento para indicar que o fluxo de Autenticação foi concluído. Neste ponto, o aplicativo precisa fazer uma solicitação ao AccessEnabler para obter o token de autenticação e finalizar o fluxo de autenticação.
+No iOS, `adobepass.ios.app` é usado como o URL final de redirecionamento para indicar que o fluxo de Autenticação foi concluído. Neste ponto, o aplicativo precisa fazer uma solicitação ao AccessEnabler para obter o token de autenticação e finalizar o fluxo de autenticação.
 
-O problema é que `adobepass.ios.app` não existe de fato e acionará uma mensagem de erro no `webView`. As versões anteriores do DemoApp para iOS presumiam que esse erro sempre seria acionado no final do fluxo de Autenticação e foi configurado para lidar com ele adequadamente (`indidFailLoadWithError`).
+O problema é que `adobepass.ios.app` não existe de fato e acionará uma mensagem de erro no `webView`. As versões anteriores do DemoApp para iOS presumiam que esse erro sempre seria acionado no final do fluxo de Autenticação e foi configurado para lidar com ele adequadamente (`indidFailLoadWithError`).
 
 **Nota:** Esse problema foi corrigido em versões posteriores do DemoApp (incluídas no download do SDK do iOS).
 
-Infelizmente, essa suposição NÃO está correta. Há alguns servidores DNS ou Proxy &quot;inteligentes&quot; que não apenas transmitem o erro gerado, mas executam um dos seguintes procedimentos: 
+Infelizmente, essa suposição NÃO está correta. Há alguns servidores DNS ou Proxy &quot;inteligentes&quot; que não apenas transmitem o erro gerado, mas executam um dos seguintes procedimentos:
 
 - Criar uma página de erro personalizada
 - Encaminhe para uma página de pesquisa ou para algum outro tipo de página ou portal do cliente.
@@ -36,7 +36,7 @@ Nesses casos, a resposta que retorna ao WebView do iOS será uma resposta perfei
 
 ## Solução {#solution}
 
-NÃO faça a mesma suposição que o DemoApp faz. Em vez disso, intercepte a solicitação antes que ela seja executada (em `shouldStartLoadWithRequest`) e manuseá-lo adequadamente.
+NÃO faça a mesma suposição que o DemoApp faz. Em vez disso, intercepte a solicitação antes que ela seja executada (em `shouldStartLoadWithRequest`) e manuseá-lo adequadamente.
 
 Exemplo de como interceptar a solicitação antes de ela ser executada:
 
@@ -60,6 +60,6 @@ return YES;
 
 Algumas observações:
 
-- NUNCA usar `adobepass.ios.app` diretamente em qualquer lugar no código. Em vez disso, use a constante `ADOBEPASS_REDIRECT_URL`
+- NUNCA usar `adobepass.ios.app` diretamente em qualquer lugar no código. Em vez disso, use a constante `ADOBEPASS_REDIRECT_URL`
 - A variável `return NO;` a instrução impedirá que a página carregue
-- Certifique-se de que o `getAuthenticationToken` A chamada de é chamada uma vez e somente uma vez no código. Várias chamadas para `getAuthenticationToken` resultará em resultados indefinidos.
+- Certifique-se de que o `getAuthenticationToken` A chamada de é chamada uma vez e somente uma vez no código. Várias chamadas para `getAuthenticationToken` resultará em resultados indefinidos.

@@ -2,7 +2,7 @@
 title: Relatório de erros
 description: Relatório de erros
 exl-id: a52bd2cf-c712-40a2-a25e-7d9560b46ba6
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '2961'
 ht-degree: 1%
@@ -20,9 +20,9 @@ ht-degree: 1%
 
 O relatório de erros na Autenticação do Adobe Primetime está implementado atualmente de duas maneiras diferentes:
 
-* **Relatório de Erros Avançado** O implementador registra um retorno de chamada de erro em caso de [SDK JavaScript do AccessEnabler](#accessenabler-javascript-sdk) ou implementa um método de interface chamado &quot;`status`&quot;no caso de o [AccessEnabler iOS/tvOS SDK](#accessenabler-ios-tvos-sdk) e [SDK Android do AccessEnabler](#accessenabler-android-sdk), para receber relatórios avançados de erros. Os erros são categorizados em **Informações**, **Aviso**, e **Erro** tipos. Este sistema de relatórios é **assíncrono**, nesse **não há garantia da ordem em que vários erros serão acionados**.  Para obter detalhes sobre o sistema avançado de relatório de erros, consulte [Relatório de Erros Avançado](#advanced-error-reporting) seção.
+* **Relatório de Erros Avançado** O implementador registra um retorno de chamada de erro em caso de [SDK JavaScript do AccessEnabler](#accessenabler-javascript-sdk) ou implementa um método de interface chamado &quot;`status`&quot;no caso de o [AccessEnabler iOS/tvOS SDK](#accessenabler-ios-tvos-sdk) e [SDK Android do AccessEnabler](#accessenabler-android-sdk), para receber relatórios avançados de erros. Os erros são categorizados em **Informações**, **Aviso**, e **Erro** tipos. Este sistema de relatórios é **assíncrono**, nesse **não há garantia da ordem em que vários erros serão acionados**.  Para obter detalhes sobre o sistema avançado de relatório de erros, consulte [Relatório de Erros Avançado](#advanced-error-reporting) seção.
 
-* **Relatório de Erros Original -** Um sistema de relatórios estáticos no qual mensagens de erro são passadas para funções de retorno de chamada específicas quando solicitações específicas falham. Os erros são agrupados em tipos genéricos, de autenticação e de autorização. Para obter a lista de erros reportados no sistema original, consulte a [Relatório de Erros Original](#original-error-reporting) seção.
+* **Relatório de Erros Original -** Um sistema de relatórios estáticos no qual mensagens de erro são passadas para funções de retorno de chamada específicas quando solicitações específicas falham. Os erros são agrupados em tipos genéricos, de autenticação e de autorização. Para obter a lista de erros reportados no sistema original, consulte a [Relatório de Erros Original](#original-error-reporting) seção.
 
 
 ## Relatório de Erros Avançado {#advanced-error-reporting}
@@ -38,7 +38,7 @@ O relatório de erros na Autenticação do Adobe Primetime está implementado at
 
 ### SDK JavaScript do AccessEnabler {#accessenabler-javascript-sdk}
 
-O novo sistema de relatório de erros é opcional, portanto, o implementador pode registrar explicitamente um retorno de chamada de manipulador de erros para receber relatórios de erros avançados. O sistema inclui a capacidade de registrar e cancelar o registro de vários retornos de chamada de erro dinamicamente. Além disso, é possível registrar novos retornos de chamada de erro assim que o SDK do JavaScript do AccessEnabler é carregado, sem a necessidade de executar outra inicialização (antes de chamar `setRequestor()`), o que significa que você pode receber relatórios avançados sobre erros de inicialização e configuração.
+O novo sistema de relatório de erros é opcional, portanto, o implementador pode registrar explicitamente um retorno de chamada de manipulador de erros para receber relatórios de erros avançados. O sistema inclui a capacidade de registrar e cancelar o registro de vários retornos de chamada de erro dinamicamente. Além disso, é possível registrar novos retornos de chamada de erro assim que o SDK do JavaScript do AccessEnabler é carregado, sem a necessidade de executar outra inicialização (antes de chamar `setRequestor()`), o que significa que você pode receber relatórios avançados sobre erros de inicialização e configuração.
 
 
 #### Implementação {#access-enab-js-imp}
@@ -65,12 +65,12 @@ Sua função de retorno de chamada do manipulador de erros receberá um único o
 
 Anexa um manipulador para um evento.
 
-**`eventType`** - SOMENTE o &quot;`errorEvent`&quot; resulta no SDK JavaScript do AccessEnabler acionando retornos de chamada de relatórios de erro avançados.
+**`eventType`** - SOMENTE o &quot;`errorEvent`&quot; resulta no SDK JavaScript do AccessEnabler acionando retornos de chamada de relatórios de erro avançados.
 
-**`handlerName`** - uma string que especifica o nome da função do manipulador de erros.\
- 
+**`handlerName`** - uma string que especifica o nome da função do manipulador de erros.
 
-Ambos os parâmetros de ligação devem usar somente caracteres do seguinte conjunto: `[0-9a-zA-Z][-._a-zA-Z0-9]`; ou seja, os parâmetros devem começar com um número ou uma letra e podem incluir apenas hifens, pontos, sublinhados e caracteres alfanuméricos.  Além disso, os parâmetros não podem exceder 1024 caracteres.  
+
+Ambos os parâmetros de ligação devem usar somente caracteres do seguinte conjunto: `[0-9a-zA-Z][-._a-zA-Z0-9]`; ou seja, os parâmetros devem começar com um número ou uma letra e podem incluir apenas hifens, pontos, sublinhados e caracteres alfanuméricos.  Além disso, os parâmetros não podem exceder 1024 caracteres.
 
 **Exemplo** de manipuladores de erro de vinculação:
 
@@ -81,18 +81,18 @@ accessEnabler.bind('errorEvent', 'errorLogger');
 
 Devido a limitações técnicas, você não pode vincular um fechamento ou uma função anônima. Você deve especificar o nome do método no segundo parâmetro.
 
- 
+
 ### 2. Desvincular {#unbind}
 
 **`.unbind(eventType:String, handlerName:String=null):void`**
 
 Remove um manipulador de eventos anexado anteriormente.
 
-**`eventType`** - SOMENTE o &#39;`errorEvent`O valor &#39; resulta no SDK JavaScript do AccessEnabler acionando retornos de chamada de relatórios de erro avançados.
+**`eventType`** - SOMENTE o &#39;`errorEvent`O valor &#39; resulta no SDK JavaScript do AccessEnabler acionando retornos de chamada de relatórios de erro avançados.
 
-**`handlerName`** - uma cadeia de caracteres especificando o nome da função do manipulador de erros, se for nulo ou estiver faltando todos os manipuladores anexados para o `eventType` serão removidos.
+**`handlerName`** - uma cadeia de caracteres especificando o nome da função do manipulador de erros, se for nulo ou estiver faltando todos os manipuladores anexados para o `eventType` serão removidos.
 
-Ambos os parâmetros de ligação devem usar somente caracteres do seguinte conjunto: `[0-9a-zA-Z][-._a-zA-Z0-9]`; ou seja, os parâmetros devem começar com um número ou uma letra e podem incluir apenas hifens, pontos, sublinhados e caracteres alfanuméricos.  Além disso, os parâmetros não podem exceder 1024 caracteres.  
+Ambos os parâmetros de ligação devem usar somente caracteres do seguinte conjunto: `[0-9a-zA-Z][-._a-zA-Z0-9]`; ou seja, os parâmetros devem começar com um número ou uma letra e podem incluir apenas hifens, pontos, sublinhados e caracteres alfanuméricos.  Além disso, os parâmetros não podem exceder 1024 caracteres.
 
 **Exemplo** de remover um único manipulador de erros:
 
@@ -109,7 +109,7 @@ O novo sistema de relatório de erros é obrigatório, portanto, o implementador
 
 #### Implementação {#accessenab-ios-tvossdk-imp}
 
-Um implementador precisa estar em conformidade com o seguinte **StatusDireito** protocolo:
+Um implementador precisa estar em conformidade com o seguinte **StatusDireito** protocolo:
 
 **EntitlementStatus.h**
 
@@ -121,7 +121,7 @@ Um implementador precisa estar em conformidade com o seguinte **StatusDireito**
     @end
 ```
 
-Seu **status** A função receberá um único objeto (uma `NSDictionary`) com a seguinte estrutura:
+Seu **status** A função receberá um único objeto (uma `NSDictionary`) com a seguinte estrutura:
 
 ```OBJ-C
     {
@@ -153,11 +153,11 @@ Seu **status** A função receberá um único objeto (uma `NSDictionary`) com a
 
 ### SDK Android do AccessEnabler {#accessenabler-android-sdk}
 
-O novo sistema de relatório de erros é obrigatório, pois o implementador deve estar explicitamente em conformidade com o `IAccessEnablerDelegate` protocolo definido pela interface. Essa nova abordagem permite que os programadores recebam relatórios avançados de erros.
+O novo sistema de relatório de erros é obrigatório, pois o implementador deve estar explicitamente em conformidade com o `IAccessEnablerDelegate` protocolo definido pela interface. Essa nova abordagem permite que os programadores recebam relatórios avançados de erros.
 
 #### Implementação {#access-enablr-androidsdk-imp}
 
-Um implementador precisa lidar com o novo `status` método da interface`IAccessEnablerDelegate`. A variável **`status`** receberá uma única **`AdvancedStatus`** objeto com o seguinte modelo:
+Um implementador precisa lidar com o novo `status` método da interface`IAccessEnablerDelegate`. A variável **`status`** receberá uma única **`AdvancedStatus`** objeto com o seguinte modelo:
 
 ```C++
     class AdvancedStatus {
@@ -240,7 +240,7 @@ A tabela a seguir lista e descreve os códigos de erro expostos pela API de erro
 | VSA503 | Informações | Falha na solicitação de metadados de Conta de Assinante de Vídeo do Aplicativo. | O ponto de extremidade MVPD não está respondendo. O aplicativo pode fazer fallback para o fluxo de autenticação normal. | n/d | n/d | Sim | n/d |
 | 500 | Erro | Erro interno | Use AccessEnablerDebug e inspecione logs de depuração (saída console.log) para determinar o que deu errado. | n/d | Sim | Sim | n/d |
 | SEC403 | Erro | Erro de Segurança de Domínio. O solicitante está usando um domínio inválido. Todos os domínios usados por uma ID de solicitante específica precisam ser colocados na lista de permissões pelo Adobe. | - Carregar o AccessEnabler somente da lista de domínios permitidos <br> <br> - Entre em contato com o Adobe para gerenciar a lista de permissões do domínio para a ID do solicitante usada <br> <br> - iOS: verifique se está usando o certificado correto e se a assinatura foi criada corretamente | n/d | n/d | Sim | n/d |
-| SEC412 | Aviso | [ Disponível na versão 2.5 ] A ID do dispositivo não corresponde. Isso pode acontecer sempre que a plataforma subjacente alterar a ID do dispositivo. Nesse caso, os tokens existentes serão apagados e o usuário não será mais autenticado. Observe que isso está acontecendo legitimamente quando o usuário está usando o SDK do JS e está em roaming (no JS, o IP do cliente faz parte da ID do dispositivo). Caso contrário, isso pode ser uma indicação de uma tentativa de fraude - uma tentativa de copiar tokens de um dispositivo diferente. | - Monitore o número de avisos. Se o pico não ocorrer por um motivo aparente (nenhuma atualização recente do navegador; novos sistemas operacionais), isso pode ser um indicador de tentativas de fraude.  <br> <br>- Como opção, informe ao usuário que ele precisa fazer logon novamente. | Faça logon novamente. | Sim | Sim | Sim, de 3.2 |
+| SEC412 | Aviso | [Disponível na versão 2.5] A ID do dispositivo não corresponde. Isso pode acontecer sempre que a plataforma subjacente alterar a ID do dispositivo. Nesse caso, os tokens existentes serão apagados e o usuário não será mais autenticado. Observe que isso está acontecendo legitimamente quando o usuário está usando o SDK do JS e está em roaming (no JS, o IP do cliente faz parte da ID do dispositivo). Caso contrário, isso pode ser uma indicação de uma tentativa de fraude - uma tentativa de copiar tokens de um dispositivo diferente. | - Monitore o número de avisos. Se o pico não ocorrer por um motivo aparente (nenhuma atualização recente do navegador; novos sistemas operacionais), isso pode ser um indicador de tentativas de fraude.  <br> <br>- Como opção, informe ao usuário que ele precisa fazer logon novamente. | Faça logon novamente. | Sim | Sim | Sim, de 3.2 |
 | SEC420 | Erro | Erro de segurança HTTP ao se comunicar com servidores de autenticação da Adobe Primetime. Normalmente, esse erro ocorre quando a falsificação/proxies está em vigor. | - Carregar `[https://]{SP_FQDN\}` no navegador e aceite manualmente os certificados SSL, por exemplo, **https://api.auth.adobe.com** ou **https://api.auth-staging.adobe.com** <br> <br>- Marcar os certificados de proxy como confiáveis | Se isso ocorre para um usuário comum, é uma indicação de um possível ataque do tipo &quot;man-in-the-middle&quot;! | Sim | Sim | Sim, de 3.2 |
 | CFG100 | Aviso | A data/hora/fuso horário do computador cliente não está definida corretamente. Isso provavelmente levará a erros de autenticação/autorização. | - Informe o usuário para definir a hora correta. <br> <br> Execute ações para impedir fluxos de direitos, pois eles provavelmente falharão. | Defina a data/hora correta. | Sim | Sim | Sim, de 3.2 |
 | CFG400 | Erro | Uma ID de Solicitante inválida foi fornecida. | O desenvolvedor DEVE especificar uma ID de Solicitante válida. | n/d | Sim | Sim | Sim, de 3.2 |
@@ -285,17 +285,17 @@ Esta seção descreve o sistema original de relatório de erros, juntamente com 
 O relatório de erros original e as APIs de status continuam a funcionar exatamente como antes. No entanto, avançar as APIs originais do relatório de erros não será atualizado. Todos os novos relatórios de erros e atualizações dos erros antigos serão refletidos SOMENTE no novo [Sistema avançado de relatório de erros](#advanced-error-reporting).
 
 
-Para obter exemplos de uso do sistema original de relatório de erros, consulte [Referência da API JavaScript](/help/authentication/javascript-sdk-api-reference.md):[setAuthenticationStatus()](/help/authentication/javascript-sdk-api-reference.md#set-authn-status-isauthn-error) e [tokenRequestFailed()](/help/authentication/javascript-sdk-api-reference.md#token-request-failed-error-msg) funções, [Referência da API do iOS/tvOS](/help/authentication/iostvos-sdk-api-reference.md): [setAuthenticationStatus()](/help/authentication/javascript-sdk-api-reference.md#setAuthNStatus)e [tokentRequestFailed()](/help/authentication/javascript-sdk-api-reference.md#tokenReqFailed), [Referência da API do Android](/help/authentication/android-sdk-api-reference.md): [setAuthenticationStatus()](/help/authentication/android-sdk-api-reference.md#setAuthNStatus) e [tokenRequestFailed()](/help/authentication/android-sdk-api-reference.md#setAuthNStatus#tokenRequestFailed).
+Para obter exemplos de uso do sistema original de relatório de erros, consulte [Referência da API JavaScript](/help/authentication/javascript-sdk-api-reference.md):[setAuthenticationStatus()](/help/authentication/javascript-sdk-api-reference.md#set-authn-status-isauthn-error) e [tokenRequestFailed()](/help/authentication/javascript-sdk-api-reference.md#token-request-failed-error-msg) funções, [Referência da API do iOS/tvOS](/help/authentication/iostvos-sdk-api-reference.md): [setAuthenticationStatus()](/help/authentication/javascript-sdk-api-reference.md#setAuthNStatus)e [tokentRequestFailed()](/help/authentication/javascript-sdk-api-reference.md#tokenReqFailed), [Referência da API do Android](/help/authentication/android-sdk-api-reference.md): [setAuthenticationStatus()](/help/authentication/android-sdk-api-reference.md#setAuthNStatus) e [tokenRequestFailed()](/help/authentication/android-sdk-api-reference.md#setAuthNStatus#tokenRequestFailed).
 
 ### Códigos de erro de retorno de chamada originais {#original-callback-error-codes}
 
-| **Erros genéricos** |  |
+| **Erros genéricos** | |
 |---|---|
 | Erro interno | Ocorreu um erro no sistema ao tentar processar a solicitação. |
 | Erro de provedor não selecionado | Ocorre quando o cliente cancela a caixa de diálogo de seleção do provedor. |
 | Erro de provedor não disponível | Ocorre quando nenhum provedor está disponível. |
 |  |  |
-| **Erros de autenticação** |  |
+| **Erros de autenticação** | |
 | Erro de autenticação genérica | Retornado quando o motivo não é conhecido ou não pode ser publicado. |
 | Erro de autenticação interna | Ocorreu um erro no sistema durante a tentativa de autenticação. |
 | Erro de usuário não autenticado | Usuário não autenticado. |

@@ -2,14 +2,14 @@
 title: Pré-autorizar Android
 description: Pré-autorizar Android
 exl-id: b5337595-135f-4981-a578-2da432f125d6
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-# Pré-autorizar {#preuthorize-android}
+# Pré-autorizar {#preuthorize-android}
 
 >[!NOTE]
 >
@@ -25,10 +25,10 @@ O método da API pré-autorizada precisa ser usado pelos aplicativos para obter 
 Em caso de erro inesperado (por exemplo, problema de rede, ponto de acesso de autorização MVPD indisponível etc.) Quando uma solicitação de API pré-autorizada é processada pelos serviços de autenticação da Adobe Primetime, uma ou várias informações de erro separadas serão incluídas para os recursos afetados como parte do resultado da resposta da API pré-autorizada.
 
 
-## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
+## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
 
 
-**Descrição:** 
+**Descrição:**
 
 **Disponibilidade:** v3.6.0+
 
@@ -41,8 +41,7 @@ Em caso de erro inesperado (por exemplo, problema de rede, ponto de acesso de au
 
 ### classe pública PreauthorizeRequest {#androidpreauthorizerequest}
 
-**classe PreauthorizeRequest.Builder**\
- 
+**classe PreauthorizeRequest.Builder**
 
 ```java
     ///
@@ -129,18 +128,18 @@ recursos)**
 ### `abstract class AccessEnablerCallback<PreauthorizeResponse> {#accessenablercallback}`
 
 ```java
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
 
 **public void onResponse(PreauthorizeResponse result)**
 
- 
+ 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
 
 **public void onFailure(PreauthorizeResponse result)**
 ```
 
- 
+
 
 ### classe PreauthorizeResponse {#preauthorizeresponse}
 
@@ -150,16 +149,16 @@ recursos)**
     ///   Might hold a `null` value.
     ///
 
-**public [Status](#status) getStatus()**
+**public [Status](#status) getStatus()**
 
- 
+ 
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of failure.
     ///
 
-**public List\<[Decision](#status)\> getDecisions()**
+**public List\<[Decision](#status)\> getDecisions()**
 ```
 
 
@@ -172,7 +171,7 @@ recursos)**
 
 ///
 
-**public int getStatus()**
+**public int getStatus()**
 
     ///
     /// - Returns: The standard Adobe Primetime Authentication services error code.
@@ -236,9 +235,9 @@ recursos)**
     /// - Returns: The resource id for which the decision was obtained.
     ///
 
-    public Status getId()
+    public Status getId()
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -246,9 +245,9 @@ recursos)**
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
 
-**public boolean isAuthorized()**
+**public boolean isAuthorized()**
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -257,14 +256,14 @@ recursos)**
     ///            Might hold a `null` value.
     ///
 
-**public Status getError()**
+**public Status getError()**
 ```
 
 </br>
 
 
 
-Exemplo: 
+Exemplo:
 
 
 ```java

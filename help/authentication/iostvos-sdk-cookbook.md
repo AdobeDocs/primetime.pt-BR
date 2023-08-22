@@ -2,9 +2,9 @@
 title: Guia do iOS/tvOS
 description: Guia do iOS/tvOS
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '2414'
+source-wordcount: '2413'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ A atividade de rede do AccessEnabler ocorre em seu próprio thread, portanto, o 
 
 ## Configurar a ID do visitante {#visitorIDSetup}
 
-Configurar um [visitorID do Marketing Cloud](https://marketing.adobe.com/resources/help/en_US/mcvid/) o valor é muito importante do ponto de vista analítico. Depois que um valor de visitorID é definido, o SDK envia essas informações junto com cada chamada de rede, e o servidor de autenticação da Adobe Primetime coleta essas informações. Futuramente, você poderá correlacionar a análise do serviço de Autenticação da Adobe Primetime com quaisquer outros relatórios do Analytics que tenha de outros aplicativos ou sites. É possível encontrar informações sobre como configurar a visitorID [aqui](#setOptions).
+Configurar um [visitorID do Marketing Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html) o valor é muito importante do ponto de vista analítico. Depois que um valor de visitorID é definido, o SDK envia essas informações junto com cada chamada de rede, e o servidor de autenticação da Adobe Primetime coleta essas informações. Futuramente, você poderá correlacionar a análise do serviço de Autenticação da Adobe Primetime com quaisquer outros relatórios do Analytics que tenha de outros aplicativos ou sites. É possível encontrar informações sobre como configurar a visitorID [aqui](#setOptions).
 
 ## Fluxos de Direitos {#entitlement}
 
@@ -69,51 +69,51 @@ I.  [Fluxo de logout com Apple SSO](#logout_flow_with_AppleSSO) </br>
    * [`displayProviderDialog(mvpds)`](#$dispProvDialog) </br>
       * Acionado por [`getAuthentication()`](#$getAuthN) somente se o usuário não tiver selecionado um provedor (MVPD) e ainda não estiver autenticado. </br>
       * A variável `mvpds` é uma matriz de provedores disponíveis para o usuário.
+
    * `setAuthenticationStatus(status, errorcode)` </br>
       * Acionado por `checkAuthentication()` sempre. </br>
       * Acionado por [`getAuthentication()`](#$getAuthN) somente se o usuário já estiver autenticado e tiver selecionado um provedor. </br>
       * O status retornado é sucesso ou falha, o código de erro descreve o tipo da falha.
+
    * [`navigateToUrl(url)`](#$nav2url) </br>
       * Acionado por [`getAuthentication()`](#$getAuthN) após o usuário selecionar um MVPD. A variável `url` fornece a localização da página de logon do MVPD.
+
    * `sendTrackingData(event, data)` </br>
       * Acionado por `checkAuthentication()`, [`getAuthentication()`](#$getAuthN), `checkAuthorization()`, [`getAuthorization()`](#$getAuthZ), `setSelectedProvider()`.
-      * A variável `event` indica qual evento de direito ocorreu; a variável `data` parameter é uma lista de valores relacionados ao evento. 
+      * A variável `event` indica qual evento de direito ocorreu; a variável `data` parameter é uma lista de valores relacionados ao evento.
+
    * `setToken(token, resource)`
 
       * Acionado por [checkAuthorization()](#checkAuthZ) e [getAuthorization()](#$getAuthZ) após uma autorização bem-sucedida para visualizar um recurso.
       * A variável `token` é o token de mídia de vida curta; a variável `resource` parâmetro é o conteúdo que o usuário está autorizado a visualizar.
+
    * `tokenRequestFailed(resource, code, description)` </br>
       * Acionado por [checkAuthorization()](#checkAuthZ) e [getAuthorization()](#$getAuthZ) após uma autorização malsucedida.
       * A variável `resource` é o conteúdo que o usuário estava tentando visualizar; a variável `code` é o código de erro que indica que tipo de falha ocorreu; a variável `description` descreve o erro associado ao código de erro.
+
    * `selectedProvider(mvpd)` </br>
       * Acionado por [`getSelectedProvider()`](#getSelProv).
       * A variável `mvpd` O parâmetro fornece informações sobre o provedor selecionado pelo usuário.
+
    * `setMetadataStatus(metadata, key, arguments)`
       * Acionado por `getMetadata().`
       * A variável `metadata` fornece os dados específicos solicitados; a variável `key` é a chave usada na variável [getMetadata()](#getMeta) pedido; e a `arguments` é o mesmo dicionário que foi passado para [getMetadata()](#getMeta).
+
    * [&quot;preauthorizedResources(authorizedResources)&quot;](#preauthResources)
 
       * Acionado por [`checkPreauthorizedResources()`](#checkPreauth).
 
       * A variável `authorizedResources` Este parâmetro apresenta os recursos que o usuário está autorizado a visualizar.
+
    * [&quot;presentTvProviderDialog(viewController)&quot;](#presentTvDialog)
 
       * Acionado por [getAuthentication()](#getAuthN) quando o solicitante atual suporta pelo menos um MVPD que tenha suporte para SSO.
       * O parâmetro viewController é a Caixa de Diálogo de SSO do Apple e precisa ser apresentado no controlador de exibição principal.
+
    * [&quot;dismissTvProviderDialog(viewController)&quot;](#dismissTvDialog)
 
       * Acionado por uma ação do usuário (selecionando &quot;Cancelar&quot; ou &quot;Outros provedores de TV&quot; na caixa de diálogo SSO do Apple).
       * O parâmetro viewController é a Caixa de Diálogo de SSO do Apple e precisa ser descartado do controlador de exibição principal.
-
-
-
-
-
-
-
-
-
-
 
 ![](assets/iOS-flows.png)
 
@@ -124,12 +124,14 @@ I.  [Fluxo de logout com Apple SSO](#logout_flow_with_AppleSSO) </br>
 
    a. Chame [`init`](#$init) para criar uma única instância do AccessEnabler de autenticação do Adobe Primetime.
    * **Dependência:** Biblioteca nativa iOS/tvOS de autenticação da Adobe Primetime (AccessEnabler)
+
    b. Chame `setRequestor()` para estabelecer a identidade do Programador; transmita no site do Programador `requestorID` e (opcionalmente) uma matriz de endpoints de autenticação da Adobe Primetime. Para tvOS você também precisará fornecer a chave pública e o segredo. Consulte [Documentação sem cliente](#create_dev) para obter detalhes.
 
    * **Dependência:** RequestorID de autenticação válida do Adobe Primetime (consulte seu Gerente de conta de autenticação da Adobe Primetime para organizar isso).
 
    * **Acionadores:**
-      [setRequestorComplete()](#$setReqComplete) retorno de chamada.
+     [setRequestorComplete()](#$setReqComplete) retorno de chamada.
+
    >[!NOTE]
    >
    >Nenhuma solicitação de direito pode ser concluída até que a identidade do solicitante seja totalmente estabelecida. Isto significa efetivamente que, embora [`setRequestor()`](#$setReq)  ainda estiver em execução, todas as solicitações de direito subsequentes. Por exemplo, [`checkAuthentication()`](#checkAuthN) estão bloqueados.
@@ -139,8 +141,6 @@ I.  [Fluxo de logout com Apple SSO](#logout_flow_with_AppleSSO) </br>
    1. Aguarde o acionamento do [`setRequestorComplete()`](#setReqComplete) retorno de chamada (parte do delegado AccessEnabler). Essa opção oferece a maior certeza de que [`setRequestor()`](#$setReq) concluído, portanto, é recomendado para a maioria das implementações.
 
    1. Continuar sem esperar o acionamento do [`setRequestorComplete()`](#setReqComplete) retorno de chamada e comece a emitir solicitações de direito. Essas chamadas (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout) são enfileiradas pela biblioteca AccessEnabler, que fará as chamadas de rede reais após o [`setRequestor()`](#$setReq). Ocasionalmente, essa opção pode ser interrompida se, por exemplo, a conexão de rede estiver instável.
-
-
 
 1. Chame `checkAuthentication()` para verificar uma autenticação existente sem iniciar o fluxo de Autenticação completa.  Se essa chamada for bem-sucedida, você poderá prosseguir diretamente para o Fluxo de autorização. Caso contrário, prossiga para o Fluxo de autenticação.
 
@@ -259,7 +259,7 @@ I.  [Fluxo de logout com Apple SSO](#logout_flow_with_AppleSSO) </br>
 
    >[!NOTE]
    >
-   >O fluxo de logout difere do fluxo de autenticação na medida em que o usuário não é obrigado a interagir com UIWebView/WKWebView ou SFSafariViewController de nenhuma maneira. A camada de aplicativo da interface do usuário usa UIWebView/WKWebView ou SFSafariViewController para verificar se todos os redirecionamentos estão sendo seguidos. Portanto, é possível (e recomendado) tornar o controlador invisível (ou seja, oculto) durante o processo de logout.
+   >O fluxo de logout difere do fluxo de autenticação porque o usuário não precisa interagir com UIWebView/WKWebView ou SFSafariViewController de nenhuma maneira. A camada de aplicativo da interface do usuário usa UIWebView/WKWebView ou SFSafariViewController para verificar se todos os redirecionamentos estão sendo seguidos. Portanto, é possível (e recomendado) tornar o controlador invisível (ou seja, oculto) durante o processo de logout.
 
 
 ### I. Fluxo de logout com o Apple SSO {#logout_flow_with_AppleSSO}

@@ -2,7 +2,7 @@
 title: Acesse o Logon único (SSO) do SDK do Android Enabler em aplicativos Android 10
 description: Acesse o Logon único (SSO) do SDK do Android Enabler em aplicativos Android 10
 exl-id: dedade15-c451-4757-b684-d3728e11dd87
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
@@ -30,8 +30,8 @@ Consulte [Visão geral do SSO do Roku](/help/authentication/roku-sso-overview.md
 Dependendo do **nível de SDK de destino** ou a utilização de **android:requestLegacyExternalStorage** atributo manifest o Single Sign-On (SSO) oferecido pelo Access Enabler Android versão 3.2.1 SDK (mais recente) e as versões anteriores se comportarão atualmente da seguinte maneira:
 
 - Seus destinos de aplicativo **Android 9 (API nível 28)** ou inferior **-\>** Logon único (SSO) **funcionará**
-- Seus destinos de aplicativo **Android 10** **(Nível de API 29)** e faz **set** o valor de **requestLegacyExternalStorage para verdadeiro** no arquivo de manifesto do aplicativo **-\>** Logon único (SSO) **funcionará**
-- Seus destinos de aplicativo **Android 10** **(Nível de API 29)** e faz **não definido** o valor de **requestLegacyExternalStorage para verdadeiro** no arquivo de manifesto do aplicativo **-\>** Logon único (SSO) **não funcionará**
+- Seus destinos de aplicativo **Android 10** **(Nível de API 29)** e faz **set** o valor de **requestLegacyExternalStorage para verdadeiro** no arquivo de manifesto do aplicativo **-\>** Logon único (SSO) **funcionará**
+- Seus destinos de aplicativo **Android 10** **(Nível de API 29)** e faz **não definido** o valor de **requestLegacyExternalStorage para verdadeiro** no arquivo de manifesto do aplicativo **-\>** Logon único (SSO) **não funcionará**
 
 
 >[!TIP]

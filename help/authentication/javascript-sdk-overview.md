@@ -2,7 +2,7 @@
 title: Visão geral do SDK do JavaScript
 description: Visão geral do SDK do JavaScript
 exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -29,15 +29,15 @@ O fluxo de direitos de autenticação geral do Adobe Primetime é coberto na [Fl
 
 ## Criando a caixa de diálogo Seleção de MVPD {#creating-the-mvpd-selection-dialog}
 
-Para que um usuário faça logon em seu MVPD e se torne autenticado, sua página ou player deve fornecer uma maneira de o usuário identificar seu MVPD. Uma versão padrão de uma caixa de diálogo de seleção MVPD é fornecida para desenvolvimento. Para uso em produção, você deve implementar seu próprio seletor de MVPD. 
+Para que um usuário faça logon em seu MVPD e se torne autenticado, sua página ou player deve fornecer uma maneira de o usuário identificar seu MVPD. Uma versão padrão de uma caixa de diálogo de seleção MVPD é fornecida para desenvolvimento. Para uso em produção, você deve implementar seu próprio seletor de MVPD.
 
-Se você já souber quem é o provedor do cliente, poderá [definir o MVPD de forma programática](/help/authentication/home.md), sem interação com o usuário. A técnica é a mesma, mas ignora a etapa de chamar a caixa de diálogo Seletor de provedor e pedir ao cliente para selecionar seu MVPD.
+Se você já souber quem é o provedor do cliente, poderá [definir o MVPD de forma programática](/help/authentication/home.md), sem interação com o usuário. A técnica é a mesma, mas ignora a etapa de chamar a caixa de diálogo Seletor de provedor e pedir ao cliente para selecionar seu MVPD.
 
 ## Exibindo o Provedor de Serviços {#displaying-the-service-provider}
 
 A amostra de código a seguir demonstra como descobrir e exibir o provedor de serviços do cliente atual:
 
- **HTML** - Essa página adiciona uma seção à página que exibe o provedor escolhido pelo cliente, se ele já estiver conectado:
+**HTML** - Essa página adiciona uma seção à página que exibe o provedor escolhido pelo cliente, se ele já estiver conectado:
 
 ```HTML
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -74,7 +74,7 @@ A amostra de código a seguir demonstra como descobrir e exibir o provedor de se
     </body>
     </html>
 ```
- 
+
 
 **JavaScript** Esse arquivo JavaScript consulta o Ativador de acesso do provedor atual se o usuário já estiver conectado e exibe o resultado na seção da página reservada para ele. Também implementa uma caixa de diálogo do seletor de MVPD:
 
@@ -197,13 +197,13 @@ A amostra de código a seguir demonstra como descobrir e exibir o provedor de se
 
 ## Efetuando logout {#logout}
 
-Chame `logout()` para iniciar o processo de logout. Esse método não aceita argumentos. Ele faz logoff do usuário atual, limpando todas as informações de autenticação e autorização para esse usuário e excluindo todos os tokens AuthN e AuthZ do sistema local.
+Chame `logout()` para iniciar o processo de logout. Esse método não aceita argumentos. Ele faz logoff do usuário atual, limpando todas as informações de autenticação e autorização para esse usuário e excluindo todos os tokens AuthN e AuthZ do sistema local.
 
 Há alguns casos em que o reprodutor não é responsável por gerenciar logouts de usuário:
 
- 
 
-- **Quando o logout é iniciado a partir de um site que não está integrado à autenticação da Adobe Primetime.** Nesse caso, o MVPD pode chamar o serviço de Logout único da autenticação do Adobe Primetime por meio de um redirecionamento do navegador. (No momento, não há suporte para invocar o SLO por meio de uma chamada backchannel.)
+
+- **Quando o logout é iniciado a partir de um site que não está integrado à autenticação da Adobe Primetime.** Nesse caso, o MVPD pode chamar o serviço de Logout único da autenticação do Adobe Primetime por meio de um redirecionamento do navegador. (No momento, não há suporte para invocar o SLO por meio de uma chamada backchannel.)
 
 >[!NOTE]
 >

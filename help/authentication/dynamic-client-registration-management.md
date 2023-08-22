@@ -2,7 +2,7 @@
 title: Gerenciamento dinâmico de registro de clientes
 description: Gerenciamento dinâmico de registro de clientes
 exl-id: 2c3ebb0b-c814-4b9e-af57-ce1403651e9e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-Com a adoção generalizada da [Guias Personalizadas Do Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target_blank} e [Controlador de visualização do Apple Safari](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blank} nos aplicativos de nossos clientes, estamos atualizando o fluxo de autenticação do usuário na autenticação da Adobe Primetime. Mais especificamente, não podemos mais atingir o objetivo de manter o estado para que o fluxo de agente do usuário de autenticação de um assinante MVPD possa ser rastreado entre os redirecionamentos. Isso foi feito anteriormente usando cookies HTTP. Essa limitação é o driver para começar a migrar todas as APIs para o OAuth 2.0 [RFC6749](https://tools.ietf.org/html/rfc6749){target_blank}.
+Com a adoção generalizada da [Guias Personalizadas Do Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target_blanck} e [Controlador de visualização do Apple Safari](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blanck} nos aplicativos de nossos clientes, estamos atualizando o fluxo de autenticação do usuário na autenticação da Adobe Primetime. Mais especificamente, não podemos mais atingir o objetivo de manter o estado para que o fluxo de agente do usuário de autenticação de um assinante MVPD possa ser rastreado entre os redirecionamentos. Isso foi feito anteriormente usando cookies HTTP. Essa limitação é o driver para começar a migrar todas as APIs para o OAuth 2.0 [RFC6749](https://tools.ietf.org/html/rfc6749){target_blanck}.
 
 Com essa atualização, os Clientes de autenticação Adobe se tornam clientes OAuth 2.0 e um servidor de autorização OAuth 2.0 personalizado é implantado para atender às necessidades do Serviço de autenticação da Adobe Primetime.
 
@@ -63,13 +63,13 @@ Como visto na imagem abaixo, os campos que você deve preencher são:
 
 * **Nome do aplicativo** - o nome do aplicativo
 
-* **Atribuído ao canal** - o nome do seu canal, t</span>ao qual este aplicativo está vinculado. A configuração padrão na máscara suspensa é **Todos os canais.** A interface permite selecionar um canal ou todos os canais.
+* **Atribuído ao canal** - o nome do seu canal, t</span>ao qual este aplicativo está vinculado. A configuração padrão na máscara suspensa é **Todos os canais.** A interface permite selecionar um canal ou todos os canais.
 
-* **Versão do aplicativo** - por padrão, isso é definido como &quot;1.0.0&quot;, mas recomendamos que você o modifique com sua própria versão do aplicativo. Como prática recomendada, se você decidir alterar a versão do aplicativo, reflita-a criando um novo aplicativo registrado para ela.
+* **Versão do aplicativo** - por padrão, isso é definido como &quot;1.0.0&quot;, mas recomendamos que você o modifique com sua própria versão do aplicativo. Como prática recomendada, se você decidir alterar a versão do aplicativo, reflita-a criando um novo aplicativo registrado para ela.
 
-* **Plataformas de aplicativos** - as plataformas com as quais o aplicativo será vinculado. Você tem a opção de selecionar todos eles ou vários valores.
+* **Plataformas de aplicativos** - as plataformas com as quais o aplicativo será vinculado. Você tem a opção de selecionar todos eles ou vários valores.
 
-* **Nomes de domínio** - os domínios aos quais o aplicativo será vinculado. Os domínios na lista suspensa são uma seleção unificada de todos os domínios de todos os canais. Você tem a opção de selecionar vários domínios na lista. O significado dos domínios são URLs de redirecionamento [RFC6749](https://tools.ietf.org/html/rfc6749). No processo de registro do cliente, o aplicativo cliente pode solicitar permissão para usar um URL de redirecionamento para a finalização do fluxo de autenticação. Quando um aplicativo cliente solicita um URL de redirecionamento específico, ele é validado em relação aos domínios da lista de permissões neste Aplicativo registrado associado à instrução do software.
+* **Nomes de domínio** - os domínios aos quais o aplicativo será vinculado. Os domínios na lista suspensa são uma seleção unificada de todos os domínios de todos os canais. Você tem a opção de selecionar vários domínios na lista. O significado dos domínios são URLs de redirecionamento [RFC6749](https://tools.ietf.org/html/rfc6749). No processo de registro do cliente, o aplicativo cliente pode solicitar permissão para usar um URL de redirecionamento para a finalização do fluxo de autenticação. Quando um aplicativo cliente solicita um URL de redirecionamento específico, ele é validado em relação aos domínios da lista de permissões neste Aplicativo registrado associado à instrução do software.
 
 
 ![](assets/new-reg-app.png)
@@ -94,7 +94,7 @@ Como mostrado abaixo, o que é um pouco diferente aqui, em comparação com a me
 
 Após a criação do aplicativo registrado, existe a possibilidade de obter uma declaração de software para apresentar o servidor de autorização como parte de uma solicitação.
 
-Isso pode ser feito navegando até o Programador ou Canal para o qual os aplicativos registrados foram criados, onde estão listados. 
+Isso pode ser feito navegando até o Programador ou Canal para o qual os aplicativos registrados foram criados, onde estão listados.
 
 Como ilustrado abaixo , cada entrada na lista será identificada por um nome, versão e símbolos para plataformas às quais foi vinculada.
 
@@ -124,7 +124,7 @@ O nome do arquivo é identificado exclusivamente ao prefixá-lo com &quot;softwa
 
 Observe que, para o mesmo aplicativo registrado, serão recebidas instruções de software diferentes sempre que o botão de download for clicado, mas isso não invalida as instruções de software obtidas anteriormente para esse aplicativo. Isso acontece porque elas são geradas no local, por solicitação de ação.
 
-Há um **limitação** em relação à ação de download. Se for solicitada uma instrução de software clicando no botão &quot;Download&quot; logo após a criação do aplicativo registrado e isso ainda não tiver sido salvo e o json de configuração não tiver sido sincronizado, a seguinte mensagem de erro aparecerá na parte inferior da página. 
+Há um **limitação** em relação à ação de download. Se for solicitada uma instrução de software clicando no botão &quot;Download&quot; logo após a criação do aplicativo registrado e isso ainda não tiver sido salvo e o json de configuração não tiver sido sincronizado, a seguinte mensagem de erro aparecerá na parte inferior da página.
 
 ![](assets/error-sw-statement-notready.png)
 
