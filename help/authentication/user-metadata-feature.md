@@ -2,9 +2,9 @@
 title: Recurso de metadados do usuário
 description: Recurso de metadados do usuário
 exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 36cf160c42bb68412c71e100a7d4fb3ca9c58d89
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1649'
 ht-degree: 0%
 
 ---
@@ -212,10 +212,9 @@ A lista de tipos de metadados do usuário será expandida à medida que novos ti
     }
 ```
 
-
-Para obter detalhes sobre sua plataforma específica ou para obter alguns insights sobre como os metadados do usuário são processados no lado do MVPD, consulte o link apropriado em Informações Relacionadas abaixo.
-
 <!---
+
+For details on your particular platform, or to gain some insight into how User Metadata is processed on the MVPD side, see the appropriate link in Related Information below.  
 
 ## Related Information {#related}
 
