@@ -2,7 +2,7 @@
 title: Página de registro
 description: Página de registro
 exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 58657dda8528e9f33b3cee4a84904cc5ae28d81f
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
@@ -129,9 +129,9 @@ Retorna o Código de registro gerado aleatoriamente e o URI da página de logon.
 | registrationURL | URL do Aplicativo Web de Logon a ser exibido para o usuário final |
 
 {style="table-layout:auto"}
+
+
 </br>
-
-
 
 ### XSD da mensagem de erro  {#error-message}
 
