@@ -2,7 +2,7 @@
 title: Visão geral técnica do Amazon FireOS
 description: Visão geral técnica do Amazon FireOS
 exl-id: 939683ee-0dd9-42ab-9fde-8686d2dc0cd0
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4691e769e1fee51507550c8e1fbecdcdff7e44eb
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 0%
@@ -80,7 +80,7 @@ Após a autenticação e autorização bem-sucedidas, a autenticação do Primet
 
 #### Token de autenticação
 
-- **O AccessEnabler 1.10.1 para FireOS ** é baseado no AccessEnabler para Android 1.9.1 - Esse SDK introduz um novo método de armazenamento de token, permitindo vários buckets de Programador-MVPD e, portanto, vários tokens de autenticação.
+- **AccessEnabler 1.10.1 para FireOS** é baseado no AccessEnabler para Android 1.9.1 - Esse SDK introduz um novo método de armazenamento de token, permitindo vários buckets de Programador-MVPD e, portanto, vários tokens de autenticação.
 
 #### Token de autorização
 
