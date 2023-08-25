@@ -2,7 +2,7 @@
 title: Visão geral do Android SDK
 description: Visão geral do Android SDK
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4b858a06080ec221c60548e2a2a0f3b6010ede15
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Após a autenticação e autorização bem-sucedidas, a autenticação do Primet
 
 #### Token de autenticação
 
-- **AccessEnabler 1.6 e posterior** - **** A maneira como os tokens de autenticação são armazenados em cache no dispositivo depende do &quot;**Autenticação por solicitante&quot;** sinalizador associado ao MVPD atual:
+- **AccessEnabler 1.6 e posterior** - A maneira como os tokens de autenticação são armazenados em cache no dispositivo depende da &quot;**Autenticação por solicitante&quot;** sinalizador associado ao MVPD atual:
 
 
 1. Se o recurso &quot;Autenticação por solicitante&quot; for *desabilitado*, um único token de autenticação será armazenado localmente na área de trabalho global. Esse token será compartilhado entre todos os aplicativos integrados ao MVPD atual.
