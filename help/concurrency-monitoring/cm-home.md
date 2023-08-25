@@ -1,9 +1,9 @@
 ---
 title: Introdução ao monitoramento de simultaneidade
 description: Introdução ao monitoramento de simultaneidade
-source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+source-git-commit: 9bc4298edb22d72131156bf92717284866728ec5
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ Para saber mais sobre [Procedimentos de escalonamento](/help/concurrency-monitor
 
 O monitoramento de simultaneidade permite que provedores de identidade e conteúdo (MVPDs e programadores) definam e apliquem limites sobre o uso simultâneo em vários aplicativos (possivelmente de propriedade de vários parceiros).
 
-**A API de monitoramento de simultaneidade está hospedada no seguinte local:
+**A API de monitoramento de simultaneidade está hospedada no seguinte local:**
 
-* V2.0: [API de monitoramento de concorrência](http://docs.adobeptime.io/cm-api-v2/)**
+* **V2.0: [API de monitoramento de concorrência](http://docs.adobeptime.io/cm-api-v2/)**
 
 Para se inscrever no serviço de Monitoramento de simultaneidade, entre em contato com [Equipe de suporte](mailto:tve-support@adobe.com). Especifique as seguintes informações e nossa equipe terá o prazer de ajudá-lo:
 
