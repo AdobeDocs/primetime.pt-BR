@@ -2,7 +2,7 @@
 title: Guia de integração do Amazon FireOS
 description: Guia de integração do Amazon FireOS
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: e5e42763fecae437cfc34bae98a5d2bd5adc4643
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 0%
@@ -198,7 +198,6 @@ A variável `event` indica qual evento de direito ocorreu;o parâmetro `data` pa
 
 ### F. Fluxo de logout {#logout_flow}
 
-1. Chame [`logout()`](#$logout) para desconectar o usuário.\
-   O AccessEnabler limpa todos os valores e tokens em cache obtidos pelo usuário para o MVPD atual em todos os solicitantes que compartilham o logon por meio do Logon único. Depois de limpar o cache, o AccessEnabler faz uma chamada de servidor para limpar as sessões do lado do servidor.  Como a chamada do servidor pode resultar em um redirecionamento SAML para o IdP (isso permite a limpeza da sessão no lado do IdP), essa chamada deve seguir todos os redirecionamentos. Por esse motivo, essa chamada será tratada em um controle WebView, invisível para o usuário.
+1. Chame [`logout()`](#$logout) para desconectar o usuário. O AccessEnabler limpa todos os valores e tokens em cache obtidos pelo usuário para o MVPD atual em todos os solicitantes que compartilham o logon por meio do Logon único. Depois de limpar o cache, o AccessEnabler faz uma chamada de servidor para limpar as sessões do lado do servidor.  Como a chamada do servidor pode resultar em um redirecionamento SAML para o IdP (isso permite a limpeza da sessão no lado do IdP), essa chamada deve seguir todos os redirecionamentos. Por esse motivo, essa chamada será tratada em um controle WebView, invisível para o usuário.
 
    **Nota:** O fluxo de logout difere do fluxo de autenticação na medida em que o usuário não é obrigado a interagir com o WebView de nenhuma forma. Assim, é possível (e recomendado) tornar o controle do WebView invisível (ou seja: oculto) durante o processo de logout.
