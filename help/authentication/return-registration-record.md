@@ -2,7 +2,7 @@
 title: Retornar Registro de Registro
 description: Retornar Registro de Registro
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
+source-git-commit: 9e1d178e00c49cab7bcf9693c3b16234cb29ba4c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 * Produção - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Estágios - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-</br>
+
 
 
 ## Descrição {#description}
@@ -37,7 +37,7 @@ Retorna o registro do código de registro contendo o código de registro UUID, o
 
 
 
-<div>
+
 
 
 | Endpoint | Chamado  </br>Por | Entrada   </br>Params | HTTP  </br>Método | Resposta | HTTP  </br>Resposta |
@@ -46,14 +46,16 @@ Retorna o registro do código de registro contendo o código de registro UUID, o
 
 {style="table-layout:auto"}
 
-</br>
+
+
 
 | Parâmetro de entrada | Descrição |
 | --- | --- |
 | solicitante | O requestorId do Programador para o qual esta operação é válida. |
 | código de registro | O valor do código de registro que seria exibido no dispositivo de transmissão (a ser inserido no fluxo de autenticação). |
 
-</br>
+
+
 
 ## Esquema XML de resposta {#response-xml-schema}
 
