@@ -3,9 +3,9 @@ title: Implantar acesso ao Adobe
 description: Implantar acesso ao Adobe
 copied-description: true
 exl-id: bebf02d5-897e-4007-8c5c-1c91186fdc51
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
@@ -68,4 +68,4 @@ Para saber mais sobre o conteúdo de pacotes, consulte *Protegendo conteúdo*. P
 
 Para permitir que os consumidores acessem e visualizem conteúdo, desenvolva um aplicativo de reprodução de vídeo usando o Flash Player ou o Adobe AIR. Depois de desenvolver um aplicativo de reprodução de vídeo, você deve implantá-lo nos consumidores. Se você estiver desenvolvendo um aplicativo usando o Flash Player, hospede-o no site da empresa. Se você estiver desenvolvendo um aplicativo usando o Adobe® AIR®, publique o instalador do aplicativo do AIR para que os consumidores possam baixar e instalar o aplicativo em seus computadores.
 
-Para saber mais sobre o desenvolvimento de aplicativos de reprodução de vídeo personalizados para uso com o Adobe Access, consulte o capítulo &quot;Trabalho com vídeo&quot; em [Guia do desenvolvedor do ActionScript 3.0](https://help.adobe.com/en_US/as3/dev/WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html)*, *o [Centro de tecnologia de vídeo Adobe](https://www.adobe.com/devnet/video/), e o Open Source Media Framework.
+Para saber mais sobre o desenvolvimento de aplicativos de reprodução de vídeo personalizados para uso com o Adobe Access, consulte o capítulo &quot;Trabalho com vídeo&quot; em [Guia do desenvolvedor do ActionScript 3.0](https://help.adobe.com/en_US/as3/dev/WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html).

@@ -3,9 +3,9 @@ title: Ajuda da programação do Adobe Primetime
 description: Ajuda da programação do Adobe Primetime
 copied-description: true
 exl-id: 4abaa7a7-4302-4471-88fd-a23eb6af6175
-source-git-commit: 5619a2170d85871c7a92221181cd05e929ce6ce2
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -38,5 +38,3 @@ Confira para obter mais informações sobre o [versão de lançamento atual](tvs
 * [Autenticação do Primetime](https://tve.helpdocsonline.com/home)
 
 * [Fóruns do Adobe Primetime DRM](https://forums.adobe.com/community/adobe_access)
-
-* [Recursos do desenvolvedor do Adobe Primetime](https://www.adobe.com/devnet/primetime.html)

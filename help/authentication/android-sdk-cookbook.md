@@ -2,9 +2,9 @@
 title: Guia do Android SDK
 description: Guia do Android SDK
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 9fcbb5285ffa85306c0e18337da9564ac862a6eb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ A atividade de rede do AccessEnabler ocorre em um thread diferente, de modo que 
 
    **Nota:** Nesse momento, o usuário tem a oportunidade de cancelar o fluxo de autenticação. Se isso ocorrer, a camada da interface do usuário será responsável por informar o AccessEnabler sobre esse evento, chamando `setSelectedProvider()` com `null` como parâmetro. Isso permite que o AccessEnabler limpe seu estado interno e redefina o Fluxo de autenticação.
 
-1. Após um logon bem-sucedido do usuário, a camada do aplicativo detecta o carregamento de um &quot;URL de redirecionamento personalizado&quot; (ou seja: [http://adobepass.android.app](http://adobepass.android.app/)). Na verdade, esse URL personalizado é um URL inválido que não se destina ao carregamento do WebView. É um sinal de que o Fluxo de Autenticação foi concluído e que o WebView precisa ser fechado.
+1. Após um logon bem-sucedido do usuário, a camada do aplicativo detecta o carregamento de um &quot;URL de redirecionamento personalizado&quot; (ou seja: `http://adobepass.android.app`). Na verdade, esse URL personalizado é um URL inválido que não se destina ao carregamento do WebView. É um sinal de que o Fluxo de Autenticação foi concluído e que o WebView precisa ser fechado.
 
 1. Fechar o controle WebView e chamar `getAuthenticationToken()`, que instrui o AccessEnabler a recuperar o token de autenticação do servidor back-end.
 
@@ -207,7 +207,7 @@ A atividade de rede do AccessEnabler ocorre em um thread diferente, de modo que 
 
    a. Seguindo o mesmo padrão do workflow de autenticação, o domínio AccessEnabler faz uma solicitação à camada de aplicativo da interface do usuário (por meio da`navigateToUrl()` callback) para criar um controle WebView e instruir esse controle a carregar o URL do endpoint de logout no servidor backend.
 
-   b. Novamente, a interface do usuário deve monitorar a atividade do controle WebView e detectar o momento em que o controle, à medida que passa por vários redirecionamentos, carrega o URL personalizado do aplicativo (ou seja: [http://adobepass.android.app/](http://adobepass.android.app/)). Depois que esse evento ocorrer, a camada de aplicativo da interface do usuário fechará o WebView e o processo de logout será concluído.
+   b. Novamente, a interface do usuário deve monitorar a atividade do controle WebView e detectar o momento em que o controle, à medida que passa por vários redirecionamentos, carrega o URL personalizado do aplicativo (ou seja: `http://adobepass.android.app/`). Depois que esse evento ocorrer, a camada de aplicativo da interface do usuário fechará o WebView e o processo de logout será concluído.
 
    **Nota:** O fluxo de logout difere do fluxo de autenticação na medida em que o usuário não é obrigado a interagir com o WebView de nenhuma forma. A camada de aplicativo da interface do usuário usa uma WebView para verificar se todos os redirecionamentos estão sendo seguidos. Assim, é possível (e recomendado) tornar o controle do WebView invisível (ou seja, oculto) durante o processo de logout.
 

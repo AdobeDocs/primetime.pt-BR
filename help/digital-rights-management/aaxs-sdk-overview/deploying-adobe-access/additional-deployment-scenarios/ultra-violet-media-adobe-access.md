@@ -2,9 +2,9 @@
 description: O Adobe Access pode ser usado com outras soluções de transmissão de conteúdo de terceiros para configurar um ecossistema de distribuição de mídia completo e seguro, baseado em DRM.
 title: Mídia UltraViolet e Acesso Adobe
 exl-id: cca476a4-1961-46d8-aad4-bc7c996d7b02
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 O Adobe Access pode ser usado com outras soluções de transmissão de conteúdo de terceiros para configurar um ecossistema de distribuição de mídia completo e seguro, baseado em DRM.
 
-UltraVioleta ( [](https://www.uvvu.com/)) é um sistema de autenticação de direitos digitais e distribuição baseada em nuvem que permite aos consumidores de conteúdo de entretenimento da casa digital transmitir e baixar conteúdo adquirido por meio de várias plataformas e dispositivos. O conteúdo UltraViolet será baixado (ou transmitido) em um formato de arquivo comum (CFF) usando a Criptografia comum (CENC).
+UltraViolet é um sistema de autenticação de direitos digitais e distribuição baseada em nuvem que permite aos consumidores de conteúdo de entretenimento da casa digital transmitir e fazer download de conteúdo adquirido através de várias plataformas e dispositivos. O conteúdo UltraViolet será baixado (ou transmitido) em um formato de arquivo comum (CFF) usando a Criptografia comum (CENC).
 
 É fácil configurar um sistema UltraViolet juntamente com o Adobe Access. O caso de uso a seguir descreve o comportamento do fluxo de conteúdo:
 

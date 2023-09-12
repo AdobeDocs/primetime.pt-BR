@@ -2,9 +2,9 @@
 description: Os principais componentes do Adobe Access consistem em um SDK Java e nos ambientes de tempo de execução de cliente Flash Player e Adobe AIR.
 title: SDK do Java, Flash Player e cliente Adobe AIR
 exl-id: 2df4da13-8df9-442b-8638-317c41d62fbe
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Os principais componentes do Adobe Access consistem em um SDK Java e nos ambient
 
 Para obter mais informações sobre como configurar o SDK, consulte Configuração do SDK em *Utilização do SDK do Adobe Access para proteção de conteúdo.*
 
-O SDK de acesso do Adobe permite desenvolver uma solução de gerenciamento de direitos digitais que se integra à infraestrutura comercial existente da sua organização, como gerenciamento de conteúdo, cobrança e sistemas de controle de acesso do usuário. O Flash Player e o Adobe AIR permitem criar e implantar facilmente aplicativos através dos quais os consumidores podem acessar e visualizar grandes bibliotecas de conteúdo digital.
+O SDK de acesso do Adobe permite desenvolver uma solução de gerenciamento de direitos digitais que se integra à infraestrutura comercial existente de sua organização, como gerenciamento de conteúdo, cobrança e sistemas de controle de acesso do usuário. O Flash Player e o Adobe AIR permitem criar e implantar facilmente aplicativos através dos quais os consumidores podem acessar e visualizar grandes bibliotecas de conteúdo digital.
 
 ## SDK de acesso do Adobe {#section_6AA3DC7BAE354472AE179BBC9AF6BD27}
 
@@ -35,11 +35,11 @@ Essas APIs são usadas para definir direitos e preparar conteúdo para distribui
 
 * Gerenciamento de políticas
 
-   A API de gerenciamento de política é usada para criar e modificar políticas a serem aplicadas ao conteúdo. As políticas podem ser criadas ou atualizadas, incluindo a obtenção/configuração de todas as regras de uso e a permissão de parâmetros adicionais em um namespace personalizado.
+  A API de gerenciamento de política é usada para criar e modificar políticas a serem aplicadas ao conteúdo. As políticas podem ser criadas ou atualizadas, incluindo a obtenção/configuração de todas as regras de uso e a permissão de parâmetros adicionais em um namespace personalizado.
 
 * Empacotamento de conteúdo
 
-   A API de pacote de conteúdo é usada para criptografar o conteúdo e recuperar metadados do conteúdo do pacote.
+  A API de pacote de conteúdo é usada para criptografar o conteúdo e recuperar metadados do conteúdo do pacote.
 
 ## APIs Java para emissão de licenças {#java-apis-for-issuing-licenses}
 
@@ -47,15 +47,15 @@ Essas APIs são usadas quando um cliente solicita uma licença do servidor. O SD
 
 * Autenticação
 
-   A API de autenticação pode ser usada para lidar com solicitações de autenticação e gerar tokens de autenticação.
+  A API de autenticação pode ser usada para lidar com solicitações de autenticação e gerar tokens de autenticação.
 
 * Geração e aquisição de licença
 
-   A API de geração e aquisição de licença é usada para gerar uma licença para o usuário.
+  A API de geração e aquisição de licença é usada para gerar uma licença para o usuário.
 
 * Suporte para clientes e conteúdo do Adobe AIR versão 1.5
 
-   Para fins de compatibilidade com versões anteriores, o SDK tem APIs para lidar com solicitações de aplicativos do AIR criadas para uso com clientes AIR versão 1.5 e anteriores e conteúdo protegido.
+  Para fins de compatibilidade com versões anteriores, o SDK tem APIs para lidar com solicitações de aplicativos do AIR criadas para uso com clientes AIR versão 1.5 e anteriores e conteúdo protegido.
 
 ## Implementação de referência {#reference-implementation}
 
@@ -76,8 +76,6 @@ Para obter mais informações sobre o Flash Player, visite: [www.adobe.com/go/fl
 O Adobe AIR é um tempo de execução de vários sistemas operacionais que permite que os produtores de conteúdo estendam seus investimentos existentes na Web para o desktop, criando aplicativos multimídia personalizados. Baseado em tecnologias comprovadas e abertas, ele oferece uma maneira confiável e simplificada para as empresas desenvolverem e implantarem aplicativos personalizados que podem ser confiáveis para fornecer uma experiência do usuário mais segura e agradável. O Adobe AIR permite que as empresas integrem facilmente mídia avançada para criar uma experiência do usuário mais imersiva e interativa. Ele permite que os desenvolvedores usem ferramentas familiares, como o software HTML, JavaScript, Flash ou Adobe® Flex®, para implantar sua combinação exclusiva de aplicativos avançados de Internet no Windows, Macintosh ou Linux.
 
 As empresas têm controle total da interface do usuário e podem projetar uma experiência do usuário para refletir e reforçar sua marca. Com suporte integrado para reprodução de conteúdo protegido com o SDK de acesso do Adobe, o Adobe AIR ajuda a criar cadeias de distribuição de conteúdo personalizadas e completas.
-
-Para obter mais informações sobre o Adobe AIR, visite: [www.adobe.com/go/air](https://www.adobe.com/go/air)
 
 ## Aplicativos nativos iOS e Android {#native-ios-and-android-applications}
 
