@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Autenticação do Primetime
 user-guide-description: A Autenticação do Primetime é uma solução de direitos da TV Everywhere, que fornece uma estrutura modular para determinar se alguém que solicita acesso a um recurso tem direito a ele.
-source-git-commit: 90d6c78791f2fd1bf80979b105d42e019686aacd
+source-git-commit: fbc0e710d205532d268213ca0bdc81449e9c9835
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,7 @@ ht-degree: 0%
    + [Notas de versão da Autenticação do Primetime 2.62.1](auth-rn-2621.md)
    + [Notas de versão do Primetime Authentication iOS / tvOS 3.7.0](authn-rn-ios-tvos-370.md)
    + [Notas de versão do Primetime Authentication iOS / tvOS 3.8.1](authn-rn-ios-tvos-381.md)
+   + [Notas de versão do Primetime Authentication Android 3.7.3](authn-rn-android-373.md)
 + Notas técnicas {#tech-notes}
    + SDKs de autenticação do Primetime {#primetime-authentication-sdks}
       + [Perguntas e respostas sobre certificados](certificates-qa.md)
