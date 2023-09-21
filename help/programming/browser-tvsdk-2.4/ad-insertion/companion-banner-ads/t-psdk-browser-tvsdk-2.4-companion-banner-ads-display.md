@@ -1,8 +1,7 @@
 ---
 description: Para exibir anúncios de banner, você precisa criar instâncias de banner e permitir que o TVSDK do navegador acompanhe eventos relacionados a anúncios.
 title: Exibir anúncios de banner
-exl-id: 331c10a4-ae31-4d3b-aaca-9497e2970ecf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%

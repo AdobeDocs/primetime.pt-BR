@@ -1,8 +1,7 @@
 ---
 description: O Adobe Offline Packager assume como entrada o conteúdo mp4 não criptografado.
 title: Empacotar o conteúdo com o Adobe Offline Packager
-exl-id: 4433d76a-57c0-41e6-b358-5408b0fe87e7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%

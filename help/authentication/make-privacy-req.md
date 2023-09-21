@@ -1,8 +1,7 @@
 ---
 title: Como fazer uma solicitação de privacidade
 description: Como fazer uma solicitação de privacidade
-exl-id: abb21306-98d6-4899-914a-bdfa85cbd204
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
@@ -222,7 +221,7 @@ Para uma solicitação Delete:
 Há duas opções para os clientes enviarem solicitações de privacidade para o Adobe:
 
 * **manualmente** - usando [Interface do usuário do Privacy Service](#privacy-service-ui)
-* **automaticamente** - usando [API PRIVACY SERVICE ](#privacy-service-api)
+* **automaticamente** - usando [API PRIVACY SERVICE](#privacy-service-api)
 
 ### Ao usar a interface do Privacy Service {#privacy-service-ui}
 

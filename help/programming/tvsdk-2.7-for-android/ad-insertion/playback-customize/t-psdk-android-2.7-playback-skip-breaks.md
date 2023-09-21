@@ -1,8 +1,7 @@
 ---
 description: Por padrão, o TVSDK força um ad break a ser reproduzido quando o usuário busca um ad break. Você pode personalizar o comportamento para ignorar um intervalo comercial se o tempo decorrido desde a conclusão de um intervalo anterior estiver dentro de um determinado número de minutos.
 title: Ignorar ad breaks por um período
-exl-id: 13e34c05-2c43-4459-88ec-5c6cfa8c363d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -22,16 +21,16 @@ Para substituir o comportamento padrão de ad break do TVSDK, é possível esten
 * PLAY
 * IGNORAR
 
-   >[!NOTE]
-   >
-   >A política IGNORAR ad break pode não funcionar conforme esperado para transmissões ao vivo quando um anúncio está presente no ponto ao vivo. Por exemplo, para uma exibição antes da exibição, IGNORAR causará uma busca até o fim do ad break, que pode ser maior do que o ponto ativo. Nesse caso, o TVSDK pode ir até o meio de um anúncio.
+  >[!NOTE]
+  >
+  >A política IGNORAR ad break pode não funcionar conforme esperado para transmissões ao vivo quando um anúncio está presente no ponto ao vivo. Por exemplo, para uma exibição antes da exibição, IGNORAR causará uma busca até o fim do ad break, que pode ser maior do que o ponto ativo. Nesse caso, o TVSDK pode ir até o meio de um anúncio.
 
 * REMOVER_APÓS
 * REMOVER
 
-   >[!NOTE]
-   >
-   >A variável `REMOVE` a política ad break está programada para ser descontinuada. O Adobe recomenda que você use o `SKIP` política de ad break em vez de `REMOVE`.
+  >[!NOTE]
+  >
+  >A variável `REMOVE` a política ad break está programada para ser descontinuada. O Adobe recomenda que você use o `SKIP` política de ad break em vez de `REMOVE`.
 
 O exemplo a seguir de um seletor de política de anúncio personalizado ignora anúncios nos próximos cinco minutos (tempo do relógio de parede) depois que um usuário assiste a um ad break.
 

@@ -1,8 +1,7 @@
 ---
 description: Para atualizar um servidor compatível com a versão 3.0 do Servidor de licenças de implementação de referência ou com o Packager de pasta monitorada, é necessário substituir os arquivos .war que foram implantados em um Servidor de aplicativos pelos arquivos que foram incluídos no Servidor de implementação de referência do Adobe Primetime DRM.
 title: Atualizar implantações existentes
-exl-id: 83edaf0a-e527-470d-8b8d-23e5ba86b039
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%

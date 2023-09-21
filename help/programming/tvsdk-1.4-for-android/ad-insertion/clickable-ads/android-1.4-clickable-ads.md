@@ -1,8 +1,7 @@
 ---
 description: O TVSDK fornece informações para que você possa agir em anúncios de click-through. Ao criar a interface do usuário do player, é necessário decidir como responder quando um usuário clicar em um anúncio clicável.
 title: Anúncios clicáveis
-exl-id: eb223f42-1ad0-4cdf-a94e-7405a583da6e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%

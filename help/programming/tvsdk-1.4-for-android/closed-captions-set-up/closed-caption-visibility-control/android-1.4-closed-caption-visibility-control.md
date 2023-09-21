@@ -1,8 +1,7 @@
 ---
 description: É possível controlar a visibilidade de legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida. Se você alterar a faixa atual, a configuração de visibilidade permanecerá a mesma.
 title: Controlar visibilidade de legendas ocultas
-exl-id: d9428744-1700-4917-b334-d6e0446eaf37
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
@@ -21,13 +20,13 @@ ht-degree: 0%
 >
 >Os valores de visibilidade para as legendas ocultas são definidos em `MediaPlayer.Visibility`.
 >
->
-```java
+>```java
 >enum Visibility { 
 >       VISIBLE,  
 >       INVISIBLE 
 >}
 >```
+>
 
 1. Aguarde o MediaPlayer ter pelo menos o estado PREPARADO (consulte [Aguardar um estado válido](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
 1. Para obter a configuração de visibilidade atual para legendas ocultas, use o método Getter no MediaPlayer, que retorna um valor de visibilidade.

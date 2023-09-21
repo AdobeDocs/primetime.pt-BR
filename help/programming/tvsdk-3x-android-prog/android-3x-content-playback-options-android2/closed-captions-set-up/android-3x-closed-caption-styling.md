@@ -1,8 +1,7 @@
 ---
 description: Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe TextFormat, que define o estilo das legendas ocultas exibidas pelo reprodutor.
 title: Controlar estilo de legendas ocultas
-exl-id: 43c1391d-a937-464f-99fd-fe8deda7da44
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '842'
 ht-degree: 0%
@@ -53,90 +52,89 @@ Essa classe encapsula informações de estilo de legendas ocultas, como tipo de 
 
    * Obter todas as configurações de estilo com `MediaPlayer.getCCStyle` O valor de retorno é uma instância do `TextFormat` interface.
 
-      ```java
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws MediaPlayerException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws MediaPlayerException;
-      ```
+     ```java
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws MediaPlayerException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws MediaPlayerException;
+     ```
 
    * Obtenha as configurações, uma de cada vez, por meio da `TextFormat` métodos getter da interface.
 
-      ```java
-      public java.lang.String getFontColor(); 
-      public java.lang.String getBackgroundColor(); 
-      public java.lang.String getFillColor(); // retrieve the font fill color 
-      public java.lang.String getEdgeColor(); // retrieve the font edge color 
-      public TextFormat.Size getSize(); // retrieve the font size 
-      public TextFormat.FontEdge getFontEdge(); // retrieve the font edge type 
-      public TextFormat.Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity(); 
-      public java.lang.String getBottomInset(java.lang.String bi); 
-      public java.lang.String getSafeArea(java.lang.String sa);
-      ```
+     ```java
+     public java.lang.String getFontColor(); 
+     public java.lang.String getBackgroundColor(); 
+     public java.lang.String getFillColor(); // retrieve the font fill color 
+     public java.lang.String getEdgeColor(); // retrieve the font edge color 
+     public TextFormat.Size getSize(); // retrieve the font size 
+     public TextFormat.FontEdge getFontEdge(); // retrieve the font edge type 
+     public TextFormat.Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity(); 
+     public java.lang.String getBottomInset(java.lang.String bi); 
+     public java.lang.String getSafeArea(java.lang.String sa);
+     ```
 
 1. Para alterar as configurações de estilo, siga um destes procedimentos:
 
    * Usar o método setter `MediaPlayer.setCCStyle`, transmitindo uma instância do `TextFormat` interface:
 
-      ```java
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws MediaPlayerException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
-      ```
+     ```java
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws MediaPlayerException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
+     ```
 
    * Use o `TextFormatBuilder` classe, que define métodos setter individuais.
 
-      A variável `TextFormat` A interface define um objeto imutável para que haja apenas métodos Getter e nenhum setters. É possível definir os parâmetros de estilo de legenda oculta somente com a `TextFormatBuilder` classe:
+     A variável `TextFormat` A interface define um objeto imutável para que haja apenas métodos Getter e nenhum setters. É possível definir os parâmetros de estilo de legenda oculta somente com a `TextFormatBuilder` classe:
 
-      ```java
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(String backgroundColor) 
-      public void setFillColor(String fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(String edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(String fontColor) 
-      public void setBottomInset(String bi) 
-      public void setSafeArea(String sa) 
-      public void setTreatSpaceAsAlphaNum(bool)
-      ```
+     ```java
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(String backgroundColor) 
+     public void setFillColor(String fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(String edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(String fontColor) 
+     public void setBottomInset(String bi) 
+     public void setSafeArea(String sa) 
+     public void setTreatSpaceAsAlphaNum(bool)
+     ```
 
-      >[!IMPORTANT]
-      >
-      >**Configurações de cores:** No Android TVSDK 2.X, foi feito um aprimoramento no estilo de cores de legendas ocultas. O aprimoramento permite definir cores de legendas ocultas usando uma string hexadecimal que representa valores de cor de RGB. A representação de cor hexadecimal do RGB é a familiar string de 6 bytes usada em aplicativos como o Photoshop:
-      >
-      >* FFFFFF = Preto
-      >* 000000 = Branco
-      >* FF0000 = Vermelho
-      >* 00FF00 = Verde
-      >* 0000FF = Azul
-         >e assim por diante.
-
-      >
-      >No aplicativo, sempre que você passar informações de estilo de cor para `TextFormatBuilder`, você ainda usará o `Color` enumeração como antes, mas agora é necessário adicionar `getValue()` à cor para obter o valor como uma sequência de caracteres. Por exemplo:
-      >
-      >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
+     >[!IMPORTANT]
+     >
+     >**Configurações de cores:** No Android TVSDK 2.X, foi feito um aprimoramento no estilo de cores de legendas ocultas. O aprimoramento permite definir cores de legendas ocultas usando uma string hexadecimal que representa valores de cor de RGB. A representação de cor hexadecimal do RGB é a familiar string de 6 bytes usada em aplicativos como o Photoshop:
+     >
+     >* FFFFFF = Preto
+     >* 000000 = Branco
+     >* FF0000 = Vermelho
+     >* 00FF00 = Verde
+     >* 0000FF = Azul
+     >e assim por diante.
+     >
+     >No aplicativo, sempre que você passar informações de estilo de cor para `TextFormatBuilder`, você ainda usará o `Color` enumeração como antes, mas agora é necessário adicionar `getValue()` à cor para obter o valor como uma sequência de caracteres. Por exemplo:
+     >
+     >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
 A configuração do estilo de legenda oculta é uma operação assíncrona, portanto, pode levar alguns segundos para que as alterações apareçam na tela.
 

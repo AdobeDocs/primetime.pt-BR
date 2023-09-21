@@ -3,8 +3,7 @@ title: Notas de versão do TVSDK 3.15 para Android
 description: As Notas de versão do TVSDK 3.15 para Android descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas de dispositivo no TVSDK Android 3.15
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '5516'
 ht-degree: 0%
@@ -23,7 +22,6 @@ O reprodutor de referência do Android está incluído com o Android TVSDK no di
 >
 >1. Baixar VideoHeartbeat.jar de [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) (Biblioteca do VideoHeartbeat para Android v2.0.0)
 >1. Extraia VideoHeartbeat.jar para a pasta libs/.
-
 
 O TVSDK para Android fornece muitas melhorias de desempenho em relação às versões anteriores. Ele fornece uma experiência de visualização de alta qualidade e transporta todos os recursos da versão 1.4, com exceção do suporte a Multi-CDN.
 
@@ -69,11 +67,11 @@ A versão enfocou a correção dos principais problemas dos clientes, conforme m
 
 * **Entrega segura por HTTPS** - O Android TVSDK 3.9 apresentou os recursos de entrega segura via HTTPS para fornecer conteúdo com segurança, com escala e desempenho incomparáveis.
 
-   Para habilitar a entrega segura por HTTPS, uma nova API foi introduzida no `NetworkConfiguration` classe.
+  Para habilitar a entrega segura por HTTPS, uma nova API foi introduzida no `NetworkConfiguration` classe.
 
-   `public void setForceHTTPS (boolean value)`
+  `public void setForceHTTPS (boolean value)`
 
-   `public boolean getIsForceHTTPS()`
+  `public boolean getIsForceHTTPS()`
 
 **Android TVSDK 3.8**
 
@@ -85,7 +83,7 @@ O anúncio precedente, se disponível, é reproduzido e, em seguida, o conteúdo
 
 * Para conteúdo de teste do Widevine, uma nova API `setMediaDrmCallback` na classe DRMManager é exposta para substituir a implementação padrão da interface MediaDrmCallback.
 
-   `public static void setMediaDrmCallback(MediaDrmCallback callback)`
+  `public static void setMediaDrmCallback(MediaDrmCallback callback)`
 
 * Correção de um erro AppCrash para não manusear `MediaPlayerEvent.ITEM_UPDATED` na camada C++ (Android de 64 bits).
 
@@ -171,7 +169,7 @@ Atualizado `targetSdkVersion` de 19 a 27 para um funcionamento perfeito.
 
 * **Placement.Type getPlacementType() agora é um método na interface TimelineMarker**
 
-   Esse método retornará um tipo de posicionamento de Placement.Type.PRE_ROLL, Placement.Type.MID_ROLL ou Placement.Type.POST_ROLL. Se um ad break não for resolvido, o método getDuration() na interface do TimelineMarker retornará 0.
+  Esse método retornará um tipo de posicionamento de Placement.Type.PRE_ROLL, Placement.Type.MID_ROLL ou Placement.Type.POST_ROLL. Se um ad break não for resolvido, o método getDuration() na interface do TimelineMarker retornará 0.
 
 **Versão 2.5.6.**
 
@@ -179,7 +177,7 @@ Atualizado `targetSdkVersion` de 19 a 27 para um funcionamento perfeito.
 
 * **Habilitar áudio de fundo**
 
-   Para habilitar a reprodução de áudio quando o aplicativo muda do primeiro para o segundo plano, o aplicativo deve chamar `enableAudioPlaybackInBackground` API do MediaPlayer com verdadeiro como argumento quando o player está no estado PREPARADO.
+  Para habilitar a reprodução de áudio quando o aplicativo muda do primeiro para o segundo plano, o aplicativo deve chamar `enableAudioPlaybackInBackground` API do MediaPlayer com verdadeiro como argumento quando o player está no estado PREPARADO.
 
 * **alwaysUseAudioOutputLatency(boolean val) na classe MediaPlayer**
 
@@ -194,8 +192,8 @@ O TVSDK agora cancela o download do segmento em andamento, se necessário, e alt
 
 * **Inserção de ad-break parcial**
 
-   Experiência semelhante à de TV ao ingressar no meio de um anúncio sem disparar o rastreamento do anúncio parcialmente assistido.\
-   Exemplo: o usuário se junta ao meio (a 40 segundos) de um ad break de 90 segundos que consiste em três anúncios de 30 segundos. São 10 segundos do segundo anúncio no intervalo.
+  Experiência semelhante à de TV ao ingressar no meio de um anúncio sem disparar o rastreamento do anúncio parcialmente assistido.\
+  Exemplo: o usuário se junta ao meio (a 40 segundos) de um ad break de 90 segundos que consiste em três anúncios de 30 segundos. São 10 segundos do segundo anúncio no intervalo.
 
    * O segundo anúncio é reproduzido pelo tempo restante (20 segundos) seguido pelo terceiro anúncio.
 
@@ -203,11 +201,11 @@ O TVSDK agora cancela o download do segmento em andamento, se necessário, e alt
 
 * **Carregamento de anúncio seguro em HTTPS**
 
-   O Adobe Primetime fornece uma opção para solicitar a primeira chamada para o servidor de anúncios do primetime e CRS em https.
+  O Adobe Primetime fornece uma opção para solicitar a primeira chamada para o servidor de anúncios do primetime e CRS em https.
 
 * **AdSystem e ID de criação adicionados às solicitações do CRS**
 
-   Agora incluindo `AdSystem` e `CreativeId` como novos parâmetros nas solicitações 1401 e 1403.
+  Agora incluindo `AdSystem` e `CreativeId` como novos parâmetros nas solicitações 1401 e 1403.
 
 * **API setEncodeUrlForTracking na classe NetworkConfiguration removida** como os caracteres inseguros em um URL devem ser codificados.
 
@@ -217,15 +215,15 @@ O Android TVSDK v2.5.4 oferece as seguintes atualizações e alterações de API
 
 * Alterações no valor padrão de `WebViewDebbuging`
 
-   `WebViewDebbuging` o valor está definido como `Fals`e por padrão. Para ativá-lo, chame `setWebContentsDebuggingEnabled(true)` na petição.
+  `WebViewDebbuging` o valor está definido como `Fals`e por padrão. Para ativá-lo, chame `setWebContentsDebuggingEnabled(true)` na petição.
 
 * **Atualização da versão do OpenSSL e do Curl**
 
-   Atualização de libcurl para v7.57.0 e OpenSSL para v1.0.2k.
+  Atualização de libcurl para v7.57.0 e OpenSSL para v1.0.2k.
 
 * Acesso em nível de aplicativo para objeto de resposta VAST
 
-   Introdução de uma nova API `NetworkAdInfo::getVastXml()` que fornece acesso do objeto de resposta VAST ao aplicativo.
+  Introdução de uma nova API `NetworkAdInfo::getVastXml()` que fornece acesso do objeto de resposta VAST ao aplicativo.
 
 **Versão 2.5.3**
 
@@ -233,7 +231,7 @@ O Android TVSDK v2.5.3 oferece as seguintes atualizações e alterações de API
 
 * Todos os clientes de TVSDK que usam CRS são incentivados a atualizar seus aplicativos com TVSDK 2.5.3.85 ou posterior no Android. Isso será uma substituição suspensa da implementação do aplicativo existente. Após a atualização do TVSDK, verifique as solicitações do URL criativo do CRS em uma ferramenta de proxy (por exemplo: Charles) e confirme se o nome do host e a versão no caminho refletem como na estrutura de URL de exemplo abaixo.
 
-   `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
+  `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
 * Personalizável Agente do usuário do TVSDK: adicionamos algumas novas APIs para personalizar os agentes do usuário.
 
@@ -287,9 +285,9 @@ Quando o TVSDK abre uma conexão, ele solicita ao servidor uma *keep-alive* cone
 
 * **Reprodução de conteúdo MP4 -** Os clipes MP4 curtos não precisam ser retranscodificados para serem reproduzidos no TVSDK.
 
-   >[!NOTE]
-   >
-   >Switching ABR, truque, inserção de anúncio, vinculação de áudio tardia e subsegmentação não são suportados para reprodução MP4.
+  >[!NOTE]
+  >
+  >Switching ABR, truque, inserção de anúncio, vinculação de áudio tardia e subsegmentação não são suportados para reprodução MP4.
 
 * **Truque com a taxa de bits adaptável (ABR) -** Esse recurso permite que o TVSDK alterne entre fluxos do iFrame no modo de reprodução de truque. Você pode usar perfis que não sejam do iFrame para executar truques em velocidades mais baixas.
 
@@ -307,10 +305,9 @@ Quando o TVSDK abre uma conexão, ele solicita ao servidor uma *keep-alive* cone
 
    * **Integração de faturamento direto -** Isso envia métricas de cobrança para o back-end do Adobe Analytics, que é certificado pela Adobe Primetime para fluxos usados pelo cliente.
 
-   O TVSDK coleta métricas automaticamente, cumprindo o contrato de vendas do cliente para gerar relatórios de uso periódicos necessários para fins de faturamento. Em cada evento de início de fluxo, o TVSDK usa a API de inserção de dados do Adobe Analytics para enviar métricas de faturamento, como tipo de conteúdo, sinalizadores habilitados para inserção de anúncio e sinalizadores habilitados para drm, com base na duração do fluxo faturável, para o conjunto de relatórios do Adobe Analytics Primetime. Isso não interfere ou é incluído nos conjuntos de relatórios ou chamadas de servidor do próprio cliente do Adobe Analytics. Quando solicitado, esse relatório de uso de faturamento é enviado periodicamente aos clientes. Esta é a primeira fase do recurso de faturamento que suporta somente faturamento de uso. Ele pode ser configurado com base no contrato de vendas usando as APIs descritas na documentação. Esse recurso é ativado por padrão. Para desativar esse recurso, consulte a amostra do reprodutor de referência.
+  O TVSDK coleta métricas automaticamente, cumprindo o contrato de vendas do cliente para gerar relatórios de uso periódicos necessários para fins de faturamento. Em cada evento de início de fluxo, o TVSDK usa a API de inserção de dados do Adobe Analytics para enviar métricas de faturamento, como tipo de conteúdo, sinalizadores habilitados para inserção de anúncio e sinalizadores habilitados para drm, com base na duração do fluxo faturável, para o conjunto de relatórios do Adobe Analytics Primetime. Isso não interfere ou é incluído nos conjuntos de relatórios ou chamadas de servidor do próprio cliente do Adobe Analytics. Quando solicitado, esse relatório de uso de faturamento é enviado periodicamente aos clientes. Esta é a primeira fase do recurso de faturamento que suporta somente faturamento de uso. Ele pode ser configurado com base no contrato de vendas usando as APIs descritas na documentação. Esse recurso é ativado por padrão. Para desativar esse recurso, consulte a amostra do reprodutor de referência.
 
    * **Melhor suporte a failover -** Estratégias adicionais implementadas para continuar a reprodução ininterrupta, apesar das falhas de servidores host, arquivos de lista de reprodução e segmentos.
-
 
 * **Publicidade**
 
@@ -326,18 +323,18 @@ Quando o TVSDK abre uma conexão, ele solicita ao servidor uma *keep-alive* cone
 
    * `getHeight()` e `getWidth()` métodos de `SizeAvailableEvent` O agora retornará a saída em altura e largura, respectivamente. A taxa de proporção de exibição pode ser calculada da seguinte maneira:
 
-      ```java
-      SizeAvailableEvent e;
-      DAR = e.getWidth()/ e.getHeight();
-      ```
+     ```java
+     SizeAvailableEvent e;
+     DAR = e.getWidth()/ e.getHeight();
+     ```
 
-      A proporção de armazenamento em termos de largura de Sar e altura de Sar também pode ser usada para calcular a largura e a altura do Quadro:
+     A proporção de armazenamento em termos de largura de Sar e altura de Sar também pode ser usada para calcular a largura e a altura do Quadro:
 
-      ```java
-      SAR = e.getSarWidth()/e.getSarHeight();
-      frameHeight = e.getHeight();
-      frameWidth = e.getWidth()/SAR;
-      ```
+     ```java
+     SAR = e.getSarWidth()/e.getSarHeight();
+     frameHeight = e.getHeight();
+     frameWidth = e.getWidth()/SAR;
+     ```
 
 * **Cookies**
 
@@ -491,7 +488,7 @@ Esta seção fornece um resumo do problema resolvido na versão do Android TVSDK
    * Suporte a SSAI_TAG adicionado como parte dessa correção.
 * ZD#37622 - Erros URISyntax de pods de anúncios específicos.
    * Correção de um problema sobre uma falha na reprodução do stream quando o aplicativo do Android do cliente recebe anúncios que contêm uma % não codificada
-* ZD#37631 - Mecanismo de repetição de manifesto Principal para Android TVSDK.
+* ZD#37631 - Mecanismo de repetição de manifesto mestre para Android TVSDK.
    * Adição de uma nova API na configuração de rede para lidar com esse aprimoramento. Se essa API não for usada, o manifesto não será repetido. Se for usado, o manifesto será repetido para lidar com erros de rede e tempos limite.
 
 **Versão 3.2**
@@ -602,73 +599,73 @@ WebViewDebuging está definido como Falso por padrão. Para habilitar a depuraç
 
 * ZenDesk#33011 - A linha do tempo do anúncio não é resolvida no caso de falha na solicitação de CRS.
 
-   Quando uma solicitação do CRS para um anúncio falha, a linha do tempo é resolvida e os anúncios restantes são reproduzidos.
+  Quando uma solicitação do CRS para um anúncio falha, a linha do tempo é resolvida e os anúncios restantes são reproduzidos.
 
 * ZenDesk#34528 - A resolução de vídeo não atualiza além de 640x360 no dongle de terceira geração FireTV.
 
-   Os switches de resolução de vídeo são ativados como switches de taxa de bits.
+  Os switches de resolução de vídeo são ativados como switches de taxa de bits.
 
 * ZenDesk#33192 - AudioTrack tem nome nulo quando a faixa é recuperada via AudioUpdatedEventListener::onAudioUpdated.
 
-   Em alguns cenários no FireTV Stick, o evento onAudioUpdate estava sendo acionado quando não havia nenhuma atualização de áudio real. Isso foi corrigido agora.
+  Em alguns cenários no FireTV Stick, o evento onAudioUpdate estava sendo acionado quando não havia nenhuma atualização de áudio real. Isso foi corrigido agora.
 
 **Android TVSDK 2.5.3**
 
 * Zendesk#32216 - A assinatura de tag personalizada TimedMetadata não está funcionando.
 
-   Retornamos dados ID3 como uma matriz de bytes (para oferecer suporte a APIC ou dados genéricos) ao cliente, enquanto na sequência de retorno 1.4. A matriz de bytes não lida com o próprio caractere terminado por nulo, portanto, mostrava o caractere especial ao cliente. Esse problema foi corrigido agora.
+  Retornamos dados ID3 como uma matriz de bytes (para oferecer suporte a APIC ou dados genéricos) ao cliente, enquanto na sequência de retorno 1.4. A matriz de bytes não lida com o próprio caractere terminado por nulo, portanto, mostrava o caractere especial ao cliente. Esse problema foi corrigido agora.
 * Zendesk#32670 - Player não falha na lista de reprodução redundante
 
-   Isso está funcionando bem agora e setNetworkDownVerificationUrl está funcionando como esperado.
+  Isso está funcionando bem agora e setNetworkDownVerificationUrl está funcionando como esperado.
 * Zendesk#32369 - A legenda oculta mostra lixo de cores ou artefato diferentes.
 
-   Problema com falhas CC foi corrigido na última build
+  Problema com falhas CC foi corrigido na última build
 * Zendesk#25590 - Aprimoramento: armazenamento de cookies TVSDK ( C++ para JAVA )
 
-   O Android TVSDK agora é compatível com o acesso de cookies entre a camada JAVA (armazenada no CookieStore do aplicativo Android) e a camada C++ TVSDK.
+  O Android TVSDK agora é compatível com o acesso de cookies entre a camada JAVA (armazenada no CookieStore do aplicativo Android) e a camada C++ TVSDK.
 * Zendesk#32252 - TVSDK_Android_2.5.2.12 não parece ter a correção para PTPLAY-20269
 
-   Esse problema foi corrigido e integrado à ramificação 2.5.2.
-* Zendesk#31806 - Auditude sticks em PREPARAÇÃO
+  Esse problema foi corrigido e integrado à ramificação 2.5.2.
+* Zendesk#31806 - Auditude sticks na PREPARAÇÃO
 
-   O player ficou preso no estado Preparação porque o xml de resposta tinha uma tag vazia. Agora o problema foi corrigido.
+  O player ficou preso no estado Preparação porque o xml de resposta tinha uma tag vazia. Agora o problema foi corrigido.
 * Zendesk#31727 - Os caracteres de legendas ocultas do TVSDK 2.5 são soltos ou digitados incorretamente.
 
-   Problema corrigido e não estamos soltando/digitando nenhum caractere incorretamente.
+  Problema corrigido e não estamos soltando/digitando nenhum caractere incorretamente.
 * Zendesk#31485 - DrmManager in 2.5
 
-   Ocorreu um problema ao Criar o DrmManager por meio do novo DrmManager(Context context). Implementação da classe DRMService que forneceria o DRMSanager.
+  Ocorreu um problema ao Criar o DrmManager por meio do novo DrmManager(Context context). Implementação da classe DRMService que forneceria o DRMSanager.
 * Zendesk#32794- Fluxo de resolução de 1080P não está sendo reproduzido no Android
 
-   alteramos os métodos SizeAvailableEvent e Previously, getHeight() e getWidth() de SizeAvailableEvent no 2.5 usados para retornar a altura e a largura do quadro, retornados pelo formato de mídia. Ele agora retorna a altura e a largura da saída respectivamente retornadas pelo decodificador.
+  alteramos os métodos SizeAvailableEvent e Previously, getHeight() e getWidth() de SizeAvailableEvent no 2.5 usados para retornar a altura e a largura do quadro, retornados pelo formato de mídia. Ele agora retorna a altura e a largura da saída respectivamente retornadas pelo decodificador.
 * O Flash Player do Zendesk #19359 falha devido à posição do atributo #EXT-X-FAXS-CM no manifesto de nível de conjunto.
 
-   A tag #EXT-X-FAXS-CM deve sempre aparecer na lista de reprodução principal antes que a taxa de bits ou os segmentos individuais apareçam na lista de reprodução.
+  A tag #EXT-X-FAXS-CM deve sempre aparecer na lista de reprodução principal antes que a taxa de bits ou os segmentos individuais apareçam na lista de reprodução.
 
 **Android TVSDK 2.5.2**
 
 * Zendesk#17305 Artefatos em legendas ocultas com fundo não opaco.
 
-   A propriedade setTreatSpaceAsAlphaNum em TextFormat está exposta. Por padrão, a propriedade é False. Defina a propriedade como True em um cliente para resolver o problema de espaço escuro.
+  A propriedade setTreatSpaceAsAlphaNum em TextFormat está exposta. Por padrão, a propriedade é False. Defina a propriedade como True em um cliente para resolver o problema de espaço escuro.
 
 * A exibição Zendesk#25097 CC tem artefatos visuais com configurações CC.
 
-   A propriedade setTreatSpaceAsAlphaNum em TextFormat está exposta. Por padrão, a propriedade é False. Defina a propriedade como True em um cliente para resolver o problema de espaço escuro.
+  A propriedade setTreatSpaceAsAlphaNum em TextFormat está exposta. Por padrão, a propriedade é False. Defina a propriedade como True em um cliente para resolver o problema de espaço escuro.
 
 * A sequência de agente do usuário do Zendesk #31620 que sai do player TVSDK está truncada.
 
-   A sequência de agente do usuário não será mais truncada após 128 caracteres.
+  A sequência de agente do usuário não será mais truncada após 128 caracteres.
 
-   A sequência de caracteres da versão do Adobe Primetime é adicionada ao agente do usuário do sistema.
+  A sequência de caracteres da versão do Adobe Primetime é adicionada ao agente do usuário do sistema.
 
 * Zendesk #30809 Evento SEEK_END ausente impede que o aplicativo transite para um estado de reprodução.
 * A cor &#39;Ciano&#39; da legenda oculta Zendesk #30415 agora é um tom mais escuro de azul (turquesa), em comparação às versões anteriores do Primetime TVSDK.
 
-   A cor é alterada de Ciano escuro para Ciano.
+  A cor é alterada de Ciano escuro para Ciano.
 
 * Os anúncios de VOD do Zendesk #30727 não estão sendo baixados/resolvidos.
 
-   No XML do VMAP, se houver uma tag VAST vazia sem uma tag de fechamento explícita (‘&lt;/vast>&#39;) e sem um caractere de nova linha depois dele, o XML do VMAP não é analisado corretamente e os anúncios podem não ser reproduzidos.
+  No XML do VMAP, se houver uma tag VAST vazia sem uma tag de fechamento explícita (‘&lt;/vast>&#39;) e sem um caractere de nova linha depois dele, o XML do VMAP não é analisado corretamente e os anúncios podem não ser reproduzidos.
 
 **Android TVSDK 2.5.1**
 

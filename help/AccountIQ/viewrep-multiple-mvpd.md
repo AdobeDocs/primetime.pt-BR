@@ -1,8 +1,7 @@
 ---
 title: Exibir relatórios de compartilhamento de conta para vários MVPDs
 description: Como visualizar relatórios de compartilhamento para vários MVPDs.
-exl-id: c616e6e1-373c-471d-a2dc-c484b7cd5cf5
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
@@ -25,9 +24,9 @@ Para exibir estatísticas de compartilhamento de conta do assinante para vários
 
 * [Painel](/help/AccountIQ/dashboard.md) (o painel fornece uma visão geral dos gráficos selecionados das diferentes páginas de relatórios).
 
-   ![](assets/mult-mvpds-dashboard.png)
+  ![](assets/mult-mvpds-dashboard.png)
 
-   *Figura: relatório do painel de controle para vários MVPDs*
+  *Figura: relatório do painel de controle para vários MVPDs*
 
 * [Uso geral](/help/AccountIQ/general-usage-reports.md)
 

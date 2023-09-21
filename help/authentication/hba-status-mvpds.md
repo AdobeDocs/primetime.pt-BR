@@ -1,8 +1,7 @@
 ---
 title: Status de HBA para MVPDs
 description: Status de HBA para MVPDs
-exl-id: 9e506417-0886-4306-9b9f-5fde24a792d3
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
@@ -24,24 +23,24 @@ ht-degree: 0%
 
 | MVPD | Funcionalidade básica disponível? | Envia sinalizador na resposta de autenticação | SSO? | Comentários |
 |---|---|---|---|---|
-| DirecTV | Sim | Não |  |  |
-| Prato | Em andamento | Em andamento |  |  |
-| Espectro | Sim | Sim |  |  |
-| Carta | Sim | Não |  |  |
-| Cox | Sim | Não |  | Os Controles dos Pais precisam estar habilitados |
-| AT&amp;T | Sim | Não |  |  |
-| Verizon | Sim | Sim |  |  |
-| Visão do cabo | Em andamento | Em andamento |  |  |
-| Suddenlink | Sim | Em andamento |  |  |
-| Mediacom | Sim | Em andamento |  |  |
-| Centro-continente | Sim | Em andamento |  |  |
-| Massilon | Sim | Não |  |  |
-| Fibra Google | Sim | Em andamento |  |  |
-| AlticeOne | Sim | Sim |  |  |
+| DirecTV | Sim | Não |      |                                      |
+| Prato | Em andamento | Em andamento |      |                                      |
+| Espectro | Sim | Sim |      |                                      |
+| Carta | Sim | Não |      |                                      |
+| Cox | Sim | Não |      | Os Controles dos Pais precisam estar habilitados |
+| AT&amp;T | Sim | Não |      |                                      |
+| Verizon | Sim | Sim |      |                                      |
+| Visão do cabo | Em andamento | Em andamento |      |                                      |
+| Suddenlink | Sim | Em andamento |      |                                      |
+| Mediacom | Sim | Em andamento |      |                                      |
+| Centro-continente | Sim | Em andamento |      |                                      |
+| Massilon | Sim | Não |      |                                      |
+| Fibra Google | Sim | Em andamento |      |                                      |
+| AlticeOne | Sim | Sim |      |                                      |
 
 
 ## HBA com MVPDs habilitados para OAuth 2.0 {#hba-with-oauth2-enabled-mvpds}
 
 | MVPD | Funcionalidade básica disponível? | Envia sinalizador na resposta de autenticação | SSO? | Comentários |
 |---|---|---|---|---|
-| Comcast | Sim | Sim |  |  |
+| Comcast | Sim | Sim | | |

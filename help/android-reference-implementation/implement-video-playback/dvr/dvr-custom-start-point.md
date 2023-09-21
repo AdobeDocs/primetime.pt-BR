@@ -1,8 +1,7 @@
 ---
 description: Você pode escolher um ponto de partida personalizado para quando inserir um fluxo DVR, em vez do comportamento padrão de inserir o fluxo DVR no início usando a classe ConfigProvider.
 title: Escolhendo um ponto de partida personalizado para DVR
-exl-id: 9813bf60-a91d-4376-a5fe-02311b73e8a0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%

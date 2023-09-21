@@ -1,8 +1,7 @@
 ---
 description: Você pode configurar nomes de tag personalizados em um fluxo com a classe MediaPlayerItemConfig.
 title: Métodos de classe de configuração para tags
-exl-id: 864d5c35-2b26-447b-8134-414e82096f18
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
@@ -66,6 +65,6 @@ Lembre-se do seguinte:
 
 * O nome da tag personalizada deve conter a `#` prefixo.
 
-   Por exemplo, `#EXT-X-ASSET` é um nome de tag personalizado correto, mas `EXT-X-ASSET` está incorreto.
+  Por exemplo, `#EXT-X-ASSET` é um nome de tag personalizado correto, mas `EXT-X-ASSET` está incorreto.
 
 * Não é possível alterar a configuração depois que o fluxo de mídia é carregado.

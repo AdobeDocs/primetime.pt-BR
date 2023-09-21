@@ -1,8 +1,7 @@
 ---
 description: Para acomodar os clientes que desejam pagar apenas pelo que utilizam, em vez de uma taxa fixa independentemente do uso real, o Adobe coleta as métricas de uso e as utiliza para determinar quanto faturar aos clientes.
 title: Métricas de cobrança
-exl-id: 8b670ed0-77a5-410c-abd6-0188558fbc4a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Quando o reprodutor de mídia alterna seu perfil atual para um novo perfil, você pode recuperar informações sobre o switch, incluindo quando ele foi alternado, informações de largura e altura ou por que uma taxa de bits diferente foi usada.
 title: Obter informações sobre a troca de perfil
-exl-id: 3ef4b319-dd78-4abd-9c2d-ab1d608f6cea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 0%

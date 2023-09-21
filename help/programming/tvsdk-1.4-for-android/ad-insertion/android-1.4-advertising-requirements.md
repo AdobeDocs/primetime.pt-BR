@@ -1,8 +1,7 @@
 ---
 description: É possível inserir anúncios em VOD e conteúdo dinâmico/linear usando a interface de decisão de anúncios do Adobe Primetime.
 title: Exigências para publicidade
-exl-id: 2d3b3b24-7a6f-485c-b200-62a045294e66
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%

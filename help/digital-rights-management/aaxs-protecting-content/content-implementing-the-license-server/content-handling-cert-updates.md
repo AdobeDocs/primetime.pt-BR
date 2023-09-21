@@ -2,8 +2,7 @@
 title: Lidar com atualizações de certificados quando os certificados emitidos pelo Adobe expiram
 description: Lidar com atualizações de certificados quando os certificados emitidos pelo Adobe expiram
 copied-description: true
-exl-id: 9768544e-7e92-4c3a-9863-af9aed74a0c0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -46,23 +45,23 @@ Use o procedimento a seguir para atualizar seu servidor com os novos certificado
 
       * Na implementação de referência, defina-a por meio da variável `LicenseHandler.ServerCredential` propriedade.
       * No Adobe Access Server para Protected Streaming, a credencial atual deve ser a primeira credencial especificada no `LicenseServerCredential` elemento no arquivo flashaccess-tenant.xml.
+
    * Verifique se as credenciais atuais e antigas foram fornecidas para o `AsymmetricKeyRetrieval`
 
       * Na implementação de referência, defina-a por meio da variável `LicenseHandler.ServerCredential` e `AsymmetricKeyRetrieval.ServerCredential. n` propriedades.
       * No Adobe Access Server para Protected Streaming, as credenciais antigas são especificadas após a primeira credencial no `LicenseServerCredential` elemento no arquivo flashaccess-tenant.xml.
+
    Para as credenciais de transporte:
 
    * Certifique-se de que a credencial atual seja passada para o `HandlerConfiguration.setServerTransportCredential()` método:
 
       * Na implementação de referência, defina-a por meio da variável `HandlerConfiguration.ServerTransportCredential` propriedade.
       * No Adobe Access Server para transmissão protegida, a credencial atual deve ser a primeira especificada no `TransportCredential` elemento no arquivo flashaccess-tenant.xml.
+
    * Verifique se as credenciais antigas foram fornecidas para `HandlerConfiguration.setAdditionalServerTransportCredentials`():
 
       * Na implementação de referência, defina-a por meio da variável `HandlerConfiguration.AdditionalServerTransportCredential. n` propriedades.
       * No Adobe Access Server para transmissão protegida, isso é especificado após a primeira credencial no `TransportCredential` elemento no arquivo flashaccess-tenant.xml.
-
-
-
 
 1. Atualize as ferramentas de empacotamento para garantir que elas estejam empacotando o conteúdo com as credenciais atuais. Verifique se o certificado do servidor de licenças, o certificado de transporte e a credencial do empacotador mais recentes são usados para empacotamento.
 1. Para atualizar o Certificado de servidor de licença do servidor de chaves:

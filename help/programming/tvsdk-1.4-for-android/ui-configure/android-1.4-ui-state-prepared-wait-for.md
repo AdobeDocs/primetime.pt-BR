@@ -1,8 +1,7 @@
 ---
 description: Com o TVSDK, você pode controlar a experiência básica de reprodução para VOD (live and video on demand). O TVSDK fornece métodos e propriedades na instância do player que você pode usar para configurar a interface do usuário do player.
 title: Aguardar um estado válido
-exl-id: ab9da066-429f-44ca-b2e7-2bde9e5c0f90
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%

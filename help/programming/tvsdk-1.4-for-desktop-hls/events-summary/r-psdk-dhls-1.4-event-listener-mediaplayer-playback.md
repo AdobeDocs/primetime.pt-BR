@@ -1,8 +1,7 @@
 ---
 description: Seu aplicativo pode monitorar a atividade no reprodutor e as alterações no estado dele, ouvindo eventos despachados pelo TVSDK.
 title: Eventos de reprodução
-exl-id: 9fb77b57-be6c-4dab-b779-d8c606938e46
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%

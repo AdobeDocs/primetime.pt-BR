@@ -1,8 +1,7 @@
 ---
 title: Solução de problemas
 description: Não consegue visualizar ou carregar um painel de relatórios? Ou não consegue exportar um relatório? Entenda como resolver os problemas encontrados com frequência no produto.
-exl-id: 2c3f22c4-5534-424c-b321-b57045bcb7a6
-source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Você está enfrentando problemas com dados e gráficos que demoram muito para s
 
 * Se uma página ou painéis individuais demorarem muito para serem carregados, tente atualizar a página. Para a versão atual, dependendo da seleção de MVPDs e programadores, uma página pode levar até um minuto para ser carregada.
 
-   ![](assets/troubleshoot.png)
+  ![](assets/troubleshoot.png)
 
 * Se você não conseguir ver nenhum dado ou gráfico mesmo após a atualização, saia do Account IQ e faça logon novamente.
 

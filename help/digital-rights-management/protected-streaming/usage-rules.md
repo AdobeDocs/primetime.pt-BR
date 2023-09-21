@@ -1,8 +1,7 @@
 ---
 description: Com o servidor DRM da Adobe Primetime para transmissão protegida, você pode especificar todas as regras de uso no servidor com arquivos de configuração.
 title: Sobre as regras de uso
-exl-id: 55af3a18-8fdb-4285-bd9f-ca479475e34f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%

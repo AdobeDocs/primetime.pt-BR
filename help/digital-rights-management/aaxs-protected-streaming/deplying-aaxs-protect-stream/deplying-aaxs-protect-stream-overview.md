@@ -2,8 +2,7 @@
 title: Visão geral da implantação do Adobe Access Server para transmissão protegida
 description: Visão geral da implantação do Adobe Access Server para transmissão protegida
 copied-description: true
-exl-id: fdefa13a-14ec-4301-ab39-2ceea830463d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: A interface do MediaPlayer para Android encapsula a funcionalidade e o comportamento de um reprodutor de mídia.
 title: Configurar o MediaPlayer
-exl-id: 2698fe8d-0b73-4aad-9fee-55d034d8ca64
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%

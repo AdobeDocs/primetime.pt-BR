@@ -1,8 +1,7 @@
 ---
 description: Seu aplicativo deve usar os objetos PTTimedMetadata apropriados nos momentos apropriados.
 title: Armazenar objetos de metadados cronometrados à medida que são expedidos
-exl-id: 8b859e8d-eb4c-48f9-a95e-1bcc35a2a520
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
@@ -53,7 +52,7 @@ Seu aplicativo deve concluir as seguintes tarefas:
 
 ## Análise de tags Nielsen ID3 {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-Para extrair a tag ID3 para análise, use o seguinte no `onMediaPlayerSubscribedTagIdentified` método:
+Para extrair a tag ID3 para análise, use o seguinte na `onMediaPlayerSubscribedTagIdentified` método:
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 

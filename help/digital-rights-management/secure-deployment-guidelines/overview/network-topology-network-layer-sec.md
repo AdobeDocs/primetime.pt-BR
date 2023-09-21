@@ -1,8 +1,7 @@
 ---
-description: As vulnerabilidades de segurança de rede estão entre as primeiras ameaças a qualquer servidor de aplicativos voltado para a Internet ou para a intranet, e você deve proteger os hosts na rede contra essas vulnerabilidades.
+description: As vulnerabilidades de segurança de rede estão entre as primeiras ameaças a qualquer servidor de aplicativos voltado para a Internet ou para a intranet, e você deve proteger os hosts da rede contra essas vulnerabilidades.
 title: Segurança de camada de rede
-exl-id: 0a45d18a-66aa-4ecc-8eaf-e2af599eb3b8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Segurança de camada de rede{#network-layer-security}
 
-As vulnerabilidades de segurança de rede estão entre as primeiras ameaças a qualquer servidor de aplicativos voltado para a Internet ou para a intranet, e você deve proteger os hosts na rede contra essas vulnerabilidades.
+As vulnerabilidades de segurança de rede estão entre as primeiras ameaças a qualquer servidor de aplicativos voltado para a Internet ou para a intranet, e você deve proteger os hosts da rede contra essas vulnerabilidades.
 
 Estas são algumas técnicas comuns que reduzem as vulnerabilidades de segurança da rede:
 

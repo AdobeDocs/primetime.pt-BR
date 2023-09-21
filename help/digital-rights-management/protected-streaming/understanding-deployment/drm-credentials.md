@@ -1,8 +1,7 @@
 ---
 description: Se você quiser emitir licenças válidas que um cliente DRM do Primetime possa aceitar, configure o Servidor DRM do Primetime para Transmissão Protegida com um conjunto de credenciais emitidas pelo Adobe. Você pode armazenar essas credenciais em arquivos PKCS#12 (.pfx) ou em um HSM.
 title: Sobre as credenciais do Adobe Primetime DRM
-exl-id: a48da53f-2c2c-4a64-a512-dd69a8c9aa14
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%

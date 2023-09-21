@@ -1,8 +1,7 @@
 ---
 title: Gerenciadores de recursos
 description: Os gerenciadores de recursos fornecem uma maneira de controlar recursos individuais sem atravessar todo o TVSDK em busca de código para um recurso que pode estar espalhado em vários locais.
-exl-id: dbf2dc8b-6067-4d94-9c3c-553452b7ffd9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
@@ -16,16 +15,13 @@ Os gerenciadores de recursos fornecem uma maneira de controlar recursos individu
 Os gerentes de recursos executam as seguintes tarefas:
 
 * **Aciona recursos do TVSDK.**
-Essas são chamadas de função para acionar um recurso TVSDK. Por exemplo, 
-`PlaybackManager.play()` é chamado quando o aplicativo de reprodução precisa iniciar a reprodução de vídeo.
+Essas são chamadas de função para acionar um recurso TVSDK. Por exemplo, `PlaybackManager.play()` é chamado quando o aplicativo de reprodução precisa iniciar a reprodução de vídeo.
 
 * **Escuta eventos TVSDK.**
-O gerenciador de recursos precisa acompanhar eventos TVSDK para adquirir informações do TVSDK. Por exemplo, 
-`AdsManager` escuta eventos de anúncios TVSDK para serem notificados quando ad breaks começam.
+O gerenciador de recursos precisa acompanhar eventos TVSDK para adquirir informações do TVSDK. Por exemplo, `AdsManager` escuta eventos de anúncios TVSDK para serem notificados quando ad breaks começam.
 
 * **Despacha eventos para o manipulador.**
-Depois que os gerentes de recursos recebem e processam os eventos do TVSDK, eles notificam o lado do cliente para lidar com o evento. Por exemplo, depois de 
-`AdsManager` recebe um evento de início de ad break, ele informa ao fragmento do player para refletir essa alteração na interface do usuário (desative a barra de limpeza, mostre a sobreposição do anúncio etc.).
+Depois que os gerentes de recursos recebem e processam os eventos do TVSDK, eles notificam o lado do cliente para lidar com o evento. Por exemplo, depois de `AdsManager` recebe um evento de início de ad break, ele informa ao fragmento do player para refletir essa alteração na interface do usuário (desative a barra de limpeza, mostre a sobreposição do anúncio etc.).
 
 A implementação de referência do Primetime inclui os seguintes gerenciadores de recursos:
 

@@ -2,8 +2,7 @@
 title: Atualização de clientes
 description: Atualização de clientes
 copied-description: true
-exl-id: 0476c9ef-3622-4bc5-bb24-f8543470b7d3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
@@ -17,4 +16,4 @@ Se um cliente FMRMS 1.x contatar um servidor de acesso Adobe, o servidor precisa
 * A classe do manipulador de solicitações é `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1RequestHandler`.
 * O URL da solicitação é &quot;*URL base do conteúdo 1.x*&quot; + &quot;/edcws/services/urn:EDCLicenseService&quot;
 
-   Ao contrário de outros manipuladores de solicitação de acesso ao Adobe, esse manipulador não fornece acesso a nenhuma informação de solicitação ou requer que dados de resposta sejam definidos. Crie uma instância do `FMRMSv1RequestHandler`, e chame `close()`
+  Ao contrário de outros manipuladores de solicitação de acesso ao Adobe, esse manipulador não fornece acesso a nenhuma informação de solicitação ou requer que dados de resposta sejam definidos. Crie uma instância do `FMRMSv1RequestHandler`, e chame `close()`

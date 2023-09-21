@@ -2,8 +2,7 @@
 title: Transcodificação e normalização
 description: Transcodificação e normalização
 copied-description: true
-exl-id: 48d9d971-4b15-4f1b-8740-c21983a3e835
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Transcodificação e normalização {#transcoding-and-normalization}
 
-O Ad Insertion do Primetime tentará garantir uma experiência de exibição consistente no conteúdo e nos anúncios, tentando corresponder:
+O Primetime Ad Insertion tentará garantir uma experiência de exibição consistente no conteúdo e nos anúncios, tentando corresponder:
 
 1. Codecs de fluxo de origem e taxas de bits, enquanto sempre seleciona a mais alta qualidade/taxa de bits criativo ao transcodificar
 

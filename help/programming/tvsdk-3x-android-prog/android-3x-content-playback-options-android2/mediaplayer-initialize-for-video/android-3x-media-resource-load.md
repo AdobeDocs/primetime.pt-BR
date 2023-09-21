@@ -1,8 +1,7 @@
 ---
 description: Carregue um recurso instanciando diretamente um MediaResource e carregando o conteúdo de vídeo a ser reproduzido. Essa é uma maneira de carregar um recurso de mídia.
 title: Carregar um recurso de mídia no reprodutor de mídia
-exl-id: f39d3aa2-8912-4dac-9f10-91b6d20395ea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%

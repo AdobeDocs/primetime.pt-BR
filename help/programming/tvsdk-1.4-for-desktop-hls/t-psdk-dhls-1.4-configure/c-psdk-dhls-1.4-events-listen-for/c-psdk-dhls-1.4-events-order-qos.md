@@ -1,8 +1,7 @@
 ---
 description: O TVSDK despacha eventos de qualidade de serviço (QoS) para notificar seu aplicativo sobre eventos que podem influenciar o cálculo das estatísticas de QoS, como buffering e eventos de busca.
 title: Eventos de QoS
-exl-id: 283555cd-9ba9-45e9-a73e-76aba6993e8a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Carregamento de anúncio seguro em HTTPS
 description: Carregamento de anúncio seguro em HTTPS
 copied-description: true
-exl-id: d43418e9-631b-4344-a5b3-0a6154a325d4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Carregamento de anúncio seguro em HTTPS{#secure-ad-loading-over-https}
 
-O Adobe Primetime pode solicitar servidores de publicidade de terceiros por https, mesmo se o reprodutor estiver hospedado em http. Somente essas chamadas de servidores de anúncios são atualizadas para https que o cliente busca durante a fase do resolvedor de anúncios do Auditude.
+O Adobe Primetime pode solicitar servidores de publicidade de terceiros por https, mesmo se o reprodutor estiver hospedado em http. Somente essas chamadas de servidores de anúncios são atualizadas para https que o cliente busca durante a fase do resolvedor de anúncios Auditude.
 
 >[!NOTE]
 >

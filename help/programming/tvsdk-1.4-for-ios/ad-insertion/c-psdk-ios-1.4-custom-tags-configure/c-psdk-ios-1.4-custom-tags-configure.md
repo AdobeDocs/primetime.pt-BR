@@ -1,8 +1,7 @@
 ---
 description: Os fluxos de mídia podem conter metadados adicionais na forma de tags no arquivo de lista de reprodução/manifesto e esse arquivo indica a inserção de publicidade. Você pode especificar nomes de tag personalizados e ser notificado quando determinadas tags aparecerem no arquivo de manifesto.
 title: Tags personalizadas
-exl-id: 797b447d-3316-47c9-80e9-1ff1d3e04797
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%

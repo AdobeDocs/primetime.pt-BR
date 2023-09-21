@@ -1,8 +1,7 @@
 ---
 description: Em algumas implementações do Analytics, o aplicativo cliente pode querer fornecer uma posição de indicador de reprodução diferente da posição relatada pelo valor TVSDK localTime do navegador.
 title: Implementar atualizações de tempo personalizadas
-exl-id: 4d045c4d-298a-42ae-af61-0463a76bc872
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%

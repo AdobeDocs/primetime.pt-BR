@@ -1,8 +1,7 @@
 ---
 description: O TVSDK fornece geradores de oportunidades e resolvedores de conteúdo padrão que colocam anúncios na linha do tempo, e esses geradores e resolvedores são baseados em tags não padrão no manifesto. Seu aplicativo pode precisar alterar a linha do tempo com base nas oportunidades identificadas no manifesto, como indicadores para um período de blecaute.
 title: Geradores de oportunidades e resolvedores de conteúdo
-exl-id: 86722bdc-cb50-4739-8322-7cce4667b297
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Um detector de oportunidade é um componente TVSDK que detecta tags personalizad
 
 O TVSDK inclui um detector de oportunidade padrão:
 
-* `PTOpportunityResolver`, que entende as dicas de anúncios padrão
+* `PTOpportunityResolver`, que entende as dicas de publicidade padrão
 
 O TVSDK também inclui um resolvedor de conteúdo padrão que fornece conteúdo a ser inserido com base na chave de metadados no item do reprodutor:
 

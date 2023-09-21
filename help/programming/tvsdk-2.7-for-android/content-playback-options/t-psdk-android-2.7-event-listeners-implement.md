@@ -1,8 +1,7 @@
 ---
 description: Os manipuladores de eventos permitem que você responda a eventos TVSDK.
 title: Implementar ouvintes e retornos de chamada de evento
-exl-id: c8825a6c-3d48-412f-81f5-542c7731a122
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -23,9 +22,9 @@ Seu aplicativo deve implementar ouvintes de eventos para qualquer evento TVSDK q
 
    * Eventos obrigatórios: analise todos os eventos de reprodução.
 
-      >[!IMPORTANT]
-      >
-      >Analise o evento de alteração de status, que ocorre quando o status do reprodutor muda de maneiras que você precisa saber. As informações fornecidas incluem erros que podem afetar o que o reprodutor pode fazer em seguida.
+     >[!IMPORTANT]
+     >
+     >Analise o evento de alteração de status, que ocorre quando o status do reprodutor muda de maneiras que você precisa saber. As informações fornecidas incluem erros que podem afetar o que o reprodutor pode fazer em seguida.
 
    * Para outros eventos, dependendo do aplicativo, consulte events-summary .
 

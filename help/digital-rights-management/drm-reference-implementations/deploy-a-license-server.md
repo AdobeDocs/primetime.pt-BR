@@ -2,8 +2,7 @@
 title: Implantar o servidor de licenças
 description: Implantar o servidor de licenças
 copied-description: true
-exl-id: 1439a5b2-eccb-41b7-a4d3-0673e727fb13
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -24,7 +23,6 @@ ht-degree: 0%
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
-
 
    >[!NOTE]
    >
@@ -57,7 +55,7 @@ ht-degree: 0%
    * `V2KeyParameters.KeyOptions.AsymmetricKeyOptions.Certificate`
    * V2KeyParameters.LicenseServerTransportCertificate
 
-1. Edite o `catalina.properties` arquivo no seu Tomcat `conf` diretório; adicione a localização do seu [!DNL resources] (ou o local alternativo onde você armazenou o arquivo de propriedades e outros arquivos de recursos) na `shared.loader` propriedade.
+1. Edite o `catalina.properties` arquivo no seu Tomcat `conf` diretório; adicione a localização do seu [!DNL resources] (ou o local alternativo onde você armazenou o arquivo de propriedades e outros arquivos de recurso) na `shared.loader` propriedade.
 
    Por exemplo, se você tiver `flashaccess-refimpl.properties` localizado em [!DNL [Início: Tomcat]\recursos\]:
 

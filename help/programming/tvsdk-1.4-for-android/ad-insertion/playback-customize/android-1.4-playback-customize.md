@@ -1,8 +1,7 @@
 ---
 description: Quando a reprodução atinge um ad break, passa um ad break ou termina em um ad break, o TVSDK define algum comportamento padrão para o posicionamento do indicador de reprodução atual.
 title: Personalizar reprodução com anúncios
-exl-id: 3e945113-f44f-4b53-b952-10307f8d2d2f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -25,4 +24,4 @@ Você pode personalizar o comportamento de reprodução das seguintes maneiras:
 * Se um ad break for apresentado ao usuário, ele não exibirá anúncios adicionais por alguns minutos, mesmo se o usuário buscar uma nova posição.
 * Se o conteúdo não for reproduzido após alguns minutos, reinicie o fluxo ou faça failover para uma origem diferente para o mesmo conteúdo.
 
-   Na sessão de reprodução de failover, para permitir que o usuário ignore os anúncios e retome para a posição de falha anterior, é possível desativar os anúncios precedentes e/ou intermediários. O TVSDK fornece métodos para permitir ignorar anúncios precedentes e intermediários.
+  Na sessão de reprodução de failover, para permitir que o usuário ignore os anúncios e retome para a posição de falha anterior, é possível desativar os anúncios precedentes e/ou intermediários. O TVSDK fornece métodos para permitir ignorar anúncios precedentes e intermediários.

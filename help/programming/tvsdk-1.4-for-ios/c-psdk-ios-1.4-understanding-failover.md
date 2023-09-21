@@ -1,8 +1,7 @@
 ---
 description: O tratamento de failover ocorre quando uma lista de reprodução variante tem várias representações para a mesma taxa de bits e uma das representações para de funcionar. O TVSDK alterna entre representações.
 title: Failover
-exl-id: 8c215e2b-e601-4991-a66f-0e810176a511
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%

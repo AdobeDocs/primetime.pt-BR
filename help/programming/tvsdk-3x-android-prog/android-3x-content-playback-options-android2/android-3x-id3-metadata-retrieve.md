@@ -1,8 +1,7 @@
 ---
 description: As tags ID3 fornecem informações sobre um arquivo de áudio ou vídeo, como o título do arquivo ou o nome do artista. O TVSDK detecta tags ID3 no nível de segmento de fluxo de transporte (TS) em fluxos HLS e despacha um evento. O aplicativo pode extrair dados da tag.
 title: Tags ID3
-exl-id: 7db9150d-bb1d-4e93-84c1-04a1f6605bdc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%

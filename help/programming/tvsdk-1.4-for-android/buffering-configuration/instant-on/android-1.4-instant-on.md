@@ -1,8 +1,7 @@
 ---
 description: O termo "instantâneo" refere-se ao pré-carregamento de um ou mais canais para que um usuário que seleciona um canal ou troca de canais veja o conteúdo reproduzido imediatamente. O buffering já estará concluído quando o usuário começar a assistir.
 title: Instantâneo
-exl-id: f640f208-d1b3-467a-be97-38690e10b7ed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%

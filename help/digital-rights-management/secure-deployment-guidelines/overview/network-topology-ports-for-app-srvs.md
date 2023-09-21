@@ -1,8 +1,7 @@
 ---
 description: Você pode configurar o servidor de licenças DRM da Adobe Primetime para usar qualquer porta de rede.
 title: Portas para servidores de aplicativos
-exl-id: a482c54a-5f26-43c0-8fd7-c517ab296924
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 0%

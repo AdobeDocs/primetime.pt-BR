@@ -1,8 +1,7 @@
 ---
 title: Segmentos do assinante e intervalo de tempo
 description: Defina coortes ou selecione segmentos de assinante para medir as possibilidades de compartilhamento de conta e os padrões dos visualizadores de canal para usar ferramentas gráficas e relatórios no Account IQ.
-exl-id: c38cde37-70d9-486d-b8d0-7c1cbd2baf2e
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%

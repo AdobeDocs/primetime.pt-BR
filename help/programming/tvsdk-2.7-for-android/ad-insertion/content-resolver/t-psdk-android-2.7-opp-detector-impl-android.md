@@ -1,8 +1,7 @@
 ---
 description: Você pode implementar seus próprios geradores de oportunidade implementando a classe OpportunityGenerator.
 title: Implementar um gerador de oportunidades personalizado
-exl-id: 8fa97515-692c-4e34-9afb-17a5409228db
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 0%

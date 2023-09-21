@@ -2,8 +2,7 @@
 title: Ferramentas de linha de comando para empacotar conteúdo e criar listas de revogação
 description: Ferramentas de linha de comando para empacotar conteúdo e criar listas de revogação
 copied-description: true
-exl-id: 34305dab-a2f0-41c2-9a59-3261e8dea7e2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%

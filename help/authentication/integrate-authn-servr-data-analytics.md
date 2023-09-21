@@ -1,8 +1,7 @@
 ---
 title: Integração dos dados do lado do servidor de autenticação do Primetime à Adobe Analytics
 description: Integração dos dados do lado do servidor de autenticação do Primetime à Adobe Analytics
-exl-id: c1f1f2a3-c98c-4aed-92ad-1f9bfd80b82b
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 4%
@@ -80,7 +79,6 @@ O relatório deve ter o carimbo de data e hora já que os eventos serão enviado
 >
 >* Contador (sem sub-relações)
 
-
 | Evento | Evento do Adobe Analytics |
 |---------------------------------------|-----------------------|
 | AuthN solicitado | event1 |
@@ -112,7 +110,6 @@ O relatório deve ter o carimbo de data e hora já que os eventos serão enviado
 >* Alocação: Mais recente (último)
 >* Expirar após: ocorrência
 >* Tipo: sequência de caracteres de texto
-
 
 | Propriedade | eVar |
 |-----------------------------------|--------------------------------|

@@ -1,8 +1,7 @@
 ---
 title: Faça o download e configure os softwares de pré-requisito
 description: O processo de instalação é simples. Se você já tiver o JDK instalado no sistema, ignore esta etapa, mas esteja ciente de que o JDK, o Eclipse IDE e o SO precisam ser compatíveis.
-exl-id: c2884a55-4f5e-4da8-807d-633625d7fef9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -30,18 +29,18 @@ ht-degree: 0%
 
       * Para Mac OS X/Unix:
 
-         ```
-         chmod +x android 
-         android update sdk --no-ui
-         ```
+        ```
+        chmod +x android 
+        android update sdk --no-ui
+        ```
 
       * Para Windows:
 
-         ```
-         android update sdk --no-ui
-         ```
+        ```
+        android update sdk --no-ui
+        ```
 
-         Esse processo leva um tempo.
+        Esse processo leva um tempo.
 
 1. Configurar o Eclipse.
    1. Inicie o Eclipse.

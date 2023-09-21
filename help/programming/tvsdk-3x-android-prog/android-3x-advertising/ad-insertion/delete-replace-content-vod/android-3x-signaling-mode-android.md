@@ -1,8 +1,7 @@
 ---
 description: Você pode marcar, excluir e substituir intervalos de tempo em fluxos de VOD usando diferentes modos de sinalização de anúncio e combinações de metadados de anúncio. Diferentes combinações de modo de sinalização e metadados resultam em comportamentos diferentes.
 title: Efeito na inserção e exclusão de anúncios do modo de sinalização de anúncios e combinações de metadados de anúncios
-exl-id: f42a2db5-642f-4944-87f6-2d7d902a2837
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -50,7 +49,7 @@ A tabela a seguir fornece os detalhes sobre o modo de sinalização e os comport
 | Auditude | Auditude | Nenhum | Nenhum anúncio inserido |
 | Substituir, Auditude | Excluir, Auditude | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)` | Intervalos substituídos por anúncios |
 | Marcar | Anúncio personalizado | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)` | Intervalos marcados |
-| Mark, Auditude | Anúncio Personalizado, Auditude | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)` | Intervalos marcados, nenhum anúncio inserido |
+| Mark, Auditude | Anúncio personalizado, Auditude | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)` | Intervalos marcados, nenhum anúncio inserido |
 
 **Não definido (padrão)**
 

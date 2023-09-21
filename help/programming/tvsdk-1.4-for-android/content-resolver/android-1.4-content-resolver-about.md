@@ -1,8 +1,7 @@
 ---
 description: Um detector de oportunidade é um componente TVSDK que detecta tags personalizadas em um fluxo e identifica oportunidades de posicionamento. Essas oportunidades são enviadas para o resolvedor de conteúdo, que personaliza o fluxo de trabalho de inserção de conteúdo/anúncio com base nas propriedades e nos metadados da oportunidade de posicionamento.
 title: Geradores de oportunidades e resolvedores de conteúdo
-exl-id: e396eaa9-444d-4173-a534-74b29309a151
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
@@ -15,11 +14,11 @@ Um detector de oportunidade é um componente TVSDK que detecta tags personalizad
 
 O TVSDK inclui um detector de oportunidade padrão:
 
-* `SpliceOutPlacementOpportunityDetector`, que entende as dicas de anúncios padrão
+* `SpliceOutPlacementOpportunityDetector`, que entende as dicas de publicidade padrão
 
 O TVSDK também inclui resolvedores de conteúdo padrão que fornecem conteúdo a ser inserido com base na chave de metadados no item do reprodutor:
 
-* `AuditudeResolver` para `AUDITUDE_METADATA_KEY`, que é capaz de se comunicar com os servidores do Adobe Primetime ad decisioning (anteriormente conhecidos como Auditude) e retornar ad breaks para serem colocados.
+* `AuditudeResolver` para `AUDITUDE_METADATA_KEY`, capaz de se comunicar com os servidores do Adobe Primetime ad decisioning (anteriormente conhecidos como Auditude) e retornar ad breaks a serem colocados.
 
 * `MetadataResolver` para `JSON_METADATA_KEY`
 

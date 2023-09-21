@@ -1,8 +1,7 @@
 ---
 description: As opções de criptografia a seguir são selecionadas no momento do empacotamento e não podem ser modificadas durante a aquisição da licença.
 title: Rotação de chaves
-exl-id: bcb90f0e-5c61-4c56-a030-2831d9a2a962
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%

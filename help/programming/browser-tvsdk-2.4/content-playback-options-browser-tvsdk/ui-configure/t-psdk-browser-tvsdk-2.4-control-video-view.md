@@ -1,8 +1,7 @@
 ---
 description: É possível controlar a posição e o tamanho da visualização do vídeo usando o objeto MediaPlayerView.
 title: Controlar a posição e o tamanho da visualização do vídeo
-exl-id: ab88a90f-4493-4f05-8da0-703ab3cf159e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%

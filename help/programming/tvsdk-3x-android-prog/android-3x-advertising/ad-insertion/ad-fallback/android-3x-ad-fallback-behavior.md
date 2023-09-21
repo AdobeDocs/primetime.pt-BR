@@ -1,8 +1,7 @@
 ---
 description: Quando o Primetime ad decisioning encontra um anúncio VAST (criativo) vazio ou com um tipo de mídia inválido para HLS, ele avalia os anúncios de fallback para determinar o que retornar.
 title: Comportamento de fallback de anúncio para VAST e VMAP
-exl-id: 65814b91-6528-4eea-abfb-f45dd2dbb899
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%

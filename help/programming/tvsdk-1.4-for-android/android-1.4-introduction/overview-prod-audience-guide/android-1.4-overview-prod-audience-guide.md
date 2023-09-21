@@ -1,8 +1,7 @@
 ---
 description: Este guia fornece informações sobre como desenvolver aplicativos de reprodutor de vídeo usando o TVSDK para Android, que é implementado em Java.
 title: Visão geral
-exl-id: 21d224fe-a843-4200-ad13-9b8eba52d74f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%

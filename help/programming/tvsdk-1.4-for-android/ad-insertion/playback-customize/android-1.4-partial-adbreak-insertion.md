@@ -1,8 +1,7 @@
 ---
 description: Você pode habilitar uma experiência tipo TV ao participar no meio de um anúncio, em transmissões ao vivo.
 title: Inserção parcial de Ad break
-exl-id: cb0d2f5f-c760-450e-ab34-fd7639d1190b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%

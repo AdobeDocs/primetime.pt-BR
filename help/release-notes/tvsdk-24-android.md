@@ -3,8 +3,7 @@ title: Notas de versão do TVSDK 2.4.1 para Android
 description: As Notas de versão do TVSDK 2.4.1 para Android descrevem os novos recursos compatíveis e os problemas e limitações conhecidos no TVSDK Android 2.4.1.
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 0%
@@ -74,7 +73,7 @@ Estes são os principais novos recursos na versão 2.4.1:
 
    * **Rastreamento de anúncios inseridos no lado do servidor.** O TVSDK pode rastrear anúncios inseridos pelo serviço de inserção de anúncios na nuvem do Adobe. Suporta anúncios lineares nos formatos VAST2, VAST3 e VMAP para VOD e fluxos dinâmicos/lineares.
    * **Tags HLS personalizadas.** O TVSDK usa o seu `MediaPlayerConfig` classe para ativar a notificação do aplicativo do reprodutor quando tags HLS personalizadas forem exibidas no fluxo.
-   * **Inserção de anúncio no cliente.** A biblioteca de inserção de anúncios do Auditude funciona com os servidores da Adobe Auditude para resolver anúncios para inserção dinâmica em conteúdo dinâmico, linear e VOD, nas posições antes da exibição, durante a exibição ou após a exibição.
+   * **Inserção de anúncio no cliente.** A biblioteca de inserção de anúncios do Auditude funciona com servidores Adobe Auditude para resolver anúncios para inserção dinâmica em conteúdo dinâmico, linear e VOD, nas posições antes da exibição, durante a exibição ou após a exibição.
    * **Resolvedores de anúncios personalizados.** A variável `ContentResolver, OpportunityGenerator,` e `MediaPlayerClientFactory` As interfaces permitem implementar um resolvedor de conteúdo ad/alternativo personalizado e registrar um detector de oportunidade personalizado para trabalhar com o TVSDK. A variável `TestAdResolver` e `AuditudeResolver` As classes fornecem exemplos C++ de implementação de um resolvedor de conteúdo. Você pode encontrar um exemplo de Javascript em `samples/jspsdk/testapp/psdk.js`.
    * **Comportamento de anúncio consistente.** Use o `AdPolicySelector` para permitir um comportamento consistente em todos os players para operações como busca e truque de reprodução quando anúncios estão presentes no conteúdo. Se você não implementar o seu próprio, o TVSDK usa `DefaultAdPolicySelector`.
    * **Remova/substitua anúncios C3.** Use a API TVSDK apropriada para remover intervalos de conteúdo personalizados e inserir dinamicamente novos anúncios sem trabalho adicional de preparação. Isso é útil quando o conteúdo dinâmico/linear é transmitido e imediatamente disponibilizado sob demanda sem limpeza.

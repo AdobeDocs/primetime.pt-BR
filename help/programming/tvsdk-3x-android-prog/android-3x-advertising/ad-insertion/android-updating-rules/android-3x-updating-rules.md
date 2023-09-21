@@ -2,8 +2,7 @@
 description: Você pode usar o arquivo de configuração TVSDK (AdobeTVSDKConfig.json) para atualizar as prioridades para a seleção criativa de anúncios em respostas VAST/VMAP. Você também pode usar esse arquivo de configuração para definir as regras de transformação do URL de origem para criações de anúncios.
 keywords: regras de seleção criativa;AdobeTVSDKConfig;adicionar prioridades criativas;regras de transformação
 title: Atualizar regras de seleção criativa de anúncios
-exl-id: da0420a0-6be9-47c8-bdd8-45f0f1860f28
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 0%
@@ -22,7 +21,6 @@ Quando o reprodutor de vídeo faz uma solicitação a um servidor de anúncios, 
 >* Esse arquivo deve ser colocado no [!DNL assets/] pasta do seu projeto.
 >* Alterar faixas de áudio quando o anúncio está sendo reproduzido não altera a faixa de áudio. Um player não deve permitir que os usuários alterem a faixa de áudio quando um anúncio está sendo reproduzido.
 >
-
 
 Você pode especificar dois tipos de regras em [!DNL AdobeTVSDKConfig.json]: *Prioridade* regras e *Normalizar* regras.
 

@@ -2,8 +2,7 @@
 title: Implementar suporte de capítulo
 description: Implementar suporte de capítulo
 copied-description: true
-exl-id: f86af555-4eba-4bc8-a323-41f65f23f4cc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
@@ -16,7 +15,7 @@ Você pode definir e rastrear capítulos para rastreamento de vídeo em um aplic
 
 * Os capítulos padrão, que são gerenciados internamente pelo TVSDK.
 
-   Um capítulo é definido como o tempo entre cada ad break. Por exemplo, o tempo entre um ad break precedente e o primeiro mid-roll é definido como o primeiro capítulo.
+  Um capítulo é definido como o tempo entre cada ad break. Por exemplo, o tempo entre um ad break precedente e o primeiro mid-roll é definido como o primeiro capítulo.
 * Capítulos personalizados, que são gerenciados pelo aplicativo e se baseiam nos dados do CMS ou em outra forma que o aplicativo usa para definir capítulos.
 
 1. Defina e rastreie capítulos padrão ou personalizados.

@@ -1,8 +1,7 @@
 ---
 description: Essas alterações na API TVSDK do Android oferecem suporte à exclusão e substituição de anúncios.
 title: Alterações na exclusão de anúncios e na API de substituição
-exl-id: bde8bd6e-0afe-42d0-b716-f33f75de757e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Essas alterações na API TVSDK do Android oferecem suporte à exclusão e subst
 
 * Novo `ContentRemoval` classe
 
-   `TimelineOperation` classe que define o intervalo de tempo a ser removido da linha do tempo
+  `TimelineOperation` classe que define o intervalo de tempo a ser removido da linha do tempo
 
 * `AuditudeResolver`
 

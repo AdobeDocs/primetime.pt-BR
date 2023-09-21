@@ -2,8 +2,7 @@
 description: Quando o TVSDK encontra um VMAP quebrado em uma resposta de servidor de publicidade, ele despacha um erro 1109 (NETWORK_AD_URL_FAILED).
 keywords: 1109;NETWORK_AD_URL_FAILED;QUEBROU O VMAP
 title: Tratamento de erros do cliente para VMAP com falha
-exl-id: e0ca36e7-ac88-44b8-bbdd-bcf29467417b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%

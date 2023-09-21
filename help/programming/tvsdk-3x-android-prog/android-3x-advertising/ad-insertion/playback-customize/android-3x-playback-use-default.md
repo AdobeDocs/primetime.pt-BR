@@ -1,8 +1,7 @@
 ---
 description: Você pode optar por usar comportamentos de anúncio padrão.
 title: Usar o comportamento de reprodução padrão
-exl-id: 0ea3d2bb-b4d4-4090-ab5f-b6c31c1abe32
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
@@ -28,11 +27,11 @@ Para personalizar comportamentos de anúncios, siga um destes procedimentos:
 
 * Implementar o `AdPolicySelector` e todos os seus métodos.
 
-   Essa opção é recomendada se você precisar substituir **all** os comportamentos de anúncio padrão.
+  Essa opção é recomendada se você precisar substituir **all** os comportamentos de anúncio padrão.
 
 * Estenda o `DefaultAdPolicySelector` e fornecem implementações somente para os comportamentos que exigem personalização.
 
-   Essa opção é recomendada se você precisar substituir apenas o **alguns** dos comportamentos padrão.
+  Essa opção é recomendada se você precisar substituir apenas o **alguns** dos comportamentos padrão.
 
 Para personalizar comportamentos de anúncios:
 

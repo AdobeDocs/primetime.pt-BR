@@ -1,8 +1,7 @@
 ---
 description: Do momento em que você cria a ocorrência de MediaPlayer ao momento em que você a encerra (reutiliza ou remove), essa ocorrência conclui uma série de transições entre os status.
 title: Ciclo de vida do objeto MediaPlayer
-exl-id: 0f2f3699-b745-4b14-8b7e-68696960ccab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
@@ -19,9 +18,9 @@ Para trabalhar com status:
 
 * Você pode recuperar o estado atual do `MediaPlayer` usando o `MediaPlayer.status` propriedade.
 
-   ```
-   function get status():String;
-   ```
+  ```
+  function get status():String;
+  ```
 
 * A lista de status é definida em `MediaPlayer.PlayerStatus`.
 

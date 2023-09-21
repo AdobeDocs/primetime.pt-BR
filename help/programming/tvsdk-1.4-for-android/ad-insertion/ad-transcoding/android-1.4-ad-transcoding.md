@@ -1,8 +1,7 @@
 ---
 description: Alguns anúncios de terceiros (ou criativos) não podem ser compilados no fluxo de conteúdo HTTP Live Streaming (HLS) porque seu formato de vídeo é incompatível com HLS. A inserção de anúncios do Primetime e o TVSDK podem, opcionalmente, tentar reempacotar anúncios incompatíveis em vídeos M3U8 compatíveis.
 title: Reempacotar anúncios incompatíveis usando o Serviço de reempacotamento criativo do Adobe
-exl-id: 8c3e5baf-1941-4330-a4b7-61ed623dfd5e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%

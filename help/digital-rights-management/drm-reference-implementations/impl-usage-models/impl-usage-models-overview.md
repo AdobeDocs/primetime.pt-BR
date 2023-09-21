@@ -2,8 +2,7 @@
 title: Visão geral
 description: Visão geral
 copied-description: true
-exl-id: 974b9a5e-43f6-4ec8-8048-dfcc1cff0f6f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 0%
@@ -18,9 +17,9 @@ A Implementação de referência inclui uma opção de modo de demonstração qu
 * **Aluguel/vídeo sob demanda (VOD)** - O conteúdo disponível vem com restrições baseadas em tempo. Por exemplo, os usuários podem reproduzir conteúdo durante um período de 30 dias. Depois que a reprodução começar, o usuário terá até 48 horas para terminar de assistir ao conteúdo. O conteúdo deve ser visualizado em 30 dias.
 * **Assinatura (tudo o que você pode comer)** - Alguns serviços oferecem assinaturas pagas que dão aos usuários acesso ilimitado a uma grande biblioteca de conteúdo, desde que continuem pagando uma taxa mensal. O servidor de licenças emite uma licença exclusiva para cada segmento de conteúdo e também emite uma licença raiz que expira no final do período de assinatura. Todos os meses, quando os usuários renovam suas assinaturas, a licença raiz também deve ser renovada.
 
-   >[!NOTE]
-   >
-   >Para os modelos de uso anteriores, após adquirir uma licença, os usuários devem inserir suas credenciais para que o servidor possa verificar se os usuários têm uma conta de aluguel.
+  >[!NOTE]
+  >
+  >Para os modelos de uso anteriores, após adquirir uma licença, os usuários devem inserir suas credenciais para que o servidor possa verificar se os usuários têm uma conta de aluguel.
 
 * **Financiado por anúncio** - O conteúdo é monetizado ao incluir publicidade como parte da experiência. Com esse modelo, o conteúdo pode ser distribuído e não requer autenticação do usuário.
 

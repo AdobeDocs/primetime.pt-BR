@@ -1,8 +1,7 @@
 ---
 description: Quando o TVSDK detecta uma tag inscrita na lista de reprodução/manifesto, o reprodutor tenta automaticamente processar a tag e expô-la no formato de um objeto TimedMetadata.
 title: Classe de metadados cronometrados
-exl-id: bf2bf78d-9063-4f54-97d9-60238b77ee93
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 0%
@@ -67,15 +66,15 @@ Lembre-se do seguinte:
 
 * O TVSDK extrai automaticamente a lista de atributos em pares de valores chave e armazena os atributos na propriedade de metadados.
 
-   >[!TIP]
-   >
-   >Dados complexos em tags personalizadas no manifesto, como cadeias de caracteres com caracteres especiais, devem estar entre aspas. Por exemplo:
-   >
-   >
-   ```
-   >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
-   >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```
+  >[!TIP]
+  >
+  >Dados complexos em tags personalizadas no manifesto, como cadeias de caracteres com caracteres especiais, devem estar entre aspas. Por exemplo:
+  >
+  >```
+  >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
+  >"www.example.com:8090?parameter1=xyz&parameter2=abc"
+  >```
+  >
 
 * Se a extração falhar devido a um formato de tag personalizado, a propriedade de metadados estará vazia e seu aplicativo deverá extrair as informações reais. Nenhum erro é lançado nesse caso.
 

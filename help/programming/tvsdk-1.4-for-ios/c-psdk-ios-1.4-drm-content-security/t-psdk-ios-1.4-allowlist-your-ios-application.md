@@ -1,8 +1,7 @@
 ---
 description: Você pode lista de permissões seus aplicativos iOS usando a ferramenta Adobe machotools.
 title: Lista de permissões seu aplicativo iOS
-exl-id: ff647647-6c5f-4a10-9040-8600f6103b99
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%

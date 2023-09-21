@@ -1,8 +1,7 @@
 ---
 description: O MediaPlayer fornece métodos para definir e obter o tempo de buffering inicial e o tempo de buffering de reprodução.
 title: Definir tempos de buffering
-exl-id: d2fbae05-2190-4acc-ae63-561db030608a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -23,17 +22,17 @@ O MediaPlayer fornece métodos para definir e obter o tempo de buffering inicial
    
    * Para definir o tempo de buffer inicial igual ao tempo de buffer de reprodução:
 
-      ```
-      createSimple(bufferTime:uint):BufferControlParameters
-      ```
+     ```
+     createSimple(bufferTime:uint):BufferControlParameters
+     ```
 
    * Para definir os tempos de buffer inicial e de reprodução:
 
-      ```
-      createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
-      ```
+     ```
+     createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
+     ```
 
-      Esses métodos lançam um `IllegalArgumentException` se os parâmetros não forem válidos, como quando:
+     Esses métodos lançam um `IllegalArgumentException` se os parâmetros não forem válidos, como quando:
 
    * O tempo de buffer inicial é menor que zero.
    * O tempo de buffer inicial é maior que o tempo de buffer.

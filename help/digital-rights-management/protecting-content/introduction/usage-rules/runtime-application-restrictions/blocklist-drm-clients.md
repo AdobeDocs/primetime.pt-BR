@@ -2,8 +2,7 @@
 title: Lista de bloqueios de Clientes DRM impedidos de acessar conteúdo protegido
 description: Lista de bloqueios de Clientes DRM impedidos de acessar conteúdo protegido
 copied-description: true
-exl-id: 837e55ef-8dff-46eb-a952-c787d40d4a1b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Uma versão de cliente DRM do Primetime pode ser identificada pelos atributos es
 | Ambiente | `“PC”, “PortingKit”` | Correspondência exata | Identifica se o cliente está sendo executado em um desktop ou em qualquer outro dispositivo. |
 | SO | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Correspondência exata | Platform |
 | Arquitetura | `“32”, “64”` | Correspondência exata | 32 ou 64 bits |
-| Tipo de tela | `“PC”, “Mobile”, “TV”` | Correspondência exata |  |
+| Tipo de tela | `“PC”, “Mobile”, “TV”` | Correspondência exata | |
 | Versão de tempo de execução | Um número de versão válido. Por exemplo, `“2.0.0”, "3.0", "4.0", "11.0"`, etc. | Corresponde se a versão do cliente é inferior ou igual à versão especificada. | O número da versão é especificado como uma combinação de números e pontos (&quot;.&quot;) de qualquer comprimento. |
 | Versão da biblioteca DRM do Primetime | Um número de versão válido. Por exemplo, `“2.0.0”`. | Corresponde se a versão do cliente é inferior ou igual à versão especificada. | O número da versão é especificado como uma combinação de números e pontos (&quot;.&quot;) de qualquer comprimento. |
 | Fornecedor OEM | Sequência de caracteres do fornecedor OEM que pode ser localizada no Certificado de tempo de execução emitido para um cliente que transferiu o DRM do Primetime para um dispositivo. | Correspondência exata | String de identificação do fornecedor OEM para o dispositivo que usa o kit de portabilidade. |

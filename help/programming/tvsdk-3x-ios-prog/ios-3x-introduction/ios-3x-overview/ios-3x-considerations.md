@@ -1,8 +1,7 @@
 ---
 description: Para usar o TVSDK com mais eficiência, você deve considerar determinados detalhes de sua operação e seguir determinadas práticas recomendadas.
 title: Considerações e práticas recomendadas
-exl-id: f5d3e0ff-675f-4bd4-bfda-71988d25c85d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Lembre-se das seguintes informações ao usar o TVSDK:
 
 * O Adobe Primetime não funciona em simuladores do iOS.
 
-   Você deve usar dispositivos reais para testes.
+  Você deve usar dispositivos reais para testes.
 
 * A reprodução é compatível somente com conteúdo HTTP Live Streaming (HLS).
 
@@ -31,15 +30,15 @@ Lembre-se das seguintes informações ao usar o TVSDK:
 
    * Os ajustes de linha do tempo não podem ser revisados após a configuração inicial.
 
-      Por exemplo, um anúncio não pode ser removido da linha do tempo depois de ser reproduzido. Se o usuário buscar de volta na apresentação, o mesmo anúncio será reproduzido novamente mesmo se a política tiver sido a remoção do anúncio.
+     Por exemplo, um anúncio não pode ser removido da linha do tempo depois de ser reproduzido. Se o usuário buscar de volta na apresentação, o mesmo anúncio será reproduzido novamente mesmo se a política tiver sido a remoção do anúncio.
 
    * Dependendo da precisão do codificador, a duração real da mídia codificada pode diferir das durações registradas no manifesto do recurso de fluxo.
 
-      Não há uma maneira confiável de ressincronizar a linha do tempo virtual ideal e a linha do tempo de reprodução real. O rastreamento do progresso da reprodução do fluxo para o gerenciamento de anúncios e o Video Analytics deve usar o tempo de reprodução real, de modo que os relatórios e o comportamento da interface do usuário podem não rastrear com precisão a mídia e o conteúdo do anúncio.
+     Não há uma maneira confiável de ressincronizar a linha do tempo virtual ideal e a linha do tempo de reprodução real. O rastreamento do progresso da reprodução do fluxo para o gerenciamento de anúncios e o Video Analytics deve usar o tempo de reprodução real, de modo que os relatórios e o comportamento da interface do usuário podem não rastrear com precisão a mídia e o conteúdo do anúncio.
 
    * O agente do usuário de entrada para todas as solicitações HTTP do TVSDK nesta plataforma é determinado pelo dispositivo e pela versão do iOS em execução no dispositivo.
 
-      O valor da sequência de agente do usuário é padronizado para o que o sistema operacional atribui.
+     O valor da sequência de agente do usuário é padronizado para o que o sistema operacional atribui.
 
 ## Práticas recomendadas {#section_tvsdk_best_practices}
 

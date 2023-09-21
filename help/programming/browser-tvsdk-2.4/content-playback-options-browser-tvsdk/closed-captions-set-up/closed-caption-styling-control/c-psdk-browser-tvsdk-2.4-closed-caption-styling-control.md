@@ -1,8 +1,7 @@
 ---
 description: Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe TextFormat. Isso define o estilo de todas as legendas ocultas exibidas pelo reprodutor.
 title: Controlar estilo de legendas ocultas
-exl-id: 64efb975-edf5-4e91-b62d-46d0b8f84e22
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%

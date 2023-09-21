@@ -1,8 +1,7 @@
 ---
 description: O MediaPlayer fornece uma função notifyClick() que envia eventos relacionados a anúncios quando um anúncio clicável está sendo reproduzido. Esses eventos fornecem informações de anúncios e ad break que o aplicativo pode usar para fornecer a funcionalidade de click-through.
 title: Lidar com anúncios clicáveis
-exl-id: 25738592-f3fe-4f13-b2bb-26a5f942cd18
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%

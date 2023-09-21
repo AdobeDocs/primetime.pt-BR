@@ -1,8 +1,7 @@
 ---
 description: O Primetime DRM permite que os proprietários e distribuidores de conteúdo controlem como e onde seu conteúdo pode ser distribuído e experimentado, fornecendo proteção completa durante todo o ciclo de vida do conteúdo. Ele criptografa arquivos de vídeo, que podem ser transmitidos ou baixados para as plataformas Microsoft® Windows®, Apple® Mac OS®, Linux® e Android®, e aplica modelos de negócios como aluguel de vídeo online. Os consumidores podem desfrutar de conteúdo de alta qualidade quando desejarem, seja online ou offline. O Primetime DRM oferece as principais vantagens que os proprietários e distribuidores de conteúdo podem usar para fornecer rapidamente novos serviços que os diferenciam da concorrência.
 title: Sobre o Adobe Primetime DRM
-exl-id: 28541200-d917-428f-b277-25d7f663d3f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: O TVSDK pode reproduzir vídeos com vários perfis com taxas de bits diferentes, alternando entre eles para fornecer mais de um nível de qualidade com base na largura de banda disponível.
 title: Várias taxas de bits
-exl-id: 5f71d69e-993a-4985-accd-7ce2104f837e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 0%
@@ -29,7 +28,6 @@ A implementação de referência configura os seguintes parâmetros ABR no [IPla
 >* O mecanismo de failover do TVSDK pode substituir essas configurações, pois o TVSDK favorece uma experiência de reprodução contínua em vez de respeitar estritamente os parâmetros de controle.
 >* Quando a taxa de bits muda, o TVSDK envia `onProfileChanged` eventos em `PlaybackEventListener`.
 
-
 ## Habilitação do controle ABR personalizado na implementação de referência {#section_72A6E7263E1441DD8D7E0690285515E6}
 
 Por padrão, a taxa de bits adaptável (ABR) está ativada no TVSDK. Você pode usar a interface do usuário de Configurações do Primetime para substituir o comportamento padrão do TVSDK na implementação de referência, configurando o controle ABR personalizado.
@@ -39,7 +37,7 @@ Para habilitar o ABR personalizado por meio da interface do usuário de Configur
 * Abra a caixa de diálogo Configurações do Primetime.
 * Selecionar **[!UICONTROL ABR controls]**.
 
-   ![](assets/abr-configuration.jpg)
+  ![](assets/abr-configuration.jpg)
 
 * Toque no [!UICONTROL Enable ON] para que seja exibido `OFF`.
 

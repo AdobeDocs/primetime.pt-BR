@@ -1,8 +1,7 @@
 ---
 description: Existem algumas limitações e alguns problemas na forma como o modo de truque de reprodução se comporta.
 title: Limitações e comportamento para truques
-exl-id: 98558970-9e5e-4dc1-a327-63d9db1d4fed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -33,4 +32,4 @@ Estas são as limitações do modo de truque:
    * A variável `MediaPlayerEvent.AD_BREAK_SKIPPED` O evento é despachado imediatamente antes de um ad break ser ignorado. Seu reprodutor pode usar esse evento para implementar uma lógica personalizada relacionada aos ad breaks ignorados.
    * Sair da reprodução de truque invoca a mesma política de reprodução de anúncio de quando sair da busca.
 
-      Portanto, assim como na busca, o comportamento depende da diferença entre a política de reprodução do aplicativo e a padrão. O padrão é que o último ad break ignorado é reproduzido no ponto em que você sai do modo de reprodução inesperada.
+     Portanto, assim como na busca, o comportamento depende da diferença entre a política de reprodução do aplicativo e a padrão. O padrão é que o último ad break ignorado é reproduzido no ponto em que você sai do modo de reprodução inesperada.

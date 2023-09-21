@@ -1,8 +1,7 @@
 ---
 description: O servidor de implementação de referência pode ajudar você a criar um servidor de licença totalmente funcional que use todos os recursos do SDK Java do Adobe Primetime DRM.
 title: Servidor de licenças
-exl-id: a928b7ac-9191-4b8c-b038-eb92a09286fa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%

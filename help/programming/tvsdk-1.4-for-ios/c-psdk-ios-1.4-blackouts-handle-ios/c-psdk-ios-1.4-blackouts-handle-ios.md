@@ -1,8 +1,7 @@
 ---
 description: O TVSDK lida com blecautes em fluxos de vídeo ao vivo e fornece conteúdo alternativo durante um blecaute.
 title: Lidar com blecautes em fluxos ao vivo
-exl-id: 772700ac-2b6d-4bf9-9400-c357dd77f701
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%

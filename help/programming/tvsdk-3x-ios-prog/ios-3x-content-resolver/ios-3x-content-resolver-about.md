@@ -1,8 +1,7 @@
 ---
 description: Um detector de oportunidade é um componente TVSDK que detecta tags personalizadas em um fluxo e identifica oportunidades de posicionamento. Essas oportunidades são enviadas para o resolvedor de conteúdo, que personaliza o fluxo de trabalho de inserção de conteúdo/anúncio com base nas propriedades e nos metadados da oportunidade de posicionamento.
 title: Geradores de oportunidades e resolvedores de conteúdo
-exl-id: 1f8e0baf-49ef-49a5-92d8-5eae31576974
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Um detector de oportunidade é um componente TVSDK que detecta tags personalizad
 
 O TVSDK inclui um detector de oportunidade padrão:
 
-* `PTOpportunityResolver`, que entende as dicas de anúncios padrão
+* `PTOpportunityResolver`, que entende as dicas de publicidade padrão
 
 O TVSDK também inclui um resolvedor de conteúdo padrão que fornece conteúdo a ser inserido com base na chave de metadados no item do reprodutor:
 

@@ -1,8 +1,7 @@
 ---
 description: Os manipuladores de eventos permitem que você responda a eventos TVSDK.
 title: Implementar ouvintes e retornos de chamada de evento
-exl-id: 1f7977e3-4f96-4c0d-ae33-319c84a33ed6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%
@@ -23,9 +22,9 @@ Seu aplicativo deve implementar ouvintes de eventos para qualquer evento TVSDK q
 
    * Eventos obrigatórios: analise todos os eventos de reprodução.
 
-      >[!IMPORTANT]
-      >
-      >Analise o evento de alteração de status, que ocorre quando o status do reprodutor muda de maneiras que você precisa saber. As informações fornecidas incluem erros que podem afetar o que o reprodutor pode fazer em seguida.
+     >[!IMPORTANT]
+     >
+     >Analise o evento de alteração de status, que ocorre quando o status do reprodutor muda de maneiras que você precisa saber. As informações fornecidas incluem erros que podem afetar o que o reprodutor pode fazer em seguida.
 
    * Para outros eventos, dependendo do aplicativo, consulte  [Resumo de eventos do player do Primetime](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md).
 

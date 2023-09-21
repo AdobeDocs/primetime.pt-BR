@@ -1,8 +1,7 @@
 ---
 description: Quando os usuários avançam ou retrocedem rapidamente pela mídia, eles estão no modo de execução. Para entrar no modo de execução de truque, é necessário definir a taxa de reprodução do MediaPlayer para um valor diferente de 1.
 title: Implementar avanço e retrocesso rápidos
-exl-id: 58ed9a96-9617-4364-81d4-b404b23cf265
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -54,4 +53,4 @@ Para alternar a velocidade, você deve definir um valor.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` quando a reprodução continua na taxa selecionada.
 
-      O TVSDK despacha ambos os eventos quando o reprodutor retorna do modo &quot;trick-play&quot; para o modo de reprodução normal.
+     O TVSDK despacha ambos os eventos quando o reprodutor retorna do modo &quot;trick-play&quot; para o modo de reprodução normal.

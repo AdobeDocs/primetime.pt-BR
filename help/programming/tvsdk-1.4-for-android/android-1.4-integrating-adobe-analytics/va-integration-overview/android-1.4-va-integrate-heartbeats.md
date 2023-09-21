@@ -1,8 +1,7 @@
 ---
 description: Você pode configurar o player para rastrear e analisar o uso do vídeo.
 title: Inicializar e configurar a análise de vídeo
-exl-id: 82013882-e314-44fd-82f2-0640575d3c68
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
    <td colname="col2"> <p>Importante: esse nome de arquivo de configuração JSON deve permanecer <span class="codeph"> ADBMobileConfig.json </span>. O nome e o caminho deste arquivo de configuração não podem ser alterados. O caminho para este arquivo deve ser <span class="codeph"> &lt;source root=""&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Ponto de acesso do servidor de rastreamento do AppMeasurement </td> 
+   <td colname="col1"> Ponto de extremidade do servidor de rastreamento de AppMeasurements </td> 
    <td colname="col2"> O URL do endpoint da coleção de back-end do Adobe Analytics (antigo SiteCatalyst). </td> 
   </tr> 
   <tr> 

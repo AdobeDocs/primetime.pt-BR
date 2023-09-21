@@ -3,8 +3,7 @@ title: Notas de versão do TVSDK 2.7 para Android™
 description: As Notas de versão do TVSDK 2.7 para Android™ descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas de dispositivo no TVSDK Android™ 2.7
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4037'
 ht-degree: 0%
@@ -25,9 +24,7 @@ O reprodutor de referência Android™ está incluído com o Android™ TVSDK no
 >
 >1. Baixar VideoHeartbeat.jar de [https://github.com/Adobe-Marketing-Cloud/media-sdks/releases](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases) (Biblioteca do VideoHeartbeat para Android™ v2.0.0)
 >1. Extraia VideoHeartbeat.jar para a pasta libs/.
-
 >
-
 
 ## Novos recursos {#new-features}
 
@@ -46,7 +43,7 @@ O TVSDK 2.7 é compatível com a resolução simultânea de todas as solicitaç�
 * **O TVSDK 2.5 é compatível com Android™ P**
 * **Habilitar áudio de fundo**
 
-   Para habilitar a reprodução de áudio quando o aplicativo muda do primeiro para o segundo plano, o aplicativo deve chamar a API enableAudioPlaybackInBackground do MediaPlayer com true como argumento quando o player estiver no estado PREPARED.
+  Para habilitar a reprodução de áudio quando o aplicativo muda do primeiro para o segundo plano, o aplicativo deve chamar a API enableAudioPlaybackInBackground do MediaPlayer com true como argumento quando o player estiver no estado PREPARED.
 
 * **alwaysUseAudioOutputLatency(boolean val) na classe MediaPlayer**
 
@@ -60,14 +57,14 @@ O TVSDK agora cancela o download do segmento em andamento, se necessário, e alt
 
 * **Inserção de ad-break parcial**
 
-   Experiência semelhante à de TV ao ingressar no meio de um anúncio sem disparar o rastreamento do anúncio parcialmente assistido.\
-   Exemplo: o usuário se junta ao meio (a 40 segundos) de um ad break de 90 segundos que consiste em três anúncios de 30 segundos. São 10 segundos do segundo anúncio no intervalo.
+  Experiência semelhante à de TV ao ingressar no meio de um anúncio sem disparar o rastreamento do anúncio parcialmente assistido.\
+  Exemplo: o usuário se junta ao meio (a 40 segundos) de um ad break de 90 segundos que consiste em três anúncios de 30 segundos. São 10 segundos do segundo anúncio no intervalo.
    * O segundo anúncio é reproduzido pelo tempo restante (20 segundos) seguido pelo terceiro anúncio.
    * Os rastreadores de anúncios do anúncio parcial reproduzido (segundo anúncio) não são acionados. Os rastreadores somente para o terceiro anúncio são acionados.
 
 * **Carregamento de anúncio seguro em HTTPS**
 
-   O Adobe Primetime fornece uma opção para solicitar a primeira chamada para o servidor de anúncios do primetime e CRS em https.
+  O Adobe Primetime fornece uma opção para solicitar a primeira chamada para o servidor de anúncios do primetime e CRS em https.
 
 * **AdSystem e ID de criação adicionados às solicitações do CRS**
 
@@ -81,7 +78,7 @@ O Android™ TVSDK v2.5.4 oferece as seguintes atualizações e alterações de 
 
 * Alterações no valor padrão de `WebViewDebbuging`
 
-   A variável `WebViewDebbuging` o valor está definido como _Falso_ por padrão. Para ativá-lo, chame `setWebContentsDebuggingEnabled` para _True_ na petição.
+  A variável `WebViewDebbuging` o valor está definido como _Falso_ por padrão. Para ativá-lo, chame `setWebContentsDebuggingEnabled` para _True_ na petição.
 
 * Atualização da versão do OpenSSL e do Curl atualizada `libcurl` para v7.57.0 e OpenSSL para v1.0.2k.
 * Acesso em nível de aplicativo para objeto de resposta VAST Introduziu uma nova API NetworkAdInfo::getVastXml() que fornece acesso do objeto de resposta VAST ao aplicativo.
@@ -92,7 +89,7 @@ O Android™ TVSDK v2.5.3 oferece as seguintes atualizações e alterações de 
 
 * Todos os clientes de TVSDK que usam CRS são incentivados a atualizar seus aplicativos com TVSDK 2.5.3.85 ou mais recente no Android™. Esta é uma substituição suspensa da implementação do aplicativo existente. Após a atualização do TVSDK, verifique as solicitações do URL criativo do CRS em uma ferramenta de proxy (por exemplo: Charles) e confirme se o nome do host e a versão no caminho refletem como na estrutura de URL de exemplo abaixo.
 
-   `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
+  `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
 * Personalizável Agente do usuário do TVSDK: adicionamos algumas novas APIs para personalizar os agentes do usuário.
 
@@ -109,7 +106,7 @@ O Android™ TVSDK v2.5.3 oferece as seguintes atualizações e alterações de 
    * Uma nova propriedade é adicionada a TextFormat::treatmentSpaceAsAlphaNum, que define se o espaço deve ser tratado como alfanumérico ao exibir legendas.
 
 * Alterações em `SizeAvailableEvent`: anteriormente, os métodos getHeight() e getWidth() de `SizeAvailableEvent` na versão 2.5.2, costumava retornar a altura e a largura do quadro, retornadas pelo formato de mídia. Agora, retorna a altura e a largura da saída retornadas pelo decodificador, respectivamente.
-* Alterações no comportamento de buffering: o comportamento de buffering é alterado. Cabe ao desenvolvedor do aplicativo decidir o que fazer se o buffer estiver vazio. O 2.5.3 usa o tamanho do buffer de reprodução em uma situação de buffer vazio.
+* Alterações no comportamento de buffering: o comportamento de buffering é alterado. Fica a cargo do desenvolvedor do aplicativo o que ele deseja fazer se o buffer estiver vazio. O 2.5.3 usa o tamanho do buffer de reprodução em uma situação de buffer vazio.
 
 **Versão 2.5.2**
 
@@ -138,9 +135,9 @@ Observação: não há suporte para switching ABR, reprodução de truque, inser
    * **Truque com a taxa de bits adaptável (ABR) -** Esse recurso permite que o TVSDK alterne entre fluxos do iFrame no modo de reprodução de truque. Você pode usar perfis que não sejam do iFrame para executar truques em velocidades mais baixas.
    * **Jogo de truque mais suave -** Essas melhorias melhoram a experiência do usuário:
 
-          * Taxa de bits adaptável e seleção da taxa de quadros durante a execução do truque, com base na largura de banda e no perfil de buffer
-          * Uso da transmissão principal em vez da transmissão IDR para obter até 30 fps de reprodução rápida.
-      
+         * Taxa de bits adaptável e seleção da taxa de quadros durante a execução do truque, com base na largura de banda e no perfil de buffer
+         * Uso da transmissão principal em vez da transmissão IDR para obter até 30 fps de reprodução rápida.
+     
 * **Proteção de conteúdo**
 
    * **Proteção de saída com base em resolução -** Esse recurso vincula as restrições de reprodução a resoluções específicas, fornecendo controles DRM mais refinados.
@@ -163,19 +160,19 @@ O TVSDK coleta métricas automaticamente, cumprindo o contrato de vendas do clie
 * **SizeAvailableEventListener**
    * Os métodos getHeight() e getWidth() de SizeAvailableEvent agora retornam a saída em altura e largura, respectivamente. A taxa de proporção de exibição pode ser calculada da seguinte maneira:
 
-      ```
-      SizeAvailableEvent e;
-      
-      DAR = e.getWidth()/ e.getHeight();
-      
-      Storage Aspect Ratio in terms of Sar width and Sar height can also be used to calculate Frame width and Frame height:
-      
-      SAR = e.getSarWidth()/e.getSarHeight();
-      
-      frameHeight = e.getHeight();
-      
-      frameWidth = e.getWidth()/SAR;    
-      ```
+     ```
+     SizeAvailableEvent e;
+     
+     DAR = e.getWidth()/ e.getHeight();
+     
+     Storage Aspect Ratio in terms of Sar width and Sar height can also be used to calculate Frame width and Frame height:
+     
+     SAR = e.getSarWidth()/e.getSarHeight();
+     
+     frameHeight = e.getHeight();
+     
+     frameWidth = e.getWidth()/SAR;    
+     ```
 
 * **Cookies**
 
@@ -339,7 +336,7 @@ Esta seção fornece um resumo do problema resolvido na versão do TVSDK 2.7.
 * Zendesk#25590 - Aprimoramento: loja de cookies TVSDK (C++ para Java™)
    * O Android™ TVSDK agora é compatível com o acesso de cookies entre a camada Java™ (armazenada no CookieStore do aplicativo Android™) e a camada C++ TVSDK.
 * Zendesk#32252 - TVSDK_Android_2.5.2.12 não parece ter a correção para PTPLAY-20269 Esse problema foi corrigido e integrado à ramificação 2.5.2.
-* Zendesk#31806 - Os sticks do Auditude em PREPARING Player estavam presos no estado Preparing porque o xml de resposta tinha uma tag vazia. Agora o problema foi corrigido.
+* Zendesk#31806 - Auditude sticks em PREPARING Player ficou preso no estado Preparing porque o xml de resposta tinha uma tag vazia. Agora o problema foi corrigido.
 * Zendesk#31727 - Os caracteres de legendas ocultas do TVSDK 2.5 são soltos ou digitados incorretamente.
    * Problema corrigido e não estamos soltando/digitando nenhum caractere incorretamente.
 * Zendesk#31485 - DrmManager in 2.5
@@ -364,11 +361,11 @@ A sequência de caracteres da versão do Adobe Primetime é adicionada ao agente
 * Zendesk #30809 Evento SEEK_END ausente impede que o aplicativo transite para um estado de reprodução.
 * A cor &#39;Ciano&#39; da legenda oculta Zendesk #30415 agora é um tom mais escuro de azul (turquesa), em comparação às versões anteriores do Primetime TVSDK.
 
-   A cor é alterada de Ciano escuro para Ciano.
+  A cor é alterada de Ciano escuro para Ciano.
 
 * Os anúncios de VOD do Zendesk #30727 não estão sendo baixados/resolvidos.
 
-   No XML do VMAP, se houver uma tag VAST vazia sem uma tag de fechamento explícita (‘&lt;/vast>&#39;) e sem um caractere de nova linha depois dele, o XML do VMAP não é analisado corretamente e os anúncios podem não ser reproduzidos.
+  No XML do VMAP, se houver uma tag VAST vazia sem uma tag de fechamento explícita (‘&lt;/vast>&#39;) e sem um caractere de nova linha depois dele, o XML do VMAP não é analisado corretamente e os anúncios podem não ser reproduzidos.
 
 **Android™ TVSDK 2.5.1**
 

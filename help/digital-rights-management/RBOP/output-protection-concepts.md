@@ -1,8 +1,7 @@
 ---
 description: Esta seção fornece uma visão geral conceitual da configuração, das opções e dos significados associados à proteção de saída.
 title: Conceitos de RBOP
-exl-id: 5b9de292-e060-467d-beca-5f428e45ed69
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 0%

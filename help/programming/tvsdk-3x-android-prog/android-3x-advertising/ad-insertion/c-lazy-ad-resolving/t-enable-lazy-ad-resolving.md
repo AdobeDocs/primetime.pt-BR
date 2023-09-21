@@ -2,8 +2,7 @@
 description: Você pode ativar ou desativar o recurso Resolução de anúncio lento usando o mecanismo de Carregamento de anúncio lento existente (A Resolução de anúncio lento está desativada por padrão).
 keywords: Lento;Resolução de anúncio;Carregamento de anúncio;delayLoading
 title: Habilitar resolução de anúncios lentos
-exl-id: a52a1f9a-3bf6-4193-8347-1ef248ba8884
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
@@ -22,8 +21,8 @@ Você pode ativar ou desativar a Resolução de anúncios lentos chamando [Adver
    * Se *hasDelayAdLoading* retorna true, o TVSDK resolve somente os anúncios iniciais e faz a transição para o estado PREPARADO.
 
       * Os anúncios restantes são resolvidos e colocados durante a reprodução.
-   * Quando *hasPreroll *ou *hasLivePreroll* Quando retornado como false, o TVSDK presume que não há anúncio precedente e inicia a reprodução do conteúdo imediatamente. Elas são definidas como true por padrão.
 
+   * Quando *hasPreroll *ou *hasLivePreroll* Quando retornado como false, o TVSDK presume que não há anúncio precedente e inicia a reprodução do conteúdo imediatamente. Elas são definidas como true por padrão.
 
 **APIs relevantes para resolução de anúncios lentos:**
 

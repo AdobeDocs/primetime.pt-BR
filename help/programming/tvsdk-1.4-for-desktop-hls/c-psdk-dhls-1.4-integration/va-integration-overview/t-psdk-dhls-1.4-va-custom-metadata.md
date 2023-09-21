@@ -1,8 +1,7 @@
 ---
 description: Você pode fornecer metadados personalizados sobre conteúdo, anúncios e chamadas de rastreamento de capítulo usando funções de retorno de chamada.
 title: Implementar suporte a metadados personalizados
-exl-id: 56580338-5104-4121-b441-5d92ba6f4610
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%

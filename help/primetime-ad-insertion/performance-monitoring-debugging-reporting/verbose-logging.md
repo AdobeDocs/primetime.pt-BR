@@ -2,8 +2,7 @@
 title: Registro detalhado
 description: Registro detalhado
 copied-description: true
-exl-id: f2d1b0c2-ba28-4fba-9a4e-71d1421f37fe
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2155'
 ht-degree: 0%
@@ -107,7 +106,7 @@ Registros desse tipo registram os resultados das solicitações de anúncios do 
 | status | string | Código de status HTTP retornado |
 | request_duration | inteiro | Tempo (em milissegundos) desde a solicitação até a resposta |
 | ad_server_query_url | string | URL da chamada de publicidade, incluindo parâmetros de consulta |
-| ad_system_id | string | Sistema de publicidade, da resposta do servidor de publicidade (Auditoria, se não especificado) |
+| ad_system_id | string | Sistema de publicidade, da resposta do servidor de publicidade (Auditude, se não especificado) |
 | avail_id | string | ID da vantagem, da sugestão de anúncio no arquivo de manifesto de conteúdo (N/D para VOD) |
 | avail_duration | número | Duração (segundos) da falha, a partir da sinalização de anúncio no arquivo de manifesto de conteúdo (N/D para VOD) |
 | ad_server_response | string | Resposta codificada na base64 do servidor de publicidade |
@@ -130,7 +129,7 @@ Os registros desse tipo registram os resultados das solicitações de publicidad
 | ad_duration | inteiro | Duração (segundos) do anúncio, da resposta do servidor de publicidade. |
 | ad_content_url | string | URL do arquivo de manifesto do anúncio, da resposta do servidor de publicidade. |
 | **†** ad_content_url_atual | string | URL do arquivo de manifesto do anúncio inserido. Vazio para TRACE_AD_REDIRECT. |
-| ad_system_id | string | Sistema de publicidade, da resposta do servidor de publicidade (Auditoria, se não especificado). |
+| ad_system_id | string | Sistema de publicidade, da resposta do servidor de publicidade (Auditude, se não especificado). |
 | ad_id | string | ID do anúncio, da resposta do servidor de anúncios. |
 | creative_id | string | ID da criação, do nó de publicidade, da resposta do servidor de publicidade. |
 | **†** ad_call_id | string | Não usado. Reservado para uso futuro. |
@@ -328,15 +327,13 @@ https://manifest.auditude.com/auditude/{live/vod}/{publisherAssetID}/{rendition}
 ```
 
 * **live/vod**
-O servidor de manifesto define esse valor com base no tipo de playlist do conteúdo: Live/linear (
-`#EXT-X-PLAYLIST-TYPE:EVENT`) ou VOD (`#EXT-X-PLAYLIST-TYPE:VOD`)
+O servidor de manifesto define esse valor com base no tipo de playlist do conteúdo: Live/linear (`#EXT-X-PLAYLIST-TYPE:EVENT`) ou VOD (`#EXT-X-PLAYLIST-TYPE:VOD`)
 
 * **publisherAssetID**
 Identificador exclusivo do editor para o conteúdo específico fornecido na solicitação de URL do Bootstrap.
 
 * **representação**
-O servidor de manifesto define isso com base na variável 
-`BANDWIDTH` do fluxo de conteúdo e o utiliza para corresponder a taxa de bits do anúncio à taxa de bits do conteúdo. A taxa de bits de anúncio não pode exceder a taxa de bits do conteúdo, a menos que a representação de anúncio com a taxa de bits mais baixa o faça.
+O servidor de manifesto define isso com base na variável `BANDWIDTH` do fluxo de conteúdo e o utiliza para corresponder a taxa de bits do anúncio à taxa de bits do conteúdo. A taxa de bits de anúncio não pode exceder a taxa de bits do conteúdo, a menos que a representação de anúncio com a taxa de bits mais baixa o faça.
 
 * **groupID**
 O servidor de manifesto gera esse valor e o usa para garantir que ele insira anúncios de forma consistente, independentemente da taxa de bits das representações que o cliente solicita.

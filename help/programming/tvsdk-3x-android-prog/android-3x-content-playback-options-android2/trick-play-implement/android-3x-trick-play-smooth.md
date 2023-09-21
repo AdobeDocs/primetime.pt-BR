@@ -1,8 +1,7 @@
 ---
 description: Se o seu sistema tiver acesso a decodificação assistida por hardware, você poderá obter um truque mais suave do que com a implementação pura do TVSDK por software, usando o formato iFrame.
 title: Operações de truque mais suaves
-exl-id: f69bf480-122b-474d-8f35-31655ea87c70
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%

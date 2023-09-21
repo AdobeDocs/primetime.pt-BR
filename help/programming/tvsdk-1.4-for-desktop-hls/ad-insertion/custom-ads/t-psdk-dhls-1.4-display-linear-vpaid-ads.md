@@ -1,8 +1,7 @@
 ---
 description: O TVSDK é compatível com a exibição de anúncios VPAID (Video Player-Ad Interface Definition) em ad break. A versão 1.0 do VPAID requer o Flash, enquanto a versão 2.0 também funciona com o TVSDK do navegador e o JavaScript.
 title: Exibir anúncios VPAID lineares em um ad break
-exl-id: 316a38ac-ec2d-498c-b441-304e2fa75993
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
@@ -47,10 +46,10 @@ Para configurar um contêiner de anúncios para exibir anúncios VPAID (versão 
    >
    >Ao obter um evento de alteração de tela inteira e definir o novo tamanho no contêiner de anúncio, passe o estado de exibição do estágio da seguinte maneira para garantir que o reprodutor seja redimensionado corretamente:
    >
-   >
-   ```
+   >```
    >private function onFullScreenChange(event:FullScreenEvent):void { 
    >if (_adContainer) 
    >{ _adContainer.setSize(stage.stageWidth, stage.stageHeight, stage.displayState); } 
    >}
    >```
+   >

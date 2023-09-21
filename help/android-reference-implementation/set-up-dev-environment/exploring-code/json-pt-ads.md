@@ -1,8 +1,7 @@
 ---
 title: Objeto JSON para anúncios do Primetime
 description: O bloco de código abaixo define o objeto JSON de detalhes quando o valor do tipo é anúncios do Primetime.
-exl-id: b1392781-2dfb-4934-b1ce-1c761cbfb22d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%

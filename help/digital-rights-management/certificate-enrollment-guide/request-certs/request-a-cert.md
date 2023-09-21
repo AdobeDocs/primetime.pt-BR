@@ -2,8 +2,7 @@
 title: Solicitar um certificado (Solicitante)
 description: Solicitar um certificado (Solicitante)
 copied-description: true
-exl-id: 290231ec-1146-4bfb-a449-b8ff85704197
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -27,9 +26,9 @@ ht-degree: 0%
    * Faça upload do arquivo CSR.
    * Copie as informações da CSR e cole-as no formulário.
 
-      >[!NOTE]
-      >
-      >Para copiar as informações da CSR, selecione o texto entre, sem incluir, a tag inicial `(-----BEGIN CERTIFICATE REQUEST-----)` e marca de fim `(-----END CERTIFICATE REQUEST-----)`.
+     >[!NOTE]
+     >
+     >Para copiar as informações da CSR, selecione o texto entre, sem incluir, a tag inicial `(-----BEGIN CERTIFICATE REQUEST-----)` e marca de fim `(-----END CERTIFICATE REQUEST-----)`.
 
 1. Clique em **[!UICONTROL Submit Request]** botão.
 

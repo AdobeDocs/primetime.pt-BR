@@ -1,8 +1,7 @@
 ---
 description: O TVSDK do Flash Runtime precisa de um token assinado para validar se você tem o direito de chamar a API TVSDK no domínio em que o aplicativo reside.
 title: Carregar seu token assinado
-exl-id: fef6b764-dc65-412e-a990-3f0b1fef94dd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
@@ -19,9 +18,9 @@ O TVSDK do Flash Runtime precisa de um token assinado para validar se você tem 
    
    * Um [!DNL .xml] arquivo que atua como token para um único domínio ou domínio curinga.
 
-      >[!NOTE]
-      >
-      >Um token para um domínio curinga abrange esse domínio e todos os seus subdomínios. Por exemplo, um token curinga para o domínio [!DNL mycompany.com] abrangerá igualmente [!DNL vids.mycompany.com] e [!DNL private.vids.mycompany.com]; um token curinga para [!DNL vids.mycompany.com] abrangerá igualmente [!DNL private.vids.mycompany.com]. *Os tokens de domínio curinga são compatíveis somente com determinadas versões do Flash Player.*
+     >[!NOTE]
+     >
+     >Um token para um domínio curinga abrange esse domínio e todos os seus subdomínios. Por exemplo, um token curinga para o domínio [!DNL mycompany.com] abrangerá igualmente [!DNL vids.mycompany.com] e [!DNL private.vids.mycompany.com]; um token curinga para [!DNL vids.mycompany.com] abrangerá igualmente [!DNL private.vids.mycompany.com]. *Os tokens de domínio curinga são compatíveis somente com determinadas versões do Flash Player.*
 
    * A [!DNL .swf] arquivo que contém informações de token para vários domínios (sem incluir curingas) (único ou curinga), que seu aplicativo pode carregar dinamicamente.
 
@@ -36,6 +35,7 @@ O TVSDK do Flash Runtime precisa de um token assinado para validar se você tem 
    1. O TVSDK despacha um `COMPLETED` evento se a carga for bem-sucedida ou um `FAILED` caso contrário. Execute a ação apropriada ao detectar qualquer um dos eventos.
 
       Isso deve ser bem-sucedido para que seu aplicativo forneça os `authorizedFeatures` objetos para o TVSDK na forma de um `MediaPlayerContext`.
+
    Este exemplo mostra como é possível usar um token único [!DNL .xml] arquivo.
 
    ```

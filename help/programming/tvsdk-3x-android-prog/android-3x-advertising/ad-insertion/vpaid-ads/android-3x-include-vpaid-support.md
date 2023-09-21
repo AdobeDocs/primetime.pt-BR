@@ -1,8 +1,7 @@
 ---
 description: Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio personalizada e ouvintes apropriados.
 title: Implementar a integração com VPAID 2.0
-exl-id: a0d9a370-8fb6-4246-b59d-3b7c0b043bed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -42,8 +41,7 @@ Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio pers
    >
    >Descartar apenas a exibição de anúncio personalizada quando a redefinição for chamada. Por exemplo:
    >
-   >
-   ```
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
@@ -54,8 +52,7 @@ Para adicionar suporte a VPAID 2.0, adicione uma visualização de anúncio pers
    >
    >Finalmente, antes de descartar sua visualização de anúncio personalizada, você deve removê-la da `FrameLayout`. Por exemplo:
    >
-   >
-   ```
+   >```
    >if (_playerFrame != null) 
    >       _playerFrame.removeAllViews(); 
    >```

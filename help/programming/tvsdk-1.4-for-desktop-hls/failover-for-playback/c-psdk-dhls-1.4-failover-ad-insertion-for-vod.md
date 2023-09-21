@@ -1,8 +1,7 @@
 ---
-description: O processo de inserção de anúncios de vídeo sob demanda (VOD) consiste nas fases de resolução, inserção e reprodução de anúncios. Para o rastreamento de anúncios, o TVSDK deve informar um servidor de rastreamento remoto sobre o progresso da reprodução de cada anúncio. Quando surgem situações inesperadas, toma as medidas adequadas.
+description: O processo de inserção de anúncios de vídeo sob demanda (VOD) consiste nas fases de resolução, inserção e reprodução do anúncio. Para o rastreamento de anúncios, o TVSDK deve informar um servidor de rastreamento remoto sobre o progresso da reprodução de cada anúncio. Quando surgem situações inesperadas, toma as medidas adequadas.
 title: Inserção de publicidade e failover para VOD
-exl-id: 5af5bef6-e948-4215-a89f-ee46fd2d8a38
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Inserção de publicidade e failover para VOD{#advertising-insertion-and-failover-for-vod}
 
-O processo de inserção de anúncios de vídeo sob demanda (VOD) consiste nas fases de resolução, inserção e reprodução de anúncios. Para o rastreamento de anúncios, o TVSDK deve informar um servidor de rastreamento remoto sobre o progresso da reprodução de cada anúncio. Quando surgem situações inesperadas, toma as medidas adequadas.
+O processo de inserção de anúncios de vídeo sob demanda (VOD) consiste nas fases de resolução, inserção e reprodução do anúncio. Para o rastreamento de anúncios, o TVSDK deve informar um servidor de rastreamento remoto sobre o progresso da reprodução de cada anúncio. Quando surgem situações inesperadas, toma as medidas adequadas.
 
 ## Fase de resolução de anúncios {#section_0D45C6094D724B55868B48F9A3557A8B}
 
@@ -21,17 +20,17 @@ O TVSDK é compatível com os seguintes tipos de provedores de anúncios:
 
 * Provedor de anúncio de metadados
 
-   Os dados do anúncio são codificados em arquivos JSON de texto simples.
+  Os dados do anúncio são codificados em arquivos JSON de texto simples.
 * Provedor de anúncios de decisão de anúncio do Primetime
 
-   O TVSDK envia uma solicitação, incluindo um conjunto de parâmetros de direcionamento e um número de identificação de ativo, para o servidor back-end do Primetime ad Decisioning. O Primetime ad Decisioning responde com um documento SMIL (linguagem de integração multimídia sincronizada) que contém as informações de anúncio necessárias.
+  O TVSDK envia uma solicitação, incluindo um conjunto de parâmetros de direcionamento e um número de identificação de ativo, para o servidor back-end do Primetime ad Decisioning. O Primetime ad Decisioning responde com um documento SMIL (linguagem de integração multimídia sincronizada) que contém as informações de anúncio necessárias.
 
 Uma das seguintes situações de failover pode ocorrer durante essa fase:
 
 * Os dados não podem ser recuperados por motivos que incluem falta de conectividade ou um erro do lado do servidor, como a impossibilidade de encontrar um recurso e assim por diante.
 * Os dados foram recuperados, mas o formato é inválido.
 
-   Isso pode ocorrer porque, por exemplo, a análise dos dados de entrada falhou.
+  Isso pode ocorrer porque, por exemplo, a análise dos dados de entrada falhou.
 
 O TVSDK emite uma notificação de aviso sobre o erro e continua o processamento.
 
@@ -63,6 +62,6 @@ Para todas as três classes de erro, o TVSDK encaminha eventos acionados para se
 * Eventos de notificação quando o perfil é alterado devido ao algoritmo de failover.
 * Os eventos de notificação são acionados quando todas as opções de failover são consideradas e nenhuma ação adicional pode ser executada automaticamente.
 
-   Seu aplicativo precisa tomar a ação apropriada.
+  Seu aplicativo precisa tomar a ação apropriada.
 
 Ocorrem ou não erros, chamadas TVSDK `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` para cada `AdBreakPlaybackEvent.AD_BREAK_STARTED` e `AdPlaybackEvent.AD_COMPLETED` para cada `AdPLaybackEvent.AD_STARTED`. No entanto, se não for possível baixar os segmentos, poderá haver lacunas na linha do tempo. Quando as lacunas são grandes o suficiente, os valores na posição do indicador de reprodução e o progresso do anúncio relatado podem exibir descontinuidades.

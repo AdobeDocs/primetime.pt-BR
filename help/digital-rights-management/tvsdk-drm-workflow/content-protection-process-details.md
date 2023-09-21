@@ -2,8 +2,7 @@
 title: Detalhes do processo de aquisição de licença
 description: Detalhes do processo de aquisição de licença
 copied-description: true
-exl-id: d772339a-8d05-401b-b5c1-18169b3627b6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 0%
@@ -99,7 +98,7 @@ Primeiro, tente carregar uma licença armazenada localmente para reproduzir o co
 
       >[!NOTE]
       >
-      >Como alternativa, independentemente do método de autenticação, `.setAuthenticationToken()` pode ser usado para enviar dados personalizados do cliente para o servidor de licenças. Essa é uma sobrecarga da API, pois esse mecanismo é a única maneira de enviar dados personalizados dinâmicos do cliente para o servidor de licenças no momento da aquisição da licença. Este método de transporte de dados personalizado é discutido em profundidade em várias publicações do fórum na [Fóruns DRM (Adobe Access) do Primetime ](https://forums.adobe.com/community/adobe_access).
+      >Como alternativa, independentemente do método de autenticação, `.setAuthenticationToken()` pode ser usado para enviar dados personalizados do cliente para o servidor de licenças. Essa é uma sobrecarga da API, pois esse mecanismo é a única maneira de enviar dados personalizados dinâmicos do cliente para o servidor de licenças no momento da aquisição da licença. Este método de transporte de dados personalizado é discutido em profundidade em várias publicações do fórum na [Fóruns DRM (Adobe Access) do Primetime](https://forums.adobe.com/community/adobe_access).
 
 1. Se a autenticação falhar, seu aplicativo deve retornar à Etapa 6.
 

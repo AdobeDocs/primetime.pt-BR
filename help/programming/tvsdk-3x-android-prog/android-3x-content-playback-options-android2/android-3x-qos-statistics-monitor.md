@@ -1,8 +1,7 @@
 ---
 description: A Qualidade do serviço (QoS) fornece uma visualização detalhada do desempenho do mecanismo de vídeo. O TVSDK fornece estatísticas detalhadas sobre reprodução, buffering e dispositivos.
 title: Estatísticas de qualidade do serviço
-exl-id: 62b2b65e-7383-4694-bdec-aacc4c2ae372
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%

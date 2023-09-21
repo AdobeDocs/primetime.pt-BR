@@ -1,8 +1,7 @@
 ---
 title: Operações no Account IQ
 description: As operações no Account IQ envolvem a tomada de ações para executar automações e operações em massa em contas de assinantes e rastrear seus efeitos.
-exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -68,6 +67,7 @@ Você pode analisar os impactos de uma operação exibindo seu relatório. Para 
    * Outra parte representa o número de contas ativas para esse período que estavam originalmente no segmento, mas que não atendem mais aos critérios do segmento de operação.
 
    * A terceira parte representa as contas que não estavam ativas nesse período.
+
    >[!NOTE]
    >
    >A primeira barra representa o número de contas que atendem às condições do segmento de operação no início do período de avaliação.

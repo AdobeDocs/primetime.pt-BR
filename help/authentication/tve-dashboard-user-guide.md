@@ -1,8 +1,7 @@
 ---
 title: Guia do usuário do Painel Primetime TVE
 description: Guia do usuário do Painel Primetime TVE
-exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4386'
 ht-degree: 0%
@@ -101,20 +100,20 @@ Esta seção permite visualizar e editar as configurações dos Canais disponív
    * **Configuração do Analytics** - Configurar os eventos de Autenticação do Adobe Primetime para serem encaminhados ao Adobe Analytics. Entre em contato com o Adobe para obter mais detalhes sobre como a ID do conjunto de relatórios (RSID) precisa ser configurada antes de habilitar esse recurso.
 * **Certificados**
 
-   Contém a lista de certificados utilizados no fluxo de autenticação juntamente com a organização emissora, a data de emissão e a data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
+  Contém a lista de certificados utilizados no fluxo de autenticação juntamente com a organização emissora, a data de emissão e a data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
 * **Domínios**
 
-   Contém a lista de domínios a partir dos quais o respectivo Canal se comunicará com a Autenticação Adobe Primetime.
+  Contém a lista de domínios a partir dos quais o respectivo Canal se comunicará com a Autenticação Adobe Primetime.
 * **Integrações**
 
-   Contém a lista de integrações com os MVPDs disponíveis, juntamente com o status de cada integração que pode ser ativada ou não. Navegar para a página Integração está disponível ao clicar em uma entrada específica.
+  Contém a lista de integrações com os MVPDs disponíveis, juntamente com o status de cada integração que pode ser ativada ou não. Navegar para a página Integração está disponível ao clicar em uma entrada específica.
 * **Aplicativos registrados**
 
-   Contém a lista de registros de solicitações de emprego. Para obter mais detalhes, revise o documento [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
+  Contém a lista de registros de solicitações de emprego. Para obter mais detalhes, revise o documento [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
 
 * **Esquemas personalizados**
 
-   Contém a lista de esquemas personalizados. Para obter mais detalhes, consulte [Registro de aplicativo iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md)
+  Contém a lista de esquemas personalizados. Para obter mais detalhes, consulte [Registro de aplicativo iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md)
 
 
 #### Adicionar/Excluir domínios {#add-delete-domains}
@@ -137,19 +136,19 @@ Esta seção permite visualizar e editar configurações para Programadores disp
 
 * **Certificados**
 
-   Contém a lista de certificados utilizados no fluxo de autenticação juntamente com a organização emissora, a data de emissão e a data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
+  Contém a lista de certificados utilizados no fluxo de autenticação juntamente com a organização emissora, a data de emissão e a data de expiração. Esses certificados servem como chaves privadas/públicas e são usados para fins de validação.
 
 * **Canais**
 
-   Contém a lista de canais que pertencem a este programador específico. Navegar até a seção Canais está disponível ao clicar em uma entrada específica.
+  Contém a lista de canais que pertencem a este programador específico. Navegar até a seção Canais está disponível ao clicar em uma entrada específica.
 
 * **Aplicativos registrados**
 
-   Contém a lista de registros de solicitações de emprego. Para obter mais detalhes, consulte [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
+  Contém a lista de registros de solicitações de emprego. Para obter mais detalhes, consulte [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
 
 * **Esquemas personalizados**
 
-   Contém a lista de esquemas personalizados. Para obter mais detalhes, consulte [Registro de aplicativo iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
+  Contém a lista de esquemas personalizados. Para obter mais detalhes, consulte [Registro de aplicativo iOS/tvOS](/help/authentication/iostvos-application-registration.md) e [Gerenciamento dinâmico de registros de clientes](/help/authentication/dynamic-client-registration-management.md).
 
 
 ### Integrações {#tve-db-integrations-sec}
@@ -250,13 +249,13 @@ Siga as etapas abaixo para habilitar/desabilitar o Logon único para uma integra
 * selecione a plataforma desejada na qual você deseja ativar ou desativar o Single Sign-On
 * alterne o **Habilitar Logon Único** sinalizar para o valor desejado (Sim / Não)
 
-   >[!IMPORTANT]
-   >É importante notar que a **Habilitar Logon Único** O sinalizador está disponível somente para plataformas iOS, tvOS, Roku e FireTV e somente para integrações com MVPDs compatíveis com Logon único para essas plataformas.
+  >[!IMPORTANT]
+  >É importante notar que a **Habilitar Logon Único** O sinalizador está disponível somente para plataformas iOS, tvOS, Roku e FireTV e somente para integrações com MVPDs compatíveis com Logon único para essas plataformas.
 
 * alterne o **Forçar a permissão da plataforma** sinalizar para o valor desejado (Sim / Não)
 
-   >[!IMPORTANT]
-   >É importante notar que a **Forçar a permissão da plataforma** O sinalizador controla se a decisão do usuário de Permitir ou Negar acesso à plataforma para sua assinatura do Provedor de TV será ou não imposta. Considerar o cenário quando **Habilitar Logon Único** o sinalizador está definido como &quot;Sim&quot;, **Forçar a permissão da plataforma** O sinalizador também é definido como &quot;Sim&quot; e o usuário opta por Negar acesso à plataforma para sua assinatura do Provedor de TV. Em seguida, o respectivo aplicativo (canal) não poderá usar o token de autenticação do Adobe Primetime obtido por outro aplicativo (canal).
+  >[!IMPORTANT]
+  >É importante notar que a **Forçar a permissão da plataforma** O sinalizador controla se a decisão do usuário de Permitir ou Negar acesso à plataforma para sua assinatura do Provedor de TV será ou não imposta. Considerar o cenário quando **Habilitar Logon Único** o sinalizador está definido como &quot;Sim&quot;, **Forçar a permissão da plataforma** O sinalizador também é definido como &quot;Sim&quot; e o usuário opta por Negar acesso à plataforma para sua assinatura do Provedor de TV. Em seguida, o respectivo aplicativo (canal) não poderá usar o token de autenticação do Adobe Primetime obtido por outro aplicativo (canal).
 
 
 #### Ativar autenticação baseada em casa {#enable-hba}

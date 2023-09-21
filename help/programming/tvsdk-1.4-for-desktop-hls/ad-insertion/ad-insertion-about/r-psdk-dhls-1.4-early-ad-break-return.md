@@ -1,8 +1,7 @@
 ---
 description: Para inserção de anúncios em streaming ao vivo, talvez seja necessário sair de um ad break antes que todos os anúncios do break sejam reproduzidos até a conclusão.
 title: Implementar um retorno de ad break antecipado
-exl-id: 584e870e-1408-41a9-bb6f-e82b921fe99e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Estes são alguns requisitos a serem considerados:
 
 * Analisar marcadores como `EXT-X-CUE-IN` (ou tag de marcador equivalente) que aparecem nos fluxos linear ou FER.
 
-   Registre os marcadores como sendo o marcador do ponto de retorno antecipado do anúncio. Somente reproduzir `adBreaks` até essa posição do marcador durante a reprodução, que substitui a duração da `adBreak` marcado pela entrelinha `EXE-X-CUE-OUT` marcador.
+  Registre os marcadores como sendo o marcador do ponto de retorno antecipado do anúncio. Somente reproduzir `adBreaks` até essa posição do marcador durante a reprodução, que substitui a duração da `adBreak` marcado pela entrelinha `EXE-X-CUE-OUT` marcador.
 
 * Se dois `EXT-X-CUE-IN` existem marcadores para o mesmo `EXT-X-CUE-OUT` marcador, o primeiro `EXT-X-CUE-IN` o marcador exibido é o que conta.
 
 * Se a variável `EXE-X-CUE-IN` marcador aparece na linha do tempo sem uma entrelinha `EXT-X-CUE-OUT` marcador, o `EXE-X-CUE-IN` O marcador é descartado.
 
-   Em um stream ao vivo, se o lead `EXT-X-CUE-OUT` O marcador acabou de ser movido para fora da janela, o TVSDK não responderá a ele.
+  Em um stream ao vivo, se o lead `EXT-X-CUE-OUT` O marcador acabou de ser movido para fora da janela, o TVSDK não responderá a ele.
 
 * Quando houver um retorno antecipado de um ad break, a variável `adBreak` é reproduzido até que o indicador de reprodução retorne à posição original, quando o ad break deveria terminar, e reinicia a reprodução do conteúdo principal dessa posição.
 

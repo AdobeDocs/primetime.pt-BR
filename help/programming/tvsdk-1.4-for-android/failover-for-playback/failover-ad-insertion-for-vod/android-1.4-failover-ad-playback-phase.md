@@ -1,8 +1,7 @@
 ---
 description: O TVSDK baixa os segmentos de anúncios e os renderiza na tela do dispositivo.
 title: Fase de reprodução do anúncio
-exl-id: c12dcf84-0daa-4bc2-8e17-fdf47a760296
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
@@ -27,6 +26,6 @@ Para todas as três classes de erro, o TVSDK encaminha eventos acionados para se
 * Eventos de notificação quando o perfil é alterado devido ao algoritmo de failover.
 * Os eventos de notificação são acionados quando todas as opções de failover são consideradas e nenhuma ação adicional pode ser executada automaticamente.
 
-   Seu aplicativo precisa tomar a ação apropriada.
+  Seu aplicativo precisa tomar a ação apropriada.
 
 Caso ocorram erros, o TVSDK chama onAdBreakComplete para cada `onAdBreakStart` e `onAdComplete` para cada `onAdStart`. No entanto, se não for possível baixar os segmentos, poderá haver lacunas na linha do tempo. Quando as lacunas são grandes o suficiente, os valores na posição do indicador de reprodução e o progresso do anúncio relatado podem exibir descontinuidades.

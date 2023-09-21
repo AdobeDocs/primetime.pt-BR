@@ -1,8 +1,7 @@
 ---
 description: O TVSDK fornece elementos de API úteis ao implementar blecautes, incluindo métodos, metadados e notificações.
 title: Elementos da API de blecaute
-exl-id: 76d99d8d-1aae-4faa-aaf2-bb7b535a1c71
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Você pode usar o seguinte ao implementar uma solução de blecaute no player.
 
 * **PTMetadata.PTBlackoutMetadata** A `PTMetadata` classe específica para blecautes.
 
-   Isso permite definir intervalos não pesquisáveis (uma matriz de `CMTimeRanges`) no TVSDK. O TVSDK verifica esses intervalos sempre que o usuário busca. Se estiver definido e o usuário buscar em um intervalo não pesquisável, o TVSDK forçará o visualizador ao final do intervalo não pesquisável.
+  Isso permite definir intervalos não pesquisáveis (uma matriz de `CMTimeRanges`) no TVSDK. O TVSDK verifica esses intervalos sempre que o usuário busca. Se estiver definido e o usuário buscar em um intervalo não pesquisável, o TVSDK forçará o visualizador ao final do intervalo não pesquisável.
 
 * **COMECE AQUI EM SEGUIDA** **PTAdMetadata** Ativar ou desativar a pré-rolagem em um stream ao vivo configurando `enableLivePreroll` para SIM ou NÃO. Se NÃO, o TVSDK não faz uma chamada explícita do servidor de anúncios para anúncios precedentes à reprodução do conteúdo e, portanto, não reproduz os anúncios precedentes. Isso não afeta os rolos intermediários. O padrão é SIM.
 
@@ -40,4 +39,5 @@ Você pode usar o seguinte ao implementar uma solução de blecaute no player.
       * Código: 204000
       * Tipo: Aviso
       * Erro no download do manifesto em segundo plano.
+
    * `INVALID_SEEK_WARNING` Despachado quando uma busca é tentada em um intervalo não pesquisável (em `nonSeekableRanges` definido em `PTBlackoutMetadata`).

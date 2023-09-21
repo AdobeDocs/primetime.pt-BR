@@ -1,8 +1,7 @@
 ---
 description: Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe TextFormat. Isso define o estilo de todas as legendas ocultas exibidas pelo reprodutor.
 title: Controlar estilo de legendas ocultas
-exl-id: 0083c141-9c03-46a2-902b-6e7eebaadea4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -52,31 +51,31 @@ Essa classe encapsula informações de estilo de legendas ocultas, como tipo de 
 
    * Obter todas as configurações de estilo com `MediaPlayer.getCCStyle`.
 
-      O valor de retorno é uma instância do `TextFormat` interface.
+     O valor de retorno é uma instância do `TextFormat` interface.
 
-      ```js
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws IllegalStateException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws IllegalStateException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws IllegalStateException;
+     ```
 
    * Obtenha as configurações, uma de cada vez, por meio da `TextFormat` métodos getter da interface.
 
-      ```js
-      public Color getFontColor(); 
-      public Color getBackgroundColor(); 
-      public Color getFillColor(); // retrieve the font fill color 
-      public Color getEdgeColor(); // retrieve the font edge color 
-      public Size getSize(); // retrieve the font size 
-      public FontEdge getFontEdge(); // retrieve the font edge type 
-      public Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity();
-      ```
+     ```js
+     public Color getFontColor(); 
+     public Color getBackgroundColor(); 
+     public Color getFillColor(); // retrieve the font fill color 
+     public Color getEdgeColor(); // retrieve the font edge color 
+     public Size getSize(); // retrieve the font size 
+     public FontEdge getFontEdge(); // retrieve the font edge type 
+     public Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity();
+     ```
 
 1. Para alterar as configurações de estilo, siga um destes procedimentos:
 
@@ -86,41 +85,41 @@ Essa classe encapsula informações de estilo de legendas ocultas, como tipo de 
 
    * Usar o método setter `MediaPlayer.setCCStyle`, transmitindo uma instância do `TextFormat` interface:
 
-      ```js
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws IllegalStateException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws IllegalStateException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
+     ```
 
    * Use o `TextFormatBuilder` classe, que define métodos setter individuais.
 
-      A variável `TextFormat` A interface define um objeto imutável para que haja apenas métodos Getter e nenhum setters. É possível definir os parâmetros de estilo de legenda oculta somente com a `TextFormatBuilder` classe:
+     A variável `TextFormat` A interface define um objeto imutável para que haja apenas métodos Getter e nenhum setters. É possível definir os parâmetros de estilo de legenda oculta somente com a `TextFormatBuilder` classe:
 
-      ```js
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(Color backgroundColor) 
-      public void setFillColor(Color fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(Color edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(Color fontColor)
-      ```
+     ```js
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(Color backgroundColor) 
+     public void setFillColor(Color fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(Color edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(Color fontColor)
+     ```
 
 A configuração do estilo de legenda oculta é uma operação assíncrona, portanto, pode levar alguns segundos para que as alterações apareçam na tela.
 

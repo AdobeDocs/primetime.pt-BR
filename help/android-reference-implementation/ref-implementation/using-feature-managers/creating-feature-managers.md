@@ -1,8 +1,7 @@
 ---
 description: Os recursos do TVSDK são orientados pela configuração e implementados por meio do MediaPlayer.
 title: Criação de gerenciadores de recursos transmitindo informações de configuração ao MediaPlayer
-exl-id: 47377ceb-ed3e-4dca-9b55-82e4fe6b0194
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
@@ -15,13 +14,13 @@ Os recursos do TVSDK são orientados pela configuração e implementados por mei
 
 * Configuração é a lista de configurações específicas para o recurso, como taxa de bits inicial do controle ABR e visibilidade padrão de legendas ocultas.
 
-   Os gerentes de recursos precisam obter as configurações para determinar o comportamento do recurso.
+  Os gerentes de recursos precisam obter as configurações para determinar o comportamento do recurso.
 
-   Na implementação de referência do Primetime, a configuração é armazenada em preferências compartilhadas, mas você pode armazenar a configuração da maneira que fizer sentido para o seu ambiente.
+  Na implementação de referência do Primetime, a configuração é armazenada em preferências compartilhadas, mas você pode armazenar a configuração da maneira que fizer sentido para o seu ambiente.
 
 * `MediaPlayer` é o objeto do reprodutor de mídia TVSDK que contém o recurso de vídeo.
 
-   Os gerentes de recursos registram ouvintes de eventos TVSDK nesse objeto do player, recuperam dados da sessão de reprodução e acionam recursos TVSDK para a sessão de reprodução.
+  Os gerentes de recursos registram ouvintes de eventos TVSDK nesse objeto do player, recuperam dados da sessão de reprodução e acionam recursos TVSDK para a sessão de reprodução.
 
 Cada recurso tem uma interface de configuração correspondente. Por exemplo, `CCManager` usos `ICCConfig` para recuperar a configuração. `ICCConfig` contém métodos para obter as informações de configuração relacionadas somente às legendas ocultas.
 

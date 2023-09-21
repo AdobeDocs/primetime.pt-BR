@@ -1,8 +1,7 @@
 ---
 description: O TVSDK do navegador fornece uma interface DRM que pode ser usada para reproduzir conteúdo protegido por diferentes soluções DRM, incluindo FairPlay, PlayReady e Widevine.
 title: Visão geral da interface do DRM
-exl-id: aa13f042-4472-4fc3-b7ba-61746b8e024a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%

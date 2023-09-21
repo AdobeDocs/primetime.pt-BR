@@ -1,8 +1,7 @@
 ---
 description: Você pode fornecer informações de estilo para faixas de legendas ocultas usando a classe ClosedCaptionStyles. Isso define o estilo de todas as legendas ocultas exibidas pelo reprodutor.
 title: Controlar estilo de legendas ocultas
-exl-id: fd94a851-1e8f-4406-a3bb-ca115b4e60f8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%

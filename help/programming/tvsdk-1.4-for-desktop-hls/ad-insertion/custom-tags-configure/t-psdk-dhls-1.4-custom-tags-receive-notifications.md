@@ -1,8 +1,7 @@
 ---
 description: Para receber notificações sobre tags no manifesto, registre os ouvintes de eventos apropriados.
 title: Adicionar ouvintes para notificações de metadados cronometrados
-exl-id: 1df8a4fc-8368-4a80-8f8b-00c1207e6602
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -17,15 +16,15 @@ Você pode monitorar metadados cronometrados ouvindo os seguintes eventos, que n
 
 * `MediaPlayerItemEvent.ITEM_CREATED`: a lista inicial de `TimedMetadata` objetos estiver disponível após a variável `MediaPlayerItem` é criado.
 
-   Esse evento notifica seu aplicativo quando isso ocorre.
+  Esse evento notifica seu aplicativo quando isso ocorre.
 
 * `MediaPlayerItemEvent.ITEM_UPDATED`: Para fluxos ao vivo/lineares nos quais o manifesto/lista de reprodução é atualizado periodicamente, tags personalizadas adicionais podem aparecer na lista de reprodução/manifesto atualizada, portanto, tags adicionais `TimedMetadata` objetos podem ser adicionados à `MediaPlayerItem.timedMetadata` propriedade.
 
-   Esse evento notifica seu aplicativo quando isso ocorre.
+  Esse evento notifica seu aplicativo quando isso ocorre.
 
 * `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: cada vez que um novo `TimedMetadata` for criado, esse evento será despachado pelo MediaPlayer.
 
-   Este evento não é despachado para o `TimedMetadata` objeto criado durante a fase de inicialização.
+  Este evento não é despachado para o `TimedMetadata` objeto criado durante a fase de inicialização.
 
 1. Implemente os ouvintes apropriados.
 

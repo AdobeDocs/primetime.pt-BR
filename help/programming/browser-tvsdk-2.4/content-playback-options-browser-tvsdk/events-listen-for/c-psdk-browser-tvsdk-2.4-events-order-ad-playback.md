@@ -1,8 +1,7 @@
 ---
 description: Quando a reprodução inclui publicidade, o TVSDK do navegador despacha eventos/notificações em sequências geralmente esperadas. O reprodutor pode implementar ações com base em eventos na sequência esperada.
 title: Ordem dos eventos de publicidade
-exl-id: fcc40aa8-9364-40a8-b2f2-9327e24819af
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%

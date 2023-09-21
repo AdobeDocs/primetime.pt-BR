@@ -1,8 +1,7 @@
 ---
 description: Ocasionalmente, haverá momentos em que o conteúdo não poderá ser reproduzido. Qualquer número de situações pode causar isso, incluindo erros na pilha de rede do navegador, na camada de transporte, no sistema operacional, no tempo de execução do Flash Player ou no sistema DRM do Primetime.
 title: Visão geral de erros de triagem
-exl-id: fe94d0a4-4f3c-4b0e-b830-a7a83bac1e85
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%

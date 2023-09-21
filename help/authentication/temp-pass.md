@@ -1,8 +1,7 @@
 ---
 title: Temp pass
 description: Temp pass
-exl-id: 1df14090-8e71-4e3e-82d8-f441d07c6f64
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2210'
 ht-degree: 0%
@@ -38,8 +37,8 @@ O Temp Pass permite que os programadores ofereçam acesso temporário a seu cont
 * **Como o tempo de exibição é calculado** - O tempo em que um passe temporário permanece válido não está correlacionado à quantidade de tempo que um usuário gasta visualizando o conteúdo no aplicativo do Programador.  Após a solicitação inicial do usuário para autorização por meio da Aprovação de Temp, uma hora de expiração é calculada adicionando a hora da solicitação atual inicial ao TTL especificado pelo Programador. Essa hora de expiração está associada à ID do dispositivo do usuário e à ID do solicitante do programador, e armazenada no banco de dados de autenticação do Primetime. Cada vez que o usuário tenta acessar o conteúdo usando a passagem temporária do mesmo dispositivo, a autenticação do Primetime comparará o tempo de solicitação do servidor com o tempo de expiração associado à ID de dispositivo do usuário e à ID de solicitante do programador. Se o tempo de solicitação do servidor for menor que o tempo de expiração, a autorização será concedida; caso contrário, a autorização será negada.
 * **Parâmetros de configuração** - Os seguintes parâmetros de Aprovação Temporária podem ser especificados por um Programador para criar uma regra de Aprovação Temporária:
    * **TTL do token** - O tempo que um usuário pode assistir sem entrar em um MVPD. Esse horário é baseado em relógio e expira independentemente de o usuário estar assistindo ao conteúdo ou não.
-   >[!NOTE]
-   >Uma ID de solicitante não pode ter mais de uma regra de senha temporária associada a ela.
+  >[!NOTE]
+  >Uma ID de solicitante não pode ter mais de uma regra de senha temporária associada a ela.
 * **Autenticação / Autorização** - No fluxo Aprovação de Temp, especifique o MVPD como &quot;Aprovação de Temp&quot;.  A autenticação do Primetime não se comunica com um MVPD real no fluxo de Aprovação de Temp, portanto, o MVPD de &quot;Aprovação de Temp&quot; autoriza qualquer recurso. Os programadores podem especificar um recurso que seja acessível usando o Temp Pass da mesma forma que fazem para o restante dos recursos em seu site. A Biblioteca de Verificador de Mídia pode ser usada como de costume para verificar o token de mídia curto de Aprovação Temporária e impor a verificação de recursos antes da reprodução.
 * **Rastreamento de dados no fluxo de passagem temporário** - Dois pontos sobre os dados de rastreamento durante um fluxo de direito de Aprovação Temporária:
    * A ID de rastreamento que é passada da autenticação do Primetime para a **sendTrackingData()** O retorno de chamada é um hash da ID do dispositivo.
@@ -64,7 +63,7 @@ Os seguintes pontos se aplicam a ambos os cenários de implementação:
 
 * A &quot;Aprovação Temporária&quot; deve ser exibida no seletor de MVPD somente para usuários que ainda não solicitaram uma autorização de Aprovação Temporária. Bloquear a exibição para solicitações subsequentes pode ser feito mantendo um sinalizador nos cookies. Isso funcionará desde que o usuário não limpe o cache do navegador. Se os usuários limparem os caches do navegador, &quot;Aprovação temporária&quot; aparecerá novamente no seletor e o usuário poderá solicitá-lo novamente. O acesso será concedido somente se a hora &quot;Aprovação temporária&quot; ainda não tiver expirado.
 * Quando um usuário solicita acesso por meio da Aprovação temporária, o servidor de autenticação do Primetime não executará sua solicitação usual de SAML (Security Assertion Markup Language) durante o processo de autenticação. Em vez disso, o endpoint de autenticação retornará sucesso sempre que for chamado enquanto os tokens forem válidos para o dispositivo.
-* Quando um Temp Pass expirar, o usuário não será mais autenticado, pois no fluxo do Temp Pass, o token de autenticação e o token de autorização têm a mesma data de expiração. Para explicar aos usuários que seu Passe Temporário expirou, os Programadores devem recuperar o MVPD selecionado logo após chamar `setRequestor()`, e chame `checkAuthentication()` como de costume. No `setAuthenticationStatus()` retorno de chamada: é possível fazer uma verificação para determinar se o status de autenticação é 0, de modo que, se o MVPD selecionado fosse &quot;TempPass&quot;, uma mensagem poderia ser apresentada aos usuários informando que a sessão de Temp Pass expirou.
+* Quando um Temp Pass expirar, o usuário não será mais autenticado, pois no fluxo do Temp Pass, o token de autenticação e o token de autorização têm a mesma data de expiração. Para explicar aos usuários que seu Passe Temporário expirou, os Programadores devem recuperar o MVPD selecionado logo após chamar `setRequestor()`, e chame `checkAuthentication()` como de costume. No `setAuthenticationStatus()` retorno de chamada: é possível fazer uma verificação para determinar se o status de autenticação é 0, de modo que, se o MVPD selecionado fosse &quot;TempPass&quot;, uma mensagem poderia ser apresentada aos usuários informando que a sessão do Temp Pass expirou.
 * Se um usuário excluir o token de passagem temporária antes da expiração, as verificações de direito subsequentes gerarão um token que terá um TTL igual ao tempo restante.
 * Se o usuário excluir o token de passagem temporária após a expiração, as verificações de direito subsequentes retornarão &quot;usuário não autorizado&quot;.
 

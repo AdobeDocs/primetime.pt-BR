@@ -1,8 +1,7 @@
 ---
 description: Você pode configurar o player para rastrear e analisar o uso do vídeo.
 title: Inicializar e configurar a análise de vídeo
-exl-id: 58d560d1-f668-4e1d-a817-b2e02008fdbe
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> Ponto de acesso do servidor de rastreamento do AppMeasurement </td> 
+   <td colname="col1"> Ponto de extremidade do servidor de rastreamento de AppMeasurements </td> 
    <td colname="col2"> O URL do endpoint da coleção de back-end do Adobe Analytics (antigo SiteCatalyst). </td> 
   </tr> 
   <tr> 
@@ -55,18 +54,18 @@ Para configurar o rastreamento de vídeo no seu reprodutor:
    
    * A instanciação requer um parâmetro de entrada de ID de organização de Marketing Cloud fornecido por Adobe.
 
-      Este é um valor de sequência de caracteres.
+     Este é um valor de sequência de caracteres.
    * A única opção de configuração para a biblioteca VisitorAPI é o URL do ponto de extremidade de back-end que fornece o identificador exclusivo para o usuário atual.
    * O URL do servidor de rastreamento do visitante é o mesmo URL do servidor de rastreamento de análise.
 
-      Para obter informações sobre como implementar o Serviço de ID de visitante, consulte Implementação do Serviço de ID de visitante.
+     Para obter informações sobre como implementar o Serviço de ID de visitante, consulte Implementação do Serviço de ID de visitante.
 
    ```
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID"); 
    _visitor.trackingServer = "URL_OF_THE_VISITOR_TRACKER_SERVER”; 
    ```
 
-1. Instancie e configure o componente AppMeasurement.
+1. Instancie e configure o componente do AppMeasurement.
 
    A instância do AppMeasurement tem muitas opções de configuração. Para obter mais informações, consulte [Desenvolvedor do Adobe Analytics](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) documentação. As opções no seguinte código de amostra ( `account`, `visitorNamespace`, e `trackingServer`) são obrigatórios e os valores são fornecidos por Adobe.
 

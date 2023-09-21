@@ -1,8 +1,7 @@
 ---
 title: API do Bootstrap
 description: API do Bootstrap
-exl-id: bc7fe244-8664-43ac-b9a1-3967ea8749b1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 0%
@@ -42,7 +41,7 @@ Normalmente, a API do Bootstrap é o URL enviado para as APIs de reprodução de
 
    **Solicitações HTTP vs. HTTPS**
 
-   O servidor de manifesto cria URLs usando o mesmo protocolo HTTP da solicitação do cliente. Se um reprodutor fizer uma solicitação HTTP (http) não segura, o servidor de manifesto retornará URLs de manifesto e URLs de rastreamento de Auditoria com o protocolo http. Se um player fizer uma conexão HTTP segura (https), o servidor de manifesto, ele retornará URLs de manifesto e URLs de rastreamento de Auditoria com o protocolo https.
+   O servidor de manifesto cria URLs usando o mesmo protocolo HTTP da solicitação do cliente. Se um reprodutor fizer uma solicitação HTTP (http) não segura, o servidor de manifesto retornará URLs de manifesto e URLs de rastreamento de Auditude com o protocolo http. Se um player fizer uma conexão HTTP segura (https), o servidor de manifesto, ele retornará URLs de manifesto e URLs de rastreamento de Auditude com o protocolo https.
 
    >[!NOTE]
    >
@@ -66,13 +65,13 @@ Os parâmetros do são passados para o servidor de publicidade.
 | ptadwindow | Duração (em segundos) da janela de lookback ad decisioning — até que ponto o Primetime Ad Insertion procurará dicas de anúncios quando um usuário do DVR entrar no fluxo. Um valor zero desativará a decisão de anúncios intermediários no manifesto inicial, com a decisão sendo retomada somente após a primeira atualização. Esse parâmetro é útil para desativar a inserção de anúncios em sessões que podem durar apenas alguns segundos (também conhecido como inversão de canal).<br>Valores possíveis:<br>sequência numérica 0-1800 (padrão 1800) | Somente HLS |
 | ptassetid | Identificador exclusivo do conteúdo atribuído e mantido pelo publicador.  Obrigatório quando usado em conjunto com o Akamai Ad Scaler. | HLS/DASH |
 | ptcdn | Lista de um ou mais CDNs para hospedar ativos transcodificados. Para obter mais informações, consulte [Entrega e armazenamento](/help/primetime-ad-insertion/just-in-time-transcoding/delivery-and-storage.md).<br>Valores possíveis:<br>akamai, level3, llnw (redes de luz), comcast.<br>Por padrão, são usados CDNs de Ad Insertion do Primetime. | HLS/DASH |
-| ptcueformat | O formato especificado de tags para executar a decisão de anúncios (por exemplo, scte35).<br>Valores possíveis:<br>dpisimple, dpiscte35, elemental<br>Para formatos de sinalização personalizados, entre em contato com o representante técnico da conta para obter o valor a ser usado para o caso de uso | HLS/DASH |
+| ptcueformat | O formato especificado de tags para executar a decisão de anúncios (por exemplo, scte35).<br>Valores possíveis:<br>dpisimple, dpiscte35, elemental<br>Para formatos de sinalização personalizados, entre em contato com o representante técnico da conta para obter o valor a ser usado no caso de uso | HLS/DASH |
 | ptfailover | Sinaliza ao servidor de manifesto para identificar fluxos primários e de failover especificados na lista de reprodução principal e para tratá-los como conjuntos separados. Isso facilita o failover e evita erros de tempo. (Somente para dispositivos Apple HLS.) Para obter mais informações, consulte [Facilitando a alternância do reprodutor HLS](hls-switching-to-failover.md) | Somente HLS |
 | ptmulticall | Se ativado, uma solicitação de anúncio separada é feita para cada uma das vantagens encontradas em um ativo de VOD.  Por padrão, o Primetime Ad Insertion tentará coletar todas as informações disponíveis e enviá-las para o servidor de publicidade em uma solicitação. Valores possíveis:true para habilitar, <br>omitir para desativar (desativado por padrão) | HLS/DASH |
 | ptparallelstream | Permite que clientes com players que solicitam fluxos de áudio ou vídeo desmesclados do CMAF em paralelo para garantir que os anúncios em trilhas de áudio e vídeo sejam consistentes. | Somente HLS |
 | ptprotoswitch | Habilita regras nomeadas de regravação de manifesto e de busca de anúncios, que normalmente serão configuradas pelo representante do suporte técnico.<br>Exemplo: adfetch_fw, cdn_akm | HLS/DASH |
 | pttagds | Habilita a injeção de tags EXT-X-DISCONTINUITY-SEQUENCE em cabeçalhos HLS. Valores possíveis: true para habilitar a omissão para desabilitar (desabilitado por padrão) | Somente HLS |
-| pttimeline | Uma string que contém a linha do tempo desejada para a inserção e o conteúdo do anúncio, que substitui os ad breaks no fluxo de conteúdo. [ Consulte Formato da linha do tempo de VOD ] | HLS/DASH |
+| pttimeline | Uma string que contém a linha do tempo desejada para a inserção e o conteúdo do anúncio, que substitui os ad breaks no fluxo de conteúdo. [Consulte Formato da linha do tempo de VOD] | HLS/DASH |
 | pttoken | Habilita esquemas de proteção de token de autorização de fragmento/segmento de conteúdo para CDNs<br>Valores possíveis:<br>akamai, llnw (limelight), ctl (centurylink) (a geração de tokens padrão está desativada) | HLS/DASH |
 | pttrackingmode | Habilite os esquemas de rastreamento de anúncios.<br>Valores possíveis:<br>simples para rastreamento de anúncios no lado do cliente<br>sstm para rastreamento de anúncios do lado do servidor<br>simple stm para rastreamento de anúncio de cliente/servidor híbrido (por padrão, nenhum rastreamento de anúncio é executado) | HLS/DASH |
 | pttrackingposition | Instrui o servidor de manifesto a retornar somente informações de rastreamento de anúncios. Não especifique este parâmetro na solicitação de inicialização.<br>Observação: o servidor de manifesto ignora todos os valores transmitidos. No entanto, se você passar uma string nula ou vazia, o servidor de manifesto retornará o M3U8 | HLS/DASH<br>Rastreamento do lado do cliente |

@@ -1,8 +1,7 @@
 ---
 description: O TVSDK fornece uma experiência semelhante à da TV ao poder participar no meio de um anúncio, em transmissões ao vivo.
 title: Inserção parcial de ad break
-exl-id: ae260f1a-8c4a-44b9-8f74-285f93d999e4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%

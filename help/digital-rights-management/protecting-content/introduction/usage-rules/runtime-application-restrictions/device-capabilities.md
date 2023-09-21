@@ -2,8 +2,7 @@
 title: Recursos do dispositivo necessários para reproduzir conteúdo protegido
 description: Recursos do dispositivo necessários para reproduzir conteúdo protegido
 copied-description: true
-exl-id: 540fbb53-ec1a-43be-b51b-9937ed31e384
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%

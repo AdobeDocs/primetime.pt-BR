@@ -1,8 +1,7 @@
 ---
 description: Se quiser configurar o Primetime DRM, copie os arquivos do DVD. Esses arquivos incluem arquivos JAR que incluem código, certificados e classes de terceiros. Além disso, você precisa solicitar um certificado da Adobe Systems, Incorporated. O Adobe emite várias credenciais usadas para proteger a integridade do conteúdo empacotado, das licenças e da comunicação entre o cliente e o servidor.
 title: Configurar o ambiente de desenvolvimento
-exl-id: c10f85b6-84bc-444f-9001-f49dc88cf99c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
@@ -43,9 +42,9 @@ O Adobe fornece o SDK DRM do Primetime em DVD:
    * [!DNL jsafe.dll] - Windows
    * [!DNL libjsafe.so] - Linux
 
-      >[!NOTE]
-      >
-      >As versões de 32 bits e 64 bits dessas bibliotecas estão disponíveis. Você só deve usar a versão de 64 bits se tiver um SO de 64 bits e executar a versão de 64 bits do Java.
+     >[!NOTE]
+     >
+     >As versões de 32 bits e 64 bits dessas bibliotecas estão disponíveis. Você só deve usar a versão de 64 bits se tiver um SO de 64 bits e executar a versão de 64 bits do Java.
 
 1. (Opcional) Para obter a funcionalidade relacionada à compatibilidade do Adobe Flash Media Rights Management Server (FMRMS) 1.x, copie `[DRM DVD]/SDK/adobe-flashaccess-lcrm.jar]` ao seu sistema de desenvolvimento:
 

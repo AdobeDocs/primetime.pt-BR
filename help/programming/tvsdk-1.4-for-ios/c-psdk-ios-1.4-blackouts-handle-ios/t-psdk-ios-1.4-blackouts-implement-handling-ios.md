@@ -1,8 +1,7 @@
 ---
 description: O TVSDK fornece APIs e códigos de amostra para lidar com períodos de blecaute.
 title: Implementar tratamento de blecaute
-exl-id: 31e4a016-ecba-47cc-b574-553db85ece53
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%

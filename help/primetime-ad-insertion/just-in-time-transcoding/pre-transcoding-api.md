@@ -1,8 +1,7 @@
 ---
 title: API de pré-transcodificação
 description: Você pode usar a API de reempacotamento just-in-time para transcodificar anúncios criados antecipadamente, de modo que versões compatíveis com o conteúdo estejam disponíveis quando necessário, eliminando o atraso de 2 a 4 minutos associado ao reempacotamento just-in-time (JIT).
-exl-id: d45668e0-ec8a-4e5a-a56b-cffff27561f2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 0%
@@ -31,25 +30,25 @@ Para enviar uma solicitação de transcodificação para o CRS, envie uma mensag
 
 * **Corpo -** XML, como no exemplo a seguir:
 
-   ```xml
-   <RepackageList>
-       <Repackage>
-           <AdSystem>Auditude</AdSystem>
-           <AdID>AUD1</AdID>
-           <CreativeID>AUD-CR1</CreativeID>
-           <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
-           <Zone>3</Zone>
-       </Repackage>
-       <Repackage>
-           <AdSystem>Auditude</AdSystem>
-           <AdID>AUD2</AdID>
-           <CreativeID>AUD-CR1</CreativeID>
-           <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
-           <Format>id3 targetdur=5</Format>
-           <Zone>3</Zone>
-       </Repackage>
-   </RepackageList>
-   ```
+  ```xml
+  <RepackageList>
+      <Repackage>
+          <AdSystem>Auditude</AdSystem>
+          <AdID>AUD1</AdID>
+          <CreativeID>AUD-CR1</CreativeID>
+          <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
+          <Zone>3</Zone>
+      </Repackage>
+      <Repackage>
+          <AdSystem>Auditude</AdSystem>
+          <AdID>AUD2</AdID>
+          <CreativeID>AUD-CR1</CreativeID>
+          <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
+          <Format>id3 targetdur=5</Format>
+          <Zone>3</Zone>
+      </Repackage>
+  </RepackageList>
+  ```
 
 A variável `RepackageList` bloco no corpo pode conter de 1 a 300 `Repackage` blocos. Se o número de `Repackage` no Corpo exceder 300, então a Solicitação HTTP falhará com o seguinte erro:
 
@@ -70,23 +69,24 @@ Os parâmetros obrigatórios e opcionais em um `Repackage` bloco são os seguint
 * **`CreativeURL`** (Obrigatório) - O local (URI) do criativo do anúncio a ser transcodificado. Isso corresponde ao VAST `MediaFile` elemento.
 
 * `CreativeID` (opcional) - O identificador do criativo do anúncio que deve ser incluído como parte da experiência do anúncio.
-* **`Zone`** (Obrigatório) - ID de zona da sua conta (obtenha uma do gerente técnico de conta). Trata-se de um valor numérico que corresponde à plataforma Auditude `publisher_site_id` configuração.
+* **`Zone`** (Obrigatório) - ID de zona da sua conta (obtenha uma do gerente técnico de conta). Este é um valor numérico que corresponde à plataforma Auditude `publisher_site_id` configuração.
 
 * **`Format`** (opcional) - Parâmetros para controlar como o CRS transcodifica a criação de anúncio:
 
    * `clientside` - Gerar saída compatível com o URL que o TVSDK usa para se comunicar com o CDN.
-   >[!IMPORTANT]
-   >
-   >Você deve fornecer esse parâmetro se quiser que o anúncio reempacotado seja compatível com o Ad Insertion do lado do cliente. Se você não fornecer isso, o anúncio reempacotado será compatível somente com o Ad Insertion do lado do servidor.
+
+  >[!IMPORTANT]
+  >
+  >Você deve fornecer esse parâmetro se quiser que o anúncio reempacotado seja compatível com o Ad Insertion do lado do cliente. Se você não fornecer isso, o anúncio reempacotado será compatível somente com o Ad Insertion do lado do servidor.
 
    * `hls` - Gerar um anúncio transcodificado compatível com HLS e criativo.
    * `dash` - Gerar um anúncio transcodificado e criativo compatível com DASH.
    * `id3` - Insira tags de metadados com tempo de ID3 na campanha de criação de anúncios transcodificados.
    * `targetdur` - Duração do segmento (em segundos) para o anúncio transcodificado e criativo. O padrão é `targetdur=4`. Este valor deve corresponder ao valor especificado no manifesto para `<s>` na tag de duração do target: `#EXT-X-TARGETDURATION:<s>`.
 
-   >[!NOTE]
-   >
-   >Os ativos compatíveis com DASH não são compatíveis com a inserção de anúncios no Adobe Primetime.
+  >[!NOTE]
+  >
+  >Os ativos compatíveis com DASH não são compatíveis com a inserção de anúncios no Adobe Primetime.
 
 >[!IMPORTANT]
 >

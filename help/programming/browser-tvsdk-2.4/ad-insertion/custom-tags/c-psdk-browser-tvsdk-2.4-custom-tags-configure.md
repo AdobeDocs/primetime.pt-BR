@@ -1,8 +1,7 @@
 ---
 description: Os fluxos de mídia podem conter metadados adicionais na forma de tags no arquivo Media Presentation Description (MPD), e esse arquivo indica a inserção de anúncios. Você pode especificar nomes de tag personalizados e ser notificado quando determinadas tags aparecerem no arquivo de manifesto.
 title: Tags personalizadas
-exl-id: 9e6343b5-ade7-467a-b2a1-8f8d69492a1a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
@@ -74,9 +73,9 @@ O DASH tem duas maneiras de sinalizar eventos:
 
 * No arquivo MPD.
 
-   Esse arquivo é semelhante ao arquivo M3U8 em conteúdo HLS, e eventos MPD existem no arquivo .mpd.
+  Esse arquivo é semelhante ao arquivo M3U8 em conteúdo HLS, e eventos MPD existem no arquivo .mpd.
 * Inband na representação
 
-   Os eventos em banda são multiplexados com representações adicionando as mensagens do evento como parte dos segmentos. Uma representação é uma lista de segmentos de vídeo e áudio que são reproduzidos em sequência. Os dados do evento inband são incorporados nesses segmentos.
+  Os eventos em banda são multiplexados com representações adicionando as mensagens do evento como parte dos segmentos. Uma representação é uma lista de segmentos de vídeo e áudio que são reproduzidos em sequência. Os dados do evento inband são incorporados nesses segmentos.
 
 Esses eventos são notificados como `TimedMetadata` para o aplicativo assim que forem analisados pelo TVSDK do navegador. Depois que um evento for notificado, ele não será notificado novamente.

@@ -1,8 +1,7 @@
 ---
 description: Você pode redefinir, reutilizar ou liberar uma ocorrência do MediaPlayer que não é mais necessária.
 title: Reutilizar ou remover uma ocorrência de MediaPlayer
-exl-id: 8b84c7f1-713a-46b4-8eb7-d699a79e74b7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Essa operação é útil nos seguintes casos:
 
 * Você deseja reutilizar um `MediaPlayer` instância, mas precisa carregar um novo `MediaResource` (conteúdo de vídeo) e substitua a instância anterior.
 
-   A redefinição permite reutilizar o `MediaPlayer` instância sem a sobrecarga de liberação de recursos, recriando o `MediaPlayer`e realocação de recursos.
+  A redefinição permite reutilizar o `MediaPlayer` instância sem a sobrecarga de liberação de recursos, recriando o `MediaPlayer`e realocação de recursos.
 
 * Quando a variável `MediaPlayer` está no status ERRO e precisa ser apagado.
 
-   >[!IMPORTANT]
-   >
-   >Essa é a única maneira de se recuperar do status ERRO.
+  >[!IMPORTANT]
+  >
+  >Essa é a única maneira de se recuperar do status ERRO.
 
    1. Chame `reset` para retornar a `MediaPlayer` ao seu status não inicializado:
 
@@ -57,10 +56,10 @@ Aqui estão alguns motivos para lançar um `MediaPlayer`:
 
 * Lançar o `MediaPlayer`.
 
-   ```java
-   void release() throws MediaPlayerException;
-   ```
+  ```java
+  void release() throws MediaPlayerException;
+  ```
 
-   >[!NOTE]
-   >
-   >Depois que a variável `MediaPlayer` for lançada, você não poderá mais usá-la. Se qualquer método do `MediaPlayer` for chamada depois de ser lançada, uma `MediaPlayerException` é lançado.
+  >[!NOTE]
+  >
+  >Depois que a variável `MediaPlayer` for lançada, você não poderá mais usá-la. Se qualquer método do `MediaPlayer` for chamada depois de ser lançada, uma `MediaPlayerException` é lançado.

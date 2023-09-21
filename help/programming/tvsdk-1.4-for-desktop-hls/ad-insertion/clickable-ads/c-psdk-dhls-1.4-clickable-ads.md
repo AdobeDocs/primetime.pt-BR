@@ -1,8 +1,7 @@
 ---
 description: O TVSDK fornece informações para que você possa agir em anúncios de click-through. Ao criar a interface do usuário do player, é necessário decidir como responder quando um usuário clicar em um anúncio clicável.
 title: Anúncios clicáveis
-exl-id: 50c74c82-c5d8-43f6-accf-8330a426a7bd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -96,9 +95,9 @@ Este exemplo mostra uma maneira possível de gerenciar cliques em anúncios.
    
    * Abra o URL de click-through em um navegador dentro do aplicativo.
 
-      Em plataformas de desktop, a área de reprodução de anúncio de vídeo geralmente é usada para chamar URLs de click-through após cliques do usuário.
+     Em plataformas de desktop, a área de reprodução de anúncio de vídeo geralmente é usada para chamar URLs de click-through após cliques do usuário.
    * Redirecionar o usuário para o navegador externo da web para dispositivos móveis.
 
-      Em dispositivos móveis, a área de reprodução de anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela inteira e assim por diante. Portanto, em dispositivos móveis, uma exibição separada, como um botão de patrocinador, geralmente é apresentada ao usuário como um meio de iniciar o URL de click-through.
+     Em dispositivos móveis, a área de reprodução de anúncio de vídeo é usada para outras funções, como ocultar e mostrar controles, pausar a reprodução, expandir para tela inteira e assim por diante. Portanto, em dispositivos móveis, uma exibição separada, como um botão de patrocinador, geralmente é apresentada ao usuário como um meio de iniciar o URL de click-through.
 
 1. Feche a janela do navegador na qual as informações de click-through são exibidas e continue a reproduzir o vídeo.

@@ -1,8 +1,7 @@
 ---
 description: Você deve separar a lógica da interface do usuário do player do processo que gerencia os cliques de anúncio. Uma maneira de fazer isso é implementar vários fragmentos de uma atividade.
 title: Separe o processo de anúncio clicável
-exl-id: 6519b8ed-2963-4708-bbb9-8ff178c1fa86
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%

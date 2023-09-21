@@ -2,8 +2,7 @@
 title: Arquivo de configuração do inquilino
 description: Arquivo de configuração do inquilino
 copied-description: true
-exl-id: 0f6cafbe-99d9-43bc-9a7f-d87c4da1f37f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -28,7 +27,7 @@ O arquivo de configuração do locatário inclui:
 
    * **Licença de cache** — Facultativo. Especifica por quanto tempo a licença pode ser armazenada no cliente. Por padrão, o armazenamento em cache de licenças está desativado. Para permitir o armazenamento em cache de licenças por um período limitado, defina a data final ou o número de segundos para os quais a licença deve ser armazenada (começando quando a licença é emitida). Definir o número de segundos como 0 desativa o cache de licenças.
 
-      Observe que todas as licenças emitidas pelo servidor para transmissão protegida têm um período de expiração de 24 horas (86.400 segundos). Portanto, esse valor se aplica implicitamente como um limite superior a qualquer data final ou duração definida para o armazenamento em cache de licença, com um valor máximo de 86.400 segundos, mesmo que o esquema imponha limites mais altos.
+     Observe que todas as licenças emitidas pelo servidor para transmissão protegida têm um período de expiração de 24 horas (86.400 segundos). Portanto, esse valor se aplica implicitamente como um limite superior a qualquer data final ou duração definida para o armazenamento em cache de licença, com um valor máximo de 86.400 segundos, mesmo que o esquema imponha limites mais altos.
 
    * **Reproduzir à direita** — Pelo menos um direito deve ser especificado. Se vários direitos forem especificados, o cliente usará o primeiro direito para o qual ele atender a todos os requisitos.
 
@@ -40,13 +39,12 @@ O arquivo de configuração do locatário inclui:
          * `model`
          * `screenType`
 
-         Os seguintes atributos agora são opcionais:
+        Os seguintes atributos agora são opcionais:
 
          * `osVersion`
          * `version`
+
       * **Requisitos de capacidade do dispositivo** — especifica opcionalmente os recursos de hardware necessários para acessar o conteúdo.
       * **Requisitos de detecção de jailbreak** — Especifica opcionalmente que a reprodução não é permitida em dispositivos nos quais o jailbreak é detectado.
-
-
 
 Consulte os comentários no arquivo de configuração de locatário de exemplo para obter mais detalhes.

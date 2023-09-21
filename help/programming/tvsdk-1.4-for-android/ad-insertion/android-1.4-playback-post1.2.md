@@ -1,8 +1,7 @@
 ---
 description: O comportamento da reprodução de mídia é afetado pela busca, pausa, avanço rápido ou retrocesso (modo de reprodução de truque) e pela inclusão de publicidade.
 title: Comportamento de reprodução padrão e personalizado com anúncios
-exl-id: 242a94e7-acc1-4676-b8a7-9652d4fd1e7e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 0%
@@ -23,10 +22,10 @@ Este é o comportamento de reprodução para conteúdo dinâmico/linear:
 
 * Retomar a reprodução após uma pausa resulta na reprodução do conteúdo que estava em buffer no momento da pausa.
 
-   Se a posição de retomada ainda estiver no intervalo de reprodução, a reprodução deverá ser contínua. Caso contrário, o TVSDK saltará para o novo ponto ativo. Também é possível executar uma operação de busca e selecionar um ponto de reprodução diferente.
+  Se a posição de retomada ainda estiver no intervalo de reprodução, a reprodução deverá ser contínua. Caso contrário, o TVSDK saltará para o novo ponto ativo. Também é possível executar uma operação de busca e selecionar um ponto de reprodução diferente.
 * O TVSDK resolve anúncios entre dicas após a posição em que o aplicativo entra na reprodução ao vivo.
 
-   A reprodução começa após a primeira indicação ser resolvida. O valor padrão para inserir a reprodução ao vivo é o ponto ao vivo do cliente, mas você pode escolher uma posição diferente. Todas as dicas antes da posição inicial são resolvidas depois que o aplicativo executa uma busca na janela DVR.
+  A reprodução começa após a primeira indicação ser resolvida. O valor padrão para inserir a reprodução ao vivo é o ponto ao vivo do cliente, mas você pode escolher uma posição diferente. Todas as dicas antes da posição inicial são resolvidas depois que o aplicativo executa uma busca na janela DVR.
 
 A tabela a seguir descreve como o TVSDK lida com anúncios e ad breaks durante a reprodução:
 

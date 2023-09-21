@@ -1,8 +1,7 @@
 ---
 description: Ativar instantâneo em significa que um ou mais canais são pré-carregados. Quando os usuários selecionam um canal ou alternam canais, o conteúdo é reproduzido imediatamente. O buffering é concluído até o momento em que o usuário começa a assistir.
 title: Instantâneo
-exl-id: a9c0b9d0-ef2b-4113-bd08-e2b2792b04fb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -27,18 +26,18 @@ Para obter mais informações sobre `MediaPlayerItemLoader`, consulte [Carregar 
 
 * Crie e anexe um provedor de QoS a um `mediaPlayerItemLoader` instância
 
-   ```
-   // Create an instance of QoSProvider  
-   private QOSProvider _qosProvider = new QOSProvider(this._context);  
-   
-   // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
-   // (before calling load API on mediaPlayerItemLoader instance)  
-   _qosProvider.attachMediaPlayerItemLoader(this._loader); 
-   ```
+  ```
+  // Create an instance of QoSProvider  
+  private QOSProvider _qosProvider = new QOSProvider(this._context);  
+  
+  // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
+  // (before calling load API on mediaPlayerItemLoader instance)  
+  _qosProvider.attachMediaPlayerItemLoader(this._loader); 
+  ```
 
-   Quando a reprodução começar, use o `_qosProvider` para obter `timeToLoad` e `timeToPrepare` QoSdata. As métricas de QoS restantes podem ser recuperadas usando o `QoSProvider` anexado à `mediaPlayer`.
+  Quando a reprodução começar, use o `_qosProvider` para obter `timeToLoad` e `timeToPrepare` QoSdata. As métricas de QoS restantes podem ser recuperadas usando o `QoSProvider` anexado à `mediaPlayer`.
 
-   Para obter mais informações sobre `MediaPlayerItemLoader`, consulte [Carregar um recurso de mídia usando MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader).
+  Para obter mais informações sobre `MediaPlayerItemLoader`, consulte [Carregar um recurso de mídia usando MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader).
 
 ## Configurar buffering para Ativação Instantânea {#section_4FE346B7BE434BA8A2203896D6E52146}
 

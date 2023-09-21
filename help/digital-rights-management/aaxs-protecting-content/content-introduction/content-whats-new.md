@@ -1,8 +1,7 @@
 ---
 description: O Adobe® Access™ é uma solução avançada de gerenciamento de direitos digitais e proteção de conteúdo para conteúdo audiovisual de alto valor. Usando ferramentas criadas com APIs Java, é possível criar políticas, aplicar políticas a arquivos com conteúdo de áudio e vídeo e criptografar esses arquivos. As etapas de alto nível para executar essas tarefas são as seguintes
 title: Visão geral
-exl-id: cf081058-9b41-4b09-9258-a7d873799846
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%

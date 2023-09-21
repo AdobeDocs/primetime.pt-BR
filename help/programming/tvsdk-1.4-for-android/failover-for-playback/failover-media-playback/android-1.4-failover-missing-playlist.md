@@ -1,8 +1,7 @@
 ---
 description: Quando uma lista de reprodução inteira estiver ausente, por exemplo, quando o arquivo M3U8 especificado em um arquivo de manifesto de nível superior não for baixado, o TVSDK tentará se recuperar. Se não for possível recuperar, o aplicativo determinará a próxima etapa.
 title: Failover de lista de reprodução ausente
-exl-id: aab2dde3-aee2-4ade-b8f9-91c72df0c747
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%

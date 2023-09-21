@@ -1,8 +1,7 @@
 ---
-description: O TVSDK oferece suporte à busca em uma posição específica (tempo) em que o fluxo seja uma lista de reprodução de janela deslizante, em vídeos sob demanda (VOD) e fluxos ao vivo.
+description: O TVSDK oferece suporte à busca em uma posição específica (tempo) em que o fluxo seja uma lista de reprodução de janela deslizante, em vídeo sob demanda (VOD) e fluxos ao vivo.
 title: Exibir uma barra de limpeza de busca com a posição de reprodução atual
-exl-id: d5bc3a54-7dfd-435e-abb4-323639732e0a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Exibir uma barra de limpeza de busca com a posição de reprodução atual {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-O TVSDK oferece suporte à busca em uma posição específica (tempo) em que o fluxo seja uma lista de reprodução de janela deslizante, em vídeos sob demanda (VOD) e fluxos ao vivo.
+O TVSDK oferece suporte à busca em uma posição específica (tempo) em que o fluxo seja uma lista de reprodução de janela deslizante, em vídeo sob demanda (VOD) e fluxos ao vivo.
 
 >[!TIP]
 >

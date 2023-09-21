@@ -1,8 +1,7 @@
 ---
 description: O instantâneo pré-carrega partes da mídia em um ou mais canais. Depois que um usuário seleciona ou muda de canal, o conteúdo é iniciado mais cedo porque parte do buffering já foi concluído.
 title: Instantâneo
-exl-id: 096104a7-867f-43e3-8433-f697d0224e21
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Use a classe auxiliar AuditudeSettings, que estende a classe MetadataNode, para configurar metadados de Adobe Primetime ad decisioning.
 title: Configurar metadados de inserção de anúncio
-exl-id: f7d1eb7d-e0be-4f0f-9dec-9336641a8f87
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Usar a classe auxiliar `AuditudeSettings`, que estende a `MetadataNode` classe, 
 
 >[!TIP]
 >
->O Adobe Primetime ad decisioning era anteriormente conhecido como Auditude.
+>O Adobe Primetime ad decisioning era conhecido anteriormente como Auditude.
 
 Os metadados de publicidade estão na `MediaResource.Metadata` propriedade. Ao iniciar a reprodução de um novo vídeo, seu aplicativo é responsável por definir os metadados de publicidade corretos.
 

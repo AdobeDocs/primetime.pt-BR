@@ -1,8 +1,7 @@
 ---
 description: Essas classes fornecem informações quando o TVSDK é usado incorretamente.
 title: Classes de erro
-exl-id: 7194d967-45d9-4654-8833-99b3256574c8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%

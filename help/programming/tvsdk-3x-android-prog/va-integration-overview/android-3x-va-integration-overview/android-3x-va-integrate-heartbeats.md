@@ -2,8 +2,7 @@
 title: Inicializar e configurar a análise de vídeo
 description: Inicializar e configurar a análise de vídeo
 copied-description: true
-exl-id: 26bdc11e-b8f6-414f-a3e9-53bc895d25ce
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
 * TVSDK 3.0 para Android.
 * Informações de configuração/inicialização
 
-   Entre em contato com o representante da Adobe para obter informações específicas sobre a conta de rastreamento de vídeo:
+  Entre em contato com o representante da Adobe para obter informações específicas sobre a conta de rastreamento de vídeo:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
@@ -27,7 +26,7 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
    <td colname="col2"> <p>Importante: esse nome de arquivo de configuração JSON deve permanecer <span class="filepath"> ADBMobileConfig.json </span>. O nome e o caminho deste arquivo de configuração não podem ser alterados. O caminho para este arquivo deve ser <span class="filepath"> &lt;source root=""&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Ponto de acesso do servidor de rastreamento do AppMeasurement </td> 
+   <td colname="col1"> Ponto de extremidade do servidor de rastreamento de AppMeasurements </td> 
    <td colname="col2"> O URL do endpoint da coleção de back-end do Adobe Analytics (antigo SiteCatalyst). </td> 
   </tr> 
   <tr> 

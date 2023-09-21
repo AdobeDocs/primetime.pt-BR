@@ -1,8 +1,7 @@
 ---
 description: Para fornecer uma experiência de visualização mais suave, o TVSDK do navegador às vezes armazena o fluxo de vídeo em buffer. Você pode configurar o modo como o reprodutor é armazenado em buffer.
 title: Buffering
-exl-id: 786379d1-0f2d-44a9-b580-1c8dcbd3fd17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%
@@ -25,11 +24,11 @@ O MediaPlayer fornece métodos para definir e obter o tempo de buffering inicial
 
 * Para usar os parâmetros de buffer, use o `bufferControlParameters` atributo.
 
-   Por exemplo, para definir o buffer inicial como 2 segundos e o tempo de buffer de reprodução como 30 segundos:
+  Por exemplo, para definir o buffer inicial como 2 segundos e o tempo de buffer de reprodução como 30 segundos:
 
-   ```js
-   var params = new AdobePSDK.BufferControlParameters(2000, 30000);
-   ```
+  ```js
+  var params = new AdobePSDK.BufferControlParameters(2000, 30000);
+  ```
 
 ## Políticas de tempo de buffer {#section_7EF2947931654CCC8DAB9172391FA4EB}
 

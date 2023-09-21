@@ -1,8 +1,7 @@
 ---
 description: Este é um exemplo de como criar um botão que permite ao usuário selecionar uma faixa de legendas ocultas.
 title: Exemplo Permitir que os usuários alterem a faixa de legenda
-exl-id: d7ba19ac-cbfa-4fb4-a92d-21a3d0f7c23f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: O sinalizador forceflash na lista de origem força o fallback do Flash para um URL. Nesse URL, você pode usar o Adobe Flash Player para reproduzir o conteúdo.
 title: Forçar o fallback do Flash usando a lista de origem de mídia
-exl-id: 657bf9b1-d911-489d-80ca-2956b008431b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%

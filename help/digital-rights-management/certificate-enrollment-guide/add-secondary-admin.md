@@ -2,8 +2,7 @@
 title: Criar um Administrador Secundário
 description: Criar um Administrador Secundário
 copied-description: true
-exl-id: c3c58361-d173-425c-b59d-ab4427640cdf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
@@ -19,13 +18,13 @@ O Administrador da conta pode criar um Administrador secundário. Só pode haver
 
    * **[!UICONTROL Add user]**.
 
-      Se o funcionário tiver uma conta Adobe, informe o endereço de e-mail. Clique em **[!UICONTROL Add]** e continue.
+     Se o funcionário tiver uma conta Adobe, informe o endereço de e-mail. Clique em **[!UICONTROL Add]** e continue.
 
    * **[!UICONTROL Invite user]** Se o funcionário não tiver uma conta Adobe, convide-o a criar uma. Insira o endereço de e-mail e o nome do funcionário e clique em **[!UICONTROL Send an invitation]**. O site envia um convite por email ao convidado. O e-mail contém um link para adobe.com onde o convidado pode criar uma conta. O convidado deve usar o endereço de e-mail para o qual o convite foi enviado.
 
-      >[!NOTE]
-      >
-      >O administrador não recebe notificação quando um usuário cria uma conta. Verifique a **[!UICONTROL User accounts]** no site de Registro de Certificado para ver se um convidado criou uma conta.
+     >[!NOTE]
+     >
+     >O administrador não recebe notificação quando um usuário cria uma conta. Verifique a **[!UICONTROL User accounts]** no site de Registro de Certificado para ver se um convidado criou uma conta.
 
 1. Se você tiver adicionado um usuário, a tela da seção Função no **[!UICONTROL User accounts]** é aberta. Faça o seguinte:
 

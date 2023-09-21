@@ -1,8 +1,7 @@
 ---
 description: No TVSDK do navegador, você pode buscar uma posição específica (tempo) em um fluxo. Um fluxo pode ser uma lista de reprodução de janela deslizante ou conteúdo de vídeo sob demanda (VOD).
 title: Manipular busca ao usar a barra de busca
-exl-id: 4c09b218-917a-4318-82b0-c221d450a2c1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Manuseio de compatibilidade de FMRMS
 title: Atualização de clientes
-exl-id: 7774b408-c2cb-400b-be41-74cc9739e0e9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
@@ -20,7 +19,7 @@ Se um cliente FMRMS 1.x contatar um servidor DRM da Adobe Primetime, o servidor 
 * A classe do manipulador de solicitações é `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1RequestHandler`.
 * O URL da solicitação é &quot;*URL base do conteúdo 1.x*&quot; + &quot; [!DNL /edcws/services/urn:EDCLicenseService]&quot;
 
-   Ao contrário de outros manipuladores de solicitações do Adobe Primetime, esse manipulador não fornece acesso a nenhuma informação de solicitação ou requer que dados de resposta sejam definidos. Crie uma instância do `FMRMSv1RequestHandler`, e chame `close()`
+  Ao contrário de outros manipuladores de solicitações do Adobe Primetime, esse manipulador não fornece acesso a nenhuma informação de solicitação ou requer que dados de resposta sejam definidos. Crie uma instância do `FMRMSv1RequestHandler`, e chame `close()`
 
 ## Atualização de metadados {#upgrading-metadata}
 

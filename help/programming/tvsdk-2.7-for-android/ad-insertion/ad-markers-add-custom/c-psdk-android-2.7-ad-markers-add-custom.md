@@ -1,8 +1,7 @@
 ---
 description: Ao usar marcadores de anúncios personalizados, é possível marcar seções específicas do conteúdo principal como períodos de conteúdo relacionados a anúncios.
 title: Adicionar marcadores de publicidade personalizados
-exl-id: 310b2b81-873f-4b37-b18d-d586e6408978
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -21,7 +20,7 @@ O rastreamento de anúncios não é feito internamente pelo TVSDK, por exemplo, 
 
 * O ad break
 
-   Um ad break é uma lista ordenada de anúncios consecutivos individuais.
+  Um ad break é uma lista ordenada de anúncios consecutivos individuais.
 * Um anúncio individual
 
 Os eventos de reprodução são acionados separadamente para ad breaks e anúncios no ponto inicial e final de cada anúncio.

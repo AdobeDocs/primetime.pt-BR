@@ -1,8 +1,7 @@
 ---
 title: Notas de versão do TVSDK 3.13 para iOS
 description: As Notas de versão do TVSDK 3.13 para iOS descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos e os problemas de dispositivo no TVSDK iOS 3.13.
-exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '7575'
 ht-degree: 0%
@@ -111,7 +110,7 @@ Adição de suporte para notificações de erro, no caso de:
 Adição de suporte para notificações descritivas se houver falhas na reprodução do anúncio.
 
 * **Adicionado [!DNL Fairplay] Suporte a fluxo CMAF criptografado**
-   [!DNL Fairplay] Fluxos CMAF criptografados com reprodução de codec AVC agora são suportados.
+  [!DNL Fairplay] Fluxos CMAF criptografados com reprodução de codec AVC agora são suportados.
 
 **Versão 3.0.1**
 
@@ -138,7 +137,7 @@ Nenhum recurso novo ou aprimoramento nesta versão.
 **Versão 1.4.43**
 
 * Experiência semelhante à de TV ao poder se associar no meio de um anúncio sem acionar o rastreamento de anúncios parciais.\
-   Exemplo: o usuário se junta ao meio (a 40 segundos) de um ad break de 90 segundos que consiste em três anúncios de 30 segundos. São 10 segundos do segundo anúncio no intervalo.
+  Exemplo: o usuário se junta ao meio (a 40 segundos) de um ad break de 90 segundos que consiste em três anúncios de 30 segundos. São 10 segundos do segundo anúncio no intervalo.
 
    * O segundo anúncio é reproduzido pelo tempo restante (20 segundos) seguido pelo terceiro anúncio.
    * Os rastreadores de anúncios do anúncio parcial reproduzido (segundo anúncio) não são acionados. Os rastreadores somente para o terceiro anúncio são acionados.
@@ -184,7 +183,7 @@ As APIs TVSDK agora fornecem informações adicionais sobre respostas VAST de te
 
 * **Métricas de cobrança** Para acomodar os clientes que desejam pagar apenas pelo que utilizam, em vez de uma taxa fixa independentemente do uso real, o Adobe coleta as métricas de uso e as utiliza para determinar quanto faturar aos clientes.
 
-   Toda vez que o TVSDK gera um evento de início de fluxo, o reprodutor começa a enviar mensagens HTTP periodicamente para o sistema de cobrança do Adobe. O período, conhecido como duração faturável, pode ser diferente para VOD padrão, pro VOD (anúncios intermediários ativados) e conteúdo ao vivo. A duração padrão para cada tipo de conteúdo é de 30 minutos, mas seu contrato com a Adobe determina os valores reais.
+  Toda vez que o TVSDK gera um evento de início de fluxo, o reprodutor começa a enviar mensagens HTTP periodicamente para o sistema de cobrança do Adobe. O período, conhecido como duração faturável, pode ser diferente para VOD padrão, pro VOD (anúncios intermediários ativados) e conteúdo ao vivo. A duração padrão para cada tipo de conteúdo é de 30 minutos, mas seu contrato com a Adobe determina os valores reais.
 
 * **Suporte a várias CDNs para anúncios CRS** O TVSDK agora é compatível com vários CDNs para anúncios CRS. Ao fornecer detalhes de FTP para anúncios CRS, é possível especificar locais de CDN, diferentes do CDN de propriedade de Adobe padrão, como [!DNL Akamai].
 
@@ -206,7 +205,7 @@ O Primetime iOS TVSDK agora é compatível com criações JavaScript VPAID 2.0 p
 
 * tvOS
 
-   O TVSDK é compatível com aplicativos nativos tvOS.
+  O TVSDK é compatível com aplicativos nativos tvOS.
 * Os seguintes tipos de conteúdo podem ser reproduzidos:
 
    * VOD
@@ -225,7 +224,7 @@ O Primetime iOS TVSDK agora é compatível com criações JavaScript VPAID 2.0 p
 * Os seguintes recursos não são suportados no momento:
 
    * Digital Rights Management (DRM)
-   * Banners de anúncios
+   * Banners de publicidade
    * Linguagem de Marcação da TV (TVML)
 
 **Versão 1.4.13**
@@ -424,104 +423,104 @@ Correção aprimorada fornecida para o problema fechado #34385 na versão 1.4.42
 
 * (ZD#34385) - A reprodução é interrompida com um URL inválido ao retornar da inserção de anúncio baseada em sinal.
 
-   Aumentar as contagens simultâneas máximas para `CustomAVAssetLoaderOperations`, para que as leituras do manifesto possam continuar a ser executadas.
+  Aumentar as contagens simultâneas máximas para `CustomAVAssetLoaderOperations`, para que as leituras do manifesto possam continuar a ser executadas.
 
 * (ZD#34373) - Os usuários finais não podem fazer streaming para dispositivos conectados a HDMI, quando a gravação de stream não é permitida.
 
 * (ZD#32678) - O TVSDK não coleta as IDs de anúncios corretas no iOS.
 
-   A ID do anúncio final do criativo agora é selecionada nos pings do VHL se houver redirecionamentos VAST/VMAP.
+  A ID do anúncio final do criativo agora é selecionada nos pings do VHL se houver redirecionamentos VAST/VMAP.
 
 * (ZD#33904) - O TVSDK não está registrado para notificações do AVFfoundation `AVAudioSessionMediaServicesWereLostNotification` e `AVAudioSessionMediaServicesWereResetNotification`.
 
-   `PTMediaServicesWereLostNotification` e `PTMediaServicesWereResetNotification` O agora pode ser registrado no aplicativo do player para receber as notificações quando os serviços de mídia são redefinidos ou perdidos.
+  `PTMediaServicesWereLostNotification` e `PTMediaServicesWereResetNotification` O agora pode ser registrado no aplicativo do player para receber as notificações quando os serviços de mídia são redefinidos ou perdidos.
 
 * (ZD#33815) - Os clientes não conseguem atualizar suas regras de priorização e normalização do CRS sem exigir uma atualização do aplicativo.
 
-   Adição de `getCRSRulesJsonURL` e `setCRSRulesJsonURL` APIs para o iOS TVSDK.
+  Adição de `getCRSRulesJsonURL` e `setCRSRulesJsonURL` APIs para o iOS TVSDK.
 
 **Versão 1.4.41 (1.4.41.76)**
 
 * (ZD #34464) - Problemas de criação do aplicativo de referência com o TVSDK versão 1.4.41
 
-   A partir desta versão, o Xcode 9 é necessário para compilar o TVSDK para iOS.
+  A partir desta versão, o Xcode 9 é necessário para compilar o TVSDK para iOS.
 * (ZD #29456) - Início da reprodução no estado pausado
 
-   Correção do problema de pausa que ocorre quando o vídeo é pausado ao entrar na reprodução.
+  Correção do problema de pausa que ocorre quando o vídeo é pausado ao entrar na reprodução.
 * (ZD #30371) - A hora de início do AdBreak muda quando inserimos mais de dois anúncios em fluxo linear
 
-   Correção do erro ao tentar reproduzir conteúdo na Apple TV, o que impede a reprodução completamente
+  Correção do erro ao tentar reproduzir conteúdo na Apple TV, o que impede a reprodução completamente
 * (ZD #32146)- Não `PTMediaPlayerStatusError` é recebido para conteúdo HLS Live no bloqueio do iOS 11 dev beta
 
-   Não `PTMediaPlayerStatusError` O é recebido para conteúdo HLS Live e VOD no bloqueio usando o Charles (Drop connection e 403).
+  Não `PTMediaPlayerStatusError` O é recebido para conteúdo HLS Live e VOD no bloqueio usando o Charles (Drop connection e 403).
 
 * (ZD #29242) - A reprodução do vídeo Airplay falha com os anúncios ativados.
 
-   Quando os anúncios estão ativados e o AirPlay está ativado ao iniciar a reprodução de um vídeo, a reprodução nunca é iniciada e nenhum erro é exibido.
+  Quando os anúncios estão ativados e o AirPlay está ativado ao iniciar a reprodução de um vídeo, a reprodução nunca é iniciada e nenhum erro é exibido.
 
 * (ZD#33341) - `DRMInterface.h` aciona avisos de criação no Xcode 9.
 
-   Correção de dois protótipos de bloco no `DRMInterface.h` que não tinham a palavra &#39;void&#39; em suas listas de parâmetros.
+  Correção de dois protótipos de bloco no `DRMInterface.h` que não tinham a palavra &#39;void&#39; em suas listas de parâmetros.
 
 * (ZD#31979) - Não compila/executa quando é iOS 10 ou posterior para iPhone 7/iPhone7+.
 
-   A compilação fixa de documentos IB para versões anteriores ao iOS 7 não é mais suportada.
+  A compilação fixa de documentos IB para versões anteriores ao iOS 7 não é mais suportada.
 
 * (ZD#32920) - Tela em branco dentro de um Ad break e sem conclusão de Ad break.
 
-   Quando um Ad break está apresentando Instâncias de anúncio e após a conclusão de uma instância de anúncio, uma tela em branco é exibida.
+  Quando um Ad break está apresentando Instâncias de anúncio e após a conclusão de uma instância de anúncio, uma tela em branco é exibida.
 
 * (ZD#32509) - Desative o iOS 11 screen recoding Desative a gravação de tela no iOS 11.
 
 * (ZD#33179) - Falha intermitente de evento no iOS11.
 
-   Correção da falha de evento no iOS 11.
+  Correção da falha de evento no iOS 11.
 
 **Versão 1.4.40** (1.4.40.72)
 
 * (ZD #32465) - O player não pode manipular listas de reprodução mescladas.
 
-   Chame `finishLoadingWithError`(with: Error) para que o AV Foundation tente fluxos alternativos/failover de acionador.
+  Chame `finishLoadingWithError`(with: Error) para que o AV Foundation tente fluxos alternativos/failover de acionador.
 
 * (ZD #31951) - Erro de TVSDK durante rotações de licença.
 
-   Correção do problema de rotação de licenças.
+  Correção do problema de rotação de licenças.
 * (ZD #31951) - Tela em branco dentro de um Ad break e sem conclusão de Ad break.
 
-   Lidou com um problema em que os anúncios VPAID do Facebook frequentemente retornavam vários blocos CDATA em um único `<AdParameters>` Nó VAST.
+  Lidou com um problema em que os anúncios VPAID do Facebook frequentemente retornavam vários blocos CDATA em um único `<AdParameters>` Nó VAST.
 * (ZD #33336) - iOS TVSDK - Os pods de anúncios não estão sendo preenchidos, apesar de anúncios suficientes serem retornados pelo Freewheel.
 
-   Relação pai-filho criada entre o anúncio de sequência e o anúncio de fallback e classificação com base na sequência e no índice pai.
+  Relação pai-filho criada entre o anúncio de sequência e o anúncio de fallback e classificação com base na sequência e no índice pai.
 
 **Versão 1.4.39** (1.4.39.43)
 
 * (ZD #32178) - A versão do iOS TVSDK está incorreta.
 
-   A saída da versão do TVSDK nos arquivos de log foi 1.0.211. Correção da saída da versão correta.
+  A saída da versão do TVSDK nos arquivos de log foi 1.0.211. Correção da saída da versão correta.
 
 * (ZD #32199) - Carregamento lento de anúncio - O vídeo não é exibido para o conteúdo.
 
-   A linha do tempo local do Adbreak que não estava sendo inicializada anteriormente, foi atualizada antes de ser usada.
+  A linha do tempo local do Adbreak que não estava sendo inicializada anteriormente, foi atualizada antes de ser usada.
 
 * (ZD #27528) - O vídeo, áudio ou ambos congelam de 1 a 45 segundos após um ativo começar a ser reproduzido, se o áudio secundário estiver definido como não padrão no iOS 1.2.
 
-   Prepare e informe faixas de áudio no estado Pronto.
+  Prepare e informe faixas de áudio no estado Pronto.
 
 * (ZD #30411) - Você pode obter resultados inesperados, como ausência de áudio ou áudio incorreto, se escolher um idioma Sap secundário.
 
-   Prepare e informe faixas de áudio no estado Pronto.
+  Prepare e informe faixas de áudio no estado Pronto.
 
 * (ZD #32199) - Carregamento lento de anúncio - O vídeo não é exibido para o conteúdo.
 
-   A linha do tempo local do Adbreak que não estava sendo inicializada anteriormente, foi atualizada antes de ser usada.
+  A linha do tempo local do Adbreak que não estava sendo inicializada anteriormente, foi atualizada antes de ser usada.
 
 * (ZD #27528) - O vídeo, áudio ou ambos congelam de 1 a 45 segundos após um ativo começar a ser reproduzido, se o áudio secundário estiver definido como não padrão no iOS 1.2.
 
-   Prepare e informe faixas de áudio no estado Pronto.
+  Prepare e informe faixas de áudio no estado Pronto.
 
 * (ZD #30411) - Você pode obter resultados inesperados, como ausência de áudio ou áudio incorreto, se escolher um idioma Sap secundário.
 
-   Prepare e informe faixas de áudio no estado Pronto.
+  Prepare e informe faixas de áudio no estado Pronto.
 
 **Versão 1.4.38** (1.4.38.860)
 
@@ -1142,7 +1141,6 @@ Suporte para ping de URLs vazios de rastreamento de ad break. O TVSDK agora veri
 >* Câmera lenta, em qualquer plataforma ou versão.
 >* Jogo ao vivo.
 
-
 **Versão 1.4.43**
 
 * O TVSDK 1.4.43 é certificado para o iOS 11.
@@ -1165,9 +1163,9 @@ Esta versão do TVSDK foi certificada com o FairPlay Support para iOS e tvOS.
 
 * tvOS
 
-   Esta versão do TVSDK inclui suporte para tvOS e foi certificada para fluxos HLS não criptografados.
+  Esta versão do TVSDK inclui suporte para tvOS e foi certificada para fluxos HLS não criptografados.
 
-   **Nota**: Lembre-se das seguintes diretrizes de compilação:
+  **Nota**: Lembre-se das seguintes diretrizes de compilação:
 
    * O suporte para tvOs TVSDK é limitado a fluxos criptografados não DRM de Adobe. Você deve remover a referência a `drmNativeInterface.framework` nas configurações de build do tvOS. Os fluxos criptografados AES ainda são compatíveis.
    * O Apple exige que todos os aplicativos da Apple TV sejam habilitados para código de bits, portanto, você deve ativar esse sinalizador nas configurações do projeto.

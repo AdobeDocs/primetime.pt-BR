@@ -1,8 +1,7 @@
 ---
 description: A otimização de redirecionamento 302 minimiza o número de respostas de redirecionamento 302, o que permite que seu aplicativo faça o balanceamento de carga com mais eficiência.
 title: Desabilitar ou habilitar otimização de redirecionamento 302
-exl-id: b1bdb6d6-b34d-4e0a-8c96-7fd4ce77b5c9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%

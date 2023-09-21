@@ -1,8 +1,7 @@
 ---
 description: Carregue um recurso instanciando diretamente um MediaResource e carregando o conteúdo de vídeo a ser reproduzido.
 title: Carregar um recurso de mídia no MediaPlayer
-exl-id: b775c33e-399c-4a03-a132-407944f07706
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Carregue um recurso instanciando diretamente um MediaResource e carregando o con
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.ERROR`
 
-      Por meio desses eventos, o objeto MediaPlayer notifica seu aplicativo se o recurso de mídia foi carregado com êxito.
+     Por meio desses eventos, o objeto MediaPlayer notifica seu aplicativo se o recurso de mídia foi carregado com êxito.
 
 1. Quando o estado do reprodutor de mídia muda para `MediaPlayerStatus.INITIALIZED`, você pode chamar `MediaPlayer.prepareToPlay`.
 

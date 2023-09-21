@@ -1,8 +1,7 @@
 ---
 description: O TVSDK é compatível com a exclusão e substituição programática de conteúdo de anúncios em fluxos VOD.
 title: Excluir e substituir anúncios em fluxos de VOD
-exl-id: 44d75250-23ee-4ce3-a0c1-59bd488a5aba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
@@ -24,11 +23,11 @@ As seguintes alterações no TVSDK oferecem suporte à exclusão e substituiçã
    * `property PTTimeRangeCollectionType type` indica o tipo de intervalo de tempo.
    * `property NSArray* ranges` é usado para definir os intervalos de tempo.
 
-      Os tipos esperados de objetos na matriz são `PTReplacementTimeRange` ou `CMTimeRange`.
+     Os tipos esperados de objetos na matriz são `PTReplacementTimeRange` ou `CMTimeRange`.
 
-      >[!TIP]
-      >
-      >Todos os objetos da matriz devem ser do mesmo tipo.
+     >[!TIP]
+     >
+     >Todos os objetos da matriz devem ser do mesmo tipo.
 
    * `PTTimeRangeCollectionType` é um enum que define o comportamento dos intervalos definidos na variável `PTTimeRangeCollection`:
 
@@ -56,11 +55,11 @@ As seguintes alterações no TVSDK oferecem suporte à exclusão e substituiçã
 
       * Tipo - Aviso
       * Descrição - O modo de sinalização de anúncio é definido como intervalos personalizados, mas os intervalos personalizados não são definidos.
+
    * `INVALID_TIME_RANGES`
 
       * Tipo - Aviso
       * Descrição - Um ou mais intervalos de tempo são inválidos e serão ignorados ou modificados.
-
 
 **APIs obsoletas**
 

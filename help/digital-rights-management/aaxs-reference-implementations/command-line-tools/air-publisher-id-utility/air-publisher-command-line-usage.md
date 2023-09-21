@@ -2,8 +2,7 @@
 title: Uso da linha de comando
 description: Uso da linha de comando
 copied-description: true
-exl-id: 67056085-beb5-4f54-8962-369bc32d7907
-source-git-commit: 79cab347d0daa01549fbf8a9b37bf0a91c14648e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%

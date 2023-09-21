@@ -1,8 +1,7 @@
 ---
 description: Você pode implementar várias soluções DRM para seus aplicativos TVSDK usando o Primetime DRM Cloud, viabilizado pela ExpressPlay. As soluções de DRM incluem o FairPlay da Apple, o Widevine da Google, o PlayReady da Microsoft e o Primetime Access da Adobe.
 title: Visão geral de vários DRMs
-exl-id: 27614bb6-bfa6-445a-8fb5-a1b8af080bcc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%

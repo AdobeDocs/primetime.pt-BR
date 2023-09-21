@@ -1,8 +1,7 @@
 ---
 description: Você deve liberar uma instância MediaPlayer e recursos quando não precisar mais do MediaResource.
 title: Liberar uma instância e recursos do MediaPlayer
-exl-id: 2a802754-5c51-4e5f-8c36-843074b487b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%

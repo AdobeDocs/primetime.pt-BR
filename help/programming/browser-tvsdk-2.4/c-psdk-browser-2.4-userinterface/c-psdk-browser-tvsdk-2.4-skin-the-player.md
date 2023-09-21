@@ -1,8 +1,7 @@
 ---
 description: Você pode usar as informações a seguir para ajudá-lo a aplicar skin ao seu reprodutor. Para cada construção visual, os comportamentos correspondentes são mencionados no comportamento padrão.
 title: Colocar a pele no reprodutor
-exl-id: 4ad50f96-d174-401f-a731-21e5fbfdbe31
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Você pode usar sobreposições de HTML com StageVideo para exibir elementos da interface no plano de vídeo da lista de exibição do Flash. Esse plano está acima do plano StageVideo, portanto, StageVideo sempre é exibido atrás de qualquer elemento da lista de exibição do Flash.
 title: Sobreposições StageVideo e HTML
-exl-id: 6beda4c8-0981-4a38-bd5e-5714b9ec7efa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -42,6 +41,6 @@ Estes são os requisitos mínimos do navegador para usar sobreposições de HTML
 
 * Chrome versão 26 e posterior
 
-   >[!IMPORTANT]
-   >
-   >O Chrome Pepper no Windows XP e no Windows Vista não é compatível.
+  >[!IMPORTANT]
+  >
+  >O Chrome Pepper no Windows XP e no Windows Vista não é compatível.

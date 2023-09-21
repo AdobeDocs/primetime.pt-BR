@@ -1,8 +1,7 @@
 ---
 description: O TVSDK despacha eventos de reprodução de anúncio em resposta a operações relacionadas a anúncios, como quando um anúncio começa a ser reproduzido.
 title: Eventos de reprodução de anúncio
-exl-id: 61e7c9ec-20ed-4221-8ae7-b5d43adb4ce4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%

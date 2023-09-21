@@ -1,8 +1,7 @@
 ---
 description: Use o arquivo de biblioteca Browserify fornecido pelo TVSDK do Navegador em seu aplicativo para criar um player compatível com Browserify.
 title: Criar um player compatível com Browserify sem a estrutura de interface do usuário
-exl-id: 27b5e1c5-49c3-44e4-9e34-0f50a50e36f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%

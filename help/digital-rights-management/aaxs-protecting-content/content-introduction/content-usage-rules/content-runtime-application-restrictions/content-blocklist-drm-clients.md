@@ -2,8 +2,7 @@
 title: Lista de bloqueios de Clientes DRM impedidos de acessar conteúdo protegido
 description: Lista de bloqueios de Clientes DRM impedidos de acessar conteúdo protegido
 copied-description: true
-exl-id: 74ddb5ed-4e68-4570-9cd5-bfc699609972
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Uma versão de cliente DRM pode ser identificada pelos atributos especificados n
 | Ambiente | &quot;PC&quot;, &quot;PortingKit&quot; | Correspondência exata | Identifica se o cliente está sendo executado em um desktop ou em qualquer outro dispositivo. |
 | SO | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Correspondência exata | Platform |
 | Arquitetura | “32”, “64” | Correspondência exata | 32 ou 64 bits |
-| Tipo de tela | &quot;PC&quot;, &quot;Dispositivo móvel&quot;, &quot;TV&quot; | Correspondência exata |  |
+| Tipo de tela | &quot;PC&quot;, &quot;Dispositivo móvel&quot;, &quot;TV&quot; | Correspondência exata | |
 | Versão de tempo de execução | Um número de versão válido. Por exemplo, &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot; etc. | Corresponde se a versão do cliente é inferior ou igual à versão especificada. | O número da versão é especificado como uma combinação de números e pontos (&quot;.&quot;) de qualquer comprimento. |
 | Versão da biblioteca DRM | Um número de versão válido. Por exemplo, &quot;2.0.0&quot;. | Corresponde se a versão do cliente é inferior ou igual à versão especificada. | O número da versão é especificado como uma combinação de números e pontos (&quot;.&quot;) de qualquer comprimento. |
 | Fornecedor OEM | Sequência de caracteres do fornecedor OEM | Correspondência exata | String de identificação do fornecedor OEM para o dispositivo que usa o kit de portabilidade. |

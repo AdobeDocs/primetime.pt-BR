@@ -1,8 +1,7 @@
 ---
 title: Relatórios de uso geral
 description: Relatórios de uso geral
-exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 0%
@@ -66,28 +65,28 @@ O eixo x apresenta as unidades no intervalo de tempo atual e o eixo y representa
 
 * **AuthN OK**
 
-   Autenticação OK é o número de autenticações bem-sucedidas. Para obter mais informações e definições, consulte [Conceitos do produto: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
+  Autenticação OK é o número de autenticações bem-sucedidas. Para obter mais informações e definições, consulte [Conceitos do produto: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
 
 * **AuthZ OK**
 
-   AuthZ OK é o número de autorizações bem-sucedidas. Para obter mais informações e definições, consulte [Conceitos do produto: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
+  AuthZ OK é o número de autorizações bem-sucedidas. Para obter mais informações e definições, consulte [Conceitos do produto: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
 
 * **Solicitações Play**
 
-   Solicitações de reprodução são o número de Solicitações de reprodução. Para obter mais informações e definições, consulte [Conceitos do produto: Solicitações de reprodução](/help/AccountIQ/product-concepts.md#play-requests-def)
+  Solicitações de reprodução são o número de Solicitações de reprodução. Para obter mais informações e definições, consulte [Conceitos do produto: Solicitações de reprodução](/help/AccountIQ/product-concepts.md#play-requests-def)
 
-   >[!NOTE]
-   >
-   >O gráfico de linha de solicitações de reprodução não está disponível para usuários do MVPD.
+  >[!NOTE]
+  >
+  >O gráfico de linha de solicitações de reprodução não está disponível para usuários do MVPD.
 
 
 * **Assinantes únicos**
 
-   Assinantes únicos são o número de assinantes únicos bem-sucedidos. Para obter mais informações e definições, consulte [Conceitos do produto: assinantes únicos](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
+  Assinantes únicos são o número de assinantes únicos bem-sucedidos. Para obter mais informações e definições, consulte [Conceitos do produto: assinantes únicos](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
-   >[!NOTE]
-   >
-   >O número total de assinantes únicos também inclui o número de dispositivos únicos se o uso de Adobe TempPass por um programador (ou seja, pré-visualização gratuita) fizer parte do segmento.
+  >[!NOTE]
+  >
+  >O número total de assinantes únicos também inclui o número de dispositivos únicos se o uso de Adobe TempPass por um programador (ou seja, pré-visualização gratuita) fizer parte do segmento.
 
 ## Visão Geral do Instantâneo - Contas acima dos limites {#snapshot-overview}
 
@@ -123,7 +122,7 @@ O gráfico mostra:
 
 * porcentagem do total de contas do assinante nesse segmento,
 
-   que estão usando X número de dispositivos, Y número de IPs e Z número de códigos Zip para consumir conteúdo do seu canal para o (segmento definido de) MVPDs, para um intervalo de tempo.
+  que estão usando X número de dispositivos, Y número de IPs e Z número de códigos Zip para consumir conteúdo do seu canal para o (segmento definido de) MVPDs, para um intervalo de tempo.
 
 ![](assets/select-thresholds.png)
 
@@ -204,4 +203,3 @@ O gráfico de barras Exibição histórica ajuda a comparar as métricas de uso 
 >[!MORELIKETHIS]
 >
 >* Saiba como exportar relatórios para os 1000 principais assinantes no segmento selecionado usando filtros no Relatório de uso geral usando [Exportar as 1000 contas principais](/help/AccountIQ/export-acc-information.md) opção.
-

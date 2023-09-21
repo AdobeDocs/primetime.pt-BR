@@ -1,8 +1,7 @@
 ---
 description: Para mídia ao vivo e de vídeo sob demanda (VOD), o TVSDK inicia a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixa os segmentos de mídia definidos por essa lista de reprodução. Ele seleciona rapidamente a lista de reprodução de alta resolução de taxa de bits e sua mídia associada e continua o processo de download.
 title: Reprodução e failover de mídia
-exl-id: 3da1bde3-b685-4331-8bbe-a4c8ccdc68ed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -54,3 +53,4 @@ Se o mecanismo de vídeo não puder obter segmentos continuamente, ele limitará
 >* Durante uma operação de failover, pode haver uma troca de perfil.
 >
 >  Se ocorrer um erro durante o download de um dos segmentos da lista de reprodução, os parâmetros de controle ABR, como a taxa de bits mínima/máxima permitida, são ignorados.
+>

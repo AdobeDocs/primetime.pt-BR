@@ -1,8 +1,7 @@
 ---
 description: A Adobe recomenda que, se você fizer alterações no arquivo de configuração, execute o utilitário Validador de configurações antes de iniciar o servidor. Esse utilitário pode detectar a maioria dos erros de configuração antecipadamente, antes que eles causem falhas durante o processamento da solicitação.
 title: Validador de configuração
-exl-id: 41d0a926-4e12-442c-886e-5f12cf10eed8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -51,12 +50,12 @@ A validação baseada em implantação pode ser executada nos seguintes níveis:
 
 * `Tenant` — Valida o arquivo de configuração e as credenciais para um locatário específico. Se desejar validar a configuração para `<tenant1>`, tipo:
 
-   ```
-       Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
-   ```
+  ```
+      Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
+  ```
 
 * `Global` — Valida o arquivo de configuração global e a validação do locatário para todos os locatários. Se você deseja executar a validação baseada em implantação global, digite:
 
-   ```
-       Validator --<root-path-to-LicenseServer.ConfigRoot> -g
-   ```
+  ```
+      Validator --<root-path-to-LicenseServer.ConfigRoot> -g
+  ```

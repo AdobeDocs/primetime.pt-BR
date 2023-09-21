@@ -2,8 +2,7 @@
 title: Preparando senhas para os arquivos de propriedades do Servidor
 description: Preparando senhas para os arquivos de propriedades do Servidor
 copied-description: true
-exl-id: 70f75640-7075-450a-8191-dc348bd269b8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -21,9 +20,9 @@ Para executar a ferramenta usando o script ANT fornecido:
 * Assegure a `sdkdir` propriedade no [!DNL build-refimpl.xml] aponta para o diretório que contém o SDK de acesso do Adobe
 * Execute o seguinte comando usando ANT:
 
-   ```
-       ant -f build-refimpl.xml
-   ```
+  ```
+      ant -f build-refimpl.xml
+  ```
 
 * Quando solicitado, digite a senha da sua credencial
 
@@ -35,17 +34,17 @@ Para executar a ferramenta usando Java:
 
 * No Windows:
 
-   ```
-   java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-   com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+  java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+  com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
 * No Linux:
 
-   ```
-       java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-       com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+      java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+      com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
 O utilitário gera a senha criptografada, que você deve copiar para o arquivo .properties.
 

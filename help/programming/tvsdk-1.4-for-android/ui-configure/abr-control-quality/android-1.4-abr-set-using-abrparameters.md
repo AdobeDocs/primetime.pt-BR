@@ -1,8 +1,7 @@
 ---
 description: Você pode definir valores de controle ABR somente com ABRControlParameters, mas pode construir um novo a qualquer momento.
 title: Configurar taxas de bits adaptáveis usando ABRControlParameters
-exl-id: 787e962c-371f-4ac8-ae13-8b38a230593f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: A classe MediaResource representa o conteúdo a ser carregado pela ocorrência MediaPlayer.
 title: Criar um recurso de mídia
-exl-id: 20515e90-cbe4-4945-823a-fe882ed460db
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
@@ -68,5 +67,5 @@ A classe MediaResource representa o conteúdo a ser carregado pela ocorrência M
 
    * Sua instância do MediaPlayer.
 
-      Para obter mais informações, consulte [Carregar um recurso de mídia no MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
+     Para obter mais informações, consulte [Carregar um recurso de mídia no MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
    * A `MediaPlayerItemLoader` Para obter mais informações, consulte [Carregar um recurso de mídia no MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).

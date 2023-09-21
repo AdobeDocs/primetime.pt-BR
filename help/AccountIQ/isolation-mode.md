@@ -1,8 +1,7 @@
 ---
 title: Exibir relatórios no modo de isolamento
 description: Visualizar relatórios no modo de isolamento do Xfinity.
-exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%

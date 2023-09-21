@@ -1,8 +1,7 @@
 ---
 title: Notas de versão do PTAI 22.9.2
 description: As notas de versão do PTAI descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Ad Insertion no ano de 2022.
-exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%

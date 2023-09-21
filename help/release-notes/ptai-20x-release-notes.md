@@ -1,8 +1,7 @@
 ---
 title: Notas de versão do PTAI 20.12.1
 description: As notas de versão do PTAI descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Ad Insertion no ano de 2020.
-exl-id: 47e36e42-b6a0-408c-93da-f63c929396b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -66,9 +65,9 @@ Para obter mais informações ou ativar esse recurso, entre em contato com o rep
 
 * Forneceu suporte para limitar o tempo geral de resolução do anúncio, se os provedores demorarem muito para responder. Para habilitar a limitação, defina o parâmetro de API de inicialização `ptadtimeout` para um valor em milissegundos.
 
-   >[!NOTE]
-   >
-   >Esse tempo limite se aplica somente a solicitações de anúncios, não a solicitações de criação de anúncios.
+  >[!NOTE]
+  >
+  >Esse tempo limite se aplica somente a solicitações de anúncios, não a solicitações de criação de anúncios.
 
 ### Versão 20.9.1
 
@@ -176,7 +175,7 @@ Entre em contato com o Suporte de Adobe para ativar os seguintes novos recursos 
 
 * Melhorias de desempenho:
 
-   * Adição de suporte de cache para manifestos m3u8 de principal/mídia. Esses manifestos agora respondem ao Cache-Control: cabeçalhos públicos e Max-Age, que geralmente podem melhorar o desempenho de início de vídeo.
+   * Adição de suporte de cache para manifestos m3u8 mestre/mídia. Esses manifestos agora respondem ao Cache-Control: cabeçalhos públicos e Max-Age, que geralmente podem melhorar o desempenho de início de vídeo.
 
    * Adição de suporte para forçar a busca de criações https por http, o que também pode melhorar o desempenho da inicialização de vídeo.
 
@@ -195,11 +194,11 @@ Entre em contato com o Suporte de Adobe para ativar os seguintes novos recursos 
 
 * **VMAP com suporte FER para nbc CueFormat**
 
-   Converter dicas do fluxo FER em parâmetros de substituição de linha do tempo FW, quando `ptcueformat=nbc` é usada e o fluxo é um fluxo de VOD com dicas em manifesto e anúncios incorporados.
+  Converter dicas do fluxo FER em parâmetros de substituição de linha do tempo FW, quando `ptcueformat=nbc` é usada e o fluxo é um fluxo de VOD com dicas em manifesto e anúncios incorporados.
 
-* Limpe o campo user-agent no Cabeçalho HTTP antes de encaminhar para provedores de anúncios/CDN de terceiros.
+* Limpe o campo user-agent no cabeçalho HTTP antes de encaminhar para provedores de anúncios/CDN de terceiros.
 
-* Filtre caracteres de controle/não imprimíveis (código ASCII &lt; 32) dos cabeçalhos HTTP do agente do usuário antes de enviar para o Auditude e outros provedores de anúncios, CDNs. O Ad-Call do Auditude usado para falhar esses cabeçalhos inválidos.
+* Filtre caracteres de controle/não imprimíveis (código ASCII &lt; 32) dos cabeçalhos HTTP do agente do usuário antes de enviar para o Auditude e outros provedores de anúncios, CDNs. Auditude Ad-Call usado para falhar para esses cabeçalhos inválidos.
 
 * Remova objetos V1 antigos de grupos do NetStorage para manter a contagem de objetos dentro dos limites seguros do Akamai.
 

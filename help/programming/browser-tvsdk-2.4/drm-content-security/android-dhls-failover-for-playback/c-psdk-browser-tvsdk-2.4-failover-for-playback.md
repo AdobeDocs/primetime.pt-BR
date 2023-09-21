@@ -1,8 +1,7 @@
 ---
 description: A transmissão pela Internet requer uma conexão constante e estável para reproduzir um fluxo de um servidor remoto. No entanto, a variabilidade da conexão de Internet ou da reprodução de streaming de um visualizador significa que a reprodução remota pode não ter a qualidade de mídia reproduzida localmente.
 title: Reprodução e failover
-exl-id: 8316dfb8-3a2e-4057-a3d7-e3d8860e5bd4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 0%

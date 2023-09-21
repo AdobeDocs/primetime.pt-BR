@@ -1,8 +1,7 @@
 ---
 description: A repetição de evento completo (FER) é um ativo de VOD que atua como um ativo ao vivo/DVR, portanto, seu aplicativo deve tomar medidas para garantir que os anúncios sejam colocados corretamente.
 title: Ativar anúncios na repetição completa do evento
-exl-id: d6f7efc9-48f4-4101-a425-c354557cdd4c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%

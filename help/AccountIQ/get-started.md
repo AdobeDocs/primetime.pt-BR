@@ -1,8 +1,7 @@
 ---
 title: Como integrar e começar a usar o Account IQ
 description: Como integrar, pré-requisitos e introdução ao Account IQ.
-exl-id: 840ab081-0073-492f-86b2-ba174ae93256
-source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%

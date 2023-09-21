@@ -1,8 +1,7 @@
 ---
 description: Quando a reprodução atinge um ad break, passa um ad break ou termina em um ad break, o TVSDK define algum comportamento padrão para o posicionamento do indicador de reprodução atual.
 title: Personalizar reprodução com anúncios
-exl-id: 5606c9c6-58ff-42a7-974e-3a445f3d3f28
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%

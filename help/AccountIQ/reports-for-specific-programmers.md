@@ -1,8 +1,7 @@
 ---
 title: Exibir relatórios de compartilhamento de conta para um programador específico
 description: Exibir relatórios de compartilhamento de conta para um programador específico
-exl-id: 34b198e1-dbb9-4486-b688-92780eec0a56
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -22,16 +21,16 @@ Para exibir relatórios no Account IQ, depois de fazer logon no aplicativo como 
 
 * [Uso geral](/help/AccountIQ/general-usage-reports.md)
 
-   ![](assets/specific-mvpd-gen-usage.png)
+  ![](assets/specific-mvpd-gen-usage.png)
 * [Contas compartilhadas](/help/AccountIQ/shared-acc-reports.md)
 
-   ![](assets/specific-mvpd-shared-acc.png)
+  ![](assets/specific-mvpd-shared-acc.png)
 * [Padrões de uso](/help/AccountIQ/usage-patterns.md)
 
-   ![](assets/specific-mvpd-usage-pattern.png)
+  ![](assets/specific-mvpd-usage-pattern.png)
 
 * [Painel](/help/AccountIQ/dashboard.md) (o painel fornece uma visão geral dos gráficos selecionados das diferentes páginas de relatórios).
 
-   ![](assets/specific-mvpd-dashboard.png)
+  ![](assets/specific-mvpd-dashboard.png)
 
 Cada uma dessas páginas refletirá a atividade do segmento selecionado.

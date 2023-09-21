@@ -1,8 +1,7 @@
 ---
 description: Para continuar a emitir licenças para conteúdo que foi empacotado com o Flash Media Rights Management Server (FMRMS) 1.0 ou 1.5, você deve migrar os dados de licença e política DRM do servidor ES do LiveCycle para o novo servidor do cliente baseado no SDK do Adobe Primetime DRM.
 title: Migração do FMRMS 1.0 ou 1.5 para o Adobe Primetime DRM 2.0 ou posterior
-exl-id: 6490f2ad-4863-4b41-9ebd-1de47da4250b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -30,7 +29,6 @@ Para migrar, conclua as seguintes tarefas:
       * A chave de criptografia do conteúdo
 
       Essas informações são necessárias antes de converter os metadados de conteúdo 1.x para o formato de metadados DRM do Primetime. Na implementação de referência, esses dados são armazenados na tabela do banco de dados Licença e são usados por `RefImplMetadataConvReqHandler`. Para obter mais informações, consulte `FMRMSv1RequestHandler` e `FMRMSv1MetadataHandler`.
-
 
 1. Converter políticas de FMRMS no formato DRM Primetime:
 

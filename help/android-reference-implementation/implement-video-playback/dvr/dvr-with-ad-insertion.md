@@ -1,8 +1,7 @@
 ---
 description: Por padrão, um stream ao vivo com suporte a DVR expõe um intervalo pesquisável no qual o visualizador pode pausar e buscar.
 title: DVR com inserção de anúncio
-exl-id: 3471741d-1ae3-4cbe-aa35-4e333aeb83c6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%

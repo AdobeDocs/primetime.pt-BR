@@ -1,8 +1,7 @@
 ---
 description: A transcodificação just-in-time pode injetar metadados cronometrados da ID3 em anúncios criativos para facilitar o rastreamento de anúncios do lado do cliente.
 title: Uso da transcodificação just-in-time para injetar tags de metadados de ID3
-exl-id: 6171223a-71f9-45a2-a3f5-7ede4a9b101a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%

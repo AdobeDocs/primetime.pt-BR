@@ -1,8 +1,7 @@
 ---
 description: Por padrão, ao iniciar a reprodução, a mídia de VOD começa em 0 e a mídia ativa começa no ponto de vida do cliente (MediaPlayer.LIVE_POINT). Você pode substituir o comportamento padrão.
 title: Inserir um fluxo em um horário específico
-exl-id: 98688357-8394-4b62-b117-3ae2c5b0fecb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Para testar sua solução de DRM, você precisa de um aplicativo de vídeo que possa processar a solução de DRM específica com a qual você está trabalhando. Esse player pode ser um player de amostra disponibilizado pelo Adobe ou por seu próprio aplicativo de vídeo baseado em TVSDK.
 title: Reproduzir seu conteúdo protegido
-exl-id: b0e09474-f752-495f-a702-93f288535403
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 0%
@@ -29,15 +28,15 @@ Para testar sua solução de DRM, você precisa de um aplicativo de vídeo que p
 
    * Reprodutor de referência HTML5:
 
-      ```
-      https://ptdemos.com/html5/internal/1_2/2.4_GM/samples/reference/reference_player.html
-      ```
+     ```
+     https://ptdemos.com/html5/internal/1_2/2.4_GM/samples/reference/reference_player.html
+     ```
 
    * Shaka Player:
 
-      ```
-      https://shaka-player-demo.appspot.com
-      ```
+     ```
+     https://shaka-player-demo.appspot.com
+     ```
 
    * Reprodutor TVSDK de exemplo (em desenvolvimento) -
 

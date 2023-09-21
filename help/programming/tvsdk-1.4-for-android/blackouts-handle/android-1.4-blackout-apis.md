@@ -1,8 +1,7 @@
 ---
 description: Você pode lidar com blecautes em fluxos de vídeo ao vivo e fornecer conteúdo alternativo durante um blecaute.
 title: Elementos da API de blecaute
-exl-id: 8e4f1dc3-f2f6-4db9-b9d0-3e79d21032e9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -46,9 +45,9 @@ Você pode usar o seguinte ao implementar uma solução de blecaute no player.
 
 * **BlackoutMetadata** -
 
-   Uma classe de Metadados específica para blecautes.
+  Uma classe de Metadados específica para blecautes.
 
-   Isso permite definir intervalos não pesquisáveis (uma matriz de `TimeRanges`) no TVSDK. O TVSDK verifica esses intervalos sempre que o usuário busca. Se estiver definido e o usuário buscar em um intervalo não pesquisável, o TVSDK forçará o visualizador ao final do intervalo não pesquisável.
+  Isso permite definir intervalos não pesquisáveis (uma matriz de `TimeRanges`) no TVSDK. O TVSDK verifica esses intervalos sempre que o usuário busca. Se estiver definido e o usuário buscar em um intervalo não pesquisável, o TVSDK forçará o visualizador ao final do intervalo não pesquisável.
 
 * **COMECE AQUI PRÓXIMO AdvertisingMetadata** Ativar ou desativar a pré-rolagem em um stream ao vivo configurando `enableLivePreroll` para verdadeiro ou falso. Se for falso, o TVSDK não fará uma chamada explícita do servidor de anúncios para anúncios precedentes à reprodução do conteúdo e, portanto, não reproduzirá o anúncio anterior à reprodução. Isso não afeta os rolos intermediários. O padrão é true.
 

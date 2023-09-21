@@ -1,8 +1,7 @@
 ---
 description: O TVSDK aplica regras de seleção criativa das seguintes maneiras
 title: Aplicação de regras de seleção criativa
-exl-id: 44cb3905-fea9-47b2-9a8f-06a2a8695848
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%

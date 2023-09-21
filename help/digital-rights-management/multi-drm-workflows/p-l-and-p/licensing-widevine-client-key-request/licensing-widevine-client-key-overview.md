@@ -1,8 +1,7 @@
 ---
 description: Para reproduzir o conteúdo DASH resultante do empacotamento de conteúdo, o cliente TVSDK precisará obter a chave de descriptografia do conteúdo transmitida durante o processo de empacotamento no fluxo de trabalho de aquisição de chaves. A chave de descriptografia de conteúdo do cliente geralmente é entregue ao cliente por um servidor de licenças Widevine/PlayReady em resposta a uma ou mais publicações HTTP/HTTPS do cliente.
 title: Visão geral do fluxo de trabalho de Solicitação de chave do cliente
-exl-id: ae600cbd-415b-441a-bf01-f259993071f2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%

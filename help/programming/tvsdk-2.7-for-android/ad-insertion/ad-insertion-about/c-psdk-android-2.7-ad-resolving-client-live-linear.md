@@ -1,8 +1,7 @@
 ---
 description: Para conteúdo dinâmico/linear, o TVSDK substitui uma parte do conteúdo do fluxo principal por um ad break com a mesma duração, para que a duração da linha do tempo permaneça a mesma.
 title: Resolver e inserir anúncio dinâmico/linear
-exl-id: 2fe55c07-54d2-4a8a-a4e1-9e5ccae17ff9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%

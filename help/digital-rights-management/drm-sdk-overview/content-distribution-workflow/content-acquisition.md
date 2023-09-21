@@ -1,8 +1,7 @@
 ---
 description: Quando um consumidor adquire um arquivo de conteúdo protegido de um site ou CDN, o consumidor também deve adquirir uma licença que contenha uma chave para descriptografar o vídeo antes que ele possa ser reproduzido. As etapas a seguir ilustram um fluxo de trabalho comum para saber como o conteúdo protegido é acessado por um computador que executa o Flash Player ou o Adobe AIR
 title: Aquisição de conteúdo
-exl-id: 92d51928-6021-4284-9310-4e6ce758bffc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%

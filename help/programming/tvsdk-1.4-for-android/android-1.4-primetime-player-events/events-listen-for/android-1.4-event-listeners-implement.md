@@ -1,8 +1,7 @@
 ---
 description: Os manipuladores de eventos permitem que o TVSDK responda aos eventos.
 title: Implementar ouvintes e retornos de chamada de evento
-exl-id: eda5cd4e-4ee8-4b37-a179-242e8697f61f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
@@ -25,13 +24,13 @@ Para obter uma lista completa dos eventos de análise de vídeo, consulte Rastre
 
    * **Eventos obrigatórios**: Analise todos os eventos de reprodução.
 
-      >[!IMPORTANT]
-      >
-      >O evento de reprodução `onStateChanged` O fornece o estado do player, incluindo erros. Qualquer um dos estados pode afetar a próxima etapa do reprodutor
+     >[!IMPORTANT]
+     >
+     >O evento de reprodução `onStateChanged` O fornece o estado do player, incluindo erros. Qualquer um dos estados pode afetar a próxima etapa do reprodutor
 
    * **Outros eventos**: opcional, dependendo do aplicativo.
 
-      Por exemplo, se você incorporar publicidade em sua reprodução, implemente os retornos de chamada AdPlaybackEventListener.
+     Por exemplo, se você incorporar publicidade em sua reprodução, implemente os retornos de chamada AdPlaybackEventListener.
 
 1. Implemente ouvintes de eventos para cada evento.
 

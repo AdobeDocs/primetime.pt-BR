@@ -2,8 +2,7 @@
 title: Visão geral
 description: Visão geral
 copied-description: true
-exl-id: 866b3147-c28b-41b0-8653-06ba867354c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%
@@ -40,7 +39,7 @@ java -jar AdobePackager.jar
 * `source` - O nome do arquivo que você deseja criptografar.
 * `dest` - O nome do arquivo criptografado resultante.
 
-   Se você especificar um diretório, o arquivo criptografado será salvo automaticamente no diretório especificado com o mesmo nome de arquivo especificado como o arquivo de origem. No entanto, não é possível especificar um diretório de destino que inclua o arquivo de origem.
+  Se você especificar um diretório, o arquivo criptografado será salvo automaticamente no diretório especificado com o mesmo nome de arquivo especificado como o arquivo de origem. No entanto, não é possível especificar um diretório de destino que inclua o arquivo de origem.
 
 **Compactar vários arquivos com a mesma chave** (para suporte a taxa de vários bits):
 

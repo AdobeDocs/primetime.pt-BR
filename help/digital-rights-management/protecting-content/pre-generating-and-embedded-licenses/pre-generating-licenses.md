@@ -1,8 +1,7 @@
 ---
 description: Se você usa o Adobe Primetime DRM Professional, é possível pré-gerar licenças e incorporar licenças ao conteúdo. Esse recurso pode ser combinado com o Encadeamento de licenças aprimorado, de modo que uma licença do Leaf seja pré-gerada e incorporada ao conteúdo, e o cliente possa solicitar uma licença do Root (vinculada a uma máquina ou domínio) de um servidor de licenças. Como alternativa, os aplicativos clientes podem implementar um fluxo de trabalho em que o dispositivo pré-registra em um servidor, o servidor pré-gera licenças vinculadas a esse dispositivo e o cliente recupera suas licenças de um servidor Web HTTP simples.
 title: Licenças pré-geradas
-exl-id: 6ced7dde-b4bb-470d-bdae-3042f5577b67
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 0%

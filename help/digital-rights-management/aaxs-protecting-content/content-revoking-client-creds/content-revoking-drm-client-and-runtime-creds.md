@@ -2,8 +2,7 @@
 title: Revogação de credenciais de cliente e tempo de execução DRM
 description: Revogação de credenciais de cliente e tempo de execução DRM
 copied-description: true
-exl-id: f39d6523-9215-49ec-bb3b-e60fe6690dca
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%

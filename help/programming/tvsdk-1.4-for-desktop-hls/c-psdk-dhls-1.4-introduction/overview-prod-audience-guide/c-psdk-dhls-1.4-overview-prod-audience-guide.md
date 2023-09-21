@@ -1,8 +1,7 @@
 ---
 description: Este guia fornece informações sobre como desenvolver aplicativos de reprodutor de vídeo usando o TVSDK para HLS de desktop, que é implementado no ActionScript.
 title: Visão geral
-exl-id: 02efcef8-c4ac-4ff9-bf3b-4ca6553f7617
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: O TVSDK lida com erros de intervalo de tempo de acordo com o problema específico mesclando ou reorganizando os intervalos de tempo definidos incorretamente.
 title: Tratamento de erros de exclusão e substituição de anúncios
-exl-id: 0d70bb63-bdc5-4741-81db-1408216234c2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -29,10 +28,10 @@ O TVSDK lida com conflitos do modo de sinalização com metadados de anúncio da
 
 * Se o modo de sinalização de anúncios entrar em conflito com os metadados de intervalo de tempo, os metadados de intervalo de tempo sempre terão prioridade.
 
-   Por exemplo, se o modo de sinalização de anúncios estiver definido como mapa do servidor ou dicas de manifesto e também houver intervalos de tempo MARCAR nos metadados do anúncio, o comportamento resultante será que os intervalos estão marcados e nenhum anúncio foi inserido.
+  Por exemplo, se o modo de sinalização de anúncios estiver definido como mapa do servidor ou dicas de manifesto e também houver intervalos de tempo MARCAR nos metadados do anúncio, o comportamento resultante será que os intervalos estão marcados e nenhum anúncio foi inserido.
 * Para intervalos REPLACE, se o modo de sinalização estiver definido como o mapa do servidor ou as dicas do manifesto, os intervalos serão substituídos conforme especificado nos intervalos REPLACE e não haverá inserção de anúncio por meio do mapa do servidor ou das dicas do manifesto.
 
-   Para obter mais informações, consulte *Comportamentos de combinação de modo de sinalização/metadados* tabela em [Efeito na inserção e exclusão de anúncios do modo de sinalização de anúncios...](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android).
+  Para obter mais informações, consulte *Comportamentos de combinação de modo de sinalização/metadados* tabela em [Efeito na inserção e exclusão de anúncios do modo de sinalização de anúncios...](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android).
 
 Lembre-se do seguinte:
 

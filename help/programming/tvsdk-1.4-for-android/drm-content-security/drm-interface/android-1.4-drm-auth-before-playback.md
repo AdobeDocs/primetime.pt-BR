@@ -1,8 +1,7 @@
 ---
 description: Quando os metadados de DRM de um vídeo forem separados do fluxo de mídia, execute a autenticação antes de iniciar a reprodução.
 title: Autenticação DRM antes da reprodução
-exl-id: da81ec38-ea77-4fcd-a6e4-5804465385cb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%

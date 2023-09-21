@@ -2,8 +2,7 @@
 title: Consumir CRLs geradas localmente
 description: Consumir CRLs geradas localmente
 copied-description: true
-exl-id: d96418d0-8fd3-4f6d-8480-191fe540080a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
@@ -16,8 +15,8 @@ Para consumir listas de certificados revogados (CRLs) geradas localmente e lista
 
 * Chame `RevocationList.verifySignature` para verificar a assinatura antes de fornecer a RevocationList a qualquer API.
 
-   Para obter mais informações, consulte `RevocationListFactory` no *Referência da API de acesso do Adobe*.
+  Para obter mais informações, consulte `RevocationListFactory` no *Referência da API de acesso do Adobe*.
 
 * Chame `PolicyUpdateList.verifySignature`para verificar a assinatura antes de fornecer a `PolicyUpdateList` a qualquer API.
 
-   Para obter mais informações, consulte `PolicyUpdateList` no *Referência da API de acesso do Adobe*.
+  Para obter mais informações, consulte `PolicyUpdateList` no *Referência da API de acesso do Adobe*.

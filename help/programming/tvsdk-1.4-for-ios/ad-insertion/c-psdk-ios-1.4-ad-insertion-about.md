@@ -1,8 +1,7 @@
 ---
 description: A inserção de anúncios soluciona anúncios de VOD (Video On Demand, vídeo sob demanda), de transmissão ao vivo e de transmissão linear com rastreamento de anúncios e reprodução de anúncio. O TVSDK faz as solicitações necessárias ao servidor de anúncios, recebe informações sobre os anúncios do conteúdo especificado e coloca os anúncios no conteúdo em fases.
 title: Inserir anúncios
-exl-id: 4e5a4fe2-6887-48d0-b335-f3e99559dca8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%
@@ -65,7 +64,7 @@ Estes são alguns exemplos de um retorno de ad break antecipado:
 
 * A duração do ad break em determinados eventos esportivos.
 
-   Embora uma duração padrão seja fornecida, se o jogo for retomado antes da interrupção terminar, o ad break deve ser encerrado.
+  Embora uma duração padrão seja fornecida, se o jogo for retomado antes da interrupção terminar, o ad break deve ser encerrado.
 * Um sinal de emergência durante um ad break em um stream ao vivo.
 
 A capacidade de sair de um ad break antecipadamente é identificada por meio de uma tag personalizada no manifesto conhecido como splice ou cue-in tag. O TVSDK permite que o aplicativo assine essas tags de splice para fornecer uma oportunidade de splice.
@@ -96,8 +95,7 @@ A capacidade de sair de um ad break antecipadamente é identificada por meio de 
       >
       >O código a seguir presume que o aplicativo tenha uma implementação para `isCueInOpportunity` método.
       >
-      >
-      ```
+      >```
       >- (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
       >{ 
       >       if ([self isCueInOpportunity:timedMetadata]) 
@@ -110,6 +108,7 @@ A capacidade de sair de um ad break antecipadamente é identificada por meio de 
       >       } 
       >}
       >```
+      >
 
    1. Registrar o resolvedor de oportunidades estendidas no `PTDefaultMediaPlayerClientFactory` instância.
 

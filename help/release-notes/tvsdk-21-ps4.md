@@ -4,8 +4,7 @@ description: As Notas de versão do TVSDK 2.1 para PlayStation 4 descrevem os re
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 32af3fe4-c730-41f6-a558-987bd14c9bae
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -23,12 +22,10 @@ Aqui estão os problemas resolvidos para o TVSDK 2.1 para PlayStation 4:
 **Versão 2.1.0.638**
 
 * **PTPLAY-10439:**
-Quando o link de anúncio do invólucro do VMAP foi interrompido, o player ficava preso no estado Preparação (não estava enviando 
-`onComplete` para o chamador).
+Quando o link de anúncio do invólucro do VMAP foi interrompido, o player ficava preso no estado Preparação (não estava enviando `onComplete` para o chamador).
 
 * **PTPLAY-10179:**
-
-   `creativeRepackaging` e `fallbackOnInvalidCreative` Os valores de agora estão desativados por padrão. Além disso, quando o `creativeRepackaging` sinalizador foi definido, mas não `creativeRepackaging` foi fornecido o formato, a variável `onRepackagingComplete` O estava sendo chamado quantas vezes havia anúncios no ad break, fazendo com que os ad breaks fossem criados várias vezes.
+  `creativeRepackaging` e `fallbackOnInvalidCreative` Os valores de agora estão desativados por padrão. Além disso, quando o `creativeRepackaging` sinalizador foi definido, mas não `creativeRepackaging` foi fornecido o formato, a variável `onRepackagingComplete` O estava sendo chamado quantas vezes havia anúncios no ad break, fazendo com que os ad breaks fossem criados várias vezes.
 
 * **Zendesk #10304**: a variável de ativação/desativação da veiculação de anúncios não foi inicializada. Agora inicializamos a variável de `DataSetEntry's` ator.
 
@@ -39,14 +36,12 @@ Ao entrar no modo de execução de truque, voltar para o modo de reprodução no
 * **PTPLAY-9552:**
 Após analisar os arquivos XML de resposta, o código de erro 1108 agora é enviado por ping sempre que não há anúncios presentes.
 * **PTPLAY-9551:**
-Quando não há ad break após o processamento da Auditoria, o CRS chama 
-**onPrefetchComplete** que diminui o groupCount. Como não há ad break, a variável **groupCount** é 0 e decrementado por 1. Anteriormente, o **groupCount** foi **uint32_t** por causa do qual costumava mudar para o valor máximo. Isso é agora **int32_t**.
+Quando não há ad break após o processamento do Auditude, o CRS chama **onPrefetchComplete** que diminui o groupCount. Como não há ad break, a variável **groupCount** é 0 e decrementado por 1. Anteriormente, o **groupCount** foi **uint32_t** por causa do qual costumava mudar para o valor máximo. Isso é agora **int32_t**.
 
 **Versão 2.1.0.621**
 
 * **Zendesk #4555**
-Problemas de memória instantâneos erros de carregamento principais - 
-`MediaItemLoader` Correção de falha que ocorria ao lançar `mediaitemloader`
+Problemas de memória instantâneos erros de carregamento principais - `MediaItemLoader` Correção de falha que ocorria ao lançar `mediaitemloader`
 
 * **Zendesk #17223**
 2.x CSAI: nem todos os URLs de rastreamento de anúncios são acionados
@@ -55,31 +50,27 @@ Problemas de memória instantâneos erros de carregamento principais -
 * **Zendesk #17224**
 O agente do usuário PS4 move as informações do primetime até o final da sequência de caracteres do usuário
 * **Zendesk #17226**
-2.x CSAI: nem todos os anúncios foram compilados.
-\
-   A correção é para indicar que a linha do tempo foi alterada devido a operações insertBy ou eraseBy e o período muda de acordo.
+2.x CSAI: nem todos os anúncios foram compilados.\
+  A correção é para indicar que a linha do tempo foi alterada devido a operações insertBy ou eraseBy e o período muda de acordo.
 
 * **Zendesk #17284**
-   [Todas as plataformas] As legendas ocultas não são exibidas.\
-   HLS - suporte para o `EXT-X-MEDIA-TIME` para arquivos de legenda VTT.
+  [Todas as plataformas] As legendas ocultas não são exibidas.\
+  HLS - suporte para o `EXT-X-MEDIA-TIME` para arquivos de legenda VTT.
 
 * **Zendesk #17889**
-Reprodução &quot;Látea&quot; no PS4
-\
-   deslocamento correto aplicado (para conversão de cores)
+Reprodução &quot;Látea&quot; no PS4\
+  deslocamento correto aplicado (para conversão de cores)
 
 * **Zendesk #17954**
-Lógica de fallback de anúncio + manipulação vazia vasta
-\
-   Correção do problema se um dos invólucros Vast estivesse vazio, o analisador Vast era usado para continuar processando o invólucro.
+Lógica de fallback de anúncio + manipulação vazia vasta\
+  Correção do problema se um dos invólucros Vast estivesse vazio, o analisador Vast era usado para continuar processando o invólucro.
 
 * **Zendesk #17807**
 Não é possível passar do espaço vazio Igual ao Zendesk #3103
 
 * **Zendesk #17865**
-Lógica de fallback no PS4 e XBox One
-\
-   Igual ao Zendesk #3103
+Lógica de fallback no PS4 e XBox One\
+  Igual ao Zendesk #3103
 
 **Versão 2.1.0.591**
 
@@ -111,9 +102,8 @@ PS4 CSAI: Alterar a sequência padrão user-agent para todas as chamadas relacio
 O TVSDK é compatível com o Playstation SDK 2.5 O TVSDK agora é integrado ao SDK do Playstation 2.5.
 
 * **Zendesk #4093**
-Pares de valores-chave targetingInfo na solicitação de anúncios Pt.
-\
-   Um caractere de nova linha que separa os pares chave/valor foi adicionado.
+Pares de valores-chave targetingInfo na solicitação de anúncios Pt.\
+  Um caractere de nova linha que separa os pares chave/valor foi adicionado.
 
 ## Recursos compatíveis {#supported-features}
 

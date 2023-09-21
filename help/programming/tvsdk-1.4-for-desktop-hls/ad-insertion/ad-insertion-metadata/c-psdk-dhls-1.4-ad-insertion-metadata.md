@@ -1,8 +1,7 @@
 ---
 description: Para permitir que o resolvedor de anúncios funcione, os provedores de anúncios, como o Adobe Primetime ad decisioning, exigem valores de configuração para habilitar sua conexão com o provedor.
 title: Adicionar metadados de inserção
-exl-id: 83c0fd25-dbc3-4529-b81a-16ff78012c80
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%
@@ -17,13 +16,13 @@ O TVSDK inclui a biblioteca de decisão de anúncios do Primetime. Para que seu 
 
 * `mediaID`, que é um identificador exclusivo para o vídeo a ser reproduzido.
 
-   O editor atribui a mediaID ao enviar conteúdo de vídeo e informações de anúncio para o servidor do Adobe Primetime Ad Decisioning. Essa ID é usada pela decisão de anúncio do Primetime para recuperar informações de anúncio relacionadas ao vídeo do servidor.
+  O editor atribui a mediaID ao enviar conteúdo de vídeo e informações de anúncio para o servidor do Adobe Primetime Ad Decisioning. Essa ID é usada pela decisão de anúncio do Primetime para recuperar informações de anúncio relacionadas ao vídeo do servidor.
 
 * Seu `zoneID`, que é atribuído pelo Adobe, identifica sua empresa ou site.
 * O domínio do servidor de publicidade atribuído.
 * Outros parâmetros de direcionamento.
 
-   Você pode incluir esses parâmetros dependendo das suas necessidades e das necessidades do provedor de anúncios.
+  Você pode incluir esses parâmetros dependendo das suas necessidades e das necessidades do provedor de anúncios.
 
 ## Configurar metadados de inserção de anúncio {#set-up-ad-insertion-metadata}
 
@@ -31,7 +30,7 @@ Use a classe auxiliar AuditudeSettings, que estende a classe MetadataNode, para 
 
 >[!TIP]
 >
->O Adobe Primetime ad decisioning era anteriormente conhecido como Auditude.
+>O Adobe Primetime ad decisioning era conhecido anteriormente como Auditude.
 
 Os metadados de publicidade estão na `MediaResource.metadata` propriedade. Ao iniciar a reprodução de um novo vídeo, seu aplicativo é responsável por definir os metadados de publicidade corretos.
 

@@ -1,8 +1,7 @@
 ---
 title: Como migrar a página de logon do MVPD do iFrame para o pop-up
 description: Como migrar a página de logon do MVPD do iFrame para o pop-up
-exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -232,4 +231,3 @@ function checkClosed() {
 >* O código de amostra só será executado corretamente de um domínio da lista de permissões associado à ID do solicitante usada.
 >* Como o código inteiro está disponível para download, o código apresentado nesta nota técnica foi truncado. Para obter uma amostra completa, consulte **Exemplo de iFrame JS vs Popup**.
 >* As bibliotecas externas de JavaScript foram vinculadas do [Serviços hospedados Google](https://developers.google.com/speed/libraries/).
-

@@ -1,8 +1,7 @@
 ---
 description: Essas alterações no TVSDK oferecem suporte à exclusão e substituição de anúncios.
 title: Alterações na exclusão de anúncios e na API de substituição
-exl-id: 3cf63353-741b-41f4-93fd-609b69f7c3af
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Essas alterações no TVSDK oferecem suporte à exclusão e substituição de an
 
 * Adicionado `ReplaceTimeRange()` método
 
-   Estende `TimeRange` para ter uma `replacementDuration` propriedade. Nos processos MARK e DELETE, `replacementDuration` é 0.
+  Estende `TimeRange` para ter uma `replacementDuration` propriedade. Nos processos MARK e DELETE, `replacementDuration` é 0.
 
 * `TimeRangeCollection`
 
@@ -55,11 +54,11 @@ Essas alterações no TVSDK oferecem suporte à exclusão e substituição de an
    * `doRetrieveGenerators()`
 
       * Adicionado `CustomRangesOpportunityGenerator` para quando os metadados contêm intervalos personalizados
+
    * `doRetrieveResolvers()`
 
       * Adicionar `CustomRangeResolver` para quando intervalos personalizados de DELETE e REPLACE estiverem presentes nos metadados
       * Movido `CustomAdMarkerResolver` antes de `AuditudeResolver`
-
 
 * Adicionado `CustomRangeOpportunityGenerator`
 
@@ -70,11 +69,11 @@ Essas alterações no TVSDK oferecem suporte à exclusão e substituição de an
 
    * Adicionado `createCustomRangeOpportunities` para criar todas as oportunidades
 
-      MARK - Uma oportunidade para cada intervalo de marcas válido de `PlacementType.CUSTOM_RANGE` e `PlacementMode.MARK`
+     MARK - Uma oportunidade para cada intervalo de marcas válido de `PlacementType.CUSTOM_RANGE` e `PlacementMode.MARK`
 
-      DELETE - Uma oportunidade para cada intervalo de exclusão válido de `PlacementType.CUSTOM_RANGE` e `PlacementMode.DELETE`
+     DELETE - Uma oportunidade para cada intervalo de exclusão válido de `PlacementType.CUSTOM_RANGE` e `PlacementMode.DELETE`
 
-      REPLACE - Duas oportunidades para cada intervalo de substituição válido:
+     REPLACE - Duas oportunidades para cada intervalo de substituição válido:
 
       1. Uma oportunidade de excluir intervalo de `PlacementType.CUSTOM_RANGE` e `PlacementMode.DELETE`.
 

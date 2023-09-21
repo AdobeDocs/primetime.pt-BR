@@ -1,8 +1,7 @@
 ---
 description: É possível inserir anúncios em VOD e conteúdo dinâmico/linear usando a interface de decisão de anúncios do Adobe Primetime. O Primetime Ad Decisioning trabalha com o TVSDK para identificar oportunidades de anúncios, resolver anúncios e inserir anúncios resolvidos em seus fluxos de vídeo.
 title: Exigências para publicidade
-exl-id: 3ca82cc5-ed64-458e-9a8d-475a84512478
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%

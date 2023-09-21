@@ -1,8 +1,7 @@
 ---
 description: Quando o TVSDK do navegador solicita um anúncio que não está no servidor de anúncios principal, o reprodutor precisa solicitar o anúncio do servidor secundário. O Modelo de veiculação de anúncios de vídeo (VAST) define o padrão de comunicação entre servidores de publicidade e players de vídeo e é a resposta enviada pelo servidor de publicidade secundário quando o anúncio é solicitado.
 title: Anúncios VAST
-exl-id: b0ebade5-b5da-413d-84f4-abebac579f45
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Os seguintes elementos são compatíveis:
 * `AdTitle`
 * `Impression`
 
-   Os seguintes elementos opcionais são compatíveis:
+  Os seguintes elementos opcionais são compatíveis:
 
 * `Description`
 * `Survey`
@@ -56,17 +55,17 @@ Veja a seguir mais informações sobre os tipos de anúncios:
 
       * `MediaFile`
 
-         >[!TIP]
-         >
-         >Neste elemento, a variável `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`, e `type` atributos são compatíveis.
+        >[!TIP]
+        >
+        >Neste elemento, a variável `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`, e `type` atributos são compatíveis.
 
 * **Anúncios não lineares** Os seguintes elementos são compatíveis:
 
    * `Non-linear`
 
-      >[!TIP]
-      >
-      >Neste elemento, a variável `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`, e `minSuggestedDuration` atributos são compatíveis.
+     >[!TIP]
+     >
+     >Neste elemento, a variável `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`, e `minSuggestedDuration` atributos são compatíveis.
 
       * `StaticResource`
       * `IFrameResource`
@@ -78,9 +77,9 @@ Veja a seguir mais informações sobre os tipos de anúncios:
 
    * `Companion`
 
-      >[!TIP]
-      >
-      >Neste elemento, a variável `id`, `width`, `height`, `apiFramework`, `expandedWidth`, e `expandedHeight` atributos são compatíveis.
+     >[!TIP]
+     >
+     >Neste elemento, a variável `id`, `width`, `height`, `apiFramework`, `expandedWidth`, e `expandedHeight` atributos são compatíveis.
 
       * `StaticResource`
       * `IFrameResource`
@@ -91,6 +90,6 @@ Veja a seguir mais informações sobre os tipos de anúncios:
 
 >[!TIP]
 >
->Somente as extensões específicas do Auditude são compatíveis.
+>Somente as extensões específicas do Auditude são suportadas.
 
 * `Extension`

@@ -1,8 +1,7 @@
 ---
 description: Você pode usar o TVSDK para recuperar informações sobre a posição do player na mídia e exibi-la na barra de busca.
 title: Exibir a duração, a hora atual e o tempo restante do vídeo
-exl-id: d9832f19-c2d1-413a-b094-091052912c96
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -34,7 +33,7 @@ Você pode usar o TVSDK para recuperar informações sobre a posição do player
       * Para VOD, o intervalo sempre começa com zero e o valor final é igual à soma da duração do conteúdo principal e das durações do conteúdo adicional no fluxo (anúncios).
       * Para um ativo linear/em tempo real, o intervalo representa o intervalo da janela de reprodução. Esse intervalo muda durante a reprodução.
 
-         O TVSDK chama o `ITEM_Updated` retorno de chamada para indicar que o item de mídia foi atualizado e que seus atributos, incluindo o intervalo de reprodução, foram atualizados.
+        O TVSDK chama o `ITEM_Updated` retorno de chamada para indicar que o item de mídia foi atualizado e que seus atributos, incluindo o intervalo de reprodução, foram atualizados.
 
 1. Usar os métodos disponíveis em `MediaPlayer` e no `SeekBar` no SDK do Android para configurar os parâmetros da barra de busca.
 

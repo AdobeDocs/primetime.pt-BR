@@ -1,8 +1,7 @@
 ---
 title: Visão geral do SSO do Roku
 description: Sobre o Roku SSO
-exl-id: 77b154bc-c09f-49d4-b1af-cc33bc6dd22b
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -41,23 +40,27 @@ Para detalhes específicos sobre o formato dos cabeçalhos necessários, entre e
 
 Os programadores devem verificar se suas implementações atuais baseadas na API REST sem cliente do Adobe não impedem o SSO de plataforma do Roku. Veja abaixo uma lista de possíveis problemas e como eles devem ser resolvidos.
 
-| Problema | Causa possível | Soluções possíveis | |-|-|-| |Nenhum cabeçalho SSO do Roku enviado para o Adobe|Usando HTTP em vez de HTTPS para chamadas para domínios de autenticação do Adobe Primetime|Usar HTTPS| |Logotipo do MVPD não mostrado/não atualizado para tokens de SSO|A interface do usuário depende do armazenamento local|Os aplicativos devem atualizar a interface do usuário (e o armazenamento local, se necessário) após verificar a autenticação| |Logout acionado sem AuthZ|Design do aplicativo|O aplicativo deve ser atualizado para nunca realizar o logout em segundo plano|
+| Problema | Causa possível | Possíveis soluções |
+|-|-|-|
+| Nenhum cabeçalho de SSO Roku enviado para o Adobe | Usar HTTP em vez de HTTPS para chamadas para domínios de autenticação da Adobe Primetime | Usar HTTPS |
+| Logotipo do MVPD não mostrado/não atualizado para tokens de SSO | A interface do usuário depende do armazenamento local | Os aplicativos devem atualizar a interface do usuário (e o armazenamento local, se necessário) após verificar a autenticação |
+| Logout acionado sem AuthZ | Design do aplicativo | O aplicativo deve ser atualizado para nunca realizar logout em segundo plano |
 
 ## Perguntas frequentes {#faq}
 
 * **Como funcionará o SSO?**
 
-   O SSO funcionará em todos os aplicativos do Programador alimentados pela autenticação do Adobe Primetime em todos os dispositivos Roku associados ao mesmo usuário do Roku.
+  O SSO funcionará em todos os aplicativos do Programador alimentados pela autenticação do Adobe Primetime em todos os dispositivos Roku associados ao mesmo usuário do Roku.
 Nem todos os MVPDs permitirão o Roku SSO.
 
 * **Haverá alguma alteração nos TTLs de autenticação?**
 
-   O primeiro token de autenticação válido será usado para executar o SSO e, nesse caso, todos os outros aplicativos que serão autenticados por meio do SSO usarão o mesmo TTL até expirar. Assim, ao navegar de um aplicativo para outro, o segundo aplicativo compartilhará o TTL do primeiro aplicativo autenticado.
+  O primeiro token de autenticação válido será usado para executar o SSO e, nesse caso, todos os outros aplicativos que serão autenticados por meio do SSO usarão o mesmo TTL até expirar. Assim, ao navegar de um aplicativo para outro, o segundo aplicativo compartilhará o TTL do primeiro aplicativo autenticado.
 
 * **Outra funcionalidade de Adobe funcionará como antes?**
 
-   Toda a funcionalidade de autenticação do Primetime funcionará como antes.
+  Toda a funcionalidade de autenticação do Primetime funcionará como antes.
 
 * **Existe um processo de aceitação/recusa do programador que se beneficia do SSO na plataforma Roku?**
 
-   Essa será uma alteração de configuração no Painel Adobe TVE. Cada programador pode ativar/desativar o SSO na plataforma Roku para integrações específicas.
+  Essa será uma alteração de configuração no Painel Adobe TVE. Cada programador pode ativar/desativar o SSO na plataforma Roku para integrações específicas.

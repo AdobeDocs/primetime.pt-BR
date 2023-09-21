@@ -1,8 +1,7 @@
 ---
 description: O objeto MediaPlayer representa o reprodutor de mídia. Um MediaPlayerItem representa o áudio ou o vídeo no player.
 title: Sobre a classe MediaPlayerItem
-exl-id: 07105fab-0338-4410-93f3-e337d46d9de5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%

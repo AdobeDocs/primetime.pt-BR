@@ -1,8 +1,7 @@
 ---
 description: Você pode personalizar ou substituir comportamentos de anúncios.
 title: Configurar reprodução personalizada
-exl-id: 28c28589-9e94-40de-b921-1bffc0392c29
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -18,11 +17,11 @@ Para personalizar comportamentos de anúncios, siga um destes procedimentos:
 
 * Implementar o `AdPolicySelector` e todos os seus métodos.
 
-   Essa opção é recomendada se você precisar substituir **all** os comportamentos de anúncio padrão.
+  Essa opção é recomendada se você precisar substituir **all** os comportamentos de anúncio padrão.
 
 * Estenda o `DefaultAdPolicySelector` e fornecem implementações somente para os comportamentos que exigem personalização.
 
-   Essa opção é recomendada se você precisar substituir apenas o **alguns** dos comportamentos padrão.
+  Essa opção é recomendada se você precisar substituir apenas o **alguns** dos comportamentos padrão.
 
 Para ambas as opções, conclua as seguintes tarefas:
 

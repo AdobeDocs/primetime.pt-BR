@@ -1,8 +1,7 @@
 ---
 description: Esta tabela fornece informações detalhadas sobre as notificações de Otimização de Receita.
 title: Código de otimização de RECEITA
-exl-id: 3657ba70-ec35-495b-ae7b-4198429bdf6a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%

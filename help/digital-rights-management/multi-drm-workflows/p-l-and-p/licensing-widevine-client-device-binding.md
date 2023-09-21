@@ -1,8 +1,7 @@
 ---
 description: Em alguns casos, talvez você queira impedir que os usuários finais reproduzam conteúdo em vários dispositivos quando o conteúdo for comprado ou alugado. Se o cliente estiver usando o Expressplay, isso poderá ser feito usando as APIs do Expressplay para vincular o token Expressplay do usuário à máquina do usuário.
 title: Vinculação de dispositivo
-exl-id: 96ead794-e3eb-4059-91d3-a2c351a17ea3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -26,6 +25,6 @@ Você pode usar as APIs da seguinte maneira.
 
    * Forneça esse token ao usuário.
 
-      Esse processo gera um token para o conteúdo vinculado ao device_id do usuário. Quando o computador do usuário enviar uma solicitação de licença com esse token, o back-end do Expressplay verificará a device_id do token com a device_id da solicitação de licença.
+     Esse processo gera um token para o conteúdo vinculado ao device_id do usuário. Quando o computador do usuário enviar uma solicitação de licença com esse token, o back-end do Expressplay verificará a device_id do token com a device_id da solicitação de licença.
 
-      Um exemplo de servidor de direitos do Express implementa esse fluxo de trabalho.
+     Um exemplo de servidor de direitos do Express implementa esse fluxo de trabalho.

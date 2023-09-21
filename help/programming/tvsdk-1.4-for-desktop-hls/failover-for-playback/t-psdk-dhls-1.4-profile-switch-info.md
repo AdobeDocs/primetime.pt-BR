@@ -1,8 +1,7 @@
 ---
 description: Quando o reprodutor de mídia alterna seu perfil atual para um novo perfil, você pode recuperar informações sobre o switch, incluindo quando ele foi alternado, informações de largura e altura ou por que uma taxa de bits diferente foi usada.
 title: Obter informações sobre a troca de perfil
-exl-id: b46909fe-666a-4730-8922-15c3eb7a1cba
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
@@ -22,7 +21,7 @@ Quando o reprodutor de mídia alterna seu perfil atual para um novo perfil, voc�
    * `time`: o horário de fluxo em que a opção ocorreu.
    * `description`: descrição textual do motivo de uma alteração na taxa de bits, como uma cadeia de caracteres de pares de chave/valor separados por ponto-e-vírgula. Inclui no máximo um `Reason` e um `Bitrate`. Se as informações não estiverem disponíveis ou a taxa de bits não for alterada, essa string estará vazia.
 
-      <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
+     <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
        <thead> 
          <tr> 
          <th colname="col1" class="entry"> Nome da chave </th> 
@@ -51,20 +50,20 @@ Quando o reprodutor de mídia alterna seu perfil atual para um novo perfil, voc�
        </tbody> 
        </table>
 
-      Estes são alguns exemplos de `description` strings:
+     Estes são alguns exemplos de `description` strings:
 
-      ```
-      "Bitrate::=up;Reason::=Network Adaptation;" 
-      
-      "Bitrate::=down;Reason::=Failover;"
-      ```
+     ```
+     "Bitrate::=up;Reason::=Network Adaptation;" 
+     
+     "Bitrate::=down;Reason::=Failover;"
+     ```
 
    * `width`: Número inteiro que indica a largura em pixels.
    * `height`: Número inteiro que indica a altura em pixels.
 
-      >[!NOTE]
-      >
-      >Os dados de largura e altura só estão disponíveis quando estão incluídos na variável `RESOLUTION` no manifesto M3U8. Se as informações não estiverem incluídas no M3U8, as propriedades width e height serão definidas como 0, pois não farão parte das informações do perfil.
+     >[!NOTE]
+     >
+     >Os dados de largura e altura só estão disponíveis quando estão incluídos na variável `RESOLUTION` no manifesto M3U8. Se as informações não estiverem incluídas no M3U8, as propriedades width e height serão definidas como 0, pois não farão parte das informações do perfil.
 
 <!--<a id="example_A713D420AE2E4E3CB7B78C6BC732BE90"></a>-->
 

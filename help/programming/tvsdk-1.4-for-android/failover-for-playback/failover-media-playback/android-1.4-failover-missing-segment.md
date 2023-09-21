@@ -1,8 +1,7 @@
 ---
 description: Quando um segmento está ausente, por exemplo, quando um determinado segmento não é baixado, o tenta se recuperar por meio de várias tentativas de failover. Se não conseguir se recuperar, emitirá um erro.
 title: Failover de segmento ausente
-exl-id: e941008a-99a5-4fff-ac88-133abcf9380d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Para mídia ao vivo e VOD, o TVSDK do navegador inicia a reprodução baixando a lista de reprodução associada à taxa de bits de resolução média e baixando os segmentos da mídia de taxa de bits de resolução média definida pela lista de reprodução.
 title: Reprodução de mídia
-exl-id: 56033ca2-8a63-4a0d-ac7d-bf208273a238
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%

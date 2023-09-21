@@ -4,8 +4,7 @@ description: O TVSDK 2.5 oferece vários benefícios em relação à versão 1.4
 contentOwner: vishgupt
 products: SG_PRIMETIME
 topic-tags: migration
-exl-id: 3b7f8355-ebea-4322-aef4-5393308391b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2323'
 ht-degree: 0%
@@ -121,7 +120,7 @@ As classes a seguir são removidas e não têm equivalentes.
 * `LogFactory`
 * `NullLogger`
 
-As seis últimas classes estão disponíveis como classes de utilitários na implementação de referência.
+As últimas seis dessas classes estão disponíveis como classes de utilitários na implementação de referência.
 
 ## Alterações de namespace {#namespace-changes}
 
@@ -364,7 +363,7 @@ new MediaPlayer(getActivity().getApplicationContext()); return mediaPlayer;
 Outras classes que não seguem esse padrão, mas usam `create()` Os métodos descritos no ponto 1.4 incluem:
 
 * MediaResource\
-   Isso era usado anteriormente `MediaResource.createFromUrl()`. Agora use o construtor, que usa um URL, tipo de recurso e metadados. Por exemplo:
+  Isso era usado anteriormente `MediaResource.createFromUrl()`. Agora use o construtor, que usa um URL, tipo de recurso e metadados. Por exemplo:
 
 ```java
 //TVSDK v1.4

@@ -1,8 +1,7 @@
 ---
 title: Notas de versão do PTAI 19.11.1
 description: As notas de versão do PTAI 19.11.1 descrevem o que é novo ou alterado, os problemas resolvidos e conhecidos no Primetime Ad Insertion no ano de 2019.
-exl-id: 0cc9067c-cd46-48f4-afa4-de8b15193723
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 0%
@@ -62,6 +61,7 @@ Correção de um erro em que os reprodutores do Chromecast saíam inesperadament
       * Adicionar solicitações/respostas
       * Anúncios inseridos
       * Sinais disparados (somente rastreamento do lado do servidor)
+
    * Você pode pesquisar atividades de uma ID de sessão específica até 30 dias após a realização da sessão SAI
    * Você pode exportar os eventos
 * Banco de dados: atualizações de segurança
@@ -87,10 +87,9 @@ Correção de um erro em que os reprodutores do Chromecast saíam inesperadament
    * Adição da regra de normalização do URL criativo para o Innovid, usada pelo SSAI
    * A regra de normalização usada pelo CRS foi adicionada em uma versão anterior
    * TVSDK: a regra de normalização para adicionar às Regras CRS JSON foi fornecida após um lançamento anterior, mas, para ter segurança, entre em contato com seu Gerente técnico de conta para revisar todas as regras de normalização existentes.
-
-      >[!NOTE]
-      >
-      >A maioria dos URLs criativos da Innovid será transcodificada e compilada com êxito sem a regra de normalização. Ocasionalmente, no entanto, URLs criativos da Innovid com parâmetros dinâmicos são encontrados. A regra de normalização é necessária para lidar com essas instâncias.
+     >[!NOTE]
+     >
+     >A maioria dos URLs criativos da Innovid será transcodificada e compilada com êxito sem a regra de normalização. Ocasionalmente, no entanto, URLs criativos da Innovid com parâmetros dinâmicos são encontrados. A regra de normalização é necessária para lidar com essas instâncias.
 
 ### Versão 19.5.2
 
@@ -102,7 +101,7 @@ Correção de um erro em que os reprodutores do Chromecast saíam inesperadament
    * CRS: Fluxo de trabalho adicionado para reempacotar leituras no formato CMAF (HLS/fMP4)
 * SSAI: correção de um problema que impedia a inserção de anúncios não muxados em conteúdo não muxado, quando o conteúdo e o anúncio não tinham fluxos somente de áudio (EXT-X-STREAM-INF)
 * SSAI: adição de suporte para tokens de autenticação CDN do Limelight (LLNW) para segmentos de conteúdo
-   * Quando `pttoken=limelight` ou `pttoken=llnw` for adicionado ao URL de inicialização, adicionaremos um cabeçalho secreto ao recuperar a lista de reprodução principal de origem e anexaremos os parâmetros de consulta do cabeçalho X-Adobe-Sig do LLNW aos segmentos de conteúdo
+   * Quando `pttoken=limelight` ou `pttoken=llnw` for adicionado ao URL de inicialização, adicionaremos um cabeçalho secreto ao recuperar a lista de reprodução mestre de origem e anexaremos os parâmetros de consulta do cabeçalho X-Adobe-Sig do LLNW aos segmentos de conteúdo
 * SSAI: Adição de outro valor de pttoken (`pttoken=centurylink`) para suporte ao token de autenticação CDN do CenturyLink, lançado em 30 de julho de 2018
    * `pttoken=centurylink` tem o mesmo comportamento que `pttoken=level3`, e ambos os valores são válidos
 
@@ -176,9 +175,9 @@ Correção de um erro em que os reprodutores do Chromecast saíam inesperadament
 
 * CRS: adição da capacidade de lista de bloqueios/lista de permissões solicitações de CRS de sistemas de anúncios específicos, IDs de anúncio, IDs criativas, URLs criativas e/ou formato criativo
 
-   >Nota
-   >
-   >O Adobe adicionará regras de lista de bloqueios quando provedores de anúncios com valores dinâmicos (por exemplo, parâmetro dinâmico em URL) para o mesmo anúncio forem encontrados. Essas regras de lista de bloqueios serão desativadas após a resolução do componente dinâmico, pelo provedor ou por meio de uma regra de normalização.
+  >Nota
+  >
+  >O Adobe adicionará regras de lista de bloqueios quando provedores de anúncios com valores dinâmicos (por exemplo, parâmetro dinâmico em URL) para o mesmo anúncio forem encontrados. Essas regras de lista de bloqueios serão desativadas após a resolução do componente dinâmico, pelo provedor ou por meio de uma regra de normalização.
 
    * Se quiser adicionar uma regra de lista de bloqueios ou lista de permissões para sua zona, entre em contato com o Gerente técnico de conta para obter assistência.
 

@@ -2,8 +2,7 @@
 title: Controles de proteção de saída
 description: Controles de proteção de saída
 copied-description: true
-exl-id: eedf3885-8e30-4328-ab2c-cf4c981846b3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -40,4 +39,4 @@ Exemplo de caso de uso: algum conteúdo pode aplicar controles de proteção de 
 
 Se &quot;Obrigatório&quot; for especificado e a reprodução for tentada no Linux, o cliente não reproduzirá o conteúdo em nenhum dispositivo porque não consegue diferenciar entre dispositivos internos e externos.
 
-Se você especificar &quot;Usar se disponível&quot;, a proteção de saída será ativada sempre que possível. Por exemplo, em sistemas Windows compatíveis com o COPP (Certified Output Protection Protocol), o conteúdo é transmitido com proteção de saída a uma tela externa. Esse exemplo às vezes é conhecido como *`selectable output control`*.
+Se você especificar &quot;Usar se disponível&quot;, a proteção de saída será ativada quando possível. Por exemplo, em sistemas Windows compatíveis com o COPP (Certified Output Protection Protocol), o conteúdo é transmitido com proteção de saída a uma tela externa. Esse exemplo às vezes é conhecido como *`selectable output control`*.

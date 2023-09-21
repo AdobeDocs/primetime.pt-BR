@@ -1,8 +1,7 @@
 ---
 description: Quando os usuários avançam ou retrocedem rapidamente pela mídia, eles estão no modo de execução. Para entrar no modo de execução de truque, é necessário definir a taxa de reprodução do MediaPlayer para um valor diferente de 1.
 title: Implementar avanço e retrocesso rápidos
-exl-id: c1d70d46-449b-494b-9b89-5553e9bcdbc3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -20,9 +19,9 @@ Para alternar a velocidade, você deve definir um valor.
    * A variável `MediaPlayerItem` define as taxas de reprodução permitidas.
    * O TVSDK seleciona a taxa permitida mais próxima se a taxa especificada não for permitida.
 
-      Quando a taxa de reprodução é alterada de 0 (pausa) ou 1 (reprodução normal) para uma taxa maior que 1 ou menor que -1, todos os anúncios na linha do tempo são removidos. Há apenas um período em toda a linha do tempo que facilita uma ação de reprodução para permitir que o conteúdo seja encaminhado e rebobinado rapidamente sem parar em qualquer posição de anúncio. Essa ação é ativada por uma ação de desanexação da linha do tempo no TVSDK para remover todos os adBreaks resolvidos. Quando a reprodução continua em 0 ou 1, os adBreaks são restaurados pela primeira ação de anexo da linha do tempo.
+     Quando a taxa de reprodução é alterada de 0 (pausa) ou 1 (reprodução normal) para uma taxa maior que 1 ou menor que -1, todos os anúncios na linha do tempo são removidos. Há apenas um período em toda a linha do tempo que facilita uma ação de reprodução para permitir que o conteúdo seja encaminhado e rebobinado rapidamente sem parar em qualquer posição de anúncio. Essa ação é habilitada por uma ação de desanexação da linha do tempo no TVSDK para remover todos os adBreaks resolvidos. Quando a reprodução continua em 0 ou 1, os adBreaks são restaurados pela primeira ação de anexo da linha do tempo.
 
-      Lembre-se das seguintes informações:
+     Lembre-se das seguintes informações:
 
    * Se a ação de reprodução for retroceder o conteúdo, a reprodução continuará quando a taxa for alterada para 1.
    * Se a ação de reprodução for acelerar o conteúdo, o último adBreak ignorado será reproduzido na posição de retomada.
@@ -90,4 +89,4 @@ Estas são as limitações do modo de truque:
    * A variável `AdBreakPlaybackEvent.AD_BREAK_SKIPPED` O evento é despachado imediatamente antes de um ad break ser ignorado. Seu reprodutor pode usar esse evento para implementar uma lógica personalizada relacionada aos ad breaks ignorados.
    * Sair da reprodução de truque invoca a mesma política de reprodução de anúncio de quando sair da busca.
 
-      Portanto, assim como na busca, o comportamento depende da diferença entre a política de reprodução do aplicativo e a padrão. O padrão é que o último ad break ignorado é reproduzido no ponto em que você sai da reprodução.
+     Portanto, assim como na busca, o comportamento depende da diferença entre a política de reprodução do aplicativo e a padrão. O padrão é que o último ad break ignorado é reproduzido no ponto em que você sai da reprodução.

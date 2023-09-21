@@ -1,8 +1,7 @@
 ---
 title: Suporte para logon único
 description: Suporte para logon único
-exl-id: edc3719e-c627-464c-9b10-367a425698c6
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
@@ -35,10 +34,10 @@ Depois que um usuário faz logon com suas credenciais MVPD, a autenticação do 
 | tvOS - nova Apple TV | Sim | SSO da plataforma - troca de tokens | Dependendo do suporte da Apple, a lista pode ser encontrada aqui | A partir do tvOS 10, o Apple &amp; Adobe introduziu a funcionalidade SSO para os programadores participantes e MVPDs. Ao usar o SDK tvOS de Adobe mais recente ou ao usar a API REST sem cliente do Adobe e implementar a funcionalidade SSO do Apple, você pode se beneficiar do SSO em dispositivos tvOS. Mais detalhes sobre o tvOS SDK: aqui e aqui e mais detalhes sobre a implementação sem clientes aqui. |
 | Roku | Sim | Token de autenticação compartilhado (Adobe SSO) | Lista completa de cobertura significativa a ser fornecida em breve. | O Roku SSO funciona imediatamente com a API sem clientes para todos os clientes que respeitam as diretrizes do Roku, nenhuma implementação especial necessária. O SSO é baseado nas informações de identificação do dispositivo que o Roku está enviando com segurança para o Adobe. |
 | Amazon FireTV | Sim | Token de autenticação compartilhado (Adobe SSO) | Lista completa de cobertura significativa a ser fornecida em breve. | O SDK do FireTV fornece suporte para Logon único com base nos recursos do Android. O SSO nesta plataforma é possível somente entre aplicativos que estão usando o SDK do Adobe FireTV por enquanto. Mais informações sobre o novo SDK do FireTV aqui. Os aplicativos FireTV implementados com base na API sem cliente poderão se beneficiar do SSO até o final de 2018. |
-| Xbox 360 | Não |  |  | Não há uma ID de dispositivo que possamos aproveitar. Há uma ID do aplicativo, portanto, os usuários não precisam se autenticar sempre. |
-| Xbox One | Não |  |  | Não há uma ID de dispositivo que possamos aproveitar. Há uma ID do aplicativo, portanto, os usuários não precisam se autenticar sempre. |
-| Windows 8/10 | Não |  |  | Não há uma ID de dispositivo que possamos aproveitar. Há uma ID do aplicativo, portanto, os usuários não precisam se autenticar sempre. |
-| Samsung TVs | Não |  |  | Não há uma ID de dispositivo que possamos aproveitar. Há uma ID do aplicativo, portanto, os usuários não precisam se autenticar sempre. |
+| Xbox 360 | Não |                                         |                                                     | Não há uma ID de dispositivo que possamos aproveitar. Há uma ID do aplicativo, portanto, os usuários não precisam se autenticar sempre. |
+| Xbox One | Não |                                         |                                                     | Não há uma ID de dispositivo que possamos aproveitar. Há uma ID do aplicativo, portanto, os usuários não precisam se autenticar sempre. |
+| Windows 8/10 | Não |                                         |                                                     | Não há uma ID de dispositivo que possamos aproveitar. Há uma ID do aplicativo, portanto, os usuários não precisam se autenticar sempre. |
+| Samsung TVs | Não |                                         |                                                     | Não há uma ID de dispositivo que possamos aproveitar. Há uma ID do aplicativo, portanto, os usuários não precisam se autenticar sempre. |
 
 ### Notas no Xbox 360 e Xbox One {#notes-xbox-360}
 

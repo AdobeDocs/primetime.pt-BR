@@ -1,8 +1,7 @@
 ---
 description: É possível controlar a visibilidade de legendas ocultas. Quando a visibilidade estiver ativada, a faixa selecionada no momento será exibida. Se você alterar a faixa atual, a configuração de visibilidade permanecerá a mesma.
 title: Controlar visibilidade de legendas ocultas
-exl-id: fac24d97-b83e-4bc4-a824-8a1692509519
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -21,11 +20,11 @@ ht-degree: 0%
 >
 >Os valores de visibilidade para as legendas ocultas são definidos em `ClosedCaptionsVisibility`.
 >
->
-```
+>```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
 >```
+>
 
 1. Aguarde a `MediaPlayer` ter pelo menos o status PREPARADO (consulte [Aguardar um estado válido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Para obter a configuração de visibilidade atual das legendas ocultas, use o método getter em `MediaPlayer`, que retorna um valor de visibilidade.

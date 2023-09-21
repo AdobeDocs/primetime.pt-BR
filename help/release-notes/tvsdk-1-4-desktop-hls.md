@@ -4,8 +4,7 @@ description: As Notas de versão do TVSDK para HLS para desktop descrevem o que 
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 5e227c99-acf6-4b16-a35a-68e2928fdbfd
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '5194'
 ht-degree: 0%
@@ -382,7 +381,7 @@ Esse problema foi resolvido para se comportar corretamente e não despachar even
 
 A Solicitação Auditude analisa as Configurações de Auditoria em busca de parâmetros personalizados ao criar uma unidade de publicidade para solicitações de publicidade.
 
-Esse comportamento foi alterado para incluir parâmetros personalizados do objeto Oportunidade na solicitação. Além disso, várias oportunidades com parâmetros personalizados diferentes não podem ser compactadas em uma solicitação do Auditude.
+Esse comportamento foi alterado para incluir parâmetros personalizados do objeto Oportunidade na solicitação. Além disso, várias oportunidades com parâmetros personalizados diferentes não podem ser agrupadas em uma solicitação Auditude.
 
 * Zendesk #21227 - m3u8 não jogam de forma consistente
 
@@ -695,11 +694,11 @@ os tipos MIME para o formato HLS diferenciavam maiúsculas de minúsculas, isso 
 
 **Versão 1.4.6**
 
-* Zendesk #2652 - Documentação do Auditude para HLS de desktop, esclarecimento do Auditude media_id para documentação HLS de desktop
+* Zendesk #2652 - documentação de Auditude para desktop HLS, Auditude esclarecido media_id para documentação de desktop HLS
 
 **Versão 1.4.5**
 
-* Zendesk #2256 - Acesso à lista de reprodução Principal, PSDK atualizado para enviar eventos timedMetadata para tags assinadas na lista de reprodução principal. (requer o Flash Player versão 17.0.0.134)
+* Zendesk #2256 - Acesso à Lista de Reprodução Mestra, PSDK atualizado para enviar eventos timedMetadata para tags assinadas na lista de reprodução mestre. (requer o Flash Player versão 17.0.0.134)
 * Zendesk #2417 - Player tentando baixar legendas antes do início da reprodução, WebVTT estava usando a variável de número de segmento errada para correspondência de número de segmento. O bug só era exibido para mídias que tinham índices de segmento começando em zero. (requer o Flash Player versão 17.0.0.134)
 * Zendesk #2537 - Flash player trava ao usar o plug-in pimenta com Chrome (requer o Flash Player versão 17.0.0.134)
 * Zendesk #2547 - Legendas árabes: o texto deve ser alinhado à direita justificado (requer o Flash Player versão 17.0.0.134)

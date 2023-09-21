@@ -1,8 +1,7 @@
 ---
 title: Visão geral para programadores
 description: Visão geral para programadores
-exl-id: 64a12e49-0ecb-4b81-977d-60c10925bb59
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4272'
 ht-degree: 0%
@@ -217,7 +216,6 @@ A comunicação entre o Ativador de acesso e sua página da Web ou aplicativo de
 >* A autorização usa uma troca de serviço Web de canal de retorno (servidor para servidor) entre a autenticação do Adobe Primetime (a controladora de armazenamento) e um MVPD (o IdP).
 
 
-
 #### 2-B. Fornecer Uma Interface Do Usuário De Direito {#entitlement-ui}
 
 Você fornece sua própria interface do usuário para acesso do usuário ao seu conteúdo. Alguns elementos, como o processo de logon real, são fornecidos pelo MVPD e alguns elementos estão opcionalmente disponíveis como parte da autenticação do Adobe Primetime. No mínimo, você deve fazer o seguinte:
@@ -250,13 +248,13 @@ O sessionGUID no token de mídia curta é a forma segura da ID de usuário, que 
 
 Estas são as diferentes maneiras de representar a ID de usuário nas APIs de autenticação do Adobe Primetime:
 
-* `sendTrackingData()` Propriedade GUID - Essa é a versão com hash do Adobe da UserID do MVPD.  Ela é transformada em hash para que essa ID de usuário não possa ser rastreada de volta para a origem no MVPD.   Essa ID é exclusiva e geralmente persistente, mas não pode ser compartilhada com o MVPD para comparar o comportamento de uso específico com o que os MVPDs têm a seu lado.   Ele não é assinado digitalmente, portanto, não é imune para a prevenção de fraudes, mas é bom o suficiente para a análise.  Esse formulário da ID de usuário é fornecido no lado do cliente em todos os eventos que a autenticação do Adobe Primetime gera no fluxo AuthN/AuthZ.
+* `sendTrackingData()` Propriedade GUID - Essa é a versão com hash do Adobe da ID de usuário do MVPD.  Ela é transformada em hash para que essa ID de usuário não possa ser rastreada de volta para a origem no MVPD.   Essa ID é exclusiva e geralmente persistente, mas não pode ser compartilhada com o MVPD para comparar o comportamento de uso específico com o que os MVPDs têm a seu lado.   Ele não é assinado digitalmente, portanto, não é imune para a prevenção de fraudes, mas é bom o suficiente para a análise.  Esse formulário da ID de usuário é fornecido no lado do cliente em todos os eventos que a autenticação do Adobe Primetime gera no fluxo AuthN/AuthZ.
 * Token de mídia curta `sessionGUID` propriedade - É igual à ID do usuário via `sendTrackingData()`No entanto, este é assinado digitalmente para proteger sua integridade.  Isso torna esse valor bom o suficiente para rastrear fraudes de uso simultâneo. Ele deve ser processado no lado do servidor depois de usar nossa biblioteca de validação e pode ser analisado em busca de padrões de fraude antes de lançar o fluxo de vídeo para o cliente.  Fazer qualquer uma dessas tarefas depende do Programador.
 * `getMetadata() userID `propriedade - Essa propriedade permitirá que o Adobe exponha a UserID MVPD de origem real para o Programador. Ele será criptografado com a chave pública do certificado que temos do Programador, para que não seja exposto ao cliente claramente. Isso fornece ao Programador a UserID real do MVPD, de modo que é algo que pode ser usado para vinculação de contas ou investigação de fraude diretamente com o MVPD.
 
 **Em conclusão**
 
-* A ID de usuário do MVPD é uma ID exclusiva persistente, geralmente, embora não garantida, que é **gerado pelos MVPDs e passado para o Adobe na autenticação bem-sucedida**. Geralmente é consistente em todas as redes, com algumas exceções.
+* A ID de usuário do MVPD é uma ID exclusiva persistente, geralmente, embora não garantida, que é **gerado pelos MVPDs e passado para o Adobe na autenticação bem-sucedida**. Geralmente, ela é consistente em todas as redes, com algumas exceções.
 * A ID de usuário MVPD não contém PII e NÃO é um número de conta. Ela não precisa ser exposta em um formato criptografado, pois validamos com todos os MVPDs que nenhuma PII está sendo enviada.
 
 

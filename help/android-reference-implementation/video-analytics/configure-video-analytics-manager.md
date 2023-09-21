@@ -1,8 +1,7 @@
 ---
 description: Você pode rastrear o uso do vídeo na Implementação de referência do Android do Primetime configurando-a para funcionar com sua conta da Adobe Analytics.
 title: Configurar análise de vídeo
-exl-id: 42498e2a-9ff2-442c-8cf9-bd7901f618f4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%

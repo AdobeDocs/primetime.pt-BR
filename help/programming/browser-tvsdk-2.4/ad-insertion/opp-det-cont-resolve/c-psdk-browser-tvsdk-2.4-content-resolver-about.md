@@ -1,8 +1,7 @@
 ---
 description: O TVSDK do navegador fornece geradores de oportunidades e resolvedores de conteúdo padrão que colocam anúncios na linha do tempo, e esses geradores e resolvedores são baseados em tags não padrão no manifesto. Seu aplicativo pode precisar alterar a linha do tempo com base nas oportunidades identificadas no manifesto.
 title: Geradores de oportunidades e resolvedores de conteúdo
-exl-id: a47acd22-8b1b-4c66-a7eb-a4d99afb5f17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%

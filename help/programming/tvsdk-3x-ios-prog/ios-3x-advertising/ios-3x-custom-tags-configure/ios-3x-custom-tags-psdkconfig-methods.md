@@ -1,8 +1,7 @@
 ---
 description: Você pode configurar nomes de tag personalizados no TVSDK globalmente com a classe PTSDKConfig.
 title: Métodos de classe de configuração para tags
-exl-id: 017b766e-a6aa-4c14-af9a-2c88746e22c0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
@@ -31,5 +30,5 @@ Lembre-se do seguinte:
 * Os métodos setter não permitem que o parâmetro de tags contenha valores nulos.
 * O nome da tag personalizada deve conter o prefixo #.
 
-   Por exemplo, #EXT-X-ASSET é um nome de tag personalizado correto, mas EXT-X-ASSET está incorreto.
+  Por exemplo, #EXT-X-ASSET é um nome de tag personalizado correto, mas EXT-X-ASSET está incorreto.
 * Não é possível alterar a configuração depois que o fluxo de mídia é carregado.

@@ -1,15 +1,14 @@
 ---
 description: O TVSDK do navegador pode detectar informações de reprodução alteradas em manifestos m3u8 principais para transmissão ao vivo e atualizar as informações de reprodução enquanto o fluxo está sendo reproduzido. O TVSDK do navegador é compatível com um conjunto dinâmico de perfis de taxa de bits à medida que os perfis aparecem ou desaparecem do manifesto principal, incluindo taxas de bits de perfil não sobrepostas entre as atualizações.
-title: Atualização de manifesto principal em tempo real
-exl-id: 2f89131c-5204-465b-8757-b47e955f5894
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Atualização ao vivo do manifesto principal
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# Atualização de manifesto principal em tempo real{#live-master-manifest-update}
+# Atualização ao vivo do manifesto principal{#live-master-manifest-update}
 
 O TVSDK do navegador pode detectar informações de reprodução alteradas em manifestos m3u8 principais para transmissão ao vivo e atualizar as informações de reprodução enquanto o fluxo está sendo reproduzido. O TVSDK do navegador é compatível com um conjunto dinâmico de perfis de taxa de bits à medida que os perfis aparecem ou desaparecem do manifesto principal, incluindo taxas de bits de perfil não sobrepostas entre as atualizações.
 

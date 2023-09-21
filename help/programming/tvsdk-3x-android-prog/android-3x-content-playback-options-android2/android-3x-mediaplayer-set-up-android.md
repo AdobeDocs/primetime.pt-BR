@@ -1,8 +1,7 @@
 ---
 description: O TVSDK fornece ferramentas para criar um aplicativo de reprodutor de vídeo avançado (seu reprodutor do Primetime), que pode ser integrado a outros componentes do Primetime. Ele também fornece vários recursos projetados para maximizar a qualidade da reprodução de vídeo.
 title: Configurar o reprodutor de mídia
-exl-id: 99fdc4c1-0c67-4de5-87a5-b42d76f43ae9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%

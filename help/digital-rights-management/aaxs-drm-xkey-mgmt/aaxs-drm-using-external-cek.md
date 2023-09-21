@@ -1,8 +1,7 @@
 ---
 description: Use o recurso CEK externo para fornecer e empacotar licenças usando seu CKMS existente.
 title: Uso do CEK externo para venda e empacotamento de licenças
-exl-id: 3944624a-099e-4fc0-b829-6ab154a53758
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -36,7 +35,6 @@ Durante a aquisição da licença, o servidor de licenças AXS observa um sinali
 >* O código-fonte Java pode ser construído usando o ANT incluído `build-samples.xml`
 >* O SDK do Flash Access ( `adobe-flashaccess-sdk.jar`) deve estar no classpath
 >
-
 
 ## Fluxo de trabalho do servidor
 

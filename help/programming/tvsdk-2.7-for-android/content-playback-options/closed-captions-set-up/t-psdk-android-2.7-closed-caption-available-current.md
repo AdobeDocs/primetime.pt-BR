@@ -1,8 +1,7 @@
 ---
 description: Você pode selecionar uma faixa em uma lista de faixas de legendas ocultas atualmente disponíveis. Esta se torna a faixa atual, que é exibida quando a visibilidade está ativada. Algumas faixas podem não estar disponíveis inicialmente, portanto, acompanhe o evento que indica que mais faixas estão disponíveis.
 title: Selecionar uma faixa de legenda atual entre as faixas disponíveis
-exl-id: d604dedc-f3c3-4c97-9b0f-84da326c0678
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%

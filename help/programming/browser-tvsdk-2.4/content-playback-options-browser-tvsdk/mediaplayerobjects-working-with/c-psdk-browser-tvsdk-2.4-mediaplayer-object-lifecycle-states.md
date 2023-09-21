@@ -1,8 +1,7 @@
 ---
 description: A partir do momento em que a ocorrência de MediaPlayer é criada até o momento em que é encerrada, essa ocorrência passa de um estado para o próximo.
 title: Ciclo de vida e estados do objeto MediaPlayer
-exl-id: 26cad982-ef85-42fb-aaa7-e5d494088766
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%

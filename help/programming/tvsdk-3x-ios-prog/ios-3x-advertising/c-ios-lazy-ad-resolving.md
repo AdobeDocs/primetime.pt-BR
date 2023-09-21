@@ -1,8 +1,7 @@
 ---
 description: A resolução e o carregamento de anúncios podem causar um atraso inaceitável para um usuário aguardar o início da reprodução. O recurso Resolução de carregamento de anúncio lento pode reduzir esse atraso de inicialização. Os anúncios agora podem ser resolvidos em um intervalo especificado antes da posição do ad break. Isso é feito usando uma abordagem de dois jogadores.
 title: Resolução de anúncios just-in-time
-exl-id: dd5342c5-9f34-4778-a47a-91ff2eb03155
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -38,7 +37,6 @@ Por exemplo, por padrão `delayAdLoadingTolerance` é definido como 5 segundos. 
 >* O modo Picture-in-Picture não é compatível com a Resolução Lenta de Anúncios. Desative os modos Picture-in-picture se ativar Resolução de anúncios ociosos.
 >* A resolução de anúncios lentos não afeta os anúncios precedentes.
 >
-
 **Habilitar resolução de anúncios lentos**
 
 Você pode ativar ou desativar o recurso Resolução de anúncio lento usando o mecanismo de Carregamento de anúncio lento existente (A Resolução de anúncio lento está desativada por padrão).

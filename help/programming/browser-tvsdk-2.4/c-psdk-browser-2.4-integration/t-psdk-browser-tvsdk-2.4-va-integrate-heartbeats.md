@@ -1,8 +1,7 @@
 ---
 description: Você pode configurar o player para rastrear e analisar o uso do vídeo.
 title: Inicializar e configurar a análise de vídeo
-exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -20,7 +19,7 @@ Antes de ativar o rastreamento de vídeo (pulsações de vídeo), verifique se v
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84">
  <tbody>
   <tr>
-   <td colname="col1"> Ponto de acesso do servidor de rastreamento do AppMeasurement </td>
+   <td colname="col1"> Ponto de extremidade do servidor de rastreamento de AppMeasurements </td>
    <td colname="col2"> O URL do endpoint da coleção de back-end do Adobe Analytics (antigo SiteCatalyst). </td>
   </tr>
   <tr>
@@ -54,18 +53,18 @@ Para configurar o rastreamento de vídeo no seu reprodutor:
    
    * A instanciação requer um parâmetro de entrada de ID de organização de Marketing Cloud fornecido por Adobe.
 
-      Este é um valor de sequência de caracteres.
+     Este é um valor de sequência de caracteres.
    * A única opção de configuração para a biblioteca VisitorAPI é o URL do ponto de extremidade de back-end que fornece o identificador exclusivo para o usuário atual.
    * O URL do servidor de rastreamento do visitante é o mesmo URL do servidor de rastreamento de análise.
 
-      Para obter informações sobre como implementar o Serviço de ID de visitante, consulte [Implementação do serviço de ID de visitante](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
+     Para obter informações sobre como implementar o Serviço de ID de visitante, consulte [Implementação do serviço de ID de visitante](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
    _visitor.trackingServer = "URL_OF_THE_VISITOR_TRACKER_SERVER”;
    ```
 
-2. Instancie e configure o componente AppMeasurement.
+2. Instancie e configure o componente do AppMeasurement.
 
    A instância do AppMeasurement tem muitas opções de configuração. Para obter mais informações, acesse o [Desenvolvedor do Adobe Analytics](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) documentação. As opções no seguinte código de amostra ( `account`, `visitorNamespace`, e `trackingServer`) são obrigatórios e os valores são fornecidos por Adobe.
 
@@ -119,11 +118,12 @@ Lembre-se do seguinte:
       * Sempre crie uma nova instância do rastreador para cada sessão de reprodução de conteúdo e remova a referência anterior (após desanexar a instância do reprodutor de mídia).
       * Os metadados criados na subetapa 1 devem ser fornecidos no construtor do Video Analytics Tracker.
 
-         ```js
-         var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
-         videoAnalyticsProvider = new AdobePSDK.VA.VideoAnalyticsProvider(videoAnalyticsMetadata);
-         videoAnalyticsProvider.attachMediaPlayer(player);
-         ```
+        ```js
+        var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
+        videoAnalyticsProvider = new AdobePSDK.VA.VideoAnalyticsProvider(videoAnalyticsMetadata);
+        videoAnalyticsProvider.attachMediaPlayer(player);
+        ```
+
    3. Destruir o rastreador do Video Analytics.
 Antes de começar uma nova sessão de reprodução de conteúdo, destrua a instância anterior do rastreador de vídeo. Após receber o evento de conclusão de conteúdo (ou notificação), aguarde alguns minutos antes de destruir a instância do rastreador de vídeo. Destruir a instância imediatamente pode interferir na capacidade do rastreador do Video Analytics de enviar um ping de conclusão de vídeo.
 

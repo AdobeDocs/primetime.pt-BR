@@ -1,8 +1,7 @@
 ---
 description: Os fluxos HLS e DASH fornecem codificações (perfis) de taxa de bits diferentes para a mesma intermitência curta de vídeo. O TVSDK pode selecionar o nível de qualidade para cada intermitência com base no nível de buffer atual e na largura de banda disponível.
 title: Taxas de bits adaptáveis (ABR) para qualidade de vídeo
-exl-id: ed062ef9-138d-446a-a454-3cb19c3bb388
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%

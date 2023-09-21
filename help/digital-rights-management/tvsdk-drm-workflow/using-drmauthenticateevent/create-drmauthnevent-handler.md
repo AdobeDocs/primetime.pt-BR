@@ -1,8 +1,7 @@
 ---
 description: O objeto DRMAuthenticateEvent é despachado quando um objeto do Primetime tenta reproduzir conteúdo protegido que requer uma credencial de usuário para autenticação antes da reprodução (e a autenticação ainda não foi executada). O manipulador DRMAuthenticateEvent é responsável por coletar as credenciais necessárias (nome de usuário, senha e tipo) e transmitir os valores para o método .setDRMAuthenticationCredentials() para validação.
 title: Criar um manipulador DRMAuthenticateEvent
-exl-id: fe01340b-8a76-4fd4-8c6c-85454d0e2218
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%

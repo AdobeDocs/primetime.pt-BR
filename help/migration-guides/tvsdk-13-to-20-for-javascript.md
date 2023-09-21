@@ -4,8 +4,7 @@ description: Muitas assinaturas de método e nomes de elementos de API foram alt
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: migration
-exl-id: 4b251e26-cee6-4d96-bb55-6c47195da4d0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '5034'
 ht-degree: 0%
@@ -542,7 +541,7 @@ Tabelas neste tópico:
   </tr> 
   <tr> 
    <td><p>interface DRMPolicy<br /> {<br /> atributo somente leitura DomString authenticationDomain;<br /> atributo somente leitura DRMAuthenticationMethod authenticationMethod;<br /> <br /> atributo somente leitura DomString displayName;<br /> atributo somente leitura DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
-   <td><p>interface DRMPolicy<br /> {<br /> atributo somente leitura DomString authDomain;<br /> atributo somente leitura DRMAuthenticationMethod authMethod;<br /> atributo somente leitura DomString dispName;<br /> atributo somente leitura DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
+   <td><p>interface DRMPolicy<br /> {<br /> atributo somente leitura DomString authDomain;<br /> atributo somente leitura DRMAuthenticationMethod authMethod;<br /> atributo DomString dispName somente leitura;<br /> atributo somente leitura DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>

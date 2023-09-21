@@ -2,8 +2,7 @@
 title: Detalhes da notificação NATIVE_ERROR
 description: Detalhes da notificação NATIVE_ERROR
 copied-description: true
-exl-id: 51c75349-0fa8-405d-9e09-b51b425fe21b
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6868'
 ht-degree: 2%
@@ -141,7 +140,7 @@ Quando o TVSDK lida com um erro nativo, ele retorna alguns ou todos os valores d
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AUDITUDE_ERROR_CODE</span> </td> 
-   <td colname="col2"> Código de erro de auditoria (número). </td> 
+   <td colname="col2"> código de erro Auditude (número). </td> 
   </tr> 
  </tbody> 
 </table>
@@ -396,7 +395,7 @@ Ao relatar erros de DRM para o Adobe, inclua a variável `NATIVE_SUBERROR_CODE` 
     <ul id="ul_23B7F1A104AF49E79EA87DB8E15E337E"> 
      <li id="li_855D87F251184FE688A8D5FA0F6C9EF5">Se os arquivos estiverem nesse diretório, clique duas vezes nos arquivos no Windows Explorer e no aplicativo visualizador de CRL para determinar se algum dos arquivos expirou. </li> 
      <li id="li_58EC4EDA2B5146188A0FF7B33C91E2FD">Se não houver arquivos em tomcat/temp/, pode-se supor que este servidor de licença nunca foi capaz de alcançar o servidor CRL Adobe devido a um problema de firewall/roteamento. </li> 
-    </ul> <p>Para obter mais informações, consulte <a href="https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_secure_deployment_guidelines.pdf" format="http" scope="external"> Regras de firewall</a>. </p> <p>Se os arquivos da CRL não estiverem disponíveis ou tiverem expirado, você deverá confirmar se o servidor de licenças pode ser acessado. Abra um farejador de rede no servidor de licenças do cliente, reinicie o servidor e peça a um cliente que tente solicitar uma licença do servidor. Você pode observar o tráfego da rede para ver se as chamadas para os seguintes pontos de extremidade de URL são bem-sucedidas: <p>Dica: você também pode inserir os seguintes URLs de CRL em um navegador para ver se é possível baixar manualmente cada arquivo. </p> 
+    </ul> <p>Para obter mais informações, consulte <a href="https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_secure_deployment_guidelines.pdf" format="http" scope="external"> Regras de firewall</a>. </p> <p>Se os arquivos da CRL não estiverem disponíveis ou tiverem expirado, você deverá confirmar se o servidor de licenças pode ser acessado. Abra um farejador de rede no servidor de licenças do cliente, reinicie o servidor e peça a um cliente que tente solicitar uma licença do servidor. Você pode observar o tráfego da rede para ver se as chamadas para os seguintes pontos de extremidade de URL são bem-sucedidas: <p>Dica: você também pode inserir as seguintes URLs de CRL em um navegador para ver se é possível baixar manualmente cada arquivo. </p> 
      <ul id="ul_9B65C7ABBDEC4AC9BF3755FFD3587971"> 
       <li id="li_6867A9050E8D421C9138AC853D1784C9"><a href="https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl</a> </li> 
       <li id="li_6431689260554EAFAFDA2EC31798DCB5"><a href="https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl</a> </li> 
@@ -700,7 +699,7 @@ Ao relatar erros de DRM para o Adobe, inclua a variável `NATIVE_SUBERROR_CODE` 
   <tr> 
    <td colname="col1"> 3371 </td> 
    <td colname="col2"><span class="codeph"> AXS_SemOPConstraintInPixel</span><span class="codeph"> Restrições</span> </td> 
-   <td colname="col3"> <p>Resolução malformada com base em restrições de proteção de saída na licença. </p> <p>O software do distribuidor deve exibir uma mensagem de erro. Peça ao usuário para relatar o problema ao distribuidor com um título de conteúdo. </p> <p>O distribuidor deve reempacotar o conteúdo com uma política válida. </p> </td> 
+   <td colname="col3"> <p>Resolução malformada com base nas restrições de proteção de saída da licença. </p> <p>O software do distribuidor deve exibir uma mensagem de erro. Peça ao usuário para relatar o problema ao distribuidor com um título de conteúdo. </p> <p>O distribuidor deve reempacotar o conteúdo com uma política válida. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3372 </td> 

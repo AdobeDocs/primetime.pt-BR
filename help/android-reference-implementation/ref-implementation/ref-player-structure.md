@@ -1,8 +1,7 @@
 ---
 description: Os gerenciadores de recursos atuam como invólucros da biblioteca TVSDK.
 title: Estrutura de implementação de referência
-exl-id: cf102ccc-2e31-4197-a321-e485f77ba754
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%

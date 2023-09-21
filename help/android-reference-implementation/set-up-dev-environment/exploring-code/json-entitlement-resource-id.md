@@ -1,8 +1,7 @@
 ---
 title: Objeto JSON para ID de recurso de direito
 description: O bloco de código a seguir fornece um exemplo de um objeto JSON quando a ID do recurso de direito é uma string de texto simples.
-exl-id: 396c43e7-404a-40f5-8113-a720e2c834e7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%

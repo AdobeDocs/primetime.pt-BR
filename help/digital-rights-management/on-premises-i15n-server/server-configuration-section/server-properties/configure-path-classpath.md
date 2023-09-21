@@ -2,8 +2,7 @@
 title: Configurar o caminho e o classpath
 description: Configurar o caminho e o classpath
 copied-description: true
-exl-id: e6e9f837-4e3d-43e1-971d-3fa0ccaeff39
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -19,6 +18,7 @@ A variável [!DNL flashaccess.war] contém [!DNL jsafeWithNative.jar], que é a 
    * **Linux / [!DNL libjsafe.so] -** O diretório que contém [!DNL libjsafe.so] deve estar no Caminho (as bibliotecas Crypto-J nativas também estão disponíveis para outras plataformas). Por exemplo, defina [!DNL libjsafe.so] em `LD_LIBRARY_PATH`.
 
    * **Windows / [!DNL jsafe.dll] -** O equivalente no Windows para [!DNL libjsafe.so] é o apropriado [!DNL jsafe.dll].
+
    Essas bibliotecas estão disponíveis no [!DNL thirdparty] pasta da biblioteca.
 1. Coloque um dos [!DNL adobe-flashaccess-certs] arquivos jar no classpath.
 

@@ -1,8 +1,7 @@
 ---
 description: O download de vídeo e áudio em paralelo, em vez de em série, reduz os atrasos de inicialização.
 title: Downloads paralelos
-exl-id: 7cc9afbf-e495-40b0-a8ff-86d4939d1b15
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -39,7 +38,7 @@ A conexão HTTP pode enfrentar atrasos nos seguintes estágios:
 
 * Ao estabelecer a conexão TCP/IP com o servidor
 
-   Embora o cliente e o servidor tenham concordado em se comunicar, nenhuma comunicação HTTP ocorreu ainda. Esse tipo de atraso depende da infraestrutura entre o cliente e o servidor. Esse processo requer encontrar um caminho pela Internet entre o cliente e o servidor e garantir que todos os dispositivos, como roteadores e firewalls, na rota estejam de acordo com a transferência de dados.
+  Embora o cliente e o servidor tenham concordado em se comunicar, nenhuma comunicação HTTP ocorreu ainda. Esse tipo de atraso depende da infraestrutura entre o cliente e o servidor. Esse processo requer encontrar um caminho pela Internet entre o cliente e o servidor e garantir que todos os dispositivos, como roteadores e firewalls, na rota estejam de acordo com a transferência de dados.
 * Ao enviar uma solicitação HTTP para um segmento ou um manifesto pela conexão TCP/IP.
 
-   O servidor recebe a solicitação, processa e começa a enviar os dados de volta para o cliente. O grau de atraso depende da carga e da complexidade do software no servidor e, de certa forma, da velocidade da conexão de upload quando o cliente envia a solicitação.
+  O servidor recebe a solicitação, processa e começa a enviar os dados de volta para o cliente. O grau de atraso depende da carga e da complexidade do software no servidor e, de certa forma, da velocidade da conexão de upload quando o cliente envia a solicitação.

@@ -1,8 +1,7 @@
 ---
 description: Os objetos MediaPlayerNotification fornecem informações sobre as alterações no status, nos avisos e nos erros do player. Erros que interrompem a reprodução do vídeo também causam uma alteração no status do reprodutor.
 title: Notificações para status, atividade, erros e registro do player
-exl-id: cce634aa-5394-46c0-a031-70d6fc1b754b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%

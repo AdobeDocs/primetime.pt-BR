@@ -1,8 +1,7 @@
 ---
 description: A lista de reprodução de um vídeo pode especificar um número ilimitado de faixas de áudio alternativas para o conteúdo de vídeo principal. Por exemplo, você pode adicionar diferentes idiomas ao conteúdo de vídeo ou permitir que o usuário alterne entre diferentes faixas em seu dispositivo enquanto o conteúdo está sendo reproduzido.
 title: Faixas de áudio alternativas na lista de reprodução
-exl-id: 3b892c8f-eb4f-4caf-b360-4781895a4022
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%

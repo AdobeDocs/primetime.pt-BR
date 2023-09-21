@@ -1,8 +1,7 @@
 ---
 description: Os eventos do TVSDK indicam o estado do reprodutor, os erros que ocorrem, a conclusão das ações solicitadas, como o início da reprodução de um vídeo ou as ações que ocorrem implicitamente, como a conclusão de um anúncio.
 title: Analise eventos do Primetime Player
-exl-id: 5a3a6436-ea69-4977-b4e8-c05a31faba00
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
@@ -20,7 +19,7 @@ Estas são algumas informações adicionais sobre eventos:
 * A natureza em tempo real da reprodução de vídeo requer atividade assíncrona (não de bloqueio) para muitas operações de TVSDK.
 * O TVSDK é compatível com um reprodutor de vídeo orientado por eventos.
 
-   Ele fornece eventos que correspondem a todas as etapas importantes do processo de reprodução. Registre esses eventos no mecanismo de eventos da sua plataforma e crie manipuladores de eventos que serão chamados quando esses eventos ocorrerem. *`Event Handlers`* também são conhecidas como rotinas de retorno de chamada ou ouvintes de eventos. O TVSDK fornece uma variedade completa de métodos que podem ser usados pelos manipuladores de eventos.
+  Ele fornece eventos que correspondem a todas as etapas importantes do processo de reprodução. Registre esses eventos no mecanismo de eventos da sua plataforma e crie manipuladores de eventos que serão chamados quando esses eventos ocorrerem. *`Event Handlers`* também são conhecidas como rotinas de retorno de chamada ou ouvintes de eventos. O TVSDK fornece uma variedade completa de métodos que podem ser usados pelos manipuladores de eventos.
 * Seu aplicativo geralmente inicia operações não bloqueadas, como solicitar que um vídeo comece a ser reproduzido.
 
-   O TVSDK se comunica de forma assíncrona com seu aplicativo despachando eventos, como quando o vídeo começa a ser reproduzido e um evento quando o vídeo é concluído. Outros eventos podem indicar alterações de status no reprodutor e condições de erro. Seus manipuladores de eventos executam as ações apropriadas.
+  O TVSDK se comunica de forma assíncrona com seu aplicativo despachando eventos, como quando o vídeo começa a ser reproduzido e um evento quando o vídeo é concluído. Outros eventos podem indicar alterações de status no reprodutor e condições de erro. Seus manipuladores de eventos executam as ações apropriadas.

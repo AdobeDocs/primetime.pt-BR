@@ -1,8 +1,7 @@
 ---
 description: Quando os metadados de DRM de um vídeo são incluídos no fluxo de mídia, é possível executar a autenticação durante a reprodução.
 title: Autenticação DRM durante a reprodução
-exl-id: fb244aad-38ae-4bc7-85b7-364cf59db8d6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
@@ -39,7 +38,7 @@ Com a rotação de licenças, um ativo é criptografado com várias licenças de
    * Se a autenticação não for necessária, você não precisará fazer nada e a reprodução continuará sem interrupções.
    * Se a autenticação for necessária, conclua a autenticação DRM.
 
-      Como essa operação é assíncrona e é manipulada em um thread diferente, ela não tem impacto na interface do usuário nem na reprodução de vídeo.
+     Como essa operação é assíncrona e é manipulada em um thread diferente, ela não tem impacto na interface do usuário nem na reprodução de vídeo.
 
 1. Se a autenticação falhar, o usuário não poderá continuar visualizando o vídeo e a reprodução será interrompida.
 

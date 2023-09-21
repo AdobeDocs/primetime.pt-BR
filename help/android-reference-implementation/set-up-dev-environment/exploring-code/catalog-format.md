@@ -1,8 +1,7 @@
 ---
 description: A implementação de referência do Primetime usa um formato de feed baseado em JSON para respostas do. Esse formato é analisado usando uma implementação da interface IFeedItemAdapter.
 title: Formato do catálogo
-exl-id: faaeb647-9c01-4290-be1e-2b8461c8ad27
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 0%
@@ -137,7 +136,7 @@ O bloco de código a seguir define o **objeto de metadados**:
 | Propriedade | Descrição |
 |--- |--- |
 | ad | Metadados relacionados ao anúncio. |
-| type | O valor pode ser Anúncios do Primetime, Pausas de anúncio diretas ou Marcadores de anúncio personalizados. <br/><br/>O PSDK fornece suporte integrado para os seguintes tipos de metadados: Metadados relacionados ao Auditude para a veiculação de anúncios do Primetime (anúncios do Primetime), ad-breaks diretos com urls de anúncios (ad break diretos) e marcadores de anúncios personalizados que fornecem o Intervalo de tempo para cada marcador de anúncio (marcadores de anúncios personalizados). Cada tipo tem um AdProvider integrado na PSDK que processa os metadados.  <br/><br/>O formato JSON para cada um deles foi definido abaixo. |
+| type | O valor pode ser Anúncios do Primetime, Pausas de anúncio diretas ou Marcadores de anúncio personalizados. <br/><br/>O PSDK fornece suporte integrado para os seguintes tipos de metadados: metadados relacionados a Auditude para Veiculação de anúncios do Primetime (Anúncios do Primetime), ad-breaks diretos com urls de anúncios (Anúncios quebrados diretos) e marcadores de anúncios personalizados que fornecem o Intervalo de tempo para cada marcador de anúncio (Marcadores de anúncios personalizados). Cada tipo tem um AdProvider integrado na PSDK que processa os metadados.  <br/><br/>O formato JSON para cada um deles foi definido abaixo. |
 | detalhes | Inclui os atributos de metadados de anúncios. Ambos os tipos de metadados de anúncios têm seu próprio conjunto de atributos definidos abaixo. Para os tipos incorporados, os atributos incluídos definem os dados esperados pela PSDK para esse tipo. |
 | direito | Metadados relacionados à qualificação |
 | id | A ID do recurso de mídia usada para solicitações de autorização no serviço de passe de TV por assinatura do Adobe Primetime. A ID pode ser uma cadeia de caracteres de texto ou uma cadeia de caracteres mRSS codificada em HTML. Qualquer conteúdo de mídia que exija autorização deve conter uma ID de recurso válida. |

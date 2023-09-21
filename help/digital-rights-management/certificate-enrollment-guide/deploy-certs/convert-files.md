@@ -2,8 +2,7 @@
 title: Converter arquivos
 description: Converter arquivos
 copied-description: true
-exl-id: 7344ca2f-5307-403b-a6fc-cbbea7c2829f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Converter arquivos{#convert-files}
 
-Usando um utilitário como OpenSSL e a chave privada, o Solicitante gera os arquivos PKCS#12 (pfx) e PEM/DER, inserindo os seguintes comandos em uma Janela de Comando:
+Usando um utilitário como OpenSSL e a chave privada, o Solicitante gera os arquivos PKCS#12 (pfx) e PEM/DER inserindo os seguintes comandos em uma Janela de Comando:
 
 1. Converta o arquivo PKCS#7 em um arquivo PEM temporário.
 

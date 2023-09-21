@@ -1,8 +1,7 @@
 ---
 description: Usamos o empacotador Bento4 e o empacotador off-line Adobe para criar conteúdo DASH criptografado. Bento4 assume como entrada conteúdo mp4 não criptografado.
 title: Empacotar seu conteúdo com Bento4
-exl-id: c873eaf6-c738-4f95-a900-a8aecb03754d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%

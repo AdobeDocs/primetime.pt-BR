@@ -1,8 +1,7 @@
 ---
 description: Os fluxos HLS e DASH fornecem codificações (perfis) de taxa de bits diferentes para a mesma intermitência curta de vídeo. O TVSDK pode selecionar o nível de qualidade para cada intermitência com base na largura de banda disponível.
 title: Taxas de bits adaptáveis (ABR) para qualidade de vídeo
-exl-id: 97862cf7-7315-4ca6-a2b4-f9b98047edd9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%
@@ -80,9 +79,9 @@ Para configurar parâmetros de taxa de bits adaptáveis do TVSDK:
 
 Lembre-se do seguinte:
 
-* O aplicativo deve definir o `abrControlParameters` propriedade em `PTMediaPlayer` antes de configurar um `PTMediaPlayerItem` para que as configurações de taxa de bits inicial e mínima entrem em vigor.
+* O aplicativo deve definir a variável `abrControlParameters` propriedade em `PTMediaPlayer` antes de configurar um `PTMediaPlayerItem` para que as configurações de taxa de bits inicial e mínima entrem em vigor.
 
-   Depois que a reprodução do conteúdo é iniciada, a configuração de uma nova instância afeta apenas a configuração da taxa de bits máxima.
+  Depois que a reprodução do conteúdo é iniciada, a configuração de uma nova instância afeta apenas a configuração da taxa de bits máxima.
 
 * Para atualizar a configuração de taxa máxima de bits durante a reprodução, crie um novo `PTABRControlParameters` instância e defina-a na instância do reprodutor.
 * Você pode atualizar a configuração de taxa máxima de bits durante a reprodução somente no iOS 8.0 e versões posteriores. Para versões anteriores, a variável `maxBitrate` que foi definido antes de ser usada a reprodução do conteúdo.

@@ -1,8 +1,7 @@
 ---
 description: Áudio alternativo ou de associação tardia permite alternar entre as faixas de áudio disponíveis para uma faixa de vídeo. Dessa forma, os usuários podem selecionar uma faixa de idioma quando o vídeo é reproduzido.
 title: Faixas de áudio alternativas na lista de reprodução
-exl-id: d8d8c122-5837-4f0e-934f-a3d6e1b037c8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%

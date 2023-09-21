@@ -1,8 +1,7 @@
 ---
 description: O TVSDK fornece classes e métodos que você pode usar para personalizar o comportamento de reprodução do conteúdo que contém publicidade.
 title: Elementos da API para reprodução de anúncio
-exl-id: a976a905-8aa2-4bdb-9e10-addb65a433ef
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: O TVSDK lida com erros de intervalo de tempo de acordo com o problema específico, mesclando ou reorganizando os intervalos de tempo definidos incorretamente.
 title: Tratamento de erros de exclusão e substituição de anúncios
-exl-id: 86970989-82e0-4e6f-81fb-beee70870c69
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%

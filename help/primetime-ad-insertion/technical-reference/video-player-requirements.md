@@ -1,8 +1,7 @@
 ---
 description: Todos os players de vídeo devem fornecer recursos dos quais o servidor de manifesto depende para inserir anúncios e ativar o rastreamento de anúncios.
 title: Requisitos do reprodutor de vídeo
-exl-id: 23134e4c-6902-4b97-bf15-4524f47850e7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%

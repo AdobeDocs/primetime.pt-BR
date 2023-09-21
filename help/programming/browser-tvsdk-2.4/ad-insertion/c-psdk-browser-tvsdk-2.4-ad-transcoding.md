@@ -1,8 +1,7 @@
 ---
 description: Alguns anúncios de terceiros (ou criativos) não podem ser compilados no fluxo de conteúdo HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming sobre HTTP (DASH) porque seu formato de vídeo é incompatível com HLS/DASH. A inserção de anúncios no Adobe Primetime e o TVSDK do navegador podem, opcionalmente, tentar reempacotar (transcodificar) vídeos incompatíveis em vídeos m3u8/mpd compatíveis.
 title: Reempacotar (transcodificar) anúncios incompatíveis
-exl-id: aaa78d5a-4b4b-4d50-b516-d39b47174487
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%

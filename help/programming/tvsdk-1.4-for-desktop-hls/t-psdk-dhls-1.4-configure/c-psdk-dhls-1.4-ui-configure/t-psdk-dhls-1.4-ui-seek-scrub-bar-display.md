@@ -1,8 +1,7 @@
 ---
 description: O TVSDK permite a busca em uma posição específica (tempo) em que o fluxo é uma lista de reprodução de janela deslizante, em fluxos de vídeo sob demanda (VOD) e ao vivo.
 title: Exibir uma barra de limpeza de busca com a posição de reprodução atual
-exl-id: a85a06d8-040e-435a-8f55-9df5af3babe1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Para fornecer uma experiência de visualização mais suave, o TVSDK às vezes armazena o fluxo de vídeo em buffer. Você pode configurar o modo como o reprodutor é armazenado em buffer.
 title: Definir tempos de buffering
-exl-id: 4542d10a-b6f8-430d-8b9a-5a358d1c0e9d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -31,20 +30,20 @@ A variável `MediaPlayer` O fornece métodos para definir e obter o tempo de buf
    
    * Para definir o tempo de buffer inicial igual ao tempo de buffer de reprodução:
 
-      ```java
-      public static BufferControlParameters createSimple( 
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createSimple( 
+         long bufferTime)
+     ```
 
    * Para definir os tempos de buffer inicial e de reprodução:
 
-      ```java
-      public static BufferControlParameters createDual( 
-          long initialBuffer,   
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createDual( 
+         long initialBuffer,   
+         long bufferTime)
+     ```
 
-      Esses métodos lançam um `IllegalArgumentException` se os parâmetros não forem válidos, como quando:
+     Esses métodos lançam um `IllegalArgumentException` se os parâmetros não forem válidos, como quando:
 
    * O tempo de buffer inicial é menor que zero.
    * O tempo de buffer inicial é maior que o tempo de buffer.

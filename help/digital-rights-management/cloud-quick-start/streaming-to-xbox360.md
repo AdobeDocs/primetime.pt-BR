@@ -2,8 +2,7 @@
 title: Definir o token XSTS no reprodutor
 description: Definir o token XSTS no reprodutor
 copied-description: true
-exl-id: 1b83baac-e6a6-4e84-8ea5-07bd7e4afd9d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
@@ -67,7 +66,7 @@ Há etapas de configuração adicionais necessárias para oferecer suporte à de
 | Propriedade do sistema | Valor padrão | Comentário |
 |---|---|---|
 | xsts-keystore | xsts.jks | Armazenamento de chaves no formato JKS usado pelo validador. |
-| xsts-keystore-password |  | Senha para o keystore |
+| xsts-keystore-password | | Senha para o keystore |
 | xsts-alias | existe | Alias usado para recuperar a chave de descriptografia do keystore |
 | xsts-verify-cert-alias | xsts-verify-cert | Alias usado para recuperar o certificado de validação do armazenamento de chaves |
 

@@ -2,8 +2,7 @@
 description: O suporte para o atributo withCredentials em XMLHttpRequests permite que as solicitações de compartilhamento de recursos entre origens (CORS) incluam os cookies do domínio de destino para uma variedade de tipos de solicitação.
 keywords: CORS;origem cruzada;compartilhamento de recursos;cookies;withCredentials
 title: Compartilhamento de recursos entre origens
-exl-id: 02826c87-b0c6-495b-a17d-67c5693a9772
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%

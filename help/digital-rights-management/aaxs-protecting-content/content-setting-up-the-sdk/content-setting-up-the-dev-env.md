@@ -1,8 +1,7 @@
 ---
 description: Para configurar o Adobe® Access™ para uso, copie arquivos do DVD. Esses arquivos incluem arquivos JAR contendo código, certificados e classes de terceiros. Além disso, solicite um certificado da Adobe Systems Incorporated. Você receberá várias credenciais usadas para proteger a integridade do conteúdo empacotado, das licenças e da comunicação entre o cliente e o servidor.
 title: Configuração do ambiente de desenvolvimento
-exl-id: 66310fc8-7513-4aab-81d6-1370ce216cbf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Você deve configurar as propriedades do servidor para refletir seu ambiente. Você pode fazer isso usando qualquer um dos seguintes
 title: Aplicar propriedades a ambientes de servidor
-exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -17,14 +16,14 @@ Você deve configurar as propriedades do servidor para refletir seu ambiente. Vo
 
 * [!DNL AdobeInitial.properties] - Amostra localizada na [!DNL /shared] pasta no DVD
 
-   Você pode usar esse arquivo para substituir as propriedades definidas no arquivo WAR da seguinte maneira:
+  Você pode usar esse arquivo para substituir as propriedades definidas no arquivo WAR da seguinte maneira:
 
    1. Definir a substituição dos valores de propriedade no [!DNL AdobeInitial.properties]
    1. Local [!DNL AdobeInitial.properties] no classpath.
 
-   >[!NOTE]
-   >
-   >A Adobe recomenda que você use o [!DNL AdobeInitial.properties] arquivo, já que isso permite que você atualize seus arquivos WAR do aplicativo sem correr o risco de perder qualquer configuração de propriedade anterior que você tenha feito no [!DNL flashaccess-i15n.properties] arquivo.
+  >[!NOTE]
+  >
+  >A Adobe recomenda que você use o [!DNL AdobeInitial.properties] arquivo, já que isso permite que você atualize seus arquivos WAR do aplicativo sem correr o risco de perder qualquer configuração de propriedade anterior que você tenha feito no [!DNL flashaccess-i15n.properties] arquivo.
 
 * O mecanismo de propriedade do Sistema Java.
 
@@ -65,4 +64,4 @@ O servidor emprega essa ordem de pesquisa para propriedades:
 >[!NOTE]
 >
 >Você deve especificar o nome do ambiente do servidor como uma propriedade do Java System ao iniciar o servidor. Por exemplo, ao iniciar o Tomcat com [!DNL catalina.bat], defina o `CATALINA_OPTS` variável de ambiente da seguinte maneira:
->-DENVIRONMENT_NAME=[ DEV | ETAPA | PRODUÇÃO ]
+>-DENVIRONMENT_NAME=[DEV | ETAPA | PRODUÇÃO]

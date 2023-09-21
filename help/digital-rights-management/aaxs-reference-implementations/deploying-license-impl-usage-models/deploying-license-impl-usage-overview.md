@@ -2,8 +2,7 @@
 title: Implementar a visão geral dos modelos de uso
 description: Implementar a visão geral dos modelos de uso
 copied-description: true
-exl-id: 48e7db54-484f-4c46-9a4e-a51bae7c84b4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -46,11 +45,11 @@ Quando um usuário solicita uma licença, o servidor de implementação de refer
          * Se `CustomerAuthorization.UsageType` é `DTO`, gere uma licença para o *Baixar para Próprio* modelo de uso e envie-o para o usuário.
 
          * Se `CustomerAuthorization.UsageType` é `VOD`, gere uma licença para o *Vídeo sob demanda* modelo de uso e envie-o para o usuário.
+
    * Se nenhuma das políticas permitir acesso anônimo:
 
       * Se não houver um token de autenticação válido na solicitação, retorne um erro &quot;autenticação necessária&quot;.
       * Caso contrário, retorne um erro &quot;não autorizado&quot;.
-
 
 * Se uma das políticas permitir acesso anônimo, gere uma licença para o modelo de uso financiado por anúncio e envie-a para o usuário.
 

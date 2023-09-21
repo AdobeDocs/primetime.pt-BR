@@ -1,8 +1,7 @@
 ---
 description: O servidor de referência do SEES mostra como ativar o serviço de direito de ligação de dispositivos usando o ExpressPlay.
 title: Direito de vinculação de dispositivo do serviço de referência
-exl-id: 91f9d406-f3f9-47d3-aa50-f47c4e81b9fc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%

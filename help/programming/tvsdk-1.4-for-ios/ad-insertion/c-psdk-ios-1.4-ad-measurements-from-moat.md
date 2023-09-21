@@ -1,8 +1,7 @@
 ---
 description: O TVSDK obtém informações do FreeWheel e de outros adservers fornecendo respostas VAST. O FreeWheel fornece, dentro das respostas VAST, informações do serviço Moat. O serviço de Mat conta impressões de anúncios com uma precisão que mostra melhor que os criadores capturam ou negligenciam os interesses de um público-alvo.
 title: Medições de anúncios do Fosso
-exl-id: f8f68e0b-985c-43bb-878e-e24fed54e0c3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%

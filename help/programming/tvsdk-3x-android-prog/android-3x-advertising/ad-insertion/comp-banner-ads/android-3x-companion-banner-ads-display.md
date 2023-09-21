@@ -1,8 +1,7 @@
 ---
 description: Para exibir anúncios de banner, você precisa criar instâncias de banner e permitir que o TVSDK acompanhe eventos relacionados a anúncios.
 title: Exibir anúncios de banner
-exl-id: 3ccf6525-ffc1-4f45-a662-8b53cab0f448
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -29,9 +28,9 @@ Para cada anúncio complementar, o TVSDK indica quais tipos estão disponíveis 
    * Obtém a lista de anúncios complementares de `Ad.getCompanionAssets`.
    * Se a lista de anúncios complementares não estiver vazia, repita sobre a lista para instâncias de banner.
 
-      Cada instância do banner (uma `AdAsset`) contém informações, como largura, altura, tipo de recurso (html, iframe ou estático) e dados necessários para exibir o banner complementar.
+     Cada instância do banner (uma `AdAsset`) contém informações, como largura, altura, tipo de recurso (html, iframe ou estático) e dados necessários para exibir o banner complementar.
    * Se um anúncio de vídeo não tiver anúncios complementares reservados com ele, a lista de ativos complementares não conterá dados para esse anúncio de vídeo.
    * Para mostrar um anúncio de exibição independente, adicione a lógica ao script para executar uma tag de anúncio de exibição DFP (DoubleClick for Publishers) normal na instância de banner apropriada.
    * Envia as informações do banner para uma função na página que exibe os banners no local apropriado.
 
-      Isso geralmente é um `div`, e sua função usa o `div ID` para exibir o banner.
+     Isso geralmente é um `div`, e sua função usa o `div ID` para exibir o banner.

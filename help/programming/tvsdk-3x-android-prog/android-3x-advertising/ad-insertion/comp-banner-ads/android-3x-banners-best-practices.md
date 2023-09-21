@@ -2,8 +2,7 @@
 title: Práticas recomendadas para anúncios de banner complementares
 description: Práticas recomendadas para anúncios de banner complementares
 copied-description: true
-exl-id: e7d15916-9059-4993-a588-baf7d7ddc534
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
@@ -19,9 +18,9 @@ Ao exibir anúncios complementares, siga estas recomendações:
 * Tente apresentar quantos anúncios de banner complementares de um anúncio de vídeo couberem no layout do reprodutor.
 * Apresente um banner complementar somente se você tiver um local que corresponda à altura e à largura especificadas do anúncio.
 
-   >[!IMPORTANT]
-   >
-   >Não redimensione o anúncio.
+  >[!IMPORTANT]
+  >
+  >Não redimensione o anúncio.
 
 * Comece a apresentar os banner(s) complementar(es) o mais rápido possível após o início do anúncio.
 * Não sobreponha o container principal de anúncios/vídeos com banners complementares.

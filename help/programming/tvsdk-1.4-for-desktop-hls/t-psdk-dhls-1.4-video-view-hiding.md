@@ -1,8 +1,7 @@
 ---
 description: Depois que uma visualização do MediaPlayer for usada para reproduzir o vídeo, você poderá ocultá-lo e exibi-lo novamente usando um método TVSDK ou manualmente.
 title: Ocultar uma visualização de vídeo
-exl-id: 92354cd3-f0ed-4434-a7af-a3545e0e2460
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -22,9 +21,9 @@ Você deve pausar um vídeo antes de limpá-lo ou movê-lo da exibição.
    * Pausar o vídeo que você deseja ocultar.
    * Mova a exibição para fora do estágio. Por exemplo:
 
-      ```
-      view.x = -300; 
-      view.y = -300;
-      ```
+     ```
+     view.x = -300; 
+     view.y = -300;
+     ```
 
    * Para exibir o vídeo novamente, mova a exibição de volta para o palco.

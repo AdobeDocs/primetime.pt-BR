@@ -1,8 +1,7 @@
 ---
 description: Você pode usar o Adobe Offline Packager para preparar conteúdo para qualquer solução DRM compatível com o Primetime Cloud DRM, habilitado pelo ExpressPlay.
 title: Primetime Packager / Cloud DRM / TVSDK
-exl-id: 2055c18b-62de-41bf-9644-f366609e0198
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
@@ -23,11 +22,11 @@ Este conjunto de instruções supõe que você já tenha configurado uma conta d
 
    * Uso do KMS do ExpressPlay ( [Armazenamento de chaves ExpressPlay](https://www.expressplay.com/developer/key-storage/)); esse sistema gerencia suas chaves de conteúdo por meio da API RESTful do ExpressPlay.
 
-      ou...
+     ou...
 
    * Configure seu próprio KMS. Crie um banco de dados de chaves de conteúdo, selecionável pelo ID de conteúdo.
 
-      Em ambos os casos, o KMS gerencia um fornecimento de chaves de conteúdo, com cada chave tendo uma ID de conteúdo associada.
+     Em ambos os casos, o KMS gerencia um fornecimento de chaves de conteúdo, com cada chave tendo uma ID de conteúdo associada.
 
 1. Empacotar o conteúdo. Com o Primetime Packager, é possível disponibilizar um pacote de conteúdo para uma solução de DRM específica ou para várias soluções de DRM.
 
@@ -35,41 +34,41 @@ Este conjunto de instruções supõe que você já tenha configurado uma conta d
 
    * [Widevine com Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19) (gera arquivo MPD):
 
-      ```
-      java -jar OfflinePackager.jar \ 
-        -in_path [ 
-        <your_content.mp4>] \ 
-        -out_type dash \ 
-        -out_path [ 
-        <your_out_file_path>] \ 
-        -drm \ 
-        -drm_sys WIDEVINE \ 
-        -key_file_path "creds/widevine_key.bin" \ 
-        -widevine_key_id [ 
-        <some_keyID>] \ 
-        -widevine_content_id [ 
-        <some_content-ID] \ 
-        -widevine_header provider:intertrust#content_id:2a
-      ```
+     ```
+     java -jar OfflinePackager.jar \ 
+       -in_path [ 
+       <your_content.mp4>] \ 
+       -out_type dash \ 
+       -out_path [ 
+       <your_out_file_path>] \ 
+       -drm \ 
+       -drm_sys WIDEVINE \ 
+       -key_file_path "creds/widevine_key.bin" \ 
+       -widevine_key_id [ 
+       <some_keyID>] \ 
+       -widevine_content_id [ 
+       <some_content-ID] \ 
+       -widevine_header provider:intertrust#content_id:2a
+     ```
 
    * [FairPlay com Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=20) (Gera um arquivo M3U8):
 
-      ```
-      java -jar OfflinePackager.jar  
-        -in_path [ 
-        <your_content.mp4>]  
-        -out_type hls  
-        -out_path [ 
-        <your_out_file_path>]  
-        -drm  
-        -drm_sys FAIRPLAY  
-        -key_file_path "creds/fairplay_key.bin"  
-        -key_url "user_provided_value"
-      ```
+     ```
+     java -jar OfflinePackager.jar  
+       -in_path [ 
+       <your_content.mp4>]  
+       -out_type hls  
+       -out_path [ 
+       <your_out_file_path>]  
+       -drm  
+       -drm_sys FAIRPLAY  
+       -key_file_path "creds/fairplay_key.bin"  
+       -key_url "user_provided_value"
+     ```
 
-      >[!NOTE]
-      >
-      >A variável `key_url` é copiado como está no arquivo M3U8.
+     >[!NOTE]
+     >
+     >A variável `key_url` é copiado como está no arquivo M3U8.
 
 1. Crie um &quot;servidor de vitrine&quot;.
 

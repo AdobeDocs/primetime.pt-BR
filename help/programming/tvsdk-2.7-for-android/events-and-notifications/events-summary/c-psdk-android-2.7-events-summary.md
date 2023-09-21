@@ -1,8 +1,7 @@
 ---
 description: Seu aplicativo pode monitorar a atividade no reprodutor e a alteração do status do reprodutor ouvindo os eventos despachados pelo TVSDK.
 title: Resumo de eventos do player do Primetime
-exl-id: 42489abe-ccaf-4b40-bb4b-de8547b5585a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%

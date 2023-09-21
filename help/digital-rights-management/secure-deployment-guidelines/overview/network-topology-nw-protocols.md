@@ -1,8 +1,7 @@
 ---
 description: Quando você configura uma arquitetura de rede segura, os protocolos de rede são necessários para a interação entre o Adobe Primetime DRM e outros sistemas da rede corporativa.
 title: Protocolos de rede DRM da Adobe Primetime
-exl-id: d5720ef4-6845-4a62-940a-9d8ba9b43b13
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%

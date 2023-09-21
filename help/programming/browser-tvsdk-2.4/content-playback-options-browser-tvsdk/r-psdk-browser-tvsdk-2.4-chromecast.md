@@ -1,8 +1,7 @@
 ---
 description: Você pode converter qualquer um dos fluxos de um aplicativo de remetente baseado em TVSDK e reproduzir o fluxo no Chromecast com o TVSDK do navegador.
 title: Aplicativo Google Cast para TVSDK do navegador
-exl-id: 71077467-8040-4f04-a43b-cc963701c426
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -19,12 +18,12 @@ Há dois componentes de um aplicativo habilitado para Conversão:
 
 * O aplicativo do remetente, que atua como controle remoto.
 
-   Os aplicativos de remetente incluem smartphones, computadores pessoais e assim por diante. O aplicativo pode ser desenvolvido usando SDKs nativos para iOS, Android e Chrome.
+  Os aplicativos de remetente incluem smartphones, computadores pessoais e assim por diante. O aplicativo pode ser desenvolvido usando SDKs nativos para iOS, Android e Chrome.
 * O aplicativo receptor, que é executado no Chromecast e reproduz o conteúdo.
 
-   >[!IMPORTANT]
-   >
-   >Este aplicativo só pode ser um aplicativo HTML5.
+  >[!IMPORTANT]
+  >
+  >Este aplicativo só pode ser um aplicativo HTML5.
 
 O remetente e o destinatário se comunicam usando os SDKs de conversão para enviar mensagens.
 
@@ -67,18 +66,18 @@ Para estabelecer uma conexão, o remetente e o destinatário devem concluir as s
 * O remetente deve revisar a documentação da plataforma em [Desenvolvimento de aplicativo do remetente](https://developers.google.com/cast/docs/sender_apps).
 * O receptor usa as APIs do receptor Cast para estabelecer uma conexão com o aplicativo do remetente. Por exemplo:
 
-   ```js
-   window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance(); 
-   
-   window.castReceiverManager.onReady = function (event) { /*handle event*/ }; 
-   window.castReceiverManager.onSenderConnected = function (event) { /*handle event*/ }; 
-   window.castReceiverManager.onSenderDisconnected = function (event) { /*handle event*/ }; 
-   
-   var customMessageBus = window.castReceiverManager.getCastMessageBus(MSG_NAMESPACE); 
-   customMessageBus.onMessage = function (event) { /*handle messages*/ }; 
-   
-   window.castReceiverManager.start(); 
-   ```
+  ```js
+  window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance(); 
+  
+  window.castReceiverManager.onReady = function (event) { /*handle event*/ }; 
+  window.castReceiverManager.onSenderConnected = function (event) { /*handle event*/ }; 
+  window.castReceiverManager.onSenderDisconnected = function (event) { /*handle event*/ }; 
+  
+  var customMessageBus = window.castReceiverManager.getCastMessageBus(MSG_NAMESPACE); 
+  customMessageBus.onMessage = function (event) { /*handle messages*/ }; 
+  
+  window.castReceiverManager.start(); 
+  ```
 
 ## Tratamento de mensagens {#section_3E4814546F5946C9B3E7A1AE384B4FF8}
 

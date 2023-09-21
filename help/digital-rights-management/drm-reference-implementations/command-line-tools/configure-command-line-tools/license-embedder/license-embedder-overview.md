@@ -2,8 +2,7 @@
 title: Visão geral
 description: Visão geral
 copied-description: true
-exl-id: 9aebdbd0-a6f0-4c9d-be2f-a8789cadf287
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -23,7 +22,7 @@ java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
 * `sourcefile` representa um arquivo criptografado.
 * `destfile` especifica o nome do arquivo no qual o conteúdo criptografado com a licença incorporada é salvo.
 
-   Se você especificar um diretório, o arquivo será salvo no diretório de destino. O nome do arquivo de origem também se torna o nome do arquivo salvo no diretório de destino.
+  Se você especificar um diretório, o arquivo será salvo no diretório de destino. O nome do arquivo de origem também se torna o nome do arquivo salvo no diretório de destino.
 
 A tabela a seguir descreve as opções de linha de comando que você pode especificar:
 

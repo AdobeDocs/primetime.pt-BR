@@ -2,8 +2,7 @@
 title: Sobre as implementações de referência
 description: Sobre as implementações de referência
 copied-description: true
-exl-id: fe387330-9449-4977-be15-069c814354bf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -27,7 +26,7 @@ As implementações de referência de DRM do Primetime incluem estes componentes
 
 * **As implementações de referência do DRM do Primetime** - O assunto deste guia, essa implementação de referência apresenta um servidor de licença DRM robusto que mostra todos os recursos fornecidos pelo SDK DRM do Primetime. Essa implementação é fornecida com o código-fonte e instruções para a criação do código. Esta implementação não se destina a ser usada como está (embora uma [!DNL .war] arquivo que você pode implantar rapidamente). Ela serve principalmente como uma referência que você pode usar para criar seu próprio servidor de licença personalizado.
 
-   Recursos do Servidor de Licença:
+  Recursos do Servidor de Licença:
 
    * Gerencia solicitações de autenticação usando um banco de dados para validar o nome de usuário/senha.
    * Gerencia solicitações de licença e determina o tipo de licença que está sendo emitida quando o encadeamento de licenças é aplicado.
@@ -41,13 +40,13 @@ As implementações de referência de DRM do Primetime incluem estes componentes
    * Criptografa senhas especificadas em um arquivo de propriedades.
    * Especifica várias credenciais de servidor de licença ou de transporte após a renovação das credenciais.
 
-      As credenciais antigas são mantidas no servidor para que os usuários possam continuar a exibir o conteúdo existente sem precisar reempacotar.
+     As credenciais antigas são mantidas no servidor para que os usuários possam continuar a exibir o conteúdo existente sem precisar reempacotar.
    * Restringe as versões de DRM/Runtime que têm permissão para fazer solicitações a um servidor de licença.
    * Define as preferências do windback do relógio do cliente.
    * Restringe a diferença de tempo permitida entre o horário da solicitação e o horário do servidor para impedir ataques de repetição.
    * Gerencia solicitações de clientes do FMRMS 1.x
 
-      Por exemplo, o cliente FMRMS 1.x é acionado para atualizar para o Primetime DRM 2.0 ou posterior.
+     Por exemplo, o cliente FMRMS 1.x é acionado para atualizar para o Primetime DRM 2.0 ou posterior.
    * Converte metadados FMRMS 1.x em metadados DRM do Primetime sob demanda usando informações de licença do FMRMS 1.x armazenadas em um banco de dados.
    * Converte políticas FMRMS 1.x em políticas DRM do Primetime para código de amostra.
    * Importa informações de licença do FMRMS 1.x de um banco de dados existente para scripts de exemplo.

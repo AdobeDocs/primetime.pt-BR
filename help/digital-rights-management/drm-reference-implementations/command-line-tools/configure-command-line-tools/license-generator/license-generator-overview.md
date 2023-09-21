@@ -2,8 +2,7 @@
 title: Visão geral
 description: Visão geral
 copied-description: true
-exl-id: ba6e8fab-b199-4969-b372-06fa6d7a1e4a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
@@ -30,7 +29,7 @@ java -jar AdobeLicenseGenerator.jar -m
 
 * `metadata` - Inclui os metadados de DRM do Adobe Primetime.
 
-   Você pode recuperar esse arquivo do conteúdo protegido com o `-d -m` opções no Media Packager.
+  Você pode recuperar esse arquivo do conteúdo protegido com o `-d -m` opções no Media Packager.
 
 **Exibir uma licença gerada anteriormente:**
 

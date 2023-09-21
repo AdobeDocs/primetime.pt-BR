@@ -1,8 +1,7 @@
 ---
 description: Em dispositivos que oferecem suporte à aceleração GPU (hardware), você pode usar um objeto flash.media.StageVideo para processar o vídeo no hardware do dispositivo. A disponibilidade do StageVideo depende das versões e dos recursos de diferentes partes do sistema, incluindo Flash Player, hardware de vídeo, SO, drivers, navegador, conexão de rede e contexto de visualização.
 title: Recursos e restrições do StageVideo
-exl-id: 228ea2d0-5950-43f5-8cfd-640d1c482b05
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
@@ -19,9 +18,9 @@ A variável `StageVideo` A classe permite que você aproveite a aceleração de 
 
    * *Flash 15 e posterior* - Quando a aceleração de hardware não estiver disponível, `StageVideo` O retorna ao software e você não precisa fazer nada.
 
-      >[!TIP]
-      >
-      >Quando a aceleração de hardware não estiver disponível, o desempenho poderá ser significativamente reduzido.
+     >[!TIP]
+     >
+     >Quando a aceleração de hardware não estiver disponível, o desempenho poderá ser significativamente reduzido.
 
    * *Flash 14 e anterior* - Quando a aceleração de hardware não estiver disponível, `StageVideo` fica indisponível. Em um pequeno conjunto de configurações em que a aceleração de hardware não é suportada pelo navegador ou pela GPU, ou está desativada no Flash Player, a exibição de vídeo com a pilha HLS TVSDK falhará. No *HDS* pipeline, você pode alternar de `StageVideo` a uma alternativa, como o objeto Video, que processa o vídeo na CPU.
 
@@ -29,9 +28,9 @@ A variável `StageVideo` A classe permite que você aproveite a aceleração de 
 
 * **wmode** - No contexto do navegador, a variável `wmode` A configuração é essencial para o desempenho. O Adobe recomenda manter `wmode` definir como `direct` para garantir o melhor desempenho possível no contexto do navegador.
 
-   >[!NOTE]
-   >
-   >A combinação de fatores que incluem `wmode`, `StageVideo`e o Flash resultam em diferentes recursos e restrições, dependendo da velocidade de execução do hardware e da versão do Flash que você está usando.
+  >[!NOTE]
+  >
+  >A combinação de fatores que incluem `wmode`, `StageVideo`e o Flash resultam em diferentes recursos e restrições, dependendo da velocidade de execução do hardware e da versão do Flash que você está usando.
 
    * *Flash 15 e posterior* - `StageVideo` está disponível com todos os disponíveis `wmode` configurações. No entanto, se você definir `wmode` para uma configuração diferente de `direct`, o desempenho será menor.
 

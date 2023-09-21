@@ -1,8 +1,7 @@
 ---
 description: Em dispositivos que oferecem suporte à aceleração GPU (hardware), você pode usar um objeto flash.media.StageVideo para processar o vídeo diretamente no hardware do dispositivo.
 title: Requisitos mínimos do StageVideo
-exl-id: f401682d-c47d-4284-8832-293515a76581
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%

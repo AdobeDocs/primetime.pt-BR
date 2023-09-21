@@ -1,8 +1,7 @@
 ---
 title: Autenticação baseada em casa para TV em todos os lugares
 description: Autenticação baseada em casa para TV em todos os lugares
-exl-id: abdc7724-4290-404a-8f93-953662cdc2bc
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 0%
@@ -151,7 +150,7 @@ Para obter mais informações sobre os MVPDs que oferecem suporte à Autenticaç
 
 * [Recommendations de acesso instantâneo (HBA)](http://www.ctamtve.com/instantaccess){target=_blank} - pela CTAM
 * [Exemplo de implementação de HBA no aplicativo Programador](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/HBA_Flow_Sample.pdf?dc=201604222139-1346){target=_blank} - por Adobe
-   <!--* [Home Based Authentication User Experience Guidelines for TV Everywhere](http://oatc.us/Standards/DownloadRecommendedPractices.aspx){target=_blank} - by OATC-->
+  <!--* [Home Based Authentication User Experience Guidelines for TV Everywhere](http://oatc.us/Standards/DownloadRecommendedPractices.aspx){target=_blank} - by OATC-->
 * [Casos de uso e requisitos da autenticação baseada em casa](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/Defining%20TVE%20Home-Based%20Authentication%20(HBA)%20%20Use%20Cases%20and%20Requirements%20Recommended%20Practice%20Version%201_0%20FINAL%20DRAFT%20FOR%20BOARD%20APPROVAL.pdf){target=_blank} pela OATC
 * [Infográfico de autenticação baseado em casa](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf?dc=201604260953-2640){target=_blank} - por Adobe
 * [Autenticação usando o protocolo OAuth 2.0](/help/authentication/authn-oauth2-protocol.md)

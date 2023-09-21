@@ -1,8 +1,7 @@
 ---
 description: Esta seção descreve os recursos disponíveis com diferentes versões do Flash Player e TVSDK.
 title: Suporte a cliente RBOP
-exl-id: 1120587e-45cf-45cc-8b41-1886ab2ed2a4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
@@ -23,11 +22,10 @@ Esta seção descreve os recursos disponíveis com diferentes versões do Flash 
 >
 >* Todas as plataformas móveis e de Flash suportam o Despacho de Erros, no entanto, apenas os clientes TVSDK listados acima processam erros relacionados a RBOP.
 >* Relacionados com RBOP [Erros de cliente DRM](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages):
-   >    * **3371** - Resolução malformada com base em restrições de proteção de saída na licença.
-   >    * **3372** - A resolução do conteúdo é maior que a resolução máxima especificada na restrição de proteção de saída. (Isso pode ocorrer se alguém tentar injetar conteúdo destinado a outro dispositivo.)
-   >    * **3373** - A resolução do conteúdo é maior do que a resolução especificada pela restrição de proteção de saída atualmente ativa. (Isso significa que teremos que fazer downgrade.)
+>    * **3371** - Resolução malformada com base em restrições de proteção de saída na licença.
+>    * **3372** - A resolução do conteúdo é maior que a resolução máxima especificada na restrição de proteção de saída. (Isso pode ocorrer se alguém tentar injetar conteúdo destinado a outro dispositivo.)
+>    * **3373** - A resolução do conteúdo é maior do que a resolução especificada pela restrição de proteção de saída atualmente ativa. (Isso significa que teremos que fazer downgrade.)
 >
-
 
 **Downscaling automático** - A técnica usada para fazer downscale varia de acordo com a plataforma e a versão do Flash Player:
 

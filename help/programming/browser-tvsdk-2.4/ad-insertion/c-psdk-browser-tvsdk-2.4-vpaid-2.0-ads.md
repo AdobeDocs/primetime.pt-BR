@@ -1,8 +1,7 @@
 ---
 description: A definição de interface de veiculação de anúncios do reprodutor de vídeo (VPAID) 2.0 fornece uma interface comum para reproduzir anúncios de vídeo. Ele oferece uma experiência de mídia avançada para os usuários e permite que os editores direcionem anúncios de maneira mais eficaz, rastreiem impressões de anúncios e monetizem conteúdo de vídeo.
 title: Suporte a anúncios VPAID 2.0
-exl-id: ea3dcd1d-c4e2-46c6-b613-e86c3e161ca8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -17,13 +16,13 @@ Os seguintes recursos são compatíveis:
 
 * Versão 2.0 da especificação VPAID
 
-   Para obter mais informações, consulte [IAB VPAID 2.0](https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/).
+  Para obter mais informações, consulte [IAB VPAID 2.0](https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/).
 * Anúncios lineares de VPAID com conteúdo de vídeo sob demanda (VOD)
 * No conteúdo Ao vivo, o TVSDK do navegador é compatível com anúncios JavaScript VPAID precedentes.
 * No modo de fallback do Flash, o TVSDK do navegador é compatível somente com anúncios VPAID baseados em Flashes.
 * Anúncios JavaScript VPAID lineares
 
-   Os anúncios VPAID devem ser baseados em JavaScript e a resposta do anúncio deve identificar o tipo de mídia do anúncio VPAID como `application/javascript`.
+  Os anúncios VPAID devem ser baseados em JavaScript e a resposta do anúncio deve identificar o tipo de mídia do anúncio VPAID como `application/javascript`.
 
 Os seguintes recursos não são suportados:
 
@@ -40,13 +39,13 @@ Os seguintes elementos de API são compatíveis com anúncios VPAID 2.0:
 
 * A variável `getCustomAdView` método de `MediaPlayer` retorna um `CustomAdView` objeto, que representa a exibição da Web que renderiza o anúncio VPAID.
 
-   Para obter mais informações sobre o `getCustomAdView` , consulte [Documentação da API do MediaPlayer](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
+  Para obter mais informações sobre o `getCustomAdView` , consulte [Documentação da API do MediaPlayer](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` define o tempo limite no processo de carregamento de VPAID.
 
-   O valor de tempo limite padrão é de 10 segundos.
+  O valor de tempo limite padrão é de 10 segundos.
 
-* A API, `auditudeSettings.ignoreVPAIDAds`, permite ignorar anúncios VPAID recebidos do servidor do Auditude. A API não funciona para o fallback do Flash.
+* A API, `auditudeSettings.ignoreVPAIDAds`, permite ignorar anúncios VPAID recebidos do servidor Auditude. A API não funciona para o fallback do Flash.
 
 Enquanto o anúncio VPAID está sendo reproduzido:
 
@@ -54,4 +53,4 @@ Enquanto o anúncio VPAID está sendo reproduzido:
 * Chamadas para pausar e reproduzir na instância do player pausar e retomar o anúncio VPAID.
 * Os anúncios VPAID não têm uma duração predefinida, pois o anúncio pode ser interativo.
 
-   A duração do anúncio e a duração total do ad break especificadas na resposta do servidor de publicidade podem não ser precisas.
+  A duração do anúncio e a duração total do ad break especificadas na resposta do servidor de publicidade podem não ser precisas.

@@ -1,8 +1,7 @@
 ---
 description: O TVSDK é compatível com a exclusão e substituição programática de conteúdo de anúncios em fluxos VOD.
 title: Operações de intervalo de tempo personalizado
-exl-id: 5480b22a-ecff-4fd8-9ec0-40e4a2e97641
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%

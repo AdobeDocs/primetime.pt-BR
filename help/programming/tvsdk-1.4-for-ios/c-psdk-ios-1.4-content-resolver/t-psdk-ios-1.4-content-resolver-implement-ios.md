@@ -1,8 +1,7 @@
 ---
 description: Você pode implementar seus resolvedores com base nos resolvedores padrão.
 title: Implementar um resolvedor de oportunidades/conteúdo personalizado
-exl-id: f2a8512f-9f6c-4fd9-8694-32132cddc7d2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -63,11 +62,12 @@ Você pode implementar seus resolvedores com base nos resolvedores padrão.
 
          * A `CMTimeRange` com a hora de início e a duração da interrupção.
 
-            É definida como a propriedade de intervalo de `PTAdBreak`.
+           É definida como a propriedade de intervalo de `PTAdBreak`.
 
          * `NSArray` de `PTAd`s
 
-            É definida como a propriedade de anúncios de `PTAdBreak`.
+           É definida como a propriedade de anúncios de `PTAdBreak`.
+
    * A `PTAd` representa o anúncio e cada `PTAd` tem o seguinte:
 
       * A `PTAdHLSAsset` defina como a propriedade principal do ativo do anúncio.

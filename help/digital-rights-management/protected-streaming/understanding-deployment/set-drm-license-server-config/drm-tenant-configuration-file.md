@@ -1,8 +1,7 @@
 ---
 description: O arquivo de configuração flashaccess-tenant.xml inclui configurações que se aplicam a um locatário específico do servidor de licenças.
 title: Arquivo de configuração do inquilino
-exl-id: 35ec521f-ba17-4a2d-8adb-82b2c6cbe33a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 0%
@@ -21,11 +20,11 @@ O arquivo de configuração do locatário inclui:
 
 * *Credencial de transporte* — Especifica uma ou mais credenciais de transporte (certificado e chave privada) emitidas pelo Adobe. Pode ser especificado como um caminho para um [!DNL .pfx] arquivo e uma senha ou um alias para uma credencial armazenada em um HSM. Várias dessas credenciais podem ser especificadas aqui, como caminhos de arquivo, aliases de chave ou ambos.
 
-   Consulte *Lidar com atualizações de certificado* in *Utilização do SDK do Adobe Primetime DRM para proteção de conteúdo* para obter mais informações sobre quando credenciais adicionais são necessárias.
+  Consulte *Lidar com atualizações de certificado* in *Utilização do SDK do Adobe Primetime DRM para proteção de conteúdo* para obter mais informações sobre quando credenciais adicionais são necessárias.
 
 * *Credencial do Servidor de Licença* — Especifica uma ou mais credenciais de servidor de licença (certificado e chave privada) emitidas pelo Adobe. Você pode especificar as credenciais do servidor de licenças como um caminho para um [!DNL .pfx] arquivo e uma senha ou um alias para uma credencial armazenada em um HSM. Várias dessas credenciais podem ser especificadas aqui, como caminhos de arquivo, aliases de chave ou ambos.
 
-   Consulte *Lidar com atualizações de certificado* in *Utilização do SDK do Adobe Primetime DRM para proteção de conteúdo* para obter mais informações sobre quando credenciais adicionais são necessárias.
+  Consulte *Lidar com atualizações de certificado* in *Utilização do SDK do Adobe Primetime DRM para proteção de conteúdo* para obter mais informações sobre quando credenciais adicionais são necessárias.
 
 * *Certificados-chave do servidor* — Especifica opcionalmente o certificado de Servidor de chaves do License Server emitido pelo Adobe. Você pode especificar o certificado do Servidor de chaves como um caminho para um [!DNL .cer] arquivo ou um alias para um certificado armazenado em um HSM. Essa opção deve ser especificada para emitir licenças para conteúdo que é empacotado com uma política DRM que requer a entrega remota de chaves para dispositivos iOS.
 
@@ -37,34 +36,33 @@ O arquivo de configuração do locatário inclui:
 
    * *Licença de cache* — Especifica opcionalmente por quanto tempo você pode armazenar a licença no cliente. Por padrão, o armazenamento em cache de licenças está desativado. Para habilitar o cache de licenças por um período limitado, é necessário definir a data final ou o número de segundos para o qual a licença deve ser armazenada (começando com a emissão). Definir o número de segundos como 0 desativa o cache de licenças.
 
-      >[!NOTE]
-      >
-      >Todas as licenças emitidas pelo Server for Protected Streaming incluem um período de expiração de 24 horas (86.400 segundos). Esse valor se aplica implicitamente como um limite superior a qualquer data final ou duração definida para o armazenamento em cache de licença, com um valor máximo de 86.400 segundos, mesmo que o esquema imponha limites mais altos.
+     >[!NOTE]
+     >
+     >Todas as licenças emitidas pelo Server for Protected Streaming incluem um período de expiração de 24 horas (86.400 segundos). Esse valor se aplica implicitamente como um limite superior a qualquer data final ou duração definida para o armazenamento em cache de licença, com um valor máximo de 86.400 segundos, mesmo que o esquema imponha limites mais altos.
 
    * *Reproduzir à direita* — É necessário especificar no mínimo um direito. Se você especificar vários direitos, o cliente usará o primeiro direito que atender a todos os requisitos.
 
       * *Proteção de saída* — Controla se a saída para dispositivos de renderização externos deve ser protegida.
       * *Restrições a aplicativos AIR e SWF* — lista de permissões opcional de aplicativos SWF e AIR que possam reproduzir o conteúdo (por exemplo, somente os aplicativos especificados são permitidos). Os aplicativos SWF são identificados por um URL ou pelo resumo do SWF e pelo tempo máximo para permitir o download e a verificação do resumo.
 
-         Consulte *Calculadora de hash SWF* para obter informações sobre como calcular o resumo de SWF.
+        Consulte *Calculadora de hash SWF* para obter informações sobre como calcular o resumo de SWF.
 
-         Uma ID de editor e uma ID de aplicativo opcional, a versão mínima e a versão máxima identificam os aplicativos AIR e iOS. Se você não especificar restrições de aplicativos, qualquer aplicativo SWF ou AIR poderá reproduzir o conteúdo.
+        Uma ID de editor e uma ID de aplicativo opcional, a versão mínima e a versão máxima identificam os aplicativos AIR e iOS. Se você não especificar restrições de aplicativos, qualquer aplicativo SWF ou AIR poderá reproduzir o conteúdo.
 
       * *Restrições de DRM e Módulo de Tempo de Execução* — Especifica o nível de segurança mínimo necessário para o módulo DRM/Runtime. Opcionalmente, inclui uma lista de bloqueios de versões que não têm permissão para reproduzir o conteúdo. As versões de módulos são identificadas por atributos, como sistema operacional e/ou um número de versão.
 
-         Restrições do Módulo DRM e Restrições do Módulo de Tempo de Execução agora oferecem suporte aos seguintes atributos adicionais:
+        Restrições do Módulo DRM e Restrições do Módulo de Tempo de Execução agora oferecem suporte aos seguintes atributos adicionais:
 
          * `oemVendor`
          * `model`
          * `screenType`
 
-         Os seguintes atributos agora são opcionais:
+        Os seguintes atributos agora são opcionais:
 
          * `osVersion`
          * `version`
+
       * *Requisitos de capacidade do dispositivo* — especifica opcionalmente os recursos de hardware necessários para acessar o conteúdo.
       * *Requisitos de detecção de jailbreak* — Especifica opcionalmente que a reprodução não é permitida em dispositivos nos quais o jailbreak é detectado.
-
-
 
 Consulte os comentários no arquivo de configuração de locatário de exemplo para obter mais detalhes.

@@ -2,8 +2,7 @@
 title: Exigências para publicidade
 description: Exigências para publicidade
 copied-description: true
-exl-id: 906f4910-396c-4909-8e22-119486ed13a0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -27,4 +26,4 @@ Para incorporar anúncios no seu conteúdo de vídeo, verifique se o conteúdo d
 * Se o conteúdo principal for MBR (multiple bit rate), o conteúdo de publicidade também deverá ser MBR.
 * Se o conteúdo principal tiver faixas de áudio alternativas, cada anúncio deve ter pelo menos um fluxo somente de áudio.
 
-   Se o anúncio não tiver pelo menos um fluxo somente de áudio, o anúncio será ignorado.
+  Se o anúncio não tiver pelo menos um fluxo somente de áudio, o anúncio será ignorado.

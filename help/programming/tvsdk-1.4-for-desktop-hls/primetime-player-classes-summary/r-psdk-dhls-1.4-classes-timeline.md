@@ -1,8 +1,7 @@
 ---
 description: Essas classes fornecem informações sobre a linha do tempo de uma mídia específica, incluindo a colocação de anúncios.
 title: Classes de linha do tempo
-exl-id: 8382fff2-0f10-4a8c-9c0c-66d26fe18938
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
@@ -49,7 +48,7 @@ Pacote: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/ap
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/Timeline.html" format="html" scope="external"> Linha do tempo </a> </span> </td> 
-   <td colname="2"> Interface que fornece um iterador para processamento de marcadores de linha do tempo. Representa a linha do tempo do conteúdo, incluindo ad breaks. </td> 
+   <td colname="2"> Interface que fornece um iterador para o processamento de marcadores de linha do tempo. Representa a linha do tempo do conteúdo, incluindo ad breaks. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> ItemDaLinhaDoTempo </a> </span> </td> 

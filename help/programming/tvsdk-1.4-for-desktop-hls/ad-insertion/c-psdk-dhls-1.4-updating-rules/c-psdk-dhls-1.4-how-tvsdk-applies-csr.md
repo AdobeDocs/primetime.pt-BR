@@ -2,8 +2,7 @@
 title: Aplicação de regras de seleção criativa
 description: Aplicação de regras de seleção criativa
 copied-description: true
-exl-id: 756de2e8-ffd0-46f6-9ebc-27e52c5c7b74
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%

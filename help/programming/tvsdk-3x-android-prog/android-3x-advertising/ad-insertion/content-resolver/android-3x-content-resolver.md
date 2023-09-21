@@ -1,8 +1,7 @@
 ---
 description: Um gerador de oportunidades identifica oportunidades de posicionamento por tags personalizadas em um fluxo, marcadores personalizados do modo de sinalização e assim por diante. O gerador de oportunidades envia essas oportunidades de posicionamento para o resolvedor de conteúdo, que personaliza o fluxo de trabalho de inserção de conteúdo/anúncio com base nas propriedades e nos metadados da oportunidade de posicionamento.
 title: Personalizar geradores de oportunidades e resolvedores de conteúdo
-exl-id: 5d0ebaa6-4708-4602-b9d7-882c389fb030
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%

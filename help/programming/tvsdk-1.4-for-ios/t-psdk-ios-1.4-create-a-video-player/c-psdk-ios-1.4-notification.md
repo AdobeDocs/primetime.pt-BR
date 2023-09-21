@@ -1,8 +1,7 @@
 ---
 description: O reprodutor pode acompanhar um intervalo de eventos que indicam o estado do reprodutor.
 title: Configurar notificações
-exl-id: 591513af-c50c-42a9-8ea7-8d5dd1f51aa5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Quando os usuários avançam ou retrocedem rapidamente pela mídia, eles estão no modo de execução. Para entrar no modo de execução de truque, é necessário definir a taxa de reprodução do MediaPlayer para um valor diferente de 1.
 title: Implementar avanço e retrocesso rápidos
-exl-id: 21f9a3f6-1cae-4240-991d-c03a0e49adf3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 0%
@@ -20,7 +19,6 @@ Quando os usuários avançam ou retrocedem rapidamente pela mídia, eles estão 
 >* Ao alternar do conteúdo principal para um anúncio, o TVSDK do navegador deixa o modo de reprodução artificial.
 >
 
-
 Para alternar a velocidade, você deve definir um valor.
 
 1. Mova do modo de reprodução normal (1x) para o modo de truque de reprodução, definindo a taxa no `MediaPlayer` para um valor permitido.
@@ -28,23 +26,23 @@ Para alternar a velocidade, você deve definir um valor.
    * A variável `MediaPlayerItem` define as taxas de reprodução permitidas.
    * O TVSDK do navegador seleciona a taxa permitida mais próxima se a taxa especificada não for permitida.
 
-      A seguinte função de exemplo define a taxa:
+     A seguinte função de exemplo define a taxa:
 
-      ```js
-      setTrickPlayRate = function (player, trickPlayRate) { 
-                    player.rate = trickPlayRate; 
-      }
-      ```
+     ```js
+     setTrickPlayRate = function (player, trickPlayRate) { 
+                   player.rate = trickPlayRate; 
+     }
+     ```
 
-      A seguinte função de exemplo pode ser usada para consultar as taxas de reprodução disponíveis:
+     A seguinte função de exemplo pode ser usada para consultar as taxas de reprodução disponíveis:
 
-      ```js
-      getAvailableTrickPlayRates = function (player) { 
-               var item = player.currentItem; 
-               var availableRates = item. availablePlaybackRates; 
-               return availableRates; 
-      } 
-      ```
+     ```js
+     getAvailableTrickPlayRates = function (player) { 
+              var item = player.currentItem; 
+              var availableRates = item. availablePlaybackRates; 
+              return availableRates; 
+     } 
+     ```
 
 1. Opcionalmente, você pode acompanhar eventos de alteração de taxa, que informam quando você solicitou uma alteração de taxa e quando uma alteração de taxa realmente ocorre.
 
@@ -54,7 +52,7 @@ Para alternar a velocidade, você deve definir um valor.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` quando a reprodução continua na taxa selecionada.
 
-      O TVSDK do navegador despacha ambos os eventos quando o reprodutor retorna do modo de truque para o modo de reprodução normal.
+     O TVSDK do navegador despacha ambos os eventos quando o reprodutor retorna do modo de truque para o modo de reprodução normal.
 
 ## Elementos da API de alteração de taxa {#rate-change-API-elements}
 
@@ -67,12 +65,12 @@ Use os seguintes elementos de API para alterar as taxas de reprodução:
 * `MediaPlayerItem.istrickPlaySupported`
 * `MediaPlayerItem.availablePlaybackRates` - especifica taxas válidas.
 
-   | Valor da taxa | Efeito na reprodução |
-   |---|---|
-   | 2.0, 4.0, 8.0, 16.0, 32.0, 64.0 | Muda para o modo de avanço rápido com o multiplicador especificado mais rápido que o normal (por exemplo, 4 é 4 vezes mais rápido que o normal) |
-   | -2.0, -4.0, -8.0, -16.0, -32.0, -64.0 | Alterna para o modo de retrocesso rápido |
-   | 1.0 | Muda para o modo normal de reprodução (chamando `play` é o mesmo que definir a propriedade rate como 1,0) |
-   | 0.0 | Pausas (chamando `pause` é o mesmo que definir a propriedade rate como 0,0) |
+  | Valor da taxa | Efeito na reprodução |
+  |---|---|
+  | 2.0, 4.0, 8.0, 16.0, 32.0, 64.0 | Muda para o modo de avanço rápido com o multiplicador especificado mais rápido que o normal (por exemplo, 4 é 4 vezes mais rápido que o normal) |
+  | -2.0, -4.0, -8.0, -16.0, -32.0, -64.0 | Alterna para o modo de retrocesso rápido |
+  | 1.0 | Muda para o modo normal de reprodução (chamando `play` é o mesmo que definir a propriedade rate como 1,0) |
+  | 0.0 | Pausas (chamando `pause` é o mesmo que definir a propriedade rate como 0,0) |
 
 ## Limitações e comportamento para truques {#limitations-and-behavior-trick-play}
 
@@ -87,4 +85,4 @@ Esta é uma lista das limitações do modo trick-play:
 * Na busca, se a reprodução estiver no modo de truque, a taxa de reprodução será definida como 1 e a reprodução normal será retomada.
 * A lógica da taxa de bits adaptável (ABR) está ativada.
 
-   Ao usar as adaptações normais, os perfis são restritos entre `ABRControlParameters.minBitRate` e `ABRControlParameters.maxBitRate`. Ao usar adaptações de truques, os perfis são restritos entre `ABRControlParameters.minTrickPlayBitRate` e `ABRControlParameters.maxTrickPlayBitRate`.
+  Ao usar as adaptações normais, os perfis são restritos entre `ABRControlParameters.minBitRate` e `ABRControlParameters.maxBitRate`. Ao usar adaptações de truques, os perfis são restritos entre `ABRControlParameters.minTrickPlayBitRate` e `ABRControlParameters.maxTrickPlayBitRate`.

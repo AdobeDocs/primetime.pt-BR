@@ -1,8 +1,7 @@
 ---
 description: Para conteúdo de vídeo sob demanda (VOD), o TVSDK insere anúncios e os interrompe ao unir os anúncios no conteúdo principal para que a duração da linha do tempo aumente.
 title: Resolver e inserir anúncio de VOD
-exl-id: c8e1423c-5d53-452c-ad01-8335ccf42471
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
@@ -30,7 +29,7 @@ Os anúncios não podem ser:
 * Inserido
 * Excluído
 
-   Por exemplo, não é possível excluir anúncios integrados do conteúdo para oferecer uma experiência sem anúncios.
+  Por exemplo, não é possível excluir anúncios integrados do conteúdo para oferecer uma experiência sem anúncios.
 * Substituído
 
-   Por exemplo, não é possível substituir anúncios integrados por anúncios direcionados.
+  Por exemplo, não é possível substituir anúncios integrados por anúncios direcionados.

@@ -1,8 +1,7 @@
 ---
-description: O processo de inserção de anúncios de vídeo sob demanda (VOD) consiste nas fases de resolução, inserção e reprodução de anúncios. Para o rastreamento de anúncios, o TVSDK do navegador deve informar um servidor de rastreamento remoto sobre o progresso da reprodução de cada anúncio. Quando surgem situações inesperadas, toma as medidas adequadas.
+description: O processo de inserção de anúncios de vídeo sob demanda (VOD) consiste nas fases de resolução, inserção e reprodução do anúncio. Para o rastreamento de anúncios, o TVSDK do navegador deve informar um servidor de rastreamento remoto sobre o progresso da reprodução de cada anúncio. Quando surgem situações inesperadas, toma as medidas adequadas.
 title: Inserção de publicidade e failover para VOD
-exl-id: 62b82f56-e8c7-4c44-8b70-f204908777c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Inserção de publicidade e failover para VOD{#advertising-insertion-and-failover-for-vod}
 
-O processo de inserção de anúncios de vídeo sob demanda (VOD) consiste nas fases de resolução, inserção e reprodução de anúncios. Para o rastreamento de anúncios, o TVSDK do navegador deve informar um servidor de rastreamento remoto sobre o progresso da reprodução de cada anúncio. Quando surgem situações inesperadas, toma as medidas adequadas.
+O processo de inserção de anúncios de vídeo sob demanda (VOD) consiste nas fases de resolução, inserção e reprodução do anúncio. Para o rastreamento de anúncios, o TVSDK do navegador deve informar um servidor de rastreamento remoto sobre o progresso da reprodução de cada anúncio. Quando surgem situações inesperadas, toma as medidas adequadas.
 
 ## Fase de resolução de anúncios {#section_F562CD6D0EF04AA9A0A3C0176A4EC340}
 
@@ -21,18 +20,19 @@ O TVSDK do navegador é compatível com os seguintes tipos de provedores de anú
 
 * Provedor de anúncio de metadados
 
-   Os dados do anúncio são codificados em arquivos JSON de texto simples.
+  Os dados do anúncio são codificados em arquivos JSON de texto simples.
 * Provedor de anúncios do Adobe Primetime ad decisioning
 
-   O TVSDK do navegador envia uma solicitação do, incluindo um conjunto de parâmetros de direcionamento e um número de identificação do ativo, para o servidor back-end do Adobe Primetime Ad Decisioning. O Adobe Primetime ad decisioning responde com um documento SMIL (synchronized multimedia integration language) que contém as informações de anúncio necessárias.
+  O TVSDK do navegador envia uma solicitação do, incluindo um conjunto de parâmetros de direcionamento e um número de identificação do ativo, para o servidor back-end do Adobe Primetime Ad Decisioning. O Adobe Primetime ad decisioning responde com um documento SMIL (synchronized multimedia integration language) que contém as informações de anúncio necessárias.
 
-   Uma das seguintes situações de failover pode ocorrer durante essa fase:
+  Uma das seguintes situações de failover pode ocorrer durante essa fase:
 
    * Os dados não podem ser recuperados por motivos que incluem falta de conectividade ou um erro do lado do servidor, como a impossibilidade de encontrar um recurso e assim por diante.
    * Os dados foram recuperados, mas o formato é inválido.
 
-      Isso pode ocorrer porque, por exemplo, a análise dos dados de entrada falhou.
-   O TVSDK do navegador emite uma notificação de aviso sobre o erro e continua o processamento.
+     Isso pode ocorrer porque, por exemplo, a análise dos dados de entrada falhou.
+
+  O TVSDK do navegador emite uma notificação de aviso sobre o erro e continua o processamento.
 
 ## Fase de inserção do anúncio {#section_88A0E4FA12394717A9D85689BD11D59F}
 
@@ -62,6 +62,6 @@ Para todas as três classes de erro, o TVSDK do navegador encaminha eventos acio
 * Eventos de notificação quando o perfil é alterado devido ao algoritmo de failover.
 * Os eventos de notificação são acionados quando todas as opções de failover são consideradas e nenhuma ação adicional pode ser executada automaticamente.
 
-   Seu aplicativo precisa tomar a ação apropriada.
+  Seu aplicativo precisa tomar a ação apropriada.
 
 Se ocorrerem erros ou não, o TVSDK do navegador o notificará quando um ad break for iniciado e quando for concluído. No entanto, se não for possível baixar os segmentos, poderá haver lacunas na linha do tempo. Quando as lacunas são grandes o suficiente, os valores na posição do indicador de reprodução e o progresso do anúncio relatado podem exibir descontinuidades.

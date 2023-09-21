@@ -1,21 +1,20 @@
 ---
-description: Estas são algumas informações e exemplos sobre como o TVSDK do navegador acomoda manifestos principais atualizados.
-title: Arquitetura de atualização de manifesto principal ao vivo
-exl-id: 2d9be228-7a96-4c19-828d-c1a4b0b07aa0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: Estas são algumas informações e exemplos sobre como o TVSDK do navegador acomoda manifestos mestres atualizados.
+title: Arquitetura de atualização ao vivo do manifesto principal
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 1%
 
 ---
 
-# Arquitetura de atualização de manifesto principal ao vivo{#live-master-manifest-update-architecture}
+# Arquitetura de atualização ao vivo do manifesto principal{#live-master-manifest-update-architecture}
 
-Estas são algumas informações e exemplos sobre como o TVSDK do navegador acomoda manifestos principais atualizados.
+Estas são algumas informações e exemplos sobre como o TVSDK do navegador acomoda manifestos mestres atualizados.
 
 Por padrão, esse recurso está desativado. Se o aplicativo a ativar definindo uma frequência de atualização em minutos, as seguintes etapas ocorrerão após cada intervalo de atualização:
 
-1. O TVSDK do navegador verifica a hora e a tag da última modificação do manifesto principal para determinar se o arquivo foi atualizado.
+1. O TVSDK do navegador verifica a hora e a tag da última modificação do manifesto mestre para determinar se o arquivo foi atualizado.
 
    Se a hora e a tag tiverem sido alteradas, o arquivo será considerado como modificado.
 1. O TVSDK do navegador analisa e analisa o novo manifesto e toma as medidas apropriadas com base na natureza da atualização.
@@ -38,7 +37,7 @@ As seguintes taxas de bits estão transmitindo ao vivo:
 * 900k
 * 2100k
 
-O fluxo do 2100k tem alguns problemas, portanto, precisa ser reiniciado. O manifesto principal foi atualizado para conter apenas 500k e 900k. Pouco tempo depois, os usuários que assistirem a este programa a 2100k terão uma taxa de bits de mudança para 900k. Os usuários que assistem a 900k continuam assistindo a 900k. Posteriormente, o fluxo de 2100k é retomado e adicionado novamente no manifesto principal. Um tempo depois, os usuários que estão assistindo a 900k, e têm a largura de banda, são comutados para 2100k.
+O fluxo do 2100k tem alguns problemas, portanto, precisa ser reiniciado. O manifesto mestre foi atualizado para conter apenas 500k e 900k. Pouco tempo depois, os usuários que assistirem a este programa a 2100k terão uma taxa de bits de mudança para 900k. Os usuários que assistem a 900k continuam assistindo a 900k. Posteriormente, o fluxo do 2100k é retomado e adicionado novamente ao manifesto principal. Um tempo depois, os usuários que estão assistindo a 900k, e têm a largura de banda, são comutados para 2100k.
 
 ### Exemplo 2 {#example_485E9A9F373D454CADE5395DEC734E5D}
 

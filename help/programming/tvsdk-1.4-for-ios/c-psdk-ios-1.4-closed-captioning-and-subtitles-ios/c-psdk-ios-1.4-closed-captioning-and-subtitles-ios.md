@@ -1,8 +1,7 @@
 ---
 description: Legendas ocultas e legendas têm diferenças únicas, e você as ativa de maneiras diferentes.
 title: Legendas e legendas ocultas
-exl-id: 6602e9cf-d1e8-405b-83b7-bdd7d93b88f1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
@@ -28,13 +27,13 @@ Você deve estar ciente dos seguintes requisitos para legendas ocultas e legenda
    * As legendas normalmente estão em um idioma diferente e não incluem sons de fundo.
    * As legendas estão em fluxos que são executados em paralelo com o conteúdo principal.
 
-      A variável `PTMediaPlayer` reproduz o conteúdo principal e os anúncios, onde o conteúdo principal pode ser ao vivo/linear ou VOD, e os anúncios podem ser antes da exibição, durante a exibição ou após a exibição.
-   Estes são alguns requisitos adicionais para legendas no iOS:
+     A variável `PTMediaPlayer` reproduz o conteúdo principal e os anúncios, onde o conteúdo principal pode ser ao vivo/linear ou VOD, e os anúncios podem ser antes da exibição, durante a exibição ou após a exibição.
+
+  Estes são alguns requisitos adicionais para legendas no iOS:
 
    * Para carimbos de data e hora, a variável `X-TIMESTAMP-MAP` que é especificado na seção de cabeçalho do `WebVTT` arquivo, deve corresponder ao carimbo de data e hora do vídeo.
 
    * Para o sistema, você deve usar o iOS 6.1 ou posterior.
-
 
 >[!IMPORTANT]
 >

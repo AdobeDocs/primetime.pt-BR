@@ -2,8 +2,7 @@
 description: A regra de prioridade define a ordem de prioridade das criações de anúncios que serão selecionadas para reprodução a partir de uma resposta VAST/VMAP.
 keywords: regra de prioridade;regras de seleção criativa
 title: Regras de prioridade
-exl-id: e8bfa6bd-38ef-48e0-a4f8-b771f5ebafb5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Quando a reprodução atinge um ad break, passa um ad break ou termina em um ad break, o TVSDK define algum comportamento padrão para o posicionamento do indicador de reprodução atual.
 title: Personalizar reprodução com anúncios
-exl-id: 522f0b55-dcc4-4175-91ab-757b72bbad23
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Você pode personalizar o comportamento de reprodução das seguintes maneiras:
 * Se um ad break for apresentado ao usuário, ele não exibirá anúncios adicionais por alguns minutos, mesmo se o usuário buscar uma nova posição.
 * Se o conteúdo não for reproduzido após alguns minutos, reinicie o fluxo ou faça failover para uma origem diferente para o mesmo conteúdo.
 
-   Na sessão de reprodução de failover, para permitir que o usuário ignore os anúncios e retome para a posição de falha anterior, é possível desativar os anúncios precedentes e/ou intermediários. O TVSDK fornece métodos para permitir ignorar anúncios precedentes e intermediários.
+  Na sessão de reprodução de failover, para permitir que o usuário ignore os anúncios e retome para a posição de falha anterior, é possível desativar os anúncios precedentes e/ou intermediários. O TVSDK fornece métodos para permitir ignorar anúncios precedentes e intermediários.
 
 ## Elementos da API para reprodução de anúncio {#section_296ADE00CFEA40CBA1B46142720D13A5}
 
@@ -76,11 +75,11 @@ Para personalizar comportamentos de anúncios, siga um destes procedimentos:
 
 * Conformidade com o `PTAdPolicySelector` e implementar todos os métodos de seleção de políticas necessários.
 
-   Essa opção é recomendada se você precisar substituir **all** os comportamentos de anúncio padrão.
+  Essa opção é recomendada se você precisar substituir **all** os comportamentos de anúncio padrão.
 
 * Substituir o `PTDefaultAdPolicySelector` e fornecem implementações somente para os comportamentos que exigem personalização.
 
-   Essa opção é recomendada se você precisar substituir apenas o **alguns** dos comportamentos padrão.
+  Essa opção é recomendada se você precisar substituir apenas o **alguns** dos comportamentos padrão.
 
 Para ambas as opções, conclua as seguintes tarefas:
 

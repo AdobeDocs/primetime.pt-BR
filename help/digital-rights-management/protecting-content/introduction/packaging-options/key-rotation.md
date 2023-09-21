@@ -1,8 +1,7 @@
 ---
 description: É possível selecionar as seguintes opções de criptografia ao criar um pacote. No entanto, não é possível modificar as opções de criptografia durante a aquisição da licença
 title: Rotação de chaves
-exl-id: 1b439b5f-7a63-4fe2-ae15-c18cda0b31cd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 0%

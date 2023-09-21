@@ -1,8 +1,7 @@
 ---
 description: Você pode salvar a posição de reprodução atual em um vídeo e retomar a reprodução na mesma posição em uma sessão futura.
 title: Salvar a posição do vídeo e retomar mais tarde
-exl-id: a06897a6-bf57-4902-b1b4-e931419b56ba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
@@ -43,9 +42,9 @@ Os anúncios inseridos dinamicamente diferem entre as sessões do usuário, port
 
    * Para retomar a reprodução do vídeo a partir da posição salva em uma sessão anterior, use `seekToLocal`.
 
-      >[!TIP]
-      >
-      >Esse método é chamado somente com valores de hora locais. Se o método for chamado com os resultados da hora atual, ocorrerá um comportamento incorreto.
+     >[!TIP]
+     >
+     >Esse método é chamado somente com valores de hora locais. Se o método for chamado com os resultados da hora atual, ocorrerá um comportamento incorreto.
 
    * Para buscar o horário atual, use `seek`.
 

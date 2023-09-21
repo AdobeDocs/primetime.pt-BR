@@ -1,8 +1,7 @@
 ---
 description: Verifique as restrições e os requisitos para fluxos e listas de reprodução (manifestos).
 title: Requisitos de conteúdo e manifesto
-exl-id: 53fdd771-06ea-496f-9591-6ed4d5011f8d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 0%

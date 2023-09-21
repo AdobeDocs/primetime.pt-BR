@@ -1,8 +1,7 @@
 ---
 description: O licenciamento é o principal mecanismo pelo qual os usuários têm a capacidade de reproduzir um conteúdo de vídeo protegido. Um usuário legítimo (autorizado) pode receber uma licença (uma chave) para descriptografar e reproduzir uma parte específica do conteúdo criptografado de seu provedor de conteúdo.
 title: Licenciamento
-exl-id: 60aa3e77-f821-41b3-ba0e-1a2c05b2bb1a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -22,7 +21,6 @@ Seu direito ou servidor de loja solicitará um token de licença do ExpressPlay 
 >A solicitação de token de licença não pode ser feita do próprio cliente:
 >1. Os direitos devem ser verificados em um ambiente confiável; e
 >1. O autenticador do cliente deve ser mantido em segredo.
-
 
 1. Faça a solicitação de token de licença.
 

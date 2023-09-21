@@ -1,8 +1,7 @@
 ---
 description: A interface do token de licença do Widevine fornece serviços de produção e teste.
 title: Solicitação/resposta do token de licença do Widevine
-exl-id: f8d71f63-7783-44f9-8b1b-4b5646dca339
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 5%
@@ -25,16 +24,16 @@ Essa solicitação HTTP retorna um token que pode ser resgatado para uma licenç
 
 * **Exemplo de solicitação:**
 
-   ```
-   https://wv-gen.service.expressplay.com/hms/wv/token?customerAuthenticator= 
-   <ExpressPlay customer authenticator identifier>
-   ```
+  ```
+  https://wv-gen.service.expressplay.com/hms/wv/token?customerAuthenticator= 
+  <ExpressPlay customer authenticator identifier>
+  ```
 
 * **Exemplo de resposta:**
 
-   ```
-   https://wv.service.expressplay.com/hms/wv/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
-   ```
+  ```
+  https://wv.service.expressplay.com/hms/wv/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
+  ```
 
 <!--<a id="section_1E22012EE4B94BB2974D3B16DE8812D9"></a>-->
 
@@ -83,7 +82,7 @@ Sobre `licenseDuration`: <ol><li> A reprodução será interrompida `licenseDura
 
 | Parâmetro da consulta | Descrição | Obrigatório? |
 |--- |--- |--- |
-| `expirationTime` | Hora de expiração deste token. Este valor DEVE ser uma sequência de caracteres em [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) formato de data/hora no designador de zona ‘Z’ (&quot;hora Zulu&quot;) ou um número inteiro precedido por um sinal +. Um exemplo de data/hora RFC 3339 é 2006-04-14T12:01:10Z <br> Se o valor for uma string em [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) formato de data/hora, então representa uma data/hora de expiração absoluta do token. Se o valor for um número inteiro precedido por um sinal +, então será interpretado como um número relativo de segundos, a partir da emissão, se o token é válido. Por exemplo, `+60` especifica um minuto. <br> O tempo de vida máximo e padrão do token (se não especificado) é de 30 dias. | Não |
+| `expirationTime` | Hora de expiração deste token. Este valor DEVE ser uma sequência de caracteres em [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) formato de data/hora no designador de zona ‘Z’ (&quot;hora Zulu&quot;) ou um número inteiro precedido por um sinal +. Um exemplo de data/hora RFC 3339 é 2006-04-14T12:01:10Z <br> Se o valor for uma string em [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) formato de data/hora, então representa uma data/hora de expiração absoluta do token. Se o valor for um número inteiro precedido por um sinal +, então será interpretado como um número relativo de segundos, desde a emissão, se o token é válido. Por exemplo, `+60` especifica um minuto. <br> O tempo de vida máximo e padrão do token (se não especificado) é de 30 dias. | Não |
 
 **Tabela 16: Parâmetros de consulta de correlação**
 

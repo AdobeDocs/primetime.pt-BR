@@ -1,8 +1,7 @@
 ---
 description: O status do reprodutor de mídia determina quais ações são legais.
 title: Ciclo de vida e status do objeto MediaPlayer
-exl-id: b50d5378-4e9b-44c0-9098-8c3e27053b3b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%

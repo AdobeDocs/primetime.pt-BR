@@ -1,8 +1,7 @@
 ---
 description: Outra maneira de resolver um recurso de mídia é com MediaPlayerItemLoader. Isso é útil quando você deseja obter informações sobre um fluxo de mídia específico sem instanciar uma instância do MediaPlayer.
 title: Carregar um recurso de mídia usando MediaPlayerItemLoader
-exl-id: 08379bd8-1602-4013-a6fb-b1aa6ba539aa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Por meio da `MediaPlayerItemLoader` classe, você pode trocar um recurso de míd
 
    * `MediaPlayerItemLoaderEvent.ERROR` evento
 
-      O TVSDK usa isso para informar ao aplicativo que ocorreu um erro. O TVSDK fornece uma propriedade de erro que contém informações de diagnóstico.
+     O TVSDK usa isso para informar ao aplicativo que ocorreu um erro. O TVSDK fornece uma propriedade de erro que contém informações de diagnóstico.
 
 1. Registre esta instância na `MediaPlayerItemLoader`.
 1. Chame `DefaultMediaPlayerItemLoader.load`, transmitindo uma instância de um `MediaResource` objeto.

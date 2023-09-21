@@ -1,8 +1,7 @@
 ---
 title: API de relatórios
-description: API de relatório de auditoria
-exl-id: 50eb4869-3765-4591-8c41-794b29d50044
-source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
+description: API de relatório do Auditude
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 1%
@@ -34,13 +33,13 @@ Para explorar as [!DNL Primetime Ad Insertion] APIs: consulte [Pontos de acesso 
 |----------|-----------------------------------------------------------------------------------------------|----------------|----------------|---------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | endDate | Data final dos dados do relatório | data | Y | NENHUM | não mais recente que ontem em UTC-8 | ######## |
 | filtros | filtrar em uma ou mais colunas | string | N | NENHUM | ad_config_id , zone_id | ad_config_id=990,900;state=ativo |
-|  |  |  |  |  | Quando os metadados são definidos como &quot;true&quot; na solicitação, também é possível filtrar por nome. |  |
-|  |  |  |  |  |  | Várias teclas de filtro são separadas por ponto e vírgula. |
-|  |  |  |  |  |  | Use valores separados por vírgula para fornecer uma lista de valores para a chave de filtro |
+|          |                                                                                               |                |                |                     | Quando metaData é definido como &#39;true&#39; na solicitação, também é possível filtrar por nome. |                                                                         |
+|          |                                                                                               |                |                |                     |                                                                                    | Várias teclas de filtro são separadas por ponto e vírgula. |
+|          |                                                                                               |                |                |                     |                                                                                    | Use valores separados por vírgula para fornecer uma lista de valores para a chave de filtro |
 | groupBy | Agrupar por hora ( ano \| mês \| dia) ou ad_config_id. Adconfig é sinônimo de AdRule. | string | N | NENHUM | y \| m \| d , ad_config_id | m , ad_config_id |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  | Para groupBy no prazo, forneça um dos valores y, m ou d |
-|  |  |  |  |  |  |  |
+|          |                                                                                               |                |                |                     |                                                                                    |                                                                         |
+|          |                                                                                               |                |                |                     |                                                                                    | Para groupBy no prazo, forneça um dos valores y, m ou d |
+|          |                                                                                               |                |                |                     |                                                                                    |                                                                         |
 
 
 
@@ -49,14 +48,15 @@ Para explorar as [!DNL Primetime Ad Insertion] APIs: consulte [Pontos de acesso 
 | Nome | Tipo de valor | Obrigatório | Valor de exemplo | Significância |
 |-----------------------|----------------|---------------|-------------------------------------|------------------------------------|
 | Aceitar | string | Y | text/csv para CSV | Tipo de resposta esperada da API |
-|  |  |  | application/json ou &quot;*/*&#39; para JSON |  |
+|                       |                |               | application/json ou &quot;*/*&#39; para JSON |                                    |
 | Token de autorização | string | Y | xyz | token de autorização |
 | x-api-key | string | Y | xyz | Chave de API |
 | x-gw-ims-org-id | string | Y | xyz12345 | ID da organização IMS da sua conta |
 
 * Você pode gerar o token de autorização (também conhecido como token de acesso) seguindo as etapas detalhadas na página de ajuda da autenticação JWT do Adobe.io.
-   >[!NOTE]
-   >O token de autorização expira em 24 horas. Portanto, se você estiver usando a API de relatório com um script recorrente, gere o token de autenticação antes de expirar ou quando receber um erro de Oauth sobre a não validade do token.
+  >>
+  [!NOTE]
+  >O token de autorização expira em 24 horas. Portanto, se você estiver usando a API de relatório com um script recorrente, gere o token de autenticação antes de expirar ou quando receber um erro de Oauth sobre a não validade do token.
 
 * Para definir os valores corretos no cabeçalho da solicitação e gerar o token de autorização (usando a autenticação JWT), você precisará saber as configurações abaixo para sua conta. Entre em contato com a equipe de suporte do Primetime para obter esses valores.
 ID da conta técnica
@@ -141,7 +141,7 @@ curl --location --request GET 'https://dai-sandbox1-primetime.adobe.io/report?st
 | Buscar relatório, com GET de formato csv: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10 cabeçalho : Accept = text/csv | A cadeia de caracteres CSV é retornada, com o cabeçalho: total_impressions |
 | Buscar relatório, com formato csv e groupBy = d \| m \| y GET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;groupBy=d\|m\|y cabeçalho : Accept = text/csv | A cadeia de caracteres CSV é retornada com o cabeçalho: total_impressions datas (formato mm-dd-aaaa \| mm-aaaa \| aaaa) |
 | Buscar relatório, com formato csv e metadados = GET verdadeiro: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true cabeçalho : Accept = text/csv | A cadeia de caracteres CSV é retornada, com o cabeçalho: total_impressions |
-| Buscar relatório, com formato csv , metadados = true e groupBy = d \| m \| y GET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true&amp;groupBy=d\|m\|y cabeçalho : Accept = text/csv | A cadeia de caracteres CSV é retornada com o cabeçalho: total_impressions datas (formato mm-dd-aaaa \| mm-aaaa \| aaaa) |
+| Buscar relatório, com formato csv, metadados = true e groupBy = d \| m \| y GET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true&amp;groupBy=d\|m\|y cabeçalho : Accept = text/csv | A cadeia de caracteres CSV é retornada com o cabeçalho: total_impressions datas (formato mm-dd-aaaa \| mm-aaaa \| aaaa) |
 
 
 ## Política de Limitação da API de Relatório {#report-api-throttling-policy}

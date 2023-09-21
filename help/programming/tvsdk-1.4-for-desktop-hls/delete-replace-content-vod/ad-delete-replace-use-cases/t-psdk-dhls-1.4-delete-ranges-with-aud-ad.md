@@ -1,8 +1,7 @@
 ---
 description: Remova TimeRanges entre o início e o fim em localTime da linha do tempo.
 title: Excluir intervalos com anúncio de decisão de anúncio do Primetime
-exl-id: e097f92e-b4ce-4e33-9a71-213cf19188fb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%

@@ -4,8 +4,7 @@ description: As Notas de versão do TVSDK 1.4 para Android descrevem o que é no
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 1e3ec3b7-25be-4640-870e-928e832fe12d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '7802'
 ht-degree: 0%
@@ -58,22 +57,22 @@ Sem novos recursos.
 * O TVSDK é compatível com a versão Android Oreo.
 * Uma nova função é adicionada a `AdClientFactory` classe para dar suporte ao registro de vários Detectores de Oportunidades:
 
-   ```
-   public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
-   ```
+  ```
+  public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
+  ```
 
-   Isso deve retornar uma matriz de PlacementOpportunityDetector. Agora você pode registrar vários Detectores de oportunidade. Por exemplo, para o recurso de saída antecipada de anúncios, dois Detectores de oportunidade eram necessários: um para inserção de anúncios e outro para saída antecipada de anúncios. É necessário implementar essa nova função para afetar somente se você tiver implementado seu próprio AdvertisingFactory (e não usar DefaultAdvertisingfactory). Para obter o comportamento existente, é necessário criar um único Detector de oportunidades, como na função createOpportunityDetector(), colocá-lo em uma matriz e retornar:
+  Isso deve retornar uma matriz de PlacementOpportunityDetector. Agora você pode registrar vários Detectores de oportunidade. Por exemplo, para o recurso de saída antecipada de anúncios, dois Detectores de oportunidade eram necessários: um para inserção de anúncios e outro para saída antecipada de anúncios. É necessário implementar essa nova função para afetar somente se você tiver implementado seu próprio AdvertisingFactory (e não usar DefaultAdvertisingfactory). Para obter o comportamento existente, é necessário criar um único Detector de oportunidades, como na função createOpportunityDetector(), colocá-lo em uma matriz e retornar:
 
-   ```
-   public class MyAdvertisingFactory extends AdvertisingFactory {  
-   …  
-   @Override  
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {  
-   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();  
-   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));  
-   return opportunityDetectors;  
-   } }
-   ```
+  ```
+  public class MyAdvertisingFactory extends AdvertisingFactory {  
+  …  
+  @Override  
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {  
+  List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();  
+  opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));  
+  return opportunityDetectors;  
+  } }
+  ```
 
 >[!NOTE]
 >
@@ -87,7 +86,7 @@ Correção de erros para Ignorar conteúdo no Android.
 
 * **Informações sobre Anúncios de Rede**
 
-   As APIs TVSDK agora fornecem informações adicionais sobre respostas VAST de terceiros. A ID do anúncio, o Sistema de publicidade e as Extensões de anúncios VAST são fornecidos na classe NetworkAdInfo acessível por meio da propriedade networkAdInfo em um Ativo de publicidade. Essas informações podem ser usadas para integração com outras plataformas do Ad Analytics, como **Análise do Mat**.
+  As APIs TVSDK agora fornecem informações adicionais sobre respostas VAST de terceiros. A ID do anúncio, o Sistema de publicidade e as Extensões de anúncios VAST são fornecidos na classe NetworkAdInfo acessível por meio da propriedade networkAdInfo em um Ativo de publicidade. Essas informações podem ser usadas para integração com outras plataformas do Ad Analytics, como **Análise do Mat**.
 
 **Versão 1.4.31**
 
@@ -139,26 +138,26 @@ Para obter mais informações, consulte [Fallback de anúncios para anúncios VA
 * A interface PlaybackEventListener tem um novo método chamado onReplaceMediaPlayerItem, que você pode usar para acompanhar um novo evento, `ITEM_REPLACED`. Esse evento é despachado sempre que uma ocorrência de MediaPlayerItem é substituída no MediaPlayer. O aplicativo cliente que implementa este PlaybackEventListener deve implementar ou substituir este novo método.
 * AdClientFactory tem uma nova função adicionada à classe para registrar vários Detectores de Oportunidade:
 
-   ```
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
-   
-   For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
-   
-   To override this new function create a single Opportunity Detector, and put into an array and return:
-   
-   @Override
-   
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
-   
-   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
-   
-   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
-   
-   return opportunityDetectors;
-   }
-   
-   }
-   ```
+  ```
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
+  
+  For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
+  
+  To override this new function create a single Opportunity Detector, and put into an array and return:
+  
+  @Override
+  
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
+  
+  List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
+  
+  opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
+  
+  return opportunityDetectors;
+  }
+  
+  }
+  ```
 
 ## Alterações de TVSDK para 1.4 {#tvsdk-changes}
 
@@ -198,7 +197,6 @@ return opportunityDetectors;
 >
 >* Câmera lenta, em qualquer plataforma ou versão.
 >* Jogo ao vivo.
-
 
 **Versão 1.4.43**
 
@@ -477,7 +475,7 @@ Para corrigir o congelamento, a chamada para o método mediaPlayer.setCustomConf
 
 * Zendesk #19038 - Não há transmissão ao vivo no Asus Zenpad 10.
 
-   Esse problema foi resolvido pré-carregando as informações do codec de mídia, para que você não consulte a função em tempo de execução.
+  Esse problema foi resolvido pré-carregando as informações do codec de mídia, para que você não consulte a função em tempo de execução.
 
 * Os seguintes problemas são os mesmos do Zendesk #19038:
    * Zendesk #19483 - O TVSDK está travando na plataforma Intel.
@@ -507,7 +505,7 @@ Esse problema foi resolvido verificando o tamanho dos metadados do DRM do perfil
 
 **Versão 1.4.16 (1454)**
 
-* Zendesk #3875 - Tab S Falha durante a reprodução Revertendo a dependência do OKHTTP no Auditude para CRS porque o TVSDK agora está usando diretamente httpurlconnection em vez de curl. O problema foi resolvido limpando as exceções antes de fazer qualquer outra chamada JNI.
+* Zendesk #3875 - Tab S Trava durante a reprodução Revertendo a dependência do OKHTTP no Auditude para CRS porque o TVSDK agora está usando diretamente httpurlconnection em vez de curl. O problema foi resolvido limpando as exceções antes de fazer qualquer outra chamada JNI.
 
 * Zendesk #4487 - Rastreamento do canal linear de conteúdo O problema foi resolvido permitindo a reinicialização do rastreador de heartbeat de vídeo durante uma sessão de reprodução de fluxo linear.
 
@@ -536,7 +534,7 @@ A correção era incluir o MediaErrorCode original de VideoEngineExceptions ao d
 (Igual ao #4278 acima) A correção foi adicionar suporte para switch ABR ininterrupto com o codec de mídia Android mais recente.
 
 * Zendesk #17666 - Marcadores de anúncios adicionais, Inesperado ou Sem anúncios ao retomar o conteúdo.
-A correção era um problema ao fazer o conteúdo prepareToPlay on video-on-demand (VOD), a busca inicial é executada no horário local em vez do virtual.
+A correção era um problema ao fazer o conteúdo prepareToPlay on video-on-demand (VOD), a busca inicial é executada no horário local em vez de no tempo virtual.
 
 * Zendesk #17437 - Longo atraso na inicialização de conteúdo de VOD com alguns fluxos AES.
 A correção era baixar todas as chaves AES em paralelo quando várias chaves eram listadas no manifesto.
@@ -620,9 +618,9 @@ Os players de referência de amostra do Android foram aprimorados com uma opçã
 
 Após uma busca, possível caso em que o mecanismo de vídeo define o estado como REPRODUZINDO antes do apresentador de vídeo estar pronto para ser reproduzido. Ocorre quando o estado do buffer é alto antes da busca. Corrija notificando o mecanismo de vídeo sobre o estado de buffer baixo. Com o mecanismo de vídeo em estado de buffer baixo, chamar Reproduzir faz com que o estado mude para BUFFERING em vez de PLAYING. A reprodução continua quando o estado muda para REPRODUZINDO.
 
-* Zendesk #2846 - Solicitação de aprimoramento: Fornecer a capacidade de definir diferentes sequências de agente-usuário para chamadas feitas pela biblioteca do Auditude
+* Zendesk #2846 - Solicitação de aprimoramento: Fornecer a capacidade de definir diferentes sequências de agente-usuário para chamadas feitas pela biblioteca Auditude
 
-Uma nova API foi adicionada para definir o agente do usuário para chamadas relacionadas a anúncios, auditudeSettings.setUserAgent(&quot;user/agent&quot;). Se nenhum agente do usuário for definido, o padrão será usado. Isso só afeta o agente do usuário para chamadas relacionadas a anúncios. O agente do usuário para chamadas de mídia permanece inalterado, ou seja, &quot;Adobe Primetime&quot;+&lt;default useragent=&quot;&quot;>.
+Uma nova API foi adicionada para definir o agente do usuário para chamadas relacionadas a anúncios, auditudeSettings.setUserAgent(&quot;user/agent&quot;). Se nenhum agente do usuário for definido, o padrão será usado. Isso só afeta o agente do usuário para chamadas relacionadas a anúncios. O agente do usuário para chamadas de mídia permanece inalterado, o que é &quot;Adobe Primetime&quot;+&lt;default useragent=&quot;&quot;>.
 
 **Versão 1.4.8 (1324)**
 
@@ -655,14 +653,14 @@ Esse problema foi corrigido adicionando-se a latência entre downloads de segmen
 
 * Zendesk #2908 - Legendas em árabe não funcionam no Nexust 5, 6 e 7, corrigidas adicionando mais 2 fontes substitutas para scripts em árabe.
 * PTPLAY-4627 - atualização do appsdk Nielson para a versão 1.2.3.7
-* PTPLAY-5084 - Suporte ao failover de atualização Principal em tempo real do manifesto
+* PTPLAY-5084 - Suporte ao failover de atualização de Live Master Manifest
 
 **Versão 1.4.5 (1248)**
 
 * Zendesk #1757 - Apenas áudio reproduzido ou falha do player para algum perfil de taxa de bits de vídeo, falha do Nexus 4 e Nexus 7 corrigida
 * Zendesk #2072 - TimedMetadata para AdEvent não contém o URL completo apenas &quot;http&quot;
 * Zendesk #2192 - A taxa de bits nem sempre diminui em condições de rede precárias
-* Zendesk #2256 - Acesso à lista de reprodução Principal, PSDK atualizado para enviar eventos timedMetadata para tags assinadas na lista de reprodução principal.
+* Zendesk #2256 - Acesso à Lista de Reprodução Mestra, PSDK atualizado para enviar eventos timedMetadata para tags assinadas na lista de reprodução mestre.
 * Zendesk #2269 - Duas línguas de legendas diferentes aparecem na tela ao mesmo tempo com WebVTT
 * Zendesk #2417 - Player tentando baixar legendas antes do início da reprodução, WebVTT estava usando a variável de número de segmento errada para correspondência de número de segmento. O bug só era exibido para mídias que tinham índices de segmento começando em zero.
 * Zendesk #2470 - PSDK não retorna do estado SUSPENSO quando a alteração da taxa de bits ocorre após a suspensão. Em uma situação especial, quando a busca inteligente é chamada por RestoreGPUResource (restaurar player do estado suspenso) e o switch de fluxo detectado antes disso, a busca inteligente não pode ser concluída e resulta em buffering constante.
@@ -735,7 +733,7 @@ Esse problema foi corrigido adicionando-se a latência entre downloads de segmen
 * Bug #3760144 - A resolução pode mudar ou parecer pulsar quando o fluxo é pausado em alguns dispositivos, como Kindle Fire 7 e Samsung Galaxy Nexus. Apenas observável sob inspeção atenta
 * Bug #3761170 - seekToLocal in Live with Ads não pode buscar de volta no conteúdo do anúncio, é melhor usar as APIs currentTime para fluxos ao vivo
 * Bug #3763370 - Transmissões ao vivo com anúncios ocasionalmente mostrarão dois marcadores de anúncios próximos quando deveria haver apenas um. Esses marcadores representam o mesmo anúncio e somente um será reproduzido
-* Bug #3763373 - O marcador de anúncio pode desaparecer brevemente ao buscar um anúncio em fluxos de VOD. O marcador de publicidade é restaurado e não há nenhum outro efeito adverso na linha do tempo
+* Bug #3763373 - O marcador de anúncio pode desaparecer brevemente ao procurar um anúncio em fluxos de VOD. O marcador de publicidade é restaurado e não há nenhum outro efeito adverso na linha do tempo
 * Alguns dispositivos têm problemas conhecidos de reprodução. Consulte [Problemas conhecidos do dispositivo no 1.4](https://helpx.adobe.com/primetime/release-notes/tvsdk-1-4-android.html#Knownissuesin14).
 * Implementação de referência - a opção &quot;Truque play&quot; não está implementada no aplicativo de amostra
 * Em alguns dispositivos Android TV, um quadro preto pode ser visto devido a uma redefinição do decodificador nos seguintes pontos de transição:
@@ -781,7 +779,7 @@ O Media Player envia incorretamente MediaPlayer PlayerState.Complete durante a o
 * Bug #3760144 - A resolução pode mudar ou parecer pulsar quando um fluxo é pausado em alguns dispositivos, como Kindle Fire 7 e Samsung Galaxy Nexus. Apenas observável sob inspeção atenta
 * Bug #3761170 - seekToLocal in Live with Ads não pode buscar de volta no conteúdo do anúncio; é melhor usar as APIs currentTime para fluxos ao vivo
 * Bug #3763370 - Transmissões ao vivo com anúncios ocasionalmente mostrarão dois marcadores de anúncios próximos quando deveria haver apenas um. Esses marcadores representam o mesmo anúncio e somente um será reproduzido
-* Bug #3763373 - O marcador de anúncio pode desaparecer brevemente ao buscar um anúncio em fluxos de VOD. O marcador de publicidade é restaurado e não há nenhum outro efeito adverso na linha do tempo
+* Bug #3763373 - O marcador de anúncio pode desaparecer brevemente ao procurar um anúncio em fluxos de VOD. O marcador de publicidade é restaurado e não há nenhum outro efeito adverso na linha do tempo
 * Alguns dispositivos têm problemas conhecidos de reprodução. Para obter mais informações, consulte [Problemas conhecidos do dispositivo no 1.4](https://helpx.adobe.com/primetime/release-notes/tvsdk-1-4-android.html#Knownissuesin14).
 * Implementação de referência - a reprodução de truques não é implementada no aplicativo de amostra.
 

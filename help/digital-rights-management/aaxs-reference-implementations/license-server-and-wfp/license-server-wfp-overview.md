@@ -2,8 +2,7 @@
 title: Visão geral do servidor de licenças e do empacotador de pastas monitoradas
 description: Visão geral do servidor de licenças e do empacotador de pastas monitoradas
 copied-description: true
-exl-id: 1a355068-7ad6-4cc2-8447-49251dae3ff8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%

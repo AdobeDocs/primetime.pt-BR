@@ -1,8 +1,7 @@
 ---
 description: Use a classe auxiliar AuditudeSettings para configurar os metadados do Adobe Primetime ad decisioning.
 title: Configurar metadados de inserção de anúncio
-exl-id: 03b2237b-6b3b-46cf-bc0b-691513033463
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Use a classe auxiliar AuditudeSettings para configurar os metadados do Adobe Pri
 
 >[!TIP]
 >
->O Adobe Primetime ad decisioning era anteriormente conhecido como Auditude.
+>O Adobe Primetime Ad Decisioning era anteriormente conhecido como Auditude .
 
 1. Crie o `AuditudeSettings` instância.
 

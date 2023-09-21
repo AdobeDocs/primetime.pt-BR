@@ -1,8 +1,7 @@
 ---
 description: Você pode habilitar o fallback quando um anúncio em linha do VMAP contiver um tipo de mídia inválido.
 title: Definir comportamento de anúncio de fallback para anúncios em linha do VMAP
-exl-id: 57fd1b89-bcee-4c23-88e7-7a576c47c6f9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%

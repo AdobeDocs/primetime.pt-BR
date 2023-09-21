@@ -1,8 +1,7 @@
 ---
 description: As legendas ocultas exibem a parte de áudio de um vídeo como texto na tela quando o som está inaudível ou o visualizador está com problemas de audição.
 title: Trabalhar com legendas ocultas
-exl-id: e93725e3-6c6d-42b8-83d0-0feb4f9be50b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
@@ -20,7 +19,7 @@ O TVSDK é compatível com a renderização destes formatos:
 * Legendas ocultas 608 e 708, quando entregues como parte do fluxo de transporte de vídeo sobre HLS como pacotes de dados em fluxos de vídeo MPEG-2.
 * Arquivos de legenda WebVTT, que são referenciados dos arquivos de manifesto M3U8 conforme definido nas especificações do HLS.
 
-   Esses arquivos são disponibilizados automaticamente como faixas de legendas ocultas no reprodutor do Primetime.
+  Esses arquivos são disponibilizados automaticamente como faixas de legendas ocultas no reprodutor do Primetime.
 
 Você pode fazer o seguinte:
 
@@ -28,4 +27,4 @@ Você pode fazer o seguinte:
 * Ativar (visível) ou desativar (não visível) as legendas ocultas usando o `MediaPlayer` interface.
 * Selecione opções de estilo que determinam como as legendas ocultas são renderizadas pelo mecanismo de vídeo subjacente.
 
-   Use o `MediaPlayerItem` para selecionar formatos, como fonte ou cor da fonte.
+  Use o `MediaPlayerItem` para selecionar formatos, como fonte ou cor da fonte.

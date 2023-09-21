@@ -1,8 +1,7 @@
 ---
 description: Para começar a usar o Primetime DRM Cloud, viabilizado pelo ExpressPlay, é necessário configurar contas do Adobe Cert e do ExpressPlay com a ajuda do representante do Adobe.
 title: Receber Provisionamento (Contas etc.)
-exl-id: 2543d997-3495-4545-9395-072c07431aba
-source-git-commit: a0917e128862184ce18050792c2ee2ac265050d2
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Para começar a usar o Primetime DRM Cloud, viabilizado pelo ExpressPlay, é nec
 
    Forneça ao representante da Adobe o endereço de email que você usará como ponto de contato. O Adobe cria duas contas para você:
 
-   * ***Conta do Portal de Certificados*** - ( https://certportal.primetime.adobe.com) : A *Equipe de gerenciamento de registro de certificado de acesso ao Adobe / Primetime DRM* O envia um email para os endereços que você forneceu. O email inclui o URL do portal de certificados Adobe, juntamente com um link para a documentação de registro do certificado Adobe (os documentos mais recentes estão aqui: [Guia de Registro de Certificado](../../../digital-rights-management/certificate-enrollment-guide/about-certs.md)).
+   * ***Conta do Portal de Certificados*** - ( https://certportal.primetime.adobe.com) : A *Equipe de gerenciamento de registro de certificado de acesso ao Adobe / Primetime DRM* O envia um email para os endereços que você forneceu. O e-mail inclui o URL do portal de certificados Adobe, juntamente com um link para a documentação de registro do certificado Adobe (os documentos mais recentes estão aqui: [Guia de Registro de Certificado](../../../digital-rights-management/certificate-enrollment-guide/about-certs.md)).
 
    * ***Conta ExpressPlay*** - O Adobe envia um email contendo um link que você usa para registrar-se na sua conta de administrador ExpressPlay.
 

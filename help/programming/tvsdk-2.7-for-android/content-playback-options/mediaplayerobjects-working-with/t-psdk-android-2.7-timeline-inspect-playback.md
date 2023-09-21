@@ -1,8 +1,7 @@
 ---
 description: Você pode obter uma descrição da linha do tempo associada ao item selecionado atualmente sendo reproduzido pelo TVSDK. Isso é mais útil quando o aplicativo exibe um controle de barra de depuração personalizado no qual as seções de conteúdo que correspondem ao conteúdo do anúncio são identificadas.
 title: Inspect a linha do tempo de reprodução
-exl-id: 2a12fe28-9a8a-45b7-af05-87c17dd25302
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%

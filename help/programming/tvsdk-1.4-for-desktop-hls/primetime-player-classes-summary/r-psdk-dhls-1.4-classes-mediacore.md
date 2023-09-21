@@ -1,8 +1,7 @@
 ---
 description: Você pode usar a API do reprodutor Primetime para personalizar o comportamento do reprodutor. Essas classes descrevem o reprodutor de mídia e seus recursos.
 title: Classes Mediacore
-exl-id: 8948484d-a48d-49b4-ac11-b68f1abaf706
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 0%

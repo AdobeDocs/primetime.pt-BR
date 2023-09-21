@@ -2,8 +2,7 @@
 title: Armazenamento de credenciais
 description: Armazenamento de credenciais
 copied-description: true
-exl-id: 42bccf3a-307f-4763-8b02-f983bcc2e131
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -20,7 +19,7 @@ O SDK é compatível com várias maneiras de armazenar credenciais (um certifica
 
 >[!NOTE]
 >
->A partir do Java1.7, o Sun Java de 64 bits para Windows não suporta as interfaces PKCS11 que o DRM de acesso Adobe requer para se comunicar com dispositivos HSM. Se você planeja usar um HSM, use uma versão de 32 bits do Java ou use um JDK que ofereça suporte às interfaces PKCS11 completas.
+>A partir do Java1.7, o Sun Java de 64 bits para Windows não suporta as interfaces PKCS11 que o DRM de acesso Adobe requer para se comunicar com dispositivos HSM. Se você planeja usar um HSM, use uma versão de 32 bits do Java ou use um JDK que suporte as interfaces PKCS11 completas.
 
 Você pode manter uma chave privada em um HSM (Hardware Security Module, módulo de segurança de hardware) e usar o SDK para transmitir a credencial obtida do HSM. Para usar uma credencial armazenada em um HSM, use um provedor JCE que possa se comunicar com um HSM para obter um identificador para a chave privada. Em seguida, passe o identificador de chave privada, o nome do provedor e o certificado que contém a chave pública para `ServerCredentialFactory.getServerCredential()`.
 

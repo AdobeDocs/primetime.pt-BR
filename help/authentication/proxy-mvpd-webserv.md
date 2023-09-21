@@ -1,8 +1,7 @@
 ---
 title: Serviço Web MVPD de Proxy
 description: Serviço Web MVPD de Proxy
-exl-id: f75cbc4d-4132-4ce8-a81c-1561a69d1d3a
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
@@ -209,9 +208,9 @@ O Adobe definiu o seguinte formato aceito para publicar/recuperar MVPDs com prox
 * `id` (obrigatório) - A ID de MVPD com proxy deve ser uma string relevante para o nome do MVPD, usando qualquer um dos seguintes caracteres (já que será exposta aos Programadores para fins de rastreamento):
    * Quaisquer caracteres alfanuméricos, sublinhado (&quot;_&quot;) e hífen (&quot;-&quot;).
    * O idID deve estar em conformidade com a seguinte expressão regular:
-      `(a-zA-Z0-9((-)|_)*)`
+     `(a-zA-Z0-9((-)|_)*)`
 
-      Assim, ele deve ter pelo menos um caractere, começar com uma letra e continuar com qualquer letra, dígito, traço ou sublinhado.
+     Assim, ele deve ter pelo menos um caractere, começar com uma letra e continuar com qualquer letra, dígito, traço ou sublinhado.
 
 * `iframeSize` (opcional) - O elemento iframeSize é opcional e define o tamanho do iFrame se a página de autenticação MVPD deve estar em um iFrame. Caso contrário, se o elemento iframeSize não estiver presente, a autenticação ocorrerá em uma página de redirecionamento completa do navegador.
 * `requestorIds` (opcional) - Os valores requestorIds serão fornecidos pelo Adobe. Um requisito é que um MVPD com proxy seja integrado a pelo menos um requestorId. Se a tag &quot;requestorIds&quot; não estiver presente no elemento MVPD com proxy, esse MVPD com proxy será integrado a todos os solicitantes disponíveis integrados no MVPD de proxy.

@@ -4,8 +4,7 @@ description: As Notas de versão do TVSDK 2.4 do navegador descrevem os recursos
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 83fdf530-5cbb-41d9-ab2a-28e117f04488
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6812'
 ht-degree: 0%
@@ -52,7 +51,7 @@ A seguinte adição está disponível como parte da Atualização do TVSDK 2.4.1
 
 * A implementação da API de volume do AdobePSDK.MediaPlayer é alterada para permitir a reprodução automática no iOS quando a reprodução estiver sem áudio.
 
-· Uma nova API, `auditudeSettings.ignoreVPAIDAds`, é adicionado para permitir ignorar anúncios VPAID recebidos do servidor do Auditude. A API não funciona para o fallback do Flash.
+· Uma nova API, `auditudeSettings.ignoreVPAIDAds`, é adicionado para permitir ignorar anúncios VPAID recebidos do servidor Auditude. A API não funciona para o fallback do Flash.
 
 **Versão 2.4.11**
 
@@ -104,7 +103,7 @@ Os seguintes aprimoramentos e adições estão disponíveis como parte da versã
 
 · A estrutura da interface do usuário agora é compatível com o fluxo de trabalho HLS Access DRM on Flash, Ad only e Targeting Info.
 
-· A API setDRMAuthenticateData é adicionada à Estrutura da interface do usuário. Para reproduzir fluxos protegidos com DRM de Acesso ao Adobe, chame esta API. Como alternativa, o atributo drmAuthenticateData pode ser especificado no reprodutor. Consulte [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)para obter detalhes.
+· A API setDRMAuthenticateData é adicionada à Estrutura da interface do usuário. Para reproduzir fluxos protegidos com DRM de Acesso ao Adobe, chame esta API. Como alternativa, o atributo drmAuthenticateData pode ser especificado no reprodutor. Consulte [AdobePSDK.videoBehavior](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)para obter detalhes.
 
 **Versão 2.4.7**
 
@@ -188,15 +187,15 @@ Os seguintes recursos são novos na versão 2.4.5:
 
 * **Repetições completas de evento e anúncios**
 
-   Os fluxos de Repetição de evento completo (FER) do HLS agora oferecem suporte à resolução de anúncios e aos comportamentos de anúncios. Para habilitar esse suporte, defina o modo de sinalização de anúncio como `MANIFEST_CUES` ao criar o `MediaPlayerItemConfig` objeto.
+  Os fluxos de Repetição de evento completo (FER) do HLS agora oferecem suporte à resolução de anúncios e aos comportamentos de anúncios. Para habilitar esse suporte, defina o modo de sinalização de anúncio como `MANIFEST_CUES` ao criar o `MediaPlayerItemConfig` objeto.
 
 * **Suporte a MediaplayerView ScalePolicy**
 
-   Os desenvolvedores de aplicativos agora podem especificar uma scalePolicy diferente para a exibição usando a propriedade scalePolicy de MediaplayerView.
+  Os desenvolvedores de aplicativos agora podem especificar uma scalePolicy diferente para a exibição usando a propriedade scalePolicy de MediaplayerView.
 
 * **Suporte a conteúdo anamórfico**
 
-   A reprodução de conteúdo anamórfico agora é compatível com o MSE e a reprodução de Flash.
+  A reprodução de conteúdo anamórfico agora é compatível com o MSE e a reprodução de Flash.
 
 * **Aplicação seletiva de`withCredentials`**
 
@@ -220,11 +219,11 @@ Os seguintes recursos eram novos na versão 2.4.3:
 
 * **Tags personalizadas para DASH VOD**
 
-   Tags personalizadas embutidas (Eventos) podem ser assinadas e recebidas como objeto TimedMetadata.
+  Tags personalizadas embutidas (Eventos) podem ser assinadas e recebidas como objeto TimedMetadata.
 
 * **Reprodução de fluxos sem extensões**
 
-   Agora há suporte para fluxos HLS e DASH sem extensões. Para o arquivo de manifesto, o resourceType precisa ser especificado ao carregar o recurso. Para segmentos e arquivos VTT, o cabeçalho de resposta do Tipo de conteúdo é usado para determinar o tipo de conteúdo.
+  Agora há suporte para fluxos HLS e DASH sem extensões. Para o arquivo de manifesto, o resourceType precisa ser especificado ao carregar o recurso. Para segmentos e arquivos VTT, o cabeçalho de resposta do Tipo de conteúdo é usado para determinar o tipo de conteúdo.
 
 **Versão 2.4.2**
 
@@ -236,15 +235,15 @@ Para obter uma lista completa da paridade de API, consulte a [Guia de migração
 
 * **Suporte a AES de exemplo**
 
-   Esta versão adiciona suporte para reprodução de conteúdo criptografado AES de amostra no MSE e fallback do Flash. O requisito de hospedar conteúdo AES em vez de origem segura no Google Chrome foi removido.
+  Esta versão adiciona suporte para reprodução de conteúdo criptografado AES de amostra no MSE e fallback do Flash. O requisito de hospedar conteúdo AES em vez de origem segura no Google Chrome foi removido.
 
 * **Suporte para contêineres AAC**
 
-   A reprodução de arquivos com a extensão .aac agora é compatível. Podem ser fluxos somente de áudio ou áudio alternativo.
+  A reprodução de arquivos com a extensão .aac agora é compatível. Podem ser fluxos somente de áudio ou áudio alternativo.
 
-   >[!NOTE]
-   >
-   >Os codecs AC3 e AC3 aprimorados ainda não são compatíveis.
+  >[!NOTE]
+  >
+  >Os codecs AC3 e AC3 aprimorados ainda não são compatíveis.
 
 * **Reprodução de fluxo com tokens**
 
@@ -280,11 +279,11 @@ Os seguintes recursos estavam disponíveis na versão 2.4:
 
 * **Reprodução de áudio MP3**
 
-   Essa versão é compatível com a reprodução de áudio MP3 em navegadores com Media Source Extensions (MSE) e com a tag de vídeo do Safari.
+  Essa versão é compatível com a reprodução de áudio MP3 em navegadores com Media Source Extensions (MSE) e com a tag de vídeo do Safari.
 
 * **Reprodução de vídeo MP4**
 
-   Os seguintes recursos são compatíveis:
+  Os seguintes recursos são compatíveis:
 
    * Reprodução de transmissão única
    * Anúncios MP4 antes e depois da exibição com comportamento e rastreamento de anúncios
@@ -1240,7 +1239,7 @@ Os seguintes problemas foram corrigidos na Atualização do TVSDK do navegador v
 
 · **21442**- Ative a reprodução automática de conteúdo na Web do iOS, após a reprodução do anúncio precedente com um gesto do usuário.
 
-· **21240**- API fornecida para filtrar anúncios VPAID analisados do Auditude/VMAP.
+· **21240**- API fornecida para filtrar anúncios VPAID analisados de Auditude/VMAP.
 
 **Problemas corrigidos na versão 2.4.11**
 
@@ -1336,7 +1335,7 @@ Os seguintes problemas foram corrigidos na Atualização do TVSDK do navegador v
 
 · **14126:** A reprodução pode parar no Firefox (issue #1316024) devido a uma lacuna interna no buffer de origem do MSE. Tente buscar para retomar a reprodução
 
-· **19608** Correção para respeitar o valor de timeoffset da resposta do VMAP Auditude.
+· **19608** Correção para honrar o valor de timeoffset da resposta VMAP Auditude.
 
 · **19635:** Corrige a paralisação de vídeo no Internet Explorer 11 no Windows 10.
 
@@ -1386,7 +1385,7 @@ Os seguintes problemas foram corrigidos na versão 2.4.8 do TVSDK do navegador:
 
 Os seguintes problemas foram corrigidos na versão 2.4.7:
 
-· **8397**: os fluxos HLS Live gerados pelo servidor Adobe Medium podem não ser reproduzidos se os segmentos não começarem com um quadro Principal.
+· **8397**: os fluxos HLS Live gerados pelo Adobe Media Server podem não ser reproduzidos se os segmentos não começarem com um quadro Principal.
 
 · **13606**: vários problemas relacionados à Busca foram corrigidos para o fluxo HLS no navegador Chrome.
 
@@ -1496,7 +1495,7 @@ As limitações e problemas conhecidos no TVSDK do navegador são mencionados ab
    <td>VOD + Ao vivo</td> 
    <td>Notificações de QoS e Player</td> 
    <td>21129: a taxa de quadros não está disponível no caso de Fallback de Flash.</td> 
-   <td><p>• 11170:</p> <p>Timed_Event não está disponível para TVSDK de navegador com MSE, ao contrário de TVSDK de navegador com fallback de Flash.</p> <p>21129: a taxa de quadros não é calculada para transmissões em tempo real.</p> </td> 
+   <td><p>• 11170:</p> <p>Timed_Event não está disponível para TVSDK de navegador com MSE, ao contrário de TVSDK de navegador com fallback de Flash.</p> <p>21129: a taxa de quadros não é calculada para fluxos ao vivo.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 

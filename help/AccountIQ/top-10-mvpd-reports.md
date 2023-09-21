@@ -1,8 +1,7 @@
 ---
 title: Como visualizar relatórios dos 10 principais MVPDs pela persona do programador.
 description: Exibir relatórios dos 10 principais MVPDs.
-exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%

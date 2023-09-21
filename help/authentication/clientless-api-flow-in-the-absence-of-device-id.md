@@ -1,8 +1,7 @@
 ---
 title: Fluxo da API sem cliente na ausência de ID do dispositivo
 description: Fluxo da API sem cliente na ausência de ID do dispositivo
-exl-id: 6549a6d6-03a9-4d95-99fb-d3ada832323d
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%

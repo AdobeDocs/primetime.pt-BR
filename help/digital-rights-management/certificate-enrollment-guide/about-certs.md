@@ -2,8 +2,7 @@
 title: Sobre certificados
 description: Sobre certificados
 copied-description: true
-exl-id: 24ca19bb-a71e-461a-9c3c-558d650e2d99
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
@@ -24,16 +23,16 @@ Para permitir o máximo de flexibilidade e segurança aprimorada em suas opçõe
 
 * Certificado do License Server
 
-   O SDK usa esse certificado para assinar licenças de conteúdo emitidas para clientes.
+  O SDK usa esse certificado para assinar licenças de conteúdo emitidas para clientes.
 * Certificado do empacotador
 
-   O SDK usa esse certificado para gerar metadados DRM ao empacotar (criptografar) o conteúdo.
+  O SDK usa esse certificado para gerar metadados DRM ao empacotar (criptografar) o conteúdo.
 * Certificado de transporte
 
-   O SDK usa esse certificado para proteger a comunicação entre os clientes e o servidor de licenças.
+  O SDK usa esse certificado para proteger a comunicação entre os clientes e o servidor de licenças.
 * Certificado CA do domínio
 
-   Os clientes que desejam implementar um servidor de domínio precisam do certificado de autoridade de certificação de domínio. Ao contrário dos outros certificados, o certificado de autoridade de certificação de domínio não é emitido pelo Adobe.
+  Os clientes que desejam implementar um servidor de domínio precisam do certificado de autoridade de certificação de domínio. Ao contrário dos outros certificados, o certificado de autoridade de certificação de domínio não é emitido pelo Adobe.
 
 >[!NOTE]
 >

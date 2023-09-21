@@ -1,8 +1,7 @@
 ---
 title: Autorização de simulação do MVPD
 description: Autorização de simulação do MVPD
-exl-id: da2e7150-b6a8-42f3-9930-4bc846c7eee9
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
@@ -125,7 +124,7 @@ A tabela a seguir lista os MVPDs compatíveis com a Autorização de comprovaç�
 
 | Abordagem de comprovação | MVPD | Notas |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| AuthZ multicanal | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
+| AuthZ multicanal | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |                                                                    |
 | Alinhamento de canais nos metadados do usuário | Suddenlink HTC | Todas as integrações diretas do Synacor também podem suportar esta abordagem. |
 | Bifurcação e Junção | Todos os outros não listados acima | O número máximo padrão de recursos verificados = 5. |
 

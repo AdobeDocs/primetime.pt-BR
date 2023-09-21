@@ -1,8 +1,7 @@
 ---
 description: Ao usar marcadores de anúncios personalizados, é possível marcar seções específicas do conteúdo principal como períodos de conteúdo relacionados a anúncios.
 title: Adicionar marcadores de publicidade personalizados
-exl-id: 067bb595-d9cb-40d7-95bc-795c12fb7439
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -17,11 +16,11 @@ Esse recurso é mais útil quando o conteúdo está sendo gravado, por exemplo, 
 
 Você pode obter as informações relacionadas ao posicionamento dos períodos de conteúdo de anúncio de outras fontes fora da banda, como sistemas CMS externos. Você pode definir marcadores personalizados, através dos quais essas informações fora de banda podem ser passadas para o subsistema do gerenciador de linha do tempo. A intenção é marcar as seções de conteúdo que correspondem ao conteúdo relacionado ao anúncio especificado, de modo que todos os eventos de reprodução específicos do anúncio sejam acionados da mesma maneira que se esses períodos de anúncio personalizados fossem explicitamente colocados na linha do tempo do reprodutor.
 
-O rastreamento de anúncios não é feito internamente pelo TVSDK, como quando os anúncios são resolvidos pelo Adobe Primetime Ad Decisioning (anteriormente conhecido como Auditude). No entanto, o TVSDK fornece as seguintes abstrações que definem a forma como o conteúdo relacionado a anúncios é representado na linha do tempo:
+O rastreamento de anúncios não é feito internamente pelo TVSDK, por exemplo, quando os anúncios são resolvidos pelo Adobe Primetime Ad Decisioning (anteriormente conhecido como Auditude). No entanto, o TVSDK fornece as seguintes abstrações que definem a forma como o conteúdo relacionado a anúncios é representado na linha do tempo:
 
 * O ad break
 
-   Um ad break é uma lista ordenada de anúncios consecutivos individuais.
+  Um ad break é uma lista ordenada de anúncios consecutivos individuais.
 * Um anúncio individual
 
 Os eventos de reprodução são acionados separadamente para ad breaks e anúncios nos pontos inicial e final de cada anúncio.
