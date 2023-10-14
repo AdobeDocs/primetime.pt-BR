@@ -1,17 +1,17 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Ajuda de Digital Rights Management do Primetime
+user-guide-title: Ajuda do Primetime Digital Rights Management
 user-guide-description: Ajuda você a saber mais sobre vários cenários de usuário no Digital Rights Management (DRM).
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '2215'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Digital Rights Management ajuda {#drm}
+# Ajuda do Digital Rights Management {#drm}
 
 + [Visão geral do DRM](home.md)
 + Guia de Registro de Certificado {#certificate-enrollment-guide}
@@ -66,7 +66,7 @@ ht-degree: 0%
    + Opções de empacotamento {#packaging-options}
       + [Usar o Primetime Offline Packager incluído](cloud-quick-start/packaging-options/use-offline-packager.md)
       + [Usar um codificador de terceiros](cloud-quick-start/packaging-options/use-third-party-encoder.md)
-      + [Usar servidor Adobe Medium](cloud-quick-start/packaging-options/use-adobe-media-server.md)
+      + [Usar Adobe Media Server](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [Testar o conteúdo do pacote](cloud-quick-start/test-packaged-content.md)
    + [Erros de triagem](cloud-quick-start/triaging-errors/client-error-triaging.md)
    + Autenticação/direitos personalizados {#custom-auth-ent}
@@ -505,10 +505,10 @@ ht-degree: 0%
       + [Revogação de credenciais do cliente](aaxs-protecting-content/content-revoking-client-creds/content-revoking-client-creds-overview.md)
       + [Revogação de credenciais de cliente e tempo de execução DRM](aaxs-protecting-content/content-revoking-client-creds/content-revoking-drm-client-and-runtime-creds.md)
       + [Revogando credenciais da máquina](aaxs-protecting-content/content-revoking-client-creds/content-revoking-machine-creds.md)
-   + [Criação de players de vídeo](aaxs-protecting-content/content-creating-video-players.md)
+   + [Criação de reprodutores de vídeo](aaxs-protecting-content/content-creating-video-players.md)
 + Implementações de referência de acesso ao Adobe {#reference-implementation}
    + [Visão geral - Uso das implementações de referência](aaxs-reference-implementations/overview.md)
-   + [Ferramentas de linha de comando para empacotar conteúdo e criar listas de revogação ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
+   + [Ferramentas de linha de comando para empacotar conteúdo e criar listas de revogação](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
    + Gerenciador de políticas {#policy-manager}
       + [Utilização do Policy Manager](aaxs-reference-implementations/command-line-tools/policy-manager/using-aaxs-policy-manager.md)
       + [Propriedades do arquivo de configuração](aaxs-reference-implementations/command-line-tools/policy-manager/config-file-properties.md)

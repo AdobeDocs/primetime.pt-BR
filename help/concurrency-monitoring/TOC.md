@@ -7,12 +7,12 @@ user-guide-description: Saiba como definir e aplicar limites ao uso simultâneo 
 source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
 
-# Ajuda do Monitoramento de simultaneidade do Primetime {#cm}
+# Monitoramento de simultaneidade do Primetime ajuda {#cm}
 
 + [Introdução ao monitoramento de simultaneidade](cm-home.md)
 + [Glossário de monitoramento de simultaneidade](cm-glossary.md)
